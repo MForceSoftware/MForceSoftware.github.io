@@ -293,7 +293,7 @@
       "url": "img\/user8-128x128.jpg"
     },
     {
-      "hash": "sha256-2jAlFswPum8ALS5MvB\/8H44JmFxtN0dmjz36CH9LLy4=",
+      "hash": "sha256-By8Sb84UDamx0MB8A9Yo3BUt\/\/b1LO3nFyqvk7YCiTo=",
       "url": "index.html"
     },
     {
@@ -579,6 +579,434 @@
     {
       "hash": "sha256-f00\/0KcF2\/hAMpiq2R1d5pcua11TYGjrqLJJVKWgqMc=",
       "url": "plugins\/fontawesome-free\/webfonts\/fa-solid-900.woff2"
+    },
+    {
+      "hash": "sha256-Z3EZF0O2jiGT+pGTCyIW4vgG1KvF0SgSLOnV+pp1dmw=",
+      "url": "plugins\/fullcalendar-bootstrap\/LICENSE.txt"
+    },
+    {
+      "hash": "sha256-AX+31pPwiZo6gCH281MJUkgjT1f4LrLO8TVSzkajfPw=",
+      "url": "plugins\/fullcalendar-bootstrap\/main.css"
+    },
+    {
+      "hash": "sha256-SE4AP48WZD0N9naazRLQExCYJiLEuxOkkDYrnWym6Tk=",
+      "url": "plugins\/fullcalendar-bootstrap\/main.d.ts"
+    },
+    {
+      "hash": "sha256-KO60vToN5NZlwi+RVFRtffKhPKrLROv0iwYUHw3wgoE=",
+      "url": "plugins\/fullcalendar-bootstrap\/main.esm.js"
+    },
+    {
+      "hash": "sha256-M6tPpRrsUap8gFR\/rgMD4RBL9W0zFaUZlzRZyB33xSs=",
+      "url": "plugins\/fullcalendar-bootstrap\/main.js"
+    },
+    {
+      "hash": "sha256-5sixAy58fxurTINf\/zEWcrqUl5r7zGODTBKSRuqxGnA=",
+      "url": "plugins\/fullcalendar-bootstrap\/main.js.map"
+    },
+    {
+      "hash": "sha256-NIDh3N3hofSVGAnBXXxlujR74v6h0qESZfZB4lr8Bi8=",
+      "url": "plugins\/fullcalendar-bootstrap\/main.min.css"
+    },
+    {
+      "hash": "sha256-4bmM\/8kCzC9iufAKDeimgFBMTVXG61dIpGVrhmu2VVo=",
+      "url": "plugins\/fullcalendar-bootstrap\/main.min.js"
+    },
+    {
+      "hash": "sha256-Z3EZF0O2jiGT+pGTCyIW4vgG1KvF0SgSLOnV+pp1dmw=",
+      "url": "plugins\/fullcalendar-daygrid\/LICENSE.txt"
+    },
+    {
+      "hash": "sha256-PViw3yz6Y5UN5l6dylMumohkBf7LOU7OwD9rXhDwH4s=",
+      "url": "plugins\/fullcalendar-daygrid\/main.css"
+    },
+    {
+      "hash": "sha256-3gJpj2O0b2D64t1TlHOXyAagjaead\/lUhRJg0SG2z\/A=",
+      "url": "plugins\/fullcalendar-daygrid\/main.d.ts"
+    },
+    {
+      "hash": "sha256-oFmCgRdU91JDtpdZLrjovp2kawLk8Zo1JEpeQn66hNI=",
+      "url": "plugins\/fullcalendar-daygrid\/main.esm.js"
+    },
+    {
+      "hash": "sha256-u0U+fRAmGd6XeTMavd3RuVWhza\/7BkVtb1FsABevSGA=",
+      "url": "plugins\/fullcalendar-daygrid\/main.js"
+    },
+    {
+      "hash": "sha256-m2m8LaK4dhXci8BjAilOQJDS\/4JxxaZMZnN4+gfAhFg=",
+      "url": "plugins\/fullcalendar-daygrid\/main.js.map"
+    },
+    {
+      "hash": "sha256-Nt1jjcb7BjpIGL9BEJjnZN9sySJXdYIvyBhMoao3fug=",
+      "url": "plugins\/fullcalendar-daygrid\/main.min.css"
+    },
+    {
+      "hash": "sha256-Ci3guQkgtPJpRMjkJCPy1Pg2DnU\/8ZFQ+D0HxLaNO1o=",
+      "url": "plugins\/fullcalendar-daygrid\/main.min.js"
+    },
+    {
+      "hash": "sha256-Z3EZF0O2jiGT+pGTCyIW4vgG1KvF0SgSLOnV+pp1dmw=",
+      "url": "plugins\/fullcalendar-interaction\/LICENSE.txt"
+    },
+    {
+      "hash": "sha256-y+lJqFcfV42P6r996tBafnyRy+OkXhfXr7FUIvz\/7oc=",
+      "url": "plugins\/fullcalendar-interaction\/main.d.ts"
+    },
+    {
+      "hash": "sha256-NWB0mptFNBD3jzgHKBXlunAN22mxBL7bum1nfel9xYk=",
+      "url": "plugins\/fullcalendar-interaction\/main.esm.js"
+    },
+    {
+      "hash": "sha256-zNupbfUxjXj0w7nBqipTIgXCNmOCJbRnafeljr3+WXU=",
+      "url": "plugins\/fullcalendar-interaction\/main.js"
+    },
+    {
+      "hash": "sha256-7VLB5cI45o74cMknGLQI4krPJl2uJvQjla1yvBSxVYk=",
+      "url": "plugins\/fullcalendar-interaction\/main.js.map"
+    },
+    {
+      "hash": "sha256-kfTm3dDKwxH\/\/vHR+Nl+FUWB2ODJr+gpgsviIE0Jp38=",
+      "url": "plugins\/fullcalendar-interaction\/main.min.js"
+    },
+    {
+      "hash": "sha256-Z3EZF0O2jiGT+pGTCyIW4vgG1KvF0SgSLOnV+pp1dmw=",
+      "url": "plugins\/fullcalendar-timegrid\/LICENSE.txt"
+    },
+    {
+      "hash": "sha256-dGjbF0LUmfC2vZ9hNJSlHhIU1o7SZ2Dn+0foIdAFjvA=",
+      "url": "plugins\/fullcalendar-timegrid\/main.css"
+    },
+    {
+      "hash": "sha256-Ck\/2iei6vaeV0Z4Hi\/LJAUlP0R7ZQXWdV29X91PnYv8=",
+      "url": "plugins\/fullcalendar-timegrid\/main.d.ts"
+    },
+    {
+      "hash": "sha256-AOF7tWr5j8RV5oWYQr4XFE8IhFPjQ63Fjy53wJ2nfFk=",
+      "url": "plugins\/fullcalendar-timegrid\/main.esm.js"
+    },
+    {
+      "hash": "sha256-Mykxn1ML6B4OLkfa8JDoV5ptAW+7UNVBedtlIkijMlY=",
+      "url": "plugins\/fullcalendar-timegrid\/main.js"
+    },
+    {
+      "hash": "sha256-ui6ZUm4aF1sbu3AOObugQ2RVmQP6mlbVpp2JqsvMJDo=",
+      "url": "plugins\/fullcalendar-timegrid\/main.js.map"
+    },
+    {
+      "hash": "sha256-WID6AXzUvFn5HbDibqulC5qT6\/BEVF06KgFUYTFYDUM=",
+      "url": "plugins\/fullcalendar-timegrid\/main.min.css"
+    },
+    {
+      "hash": "sha256-D4OwfygAhZJBz54RrbJ3tYzO2yNC+cySO56cCvdfxaA=",
+      "url": "plugins\/fullcalendar-timegrid\/main.min.js"
+    },
+    {
+      "hash": "sha256-Z3EZF0O2jiGT+pGTCyIW4vgG1KvF0SgSLOnV+pp1dmw=",
+      "url": "plugins\/fullcalendar\/LICENSE.txt"
+    },
+    {
+      "hash": "sha256-VJbgvNKxV5MPx2i9IvcUlbJhPNyRyJYfU7Yob+YCZu8=",
+      "url": "plugins\/fullcalendar\/locales-all.js"
+    },
+    {
+      "hash": "sha256-\/og5mP5fr2PYjoVFYADDzOYm1uJ75nNhg86rMGDYl\/s=",
+      "url": "plugins\/fullcalendar\/locales-all.min.js"
+    },
+    {
+      "hash": "sha256-tE3zJFgN5Jt\/4qmV7njFaAthUdX1Gfk6TGhWAOz49xs=",
+      "url": "plugins\/fullcalendar\/locales\/af.js"
+    },
+    {
+      "hash": "sha256-pdathQ1geI+aoGejHIuAgUQR+rgXUrckT+x6ePVD4Yg=",
+      "url": "plugins\/fullcalendar\/locales\/ar-dz.js"
+    },
+    {
+      "hash": "sha256-693Hidqnr\/aFRFguLcdiMOLu3xyNaRTCC4DpqJ8GTjQ=",
+      "url": "plugins\/fullcalendar\/locales\/ar-kw.js"
+    },
+    {
+      "hash": "sha256-HTf8QH0jOm8Gs8r5vo7CKFOQMIkgM47ve1MkUD48P0U=",
+      "url": "plugins\/fullcalendar\/locales\/ar-ly.js"
+    },
+    {
+      "hash": "sha256-f0MUKdawo5lUhJvv4Z2au5ff22nUtgfyxOuCfxRnzGQ=",
+      "url": "plugins\/fullcalendar\/locales\/ar-ma.js"
+    },
+    {
+      "hash": "sha256-\/rrfG24\/WHYg1T\/yV5\/kUIHEGziJpRjJou60ovH8ru4=",
+      "url": "plugins\/fullcalendar\/locales\/ar-sa.js"
+    },
+    {
+      "hash": "sha256-z2W+sXJCov2lKnBrFEkXuKCFVlbs1KU7D657gTsdgBQ=",
+      "url": "plugins\/fullcalendar\/locales\/ar-tn.js"
+    },
+    {
+      "hash": "sha256-O5YjpZzV1NrRpfN4ylO\/NIqA+wkNuZFcFoQTYtiik10=",
+      "url": "plugins\/fullcalendar\/locales\/ar.js"
+    },
+    {
+      "hash": "sha256-ODXY7h4NoDxYvWpB5RXAe4RPg6madvphqCptjP8yNg8=",
+      "url": "plugins\/fullcalendar\/locales\/az.js"
+    },
+    {
+      "hash": "sha256-eCTdjONDcI0HYRgQ0yDQ\/JbIVe0tkvBK64jBLPtfrpU=",
+      "url": "plugins\/fullcalendar\/locales\/bg.js"
+    },
+    {
+      "hash": "sha256-X22SrLaewGQbwd0sytxfyyWnCp7lxC3sldidMqkYtzA=",
+      "url": "plugins\/fullcalendar\/locales\/bs.js"
+    },
+    {
+      "hash": "sha256-6AQJ9ggBg8gPT9PLAx0TTjoiw45g5Fiw5cIqs2XCSqo=",
+      "url": "plugins\/fullcalendar\/locales\/ca.js"
+    },
+    {
+      "hash": "sha256-vTKxUdFQfE45bTLxfIzB6XAXjy+DohcnJg\/y3aKc9KU=",
+      "url": "plugins\/fullcalendar\/locales\/cs.js"
+    },
+    {
+      "hash": "sha256-plD6ywkRPndi0EdClSvY7\/o8N\/W2zes+cRwafeONc\/Y=",
+      "url": "plugins\/fullcalendar\/locales\/da.js"
+    },
+    {
+      "hash": "sha256-+DYKIXfByJJNGAg029B\/8o69nTMzpir5yFABNPH4Ycc=",
+      "url": "plugins\/fullcalendar\/locales\/de.js"
+    },
+    {
+      "hash": "sha256-vUlNz88tI5NSBPsdhxKyTTX+z0WP2zVlplx9p3PXSgo=",
+      "url": "plugins\/fullcalendar\/locales\/el.js"
+    },
+    {
+      "hash": "sha256-Yh3l0n+ma5G0NIpfO804ziR1WRG0XBPbNKXksYneLXQ=",
+      "url": "plugins\/fullcalendar\/locales\/en-au.js"
+    },
+    {
+      "hash": "sha256-c5aig17Zw7NJwvtFu60sTHakIH3YnHYaMU6xoKDz12c=",
+      "url": "plugins\/fullcalendar\/locales\/en-gb.js"
+    },
+    {
+      "hash": "sha256-6F2A8I5Z3Jx\/Yj0ZjTJeUEXEw5+B0mqNxDxIl4TjSvw=",
+      "url": "plugins\/fullcalendar\/locales\/en-nz.js"
+    },
+    {
+      "hash": "sha256-hQAbHBFCvFJs5V7YCS\/An0lKC0GevOzZ70fqQA8oxt8=",
+      "url": "plugins\/fullcalendar\/locales\/es-us.js"
+    },
+    {
+      "hash": "sha256-n1juTh2+EARPDFG+uIIPW21CWeERCmZuB9Ja7gK\/x7c=",
+      "url": "plugins\/fullcalendar\/locales\/es.js"
+    },
+    {
+      "hash": "sha256-h0jeP3BlRAwnAe70Q5P3Y8ntQ0r77E8zhTGRsuJPWDA=",
+      "url": "plugins\/fullcalendar\/locales\/et.js"
+    },
+    {
+      "hash": "sha256-ulrOfhtF6OGNrRGPGlf0HQoRSDgXjxBBcxXW5VItCBo=",
+      "url": "plugins\/fullcalendar\/locales\/eu.js"
+    },
+    {
+      "hash": "sha256-xMKbF\/7LQq6ROtSHcNKZtylu1zhGqEFvefXb7ENciKc=",
+      "url": "plugins\/fullcalendar\/locales\/fa.js"
+    },
+    {
+      "hash": "sha256-XpZC9VJb9Z80XI0Cul0ARpVaBGhxHyfPyJi5b0fasqY=",
+      "url": "plugins\/fullcalendar\/locales\/fi.js"
+    },
+    {
+      "hash": "sha256-LIThxedHbV7tGls6EyQusiQLVhlhUbG9e+gDbH8ENV8=",
+      "url": "plugins\/fullcalendar\/locales\/fr-ca.js"
+    },
+    {
+      "hash": "sha256-N\/hVAt5Y7Aw3oWPR8B726andzVk35kRwxnareFuOsrA=",
+      "url": "plugins\/fullcalendar\/locales\/fr-ch.js"
+    },
+    {
+      "hash": "sha256-2TbzLkTe+LQF\/tN3LQpiTDz7VulzsCJoOg3XM9695U8=",
+      "url": "plugins\/fullcalendar\/locales\/fr.js"
+    },
+    {
+      "hash": "sha256-TcDN\/BfwctP\/8YzsyMpESlVaI7lIXqwxMJsTjj3MoBg=",
+      "url": "plugins\/fullcalendar\/locales\/gl.js"
+    },
+    {
+      "hash": "sha256-7hh4Wpz7Z2Oi2r7o97n3dUbI4nvhIJnA+riTpUSRSO4=",
+      "url": "plugins\/fullcalendar\/locales\/he.js"
+    },
+    {
+      "hash": "sha256-7mRdaiPtWbDJlH3I7zHXWgwfyPODfwEe9eZr4opMRFE=",
+      "url": "plugins\/fullcalendar\/locales\/hi.js"
+    },
+    {
+      "hash": "sha256-JcBMKTYyMnXF182Xs74I6gXd7x+g104dAAfHHs9wjww=",
+      "url": "plugins\/fullcalendar\/locales\/hr.js"
+    },
+    {
+      "hash": "sha256-TKgkSIv0qLTTOl2xEio7MU\/DL+2lH7YBOhvhSAucBpw=",
+      "url": "plugins\/fullcalendar\/locales\/hu.js"
+    },
+    {
+      "hash": "sha256-NoRzM33Mi+A6AIlJnpr4qGhgVDjID8dPUPp8Fm6GxnE=",
+      "url": "plugins\/fullcalendar\/locales\/id.js"
+    },
+    {
+      "hash": "sha256-1pQhVAlyLkCFWZvmZGh1qvektyOtKEgsEK5WsmT2TFA=",
+      "url": "plugins\/fullcalendar\/locales\/is.js"
+    },
+    {
+      "hash": "sha256-HTUuCsuY6mAPyqtUnnQVzvefPfqmi39vIaasHuVekGc=",
+      "url": "plugins\/fullcalendar\/locales\/it.js"
+    },
+    {
+      "hash": "sha256-7q2C8I66JZ\/SZxnnrrrFgf4\/bJSEjHjGmYXjuAHXyVg=",
+      "url": "plugins\/fullcalendar\/locales\/ja.js"
+    },
+    {
+      "hash": "sha256-lnN0C2RaGOhHXMZfCgqlbW1K1jW422TUa2awKohfICY=",
+      "url": "plugins\/fullcalendar\/locales\/ka.js"
+    },
+    {
+      "hash": "sha256-gw0Am84d0kz6an\/zq9wIcsN0dNAuZWrbgMc2Z88EWlk=",
+      "url": "plugins\/fullcalendar\/locales\/kk.js"
+    },
+    {
+      "hash": "sha256-5B3MU9uBNyO6wy61vYlyhSfVazVy89oXLp4L7VrdjJA=",
+      "url": "plugins\/fullcalendar\/locales\/ko.js"
+    },
+    {
+      "hash": "sha256-oNZLNq9TmR7k4riVRlh4u5Dfu0wpTIO0\/1wVPozj5DA=",
+      "url": "plugins\/fullcalendar\/locales\/lb.js"
+    },
+    {
+      "hash": "sha256-jZfdrzNbQfjDX2b11B1Lau53ZWa\/YyY9mDZUBiCagcA=",
+      "url": "plugins\/fullcalendar\/locales\/lt.js"
+    },
+    {
+      "hash": "sha256-uBKd6HC6a0RRyh8uVY7SDNNFs8cT4aQVqgK+18VQhY8=",
+      "url": "plugins\/fullcalendar\/locales\/lv.js"
+    },
+    {
+      "hash": "sha256-kKi+2xw3h+PLdhonyZn+xQQk0dnawy6AoaaVvspWoDk=",
+      "url": "plugins\/fullcalendar\/locales\/mk.js"
+    },
+    {
+      "hash": "sha256-Xw4CLifnKTYatkp1oFdTQvejligKbBNXngLMPUYFEG8=",
+      "url": "plugins\/fullcalendar\/locales\/ms.js"
+    },
+    {
+      "hash": "sha256-x1cWzfeoeKIKvecLvPxSxqdW7oNxp8E7C4BdZwmfbco=",
+      "url": "plugins\/fullcalendar\/locales\/nb.js"
+    },
+    {
+      "hash": "sha256-JnaPvqF17zykbeF0sXNLpZcyIumkknoh0LXs\/AVF1kE=",
+      "url": "plugins\/fullcalendar\/locales\/nl.js"
+    },
+    {
+      "hash": "sha256-mshcIxre2p36VuBPad4162tMpyjdmYYQnRtjj\/JKLXg=",
+      "url": "plugins\/fullcalendar\/locales\/nn.js"
+    },
+    {
+      "hash": "sha256-6xujzXKbjSgo74EtOp3dLEiDOyzl3uNLCb9pz90reOY=",
+      "url": "plugins\/fullcalendar\/locales\/pl.js"
+    },
+    {
+      "hash": "sha256-U2\/NgawVPaMTOkOrfdFUuBtDsvVr7DFtIOzXCHOn7Jw=",
+      "url": "plugins\/fullcalendar\/locales\/pt-br.js"
+    },
+    {
+      "hash": "sha256-983yWJmsKC9Z\/s7AMfZZCv8COtUYQol1A41YIw9JmJ8=",
+      "url": "plugins\/fullcalendar\/locales\/pt.js"
+    },
+    {
+      "hash": "sha256-R9FiOJDLTTCkMtNG5DYWybyjD1uxyr+VezpSHrLgMhw=",
+      "url": "plugins\/fullcalendar\/locales\/ro.js"
+    },
+    {
+      "hash": "sha256-eyaxfjgqJuQ\/JYg5TTCDjag6unRgPguvL20yhGVUB6g=",
+      "url": "plugins\/fullcalendar\/locales\/ru.js"
+    },
+    {
+      "hash": "sha256-h8G+KfazYkSUlZSau2s46PBwQ7HSAg5JQARpNKMFi88=",
+      "url": "plugins\/fullcalendar\/locales\/sk.js"
+    },
+    {
+      "hash": "sha256-l5VMclBxURNOuaU8IyWd44DX8Fekka+d9x762VIRoXc=",
+      "url": "plugins\/fullcalendar\/locales\/sl.js"
+    },
+    {
+      "hash": "sha256-LU+H22MvwkQbY\/GI9OScngRvXWe\/\/9NsBExpRrBmRvQ=",
+      "url": "plugins\/fullcalendar\/locales\/sq.js"
+    },
+    {
+      "hash": "sha256-gndigJjUjNRH+cxkCEDYVDAmyz2ZQeDx6N1YSEpvOFk=",
+      "url": "plugins\/fullcalendar\/locales\/sr-cyrl.js"
+    },
+    {
+      "hash": "sha256-wYwi\/x1ZJ3bkec0uBwDMPVAwPg07ru74kbY8oYgLJUM=",
+      "url": "plugins\/fullcalendar\/locales\/sr.js"
+    },
+    {
+      "hash": "sha256-Gv6HCGOv7LwMe2t3rKi+k6H5AIPfa\/rhww7dTugt6t4=",
+      "url": "plugins\/fullcalendar\/locales\/sv.js"
+    },
+    {
+      "hash": "sha256-0FwTnl0g0ohefV9LGN2nmBsWngUkXxhrd+qEqLcdZxk=",
+      "url": "plugins\/fullcalendar\/locales\/th.js"
+    },
+    {
+      "hash": "sha256-71bl0rcRciSQ4hZEY6l4Mnn6Bbqt5\/qe3Wn4g69fFY0=",
+      "url": "plugins\/fullcalendar\/locales\/tr.js"
+    },
+    {
+      "hash": "sha256-6i4pMmBDbLjWZAAKvPK+PoMC2OgYUMOMNzj640BdfiI=",
+      "url": "plugins\/fullcalendar\/locales\/ug.js"
+    },
+    {
+      "hash": "sha256-CsCw1ly6LSaEGznMubVqxUpnZQuVnsjr1aZk9ejnPHs=",
+      "url": "plugins\/fullcalendar\/locales\/uk.js"
+    },
+    {
+      "hash": "sha256-dTCTOl2SghF6kyKaBCgIOYFMZ1HHn5u\/eqY44pfO8Jc=",
+      "url": "plugins\/fullcalendar\/locales\/uz.js"
+    },
+    {
+      "hash": "sha256-TDZwkRcrNwaAJUK4XGP2IDSf+Dfz0JamA1AJ0OVdyB4=",
+      "url": "plugins\/fullcalendar\/locales\/vi.js"
+    },
+    {
+      "hash": "sha256-pPf3Jz5rFNPyys6CFHSNsYPCU87GPxpTNXkg1aU4xng=",
+      "url": "plugins\/fullcalendar\/locales\/zh-cn.js"
+    },
+    {
+      "hash": "sha256-VarUhf4+Dt02GHV5Bzg9oRqZam2lXszAOAh3HQScz5E=",
+      "url": "plugins\/fullcalendar\/locales\/zh-tw.js"
+    },
+    {
+      "hash": "sha256-0moSaHUMrHSoJgkKykEF39Jayoq0z+jJ5RAg\/YgUkxY=",
+      "url": "plugins\/fullcalendar\/main.css"
+    },
+    {
+      "hash": "sha256-nqsFHEtojGAr8zpDVQCFMHS7+FD0ZprdZGjseTiLymk=",
+      "url": "plugins\/fullcalendar\/main.d.ts"
+    },
+    {
+      "hash": "sha256-GnOO5hd8GTt9E2TGVzR6VK7A9sQ9xVTZ\/ECd0nqjQo4=",
+      "url": "plugins\/fullcalendar\/main.esm.js"
+    },
+    {
+      "hash": "sha256-EaH71eNZFQi82ujj7lxxOn+Vf6rKyRbCZc5IAGA\/bEE=",
+      "url": "plugins\/fullcalendar\/main.js"
+    },
+    {
+      "hash": "sha256-rSiQxKr5yAlngJKC7ruCRsiGj1xiAMCo9U4giOf4SJ8=",
+      "url": "plugins\/fullcalendar\/main.js.map"
+    },
+    {
+      "hash": "sha256-HDFjvqItXdjW7TEM0cjN\/9o9CRPkpo5hmGtd6AqN124=",
+      "url": "plugins\/fullcalendar\/main.min.css"
+    },
+    {
+      "hash": "sha256-niYpAJmpGSi28F0cwFTEQu2cCnJ9Jf+x2UkTYoXH3rk=",
+      "url": "plugins\/fullcalendar\/main.min.js"
     },
     {
       "hash": "sha256-UnDv\/upbwhXOVCmPNsSKB+zdevuczcWMKJ4vg0xlATw=",
@@ -2281,7 +2709,7 @@
       "url": "_framework\/MForce365.Shared.dll"
     },
     {
-      "hash": "sha256-HCMp4hJgoWSQiN+uTKNDUydX3tMmGnCax2b78kgdtsE=",
+      "hash": "sha256-klWBQ8gbZvJ9FHyJi8F3FgLuEASKrR8gEu954GAMG44=",
       "url": "_framework\/MForce365.dll"
     },
     {
@@ -2501,7 +2929,7 @@
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
-      "hash": "sha256-QpNDCB3C2CJqcgoQRndzK\/\/dl2nmI3vSTwhdrU4ML18=",
+      "hash": "sha256-BK7HqJFM+HM2I\/smd\/M1B7y2wXSgizMpcN+yTz4mq3c=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -2509,5 +2937,5 @@
       "url": "_framework\/blazor.webassembly.js"
     }
   ],
-  "version": "\/loWyTEt"
+  "version": "Kq2qFo7q"
 };
