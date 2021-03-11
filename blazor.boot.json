@@ -9,6 +9,7 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
+      "Blazored.LocalStorage.dll": "sha256-H2Ob6jhcSP9i5332NqstC29Uu0fTPYi39ex0zlQqSd0=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-XDyxg4xen8ZLKuWDL8mzECGczWcswXTXmH5YePX3hzM=",
       "Microsoft.AspNetCore.Components.dll": "sha256-FulHHnzb955zI\/aY+YPlUUbRuM4IhUZ5\/Flmtgt2zWs=",
       "Microsoft.AspNetCore.Components.Authorization.dll": "sha256-PfYtsLATBpo6BHot1gh8oXSZGOwSptxMmEELnHeepDQ=",
@@ -47,8 +48,8 @@
       "System.Security.Permissions.dll": "sha256-g3uym6CH4J6DDmHHY137rUopzZHzpFI5ElJvxMLyNck=",
       "System.ServiceModel.Primitives.dll": "sha256-j9kg8NUzkDa\/v4Xfoz2b4PXMV6oFCssCcUHVHG40\/oA=",
       "System.ServiceModel.dll": "sha256-fs4bLstjRUwwN5YWqrn1rqNKqXVV\/aCCnUNH0nl8Bmw=",
-      "MForce365.Shared.dll": "sha256-eiPQlE+whYvNAqdCLza5hzrldqOsTeCx5WXkxOl\/I+Y=",
-      "MForce365.dll": "sha256-klWBQ8gbZvJ9FHyJi8F3FgLuEASKrR8gEu954GAMG44=",
+      "MForce365.Shared.dll": "sha256-sigwDOaoQSio+Zre95LOvvu4dAnWiqRSWZA1TtFyKg8=",
+      "MForce365.dll": "sha256-+j8bS\/Tnogt+gu+EUxDYQLGOaCO4zcxhi0opZNjWuWU=",
       "Microsoft.CSharp.dll": "sha256-qKmfyisHVkKBpwVsNmL1ibXBVB67QFDoV0Wp9tmuuCY=",
       "Microsoft.Win32.Primitives.dll": "sha256-m5inQ31TUkGzAGMmlEUCXPWUNi2OuER54hcLRBwOnsg=",
       "System.Collections.Concurrent.dll": "sha256-hKw9GUx7kiWXIlfsjP1xHaZpjZJXvEEUfsCegwbC8Ag=",
@@ -99,10 +100,10 @@
       "System.Security.Cryptography.X509Certificates.dll": "sha256-UT2WZgQpTeL3mYFKdtnW3w6raBPcGb4w+zfm2H6fT6Y=",
       "System.Security.Principal.Windows.dll": "sha256-4\/cYtCGn3QZKsNTEn40W38LOCQ5SbrnrPIMadQ90QN4=",
       "System.Text.Encodings.Web.dll": "sha256-mk8EVk6JN8r2+NUrk+vBPGl4RVIgn7rA1TXf+ajAdos=",
-      "System.Text.Json.dll": "sha256-fOvRDb+wKYYdOl8qvMDvWWoUUpSa6SZFIyjJWd4ptrM=",
-      "System.Text.RegularExpressions.dll": "sha256-3hQcuCJonl1lSj24CspaYtrmsGDgVu59Yv4XWlgUfoU=",
+      "System.Text.Json.dll": "sha256-uJSBU3hp\/EapKCb2vhTp8ZMl5w2VnaAy\/Kjyl5\/g\/gA=",
+      "System.Text.RegularExpressions.dll": "sha256-IwzZwqVfvKsQFI98lEMJL\/hgi\/HXItoUTKjSR6+n\/+E=",
       "System.Threading.dll": "sha256-I5WhP3Ekpj\/BE8QocWPY\/ji3YroEz5UkwsE8c9fzyTI=",
-      "System.Private.CoreLib.dll": "sha256-3emHGazUe4Xl4cr8DWL+9nPWRsrd10LrbQJeGPTwuUw="
+      "System.Private.CoreLib.dll": "sha256-7PdbhLY2WaIa1YbMwNtGsZrxZQwA+EZ5m\/KnwwXzO+s="
     },
     "lazyAssembly": null,
     "pdb": null,
