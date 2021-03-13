@@ -2717,7 +2717,7 @@
       "url": "_framework\/MForce365.Shared.dll"
     },
     {
-      "hash": "sha256-3Z1o0mVvPi0oW\/EpnfJpM5eeJ3PR3qSLuTdz0UzGToQ=",
+      "hash": "sha256-BdS3oPWNYvL6BqLxPE42jiXdr11FM75HlQ4w5cqJI0Q=",
       "url": "_framework\/MForce365.dll"
     },
     {
@@ -2937,7 +2937,7 @@
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
-      "hash": "sha256-VSvUom0JUq5wDe32kSFxCDS0eauLM4oZWZcJN4eiI\/0=",
+      "hash": "sha256-+JxYmvV97bFM5kMeCK95gepxQOly+9+12inu6w7wpEM=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -2945,5 +2945,5 @@
       "url": "_framework\/blazor.webassembly.js"
     }
   ],
-  "version": "xKIThdHp"
+  "version": "c4d3NqOH"
 };
