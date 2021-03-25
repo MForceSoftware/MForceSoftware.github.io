@@ -3,71 +3,55 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mForce</title>
+    <meta name="viewport" ccontent="width=device-width, initial-scale=1.0" />
+    <title>MForce365</title>
     <base href="/" />
-    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
-    <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-    <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
-    <link rel="stylesheet" href="css/adminlte.min.css">
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
-    <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
-    <link rel="stylesheet" href="/plugins/fullcalendar/main.min.css">
-    <link rel="stylesheet" href="/plugins/fullcalendar-daygrid/main.min.css">
-    <link rel="stylesheet" href="/plugins/fullcalendar-timegrid/main.min.css">
-    <link rel="stylesheet" href="/plugins/fullcalendar-bootstrap/main.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-    <link href="_content/Blazored.Modal/blazored-modal.css" rel="stylesheet" />
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="_content/Blazorized.AdminLte.Content/plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="_content/Blazorized.AdminLte.Content/dist/css/adminlte.min.css">
+    <link href="manifest.json" rel="manifest" />
+    <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png" />
+    <link href="_content/Blazor.AdminLte.Site.Shared/css/site.css" rel="stylesheet" />
+    <link href="/css/app.css" rel="stylesheet" />
+    <!-- daterange picker -->
+    <link rel="stylesheet" href="_content/Blazorized.AdminLte.Content/plugins/daterangepicker/daterangepicker.css">
+    <!-- overlay scrollbars -->
+    <link type="text/css" href="_content/Blazorized.AdminLte.Content/plugins/overlayScrollbars/css/OverlayScrollbars.min.css" rel="stylesheet" />
 </head>
 
 <body>
-    <div id="app"><img src="img/LoadingSpinner.gif" /></div>
+    <div id="app">
+        <div class="app-load">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    </div>
 
     <div id="blazor-error-ui">
         An unhandled error has occurred.
         <a href="" class="reload">Reload</a>
         <a class="dismiss">🗙</a>
     </div>
+    <script src="_content/Blazorized.AdminLte.Content/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="_content/Blazorized.AdminLte.Content/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="_content/Blazorized.AdminLte.Content/dist/js/adminlte.min.js"></script>
+    <script src="_content/Blazorized.AdminLte/js/interop.js"></script>
+
     <script src="_content/Microsoft.Authentication.WebAssembly.Msal/AuthenticationService.js"></script>
     <script src="_framework/blazor.webassembly.js"></script>
-    <script src="plugins/jquery/jquery.min.js"></script>
-    <!-- jQuery UI 1.11.4 -->
-    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
-    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-    <script>
-        $.widget.bridge('uibutton', $.ui.button)
-    </script>
-    <!-- Bootstrap 4 -->
-    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- ChartJS -->
-    <script src="plugins/chart.js/Chart.min.js"></script>
-    <!-- Sparkline -->
-    <script src="plugins/sparklines/sparkline.js"></script>
-    <!-- JQVMap -->
-    <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
-    <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-    <!-- jQuery Knob Chart -->
-    <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
-    <!-- daterangepicker -->
-    <script src="plugins/moment/moment.min.js"></script>
-    <script src="plugins/daterangepicker/daterangepicker.js"></script>
-    <!-- Tempusdominus Bootstrap 4 -->
-    <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-    <!-- Summernote -->
-    <script src="plugins/summernote/summernote-bs4.min.js"></script>
-    <!-- overlayScrollbars -->
-    <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-    <!-- AdminLTE App -->
-    <script src="js/adminlte.js"></script>
-    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="js/pages/dashboard.js"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="js/demo.js"></script>
-    <script src="_content/Blazored.Modal/blazored.modal.js"></script>
+    <script>navigator.serviceWorker.register('service-worker.js');</script>
+    <script src="_content/Blazorized.AdminLte.Content/plugins/moment/moment-with-locales.js"></script>
+    <script src="_content/Blazorized.AdminLte.Content/plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- overlay scrollbars -->
+    <script src="_content/Blazorized.AdminLte.Content/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 </body>
 
 </html>
