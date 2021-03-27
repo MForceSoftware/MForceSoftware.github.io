@@ -205,7 +205,7 @@
       "url": "img\/user8-128x128.jpg"
     },
     {
-      "hash": "sha256-hJdbPONpbAV5g7RRzH12yAADEyhEi\/xf01oVe6xyBbs=",
+      "hash": "sha256-otlxj9\/jiyXbSipN83eweILEIzfywFBTamsPOT9PDgU=",
       "url": "index.html"
     },
     {
@@ -293,7 +293,7 @@
       "url": "_framework\/dotnet.6.0.0-preview.2.21154.6.js"
     },
     {
-      "hash": "sha256-ozrMx+vVL8YL5bmSSHgv9EHd8hZ9dH\/zK3RKAO3HyHo=",
+      "hash": "sha256-BVxUxqWmhCrJb16CZ2kDgOVhwdeMFSur5ILITDofk1k=",
       "url": "MForce365.styles.css"
     },
     {
@@ -1289,7 +1289,7 @@
       "url": "_framework\/Microsoft.AspNetCore.Components.Authorization.dll"
     },
     {
-      "hash": "sha256-2IkCUH4RZUyeiTQkhzQxMWdNd8NpaKerf5juQ\/arRug=",
+      "hash": "sha256-TSejVCZF5pn83P7QNDtSNomQNl8io1RypVn9drLqr30=",
       "url": "_framework\/Microsoft.AspNetCore.Components.Web.dll"
     },
     {
@@ -1385,7 +1385,7 @@
       "url": "_framework\/MForce365.Shared.dll"
     },
     {
-      "hash": "sha256-DxXbIK15FbR84SEX4niA4TM7R8CFdtK0STz9lPgvnWA=",
+      "hash": "sha256-yF3GCLIKZIMBbkTvtpSQ7HQKcIpdPUQJTBOB5LOCDXg=",
       "url": "_framework\/MForce365.dll"
     },
     {
@@ -1441,7 +1441,7 @@
       "url": "_framework\/System.Linq.Expressions.dll"
     },
     {
-      "hash": "sha256-gi+4h1ywLBDkRpWtga70Av1L1820E\/2ElOVtelPPy5I=",
+      "hash": "sha256-zeHR1gxgxpc+mHyfHaXxV5Rc3XvnlaRQbtdAQql7Dh0=",
       "url": "_framework\/System.Linq.dll"
     },
     {
@@ -1517,11 +1517,11 @@
       "url": "_framework\/System.Web.HttpUtility.dll"
     },
     {
-      "hash": "sha256-xdeoPdpqljAIy7HxuGKpLmXMTyDx5PIQ7b461P4wQ5A=",
+      "hash": "sha256-Ftmz6JjBRvJWbgiryOEAkdwolUG3Eb2xFebehzRYgHA=",
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
-      "hash": "sha256-aJOyuxeNX1Aei260ov8RfgS3HANdFAKGQhO7cXO9cZc=",
+      "hash": "sha256-LTXAAORaZeIp1aIiUhNoJp8CXeddB0K2jNoJw9rxrSE=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -1529,5 +1529,5 @@
       "url": "_framework\/blazor.webassembly.js"
     }
   ],
-  "version": "xOv39FXH"
+  "version": "6hWrlg+y"
 };
