@@ -1,210 +1,62 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en-US">
-   <head>
-      <meta charset="UTF-8" />
-      <title>A date range picker for Bootstrap</title>
-      <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
-      <link rel="stylesheet" type="text/css" media="all" href="../../daterangepicker.css" />
-      <style type="text/css">
-      .demo { position: relative; }
-      .demo i {
-        position: absolute; bottom: 10px; right: 24px; top: auto; cursor: pointer;
-      }
-      </style>
-   </head>
-   <body style="margin: 60px 0">
+<html>
 
-      <div class="container">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" ccontent="width=device-width, initial-scale=1.0" />
+    <title>MForce365</title>
+    <base href="/" />
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="_content/Blazorized.AdminLte.Content/plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="_content/Blazorized.AdminLte.Content/dist/css/adminlte.min.css">
+    <link href="manifest.json" rel="manifest" />
+    <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png" />
+    <link href="css/site.css" rel="stylesheet" />
+    <!-- daterange picker -->
+    <link rel="stylesheet" href="_content/Blazorized.AdminLte.Content/plugins/daterangepicker/daterangepicker.css">
+    <!-- overlay scrollbars -->
+    <link type="text/css" href="_content/Blazorized.AdminLte.Content/plugins/overlayScrollbars/css/OverlayScrollbars.min.css" rel="stylesheet" />
+    <link href="MForce365.styles.css" rel="stylesheet">
+    <link href="css/Syncfusionbootstrap4.css" rel="stylesheet" />
 
-        <h1 style="margin: 0 0 20px 0">Configuration Builder</h1>
+        <script src="https://cdn.syncfusion.com/blazor/18.4.42/syncfusion-blazor.min.js"></script>
 
-        <div class="well configurator">
 
-          <form>
-          <div class="row">
+</head>
 
-            <div class="col-md-4">
-
-              <div class="form-group">
-                <label for="parentEl">parentEl</label>
-                <input type="text" class="form-control" id="parentEl" value="" placeholder="body">
-              </div>
-
-              <div class="form-group">
-                <label for="startDate">startDate</label>
-                <input type="text" class="form-control" id="startDate" value="07/01/2015">
-              </div>
-
-              <div class="form-group">
-                <label for="endDate">endDate</label>
-                <input type="text" class="form-control" id="endDate" value="07/15/2015">
-              </div>
-
-              <div class="form-group">
-                <label for="minDate">minDate</label>
-                <input type="text" class="form-control" id="minDate" value="" placeholder="MM/DD/YYYY">
-              </div>
-
-              <div class="form-group">
-                <label for="maxDate">maxDate</label>
-                <input type="text" class="form-control" id="maxDate" value="" placeholder="MM/DD/YYYY">
-              </div>
-
-            </div>
-            <div class="col-md-4">
-
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" id="autoApply"> autoApply
-                </label>
-              </div>
-
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" id="singleDatePicker"> singleDatePicker
-                </label>
-              </div>
-
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" id="showDropdowns"> showDropdowns
-                </label>
-              </div>
-
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" id="showWeekNumbers"> showWeekNumbers
-                </label>
-              </div>
-
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" id="showISOWeekNumbers"> showISOWeekNumbers
-                </label>
-              </div>
-
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" id="timePicker"> timePicker
-                </label>
-              </div>
-
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" id="timePicker24Hour"> timePicker24Hour
-                </label>
-              </div>
-
-              <div class="form-group">
-                <label for="timePickerIncrement">timePickerIncrement (in minutes)</label>
-                <input type="text" class="form-control" id="timePickerIncrement" value="1">
-              </div>
-
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" id="timePickerSeconds"> timePickerSeconds
-                </label>
-              </div>
-
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" id="dateLimit"> dateLimit (with example date range span)
-                </label>
-              </div>
-
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" id="ranges"> ranges (with example predefined ranges)
-                </label>
-              </div>
-
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" id="locale"> locale (with example settings)
-                </label>
-              </div>
-
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" id="linkedCalendars" checked="checked"> linkedCalendars
-                </label>
-              </div>
-
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" id="autoUpdateInput" checked="checked"> autoUpdateInput
-                </label>
-              </div>
-
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" id="alwaysShowCalendars"> alwaysShowCalendars
-                </label>
-              </div>
-
-            </div>
-            <div class="col-md-4">
-
-              <div class="form-group">
-                <label for="opens">opens</label>
-                <select id="opens" class="form-control">
-                  <option value="right" selected>right</option>
-                  <option value="left">left</option>
-                  <option value="center">center</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="drops">drops</label>
-                <select id="drops" class="form-control">
-                  <option value="down" selected>down</option>
-                  <option value="up">up</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="buttonClasses">buttonClasses</label>
-                <input type="text" class="form-control" id="buttonClasses" value="btn btn-sm">
-              </div>
-
-              <div class="form-group">
-                <label for="applyClass">applyClass</label>
-                <input type="text" class="form-control" id="applyClass" value="btn-success">
-              </div>
-
-              <div class="form-group">
-                <label for="cancelClass">cancelClass</label>
-                <input type="text" class="form-control" id="cancelClass" value="btn-default">
-              </div>
-
-            </div>
-
-          </div>
-          </form>
-
+<body>
+    <div id="app">
+        <div class="app-load">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
         </div>
+    </div>
 
-        <div class="row">
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+    <script src="_content/Blazorized.AdminLte.Content/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="_content/Blazorized.AdminLte.Content/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="_content/Blazorized.AdminLte.Content/dist/js/adminlte.min.js"></script>
+    <script src="_content/Blazorized.AdminLte/js/interop.js"></script>
 
-          <div class="col-md-4 col-md-offset-2 demo">
-            <h4>Your Date Range Picker</h4>
-            <input type="text" id="config-demo" class="form-control">
-            <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
-          </div>
+    <script src="_content/Microsoft.Authentication.WebAssembly.Msal/AuthenticationService.js"></script>
+    <script src="_framework/blazor.webassembly.js"></script>
+    <script>navigator.serviceWorker.register('service-worker.js');</script>
+    <script src="_content/Blazorized.AdminLte.Content/plugins/moment/moment-with-locales.js"></script>
+    <script src="_content/Blazorized.AdminLte.Content/plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- overlay scrollbars -->
+    <script src="_content/Blazorized.AdminLte.Content/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</body>
 
-          <div class="col-md-6">
-            <h4>Configuration</h4>
-
-            <div class="well">
-              <textarea id="config-text" style="height: 300px; width: 100%; padding: 10px"></textarea>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <script type="text/javascript" src="require.js" data-main="main.js"></script>
-   </body>
 </html>
