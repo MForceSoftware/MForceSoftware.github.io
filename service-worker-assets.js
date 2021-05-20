@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-v9QyQftgzuHD75u4DdAObsjncj0v8LiJoNelWhW5ahI=",
+      "hash": "sha256-g3900VfsGSmtYAfKvyE2IOcVbk6vWx3iJSoquQdfveo=",
       "url": "appsettings.json"
     },
     {
@@ -1681,11 +1681,11 @@
       "url": "_framework\/MForce.Components.dll"
     },
     {
-      "hash": "sha256-fX1uDaI\/1D2b08DckEsV1HhQdZZTuFXNZOUW4yL5\/1c=",
+      "hash": "sha256-z4HhzjZfZmaooo2CiLIIcgXArkBR9KiwTsMsdDZZKBU=",
       "url": "_framework\/MForce365.Shared.dll"
     },
     {
-      "hash": "sha256-SdaT2Ei6JJsYZyiYxC0LbkdC\/bfXHB69g6+j4zMNHL8=",
+      "hash": "sha256-PguzQk7w9ICvg98bAcXiZp87S9HcDQV1vOTRCFUZoFM=",
       "url": "_framework\/MForce365.dll"
     },
     {
@@ -1857,7 +1857,7 @@
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
-      "hash": "sha256-c5CJkJt\/f6iIbzXO2psnmmwUUJoSr\/+R4yE2yQ4R\/yo=",
+      "hash": "sha256-jP1iZeLeUC\/YoM1B0lJBVCZ0RmRaGwaLbRYlSThYliM=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -1865,5 +1865,5 @@
       "url": "_framework\/blazor.webassembly.js"
     }
   ],
-  "version": "CHFIVyok"
+  "version": "\/DXo74ta"
 };
