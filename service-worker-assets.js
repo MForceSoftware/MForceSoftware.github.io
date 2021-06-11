@@ -450,35 +450,35 @@
     },
     {
       "hash": "sha256-KUuI6wdoaOMmj32E1L\/53cjJI3XuASsdQyZ+pd0I5jE=",
-      "url": "_content\/Syncfusion.Blazor.Navigations\/scripts\/navigationsbase-da5a6e.min.js"
+      "url": "_content\/Syncfusion.Blazor.Navigations\/scripts\/navigationsbase-0042ca.min.js"
     },
     {
       "hash": "sha256-s8PQWOyDjMXEk8bDMYJQ\/quSBViClaT8zjtYadVOrFg=",
-      "url": "_content\/Syncfusion.Blazor.Navigations\/scripts\/sf-accordion-da5a6e.min.js"
+      "url": "_content\/Syncfusion.Blazor.Navigations\/scripts\/sf-accordion-0042ca.min.js"
     },
     {
       "hash": "sha256-f7v4ub3+PV2yMz0Oyy8plDISdAuWu4+CR8h8Yebqjkw=",
-      "url": "_content\/Syncfusion.Blazor.Navigations\/scripts\/sf-contextmenu-da5a6e.min.js"
+      "url": "_content\/Syncfusion.Blazor.Navigations\/scripts\/sf-contextmenu-0042ca.min.js"
     },
     {
       "hash": "sha256-xfMUVNxgJ8vFjcaHhCQIwFgRg6Wq5MW2TrXE\/ztpSpo=",
-      "url": "_content\/Syncfusion.Blazor.Navigations\/scripts\/sf-menu-da5a6e.min.js"
+      "url": "_content\/Syncfusion.Blazor.Navigations\/scripts\/sf-menu-0042ca.min.js"
     },
     {
-      "hash": "sha256-wb7WMit\/iN3ZfI3fEHCfxto1v2H7osvnyKmty7eytho=",
-      "url": "_content\/Syncfusion.Blazor.Navigations\/scripts\/sf-sidebar-da5a6e.min.js"
+      "hash": "sha256-r+1wHFJHSMzgQ9Ia3AZYFwnUAWB6zpDkbOa+rAK9yBI=",
+      "url": "_content\/Syncfusion.Blazor.Navigations\/scripts\/sf-sidebar-0042ca.min.js"
     },
     {
       "hash": "sha256-0JOUzqBFyCKgamwbIGzEKmyaoAaY3zWn8qsUEOT2zyM=",
-      "url": "_content\/Syncfusion.Blazor.Navigations\/scripts\/sf-tab-da5a6e.min.js"
+      "url": "_content\/Syncfusion.Blazor.Navigations\/scripts\/sf-tab-0042ca.min.js"
     },
     {
-      "hash": "sha256-cLCi3V5VwGckGQpsl8V6si7Z+tkE2PDqCkyBzmn1y1U=",
-      "url": "_content\/Syncfusion.Blazor.Navigations\/scripts\/sf-toolbar-da5a6e.min.js"
+      "hash": "sha256-IkYwc8hHlntagJGHjocb+kEzFia0sL0ZLS7pMggeMyo=",
+      "url": "_content\/Syncfusion.Blazor.Navigations\/scripts\/sf-toolbar-0042ca.min.js"
     },
     {
-      "hash": "sha256-jwIDIRCmuf7WUpmXYD3B3hThXnWA2O+gZ5KtlzZ9YJg=",
-      "url": "_content\/Syncfusion.Blazor.Navigations\/scripts\/sf-treeview-da5a6e.min.js"
+      "hash": "sha256-cNfTCOHLaSme2CyzitawbPjKmAB2bTD8vJ78eU6NehA=",
+      "url": "_content\/Syncfusion.Blazor.Navigations\/scripts\/sf-treeview-0042ca.min.js"
     },
     {
       "hash": "sha256-9qI2jmyvyAtUyXwj5vQLweQ3wFEfYNdXyZ3xw+4tx90=",
@@ -514,7 +514,7 @@
     },
     {
       "hash": "sha256-Fk7TnreYJURgh1PYrPpEjUCAnPusYlkKCmb+BIo2HI4=",
-      "url": "_content\/Syncfusion.Blazor.Schedule\/scripts\/sf-schedule-da5a6e.min.js"
+      "url": "_content\/Syncfusion.Blazor.Schedule\/scripts\/sf-schedule-0042ca.min.js"
     },
     {
       "hash": "sha256-1JCxXWSNXTfCsHUSm6BoyLXHAQthvOAPQT3HbqUWXzE=",
@@ -1641,7 +1641,7 @@
       "url": "_framework\/Syncfusion.Blazor.Lists.dll"
     },
     {
-      "hash": "sha256-J5+XPZ5h6mlIGBzWev8OUy2eGPuLMFeFuD74SqG7b8A=",
+      "hash": "sha256-ibheWErwSuN8QtWfC1ZnXpbWD5Km\/CAMm8EzdyO7tRA=",
       "url": "_framework\/Syncfusion.Blazor.Navigations.dll"
     },
     {
@@ -1649,7 +1649,7 @@
       "url": "_framework\/Syncfusion.Blazor.Popups.dll"
     },
     {
-      "hash": "sha256-1Vczrzi0iC8BJHjj4uCSYh2L7mGou8fPl7EMfr3eWUM=",
+      "hash": "sha256-226bujYoDT\/mFLmCqzf17uCr58YFeDv1ZDicqmk13qU=",
       "url": "_framework\/Syncfusion.Blazor.Schedule.dll"
     },
     {
@@ -1665,7 +1665,7 @@
       "url": "_framework\/Syncfusion.Blazor.Themes.dll"
     },
     {
-      "hash": "sha256-gmXWk3xangTi2wBE2sfqvHdUHphCXd2\/qi0LSRAVb2U=",
+      "hash": "sha256-hhYVffw32Me\/u6zl1KGjzwcseWFoRizRLqnicrc5QkY=",
       "url": "_framework\/Syncfusion.ExcelExport.Net.dll"
     },
     {
@@ -1685,7 +1685,7 @@
       "url": "_framework\/MForce365.Shared.dll"
     },
     {
-      "hash": "sha256-CHV1QLiaTncvnKBfamJXV9+pWzB8M9S3p1z8NDlzKQg=",
+      "hash": "sha256-cQXZ7oz8VXMoml2i4ZHTN0DOQZYjKfMhDOfpwJR7JTI=",
       "url": "_framework\/MForce365.dll"
     },
     {
@@ -1933,7 +1933,7 @@
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
-      "hash": "sha256-7euST7Clk2BTjIPu+6DAJUToqpRbI2ug8\/\/OwRwHVxM=",
+      "hash": "sha256-2MHlIRkAPM4VZioB7rDkpttyuBdN3MMCB9RwnJ6WFy8=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -1941,5 +1941,5 @@
       "url": "_framework\/blazor.webassembly.js"
     }
   ],
-  "version": "pNymNO6O"
+  "version": "nr96uPRr"
 };
