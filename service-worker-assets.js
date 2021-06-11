@@ -498,19 +498,19 @@
     },
     {
       "hash": "sha256-\/lwogss8758OHwiNmKkG6S2wTmb2DY6cMuBohvEZyi4=",
-      "url": "_content\/Syncfusion.Blazor.Calendars\/scripts\/sf-calendarbase-da5a6e.min.js"
+      "url": "_content\/Syncfusion.Blazor.Calendars\/scripts\/sf-calendarbase-0042ca.min.js"
     },
     {
       "hash": "sha256-pDWEywe79haYeCAG1U\/7qhkgSSIeXtWCzwMXm3TLQCU=",
-      "url": "_content\/Syncfusion.Blazor.Calendars\/scripts\/sf-datepicker-da5a6e.min.js"
+      "url": "_content\/Syncfusion.Blazor.Calendars\/scripts\/sf-datepicker-0042ca.min.js"
     },
     {
       "hash": "sha256-5ecqRyTXu9Kv2xHGRG4u\/6ngMPjUK0NHlMm\/0WTEM0M=",
-      "url": "_content\/Syncfusion.Blazor.Calendars\/scripts\/sf-daterangepicker-da5a6e.min.js"
+      "url": "_content\/Syncfusion.Blazor.Calendars\/scripts\/sf-daterangepicker-0042ca.min.js"
     },
     {
       "hash": "sha256-\/zQXGnAy1\/5Hbh5Z9AS0UM2vUKjIvtyRzn3w24WlaMU=",
-      "url": "_content\/Syncfusion.Blazor.Calendars\/scripts\/sf-timepicker-da5a6e.min.js"
+      "url": "_content\/Syncfusion.Blazor.Calendars\/scripts\/sf-timepicker-0042ca.min.js"
     },
     {
       "hash": "sha256-Fk7TnreYJURgh1PYrPpEjUCAnPusYlkKCmb+BIo2HI4=",
@@ -1613,7 +1613,7 @@
       "url": "_framework\/Syncfusion.Blazor.Buttons.dll"
     },
     {
-      "hash": "sha256-uLH8IEv7I7ZP2Xl1Ipz8OdL210Nn9C8akwt0m+WgLQQ=",
+      "hash": "sha256-ek8DEMG6HgWpzFRPoZOj2t+tpyxPzb\/YZESaM4F06Lk=",
       "url": "_framework\/Syncfusion.Blazor.Calendars.dll"
     },
     {
@@ -1685,7 +1685,7 @@
       "url": "_framework\/MForce365.Shared.dll"
     },
     {
-      "hash": "sha256-PO\/2n20d2htTx3p\/ufyXCPa+NFEz+TQn24mjFTTz\/Nk=",
+      "hash": "sha256-CHV1QLiaTncvnKBfamJXV9+pWzB8M9S3p1z8NDlzKQg=",
       "url": "_framework\/MForce365.dll"
     },
     {
@@ -1933,7 +1933,7 @@
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
-      "hash": "sha256-+cjwjc+oUA06VeHohfIUzpGIO1KJgZCRb3E3c\/3rbVk=",
+      "hash": "sha256-7euST7Clk2BTjIPu+6DAJUToqpRbI2ug8\/\/OwRwHVxM=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -1941,5 +1941,5 @@
       "url": "_framework\/blazor.webassembly.js"
     }
   ],
-  "version": "eH0lodqa"
+  "version": "pNymNO6O"
 };
