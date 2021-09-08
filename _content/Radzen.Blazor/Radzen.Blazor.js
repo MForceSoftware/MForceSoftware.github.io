@@ -546,7 +546,7 @@ window.Radzen = {
       e.preventDefault();
     }
   },
-  numericKeyPress: function (e) {
+  numericKeyPress: function (e, isInteger) {
     if (
       e.metaKey ||
       e.ctrlKey ||
@@ -559,7 +559,7 @@ window.Radzen = {
 
     var ch = String.fromCharCode(e.charCode);
 
-    if (/^[-\d,.]$/.test(ch)) {
+    if ((isInteger ? /^[-\d]$/ : /^[-\d,.]$/).test(ch)) {
       return;
     }
 
@@ -763,7 +763,7 @@ window.Radzen = {
       instance.invokeMethodAsync(callback);
     }
 
-    if (Radzen.activeElement && Radzen.activeElement == document.activeElement ) {
+    if (Radzen.activeElement && Radzen.activeElement == document.activeElement || Radzen.activeElement && document.activeElement == document.body) {
         Radzen.activeElement.focus();
         Radzen.activeElement = null;
     }
@@ -1204,8 +1204,17 @@ window.Radzen = {
           var el = document.getElementById(id + 'visual');
           if (el) {
               el.style.display = 'block';
-              el.style.top = e.clientY + 10 + 'px';
-              el.style.left = e.clientX + 10 + 'px';
+
+              if (/Edge/.test(navigator.userAgent)) {
+                  var scrollLeft = document.body.scrollLeft;
+                  var scrollTop = document.body.scrollTop;
+              } else {
+                  var scrollLeft = document.documentElement.scrollLeft;
+                  var scrollTop = document.documentElement.scrollTop;
+              }
+
+              el.style.top = e.clientY + scrollTop + 10 + 'px';
+              el.style.left = e.clientX + scrollLeft + 10 + 'px';
           }
       }
       document.removeEventListener('mousemove', Radzen[id + 'move']);
