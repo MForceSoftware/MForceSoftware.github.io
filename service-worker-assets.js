@@ -173,7 +173,7 @@
       "url": "css\/open-iconic\/README.md"
     },
     {
-      "hash": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=",
+      "hash": "sha256-MYRZXwNpHUoBjV+x1DYOFDupJaQKfBqNoUW+ePEAiJg=",
       "url": "favicon.ico"
     },
     {
@@ -189,7 +189,7 @@
       "url": "img\/MForceLogo.png"
     },
     {
-      "hash": "sha256-Zmuv3Twk5EO5KFkdDnvBVfXwj5GiIq5Y5SrCnCHiv9Q=",
+      "hash": "sha256-WTajL9O6Eak3G0JObpn3iijjCIGbSQlyiOFaKQeM\/sI=",
       "url": "index.html"
     },
     {
@@ -229,7 +229,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-XDy1Utl2umDGZW\/UZOoJOhWKP1Pzr3TxsHjQ7KWiw6M=",
+      "hash": "sha256-\/WUVDnLGsXRCymmxnxg7hurernhS40Yf1Ab2UN0z6rE=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -249,7 +249,7 @@
       "url": "_framework\/MForce365.Shared.dll"
     },
     {
-      "hash": "sha256-6yJqOvdS5\/57yjpuLPeTdyO0HNOx0HP0U8xaokP0BR8=",
+      "hash": "sha256-b\/kpsb\/MtBvFZaTP4ou8cP6A\/AzbABX+zAt55qrvMhk=",
       "url": "_framework\/MForce365v2.dll"
     },
     {
@@ -673,5 +673,5 @@
       "url": "MForce365v2.styles.css"
     }
   ],
-  "version": "rvfLGWIH"
+  "version": "SVOeh3rB"
 };
