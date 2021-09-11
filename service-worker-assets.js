@@ -229,7 +229,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-pD9fis\/1kCig8W1vTOdwoTlG6PgqsypMPImgXJ0wgew=",
+      "hash": "sha256-XDy1Utl2umDGZW\/UZOoJOhWKP1Pzr3TxsHjQ7KWiw6M=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -249,7 +249,7 @@
       "url": "_framework\/MForce365.Shared.dll"
     },
     {
-      "hash": "sha256-YpnQbDxazdzW\/5aY9Y3Oqb7tMtMeZh7hBycwsYjg\/ao=",
+      "hash": "sha256-6yJqOvdS5\/57yjpuLPeTdyO0HNOx0HP0U8xaokP0BR8=",
       "url": "_framework\/MForce365v2.dll"
     },
     {
@@ -673,5 +673,5 @@
       "url": "MForce365v2.styles.css"
     }
   ],
-  "version": "PHHLur\/m"
+  "version": "rvfLGWIH"
 };
