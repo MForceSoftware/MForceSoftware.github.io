@@ -118,14 +118,6 @@
     },
     {
       "hash": "sha256-WeOKCkI7IdJHs2kCqsKgLfiWX4\/sNPbaRUspOLefkCY=",
-      "url": "_content\/MForce.Components.ActionItems\/background.png"
-    },
-    {
-      "hash": "sha256-Q4NTLlisgAvNajNKkeD3c0qLXE5q8YduQMx9wE\/SeNk=",
-      "url": "_content\/MForce.Components.ActionItems\/exampleJsInterop.js"
-    },
-    {
-      "hash": "sha256-WeOKCkI7IdJHs2kCqsKgLfiWX4\/sNPbaRUspOLefkCY=",
       "url": "_content\/MForce.Components.Schedule\/background.png"
     },
     {
@@ -141,7 +133,7 @@
       "url": "_content\/MForce.Components\/exampleJsInterop.js"
     },
     {
-      "hash": "sha256-VYH7kbyhVvX\/3CSdv27NGc\/Qiz\/k15FAdav90s+lb+c=",
+      "hash": "sha256-b4wx\/BHr0NkS09OhMo2dqomZLpgwjG4kJyAVFaM5OWU=",
       "url": "css\/app.css"
     },
     {
@@ -245,7 +237,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-vSKztzGxnKyfG5itstYFltiArljZFvd0z6sVVeGxMD0=",
+      "hash": "sha256-L58Mo9vE6mSB\/PHnISBHRuG5kCKB+zP1l1tmNbMtWms=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -257,15 +249,15 @@
       "url": "_framework\/Azure.Core.dll"
     },
     {
-      "hash": "sha256-qLK+GsbIzegVsVtQlgZB7+4VeT7qF2sxii+4Zjs80jE=",
+      "hash": "sha256-b8uw9lL5HLCiH8Jdmkue7RwSbyigZmPM2rDwlblG6cE=",
       "url": "_framework\/MForce.Components.ActionItems.dll"
     },
     {
-      "hash": "sha256-KA4zuHVETbHmspXeWdrCOBAnHzZOVToAO\/akmUyS7hg=",
+      "hash": "sha256-nL4ON2nhQYun6jlffLuag48Gs7IbBrDF3O3L7cyGwLU=",
       "url": "_framework\/MForce.Components.dll"
     },
     {
-      "hash": "sha256-q\/BW\/qBDaIseErz8NwKmswl\/PiQimTEvjQPMp9BEpLw=",
+      "hash": "sha256-2OMJDtn+1UzwCWb32WMIvVIa+cIQ007HZQFFsU3nQIo=",
       "url": "_framework\/MForce.Components.Schedule.dll"
     },
     {
@@ -273,7 +265,7 @@
       "url": "_framework\/MForce365.Shared.dll"
     },
     {
-      "hash": "sha256-P2NfTXdg+odNv+ReEkT9SdeioOtcVqwkXHTduZnPc8k=",
+      "hash": "sha256-cT94ODz+KnZTQ9XOzNeS4SbK8JIaCrrWXMnM1J2umtg=",
       "url": "_framework\/MForce365v2.dll"
     },
     {
@@ -697,5 +689,5 @@
       "url": "MForce365v2.styles.css"
     }
   ],
-  "version": "bCJ1TNvN"
+  "version": "kEvETIo2"
 };

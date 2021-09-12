@@ -8,6 +8,11 @@ a, .btn-link {
     color: #0366d6;
 }
 
+.truncate{
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
 .btn-primary {
     color: #fff;
     background-color: #1b6ec2;
