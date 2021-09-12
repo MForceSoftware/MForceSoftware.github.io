@@ -245,7 +245,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-k0OLym7ikmzi9I9p\/oUpXMEU5S4SSHyRiEsalGpg1BA=",
+      "hash": "sha256-vSKztzGxnKyfG5itstYFltiArljZFvd0z6sVVeGxMD0=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -309,7 +309,7 @@
       "url": "_framework\/Microsoft.AspNetCore.Metadata.dll"
     },
     {
-      "hash": "sha256-LPdZSmQJ1eVZiM6DC0JeDCOXrG9iR5Pu\/NbMgrLV7Q8=",
+      "hash": "sha256-Sv5VnhktGrqvAqmJWvIKjS8dhOOKssxrA8bAhHscjP0=",
       "url": "_framework\/Microsoft.Authentication.WebAssembly.Msal.dll"
     },
     {
@@ -697,5 +697,5 @@
       "url": "MForce365v2.styles.css"
     }
   ],
-  "version": "Jr8F4fCw"
+  "version": "bCJ1TNvN"
 };
