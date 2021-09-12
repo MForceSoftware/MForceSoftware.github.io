@@ -118,11 +118,27 @@
     },
     {
       "hash": "sha256-WeOKCkI7IdJHs2kCqsKgLfiWX4\/sNPbaRUspOLefkCY=",
+      "url": "_content\/MForce.Components.ActionItems\/background.png"
+    },
+    {
+      "hash": "sha256-Q4NTLlisgAvNajNKkeD3c0qLXE5q8YduQMx9wE\/SeNk=",
+      "url": "_content\/MForce.Components.ActionItems\/exampleJsInterop.js"
+    },
+    {
+      "hash": "sha256-WeOKCkI7IdJHs2kCqsKgLfiWX4\/sNPbaRUspOLefkCY=",
       "url": "_content\/MForce.Components.Schedule\/background.png"
     },
     {
       "hash": "sha256-Q4NTLlisgAvNajNKkeD3c0qLXE5q8YduQMx9wE\/SeNk=",
       "url": "_content\/MForce.Components.Schedule\/exampleJsInterop.js"
+    },
+    {
+      "hash": "sha256-WeOKCkI7IdJHs2kCqsKgLfiWX4\/sNPbaRUspOLefkCY=",
+      "url": "_content\/MForce.Components\/background.png"
+    },
+    {
+      "hash": "sha256-Q4NTLlisgAvNajNKkeD3c0qLXE5q8YduQMx9wE\/SeNk=",
+      "url": "_content\/MForce.Components\/exampleJsInterop.js"
     },
     {
       "hash": "sha256-VYH7kbyhVvX\/3CSdv27NGc\/Qiz\/k15FAdav90s+lb+c=",
@@ -229,7 +245,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-\/WUVDnLGsXRCymmxnxg7hurernhS40Yf1Ab2UN0z6rE=",
+      "hash": "sha256-k0OLym7ikmzi9I9p\/oUpXMEU5S4SSHyRiEsalGpg1BA=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -241,7 +257,15 @@
       "url": "_framework\/Azure.Core.dll"
     },
     {
-      "hash": "sha256-W3Q+rDtnFnLe+vouy1RJNDFPif9CjyPVTL9fPH9Y7RE=",
+      "hash": "sha256-qLK+GsbIzegVsVtQlgZB7+4VeT7qF2sxii+4Zjs80jE=",
+      "url": "_framework\/MForce.Components.ActionItems.dll"
+    },
+    {
+      "hash": "sha256-KA4zuHVETbHmspXeWdrCOBAnHzZOVToAO\/akmUyS7hg=",
+      "url": "_framework\/MForce.Components.dll"
+    },
+    {
+      "hash": "sha256-q\/BW\/qBDaIseErz8NwKmswl\/PiQimTEvjQPMp9BEpLw=",
       "url": "_framework\/MForce.Components.Schedule.dll"
     },
     {
@@ -249,7 +273,7 @@
       "url": "_framework\/MForce365.Shared.dll"
     },
     {
-      "hash": "sha256-b\/kpsb\/MtBvFZaTP4ou8cP6A\/AzbABX+zAt55qrvMhk=",
+      "hash": "sha256-P2NfTXdg+odNv+ReEkT9SdeioOtcVqwkXHTduZnPc8k=",
       "url": "_framework\/MForce365v2.dll"
     },
     {
@@ -673,5 +697,5 @@
       "url": "MForce365v2.styles.css"
     }
   ],
-  "version": "SVOeh3rB"
+  "version": "Jr8F4fCw"
 };
