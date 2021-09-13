@@ -237,7 +237,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-L58Mo9vE6mSB\/PHnISBHRuG5kCKB+zP1l1tmNbMtWms=",
+      "hash": "sha256-XPGJAPegJMNDPX6uZD2G29\/M0dN5d6O9Hj1KCzMHuy0=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -249,15 +249,15 @@
       "url": "_framework\/Azure.Core.dll"
     },
     {
-      "hash": "sha256-b8uw9lL5HLCiH8Jdmkue7RwSbyigZmPM2rDwlblG6cE=",
+      "hash": "sha256-0qms2\/Tz4J1GgZt\/Emk8dfgjw1lrC9Uz9YMEEw9kaUM=",
       "url": "_framework\/MForce.Components.ActionItems.dll"
     },
     {
-      "hash": "sha256-nL4ON2nhQYun6jlffLuag48Gs7IbBrDF3O3L7cyGwLU=",
+      "hash": "sha256-UM3ZwPEX\/nEqDSTpkLAQq7W9Bhwt1TBbLWRPkD+9lyQ=",
       "url": "_framework\/MForce.Components.dll"
     },
     {
-      "hash": "sha256-2OMJDtn+1UzwCWb32WMIvVIa+cIQ007HZQFFsU3nQIo=",
+      "hash": "sha256-vICgGLjaS3Q9fvZNHTqJK6+5Gyb6A0w2kT+sRPLXWCM=",
       "url": "_framework\/MForce.Components.Schedule.dll"
     },
     {
@@ -265,7 +265,7 @@
       "url": "_framework\/MForce365.Shared.dll"
     },
     {
-      "hash": "sha256-cT94ODz+KnZTQ9XOzNeS4SbK8JIaCrrWXMnM1J2umtg=",
+      "hash": "sha256-rGUo5fyNtQsK1o76zELAD+n6hkHgxfNsT8GEIFw9O8U=",
       "url": "_framework\/MForce365v2.dll"
     },
     {
@@ -689,5 +689,5 @@
       "url": "MForce365v2.styles.css"
     }
   ],
-  "version": "kEvETIo2"
+  "version": "81dUH6Jr"
 };
