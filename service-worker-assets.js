@@ -113,7 +113,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-TOfkPkzHpsMbjxKVZCcKhhH9NYr4I+BGRl6MHKnEOWo=",
+      "hash": "sha256-7jachhfmcGdOtl\/LDAIXgrXdXp5w5IJ5jgDooC3DFoo=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -125,23 +125,23 @@
       "url": "_framework\/Azure.Core.dll"
     },
     {
-      "hash": "sha256-9Hd1mjPYvhTNHu2dI+7aevnMRTkiP9VvBebz1Wd0GIg=",
+      "hash": "sha256-Hs09d0jihTP7YtEgb7hU17mYBYDbWG1z1hZRdkA67wg=",
       "url": "_framework\/MForce.Components.ActionItems.dll"
     },
     {
-      "hash": "sha256-EyXJ9nAZEkrNPvoNxMntl2ZE11pI2nHC2+kYCEgZMUE=",
+      "hash": "sha256-o6RD1oU177vg+\/En4O87pkSWiY4IgQAPIl+KIrZqo4Q=",
       "url": "_framework\/MForce.Components.dll"
     },
     {
-      "hash": "sha256-7FGvhyFF793uTqj0lJOTJCXgEunmujr\/ndy3IURkknM=",
+      "hash": "sha256-8XzjO2OGf45t32dml2QxhZKXdc616A\/YGyNAZV6hWAQ=",
       "url": "_framework\/MForce.Components.Files.dll"
     },
     {
-      "hash": "sha256-xBGWZK3C2bXNAV2eWyTmJSsWKNcIdL6WTr+jOb1cyYU=",
+      "hash": "sha256-40PJ2Ydpsi0V7amKKuZWeftuapBJE6RmFRf+rnsrOBg=",
       "url": "_framework\/MForce.Components.Projects.dll"
     },
     {
-      "hash": "sha256-\/wO663wOywGKt0pV1ozzDhqzt92MH4ZnzVJNURJ2Jrg=",
+      "hash": "sha256-TCSZ7fmpjhvrKg7ytkIIC5qvXLuHnzGzrviQ4j0jeqY=",
       "url": "_framework\/MForce.Components.Schedule.dll"
     },
     {
@@ -149,7 +149,7 @@
       "url": "_framework\/MForce365.Shared.dll"
     },
     {
-      "hash": "sha256-8SBTJ+9HNODXaapJMVvIonajEcOpG1yWt6PHQswWA1k=",
+      "hash": "sha256-et9YFkjw6bFNCvIARia19uTRVcScsun1oJAFdRXrey0=",
       "url": "_framework\/MForce365v2.dll"
     },
     {
@@ -285,7 +285,7 @@
       "url": "_framework\/netstandard.dll"
     },
     {
-      "hash": "sha256-RQdqumIEGE06WcSBuhpU2itptCQsvKbpkjiu3H\/HBbA=",
+      "hash": "sha256-9hIZghVvKa17VEbw8jnSyDFsgxop4+mw0lyQx9XJylY=",
       "url": "_framework\/Radzen.Blazor.dll"
     },
     {
@@ -461,7 +461,7 @@
       "url": "_framework\/System.Runtime.CompilerServices.Unsafe.dll"
     },
     {
-      "hash": "sha256-KS205lyvFd8QzULcdZ99QI5ZC26UsT3ypLQ0owUb9BQ=",
+      "hash": "sha256-UPujGZK\/QppPwSTatVmgAQRjxZtsZ8Te3FkivpbGnzc=",
       "url": "_framework\/System.Runtime.dll"
     },
     {
@@ -681,7 +681,7 @@
       "url": "_content\/Radzen.Blazor\/fonts\/SourceSansPro-SemiboldIt.woff"
     },
     {
-      "hash": "sha256-Usf0+w22FX97YS8xXa2Fbx4Ard9w+G1L2ezFHdn602s=",
+      "hash": "sha256-0tZOpo6OTwQdFIuE+mnrKRuy6ypUJ375t0631PE4aKA=",
       "url": "_content\/Radzen.Blazor\/Radzen.Blazor.js"
     },
     {
@@ -713,5 +713,5 @@
       "url": "_content\/MForce.Components.Projects\/MForce.Components.Projects.bundle.scp.css"
     }
   ],
-  "version": "JIBtsaaG"
+  "version": "TZTsNzzp"
 };
