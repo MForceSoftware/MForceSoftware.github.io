@@ -113,7 +113,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-APoEZoJTWlPawmGpQjPvfvTjWlNVZ5aoAmxUpq9Fd0c=",
+      "hash": "sha256-oPSSzknnS5akANwsKEDeXqKbzFUOKgyttyVpB6BXX+w=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -129,11 +129,11 @@
       "url": "_framework\/MForce.Components.ActionItems.dll"
     },
     {
-      "hash": "sha256-itjpNEjUhZvuM1EiFU8XFBA6cwhgwEn\/XyoPmuwOmpU=",
+      "hash": "sha256-b4imC5CVrGdj+qVY1pGLrBN3f3SJRlP4SsLyfaTpEYM=",
       "url": "_framework\/MForce.Components.dll"
     },
     {
-      "hash": "sha256-fgWXzk\/D7qbpG9K2xFetl3zsI1RX8yXBDbBz3b9SzO4=",
+      "hash": "sha256-1OrX6WKKRsw\/KTalSEDNi2dVCOcFVHldnDZh746YfT4=",
       "url": "_framework\/MForce.Components.Files.dll"
     },
     {
@@ -141,7 +141,7 @@
       "url": "_framework\/MForce.Components.Projects.dll"
     },
     {
-      "hash": "sha256-C85BHuNUhxqHFC5X3hTKmoEyPONQeuFxV5NEFjJrH1g=",
+      "hash": "sha256-41yFbPm13m2Biq6dEnBaQNLAHIK\/X+pMFfT+Unbdb0k=",
       "url": "_framework\/MForce.Components.Schedule.dll"
     },
     {
@@ -149,7 +149,7 @@
       "url": "_framework\/MForce365.Shared.dll"
     },
     {
-      "hash": "sha256-NTDPv8tZ+BF46iqq7BDzM3dCQlBmb\/PgW+XxREP9QNA=",
+      "hash": "sha256-yqz5FBbF6r5o3WCiU0pK7W3BSRbOnyqB7Wm1rsFD0sk=",
       "url": "_framework\/MForce365v2.dll"
     },
     {
@@ -321,7 +321,7 @@
       "url": "_framework\/System.ComponentModel.TypeConverter.dll"
     },
     {
-      "hash": "sha256-B4bLBaONH99jWYkuD2gTXYa76w4YvNNBLSz\/KYeHRWU=",
+      "hash": "sha256-TOYUNi2ttDlzUmSOsOMfAz5Hi9SevwPGC8ydttrkh+4=",
       "url": "_framework\/System.Console.dll"
     },
     {
@@ -421,7 +421,7 @@
       "url": "_framework\/System.ObjectModel.dll"
     },
     {
-      "hash": "sha256-OZMDzLqXEKx5yO132kB3kCxQzf4cIJob2Ry81NSjgX4=",
+      "hash": "sha256-DOFYv1+o7EGs85N1h1\/PthFIO+Y4wzv8gilzk8DMOok=",
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
@@ -713,5 +713,5 @@
       "url": "_content\/MForce.Components.Projects\/MForce.Components.Projects.bundle.scp.css"
     }
   ],
-  "version": "IzcMOUrp"
+  "version": "3\/6gd9F5"
 };
