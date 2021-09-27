@@ -53,15 +53,15 @@
       "url": "favicon.ico"
     },
     {
-      "hash": "sha256-DbpQaq68ZSb5IoPosBErM1QWBfsbTxpJqhU0REi6wP4=",
+      "hash": "sha256-cUeajTJhb8cNAQng+Bdak8a63JxCWjS5U7HszPJ2KhU=",
       "url": "icon-192.png"
     },
     {
-      "hash": "sha256-oEo6d+KqX5fjxTiZk\/w9NB3Mi0+ycS5yLwCKwr4IkbA=",
+      "hash": "sha256-OSMpSn1vXMxylJ9oNtiWLMrwhyZwFmSH5QntQMidlvo=",
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-BVk7BSYstLrBroa4xUYBgQpmBPoeiZbT4kzwuCSUWC4=",
+      "hash": "sha256-ZU+ji1cweSw8EuxR864bSc5y1r7G1Au8SfKO16nZlD8=",
       "url": "img\/MForceLogo.png"
     },
     {
@@ -69,7 +69,7 @@
       "url": "index.html"
     },
     {
-      "hash": "sha256-3vpqDNuwlpnFbQ+dnp88ySlFkntdIzfgT75WyJ4+25w=",
+      "hash": "sha256-i0y1xgyXiwE+SYifpKu940nR45yvAJhwbJroy8IeET8=",
       "url": "manifest.json"
     },
     {
@@ -713,5 +713,5 @@
       "url": "_content\/MForce.Components.Projects\/MForce.Components.Projects.bundle.scp.css"
     }
   ],
-  "version": "3\/Zaf4\/8"
+  "version": "ZsYi7VRU"
 };
