@@ -77,10 +77,6 @@
       "url": "MForce365.js"
     },
     {
-      "hash": "sha256-4Yh4OTT5TEAPNyXEzOG+n5l2HPK294WFItz4SIelj88=",
-      "url": "sample-data\/weather.json"
-    },
-    {
       "hash": "sha256-SSI5jJtEpVAzgT9AhY11vXeEioBjxNxRbsB2d4K\/lMs=",
       "url": "MForce365v2.styles.css"
     },
@@ -113,7 +109,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-zPPzCjb+iou31Ul4KI3ehYUYk5zwc07RFdkQOjaQ\/8M=",
+      "hash": "sha256-GFZhT1xlHHdU\/JCdB9Iy2uPMAC0NNpkcbxtEcBGhf5E=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -125,31 +121,31 @@
       "url": "_framework\/Azure.Core.dll"
     },
     {
-      "hash": "sha256-0x+QA9TfN7FPwR\/iXM6SHtEcIxul9U+JhP9afCj2FZ4=",
+      "hash": "sha256-xWBKvxMiqxLhLoU5gFclI1xBQqzhg3YnXZ3AAmQmOm0=",
       "url": "_framework\/MForce.Components.ActionItems.dll"
     },
     {
-      "hash": "sha256-PYB8PHQwylVleGphhil5+qwphIc0UJ2DfxjHCdacUVE=",
+      "hash": "sha256-yIcKtLMSOD4mqRHGujCWOwUbAiKWznKUaqaz0aYWPB4=",
       "url": "_framework\/MForce.Components.dll"
     },
     {
-      "hash": "sha256-KEXU08aeaQvxcSnniMBePfAlIWoaXOIKjXs9\/H7w4OQ=",
+      "hash": "sha256-PEkCN2p2TNBAT5tII6Wv5rLskQlhKlo1a\/IzfhGyurk=",
       "url": "_framework\/MForce.Components.Files.dll"
     },
     {
-      "hash": "sha256-5Vjec9LAiv+4bN\/ORjx6JgkC\/WnTYXhG9Ou2U2X8hf8=",
+      "hash": "sha256-lErOxXlgXNZtL7ZOHwMA2jBc3slIbVpManbzhXd9H7E=",
       "url": "_framework\/MForce.Components.Projects.dll"
     },
     {
-      "hash": "sha256-9WAH7NneBpG44gcXTen8rDcvoGAONdPYhnr0BRr9KU4=",
+      "hash": "sha256-Oagut0ko5S0bP7gZT8ISlT8pa3eUhzhBXwaf2mlEkBI=",
       "url": "_framework\/MForce.Components.Schedule.dll"
     },
     {
-      "hash": "sha256-Ck7zGzOsY5jFDyH1q5HnH8u1m5UcQfP+IqPF\/eYScX8=",
+      "hash": "sha256-95kJ3kJvvqBIr0U4nBxO\/2gZFDweLVoYdWMXivMje6Y=",
       "url": "_framework\/MForce365.Shared.dll"
     },
     {
-      "hash": "sha256-\/99hYMWj492VK3ggloTS02eWWpZ6vF\/gl6\/Y8Vr8mV4=",
+      "hash": "sha256-tnQdUeBtRsOfUCuKgpWKAb2sBgEJoUDZjcLy6FPmDRg=",
       "url": "_framework\/MForce365v2.dll"
     },
     {
@@ -161,7 +157,7 @@
       "url": "_framework\/Microsoft.AspNetCore.Components.Authorization.dll"
     },
     {
-      "hash": "sha256-t9ZSi9OoGYOvMSEH6kAqECXiqnw2CPB\/AyUHsp4KREQ=",
+      "hash": "sha256-wV9GKkRx4yeekkBwr4kQ9yBilOXhdmkRx115wSDIVUM=",
       "url": "_framework\/Microsoft.AspNetCore.Components.dll"
     },
     {
@@ -285,7 +281,7 @@
       "url": "_framework\/netstandard.dll"
     },
     {
-      "hash": "sha256-Q4XH0569E9UgokSLIit7fFB4CeiDB6B9GLbLBvSe4Eo=",
+      "hash": "sha256-vkc1cokmkw+\/0KQdZnrxpKfjWfeIQ5Mhz4q3VZoJRKQ=",
       "url": "_framework\/Radzen.Blazor.dll"
     },
     {
@@ -421,7 +417,7 @@
       "url": "_framework\/System.ObjectModel.dll"
     },
     {
-      "hash": "sha256-DOFYv1+o7EGs85N1h1\/PthFIO+Y4wzv8gilzk8DMOok=",
+      "hash": "sha256-zGfmJJf2u70XXezqje2GNg8afEI8WC+hAb2C\/VZ\/5gA=",
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
@@ -681,7 +677,7 @@
       "url": "_content\/Radzen.Blazor\/fonts\/SourceSansPro-SemiboldIt.woff"
     },
     {
-      "hash": "sha256-DwcV6o1FMUar59bUHtWnbZRuiS2VyEAX12E7zBBWIxw=",
+      "hash": "sha256-+K69uA9znDjADO6caj\/u3eLA9YHGfNFvo7RBr0P8TuE=",
       "url": "_content\/Radzen.Blazor\/Radzen.Blazor.js"
     },
     {
@@ -713,5 +709,5 @@
       "url": "_content\/MForce.Components.Projects\/MForce.Components.Projects.bundle.scp.css"
     }
   ],
-  "version": "bKNg6I1U"
+  "version": "YgP1QAeu"
 };
