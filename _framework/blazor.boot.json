@@ -10,13 +10,13 @@
   "resources": {
     "assembly": {
       "Azure.Core.dll": "sha256-UEpCM2Ga5QNnQFaJQeZi28V68TNi4KmVOXzR5fsS1g4=",
-      "MForce.Components.ActionItems.dll": "sha256-MP3KBHz5sHsQAxwxCtj2fxH2g5ygDVZDI3PsUZj4bTE=",
-      "MForce.Components.dll": "sha256-S4yDvKzTowGNBK9vomlGTyCKLJsE8fq5ZkS1wwGIDcI=",
+      "MForce.Components.ActionItems.dll": "sha256-VjvwpkiBVNrSt65qkq67tpy1GS4ntxtfy0364lGYNPE=",
+      "MForce.Components.dll": "sha256-VeAYD+Q0l9qKQSWMXt+UAoFeyuePvi9PvzpAbDrLHRI=",
       "MForce.Components.Files.dll": "sha256-c0NK5hsW77+Ht1AVDPt3E0zDhO1CTWJyCgOJqAyPmEw=",
       "MForce.Components.Projects.dll": "sha256-lErOxXlgXNZtL7ZOHwMA2jBc3slIbVpManbzhXd9H7E=",
-      "MForce.Components.Schedule.dll": "sha256-QzbHW5ACcRT23HZc5BYbp3m2mRv+fV8J+RWo\/7lEAfA=",
+      "MForce.Components.Schedule.dll": "sha256-AN6tjh7Wv5+32+kXYR95aJLN6bHn0X7Lx46yiW8XNc4=",
       "MForce365.Shared.dll": "sha256-95kJ3kJvvqBIr0U4nBxO\/2gZFDweLVoYdWMXivMje6Y=",
-      "MForce365v2.dll": "sha256-8ZImibIOZ02N4fRScAFe4PvEMv8CjTAMW2Vady2jHMc=",
+      "MForce365v2.dll": "sha256-njVKlxjn985IRgmDabpXLr\/+zVydYOW4atrQXMEt7XU=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-IJjKYwzDUpTzx58396rgLAO1qmAU45y\/PyZMY\/VrvFw=",
       "Microsoft.AspNetCore.Components.Authorization.dll": "sha256-bx2RSglMHqZzuEMafrmSQb4n8XI1LP6VueCet\/ViAYs=",
       "Microsoft.AspNetCore.Components.dll": "sha256-wV9GKkRx4yeekkBwr4kQ9yBilOXhdmkRx115wSDIVUM=",
