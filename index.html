@@ -28,18 +28,12 @@
         <a href="" class="reload">Reload</a>
         <a class="dismiss">🗙</a>
     </div>
-    <mgt-msal2-provider client-id="07144b2e-509d-40d9-bab9-90db3c731f47"
-                        login-type="redirect/popup"
-                        scopes="user.read,people.read"
-                        redirect-uri="https://localhost:5001/authentication/"
-                        authority="https://login.microsoftonline.com/common">
-    </mgt-msal2-provider>
+
 
     <script src="_content/Microsoft.Authentication.WebAssembly.Msal/AuthenticationService.js"></script>
     <script src="MForce365.js"></script>
     <script src="_framework/blazor.webassembly.js"></script>
     <script src="_content/Radzen.Blazor/Radzen.Blazor.js"></script>
-    <script src="https://unpkg.com/@microsoft/mgt/dist/bundle/mgt-loader.js"></script>
     <script>navigator.serviceWorker.register('service-worker.js');</script>
 </body>
 
