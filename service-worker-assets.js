@@ -109,7 +109,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-WDLSe8o+0AcUEMb2gYY+6GKOAV+Iapb4LqcKuws+1ko=",
+      "hash": "sha256-HMbjT5LguvZlzaxOwNaiy29gtXNfxybeaGWB9Nst0eo=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -137,23 +137,23 @@
       "url": "_framework\/Markdig.Signed.dll"
     },
     {
-      "hash": "sha256-UVc9Au4ItvHUTly3QTOVsnqfIhypRnH9Xi7S7\/ZqK7Q=",
+      "hash": "sha256-wCa7xsuv36jFGBPZRQKOd5IexEW7sUrc+2j1kL9NfGY=",
       "url": "_framework\/MForce.Components.ActionItems.dll"
     },
     {
-      "hash": "sha256-xiX6tfO3sDdfjSTcs9wDH2gH+q\/0ns\/JX0PePhfTn1M=",
+      "hash": "sha256-qXc2NG\/hPXQ2j0oy1+IEaGUmAHEW+raVgEReymQ6TdQ=",
       "url": "_framework\/MForce.Components.dll"
     },
     {
-      "hash": "sha256-WvRA9MEproMlrUoQTk3BGfArRZKeo8qQeWG+kbYb0nw=",
+      "hash": "sha256-kPl5N9JN\/xIJ9rzwNmqoAsmXJFSa9JiNevLBeo4bngM=",
       "url": "_framework\/MForce.Components.Files.dll"
     },
     {
-      "hash": "sha256-4WQSODxoCdZGgsDs2SNLV7kFqKXBh+S\/voK9owHkxEM=",
+      "hash": "sha256-yfX+9gpR\/5l2ztM6ibQydqTSnun\/alHW9QAs84rV0EM=",
       "url": "_framework\/MForce.Components.Projects.dll"
     },
     {
-      "hash": "sha256-\/thSo+VsOosvl0C6SaLtxvKeAppcWEZYieI6ExZ+rCU=",
+      "hash": "sha256-\/FF3P+l+oVpoaGhK5QyoGbXY4vvd4qu0zfEH9tfYcvg=",
       "url": "_framework\/MForce.Components.Schedule.dll"
     },
     {
@@ -161,7 +161,7 @@
       "url": "_framework\/MForce365.Shared.dll"
     },
     {
-      "hash": "sha256-Vq2kbxodQPGkCBsQqoVGDObUPWoHvOnDy3eLhdTMtBg=",
+      "hash": "sha256-N3HrtN9NT7wmkJsWsl4gPXRWCFIWxsct8z9iW6aDiTY=",
       "url": "_framework\/MForce365v2.dll"
     },
     {
@@ -297,7 +297,7 @@
       "url": "_framework\/netstandard.dll"
     },
     {
-      "hash": "sha256-vkc1cokmkw+\/0KQdZnrxpKfjWfeIQ5Mhz4q3VZoJRKQ=",
+      "hash": "sha256-wwNOOTDqfaTSsMAwqLIqMl9zjpkjsKlOOQCH7AYpJeI=",
       "url": "_framework\/Radzen.Blazor.dll"
     },
     {
@@ -721,7 +721,7 @@
       "url": "_content\/Radzen.Blazor\/fonts\/SourceSansPro-SemiboldIt.woff"
     },
     {
-      "hash": "sha256-+K69uA9znDjADO6caj\/u3eLA9YHGfNFvo7RBr0P8TuE=",
+      "hash": "sha256-YIuie2vW3eFx4Q\/BlQqrHvPfW7SLbHShOtmv6S\/SQXA=",
       "url": "_content\/Radzen.Blazor\/Radzen.Blazor.js"
     },
     {
@@ -753,5 +753,5 @@
       "url": "_content\/MForce.Components.Projects\/MForce.Components.Projects.bundle.scp.css"
     }
   ],
-  "version": "SizwpH+b"
+  "version": "jq3nW2mL"
 };
