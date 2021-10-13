@@ -113,7 +113,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-pXPF9\/VyDJnCN4uhLYs6vb20hXbOdia32MIXvSPKgHM=",
+      "hash": "sha256-Y+UFm9TAb\/MuTx7bQ+w0db\/Mt\/n3ZuLYhAg3j\/AjmKY=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -141,23 +141,23 @@
       "url": "_framework\/Markdig.Signed.dll"
     },
     {
-      "hash": "sha256-xtq0X+7GsoBpa1+c4NlAZz3maY8cfhaFZ2iqcXI+y6c=",
+      "hash": "sha256-e6rxUUDW\/v37EcJ+BTSCwtrNzX+BtDfnSnHxidP2af0=",
       "url": "_framework\/MForce.Components.ActionItems.dll"
     },
     {
-      "hash": "sha256-3naHgB6JjKhBY7hm9Rhn4CRoPeZ6GPY3RTZcsqmeJNI=",
+      "hash": "sha256-9fFzPxIr1YEa4q3lBPuoM+zOpa2N5gSC6JyumKcGaUo=",
       "url": "_framework\/MForce.Components.dll"
     },
     {
-      "hash": "sha256-eUa9HyoIad86E+Z34B0n4wXm+bs\/rc7ukI35d4vg9PY=",
+      "hash": "sha256-nqhsSy8kYLYDRiSAZSIQwdrBDkbrOjp5poMqg+wuuSc=",
       "url": "_framework\/MForce.Components.Files.dll"
     },
     {
-      "hash": "sha256-\/58uJTGE0sm8DLHZFHRwMDtrZIgw\/cKHuXFGaTNiKFs=",
+      "hash": "sha256-A6qSewCYtWd47OtBOnEFl6N3DX0nwOiMEkD3PfHP1so=",
       "url": "_framework\/MForce.Components.Projects.dll"
     },
     {
-      "hash": "sha256-OjG9s6OZIxWOcA4QZe0xAaJL4fFbs0gt18I6CKCNoAE=",
+      "hash": "sha256-o6cbN7Y5i72BjHetKjC0FD4a6N+ZGBCkT8+2fQPUp\/M=",
       "url": "_framework\/MForce.Components.Schedule.dll"
     },
     {
@@ -165,7 +165,7 @@
       "url": "_framework\/MForce365.Shared.dll"
     },
     {
-      "hash": "sha256-V7SVr7d87meEeIJAhrhbRYy+hZd7f5ORur0vKm9UUXw=",
+      "hash": "sha256-aB7JEyKjqoDb64s0fVC38Jtlu2vUl6gC30tQMbiezLk=",
       "url": "_framework\/MForce365v2.dll"
     },
     {
@@ -321,7 +321,7 @@
       "url": "_framework\/netstandard.dll"
     },
     {
-      "hash": "sha256-gx7g6xsdXUB7X1HPrkBbA42eUSL+zlDOsJNJW97fQiw=",
+      "hash": "sha256-QEBuDe9r7tJZEitr3M2efkLMj0AXciWPtUU4mjkbLcQ=",
       "url": "_framework\/Radzen.Blazor.dll"
     },
     {
@@ -701,7 +701,7 @@
       "url": "_content\/Radzen.Blazor\/css\/humanistic.css"
     },
     {
-      "hash": "sha256-pKB6AEBtjGg65sfqwYuupc0aGdLg2pXNdcHVd2rafDg=",
+      "hash": "sha256-gI9gW3XGZg2XVelaeMtY17HIxaCPF0H6vAQRMhDHpRs=",
       "url": "_content\/Radzen.Blazor\/css\/software-base.css"
     },
     {
@@ -805,5 +805,5 @@
       "url": "_content\/MForce.Components.Projects\/MForce.Components.Projects.bundle.scp.css"
     }
   ],
-  "version": "ykDhAbdK"
+  "version": "eogA3n70"
 };
