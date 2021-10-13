@@ -117,7 +117,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-gUB\/lz9MKhYU9N+vNY4DMVbFD82kC972s7TQbXX16N4=",
+      "hash": "sha256-bQSHEMKwz1b1wX93jBtaFH9JEDXoBYqJ4cN8K6PMnDo=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -141,23 +141,23 @@
       "url": "_framework\/Markdig.Signed.dll"
     },
     {
-      "hash": "sha256-e2NFbU1mcij1o+LERds0Inl6rSEm2K1YZgkSm9cYxu8=",
+      "hash": "sha256-wQ+uu+xeOuMzVP0xuDcaStInDlhBSReHLjVW9rnoTC0=",
       "url": "_framework\/MForce.Components.ActionItems.dll"
     },
     {
-      "hash": "sha256-hFHk7cEi4IBfDg6qZ5zmgRM8BuwSq2dZ9AKIj1nrNNw=",
+      "hash": "sha256-AG4Z3XD5PvHSOgQRDUo1UzpLm\/35xyx0BTkyg3aikQM=",
       "url": "_framework\/MForce.Components.dll"
     },
     {
-      "hash": "sha256-6ch4b\/gtp7DA\/googi0zJcUl6sL6rTWRPmwbQcrEXDY=",
+      "hash": "sha256-5dmUitDUV971cR7BzCqYQF0rYtmC2QpctI2PhgWew98=",
       "url": "_framework\/MForce.Components.Files.dll"
     },
     {
-      "hash": "sha256-xGx+cjeQAlXCCvY7\/vgxGGztY5nLag4Q0wjmQiBHxvs=",
+      "hash": "sha256-iptkLetLK0Of6lC2ieuwZVIUwNkEA18ZevhawAsC17U=",
       "url": "_framework\/MForce.Components.Projects.dll"
     },
     {
-      "hash": "sha256-7xTFXorrxPszobA0mdMHM61xCiw92Owu1sbRd0vZ0fw=",
+      "hash": "sha256-KeiZO0Le4L\/7KH5TntOernIZ6\/cb7nadHuprdABoD4s=",
       "url": "_framework\/MForce.Components.Schedule.dll"
     },
     {
@@ -165,7 +165,7 @@
       "url": "_framework\/MForce365.Shared.dll"
     },
     {
-      "hash": "sha256-KAOoRB6m2jKmanyOQO\/lAHbPhiYpGA1g4CYgyL9YGAs=",
+      "hash": "sha256-fy0wq8zObkn2QOd7ydSUKt1TzUNIMQDiP9lFLcmo41A=",
       "url": "_framework\/MForce365v2.dll"
     },
     {
@@ -193,7 +193,7 @@
       "url": "_framework\/Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll"
     },
     {
-      "hash": "sha256-6uGMDnPhCPMzEBsiObRkaJ0e53JdD\/XtBeiEJMsRWyA=",
+      "hash": "sha256-PbcpmkjGzmhAxKuP\/PSEHoVDiDR5kG9sM3vSVUWBLsU=",
       "url": "_framework\/Microsoft.AspNetCore.Components.WebAssembly.dll"
     },
     {
@@ -449,7 +449,7 @@
       "url": "_framework\/System.Memory.dll"
     },
     {
-      "hash": "sha256-HquwMKHOkx9PNaTpDXpUwFH2xkgK+Kw51ubBXcTgWKs=",
+      "hash": "sha256-ZhZ+yXCH5HLWUMR22xWAeFO8DcvyE4yyDEU3StXoC6Y=",
       "url": "_framework\/System.Net.Http.dll"
     },
     {
@@ -801,5 +801,5 @@
       "url": "_content\/MForce.Components.Projects\/MForce.Components.Projects.bundle.scp.css"
     }
   ],
-  "version": "QqIdTE69"
+  "version": "rrdxZiod"
 };
