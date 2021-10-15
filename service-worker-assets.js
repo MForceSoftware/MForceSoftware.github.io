@@ -117,7 +117,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-30KGhal31fED7nimb0KMPCWblpZHQTvbZgoXD3iZ2cY=",
+      "hash": "sha256-3IrGjhZV5NDWROIGcZDtXykRMHbO1fVj7w\/4Y6AEjFw=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -141,23 +141,23 @@
       "url": "_framework\/Markdig.Signed.dll"
     },
     {
-      "hash": "sha256-wQ+uu+xeOuMzVP0xuDcaStInDlhBSReHLjVW9rnoTC0=",
+      "hash": "sha256-qUDdfjboettVNOQsziNSYDC0J7k7P5terqJb1iZSaSE=",
       "url": "_framework\/MForce.Components.ActionItems.dll"
     },
     {
-      "hash": "sha256-AG4Z3XD5PvHSOgQRDUo1UzpLm\/35xyx0BTkyg3aikQM=",
+      "hash": "sha256-eoDm0cbq1YKjwN\/t2DIlFh8cfBcjtwfZBlOCIhBWA9M=",
       "url": "_framework\/MForce.Components.dll"
     },
     {
-      "hash": "sha256-5dmUitDUV971cR7BzCqYQF0rYtmC2QpctI2PhgWew98=",
+      "hash": "sha256-qX+IrJAusgJu1WsFETzys8QqAvvli1f9t90XUjqZaAE=",
       "url": "_framework\/MForce.Components.Files.dll"
     },
     {
-      "hash": "sha256-iptkLetLK0Of6lC2ieuwZVIUwNkEA18ZevhawAsC17U=",
+      "hash": "sha256-5B1K+NOC4DDTVyl2ndJ26kF\/1BOlOVQe7nt1tzDQgxU=",
       "url": "_framework\/MForce.Components.Projects.dll"
     },
     {
-      "hash": "sha256-eYyAT3+oLRMyKuEBMLH7W\/mZzieZPl+XTRARiaqbg5o=",
+      "hash": "sha256-7qVJ9dceWUPikB7EUPMphSUl5uSyfvSrFFdhw03ULiw=",
       "url": "_framework\/MForce.Components.Schedule.dll"
     },
     {
@@ -165,7 +165,7 @@
       "url": "_framework\/MForce365.Shared.dll"
     },
     {
-      "hash": "sha256-S4dZdZc8Xyy9y+1wAus3ZB9q+EPtYi5TWVG3gKumeqc=",
+      "hash": "sha256-TK7mQfSjyBNpA4PQ6KMhno5XcJsPYOFr5g9KVg9HolI=",
       "url": "_framework\/MForce365v2.dll"
     },
     {
@@ -501,7 +501,7 @@
       "url": "_framework\/System.ObjectModel.dll"
     },
     {
-      "hash": "sha256-5qhCC6WONHlQVivusJQCFIWtXzalC7Oz6N9PHWbXdkY=",
+      "hash": "sha256-bjFyRVi6qjznGmIW1+TdyMcM8r\/BHlhaHirpggbFvd8=",
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
@@ -637,7 +637,7 @@
       "url": "_framework\/System.Text.RegularExpressions.dll"
     },
     {
-      "hash": "sha256-wpi2EnOYcLAVYdFRESTY2Tyv0LbqmaMOQPT5lCC1YxI=",
+      "hash": "sha256-fXMsAqJlK5Qz\/sd9Ntq+\/j3mHmeKe9AvlQ0QjyJdGxM=",
       "url": "_framework\/System.Threading.dll"
     },
     {
@@ -925,5 +925,5 @@
       "url": "_content\/MForce.Components.Projects\/MForce.Components.Projects.bundle.scp.css"
     }
   ],
-  "version": "ex9tvqJv"
+  "version": "C2+NSBzf"
 };
