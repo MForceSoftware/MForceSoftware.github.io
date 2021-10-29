@@ -113,7 +113,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-Bx5AhB+amE70hkWKHh8GRpfuw9EiReaG9H2\/2DRwW\/U=",
+      "hash": "sha256-OV0jVUmOuxggte93+JphfiI05gHVm\/C\/y04yRT85niU=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -137,23 +137,23 @@
       "url": "_framework\/Markdig.Signed.dll"
     },
     {
-      "hash": "sha256-W3H0OIHZCIZNCIyLqDgwm\/MKkab8HmSYWO1LdJdJGeg=",
+      "hash": "sha256-I+NxRzu0HU0tqZq2dssyQxZ7wiJzwe5UqI3bTgBKkK0=",
       "url": "_framework\/MForce.Components.ActionItems.dll"
     },
     {
-      "hash": "sha256-7MUOYHoH\/PLn0cIlyLGdkKqZqt7vIzXSFe+XVdcxIN4=",
+      "hash": "sha256-RK877hARWEb08yTykdrrcq7IH7xan1HJb23CifCarWk=",
       "url": "_framework\/MForce.Components.dll"
     },
     {
-      "hash": "sha256-o2yBIDHP\/pVUclU2IBXwgRNIChFM6AdlrvQzgKmuW+k=",
+      "hash": "sha256-sSTg\/VN3udgrWS3zYokADZp1Plvpg18o03AJHSSeCyU=",
       "url": "_framework\/MForce.Components.Files.dll"
     },
     {
-      "hash": "sha256-VYW+HFA4IP5KEYYk49Gu1LsXFizEiBEk0JXZq3fYmOQ=",
+      "hash": "sha256-pxUjxs1ExjWCZ5TVmuS9K4WorVOLULcb+HWcm0Ro8tU=",
       "url": "_framework\/MForce.Components.Projects.dll"
     },
     {
-      "hash": "sha256-KPWJNFg6x0ryhPnjWuZBWSI9v3rB3cORI3TLm6daU4g=",
+      "hash": "sha256-z7mW\/d2QWOHqIS5TYDx5Rk6OpNAlmmDvLeAw9V9jVE4=",
       "url": "_framework\/MForce.Components.Schedule.dll"
     },
     {
@@ -161,7 +161,7 @@
       "url": "_framework\/MForce365.Shared.dll"
     },
     {
-      "hash": "sha256-kk59vaPagzN\/E5BEfXZCfFX3FAFpP3i4bDR7GTqt104=",
+      "hash": "sha256-iDrEzK3rRj12tpJNmmXX+dGCHqvcs6TecXdgd1V+L2M=",
       "url": "_framework\/MForce365v2.dll"
     },
     {
@@ -313,7 +313,7 @@
       "url": "_framework\/Newtonsoft.Json.dll"
     },
     {
-      "hash": "sha256-d3NiesJEZUz2inNE6RHx91apOGvBEYu32M\/bhUPni90=",
+      "hash": "sha256-pUOrDAHMt9ooSzRbXGdXw7UU+rmedvJBRjJhQ7TAfuM=",
       "url": "_framework\/Radzen.Blazor.dll"
     },
     {
@@ -921,5 +921,5 @@
       "url": "_content\/MForce.Components\/exampleJsInterop.js"
     }
   ],
-  "version": "YUu3cY5k"
+  "version": "C28KpksA"
 };
