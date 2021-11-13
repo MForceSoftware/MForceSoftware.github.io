@@ -6,7 +6,11 @@
 };
 
 
-
+function jsOpenIntoNewTab(filename, byteBase64) {
+    var blob = b64toBlob(byteBase64);
+    var blobURL = URL.createObjectURL(blob);
+    window.open(blobURL);
+}
 
 
 function BlazorDownloadFile(filename, contentType, content) {

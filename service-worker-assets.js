@@ -77,7 +77,7 @@
       "url": "manifest.json"
     },
     {
-      "hash": "sha256-bmb3ygVT7jSTEGomT2imd3tc5lKi5RsmwHIUBiR5ndQ=",
+      "hash": "sha256-C+TSTaYoa9XOTE0sFWxRqXuGUEWgNOkcVncUZkfoce0=",
       "url": "MForce365.js"
     },
     {
@@ -113,7 +113,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-Ej2JBGhuaSHI4UE1DjPTR\/ujsTwdDhsl1H+34ntbroA=",
+      "hash": "sha256-G4c8rOUblNPyoA4NqyB7habOz1WyaPSxMYA\/ZEd+Sm0=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -161,7 +161,7 @@
       "url": "_framework\/MForce365.Shared.dll"
     },
     {
-      "hash": "sha256-ylmDOoyKROnJAhRD8mu8psLeublVFoMR\/toesWrYzZw=",
+      "hash": "sha256-3nXL+z4SdXWC09k089e81Lnko++zlb3YhsemDQ74uGI=",
       "url": "_framework\/MForce365v2.dll"
     },
     {
@@ -921,5 +921,5 @@
       "url": "_content\/MForce.Components\/exampleJsInterop.js"
     }
   ],
-  "version": "Q5oRS+K0"
+  "version": "ktU7WQxj"
 };
