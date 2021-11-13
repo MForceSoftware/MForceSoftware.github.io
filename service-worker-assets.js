@@ -69,7 +69,7 @@
       "url": "img\/MForceLogo.png"
     },
     {
-      "hash": "sha256-0sDvtZoU9YKrAFdEJthamOnCgmE2qOHgq1pW3a1\/K2c=",
+      "hash": "sha256-QNQ8YnXeWXHey\/XaZUb0tlI0uwmzwv1PqeOlVHv2QRg=",
       "url": "index.html"
     },
     {
@@ -921,5 +921,5 @@
       "url": "_content\/MForce.Components\/exampleJsInterop.js"
     }
   ],
-  "version": "14xZbeft"
+  "version": "uGDKbKBn"
 };
