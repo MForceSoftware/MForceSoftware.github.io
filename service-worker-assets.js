@@ -113,7 +113,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-eudmUs+B2l429Dq4Hn2I4FURzv+vQG6m0ig95GENEQE=",
+      "hash": "sha256-vW3IT\/kXaHN47o6PblIwCH5dQP77GLWpfWYsn5acx6U=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -137,7 +137,7 @@
       "url": "_framework\/Markdig.Signed.dll"
     },
     {
-      "hash": "sha256-JJ\/dc86pWb+akHgmo6HenopFcsdRVI+Y0EQhvSNIRp8=",
+      "hash": "sha256-gwoYG8Qkw7vE11y9eG2EXJq5mFwJwlVTejEPO0iV+VE=",
       "url": "_framework\/MForce.Components.ActionItems.dll"
     },
     {
@@ -161,7 +161,7 @@
       "url": "_framework\/MForce365.Shared.dll"
     },
     {
-      "hash": "sha256-OfJ2Yq6IF13XTv+1HXLN0RrvcUZxHAW6GvSkalalkLk=",
+      "hash": "sha256-UV9ac0heCqIWN2u7LzZGVmA5KjmgPQIyOI9heN4Ypkw=",
       "url": "_framework\/MForce365v2.dll"
     },
     {
@@ -977,5 +977,5 @@
       "url": "_content\/MForce.Components\/exampleJsInterop.js"
     }
   ],
-  "version": "TzoNVxYp"
+  "version": "4\/KZcIsM"
 };
