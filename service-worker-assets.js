@@ -117,7 +117,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-yEJrFeYDshF5ZqO9cOWV05Ay8BfVRqY5KWkx3nMRBw8=",
+      "hash": "sha256-ZA5vHEO0eHVwlUXcVbsVzFp3tX4bWALVnJRXMWdemAo=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -141,31 +141,31 @@
       "url": "_framework\/Markdig.Signed.dll"
     },
     {
-      "hash": "sha256-eXxxq222mrW4A2fjjb+rWCZCjApM1HU8twbtDwU0ZNk=",
+      "hash": "sha256-UKUyD0QWct3ZliVhwplS6PTv3Ljfy4tL4U2Vn7Rlqq8=",
       "url": "_framework\/MForce.Components.ActionItems.dll"
     },
     {
-      "hash": "sha256-Pv+vbd1SrpHjaz0PHDljazHL91l6meQpdyyvJgcvXNQ=",
+      "hash": "sha256-ZL\/GB25MoZTKzXM36YfsoTztIZp+4CBRBmeVDh6niuo=",
       "url": "_framework\/MForce.Components.dll"
     },
     {
-      "hash": "sha256-7X80VKTp17XWo0gN7vyiwOrTZGLmjNWC6V+5Ljq5IpA=",
+      "hash": "sha256-XEJPAn1gtLJbMj8pbsuhUsx2HCzW56hF35kYVdwit7I=",
       "url": "_framework\/MForce.Components.Files.dll"
     },
     {
-      "hash": "sha256-njPVM9YQVQu73k5+p\/GVoGKp75qsFekO1dikmifhfRY=",
+      "hash": "sha256-ejy7QcVkmRDGMg\/noqisL4kR4o5YQIHyT3ejagt9Yd0=",
       "url": "_framework\/MForce.Components.Projects.dll"
     },
     {
-      "hash": "sha256-WvTqTNX30D9OcllnblO9PmHswXOsxgR6k1qyI1WVrWk=",
+      "hash": "sha256-w0sMQNR0f3hYATGdWGfKs7W2fzWaemJ0PUPzACY1rKQ=",
       "url": "_framework\/MForce.Components.Schedule.dll"
     },
     {
-      "hash": "sha256-fL0h7Jaa7yYtvFCp\/Jpqe1OfK8W0gsuv31oAPsTzznU=",
+      "hash": "sha256-9Rc30AoZJculXzh0vyJQldQ7fGtHTA5F2YyboqWH6Pc=",
       "url": "_framework\/MForce365.Shared.dll"
     },
     {
-      "hash": "sha256-In0Xyyo61I8yLCgxuu6M2TBnLiMtTVkhbH\/IFwXE6QM=",
+      "hash": "sha256-LDJaSZTFlX0P0LLqdwSK2NNvYcHfHIPFeciBVrYryDM=",
       "url": "_framework\/MForce365v2.dll"
     },
     {
@@ -553,7 +553,7 @@
       "url": "_framework\/System.ObjectModel.dll"
     },
     {
-      "hash": "sha256-avKckKtEqTqjqFwnozxJAuPjCbQSU6G4hsblEJgUbSY=",
+      "hash": "sha256-CYq+W4DgTXL\/9sdE2vYDW\/HWmcgPJTFymRxL99Zm\/XM=",
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
@@ -977,5 +977,5 @@
       "url": "_content\/MForce.Components.Schedule\/MForce.Components.Schedule.bundle.scp.css"
     }
   ],
-  "version": "Z42SPA8I"
+  "version": "vUI4K9W0"
 };
