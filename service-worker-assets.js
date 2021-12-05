@@ -1,11 +1,91 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
+      "hash": "sha256-vE15KjdQHsz+KhHpNEVgIDuDKcsR+\/jBmPQ7VL\/KVyQ=",
+      "url": "assets\/css\/fluent.css"
+    },
+    {
+      "hash": "sha256-r4xoqxjRSek7ck\/+QUpZ39shazNFRS9M1GhlhhpdFmM=",
+      "url": "assets\/css\/styles-generated.css"
+    },
+    {
+      "hash": "sha256-qJknuYiB4gIx7zgkNdtzJGHDgNf\/kFPvoHcqyg55gf8=",
+      "url": "assets\/css\/styles.css"
+    },
+    {
+      "hash": "sha256-lger0mqwWoFecmGrcgUsQRdrM5ogpHikzYF+NpEQ1FA=",
+      "url": "assets\/fonts\/MaterialIcons-Regular.woff"
+    },
+    {
+      "hash": "sha256-wdyH+Zx\/8iiAYRfVjwhcbFcwV\/ojcigIGAK32NPPdoQ=",
+      "url": "assets\/fonts\/roboto-regular.woff"
+    },
+    {
+      "hash": "sha256-aY5euu4b9B4uoPbO6pUg0M02KHH1iFkV\/DX7TpV\/l+g=",
+      "url": "assets\/fonts\/roboto-v15-latin-300.woff"
+    },
+    {
+      "hash": "sha256-PrZc6Ar6Orw126gGmRpfnzIY2LU8S+T5wSSNnZ88Guo=",
+      "url": "assets\/fonts\/roboto-v15-latin-700.woff"
+    },
+    {
+      "hash": "sha256-l7uYY0Ka6X\/MDNbIDTDD90VNCyGNR1jiTDC9pEG9OdM=",
+      "url": "assets\/fonts\/roboto-v15-latin-regular.woff"
+    },
+    {
+      "hash": "sha256-4tJ2y83Opy9zhl\/cqC+2kN6Dyj9o+FR2zLmn9aSPwcg=",
+      "url": "assets\/fonts\/SourceSansPro-Black.woff"
+    },
+    {
+      "hash": "sha256-Se1Ckp\/WChi38Ylv0M9zeWV40BrNdzJZCuL5vLArVss=",
+      "url": "assets\/fonts\/SourceSansPro-BlackIt.woff"
+    },
+    {
+      "hash": "sha256-iwPDiY3GwHRvR7nxbjO1MUzZ4OIDrBnBE7JVh8uvL7Q=",
+      "url": "assets\/fonts\/SourceSansPro-Bold.woff"
+    },
+    {
+      "hash": "sha256-hbpdyuMzEkbBLV46tNBW8O4fcBC1OHCZu73IKA\/wxFY=",
+      "url": "assets\/fonts\/SourceSansPro-BoldIt.woff"
+    },
+    {
+      "hash": "sha256-PLpVAO2hf3ujhcFgIgpvr95XZj15sDT5TlPjBcIKjOo=",
+      "url": "assets\/fonts\/SourceSansPro-ExtraLight.woff"
+    },
+    {
+      "hash": "sha256-gyjJCK9yyzeB56egUKX2oyJUAHzhrxPnuT+JB1brUjg=",
+      "url": "assets\/fonts\/SourceSansPro-ExtraLightIt.woff"
+    },
+    {
+      "hash": "sha256-Yi16KO1MmnQJMcyA7nBl9RenDCtzOoi9TIYcCTDYYA0=",
+      "url": "assets\/fonts\/SourceSansPro-It.woff"
+    },
+    {
+      "hash": "sha256-U\/c5uZXyrUZYibduYAqP66xUX7hjF+MuGqjty6kp+n8=",
+      "url": "assets\/fonts\/SourceSansPro-Light.woff"
+    },
+    {
+      "hash": "sha256-Wz06DrCrEo8PhVFosBvtv0BwVRad1e6cHVYPrOXcTTk=",
+      "url": "assets\/fonts\/SourceSansPro-LightIt.woff"
+    },
+    {
+      "hash": "sha256-FUVkwg6zvTHIIS9plEgvWa39AFMb6VCbD1LTENYjsm4=",
+      "url": "assets\/fonts\/SourceSansPro-Regular.woff"
+    },
+    {
+      "hash": "sha256-0yvxUfB8+6PXLdQAnlit3rprdUByfZdrdEJe4i5AjqY=",
+      "url": "assets\/fonts\/SourceSansPro-Semibold.woff"
+    },
+    {
+      "hash": "sha256-f7Kf\/RI21ULz4ITMVN+kUuGhpYP3UWYywC73o3WtAgw=",
+      "url": "assets\/fonts\/SourceSansPro-SemiboldIt.woff"
+    },
+    {
       "hash": "sha256-j1CXo9OayB5q09qnsqo1\/\/eZjli5PIGqev6hrnocznI=",
       "url": "content\/DefaultMeetingNotes.pdf"
     },
     {
-      "hash": "sha256-I3HpvOjhDwYKPRee1b5qMCSX6y5eFsK4eH7LvdieYUo=",
+      "hash": "sha256-RBnFdv6JM2qZgMVgIeWI4c04QyPGyeYu2jqodXc+4nk=",
       "url": "css\/app.css"
     },
     {
@@ -69,11 +149,11 @@
       "url": "img\/MForceLogo.png"
     },
     {
-      "hash": "sha256-P+HxPCpH\/9q6Y6YFsBYN0iRtEgkbw5WYhpU1n\/vBuvM=",
+      "hash": "sha256-i8yVGBk5bgUn4Yw5awrPf4gk61EVsYVVD9GBZrPVPzY=",
       "url": "index.html"
     },
     {
-      "hash": "sha256-i0y1xgyXiwE+SYifpKu940nR45yvAJhwbJroy8IeET8=",
+      "hash": "sha256-uwmC8+Pegdyz3H0frly0H1QB51H1Uz0AyJdC8bOBKJM=",
       "url": "manifest.json"
     },
     {
@@ -117,7 +197,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-l7PK5L09QgnQ\/ezHzna62T6nZeSMT\/n9XG2AJbCVZtQ=",
+      "hash": "sha256-3NK1OvtAgdvV708IwsU0PMhGt8nOSiGJyBeqE8REps4=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -145,11 +225,11 @@
       "url": "_framework\/Markdig.Signed.dll"
     },
     {
-      "hash": "sha256-hvwzitYs3wLgRFJG+Vrz7mmIuGlkCpqOVNTT1OnyItw=",
+      "hash": "sha256-kj3\/yZAFsIryYsw4unKoeWHcYLoywleZSIEXg1dJ6Oc=",
       "url": "_framework\/MForce.Components.ActionItems.dll"
     },
     {
-      "hash": "sha256-muQ48cj2H77zBFJFhWFzugKcaP+eGVN\/lK8flYHgzpg=",
+      "hash": "sha256-czMlAL8x52bOd3m9rY6x75M0cLoXipJGQN4lRvq1nvM=",
       "url": "_framework\/MForce.Components.dll"
     },
     {
@@ -161,7 +241,7 @@
       "url": "_framework\/MForce.Components.Projects.dll"
     },
     {
-      "hash": "sha256-vz23wecsj8ynhvwll5\/P2b8iPW63FzcmtmyUyNcnYnQ=",
+      "hash": "sha256-2pqJYcUDs7qmtuK7pM7T4pwNAgKvrjg7cizW0K+e7lg=",
       "url": "_framework\/MForce.Components.Schedule.dll"
     },
     {
@@ -169,7 +249,7 @@
       "url": "_framework\/MForce365.Shared.dll"
     },
     {
-      "hash": "sha256-3HsXIIkVXog8TkagNz7d2f\/ce3l4rpvB8esdAnKBnm8=",
+      "hash": "sha256-i6Iext9cYjaMEA\/H4sjQjMdcHGvpTKV0uqUlcjlYAnA=",
       "url": "_framework\/MForce365v2.dll"
     },
     {
@@ -993,5 +1073,5 @@
       "url": "_content\/MForce.Components.Schedule\/MForce.Components.Schedule.bundle.scp.css"
     }
   ],
-  "version": "iwezbPEC"
+  "version": "kp1aPUUL"
 };
