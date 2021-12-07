@@ -197,7 +197,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-1dTmb6chcswWt25QIdTp2r+q\/RDs\/twqqKVS8niLiLo=",
+      "hash": "sha256-Fr0pO\/VOIgk55APcE1sROZPtlAPT78pzgSE27rNHpjE=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -225,23 +225,23 @@
       "url": "_framework\/Markdig.Signed.dll"
     },
     {
-      "hash": "sha256-I3\/PpQy4ObENkfnSaFvUXXuVYhXPf332g1y3+7wYveg=",
+      "hash": "sha256-hXChQeX19CKvnQ6caGX8KyJm50cmQGLZJUwWNVis2mg=",
       "url": "_framework\/MForce.Components.ActionItems.dll"
     },
     {
-      "hash": "sha256-5tPYBnXtpz94Ao+pfylbcLLUItivkzna1vNtcE6KEWM=",
+      "hash": "sha256-4l6xx0bvS9HyCgKEIci+wRmK8soWjPORGJ+fNzhWFhc=",
       "url": "_framework\/MForce.Components.dll"
     },
     {
-      "hash": "sha256-YhbLupGPeRIlJ2yFC0IrxCd1eGr5jzbgLOgYEqnnK78=",
+      "hash": "sha256-S8uHXbdLcGz8Ad6DuN9I5wp8HIvQPPZkgJzFyIPQZI8=",
       "url": "_framework\/MForce.Components.Files.dll"
     },
     {
-      "hash": "sha256-Z0OzLKnVYhk8\/3V2ee+THvdhAoku4+Z9fJIKVdxu9+A=",
+      "hash": "sha256-kV3PuAF9h+oL\/65ihum1hbGK1R2N9i+PO\/PTppytNiE=",
       "url": "_framework\/MForce.Components.Projects.dll"
     },
     {
-      "hash": "sha256-B9\/kfhnc4cOk90Ysggok+4Qucex7JSfsGblF59idrfQ=",
+      "hash": "sha256-NlNcbkMMh2QhKZzClGexddMUW\/VxpimL1d\/It6jyfvQ=",
       "url": "_framework\/MForce.Components.Schedule.dll"
     },
     {
@@ -249,7 +249,7 @@
       "url": "_framework\/MForce365.Shared.dll"
     },
     {
-      "hash": "sha256-MMds0NU\/ma8liH9ebtPd09L6lGMY6YFc4h+EB9aDmks=",
+      "hash": "sha256-VKA4gsyO4pXN9X+50kT82GJQ53NbPQySE30zv\/aaXjU=",
       "url": "_framework\/MForce365v2.dll"
     },
     {
@@ -433,7 +433,7 @@
       "url": "_framework\/Newtonsoft.Json.dll"
     },
     {
-      "hash": "sha256-90LqmRcfQxDvZIzrrAKtjzdGYCXLwAFy4zq5zQ2ewLo=",
+      "hash": "sha256-DFD3JLQquEVGVNbCl5GSTN1SgI8BYY1hrpxe3V\/YkyA=",
       "url": "_framework\/Radzen.Blazor.dll"
     },
     {
@@ -833,43 +833,43 @@
       "url": "_content\/Microsoft.Authentication.WebAssembly.Msal\/AuthenticationService.js"
     },
     {
-      "hash": "sha256-RIK61bT1B\/9EzWos1eI6NYysenjDN49AwvCmuomStBA=",
+      "hash": "sha256-VrKUoLs6ey1dcgDdNZIEj298BhCZWVChOt4UkfhBVEs=",
       "url": "_content\/Radzen.Blazor\/css\/dark-base.css"
     },
     {
-      "hash": "sha256-7IaTYquKKmHNgok+PBlujd4CbtN94OK99TMTCPEbS1I=",
+      "hash": "sha256-9pHFAdzDjrJ+XaruJ+fYKzSZDw7jrhQE\/\/xAQXL8Z\/M=",
       "url": "_content\/Radzen.Blazor\/css\/dark.css"
     },
     {
-      "hash": "sha256-dggSC7BQJPdWj39yBdUChmu32NNU6BMFkqmFSPHB3NA=",
+      "hash": "sha256-vmqPB0+eLJEv8C4DCvDd\/4cU32vU8lF41uJ4GPKhwq0=",
       "url": "_content\/Radzen.Blazor\/css\/default-base.css"
     },
     {
-      "hash": "sha256-2mmpy8Zrh3ABOc7xoL5YNcoV+GoR2L67YHcBlICcwvU=",
+      "hash": "sha256-w25mQvSSJElDiwlz2G8eGKNX4\/\/3VX7\/E7FW6PAq+WQ=",
       "url": "_content\/Radzen.Blazor\/css\/default.css"
     },
     {
-      "hash": "sha256-+SMu02du5c6WXEDvxFnf8DB8xRGxSyx\/1ewaTGRl0ME=",
+      "hash": "sha256-SUje5F8uozGAN1lgE3TQ\/OLhiuuFfYAT4QbO33eD6Oc=",
       "url": "_content\/Radzen.Blazor\/css\/humanistic-base.css"
     },
     {
-      "hash": "sha256-2PIwijT5o+K+nDQxdi4sBuTRWx0tYxcLnzloUlTg60w=",
+      "hash": "sha256-yI5xaV+GGinwJQLM\/oKIbhZjwVXFCaAEz7t26v7ylpQ=",
       "url": "_content\/Radzen.Blazor\/css\/humanistic.css"
     },
     {
-      "hash": "sha256-tWzH1k5a1xKlnNVIhZZg2bVcSfm0ZS3iq9uVxlItFCs=",
+      "hash": "sha256-f6CZQ\/WqX+wMpuLt5FbehoJaykuqv7tzxYNuZ8BP3vY=",
       "url": "_content\/Radzen.Blazor\/css\/software-base.css"
     },
     {
-      "hash": "sha256-nAY7Ed2MVG+1lVski+WcI14GUsA4mga03UxeX2jrbgk=",
+      "hash": "sha256-vJBSViPm8q12653FlY6kiS+G6SoUEO2cJKyrSs9fVHA=",
       "url": "_content\/Radzen.Blazor\/css\/software.css"
     },
     {
-      "hash": "sha256-gTPTVN6BkY9nHOnyiIef\/1o7db1gGBqn6R\/HMIqT7Qw=",
+      "hash": "sha256-oF0p\/xuj5StXFUY8bGkUWbhwOf\/yx0qE+3Ha3Kp\/i5s=",
       "url": "_content\/Radzen.Blazor\/css\/standard-base.css"
     },
     {
-      "hash": "sha256-1BG5I2V7wM0jALeVWEevV6oRvIToxdI0TiIh0cUOfmk=",
+      "hash": "sha256-fv5bdMfyWwB4BFhkJvYrIVjnDfC+oeMNF5xAw3nD4Go=",
       "url": "_content\/Radzen.Blazor\/css\/standard.css"
     },
     {
@@ -1073,5 +1073,5 @@
       "url": "_content\/MForce.Components.Schedule\/MForce.Components.Schedule.bundle.scp.css"
     }
   ],
-  "version": "Inl84rto"
+  "version": "Ul68Yh0K"
 };
