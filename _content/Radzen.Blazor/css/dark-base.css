@@ -88,34 +88,31 @@
   font-stretch: normal;
   src: local("SourceSansPro-BlackIt"), local("Source Sans Pro"), url("../fonts/SourceSansPro-BlackIt.woff") format("woff"); }
 
-h1 {
+h1.rz-heading {
   font-size: 2.25rem;
   font-weight: bold; }
 
-h2 {
+h2.rz-heading {
   font-size: 1.5rem;
   font-weight: 600; }
 
-h3 {
+h3.rz-heading {
   font-size: 1.25rem;
   font-weight: normal; }
 
-h4 {
+h4.rz-heading {
   font-size: 1.125rem;
   font-weight: 600; }
 
-h5 {
+h5.rz-heading {
   font-size: 1rem;
   font-weight: 600; }
 
-h6 {
+h6.rz-heading {
   font-size: 0.875rem;
   font-weight: 600; }
 
-p {
-  line-height: 1.38; }
-
-label {
+.rz-label {
   margin-bottom: 0; }
 
 /* Preferred icon size */
