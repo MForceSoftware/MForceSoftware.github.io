@@ -15,13 +15,13 @@
       "HtmlAgilityPack.dll": "sha256-G31jv5N6ztIZW2xUshYTpM3qhhbG2\/m+d+gteKnJg74=",
       "HtmlSanitizer.dll": "sha256-Ev1F2kv91XLKVuRl5CtQDzNzF5YEcGEeNqJZ4NmNqog=",
       "Markdig.Signed.dll": "sha256-jOc7+uheytBTUomX+MfZ\/UDdToaE9RTNBmqmREsNW+k=",
-      "MForce.Components.ActionItems.dll": "sha256-lRqeq8OAujyfcPvJUkTmW8Z97rwRBv7kFoxuK8Ej3MM=",
-      "MForce.Components.dll": "sha256-VLy3zqCAuYLFeewrNmWFXGKC3DxFcKe2Xd0OU3lHGQI=",
-      "MForce.Components.Files.dll": "sha256-7LiQUKXb6\/ld6EKuencM2lZr1X2oWcCBRJ9SY80F6mE=",
-      "MForce.Components.Projects.dll": "sha256-g+t\/bKY\/+3vUopfYgeN\/H6i88ZNGOn0QPWjJHlMddxI=",
-      "MForce.Components.Schedule.dll": "sha256-UoVXC1AWPCrcwBeLr3gRqn9rp\/hMzNJsToXLa+IXRm4=",
-      "MForce365.Shared.dll": "sha256-lPDMyvn8libW0q6ZmKwGoMEfPetAWmGWPgyW8SyBI\/4=",
-      "MForce365v2.dll": "sha256-9KAJdECqFLdKdf4TZNiO5RKgm1KcJ3Oe0aL6QobDURk=",
+      "MForce.Components.ActionItems.dll": "sha256-7J+nRa9zzAsiiA4Uuku\/pqrNRWw4kKAVLBFPMLGIzKU=",
+      "MForce.Components.dll": "sha256-ibU+DoLDFBHdbbbHrW2G4VS1JPfaFvDQbnZ4GGjv8mE=",
+      "MForce.Components.Files.dll": "sha256-EUbMN2pKfJoWT2Kwlb0oP0oLcEfVGfBehXqExRGuTwo=",
+      "MForce.Components.Projects.dll": "sha256-2SP7ogt1t\/ie7fdFbGa70VJT8VcYo5\/8JALNUVxvYgM=",
+      "MForce.Components.Schedule.dll": "sha256-OWsMfuB+KWmRYAaeerUw\/7RzB2fMW8CN42i2ogpLT7w=",
+      "MForce365.Shared.dll": "sha256-jn1alwUh59EalykUXCFD7ee8MdKXl+FXaWxc1m16kPA=",
+      "MForce365v2.dll": "sha256-6y3dYqowstnfd6+V3egTs4wSBJTX1m6OHsdWI9HGJYQ=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-DP2yQpvornIEny8l3bEg3p\/FShAEX8ZyIeWIXikPM0g=",
       "Microsoft.AspNetCore.Components.Authorization.dll": "sha256-pJhJUyK+Keb6Y2KS88dHTklO59WZe6nGArXGLtzs7ng=",
       "Microsoft.AspNetCore.Components.dll": "sha256-oI0WJHNiVjGplQveiWrs+vPI3Q\/2mUjVt2pnf4H75wI=",
@@ -62,7 +62,7 @@
       "Microsoft.IdentityModel.Protocols.dll": "sha256-g7jHW2WQ\/Vh2azB3f82sOEUO5xLM+j9tsLtx7vQqVYM=",
       "Microsoft.IdentityModel.Protocols.OpenIdConnect.dll": "sha256-2CPC+I9DlGr0ppZ2RVh5dn8LbS6oyOLR8np2qacu610=",
       "Microsoft.IdentityModel.Tokens.dll": "sha256-Qjd1xKA0boC1Ab8+Vv2HX7IZ\/F8MhOXG1BsEugiZxV4=",
-      "Microsoft.JSInterop.dll": "sha256-1HmhQjtkNER1s7c5hmtiQC\/mZHwLjUjCO8X2KiLIXy0=",
+      "Microsoft.JSInterop.dll": "sha256-MmzVyrOYCy0dRSW9JJxBYZkBJMeGYGiDmu9s\/aaOO3g=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-vnE\/f0iqOlVKaRjTpLiArMb+lw6INqH0HhqcMh9FPe0=",
       "Microsoft.Win32.Primitives.dll": "sha256-KOqxvBkGI0GB2a4j4284+6+ib0uGH+\/3TuhFk7GF6pQ=",
       "netstandard.dll": "sha256-UZBa9ua\/oSZ4cfz4g6alrU7pESomrA1aPivorxePxH8=",
@@ -179,14 +179,39 @@
       "icudt.dat": "sha256-Zuq0dWAsBm6\/2lSOsz7+H9PvFaRn61KIXHMMwXDfvyE="
     },
     "satelliteResources": {
+      "de": {
+        "de\/MForce365.Shared.resources.dll": "sha256-1X5ylMObZ7SYxlQgBg2yGTSSxO9JLvNwi3wfarbZV1I="
+      },
+      "el": {
+        "el\/MForce365.Shared.resources.dll": "sha256-XYpV1PGrwLxDStmwn0jcj3DNeooRAIY1A\/aMV3rqwhk="
+      },
+      "es": {
+        "es\/MForce365.Shared.resources.dll": "sha256-f\/fXZeewtDMmxVjuTL\/xi1khUnEGCURK3L2ugbb+vkM="
+      },
       "fr": {
-        "fr\/MForce.Components.ActionItems.resources.dll": "sha256-lnsl+phLRCe3WAgdcVZpEB6reqzvOWSHUemw0jFuLNk=",
-        "fr\/MForce.Components.Files.resources.dll": "sha256-xSFlJY4KihcWGhWFSf2iaME7m5eZNlxw3nfxdJ8dJig=",
-        "fr\/MForce.Components.Projects.resources.dll": "sha256-ESfkAUdbJTZO14aK\/TOs0KhtJsmAvhtRMmB4cLKiMSE=",
         "fr\/MForce.Components.resources.dll": "sha256-ppG2pKNoISEPB+iW3NaQJhDzaw0u1ec7H7wbPkRKCKg=",
-        "fr\/MForce.Components.Schedule.resources.dll": "sha256-4jGTxDkwVCwRNssZu3Jaokk8SsiXTLZfP3y91dgf6E0=",
-        "fr\/MForce365.Shared.resources.dll": "sha256-cw881z84RZ4r7IZccXFb6te1GecqhnnJTms9a8boSIg=",
-        "fr\/MForce365v2.resources.dll": "sha256-Wf98jV\/w68ezrKotx1G1TXaDdgeRE8WXupcvPGJPxus="
+        "fr\/MForce365.Shared.resources.dll": "sha256-I3uGfEG2mQdV66HjHc0sWV5TfGu0xIfnCF7POk6325Y="
+      },
+      "id": {
+        "id\/MForce365.Shared.resources.dll": "sha256-wrYafGbniKS0gCtZ5KWCYdNIh3NGNV\/\/c0WAtgwvS5o="
+      },
+      "it": {
+        "it\/MForce365.Shared.resources.dll": "sha256-7uDSkERk6LZ18D03a0rjkQhRAhpOecTUMmGjJ\/xdikE="
+      },
+      "ja": {
+        "ja\/MForce365.Shared.resources.dll": "sha256-oRwspajEEsbamx6hVA8IBtBjqxsiYhcSr75lkVlEcmM="
+      },
+      "ko": {
+        "ko\/MForce365.Shared.resources.dll": "sha256-MPLgrU7xHa4CpFQoSQ3AqfhHXLubT0u\/n\/K9zI4wKlU="
+      },
+      "nl": {
+        "nl\/MForce365.Shared.resources.dll": "sha256-6ZsL\/HGH3YN5LsX3FAQZB4hVDj6yQBvFNsB1r5qqHvk="
+      },
+      "pt-BR": {
+        "pt-BR\/MForce365.Shared.resources.dll": "sha256-5k17JUxz77W+npIufrLly+4GkkmLdwlyYc7avRy1Joo="
+      },
+      "pt-PT": {
+        "pt-PT\/MForce365.Shared.resources.dll": "sha256-nmtP9d2Ru\/wyoqEUZZtSzh1Nv2kW2R8DhkuREin5l94="
       }
     }
   }
