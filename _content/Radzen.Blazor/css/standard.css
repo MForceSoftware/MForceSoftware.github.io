@@ -6161,7 +6161,7 @@ ul.rz-profile-menu {
     height: 0.125rem;
     font-size: 0; }
     .rz-chkbox-box .rzi-times:before {
-      content: 'close'; }
+      content: 'remove'; }
   .rz-chkbox-box.rz-state-active {
     background-color: #ffffff;
     border: 1px solid #e0e1e4; }
@@ -7465,8 +7465,6 @@ ul.rz-profile-menu {
           color: #262526; }
       .rz-cell-filter .rz-cell-filter-label .rz-spinner button {
         display: none; }
-    .rz-cell-filter .rz-cell-filter-label .rz-chkbox-box.rz-state-active {
-      background-color: #ffffff; }
     .rz-cell-filter .rz-cell-filter-label > input {
       width: 0;
       -webkit-box-flex: 1;
@@ -10024,6 +10022,24 @@ button.rz-colorpicker-trigger {
       -webkit-box-flex: 1;
           -ms-flex: 1 1 auto;
               flex: 1 1 auto; }
+
+.rz-layout {
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "rz-header rz-header" "rz-sidebar rz-body" "rz-footer rz-footer"; }
+  .rz-layout .rz-body {
+    grid-area: rz-body;
+    overflow: auto; }
+  .rz-layout .rz-sidebar {
+    grid-area: rz-sidebar;
+    position: static; }
+  .rz-layout .rz-header {
+    grid-area: rz-header; }
+  .rz-layout .rz-footer {
+    grid-area: rz-footer; }
 
 ::-moz-selection {
   background-color: rgba(17, 81, 243, 0.16); }
