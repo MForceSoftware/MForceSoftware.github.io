@@ -10,6 +10,9 @@ a, .btn-link {
 .rz-navigation-menu {
     z-index: 1000 !important;
 }
+lottie-player {
+    margin: 0 auto;
+}
 .truncate{
     white-space: nowrap;
     overflow:hidden;
