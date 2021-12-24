@@ -7348,10 +7348,12 @@ ul.rz-profile-menu {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  color: currentColor;
   z-index: 1; }
   .rz-datatable-loading-content .rzi-circle-o-notch {
-    -webkit-animation: rotation 1s linear infinite;
-            animation: rotation 1s linear infinite; }
+    -webkit-animation: rotation .5s linear infinite;
+            animation: rotation .5s linear infinite;
+    font-size: 2rem; }
     .rz-datatable-loading-content .rzi-circle-o-notch:before {
       content: 'refresh'; }
 
@@ -8100,13 +8102,20 @@ ul.rz-profile-menu {
 .rz-tabview-panels {
   background-color: #5d717b;
   border: none;
-  border-radius: 0 0 4px 4px;
   -webkit-box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.01);
           box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.01);
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   overflow: auto; }
+  .rz-tabview-top > .rz-tabview-panels {
+    border-radius: 0 0 4px 4px; }
+  .rz-tabview-bottom > .rz-tabview-panels {
+    border-radius: 4px 4px 0 0; }
+  .rz-tabview-left > .rz-tabview-panels {
+    border-radius: 0 4px 4px 0; }
+  .rz-tabview-right > .rz-tabview-panels {
+    border-radius: 4px 0 0 4px; }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .rz-tabview-panels {
