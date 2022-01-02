@@ -15,13 +15,13 @@
       "HtmlAgilityPack.dll": "sha256-G31jv5N6ztIZW2xUshYTpM3qhhbG2\/m+d+gteKnJg74=",
       "HtmlSanitizer.dll": "sha256-Ev1F2kv91XLKVuRl5CtQDzNzF5YEcGEeNqJZ4NmNqog=",
       "Markdig.Signed.dll": "sha256-jOc7+uheytBTUomX+MfZ\/UDdToaE9RTNBmqmREsNW+k=",
-      "MForce.Components.ActionItems.dll": "sha256-gy1lYZjPiWpyWzcdsHrLvO+iqnx8DCb3Or+ON4alwWM=",
-      "MForce.Components.dll": "sha256-AePXhQebynNyrRCzFyxsgaP0oH0qb5SVYr6WEkVMo5U=",
-      "MForce.Components.Files.dll": "sha256-3uvd1AHnrBBYJGeEBTmZc8bkQIFDXscb8TBxeK7M3wU=",
-      "MForce.Components.Projects.dll": "sha256-PhmclpaNK0YHEG+sxgyKNytUWCz+joN6rkv8lQ99fG4=",
-      "MForce.Components.Schedule.dll": "sha256-KpVk2hveOyvpb9DFB29PkDIL8NxzCxalB3Mr8ZCKjUk=",
-      "MForce365.Shared.dll": "sha256-ic7ULeYEhijgssZjv\/qGX7NHjPe64D2OZhtMlX98GJE=",
-      "MForce365v2.dll": "sha256-rb\/\/LSaEd7dOLaGrH+MoFJL1CWcE1JP0P6LKhN86Jdk=",
+      "MForce.Components.ActionItems.dll": "sha256-EHEfR5bA0+Uuol38z6cCHsn+tt3qyXzRfMD+bzykjGI=",
+      "MForce.Components.dll": "sha256-LTVU5FCaJt\/QgOsst54cWKsMOji+Om5wBxF9gqIuLa0=",
+      "MForce.Components.Files.dll": "sha256-P9\/D7XtZA\/B2euwylWf1Ce\/2pfqrLUnluquXuURf3R8=",
+      "MForce.Components.Projects.dll": "sha256-AN59MDEQTnrDih8MbelsdIFso0T00lZ6WnX7M\/p9vTg=",
+      "MForce.Components.Schedule.dll": "sha256-oZ6HqOBfxiMEwru4WtTzRZaPiOyj7FbUsmG6cIKja5E=",
+      "MForce365.Shared.dll": "sha256-IRd7TfG1mcZLYa8P07ssWaBqftqg10QU0+6peXkna8Q=",
+      "MForce365v2.dll": "sha256-nNU8nx6FBdfqy\/pO6vjIZtfHGrPbXYRJFBxPneEeJLc=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-QOngaPE2UAx+D+5OkYZWze1PhClOdwlM+aBKJcyL9GI=",
       "Microsoft.AspNetCore.Components.Authorization.dll": "sha256-NxSvrTRNzt4fpEdmkZ9U+CWRB3nINaxH2oF3cUOwE6Q=",
       "Microsoft.AspNetCore.Components.dll": "sha256-\/M12zP\/iNCvuCxwroZENruA\/LWYlejEmsUDDlAYA608=",
@@ -194,7 +194,6 @@
         "es\/MForce365.Shared.resources.dll": "sha256-oq+jFzHR9BW0XK7n0bWDROWtxzt8wHA1GVNzjCE9uBk="
       },
       "fr": {
-        "fr\/MForce.Components.resources.dll": "sha256-ppG2pKNoISEPB+iW3NaQJhDzaw0u1ec7H7wbPkRKCKg=",
         "fr\/MForce365.Shared.resources.dll": "sha256-jZaXbtnFsuPUKu\/Mlmd3YOI1yl8GMIxlXSZtCBSPh1A="
       },
       "hi": {
