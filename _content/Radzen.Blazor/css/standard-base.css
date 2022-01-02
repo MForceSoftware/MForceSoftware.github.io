@@ -2236,7 +2236,7 @@ ul.rz-profile-menu {
         text-decoration: none;
         color: #1151F3;
         background-color: rgba(17, 81, 243, 0.16);
-        cursor: default; }
+        cursor: pointer; }
     .rz-datepicker-calendar td .rz-state-active {
       color: #ffffff;
       background-color: #1151F3;
@@ -3343,6 +3343,8 @@ ul.rz-profile-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -3455,6 +3457,8 @@ ul.rz-profile-menu {
     line-height: 1.25rem;
     border: solid 1px #e9eaed;
     border-radius: 0; }
+    .rz-scheduler-nav-views .rz-button span, .rz-scheduler-nav-views .rz-paginator-element span {
+      margin-left: 0.25rem; }
     .rz-scheduler-nav-views .rz-button:first-child, .rz-scheduler-nav-views .rz-paginator-element:first-child {
       border-top-left-radius: 0.25rem;
       border-bottom-left-radius: 0.25rem;
@@ -3493,6 +3497,46 @@ ul.rz-profile-menu {
 
 .rz-event-list .rz-event {
   position: static; }
+
+@media (max-width: 576px) {
+  .rz-scheduler-nav .rz-scheduler-nav-prev-next {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1; }
+  .rz-scheduler-nav .rz-scheduler-nav-title {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3; }
+  .rz-scheduler-nav .rz-scheduler-nav-views {
+    margin-bottom: 0.5rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2; }
+    .rz-scheduler-nav .rz-scheduler-nav-views .rz-button, .rz-scheduler-nav .rz-scheduler-nav-views .rz-paginator-element {
+      -webkit-box-flex: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem; }
+      .rz-scheduler-nav .rz-scheduler-nav-views .rz-button span, .rz-scheduler-nav .rz-scheduler-nav-views .rz-paginator-element span {
+        display: none; }
+  .rz-slot-hours .rz-slot-header {
+    width: auto; } }
 
 .rz-tabview {
   display: -webkit-box;
@@ -3921,7 +3965,7 @@ ul.rz-profile-menu {
   display: inline-block;
   color: #F31155;
   font-size: 0.75rem;
-  padding: 0.25rem 0 0 0; }
+  padding: 0; }
 
 .rz-message-popup {
   position: absolute;
