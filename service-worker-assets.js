@@ -277,7 +277,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-bVO41H9ZBkj\/VVWczRaX6QxjZM0ms8XufA7SOXcKcWs=",
+      "hash": "sha256-jFT0JuaDTzsctUMwOns9MDYgClOOUxEt6+H+zrQpKlU=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -305,31 +305,31 @@
       "url": "_framework\/Markdig.Signed.dll"
     },
     {
-      "hash": "sha256-EHEfR5bA0+Uuol38z6cCHsn+tt3qyXzRfMD+bzykjGI=",
+      "hash": "sha256-u1MmrbMqRaoneqorzVGTopSQZ8UrdrnbJmKHVITR1to=",
       "url": "_framework\/MForce.Components.ActionItems.dll"
     },
     {
-      "hash": "sha256-LTVU5FCaJt\/QgOsst54cWKsMOji+Om5wBxF9gqIuLa0=",
+      "hash": "sha256-2WFMeErohzcZdoW3MP4cjMZy4gp2MRxRbCnewEWQdXc=",
       "url": "_framework\/MForce.Components.dll"
     },
     {
-      "hash": "sha256-P9\/D7XtZA\/B2euwylWf1Ce\/2pfqrLUnluquXuURf3R8=",
+      "hash": "sha256-l27jpIvInlkyFHaXwb9zJXHQqdbzg3n2QAT40pGIaiw=",
       "url": "_framework\/MForce.Components.Files.dll"
     },
     {
-      "hash": "sha256-AN59MDEQTnrDih8MbelsdIFso0T00lZ6WnX7M\/p9vTg=",
+      "hash": "sha256-wTmeI\/lm4KJPxglqizlgdzNTvZpjcx8Iv7LInFstPaA=",
       "url": "_framework\/MForce.Components.Projects.dll"
     },
     {
-      "hash": "sha256-oZ6HqOBfxiMEwru4WtTzRZaPiOyj7FbUsmG6cIKja5E=",
+      "hash": "sha256-vejARftSsjhsfbL5fIacLSd7S03taJsH8loYpUJLFV0=",
       "url": "_framework\/MForce.Components.Schedule.dll"
     },
     {
-      "hash": "sha256-IRd7TfG1mcZLYa8P07ssWaBqftqg10QU0+6peXkna8Q=",
+      "hash": "sha256-dx\/6ok3kNq\/V9KdeCiYz5hevILzZJKKKakf2H\/CL1CY=",
       "url": "_framework\/MForce365.Shared.dll"
     },
     {
-      "hash": "sha256-nNU8nx6FBdfqy\/pO6vjIZtfHGrPbXYRJFBxPneEeJLc=",
+      "hash": "sha256-tWzHRgYPu14i4bJia\/Qd7D8U4N2zNCB2FesU8O\/w\/\/o=",
       "url": "_framework\/MForce365v2.dll"
     },
     {
@@ -341,7 +341,7 @@
       "url": "_framework\/Microsoft.AspNetCore.Components.Authorization.dll"
     },
     {
-      "hash": "sha256-\/M12zP\/iNCvuCxwroZENruA\/LWYlejEmsUDDlAYA608=",
+      "hash": "sha256-1woofbpc2SreLcF0MIQemUKFPWtX8UDC+lOiSVMXJ58=",
       "url": "_framework\/Microsoft.AspNetCore.Components.dll"
     },
     {
@@ -1141,5 +1141,5 @@
       "url": "_content\/MForce.Components.Schedule\/MForce.Components.Schedule.bundle.scp.css"
     }
   ],
-  "version": "K67EFFGk"
+  "version": "P6BwmhRO"
 };
