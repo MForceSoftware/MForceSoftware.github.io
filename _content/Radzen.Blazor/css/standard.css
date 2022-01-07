@@ -6688,6 +6688,10 @@ ul.rz-profile-menu {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     padding: 0.5rem; }
+  .rz-splitbutton .rz-button-text-icon-left {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1; }
 
 .rz-splitbutton-menu {
   display: none;
