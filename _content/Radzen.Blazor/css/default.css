@@ -4821,6 +4821,30 @@ label {
   -webkit-font-feature-settings: 'liga';
           font-feature-settings: 'liga'; }
 
+.rzi-primary {
+  color: #ff6d41; }
+
+.rzi-light {
+  color: #e6ecef; }
+
+.rzi-secondary {
+  color: #479cc8; }
+
+.rzi-info {
+  color: #68d5c8; }
+
+.rzi-warning {
+  color: #e6c54f; }
+
+.rzi-error {
+  color: #f9777f; }
+
+.rzi-danger {
+  color: #f9777f; }
+
+.rzi-success {
+  color: #5dbf74; }
+
 .rz-helper-hidden-accessible {
   opacity: 0;
   height: 0;
@@ -5906,7 +5930,7 @@ ul.rz-profile-menu {
   display: inline-block;
   width: 3rem;
   min-width: 3rem;
-  height: 1.75rem; }
+  height: 1.8rem; }
 
 .rz-switch-circle {
   position: absolute;
@@ -5927,17 +5951,17 @@ ul.rz-profile-menu {
   -o-transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s, -webkit-box-shadow 0.2s;
-  border-radius: 30px; }
+  border-radius: 1.8rem; }
 
 .rz-switch.rz-switch-checked .rz-switch-circle {
   background: #479cc8; }
 
 .rz-switch .rz-switch-circle:before {
   background: #ffffff;
-  width: 1.25rem;
-  height: 1.25rem;
-  left: 0.25rem;
-  margin-top: -0.625rem;
+  width: 1.26rem;
+  height: 1.26rem;
+  left: 0.27rem;
+  margin-top: -0.63rem;
   border-radius: 50%;
   -webkit-transition-duration: 0.2s;
        -o-transition-duration: 0.2s;
@@ -5958,9 +5982,9 @@ ul.rz-profile-menu {
   background: #ffffff; }
 
 .rz-switch.rz-switch-checked .rz-switch-circle:before {
-  -webkit-transform: translateX(1.25rem);
-      -ms-transform: translateX(1.25rem);
-          transform: translateX(1.25rem); }
+  -webkit-transform: translateX(1.2rem);
+      -ms-transform: translateX(1.2rem);
+          transform: translateX(1.2rem); }
 
 .rz-radio-button-list-vertical .rz-radio-btn {
   display: -webkit-box;
