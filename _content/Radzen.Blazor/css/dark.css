@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -7925,6 +7925,7 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
   overflow: hidden;
   vertical-align: middle;
   background-color: #479cc8;
+  color: #ffffff;
 }
 
 .rz-fileupload-choose input[type='file'] {
@@ -7934,6 +7935,7 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
   margin: 0;
   opacity: 0;
   min-height: 100%;
+  cursor: pointer;
 }
 
 .rz-fileupload-row {
@@ -8088,7 +8090,7 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
   border-bottom: none;
 }
 
-.rz-datatable-thead th:not(:last-child), .rz-grid-table thead th:not(:last-child) {
+.rz-datatable-thead th:not(:last-child), .rz-datatable-thead th.rz-composite-cell, .rz-grid-table thead th:not(:last-child), .rz-grid-table thead th.rz-composite-cell {
   border-right: 1px solid #45565d;
 }
 
@@ -8113,7 +8115,7 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
   text-overflow: ellipsis;
 }
 
-.rz-datatable-tfoot td:not(:last-child), .rz-grid-table tfoot td:not(:last-child) {
+.rz-datatable-tfoot td:not(:last-child), .rz-datatable-tfoot td.rz-composite-cell, .rz-grid-table tfoot td:not(:last-child), .rz-grid-table tfoot td.rz-composite-cell {
   border-right: 1px solid #45565d;
 }
 
@@ -8216,7 +8218,7 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
   border-bottom: 1px solid #45565d;
 }
 
-.rz-datatable-data td:not(:last-child), .rz-grid-table td:not(:last-child) {
+.rz-datatable-data td:not(:last-child), .rz-datatable-data td.rz-composite-cell, .rz-grid-table td:not(:last-child), .rz-grid-table td.rz-composite-cell {
   border-right: 1px solid #45565d;
 }
 
@@ -8233,7 +8235,7 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
   border-left: none;
 }
 
-.rz-datatable-data tr td:last-child, .rz-grid-table tr td:last-child {
+.rz-datatable-data tr td:last-child:not(.rz-composite-cell), .rz-grid-table tr td:last-child:not(.rz-composite-cell) {
   border-right: none;
 }
 
@@ -8623,6 +8625,12 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
   padding: 0.5rem 0.625rem 0.5rem 0.625rem;
 }
 
+.rz-grid-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
 .rz-grid-table thead th {
   position: sticky;
   top: 0;
@@ -8724,6 +8732,18 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
   padding: 0.625rem;
 }
 
+.rz-paginator.rz-align-right {
+  justify-content: flex-end;
+}
+
+.rz-paginator.rz-align-left {
+  justify-content: flex-start;
+}
+
+.rz-paginator.rz-align-center {
+  justify-content: center;
+}
+
 .rz-paginator .rzi-step-backward:before {
   content: 'first_page';
 }
@@ -8741,9 +8761,17 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
 }
 
 .rz-paginator .rz-dropdown {
+  order: 2;
   width: 80px;
-  margin: 0 0 0 0.625rem;
+  margin-left: 1rem;
   overflow: visible;
+}
+
+.rz-paginator .rz-pagesize-text {
+  order: 2;
+  margin: 0 0 0 0.625rem;
+  font-size: 0.875rem;
+  color: #e8eced;
 }
 
 .rz-paginator .rz-dropdown-items-wrapper {
@@ -8761,20 +8789,40 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
   border-bottom-left-radius: 4px;
 }
 
+.rz-paginator-pages {
+  margin: 0 0.5rem;
+}
+
 .rz-paginator-first {
   margin: 0 0.625rem 0 0;
+}
+
+.rz-align-center .rz-paginator-first {
+  margin-left: auto;
 }
 
 .rz-paginator-prev {
   margin-right: auto;
 }
 
+.rz-align-left .rz-paginator-prev, .rz-align-right .rz-paginator-prev, .rz-align-center .rz-paginator-prev {
+  margin: 0 0.625rem 0 0;
+}
+
 .rz-paginator-next {
   margin-left: auto;
 }
 
+.rz-align-left .rz-paginator-next, .rz-align-right .rz-paginator-next, .rz-align-center .rz-paginator-next {
+  margin: 0 0 0 0.625rem;
+}
+
 .rz-paginator-last {
   margin: 0 0 0 0.625rem;
+}
+
+.rz-align-center .rz-paginator-last {
+  margin-right: auto;
 }
 
 .rz-paginator-first,
@@ -8818,6 +8866,16 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
   padding: 0 1.25rem 0 0.625rem;
   font-size: 0.875rem;
   color: #e8eced;
+}
+
+.rz-align-right .rz-paginator-summary {
+  margin-right: auto;
+}
+
+.rz-align-left .rz-paginator-summary {
+  order: 2;
+  margin-left: auto;
+  padding: 0;
 }
 
 @media (max-width: 768px) {
