@@ -149,7 +149,7 @@
       "url": "img\/MForceLogo.png"
     },
     {
-      "hash": "sha256-N7bI0hjuMvxnsDBTR3wspAhBmwTOGQIMy2QN10dYGZ0=",
+      "hash": "sha256-RDwrIC1x2dnBsB77VFEmDXEO7053gVR2fsE1L2U0WEw=",
       "url": "index.html"
     },
     {
@@ -277,7 +277,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-129erWAutK2xoMx4m\/vOblUP5z0YUMo4+gsg5D+AuSs=",
+      "hash": "sha256-SOoRAlmAlh8pDTIONtqKeViV1k0UYvj3Cqw+PvLW\/T0=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -313,31 +313,31 @@
       "url": "_framework\/Markdig.Signed.dll"
     },
     {
-      "hash": "sha256-ySsYRUby7jY4pgXIAiIv\/J9HTCk6KIrOrhLbiQqihxI=",
+      "hash": "sha256-hGNCwQX71xWGpiZ1HaRZgxgpMEM4ll2tKllGCHwGZWo=",
       "url": "_framework\/MForce.Components.ActionItems.dll"
     },
     {
-      "hash": "sha256-8uGGw6zHiokkJY+QgpYdUVZ9kvKovQBvFtCsACRh3+M=",
+      "hash": "sha256-zq40rHA7sL000AnckGqDVZBDgEDMpxp28UtV1qmSG5Y=",
       "url": "_framework\/MForce.Components.dll"
     },
     {
-      "hash": "sha256-7Btlmyyao+Eg0pthZcDCRpQqnv1\/QFxffK\/wHyFER5c=",
+      "hash": "sha256-yXqJCzHFcn2IV8exjah7UcWLlKYeukn9v+r2cJ24xFg=",
       "url": "_framework\/MForce.Components.Files.dll"
     },
     {
-      "hash": "sha256-6ZX64X7SuGyDVQYe0jgjR\/I3reuKZQMDAKp76kWaSSk=",
+      "hash": "sha256-lf2NMKIFCE3lsGCRzaac2njiOJ28p2O4byW\/6bDSZ58=",
       "url": "_framework\/MForce.Components.Projects.dll"
     },
     {
-      "hash": "sha256-S1pmtIpjEZQXDpw8vEqIpT5ldceWZ1v50htsGuQd3tg=",
+      "hash": "sha256-izVwBv82KB7xKnPZiZGUgEQw\/QMDKpOZWWYfI\/HxfVs=",
       "url": "_framework\/MForce.Components.Schedule.dll"
     },
     {
-      "hash": "sha256-9aYdIbbpEtGDL1WFTww9e82Y0l7K5KjeUz0n12pUhIU=",
+      "hash": "sha256-AMEIU6YmP6iL8a2FPh9UN0asYCIOLzhDXPqbnoldtQ8=",
       "url": "_framework\/MForce365.Shared.dll"
     },
     {
-      "hash": "sha256-H9dzQ2z+xbNv57TjBsm+G\/\/o6BCA7\/I7jueSxQYgMOY=",
+      "hash": "sha256-RIHMVY73jvnV3cPuZhJ263rTRsybYNJgTj1L\/YP8pE0=",
       "url": "_framework\/MForce365v2.dll"
     },
     {
@@ -1273,5 +1273,5 @@
       "url": "_content\/MForce.Components.Schedule\/MForce.Components.Schedule.bundle.scp.css"
     }
   ],
-  "version": "5pQzdbsk"
+  "version": "l8iKxLHe"
 };
