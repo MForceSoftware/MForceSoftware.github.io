@@ -8914,9 +8914,20 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
 .rz-datatable-reflow .rz-datatable-scrollable-header-box > table,
 .rz-datatable-reflow .rz-datatable-scrollable-table-wrapper > table {
     table-layout: auto;
+    display: block;
+  }
+  .rz-datatable-reflow .rz-data-grid-data > tbody,
+.rz-datatable-reflow .rz-datatable-tablewrapper > tbody,
+.rz-datatable-reflow .rz-datatable-scrollable-header-box > tbody,
+.rz-datatable-reflow .rz-datatable-scrollable-table-wrapper > tbody {
+    display: block;
   }
   .rz-datatable-reflow thead th {
     display: none;
+  }
+  .rz-datatable-reflow .rz-datatable-odd,
+.rz-datatable-reflow .rz-datatable-even {
+    display: block;
   }
   .rz-datatable-reflow .rz-datatable-odd > td,
 .rz-datatable-reflow .rz-datatable-even > td {
