@@ -1179,7 +1179,6 @@ input {
 
 .rz-menu:not(.rz-profile-menu) .rz-navigation-item {
   position: relative;
-  z-index: 2;
 }
 
 .rz-menu:not(.rz-profile-menu) .rz-navigation-menu {
@@ -1190,6 +1189,7 @@ input {
   margin: 0;
   min-width: 100%;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.04);
+  z-index: 2;
   border-radius: 0;
   background-color: #ffffff;
 }
