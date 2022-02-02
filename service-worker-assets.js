@@ -361,7 +361,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-zZojF+6HJni8qZvckNPkQKPjAkq4U0jRckgW4IwkOq0=",
+      "hash": "sha256-FR7cRpEmLzfcJXtVrRLKe149er0TqZr7alVC5LH1cGg=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -381,7 +381,7 @@
       "url": "_framework\/Blazorise.Bootstrap.dll"
     },
     {
-      "hash": "sha256-dQEE9f2kAOxsWGzx8sihzcVsP03LEZK4nkq8YBweT1Q=",
+      "hash": "sha256-LcmoCIE4iIdS3UJikyw+N5i\/wxyOSJdDurQZ2bfg+iE=",
       "url": "_framework\/Blazorise.dll"
     },
     {
@@ -397,23 +397,23 @@
       "url": "_framework\/Markdig.Signed.dll"
     },
     {
-      "hash": "sha256-+RLO0xr70dzzm2V+tXwFjHvF70gYsLNHB5b3bULjSls=",
+      "hash": "sha256-vAXEWmjtYCV0u8K1yyu1JwUeG6LAz+wzOx8PXCTsj04=",
       "url": "_framework\/MForce.Components.ActionItems.dll"
     },
     {
-      "hash": "sha256-ZSS8fYpIwvDLBa0uxSTdnBtAVShI554fNQH2WAvkuis=",
+      "hash": "sha256-QNVDg1Hjo7SOUhAN7ez1hH2GWabMILm3A2qYTRvFJeE=",
       "url": "_framework\/MForce.Components.dll"
     },
     {
-      "hash": "sha256-s2JlcvW0gftjLuuSULI60ofYSEsYgtYjm77lbBcrb5o=",
+      "hash": "sha256-jT24MeuKlp6E6FmMSCZNOE+viYoCMATcKvVHMcjkhWA=",
       "url": "_framework\/MForce.Components.Files.dll"
     },
     {
-      "hash": "sha256-APKfVqCcQPeNrrqoi9NWPDlShFS6it9u06GSBXeNLqw=",
+      "hash": "sha256-LOXZ5rbRVRmlzX\/MomC2HgtPaZIL5r7gO8pwh63bhxY=",
       "url": "_framework\/MForce.Components.Projects.dll"
     },
     {
-      "hash": "sha256-unWg3QMM\/TjD92HwVwMbjchOIhyQq+v0D1Q1sTwBy4g=",
+      "hash": "sha256-UM8hRNOxc0zUXs5BU2MSOyNk9aU6VBxux5hBispE4YE=",
       "url": "_framework\/MForce.Components.Schedule.dll"
     },
     {
@@ -421,7 +421,7 @@
       "url": "_framework\/MForce365.Shared.dll"
     },
     {
-      "hash": "sha256-QFMQdhLu0cLBjNssVk+A9v6+Jkmn57oEV1d1X\/1sOkE=",
+      "hash": "sha256-uKBZcCKCmNea+SJZzkNUwz99BBJJ\/g9sJMV6W5o9jYI=",
       "url": "_framework\/MForce365v2.dll"
     },
     {
@@ -1021,7 +1021,7 @@
       "url": "_content\/Blazorise\/breakpoint.js"
     },
     {
-      "hash": "sha256-q4GpZfCbwjvCryqDoZjTg3SqcNNfgDllenl0uBpMGY0=",
+      "hash": "sha256-lx3id70cbR4Z1kEom\/r0lB1vRTekiuMjFOeGm08czFc=",
       "url": "_content\/Blazorise\/button.js"
     },
     {
@@ -1033,15 +1033,15 @@
       "url": "_content\/Blazorise\/colorPicker.js"
     },
     {
-      "hash": "sha256-hlMZnPrlnTHvDtEqw0TfQ\/k4jqOv7gbuNAkvpPV1yGA=",
+      "hash": "sha256-O3kLTWcSkZ98J6OKwHu093lZ2klW2Vq9N6DuxvJbJFs=",
       "url": "_content\/Blazorise\/datePicker.js"
     },
     {
-      "hash": "sha256-dyqDkRDoRTpTZ19\/rj6x2fbh2oF3\/0UIDuYbnFqRF6Q=",
+      "hash": "sha256-PNemRYSQmvqSEOqjuITVDJh9QCsdGAmaBkTh+WUWV1o=",
       "url": "_content\/Blazorise\/fileEdit.js"
     },
     {
-      "hash": "sha256-TeGcDB\/FScJ5oMoVeAaPAYv0Mrh+ksKAECuXwryT11Y=",
+      "hash": "sha256-BKsXaGRp7NsmyO5HF1jniDvcEhewkqG4ivPh7XvKVE8=",
       "url": "_content\/Blazorise\/inputMask.js"
     },
     {
@@ -1077,7 +1077,7 @@
       "url": "_content\/Blazorise\/timePicker.js"
     },
     {
-      "hash": "sha256-qriUQR20YH4n5g83rM4C2BfSm4FrwXGBG5viaqbvDSw=",
+      "hash": "sha256-j8\/Ol7WUfg\/WoG78oDhFfNpRDR5f9nqna9JcbquQiy4=",
       "url": "_content\/Blazorise\/tooltip.js"
     },
     {
@@ -1357,5 +1357,5 @@
       "url": "_content\/MForce.Components.Schedule\/MForce.Components.Schedule.bundle.scp.css"
     }
   ],
-  "version": "z\/L4bmY1"
+  "version": "m+GbOzx0"
 };
