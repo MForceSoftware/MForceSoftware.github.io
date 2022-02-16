@@ -361,7 +361,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-p6BZX3ZKPvB\/9du3V\/y46je0820PXtHhy29Nq37Em5E=",
+      "hash": "sha256-Hs8HU6j7+9tQ46wN8sreSdexkSOiLYDIHAtTeE65Pu8=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -421,7 +421,7 @@
       "url": "_framework\/MForce365.Shared.dll"
     },
     {
-      "hash": "sha256-Q4\/xlLb6htqoXWGHnYuERKTVbBieIrsJnKedHffB4iI=",
+      "hash": "sha256-g4cJm00fkYdiUP5pVnidkXWS1DWsKGQlSjUgFeIyJh4=",
       "url": "_framework\/MForce365v2.dll"
     },
     {
@@ -473,11 +473,11 @@
       "url": "_framework\/Microsoft.Data.Sqlite.dll"
     },
     {
-      "hash": "sha256-8WueLfL+Qxf6IHdLNiHRte4+9uKx0fzs0SwZLo+vyE0=",
+      "hash": "sha256-bPYRpYponDxgZr4SKvFc+8S7e4I4VO2FR0TcrRWp2tM=",
       "url": "_framework\/Microsoft.EntityFrameworkCore.Abstractions.dll"
     },
     {
-      "hash": "sha256-\/0vzNZ5eWblA2X+fR1UnJhUxV8M4YE+hmYHhDjTGLRo=",
+      "hash": "sha256-rkoXgOiwTfY\/9CgBvo+m8brwmC9n9Arip9PyRMtbwtI=",
       "url": "_framework\/Microsoft.EntityFrameworkCore.dll"
     },
     {
@@ -493,7 +493,7 @@
       "url": "_framework\/Microsoft.Extensions.Caching.Abstractions.dll"
     },
     {
-      "hash": "sha256-c96EYj52ujgv6UEX0Aiyth37cr8lQJXCh7CmHlfnDKQ=",
+      "hash": "sha256-lc3HiVG8g4boPJLMV1lQ\/9KnHsKptuD9a4QdKjpGl1E=",
       "url": "_framework\/Microsoft.Extensions.Caching.Memory.dll"
     },
     {
@@ -821,7 +821,7 @@
       "url": "_framework\/System.ObjectModel.dll"
     },
     {
-      "hash": "sha256-9QISFCa2oqZaHofYJTElnjYpkgQYM4cixl1yw0C\/Q30=",
+      "hash": "sha256-iH+4OZfhepOKvtpaXgYX9LPIa9K4wvGICITBr3UTy4I=",
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
@@ -873,7 +873,7 @@
       "url": "_framework\/System.Runtime.CompilerServices.Unsafe.dll"
     },
     {
-      "hash": "sha256-P2iRcJY0yREbpYePYPaLidPzI6y9PRN4rxRVc0NM9bc=",
+      "hash": "sha256-uqTlwASgYr6Q1P83RKNMe2dAz2o9mroUt7kxqRZm5Po=",
       "url": "_framework\/System.Runtime.dll"
     },
     {
@@ -1357,5 +1357,5 @@
       "url": "_content\/MForce.Components.Schedule\/MForce.Components.Schedule.bundle.scp.css"
     }
   ],
-  "version": "zdTEO1GW"
+  "version": "\/qfQ49mb"
 };
