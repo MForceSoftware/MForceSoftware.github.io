@@ -361,7 +361,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-HrQJ5+4oYOPuIM3DjeaI6qxyrolKt+a0Pv8WaQpONsQ=",
+      "hash": "sha256-Dqyz6Do18UF0kgoqspI+xzBZD1nHzBSSO17erJpqfPs=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -421,7 +421,7 @@
       "url": "_framework\/MForce365.Shared.dll"
     },
     {
-      "hash": "sha256-itcmO\/9nONqPkRcopi9WKgnHZI0JUgWKIP26YayiaZA=",
+      "hash": "sha256-USpgvO5\/U9lsf2btgVtqpql6g7C7m2IbApcva8KcVvY=",
       "url": "_framework\/MForce365v2.dll"
     },
     {
@@ -617,15 +617,15 @@
       "url": "_framework\/SQLitePCLRaw.provider.e_sqlite3.dll"
     },
     {
-      "hash": "sha256-EmnWpR99BI8gDL6bptm81+NDG43J+kUAruegHJ8CXg8=",
+      "hash": "sha256-fv\/bQMg73Yy4pBSQPQFlpl\/NRZvp4CLPLovTmbUK8ww=",
       "url": "_framework\/Syncfusion.Blazor.BarcodeGenerator.dll"
     },
     {
-      "hash": "sha256-rEkOq8SedN\/gRLfMzWGmtFm0esytqgJh\/gZ7NjiJqtM=",
+      "hash": "sha256-le4BArE7sZKl0wNGzEmC+C1hgd91p0m1ChU1w3ybh8k=",
       "url": "_framework\/Syncfusion.Blazor.Core.dll"
     },
     {
-      "hash": "sha256-E6U44JwUdOX7GMEjnAACEU+\/xLeGsHVHBk5HNptTDyo=",
+      "hash": "sha256-N\/OT68uAccbLDEkBATwuHocUH07GaNUsvtw09KsMJeM=",
       "url": "_framework\/Syncfusion.Blazor.Themes.dll"
     },
     {
@@ -637,7 +637,7 @@
       "url": "_framework\/Syncfusion.DocIO.Portable.dll"
     },
     {
-      "hash": "sha256-KcMllyFKXvjKzP0AuEaVSXJaRwfTY1SRsnRBdp2P\/lE=",
+      "hash": "sha256-QwlZ9sB886MhpSMWMtJl32rWMUnCpw8NfhppQ4MPuNg=",
       "url": "_framework\/Syncfusion.Licensing.dll"
     },
     {
@@ -1234,106 +1234,106 @@
     },
     {
       "hash": "sha256-6QT++CMdDcjmPsQa7a6L32eamZ8xa15nJBy8Tjn0JJ8=",
-      "url": "_content\/Syncfusion.Blazor.BarcodeGenerator\/scripts\/sf-barcode-fbab4b.min.js"
+      "url": "_content\/Syncfusion.Blazor.BarcodeGenerator\/scripts\/sf-barcode-2e8b64.min.js"
     },
     {
       "hash": "sha256-kTt1vzXgoZC9Hfnn5a6eBRV\/P6RL3rZdlefOwVAAXiI=",
-      "url": "_content\/Syncfusion.Blazor.Core\/scripts\/compression-fbab4b.min.js"
+      "url": "_content\/Syncfusion.Blazor.Core\/scripts\/compression-2e8b64.min.js"
     },
     {
-      "hash": "sha256-Xinvo\/2jDQIVG7hRjxoz4eVInY5Zp+gedwwZsC\/\/z8g=",
-      "url": "_content\/Syncfusion.Blazor.Core\/scripts\/excelexport-fbab4b.min.js"
+      "hash": "sha256-h\/I3NlQg9lkd96nggKmos0XYbXdhC5AO9uGQSkXUQsM=",
+      "url": "_content\/Syncfusion.Blazor.Core\/scripts\/excelexport-2e8b64.min.js"
     },
     {
       "hash": "sha256-KM7\/Lkgv\/XkXSGNcMa+0iTnTCWG1Z3xic5EBU1WcKe4=",
-      "url": "_content\/Syncfusion.Blazor.Core\/scripts\/fileutils-fbab4b.min.js"
+      "url": "_content\/Syncfusion.Blazor.Core\/scripts\/fileutils-2e8b64.min.js"
     },
     {
       "hash": "sha256-\/5GBVaeL4krqXToG7w+9GN\/DdhiXX4rdUpOwjEs6S68=",
-      "url": "_content\/Syncfusion.Blazor.Core\/scripts\/pdfexport-fbab4b.min.js"
+      "url": "_content\/Syncfusion.Blazor.Core\/scripts\/pdfexport-2e8b64.min.js"
     },
     {
       "hash": "sha256-E7NV4BvOCcpLnvEcvSrQHpqbYFeei76vtGrC\/oJL2uE=",
-      "url": "_content\/Syncfusion.Blazor.Core\/scripts\/popup-fbab4b.min.js"
+      "url": "_content\/Syncfusion.Blazor.Core\/scripts\/popup-2e8b64.min.js"
     },
     {
       "hash": "sha256-8LkSeFjIcIAspudZ8NKXSuzF6HYkso6SCktGR5kXqLc=",
-      "url": "_content\/Syncfusion.Blazor.Core\/scripts\/popupsbase-fbab4b.min.js"
+      "url": "_content\/Syncfusion.Blazor.Core\/scripts\/popupsbase-2e8b64.min.js"
     },
     {
       "hash": "sha256-yCJrya1k0+xDIeshFsAXcFa+d9Z6VCn1Sb7yTmyJeLY=",
-      "url": "_content\/Syncfusion.Blazor.Core\/scripts\/sf-import-fbab4b.min.js"
+      "url": "_content\/Syncfusion.Blazor.Core\/scripts\/sf-import-2e8b64.min.js"
     },
     {
       "hash": "sha256-9BeZsdO87emxaLJVNHvE5kBqQc83cJAFxREx0vgFd28=",
-      "url": "_content\/Syncfusion.Blazor.Core\/scripts\/sf-import-ie-fbab4b.min.js"
+      "url": "_content\/Syncfusion.Blazor.Core\/scripts\/sf-import-ie-2e8b64.min.js"
     },
     {
       "hash": "sha256-1fnSZ4a26p\/kgYtnFI7aoD2p+o5EUHuPiuYUeYOd5Yc=",
-      "url": "_content\/Syncfusion.Blazor.Core\/scripts\/sf-svg-export-fbab4b.min.js"
+      "url": "_content\/Syncfusion.Blazor.Core\/scripts\/sf-svg-export-2e8b64.min.js"
     },
     {
       "hash": "sha256-eN0luvYYguzo52eeRS34MinT\/8SRmrrZ8TV95AMX8H8=",
-      "url": "_content\/Syncfusion.Blazor.Core\/scripts\/svgbase-fbab4b.min.js"
+      "url": "_content\/Syncfusion.Blazor.Core\/scripts\/svgbase-2e8b64.min.js"
     },
     {
-      "hash": "sha256-caNdxnHBCD+fdBPlSL04flW6slbsgd9gUhcptK3p1Tw=",
-      "url": "_content\/Syncfusion.Blazor.Core\/scripts\/syncfusion-blazor-extended-fbab4b.min.js"
+      "hash": "sha256-TcptLdRiF5FGaw17Np59xRO4OqIuG51\/cYHNDiH4H0w=",
+      "url": "_content\/Syncfusion.Blazor.Core\/scripts\/syncfusion-blazor-2e8b64.min.js"
     },
     {
-      "hash": "sha256-XSzZ9gO910tnp5SoYpb+\/3myRE6qRXk6ZWpY8rFNuRk=",
-      "url": "_content\/Syncfusion.Blazor.Core\/scripts\/syncfusion-blazor-fbab4b.min.js"
+      "hash": "sha256-BJF1OGZMwNPi1kEkwkcQ9V4slnD+qevaLMExNXNfp5E=",
+      "url": "_content\/Syncfusion.Blazor.Core\/scripts\/syncfusion-blazor-extended-2e8b64.min.js"
     },
     {
-      "hash": "sha256-vIpAzEY1r5PV7MDiBNyP8qn12OUcfTcKcypeStobrpA=",
+      "hash": "sha256-\/UvdX857q91DsBMQmeKaRdMpI9W\/Cj96meAfrAYCh5A=",
       "url": "_content\/Syncfusion.Blazor.Core\/scripts\/syncfusion-blazor.min.js"
     },
     {
-      "hash": "sha256-BMoRsyhq5dg6frwl9HsZ6ajAUng79uG8HoTx\/OAmhzs=",
+      "hash": "sha256-7PM++gxdV0mpwLPjx05tgZBzyE2Zv9Ay\/uOkBbimam0=",
       "url": "_content\/Syncfusion.Blazor.Themes\/bootstrap-dark.css"
     },
     {
-      "hash": "sha256-fUOjCrq6clzHlsvNgqfGYfi4Dl\/F+bzwPR+41bYqUIs=",
+      "hash": "sha256-ejoyiF7Hzx46cmQMx2ymAZgUG+8fWGvxN+Q5XDYov\/c=",
       "url": "_content\/Syncfusion.Blazor.Themes\/bootstrap.css"
     },
     {
-      "hash": "sha256-GWyTeI6f3tFYwLCLLMeEZfVctk9ujEwYLUJRTG4f7ss=",
+      "hash": "sha256-O5XFLW9Wjmm58uWJAsxVwkEkxbr9Lm+APWF55svhYYw=",
       "url": "_content\/Syncfusion.Blazor.Themes\/bootstrap4.css"
     },
     {
-      "hash": "sha256-VowgbVj6+wGwGO7+5GoZPrTIl3NjUgcL8DQuYDQbB4c=",
+      "hash": "sha256-W6p7Ks3eNJBEgHnl0yRsekwoBNMtmQf3CzaVqIXPFfQ=",
       "url": "_content\/Syncfusion.Blazor.Themes\/bootstrap5-dark.css"
     },
     {
-      "hash": "sha256-+b6NLTlfHFgGmwacYnPVyiqNE0PftOGMfTcPg20L2UU=",
+      "hash": "sha256-RKUo+9E0W2oVVuhjKBsE6C2MB\/wu6q50ZGZDXtWtZWA=",
       "url": "_content\/Syncfusion.Blazor.Themes\/bootstrap5.css"
     },
     {
-      "hash": "sha256-EO3PSQHJeJQRkm0T+YEo+y7hvmOaiAprdZ\/IM9D9pI0=",
+      "hash": "sha256-aQL8N+ivO0xumOebfC+r6t9OitPPyNMVE3SCqpbKb5E=",
       "url": "_content\/Syncfusion.Blazor.Themes\/fabric-dark.css"
     },
     {
-      "hash": "sha256-QNyqcILdX48NKtmtf0Oqa8rypn\/3vD0O55Uo6+kmuOc=",
+      "hash": "sha256-5ZQZ3OYHoq0Svp8kO59eu9zsJDUKX5xnrwZgOPETiGc=",
       "url": "_content\/Syncfusion.Blazor.Themes\/fabric.css"
     },
     {
-      "hash": "sha256-r876cXi26zYHZ\/0XbuR\/QN5kijLeOOuU30iCF1ofMrY=",
+      "hash": "sha256-UPOIYhoEZVlf5SFEN5\/3sZFMe3miBcV1D6JUW\/lOB4Y=",
       "url": "_content\/Syncfusion.Blazor.Themes\/highcontrast.css"
     },
     {
-      "hash": "sha256-kr1fjFi4HuGMe80A8VVSUp8sc7kLuTDiHWM7XSOoJUM=",
+      "hash": "sha256-7GILoZxCh6VkYOV5my4WBjIrG718bov8EQV9K2dGTKk=",
       "url": "_content\/Syncfusion.Blazor.Themes\/material-dark.css"
     },
     {
-      "hash": "sha256-ikK01wSXN1ev+jlcwcffOhYTVVaW9miMxP5RH38qhFw=",
+      "hash": "sha256-6PYgCmgRLRmm2H7fhzRe+GNo2FZbNFtXzEcoYjWbbSo=",
       "url": "_content\/Syncfusion.Blazor.Themes\/material.css"
     },
     {
-      "hash": "sha256-NDx+nQ\/SwdO3VUa+zmpmOIjeP2QgfKSFtez1bVioJt8=",
+      "hash": "sha256-JBJXPsP99tSdp3IxOJmFdr2bI0B76l+yC9XC2S34kn8=",
       "url": "_content\/Syncfusion.Blazor.Themes\/tailwind-dark.css"
     },
     {
-      "hash": "sha256-9PxXr6XPjvIf+9fkGTeFcS+haCJp5v7p21gqRavPLZY=",
+      "hash": "sha256-Qa20iUlT7LSGvpiV8SZtVmhkxFLq7a6PjBZgOplsFVc=",
       "url": "_content\/Syncfusion.Blazor.Themes\/tailwind.css"
     },
     {
@@ -1357,5 +1357,5 @@
       "url": "_content\/MForce.Components.Schedule\/MForce.Components.Schedule.bundle.scp.css"
     }
   ],
-  "version": "0Hi\/\/+PN"
+  "version": "954Zk1MI"
 };
