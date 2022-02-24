@@ -7981,6 +7981,10 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
   position: relative;
 }
 
+.rz-calendar .rz-readonly {
+  cursor: pointer;
+}
+
 .rz-calendar .rz-inputtext {
   width: 100%;
   line-height: 1.25rem;
@@ -9086,6 +9090,16 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
 
 .rz-column-picker {
   display: flex;
+}
+
+.rz-filter-menu-symbol {
+  width: 1.75rem;
+  display: inline-block;
+}
+
+.rz-filter-button {
+  margin-right: 10px;
+  width: 3.5rem;
 }
 
 .rz-paginator {
