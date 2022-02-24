@@ -361,7 +361,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-r4jZz6wG8yfNaJUXevYVI2qTDj0OrLNJ5Hqq1CQh9Oc=",
+      "hash": "sha256-jgUS78JxQrzqpS55WOoBm8pCculYXGNRv731bCQf8dQ=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -377,7 +377,7 @@
       "url": "_framework\/Azure.Core.dll"
     },
     {
-      "hash": "sha256-aQipOUy9n0slGHxgpZ3RhyVBFuDbCG8yUnyzL5Sfw7Y=",
+      "hash": "sha256-B01mDI64njYHCkoYxC9LajrXGitJN7xTsMgo+v\/3aHs=",
       "url": "_framework\/Blazorise.Bootstrap.dll"
     },
     {
@@ -421,7 +421,7 @@
       "url": "_framework\/MForce365.Shared.dll"
     },
     {
-      "hash": "sha256-zUtJDELDMtnpQjmtQBCbf3yOP+17\/rYZrcC58pW6p14=",
+      "hash": "sha256-EC2OWBt4gFnljrBwcndxlAqp1M8OJ0qd1GfTuLhtklI=",
       "url": "_framework\/MForce365v2.dll"
     },
     {
@@ -1357,5 +1357,5 @@
       "url": "_content\/MForce.Components.Schedule\/MForce.Components.Schedule.bundle.scp.css"
     }
   ],
-  "version": "Fs4T4Od7"
+  "version": "Q9A00WQ\/"
 };
