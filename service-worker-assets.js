@@ -361,7 +361,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-zWVyRcB7EyAMM68sGK7rnHE4wby6HwLh9Y9z91XIVlE=",
+      "hash": "sha256-5I2wvq0ij4S\/V7pvazxlpAbixduxzoI8v7vDZ6adqvw=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -397,7 +397,7 @@
       "url": "_framework\/Markdig.Signed.dll"
     },
     {
-      "hash": "sha256-puTsrCMzcyoMqkzzFRULgPOuyVj+FhIhlige2+tIRbs=",
+      "hash": "sha256-wkUBVvpblSdCfEamjpHIMOp9wtT06xQ8ABoloSWuk58=",
       "url": "_framework\/MForce.Components.ActionItems.dll"
     },
     {
@@ -1369,5 +1369,5 @@
       "url": "_content\/MForce.Components.Schedule\/MForce.Components.Schedule.bundle.scp.css"
     }
   ],
-  "version": "fW92Q8th"
+  "version": "SG\/D96+5"
 };
