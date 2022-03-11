@@ -361,7 +361,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-TgOG3mzRCcy5QWNM+T7Z0u\/+hj6GvfVrjuXfDC43zjM=",
+      "hash": "sha256-BturUA6jIXX8Fqipunicn2aJkcqGk9u37G6H3+wF2rs=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -397,31 +397,31 @@
       "url": "_framework\/Markdig.Signed.dll"
     },
     {
-      "hash": "sha256-qJUf3Nq8UY4OOdhznPqY1g4O4YL2LY4XMEfgXLCOd9M=",
+      "hash": "sha256-GDi0SSucrJZ4\/7Caz7ic7rFXWuN+mQd0veZLDrtuQfY=",
       "url": "_framework\/MForce.Components.ActionItems.dll"
     },
     {
-      "hash": "sha256-PokO3uNUZ2gJfbcluMbKTnlCN54qyNdiP29mhHNXTKc=",
+      "hash": "sha256-qSsyi9AAB6bmaQolssxCNUlpqckIjxc2bFKzxIJ6vdg=",
       "url": "_framework\/MForce.Components.dll"
     },
     {
-      "hash": "sha256-4xmymSHeCJhcOUhsbUO9ChtuHklp\/dFyZhXIUAYQ2qk=",
+      "hash": "sha256-ilYdKd8OToDMF+6NG6mN+kn3pzEY\/y5in9TuGOiXMGM=",
       "url": "_framework\/MForce.Components.Files.dll"
     },
     {
-      "hash": "sha256-KoAAfG8VWmrCQieLMcs4mojSPrFVaBAPYrHd7Rc4qTI=",
+      "hash": "sha256-O10tnyUkGliaSWeLOofFF1dYf7VuXvTpLDasKFUej7w=",
       "url": "_framework\/MForce.Components.Projects.dll"
     },
     {
-      "hash": "sha256-DEDvS68CfQ\/4yuVdUGiQHrODG2zXk0Q6xixcxPJDIs0=",
+      "hash": "sha256-VdCWXaa9L3DxhUVogq\/ef5JU97hLo0brLRxzLPW9JzM=",
       "url": "_framework\/MForce.Components.Schedule.dll"
     },
     {
-      "hash": "sha256-QGJYOq0vv52yFKnWFrvsWPTAANo3EGJBOKDWefAzaiU=",
+      "hash": "sha256-z2QugDuQkpleVxeewLx7qVc6027kcRDJPfCO65UBzeM=",
       "url": "_framework\/MForce365.Shared.dll"
     },
     {
-      "hash": "sha256-COt48KJ7Gy\/fXo3hRSnwkj0Bv4\/B3aDjjgAhMpcYALc=",
+      "hash": "sha256-KLQT5lXfCqJJYjcNBoO6xtqYjuaNOf\/PfGLT+Ca1KKM=",
       "url": "_framework\/MForce365v2.dll"
     },
     {
@@ -557,7 +557,7 @@
       "url": "_framework\/Microsoft.Graph.Core.dll"
     },
     {
-      "hash": "sha256-93wWtYHR39abR9H8HQiZNr1IIQQXy0hRoKV9\/uqy8+U=",
+      "hash": "sha256-9nMfRWMx+voZEUU3vZZqIIPz4Dw2m5TS1wfVpfuh+k0=",
       "url": "_framework\/Microsoft.Graph.dll"
     },
     {
@@ -1361,5 +1361,5 @@
       "url": "_content\/MForce.Components.Schedule\/MForce.Components.Schedule.bundle.scp.css"
     }
   ],
-  "version": "cs2yg4Cw"
+  "version": "Fzg1BNh6"
 };
