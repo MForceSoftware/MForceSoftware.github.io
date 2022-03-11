@@ -361,7 +361,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-BturUA6jIXX8Fqipunicn2aJkcqGk9u37G6H3+wF2rs=",
+      "hash": "sha256-vuXd1aLOElLJKkE+SJSviZR1JleNG3qWi9wO1meXkO4=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -397,7 +397,7 @@
       "url": "_framework\/Markdig.Signed.dll"
     },
     {
-      "hash": "sha256-GDi0SSucrJZ4\/7Caz7ic7rFXWuN+mQd0veZLDrtuQfY=",
+      "hash": "sha256-UBR4txjyZXeZZMIy9chevMQSgBBuS7I\/FCF\/o2rsg0I=",
       "url": "_framework\/MForce.Components.ActionItems.dll"
     },
     {
@@ -421,7 +421,7 @@
       "url": "_framework\/MForce365.Shared.dll"
     },
     {
-      "hash": "sha256-KLQT5lXfCqJJYjcNBoO6xtqYjuaNOf\/PfGLT+Ca1KKM=",
+      "hash": "sha256-0V\/gpSs08C5+rYX1qcLmmqF9k2e3jEDOwyPciEPxkEU=",
       "url": "_framework\/MForce365v2.dll"
     },
     {
@@ -757,7 +757,7 @@
       "url": "_framework\/System.Linq.dll"
     },
     {
-      "hash": "sha256-oJfx4Ady1X9mHCg7paMXjTkhVdl20njd\/Z5MRK+rPyc=",
+      "hash": "sha256-m+3uarB1R\/UaBsewX7Kpxk38O8k\/9gW2lXpk0o4ChKg=",
       "url": "_framework\/System.Linq.Dynamic.Core.dll"
     },
     {
@@ -1361,5 +1361,5 @@
       "url": "_content\/MForce.Components.Schedule\/MForce.Components.Schedule.bundle.scp.css"
     }
   ],
-  "version": "Fzg1BNh6"
+  "version": "1RnXjOp3"
 };
