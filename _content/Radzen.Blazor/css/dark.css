@@ -7816,6 +7816,12 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
   opacity: 0.5;
 }
 
+.rz-datepicker-footer {
+  position: relative;
+  line-height: 2.5rem;
+  padding: 0 0.875rem;
+}
+
 .rz-timepicker {
   display: flex;
   align-items: center;
