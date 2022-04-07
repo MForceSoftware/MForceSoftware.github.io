@@ -361,7 +361,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-mGjw91frQLMY3SZtUidQFlZ9SpCDS6cNQ3n\/NNzK844=",
+      "hash": "sha256-PPD1QjEHLzkkAHMRNA2T4kJxh0spnbxWI48jZuNgXjw=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -393,7 +393,7 @@
       "url": "_framework\/HtmlSanitizer.dll"
     },
     {
-      "hash": "sha256-Lq6cGPiZI1TnwtJxeWMroe3BNFlCUblgTGDuxWMLlNY=",
+      "hash": "sha256-SGFvE9EAYTZTWhA\/md+669Up9wXz3kFdildm8H3jn14=",
       "url": "_framework\/Markdig.Signed.dll"
     },
     {
@@ -413,7 +413,7 @@
       "url": "_framework\/MForce.Components.Projects.dll"
     },
     {
-      "hash": "sha256-77zntuJGFkhwbHevNfPaZmz1FEhhUo4\/+4gQ8wnqiuw=",
+      "hash": "sha256-wso5y20E+NaaeWUY04COwpI376kwXRdSoUqUQ7E7uGg=",
       "url": "_framework\/MForce.Components.Schedule.dll"
     },
     {
@@ -421,7 +421,7 @@
       "url": "_framework\/MForce365.Shared.dll"
     },
     {
-      "hash": "sha256-\/+aMUJIaG6i7Eyw3ud5vnlZHq4GQh3Xj+Ss9rq8H76o=",
+      "hash": "sha256-azPg\/Vx+SFVfgBKGER5QXIQaYmn8QNcHORL3Rycf5\/o=",
       "url": "_framework\/MForce365v2.dll"
     },
     {
@@ -821,7 +821,7 @@
       "url": "_framework\/System.ObjectModel.dll"
     },
     {
-      "hash": "sha256-ImqNAJGqfviwMj9f5R5LQj8zs2ScgZuRfxQmYMqC6rU=",
+      "hash": "sha256-0xlcG2FZiRRYYyRl2uEyJQTAIaFR+jGYmY5TEECVUHc=",
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
@@ -869,11 +869,11 @@
       "url": "_framework\/System.Resources.ResourceManager.dll"
     },
     {
-      "hash": "sha256-eSAiPeddtijw4majoe47zN1VcSXJfp2NhXSZVVncFBM=",
+      "hash": "sha256-R2j7XhTuB\/MsRRvnXpllv6+nHkAGjWzSWFYnnFLQPzM=",
       "url": "_framework\/System.Runtime.CompilerServices.Unsafe.dll"
     },
     {
-      "hash": "sha256-ZwvthiPFdJRmj1CO4xvzH4B5g47x\/PSiI6tpDXk\/OW0=",
+      "hash": "sha256-rEd2MPIYvBcBlHhNE6blIBO7VMXOvza6h6Q3IuVQjmc=",
       "url": "_framework\/System.Runtime.dll"
     },
     {
@@ -1365,5 +1365,5 @@
       "url": "_content\/MForce.Components.Schedule\/MForce.Components.Schedule.bundle.scp.css"
     }
   ],
-  "version": "BPQ2Fb9d"
+  "version": "ViDEG1AT"
 };
