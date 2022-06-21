@@ -8765,7 +8765,6 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
 
 .rz-filter-button {
   margin-right: 10px;
-  width: 3.5rem;
 }
 
 .rz-paginator {
@@ -10085,8 +10084,7 @@ body:not(.rz-default-scrollbars) ::-webkit-scrollbar-corner {
     left: -35%;
     right: 100%;
   }
-  100%,
-60% {
+  100%, 60% {
     left: 100%;
     right: -90%;
   }
@@ -10097,11 +10095,150 @@ body:not(.rz-default-scrollbars) ::-webkit-scrollbar-corner {
     left: -200%;
     right: 100%;
   }
-  100%,
-60% {
+  100%, 60% {
     left: 107%;
     right: -8%;
   }
+}
+
+.rz-progressbar-determinate-primary {
+  color: #ffffff;
+}
+
+.rz-progressbar-determinate-primary .rz-progressbar-value {
+  background-color: #ff6d41;
+}
+
+.rz-progressbar-indeterminate-primary {
+  color: #ffffff;
+}
+
+.rz-progressbar-indeterminate-primary .rz-progressbar-value:before {
+  background-color: #ff6d41;
+}
+
+.rz-progressbar-indeterminate-primary .rz-progressbar-value:after {
+  background-color: #ff6d41;
+}
+
+.rz-progressbar-determinate-light {
+  color: #3a474d;
+}
+
+.rz-progressbar-determinate-light .rz-progressbar-value {
+  background-color: #e6ecef;
+}
+
+.rz-progressbar-indeterminate-light {
+  color: #3a474d;
+}
+
+.rz-progressbar-indeterminate-light .rz-progressbar-value:before {
+  background-color: #e6ecef;
+}
+
+.rz-progressbar-indeterminate-light .rz-progressbar-value:after {
+  background-color: #e6ecef;
+}
+
+.rz-progressbar-determinate-secondary {
+  color: #ffffff;
+}
+
+.rz-progressbar-determinate-secondary .rz-progressbar-value {
+  background-color: #479cc8;
+}
+
+.rz-progressbar-indeterminate-secondary {
+  color: #ffffff;
+}
+
+.rz-progressbar-indeterminate-secondary .rz-progressbar-value:before {
+  background-color: #479cc8;
+}
+
+.rz-progressbar-indeterminate-secondary .rz-progressbar-value:after {
+  background-color: #479cc8;
+}
+
+.rz-progressbar-determinate-info {
+  color: #ffffff;
+}
+
+.rz-progressbar-determinate-info .rz-progressbar-value {
+  background-color: #68d5c8;
+}
+
+.rz-progressbar-indeterminate-info {
+  color: #ffffff;
+}
+
+.rz-progressbar-indeterminate-info .rz-progressbar-value:before {
+  background-color: #68d5c8;
+}
+
+.rz-progressbar-indeterminate-info .rz-progressbar-value:after {
+  background-color: #68d5c8;
+}
+
+.rz-progressbar-determinate-warning {
+  color: #ffffff;
+}
+
+.rz-progressbar-determinate-warning .rz-progressbar-value {
+  background-color: #e6c54f;
+}
+
+.rz-progressbar-indeterminate-warning {
+  color: #ffffff;
+}
+
+.rz-progressbar-indeterminate-warning .rz-progressbar-value:before {
+  background-color: #e6c54f;
+}
+
+.rz-progressbar-indeterminate-warning .rz-progressbar-value:after {
+  background-color: #e6c54f;
+}
+
+.rz-progressbar-determinate-danger {
+  color: #ffffff;
+}
+
+.rz-progressbar-determinate-danger .rz-progressbar-value {
+  background-color: #f9777f;
+}
+
+.rz-progressbar-indeterminate-danger {
+  color: #ffffff;
+}
+
+.rz-progressbar-indeterminate-danger .rz-progressbar-value:before {
+  background-color: #f9777f;
+}
+
+.rz-progressbar-indeterminate-danger .rz-progressbar-value:after {
+  background-color: #f9777f;
+}
+
+.rz-progressbar-determinate-success {
+  color: #ffffff;
+}
+
+.rz-progressbar-determinate-success .rz-progressbar-value {
+  background-color: #5dbf74;
+}
+
+.rz-progressbar-indeterminate-success {
+  color: #ffffff;
+}
+
+.rz-progressbar-indeterminate-success .rz-progressbar-value:before {
+  background-color: #5dbf74;
+}
+
+.rz-progressbar-indeterminate-success .rz-progressbar-value:after {
+  background-color: #5dbf74;
 }
 
 .chart,
@@ -11488,4 +11625,8 @@ button.rz-colorpicker-trigger .rz-fileupload-row .rz-paginator-element .rz-icon-
 .rz-breadcrumb-item {
   display: inline-flex;
   align-items: center;
+}
+
+.rz-breadcrumb-item .rz-link {
+  display: inline-flex;
 }
