@@ -365,7 +365,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-9uhvXO9cXsR6MQ2QfMVEQssLqb2\/3oQk4jE1yFDFDeg=",
+      "hash": "sha256-Ff1R0TbkXe8X2sjM3X8GJQXY9edLGT+I9m0vVWRNn7M=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -401,31 +401,31 @@
       "url": "_framework\/Markdig.Signed.dll"
     },
     {
-      "hash": "sha256-h71vMh+DgwXr8a1h9oPVIvpnTzvC5KT6rYRU47dmYOY=",
+      "hash": "sha256-h+FIWQpi+9YDjPHI5\/blsZbhQmb6wB3eRuI3y1XEJeE=",
       "url": "_framework\/MForce.Components.ActionItems.dll"
     },
     {
-      "hash": "sha256-E9Yq1FIxYLXllIqEBjA0ATilTt4dNjAgIvOrJnk91Ys=",
+      "hash": "sha256-faVm69t6FGuDuAEN7uMSmJjFcZIf29DU7QIb+MZYjaw=",
       "url": "_framework\/MForce.Components.dll"
     },
     {
-      "hash": "sha256-uH2nCf1q3MEQ9gYt+I6f\/cRAn8prDdoB\/dwUbZuwEuA=",
+      "hash": "sha256-sNujz3oOZtTF73kry5hQK9E6QcEIbSC6M3GnhxOP8pw=",
       "url": "_framework\/MForce.Components.Files.dll"
     },
     {
-      "hash": "sha256-YvBQQG+b9idpur07fEvakW3Ca59yJvZqc\/xYgMreYuU=",
+      "hash": "sha256-YJIbQUueoObejXYhZOzIkWxoK82uzMlG7590XnrxDis=",
       "url": "_framework\/MForce.Components.Projects.dll"
     },
     {
-      "hash": "sha256-+5lek1Nu8C8qLt2Fc0IaWi82Ev\/9U8PMxLF3HWocguQ=",
+      "hash": "sha256-pLANn00e+kz\/H2JfSLg2i5F5fEs8iTYpcQBqNiSGUeQ=",
       "url": "_framework\/MForce.Components.Schedule.dll"
     },
     {
-      "hash": "sha256-ZJK1Lb3XORYOEmLlCPH8RoErn\/z7vIuFEJ6fNgbaTYs=",
+      "hash": "sha256-u04gQYOBfSlV7SEr6w+Ss7NPjEKFbW5YeBlDrAdSVcQ=",
       "url": "_framework\/MForce365.Shared.dll"
     },
     {
-      "hash": "sha256-twTJTEt7VNop404ja+QfDKgcjw5YXpg4ilpcodFOZ38=",
+      "hash": "sha256-83MVEBm2zXGzLLcL1aizTIJhAxvJ4CIO0XMu+nFZ+cI=",
       "url": "_framework\/MForce365v2.dll"
     },
     {
@@ -645,7 +645,7 @@
       "url": "_framework\/Syncfusion.OfficeChart.Portable.dll"
     },
     {
-      "hash": "sha256-UQYHJVirAk9zz7+ZlfpNpXEA4zt\/X557Cs+k1c1zFkA=",
+      "hash": "sha256-MrU0yZ+2sAHRc66D1eKq0uYRueDNRwEg32vamGL44LE=",
       "url": "_framework\/Syncfusion.Pdf.Portable.dll"
     },
     {
@@ -1337,5 +1337,5 @@
       "url": "_content\/MForce.Components.Schedule\/MForce.Components.Schedule.bundle.scp.css"
     }
   ],
-  "version": "P+Y+QGD2"
+  "version": "dTx7MGLz"
 };
