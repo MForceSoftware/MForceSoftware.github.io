@@ -1,6 +1,6 @@
-﻿import { getRequiredElement, fromExponential, firstNonNull } from "./utilities.js?v=1.0.4.0";
+﻿import { getRequiredElement, fromExponential, firstNonNull } from "./utilities.js";
 
-import './vendors/autoNumeric.js?v=1.0.4.0';
+import './vendors/autoNumeric.js';
 
 let _instances = [];
 
@@ -21,7 +21,6 @@ export function initialize(dotnetAdapter, element, elementId, options) {
         digitGroupSeparator: firstNonNull(options.groupSeparator, AutoNumeric.options.digitGroupSeparator.noSeparator),
         digitalGroupSpacing: firstNonNull(options.groupSpacing, AutoNumeric.options.digitalGroupSpacing.three),
 
-        modifyValueOnWheel: false,
         wheelStep: firstNonNull(options.step, 1),
         minimumValue: firstNonNull(fromExponential(firstNonNull(options.min, options.typeMin)), AutoNumeric.options.minimumValue.tenTrillions),
         maximumValue: firstNonNull(fromExponential(firstNonNull(options.max, options.typeMax)), AutoNumeric.options.maximumValue.tenTrillions),
@@ -32,13 +31,11 @@ export function initialize(dotnetAdapter, element, elementId, options) {
         currencySymbolPlacement: firstNonNull(options.currencySymbolPlacement, AutoNumeric.options.currencySymbolPlacement.suffix),
 
         selectOnFocus: firstNonNull(options.selectAllOnFocus, AutoNumeric.options.selectOnFocus.doNotSelect),
-        caretPositionOnFocus: AutoNumeric.options.caretPositionOnFocus.doNoForceCaretPosition,
 
         allowDecimalPadding: firstNonNull(options.allowDecimalPadding, AutoNumeric.options.allowDecimalPadding.always),
         alwaysAllowDecimalCharacter: firstNonNull(options.alwaysAllowDecimalSeparator, AutoNumeric.options.alwaysAllowDecimalCharacter.doNotAllow),
 
-        onInvalidPaste: 'ignore',
-        emptyInputBehavior: AutoNumeric.options.emptyInputBehavior.null
+        onInvalidPaste: 'ignore'
     });
 
     element.addEventListener('autoNumeric:rawValueModified', e => {
@@ -64,67 +61,64 @@ export function updateOptions(element, elementId, options) {
     const instance = _instances[elementId];
 
     if (instance && options) {
-        const newOptions = {};
-
         if (options.decimals.changed) {
-            //newOptions.decimalPlaces = options.decimals.value || AutoNumeric.options.decimalPlaces.two;
-            newOptions.decimalPlacesRawValue = firstNonNull(options.decimals.value, AutoNumeric.options.decimalPlaces.two);
-            newOptions.decimalPlacesShownOnFocus = firstNonNull(options.decimals.value, AutoNumeric.options.decimalPlaces.two);
-            newOptions.decimalPlacesShownOnBlur = firstNonNull(options.decimals.value, AutoNumeric.options.decimalPlaces.two);
+            //instance.options.decimalPlaces(options.decimals.value || AutoNumeric.options.decimalPlaces.two);
+            instance.options.decimalPlacesRawValue(firstNonNull(options.decimals.value, AutoNumeric.options.decimalPlaces.two));
+            instance.options.decimalPlacesShownOnFocus(firstNonNull(options.decimals.value, AutoNumeric.options.decimalPlaces.two));
+            instance.options.decimalPlacesShownOnBlur(firstNonNull(options.decimals.value, AutoNumeric.options.decimalPlaces.two));
         }
 
         if (options.decimalSeparator.changed) {
-            newOptions.decimalCharacter = firstNonNull(options.decimalSeparator.value, AutoNumeric.options.decimalCharacter.dot);
+            instance.options.decimalCharacter(firstNonNull(options.decimalSeparator.value, AutoNumeric.options.decimalCharacter.dot));
         }
 
         if (options.alternativeDecimalSeparator.changed) {
-            newOptions.decimalCharacterAlternative = firstNonNull(options.alternativeDecimalSeparator.value, AutoNumeric.options.decimalCharacter.comma);
+            instance.options.decimalCharacterAlternative(firstNonNull(options.alternativeDecimalSeparator.value, AutoNumeric.options.decimalCharacter.comma));
         }
 
         if (options.groupSeparator.changed) {
-            newOptions.digitGroupSeparator = firstNonNull(options.groupSeparator.value, AutoNumeric.options.digitGroupSeparator.noSeparator);
+            instance.options.digitGroupSeparator(firstNonNull(options.groupSeparator.value, AutoNumeric.options.digitGroupSeparator.noSeparator));
         }
 
         if (options.groupSpacing.changed) {
-            newOptions.digitalGroupSpacing = firstNonNull(options.groupSpacing.value, AutoNumeric.options.digitalGroupSpacing.three);
+            instance.options.digitalGroupSpacing(firstNonNull(options.groupSpacing.value, AutoNumeric.options.digitalGroupSpacing.three));
         }
 
         if (options.currencySymbol.changed) {
-            newOptions.currencySymbol = firstNonNull(options.currencySymbol.value, AutoNumeric.options.currencySymbol.none);
+            instance.options.currencySymbol(firstNonNull(options.currencySymbol.value, AutoNumeric.options.currencySymbol.none));
         }
 
         if (options.currencySymbolPlacement.changed) {
-            newOptions.currencySymbolPlacement = firstNonNull(options.currencySymbolPlacement.value, AutoNumeric.options.currencySymbolPlacement.suffix);
+            instance.options.currencySymbolPlacement(firstNonNull(options.currencySymbolPlacement.value, AutoNumeric.options.currencySymbolPlacement.suffix));
         }
 
         if (options.roundingMethod.changed) {
-            newOptions.roundingMethod = firstNonNull(options.roundingMethod.value, AutoNumeric.options.roundingMethod.halfUpSymmetric);
+            instance.options.roundingMethod(firstNonNull(options.roundingMethod.value, AutoNumeric.options.roundingMethod.halfUpSymmetric));
         }
 
         if (options.min.changed) {
-            newOptions.minimumValue = firstNonNull(options.min.value, AutoNumeric.options.minimumValue.tenTrillions);
+            instance.options.minimumValue(firstNonNull(options.min.value, AutoNumeric.options.minimumValue.tenTrillions));
         }
+
         if (options.max.changed) {
-            newOptions.maximumValue = firstNonNull(options.max.value, AutoNumeric.options.maximumValue.tenTrillions);
+            instance.options.maximumValue(firstNonNull(options.max.value, AutoNumeric.options.maximumValue.tenTrillions));
         }
 
         if (options.minMaxLimitsOverride.changed) {
-            newOptions.overrideMinMaxLimits = firstNonNull(options.minMaxLimitsOverride.value, AutoNumeric.options.overrideMinMaxLimits.doNotOverride);
+            instance.options.overrideMinMaxLimits(firstNonNull(options.minMaxLimitsOverride.value, AutoNumeric.options.overrideMinMaxLimits.doNotOverride));
         }
 
         if (options.selectAllOnFocus.changed) {
-            newOptions.selectOnFocus = firstNonNull(options.selectAllOnFocus.value, AutoNumeric.options.selectOnFocus.doNotSelect);
+            instance.options.selectOnFocus(firstNonNull(options.selectAllOnFocus.value, AutoNumeric.options.selectOnFocus.doNotSelect));
         }
 
         if (options.allowDecimalPadding.changed) {
-            newOptions.allowDecimalPadding = firstNonNull(options.allowDecimalPadding.value, AutoNumeric.options.allowDecimalPadding.always);
+            instance.options.allowDecimalPadding(firstNonNull(options.allowDecimalPadding.value, AutoNumeric.options.allowDecimalPadding.always));
         }
 
         if (options.alwaysAllowDecimalSeparator.changed) {
-            newOptions.alwaysAllowDecimalCharacter = firstNonNull(options.alwaysAllowDecimalSeparator.value, AutoNumeric.options.alwaysAllowDecimalCharacter.doNotAllow);
+            instance.options.alwaysAllowDecimalCharacter(firstNonNull(options.alwaysAllowDecimalSeparator.value, AutoNumeric.options.alwaysAllowDecimalCharacter.doNotAllow));
         }
-
-        instance.update(newOptions);
     }
 }
 

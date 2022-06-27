@@ -1,7 +1,11 @@
 ﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
-
+:root {
+    --MForcePrimary: #6c3059;
+    --MForceSemiTrans: #6c305969;
+}
 html, body {
     font-family: 'Roboto Condensed', sans-serif;
+    font-size: small;
 }
 
 a, .btn-link {
@@ -70,3 +74,90 @@ lottie-player {
     }
 
 
+
+
+
+
+.card {
+    padding: 1.25rem;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.07);
+    box-shadow: 2.5px 5px 4px var(--MForceSemiTrans);
+}
+.header {
+    background-color: var(--MForcePrimary);
+    min-height: 3.125rem;
+    border-bottom:none;
+    color: #ffffff;
+    box-shadow:none;
+}
+.sidebar-toggle{
+    background-color: var(--MForcePrimary);
+}
+
+    .sidebar-toggle:hover {
+        background-color: #451335;
+    }
+.footer {
+    background-color: var(--MForcePrimary);
+}
+.rz-navigation-item-link-active {
+    color: var(--MForcePrimary) !important;
+}
+
+.btn-primary {
+    background-color: var(--MForcePrimary);
+    border-color: var(--MForcePrimary);
+}
+
+    .btn-primary:hover {
+        background-color: var(--MForceSemiTrans);
+        border-color: var(--MForceSemiTrans);
+    }
+
+.navbar-brand{
+    animation: pulse 5s infinite;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: #c195b3ff;
+    }
+    50% {
+        background-color: var(--MForcePrimary);
+    }
+    100% {
+        background-color: #c195b3ff;
+    }
+}
+
+.nav-link{
+    padding-right:25px;
+}
+
+.rz-chkbox-box.rz-state-active {
+    background-color: var(--MForcePrimary);
+    border: 1px solid var(--MForcePrimary);
+}
+
+    .rz-chkbox-box.rz-state-active:hover {
+        background-color: var(--MForceSemiTrans);
+    }
+
+.rz-button.btn-primary {
+    background-color: var(--MForcePrimary);
+    border: 1px solid var(--MForcePrimary);
+}
+
+a{
+    color: var(--MForcePrimary);
+}
+a:hover{
+    color: var(--MForceSemiTrans);
+}
+
+h3{
+    font-weight: bold;
+}
