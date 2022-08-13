@@ -361,7 +361,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-M5zCZ8yaXlAaAC4qyMV8Q9QQHjXrOL4Zzvvzpf79oQU=",
+      "hash": "sha256-0V\/IPkGhjFiTDCdT0ylUO98H4kaYvG1JyvzpTNXJ8Qo=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -397,31 +397,31 @@
       "url": "_framework\/Markdig.Signed.dll"
     },
     {
-      "hash": "sha256-wLxVDQfxqYTmI3XVHYElPmsNxoluPWkb0eBrgdcyq0g=",
+      "hash": "sha256-MeDjAqh9PAL2y+2GHa3QjNZ74RTNEw3XyTqwERNpjhU=",
       "url": "_framework\/MForce.Components.ActionItems.dll"
     },
     {
-      "hash": "sha256-QzwPC02py6N9yvchX1r3QBl7g1siTxPAjpmcDU0Qn1c=",
+      "hash": "sha256-G8sqzX1A33MAJc22ytaZv6wU2e6ZER88AefExVNgP9I=",
       "url": "_framework\/MForce.Components.dll"
     },
     {
-      "hash": "sha256-3s1tV1c\/YUmbXvhbTjeNQxuzpMPG1k7xcKHbWbLtw9w=",
+      "hash": "sha256-dfW+FNfLeCT5gXjVLzU1ZKJcl4cbGdsj1qsHM46SjRs=",
       "url": "_framework\/MForce.Components.Files.dll"
     },
     {
-      "hash": "sha256-SnjxdvbtKSlYPOtZ0sXj4qxjr5Y++XDKUx0oUCj8zNo=",
+      "hash": "sha256-6Lzg6F7TLx2eoe4S2fyva2qFOZMcnaHn9VxxQP\/XSBU=",
       "url": "_framework\/MForce.Components.Projects.dll"
     },
     {
-      "hash": "sha256-gkIBVEB9uoWlh\/zzcH+hk4Ym0\/wdlkoHh8FUrMd1H\/w=",
+      "hash": "sha256-BOLTObJy057BVdZwOeBGXA1UIePZ4uWv0QWKfCI62Zo=",
       "url": "_framework\/MForce.Components.Schedule.dll"
     },
     {
-      "hash": "sha256-qJIHe9Cg5+Ljd\/4sj7hKfTQRwoofMLp8fZOqIgqnB8U=",
+      "hash": "sha256-pqCPUz7JRapzbE73B1OKO9vZnWIx+iXhOxClzywuGtw=",
       "url": "_framework\/MForce365.Shared.dll"
     },
     {
-      "hash": "sha256-Dr7Lt3WeTH+LR6wC7FUT7weFFSAB7JYMvkjJHRxZjbc=",
+      "hash": "sha256-WCxoDhRA2+UFatCUWpEvdbJaiwHdIudvbszbPx95iXI=",
       "url": "_framework\/MForce365v2.dll"
     },
     {
@@ -569,7 +569,7 @@
       "url": "_framework\/Microsoft.Win32.Primitives.dll"
     },
     {
-      "hash": "sha256-eNs5MK7G5CaQ1DVFT8KaOPVAuzQBc0X9Pbn6MSII8y8=",
+      "hash": "sha256-4cQ9rGiGPnKm\/uYIKptWMMt8Cqn\/HRax2CZT8Hl4IPA=",
       "url": "_framework\/netstandard.dll"
     },
     {
@@ -585,7 +585,7 @@
       "url": "_framework\/Syncfusion.Blazor.Core.dll"
     },
     {
-      "hash": "sha256-3yUWokKJ+0OwkugqCE8KgRSJHg7GnWRmHQFn8pJfqsY=",
+      "hash": "sha256-qCUQMyANes5KAXHQ5XTkd0T5+7fvkM6rKP9J1S\/FzqI=",
       "url": "_framework\/Syncfusion.Compression.Portable.dll"
     },
     {
@@ -593,7 +593,7 @@
       "url": "_framework\/Syncfusion.DocIO.Portable.dll"
     },
     {
-      "hash": "sha256-uqJ5S022dzfQFoNijTWwdf7\/MF7xZT87tbvshvUM4FY=",
+      "hash": "sha256-UNaE9+goIf+s7o2tbWRKZSI+pVomVqaLfmcqu8IVYgw=",
       "url": "_framework\/Syncfusion.Licensing.dll"
     },
     {
@@ -601,7 +601,7 @@
       "url": "_framework\/Syncfusion.OfficeChart.Portable.dll"
     },
     {
-      "hash": "sha256-MrU0yZ+2sAHRc66D1eKq0uYRueDNRwEg32vamGL44LE=",
+      "hash": "sha256-Oa44m519+c1C87tt9uPWMwd6MnnXpKL3QPVERZWZsgM=",
       "url": "_framework\/Syncfusion.Pdf.Portable.dll"
     },
     {
@@ -613,7 +613,7 @@
       "url": "_framework\/System.Collections.Concurrent.dll"
     },
     {
-      "hash": "sha256-odV3ygc9hCfZa4oYHGgZ+6k83e8bDRYeEAEoQP9y\/sQ=",
+      "hash": "sha256-m5Lt18CubJK6qh4HaOcrDZzkM3tyUq7aCSgeshZO5rE=",
       "url": "_framework\/System.Collections.dll"
     },
     {
@@ -777,7 +777,7 @@
       "url": "_framework\/System.ObjectModel.dll"
     },
     {
-      "hash": "sha256-RvT1t5+hn6aKWpCwb0s15uj\/v+nTX5tKGKsnzU2gLJw=",
+      "hash": "sha256-h0\/tIKjd7Io4o+wAkmWyH3pbMQD28HGEY\/BskWpd3MI=",
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
@@ -829,7 +829,7 @@
       "url": "_framework\/System.Runtime.CompilerServices.Unsafe.dll"
     },
     {
-      "hash": "sha256-NlISctnJvhNd1359A8USBj7tXnJ6CTpmWLeIte7CA54=",
+      "hash": "sha256-fpow8aJegRdTwTa7kv5oMjppcjsmtut0ZJ1ZLOEBjoE=",
       "url": "_framework\/System.Runtime.dll"
     },
     {
@@ -917,7 +917,7 @@
       "url": "_framework\/System.Text.RegularExpressions.dll"
     },
     {
-      "hash": "sha256-73g\/xKrk\/J4r412Mgvh9tDV5JpkI8bN1I\/5DAwyr\/lM=",
+      "hash": "sha256-swLviy6f94wc9HxKAlKu+eb5sNnV15loiJuIaLRKI40=",
       "url": "_framework\/System.Threading.dll"
     },
     {
@@ -937,11 +937,15 @@
       "url": "_framework\/System.Threading.Thread.dll"
     },
     {
+      "hash": "sha256-q94HS8GiZaYJiH\/u2fIVItjqWIAEidozV6MPDcPVVH8=",
+      "url": "_framework\/System.Threading.ThreadPool.dll"
+    },
+    {
       "hash": "sha256-t3fpylRDcUCJB6pGjJQ11Wzry0u3j8wOvV3QOFbX1MM=",
       "url": "_framework\/System.Web.HttpUtility.dll"
     },
     {
-      "hash": "sha256-DzvQBvHQZ894pzGi6hRCrWsNiG\/++GWr9+jYtAGgtck=",
+      "hash": "sha256-tCGG5R\/UNpPRL5U6n8Eh5FBFoA1acfon8NEOKOkf92Y=",
       "url": "_framework\/System.Xml.ReaderWriter.dll"
     },
     {
@@ -1285,5 +1289,5 @@
       "url": "_content\/MForce.Components.Schedule\/MForce.Components.Schedule.bundle.scp.css"
     }
   ],
-  "version": "E8dz73QY"
+  "version": "avDJEqQD"
 };
