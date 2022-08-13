@@ -329,7 +329,7 @@
       "url": "_framework\/yi\/MForce365.Shared.resources.dll"
     },
     {
-      "hash": "sha256-wC+zAyYHVTNzevCw3SFvHI4jG51pV1+b5sQ3Rj11QGI=",
+      "hash": "sha256-xbodEx8SfFjQwcIT9kTWPiIKFbpZEXVvF1mQEx0KlPU=",
       "url": "_framework\/blazor.webassembly.js"
     },
     {
@@ -361,7 +361,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-1uGz19tYdaYb7NhnNktssP\/Q6ladOaTNniZeknMau\/U=",
+      "hash": "sha256-nXStoMyeeLdag9q+yf8A35Hwj0XNhDnGWMF68r99A50=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -421,7 +421,7 @@
       "url": "_framework\/MForce365.Shared.dll"
     },
     {
-      "hash": "sha256-1\/zgoMVg4npcJGjpKaCiPsnbp8VZHISUaXy6jJsEKeA=",
+      "hash": "sha256-YgjZ3b5WBZmRF7Q09EFv5xvAJCL1M7mbczaAfgs0COk=",
       "url": "_framework\/MForce365v2.dll"
     },
     {
@@ -441,7 +441,7 @@
       "url": "_framework\/Microsoft.AspNetCore.Components.Forms.dll"
     },
     {
-      "hash": "sha256-8HDXcc\/fqbBj3ajFC+LmzH8GpD5Jz3tr3PhyVLqsCm4=",
+      "hash": "sha256-EvQAzdLbSf9zbub3EXKGgrDj9Cr14L5bzdafceOdtV8=",
       "url": "_framework\/Microsoft.AspNetCore.Components.Web.dll"
     },
     {
@@ -449,7 +449,7 @@
       "url": "_framework\/Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll"
     },
     {
-      "hash": "sha256-aqn\/eCMWESG1\/7pIR9TioqwcgYyN47XZBq\/rgBGs6tA=",
+      "hash": "sha256-YKuAefM13kCAVOQ+dpt678nIq75Vg29dsfwrPOiJgwY=",
       "url": "_framework\/Microsoft.AspNetCore.Components.WebAssembly.dll"
     },
     {
@@ -557,11 +557,11 @@
       "url": "_framework\/Microsoft.IdentityModel.Tokens.dll"
     },
     {
-      "hash": "sha256-uN4XQersPQik4F2cXq8uwQ1ds7ad4jJXyxgzLc3IZJQ=",
+      "hash": "sha256-EbzT2OMQ5o9oleRkUY4HQFXingqdNl2IZqxdUlINuQc=",
       "url": "_framework\/Microsoft.JSInterop.dll"
     },
     {
-      "hash": "sha256-s2xsgdYKLwwiBtdxUf7w3xifWex\/saizGRq96DOIMF8=",
+      "hash": "sha256-JnYE3PacT+0TrHdA2lIvLkQwSgtLQlRYc+tzxGVgpOM=",
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.dll"
     },
     {
@@ -1285,5 +1285,5 @@
       "url": "_content\/MForce.Components.Schedule\/MForce.Components.Schedule.bundle.scp.css"
     }
   ],
-  "version": "E7dTpOAg"
+  "version": "OMvAlL+f"
 };
