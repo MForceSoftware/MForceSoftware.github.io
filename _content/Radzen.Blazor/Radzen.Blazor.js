@@ -403,12 +403,7 @@ window.Radzen = {
       ul.nextSelectedIndex <= childNodes.length - 1
     ) {
       childNodes[ul.nextSelectedIndex].classList.add('rz-state-highlight');
-      if (ul.parentNode.classList.contains('rz-autocomplete-panel')) {
-        ul.parentNode.scrollTop = childNodes[ul.nextSelectedIndex].offsetTop;
-      } else {
-        ul.parentNode.scrollTop =
-          childNodes[ul.nextSelectedIndex].offsetTop - ul.parentNode.offsetTop;
-      }
+      childNodes[ul.nextSelectedIndex].scrollIntoView({block:'nearest'});
     }
   },
   focusListItem: function (input, ul, isDown, startIndex) {
@@ -458,9 +453,9 @@ window.Radzen = {
 
     return ul.nextSelectedIndex;
   },
-  uploadInputChange: function (e, url, auto, multiple) {
+  uploadInputChange: function (e, url, auto, multiple, clear, parameterName) {
       if (auto) {
-          Radzen.upload(e.target, url, multiple, true);
+          Radzen.upload(e.target, url, multiple, clear, parameterName);
           e.target.value = '';
       } else {
           Radzen.uploadChange(e.target);
@@ -526,7 +521,7 @@ window.Radzen = {
   removeFileFromFileInput: function (fileInput) {
     fileInput.value = '';
   },
-  upload: function (fileInput, url, multiple, clear) {
+  upload: function (fileInput, url, multiple, clear, parameterName) {
     var uploadComponent = Radzen.uploadComponents && Radzen.uploadComponents[fileInput.id];
     if (!uploadComponent) { return; }
     if (!uploadComponent.files || clear) {
@@ -537,7 +532,7 @@ window.Radzen = {
     var cancelled = false;
     for (var i = 0; i < uploadComponent.files.length; i++) {
       var file = uploadComponent.files[i];
-      data.append(multiple ? 'files' : 'file', file, file.name);
+      data.append(parameterName || (multiple ? 'files' : 'file'), file, file.name);
       files.push({Name: file.name, Size: file.size});
     }
     var xhr = new XMLHttpRequest();
@@ -658,14 +653,14 @@ window.Radzen = {
 
     Radzen.openPopup(null, id, false, null, x, y);
   },
-  openTooltip: function (target, id, duration, position) {
+  openTooltip: function (target, id, duration, position, closeTooltipOnDocumentClick) {
     Radzen.closePopup(id);
 
     if (Radzen[id + 'duration']) {
       clearTimeout(Radzen[id + 'duration']);
     }
 
-    Radzen.openPopup(target, id, false, position);
+    Radzen.openPopup(target, id, false, position, null, null, null, null, closeTooltipOnDocumentClick);
 
     if (duration) {
       Radzen[id + 'duration'] = setTimeout(Radzen.closePopup, duration, id);
@@ -701,7 +696,7 @@ window.Radzen = {
 
       popup.style.top = top + 'px';
   },
-  openPopup: function (parent, id, syncWidth, position, x, y, instance, callback) {
+  openPopup: function (parent, id, syncWidth, position, x, y, instance, callback, closeOnDocumentClick = true) {
     var popup = document.getElementById(id);
     if (!popup) return;
 
@@ -801,7 +796,7 @@ window.Radzen = {
     }
 
     Radzen[id] = function (e) {
-        if(e.type == 'contextmenu' || !e.target) return;
+        if(e.type == 'contextmenu' || !e.target || !closeOnDocumentClick) return;
         if (!/Android/i.test(navigator.userAgent) && e.type == 'resize') {
             Radzen.closePopup(id, instance, callback);
             return;
