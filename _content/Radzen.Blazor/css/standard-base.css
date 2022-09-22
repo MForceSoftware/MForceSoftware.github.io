@@ -1791,6 +1791,16 @@ body {
   margin-bottom: 0;
 }
 
+.rz-form .row .rz-label {
+  min-height: var(--rz-input-height);
+  line-height: var(--rz-input-line-height);
+  padding: var(--rz-input-padding);
+  padding-left: 0;
+  border-top: var(--rz-input-border);
+  border-bottom: var(--rz-input-border);
+  border-color: transparent;
+}
+
 ::selection {
   background-color: var(--rz-primary-lighter);
 }
@@ -2012,9 +2022,17 @@ p-button[type] {
   background-color: var(--rz-primary-darker);
 }
 
+.rz-button.rz-primary.rz-variant-flat, .rz-primary.rz-variant-flat.rz-paginator-element {
+  box-shadow: none !important;
+}
+
 .rz-button.rz-light, .rz-light.rz-paginator-element {
   background-color: var(--rz-base-200);
   color: var(--rz-text-color);
+}
+
+.rz-button.rz-light.rz-variant-flat, .rz-light.rz-variant-flat.rz-paginator-element {
+  box-shadow: none !important;
 }
 
 .rz-button.rz-base, .rz-base.rz-paginator-element {
@@ -2043,9 +2061,17 @@ p-button[type] {
   background-color: var(--rz-base-darker);
 }
 
+.rz-button.rz-base.rz-variant-flat, .rz-base.rz-variant-flat.rz-paginator-element {
+  box-shadow: none !important;
+}
+
 .rz-button.rz-dark, .rz-dark.rz-paginator-element {
   background-color: var(--rz-base-900);
   color: var(--rz-text-contrast-color);
+}
+
+.rz-button.rz-dark.rz-variant-flat, .rz-dark.rz-variant-flat.rz-paginator-element {
+  box-shadow: none !important;
 }
 
 .rz-button.rz-secondary, .rz-secondary.rz-paginator-element {
@@ -2074,6 +2100,10 @@ p-button[type] {
   background-color: var(--rz-secondary-darker);
 }
 
+.rz-button.rz-secondary.rz-variant-flat, .rz-secondary.rz-variant-flat.rz-paginator-element {
+  box-shadow: none !important;
+}
+
 .rz-button.rz-info, .rz-info.rz-paginator-element {
   background-color: var(--rz-info);
   color: var(--rz-text-contrast-color);
@@ -2098,6 +2128,10 @@ p-button[type] {
 
 .rz-button.rz-info.rz-shade-darker, .rz-info.rz-shade-darker.rz-paginator-element {
   background-color: var(--rz-info-darker);
+}
+
+.rz-button.rz-info.rz-variant-flat, .rz-info.rz-variant-flat.rz-paginator-element {
+  box-shadow: none !important;
 }
 
 .rz-button.rz-warning, .rz-warning.rz-paginator-element {
@@ -2126,6 +2160,10 @@ p-button[type] {
   background-color: var(--rz-warning-darker);
 }
 
+.rz-button.rz-warning.rz-variant-flat, .rz-warning.rz-variant-flat.rz-paginator-element {
+  box-shadow: none !important;
+}
+
 .rz-button.rz-error, .rz-error.rz-paginator-element {
   background-color: var(--rz-danger);
   color: var(--rz-text-contrast-color);
@@ -2150,6 +2188,10 @@ p-button[type] {
 
 .rz-button.rz-error.rz-shade-darker, .rz-error.rz-shade-darker.rz-paginator-element {
   background-color: var(--rz-error-darker);
+}
+
+.rz-button.rz-error.rz-variant-flat, .rz-error.rz-variant-flat.rz-paginator-element {
+  box-shadow: none !important;
 }
 
 .rz-button.rz-danger, .rz-danger.rz-paginator-element {
@@ -2178,6 +2220,10 @@ p-button[type] {
   background-color: var(--rz-danger-darker);
 }
 
+.rz-button.rz-danger.rz-variant-flat, .rz-danger.rz-variant-flat.rz-paginator-element {
+  box-shadow: none !important;
+}
+
 .rz-button.rz-success, .rz-success.rz-paginator-element {
   background-color: var(--rz-success);
   color: var(--rz-text-contrast-color);
@@ -2204,43 +2250,42 @@ p-button[type] {
   background-color: var(--rz-success-darker);
 }
 
+.rz-button.rz-success.rz-variant-flat, .rz-success.rz-variant-flat.rz-paginator-element {
+  box-shadow: none !important;
+}
+
 .rz-button.rz-variant-outlined.rz-primary, .rz-variant-outlined.rz-primary.rz-paginator-element {
-  outline-style: solid;
-  outline-width: var(--rz-border-width);
-  outline-offset: calc(var(--rz-border-width) * -1);
   background-color: transparent;
-  box-shadow: none;
 }
 
 .rz-button.rz-variant-outlined.rz-primary.rz-shade-lighter, .rz-variant-outlined.rz-primary.rz-shade-lighter.rz-paginator-element {
-  outline-color: var(--rz-primary-lighter);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-primary-lighter);
   color: var(--rz-primary-light);
 }
 
 .rz-button.rz-variant-outlined.rz-primary.rz-shade-light, .rz-variant-outlined.rz-primary.rz-shade-light.rz-paginator-element {
-  outline-color: var(--rz-primary-light);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-primary-light);
   color: var(--rz-primary-light);
 }
 
 .rz-button.rz-variant-outlined.rz-primary.rz-shade-default, .rz-variant-outlined.rz-primary.rz-shade-default.rz-paginator-element {
-  outline-color: var(--rz-primary);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-primary);
   color: var(--rz-primary);
 }
 
 .rz-button.rz-variant-outlined.rz-primary.rz-shade-dark, .rz-variant-outlined.rz-primary.rz-shade-dark.rz-paginator-element {
-  outline-color: var(--rz-primary-dark);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-primary-dark);
   color: var(--rz-primary-dark);
 }
 
 .rz-button.rz-variant-outlined.rz-primary.rz-shade-darker, .rz-variant-outlined.rz-primary.rz-shade-darker.rz-paginator-element {
-  outline-color: var(--rz-primary-darker);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-primary-darker);
   color: var(--rz-primary-darker);
 }
 
 .rz-button.rz-variant-outlined.rz-primary:not(.rz-state-disabled):hover:not(:active), .rz-variant-outlined.rz-primary.rz-paginator-element:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-primary:not(.rz-state-disabled):active, .rz-variant-outlined.rz-primary.rz-paginator-element:not(.rz-state-disabled):active {
   background-color: var(--rz-primary-lighter);
   background-image: none;
-  box-shadow: none;
 }
 
 .rz-button.rz-variant-outlined.rz-primary.rz-shade-lighter:not(.rz-state-disabled):hover:not(:active), .rz-variant-outlined.rz-primary.rz-paginator-element.rz-shade-lighter:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-primary.rz-shade-lighter:not(.rz-state-disabled):active, .rz-variant-outlined.rz-primary.rz-paginator-element.rz-shade-lighter:not(.rz-state-disabled):active {
@@ -2248,19 +2293,17 @@ p-button[type] {
 }
 
 .rz-button.rz-variant-outlined.rz-light, .rz-variant-outlined.rz-light.rz-paginator-element {
-  outline-color: var(--rz-base-200);
-  color: var(--rz-base-200);
-  outline-style: solid;
-  outline-width: var(--rz-border-width);
-  outline-offset: calc(var(--rz-border-width) * -1);
   background-color: transparent;
-  box-shadow: none;
+}
+
+.rz-button.rz-variant-outlined.rz-light.rz-shade-default, .rz-variant-outlined.rz-light.rz-shade-default.rz-paginator-element {
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-base-200);
+  color: var(--rz-base-200);
 }
 
 .rz-button.rz-variant-outlined.rz-light:not(.rz-state-disabled):hover:not(:active), .rz-variant-outlined.rz-light.rz-paginator-element:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-light:not(.rz-state-disabled):active, .rz-variant-outlined.rz-light.rz-paginator-element:not(.rz-state-disabled):active {
   background-color: rgba(255, 255, 255, 0.12);
   background-image: none;
-  box-shadow: none;
 }
 
 .rz-button.rz-variant-outlined.rz-light.rz-shade-lighter:not(.rz-state-disabled):hover:not(:active), .rz-variant-outlined.rz-light.rz-paginator-element.rz-shade-lighter:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-light.rz-shade-lighter:not(.rz-state-disabled):active, .rz-variant-outlined.rz-light.rz-paginator-element.rz-shade-lighter:not(.rz-state-disabled):active {
@@ -2268,42 +2311,37 @@ p-button[type] {
 }
 
 .rz-button.rz-variant-outlined.rz-base, .rz-variant-outlined.rz-base.rz-paginator-element {
-  outline-style: solid;
-  outline-width: var(--rz-border-width);
-  outline-offset: calc(var(--rz-border-width) * -1);
   background-color: transparent;
-  box-shadow: none;
 }
 
 .rz-button.rz-variant-outlined.rz-base.rz-shade-lighter, .rz-variant-outlined.rz-base.rz-shade-lighter.rz-paginator-element {
-  outline-color: var(--rz-base-lighter);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-base-lighter);
   color: var(--rz-base-light);
 }
 
 .rz-button.rz-variant-outlined.rz-base.rz-shade-light, .rz-variant-outlined.rz-base.rz-shade-light.rz-paginator-element {
-  outline-color: var(--rz-base-light);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-base-light);
   color: var(--rz-base-light);
 }
 
 .rz-button.rz-variant-outlined.rz-base.rz-shade-default, .rz-variant-outlined.rz-base.rz-shade-default.rz-paginator-element {
-  outline-color: var(--rz-base);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-base);
   color: var(--rz-base);
 }
 
 .rz-button.rz-variant-outlined.rz-base.rz-shade-dark, .rz-variant-outlined.rz-base.rz-shade-dark.rz-paginator-element {
-  outline-color: var(--rz-base-dark);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-base-dark);
   color: var(--rz-base-dark);
 }
 
 .rz-button.rz-variant-outlined.rz-base.rz-shade-darker, .rz-variant-outlined.rz-base.rz-shade-darker.rz-paginator-element {
-  outline-color: var(--rz-base-darker);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-base-darker);
   color: var(--rz-base-darker);
 }
 
 .rz-button.rz-variant-outlined.rz-base:not(.rz-state-disabled):hover:not(:active), .rz-variant-outlined.rz-base.rz-paginator-element:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-base:not(.rz-state-disabled):active, .rz-variant-outlined.rz-base.rz-paginator-element:not(.rz-state-disabled):active {
   background-color: var(--rz-base-lighter);
   background-image: none;
-  box-shadow: none;
 }
 
 .rz-button.rz-variant-outlined.rz-base.rz-shade-lighter:not(.rz-state-disabled):hover:not(:active), .rz-variant-outlined.rz-base.rz-paginator-element.rz-shade-lighter:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-base.rz-shade-lighter:not(.rz-state-disabled):active, .rz-variant-outlined.rz-base.rz-paginator-element.rz-shade-lighter:not(.rz-state-disabled):active {
@@ -2311,19 +2349,17 @@ p-button[type] {
 }
 
 .rz-button.rz-variant-outlined.rz-dark, .rz-variant-outlined.rz-dark.rz-paginator-element {
-  outline-color: var(--rz-base-900);
-  color: var(--rz-base-900);
-  outline-style: solid;
-  outline-width: var(--rz-border-width);
-  outline-offset: calc(var(--rz-border-width) * -1);
   background-color: transparent;
-  box-shadow: none;
+}
+
+.rz-button.rz-variant-outlined.rz-dark.rz-shade-default, .rz-variant-outlined.rz-dark.rz-shade-default.rz-paginator-element {
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-base-900);
+  color: var(--rz-base-900);
 }
 
 .rz-button.rz-variant-outlined.rz-dark:not(.rz-state-disabled):hover:not(:active), .rz-variant-outlined.rz-dark.rz-paginator-element:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-dark:not(.rz-state-disabled):active, .rz-variant-outlined.rz-dark.rz-paginator-element:not(.rz-state-disabled):active {
   background-color: rgba(0, 0, 0, 0.12);
   background-image: none;
-  box-shadow: none;
 }
 
 .rz-button.rz-variant-outlined.rz-dark.rz-shade-lighter:not(.rz-state-disabled):hover:not(:active), .rz-variant-outlined.rz-dark.rz-paginator-element.rz-shade-lighter:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-dark.rz-shade-lighter:not(.rz-state-disabled):active, .rz-variant-outlined.rz-dark.rz-paginator-element.rz-shade-lighter:not(.rz-state-disabled):active {
@@ -2331,42 +2367,37 @@ p-button[type] {
 }
 
 .rz-button.rz-variant-outlined.rz-secondary, .rz-variant-outlined.rz-secondary.rz-paginator-element {
-  outline-style: solid;
-  outline-width: var(--rz-border-width);
-  outline-offset: calc(var(--rz-border-width) * -1);
   background-color: transparent;
-  box-shadow: none;
 }
 
 .rz-button.rz-variant-outlined.rz-secondary.rz-shade-lighter, .rz-variant-outlined.rz-secondary.rz-shade-lighter.rz-paginator-element {
-  outline-color: var(--rz-secondary-lighter);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-secondary-lighter);
   color: var(--rz-secondary-light);
 }
 
 .rz-button.rz-variant-outlined.rz-secondary.rz-shade-light, .rz-variant-outlined.rz-secondary.rz-shade-light.rz-paginator-element {
-  outline-color: var(--rz-secondary-light);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-secondary-light);
   color: var(--rz-secondary-light);
 }
 
 .rz-button.rz-variant-outlined.rz-secondary.rz-shade-default, .rz-variant-outlined.rz-secondary.rz-shade-default.rz-paginator-element {
-  outline-color: var(--rz-secondary);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-secondary);
   color: var(--rz-secondary);
 }
 
 .rz-button.rz-variant-outlined.rz-secondary.rz-shade-dark, .rz-variant-outlined.rz-secondary.rz-shade-dark.rz-paginator-element {
-  outline-color: var(--rz-secondary-dark);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-secondary-dark);
   color: var(--rz-secondary-dark);
 }
 
 .rz-button.rz-variant-outlined.rz-secondary.rz-shade-darker, .rz-variant-outlined.rz-secondary.rz-shade-darker.rz-paginator-element {
-  outline-color: var(--rz-secondary-darker);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-secondary-darker);
   color: var(--rz-secondary-darker);
 }
 
 .rz-button.rz-variant-outlined.rz-secondary:not(.rz-state-disabled):hover:not(:active), .rz-variant-outlined.rz-secondary.rz-paginator-element:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-secondary:not(.rz-state-disabled):active, .rz-variant-outlined.rz-secondary.rz-paginator-element:not(.rz-state-disabled):active {
   background-color: var(--rz-secondary-lighter);
   background-image: none;
-  box-shadow: none;
 }
 
 .rz-button.rz-variant-outlined.rz-secondary.rz-shade-lighter:not(.rz-state-disabled):hover:not(:active), .rz-variant-outlined.rz-secondary.rz-paginator-element.rz-shade-lighter:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-secondary.rz-shade-lighter:not(.rz-state-disabled):active, .rz-variant-outlined.rz-secondary.rz-paginator-element.rz-shade-lighter:not(.rz-state-disabled):active {
@@ -2374,42 +2405,37 @@ p-button[type] {
 }
 
 .rz-button.rz-variant-outlined.rz-info, .rz-variant-outlined.rz-info.rz-paginator-element {
-  outline-style: solid;
-  outline-width: var(--rz-border-width);
-  outline-offset: calc(var(--rz-border-width) * -1);
   background-color: transparent;
-  box-shadow: none;
 }
 
 .rz-button.rz-variant-outlined.rz-info.rz-shade-lighter, .rz-variant-outlined.rz-info.rz-shade-lighter.rz-paginator-element {
-  outline-color: var(--rz-info-lighter);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-info-lighter);
   color: var(--rz-info-light);
 }
 
 .rz-button.rz-variant-outlined.rz-info.rz-shade-light, .rz-variant-outlined.rz-info.rz-shade-light.rz-paginator-element {
-  outline-color: var(--rz-info-light);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-info-light);
   color: var(--rz-info-light);
 }
 
 .rz-button.rz-variant-outlined.rz-info.rz-shade-default, .rz-variant-outlined.rz-info.rz-shade-default.rz-paginator-element {
-  outline-color: var(--rz-info);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-info);
   color: var(--rz-info);
 }
 
 .rz-button.rz-variant-outlined.rz-info.rz-shade-dark, .rz-variant-outlined.rz-info.rz-shade-dark.rz-paginator-element {
-  outline-color: var(--rz-info-dark);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-info-dark);
   color: var(--rz-info-dark);
 }
 
 .rz-button.rz-variant-outlined.rz-info.rz-shade-darker, .rz-variant-outlined.rz-info.rz-shade-darker.rz-paginator-element {
-  outline-color: var(--rz-info-darker);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-info-darker);
   color: var(--rz-info-darker);
 }
 
 .rz-button.rz-variant-outlined.rz-info:not(.rz-state-disabled):hover:not(:active), .rz-variant-outlined.rz-info.rz-paginator-element:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-info:not(.rz-state-disabled):active, .rz-variant-outlined.rz-info.rz-paginator-element:not(.rz-state-disabled):active {
   background-color: var(--rz-info-lighter);
   background-image: none;
-  box-shadow: none;
 }
 
 .rz-button.rz-variant-outlined.rz-info.rz-shade-lighter:not(.rz-state-disabled):hover:not(:active), .rz-variant-outlined.rz-info.rz-paginator-element.rz-shade-lighter:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-info.rz-shade-lighter:not(.rz-state-disabled):active, .rz-variant-outlined.rz-info.rz-paginator-element.rz-shade-lighter:not(.rz-state-disabled):active {
@@ -2417,42 +2443,37 @@ p-button[type] {
 }
 
 .rz-button.rz-variant-outlined.rz-warning, .rz-variant-outlined.rz-warning.rz-paginator-element {
-  outline-style: solid;
-  outline-width: var(--rz-border-width);
-  outline-offset: calc(var(--rz-border-width) * -1);
   background-color: transparent;
-  box-shadow: none;
 }
 
 .rz-button.rz-variant-outlined.rz-warning.rz-shade-lighter, .rz-variant-outlined.rz-warning.rz-shade-lighter.rz-paginator-element {
-  outline-color: var(--rz-warning-lighter);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-warning-lighter);
   color: var(--rz-warning-light);
 }
 
 .rz-button.rz-variant-outlined.rz-warning.rz-shade-light, .rz-variant-outlined.rz-warning.rz-shade-light.rz-paginator-element {
-  outline-color: var(--rz-warning-light);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-warning-light);
   color: var(--rz-warning-light);
 }
 
 .rz-button.rz-variant-outlined.rz-warning.rz-shade-default, .rz-variant-outlined.rz-warning.rz-shade-default.rz-paginator-element {
-  outline-color: var(--rz-warning);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-warning);
   color: var(--rz-warning);
 }
 
 .rz-button.rz-variant-outlined.rz-warning.rz-shade-dark, .rz-variant-outlined.rz-warning.rz-shade-dark.rz-paginator-element {
-  outline-color: var(--rz-warning-dark);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-warning-dark);
   color: var(--rz-warning-dark);
 }
 
 .rz-button.rz-variant-outlined.rz-warning.rz-shade-darker, .rz-variant-outlined.rz-warning.rz-shade-darker.rz-paginator-element {
-  outline-color: var(--rz-warning-darker);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-warning-darker);
   color: var(--rz-warning-darker);
 }
 
 .rz-button.rz-variant-outlined.rz-warning:not(.rz-state-disabled):hover:not(:active), .rz-variant-outlined.rz-warning.rz-paginator-element:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-warning:not(.rz-state-disabled):active, .rz-variant-outlined.rz-warning.rz-paginator-element:not(.rz-state-disabled):active {
   background-color: var(--rz-warning-lighter);
   background-image: none;
-  box-shadow: none;
 }
 
 .rz-button.rz-variant-outlined.rz-warning.rz-shade-lighter:not(.rz-state-disabled):hover:not(:active), .rz-variant-outlined.rz-warning.rz-paginator-element.rz-shade-lighter:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-warning.rz-shade-lighter:not(.rz-state-disabled):active, .rz-variant-outlined.rz-warning.rz-paginator-element.rz-shade-lighter:not(.rz-state-disabled):active {
@@ -2460,42 +2481,37 @@ p-button[type] {
 }
 
 .rz-button.rz-variant-outlined.rz-error, .rz-variant-outlined.rz-error.rz-paginator-element {
-  outline-style: solid;
-  outline-width: var(--rz-border-width);
-  outline-offset: calc(var(--rz-border-width) * -1);
   background-color: transparent;
-  box-shadow: none;
 }
 
 .rz-button.rz-variant-outlined.rz-error.rz-shade-lighter, .rz-variant-outlined.rz-error.rz-shade-lighter.rz-paginator-element {
-  outline-color: var(--rz-error-lighter);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-error-lighter);
   color: var(--rz-error-light);
 }
 
 .rz-button.rz-variant-outlined.rz-error.rz-shade-light, .rz-variant-outlined.rz-error.rz-shade-light.rz-paginator-element {
-  outline-color: var(--rz-error-light);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-error-light);
   color: var(--rz-error-light);
 }
 
 .rz-button.rz-variant-outlined.rz-error.rz-shade-default, .rz-variant-outlined.rz-error.rz-shade-default.rz-paginator-element {
-  outline-color: var(--rz-error);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-error);
   color: var(--rz-error);
 }
 
 .rz-button.rz-variant-outlined.rz-error.rz-shade-dark, .rz-variant-outlined.rz-error.rz-shade-dark.rz-paginator-element {
-  outline-color: var(--rz-error-dark);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-error-dark);
   color: var(--rz-error-dark);
 }
 
 .rz-button.rz-variant-outlined.rz-error.rz-shade-darker, .rz-variant-outlined.rz-error.rz-shade-darker.rz-paginator-element {
-  outline-color: var(--rz-error-darker);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-error-darker);
   color: var(--rz-error-darker);
 }
 
 .rz-button.rz-variant-outlined.rz-error:not(.rz-state-disabled):hover:not(:active), .rz-variant-outlined.rz-error.rz-paginator-element:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-error:not(.rz-state-disabled):active, .rz-variant-outlined.rz-error.rz-paginator-element:not(.rz-state-disabled):active {
   background-color: var(--rz-error-lighter);
   background-image: none;
-  box-shadow: none;
 }
 
 .rz-button.rz-variant-outlined.rz-error.rz-shade-lighter:not(.rz-state-disabled):hover:not(:active), .rz-variant-outlined.rz-error.rz-paginator-element.rz-shade-lighter:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-error.rz-shade-lighter:not(.rz-state-disabled):active, .rz-variant-outlined.rz-error.rz-paginator-element.rz-shade-lighter:not(.rz-state-disabled):active {
@@ -2503,42 +2519,37 @@ p-button[type] {
 }
 
 .rz-button.rz-variant-outlined.rz-danger, .rz-variant-outlined.rz-danger.rz-paginator-element {
-  outline-style: solid;
-  outline-width: var(--rz-border-width);
-  outline-offset: calc(var(--rz-border-width) * -1);
   background-color: transparent;
-  box-shadow: none;
 }
 
 .rz-button.rz-variant-outlined.rz-danger.rz-shade-lighter, .rz-variant-outlined.rz-danger.rz-shade-lighter.rz-paginator-element {
-  outline-color: var(--rz-danger-lighter);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-danger-lighter);
   color: var(--rz-danger-light);
 }
 
 .rz-button.rz-variant-outlined.rz-danger.rz-shade-light, .rz-variant-outlined.rz-danger.rz-shade-light.rz-paginator-element {
-  outline-color: var(--rz-danger-light);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-danger-light);
   color: var(--rz-danger-light);
 }
 
 .rz-button.rz-variant-outlined.rz-danger.rz-shade-default, .rz-variant-outlined.rz-danger.rz-shade-default.rz-paginator-element {
-  outline-color: var(--rz-danger);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-danger);
   color: var(--rz-danger);
 }
 
 .rz-button.rz-variant-outlined.rz-danger.rz-shade-dark, .rz-variant-outlined.rz-danger.rz-shade-dark.rz-paginator-element {
-  outline-color: var(--rz-danger-dark);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-danger-dark);
   color: var(--rz-danger-dark);
 }
 
 .rz-button.rz-variant-outlined.rz-danger.rz-shade-darker, .rz-variant-outlined.rz-danger.rz-shade-darker.rz-paginator-element {
-  outline-color: var(--rz-danger-darker);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-danger-darker);
   color: var(--rz-danger-darker);
 }
 
 .rz-button.rz-variant-outlined.rz-danger:not(.rz-state-disabled):hover:not(:active), .rz-variant-outlined.rz-danger.rz-paginator-element:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-danger:not(.rz-state-disabled):active, .rz-variant-outlined.rz-danger.rz-paginator-element:not(.rz-state-disabled):active {
   background-color: var(--rz-danger-lighter);
   background-image: none;
-  box-shadow: none;
 }
 
 .rz-button.rz-variant-outlined.rz-danger.rz-shade-lighter:not(.rz-state-disabled):hover:not(:active), .rz-variant-outlined.rz-danger.rz-paginator-element.rz-shade-lighter:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-danger.rz-shade-lighter:not(.rz-state-disabled):active, .rz-variant-outlined.rz-danger.rz-paginator-element.rz-shade-lighter:not(.rz-state-disabled):active {
@@ -2546,42 +2557,37 @@ p-button[type] {
 }
 
 .rz-button.rz-variant-outlined.rz-success, .rz-variant-outlined.rz-success.rz-paginator-element {
-  outline-style: solid;
-  outline-width: var(--rz-border-width);
-  outline-offset: calc(var(--rz-border-width) * -1);
   background-color: transparent;
-  box-shadow: none;
 }
 
 .rz-button.rz-variant-outlined.rz-success.rz-shade-lighter, .rz-variant-outlined.rz-success.rz-shade-lighter.rz-paginator-element {
-  outline-color: var(--rz-success-lighter);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-success-lighter);
   color: var(--rz-success-light);
 }
 
 .rz-button.rz-variant-outlined.rz-success.rz-shade-light, .rz-variant-outlined.rz-success.rz-shade-light.rz-paginator-element {
-  outline-color: var(--rz-success-light);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-success-light);
   color: var(--rz-success-light);
 }
 
 .rz-button.rz-variant-outlined.rz-success.rz-shade-default, .rz-variant-outlined.rz-success.rz-shade-default.rz-paginator-element {
-  outline-color: var(--rz-success);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-success);
   color: var(--rz-success);
 }
 
 .rz-button.rz-variant-outlined.rz-success.rz-shade-dark, .rz-variant-outlined.rz-success.rz-shade-dark.rz-paginator-element {
-  outline-color: var(--rz-success-dark);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-success-dark);
   color: var(--rz-success-dark);
 }
 
 .rz-button.rz-variant-outlined.rz-success.rz-shade-darker, .rz-variant-outlined.rz-success.rz-shade-darker.rz-paginator-element {
-  outline-color: var(--rz-success-darker);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-success-darker);
   color: var(--rz-success-darker);
 }
 
 .rz-button.rz-variant-outlined.rz-success:not(.rz-state-disabled):hover:not(:active), .rz-variant-outlined.rz-success.rz-paginator-element:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-success:not(.rz-state-disabled):active, .rz-variant-outlined.rz-success.rz-paginator-element:not(.rz-state-disabled):active {
   background-color: var(--rz-success-lighter);
   background-image: none;
-  box-shadow: none;
 }
 
 .rz-button.rz-variant-outlined.rz-success.rz-shade-lighter:not(.rz-state-disabled):hover:not(:active), .rz-variant-outlined.rz-success.rz-paginator-element.rz-shade-lighter:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-success.rz-shade-lighter:not(.rz-state-disabled):active, .rz-variant-outlined.rz-success.rz-paginator-element.rz-shade-lighter:not(.rz-state-disabled):active {
@@ -2900,7 +2906,7 @@ p-button[type] {
   color: var(--rz-success);
 }
 
-.rz-button-lg {
+.rz-button-lg, .rz-selectbutton .rz-button.rz-button-lg, .rz-selectbutton .rz-button-lg.rz-paginator-element, .rz-splitbutton .rz-button-lg {
   font-size: 1rem;
   font-weight: 600;
   padding: 0.875rem 1.5rem;
@@ -2911,15 +2917,16 @@ p-button[type] {
   border-radius: calc(2 * var(--rz-border-radius));
 }
 
-.rz-button-lg .rz-button-box {
+.rz-button-lg .rz-button-box, .rz-selectbutton .rz-button.rz-button-lg .rz-button-box, .rz-selectbutton .rz-button-lg.rz-paginator-element .rz-button-box {
   line-height: 1.5rem;
+  gap: 0.25rem;
 }
 
-.rz-button-lg.rz-button-text-icon-left {
+.rz-button-lg.rz-button-text-icon-left, .rz-selectbutton .rz-button-text-icon-left.rz-button.rz-button-lg, .rz-selectbutton .rz-button-text-icon-left.rz-button-lg.rz-paginator-element {
   padding: 0 1.375rem;
 }
 
-.rz-button-lg.rz-button-icon-only, .rz-button-lg.rz-paginator-element {
+.rz-button-lg.rz-button-icon-only, .rz-button-lg.rz-paginator-element, .rz-selectbutton .rz-button-icon-only.rz-button.rz-button-lg, .rz-selectbutton .rz-button-lg.rz-paginator-element {
   padding: 0.875rem;
 }
 
@@ -2931,15 +2938,22 @@ p-button[type] {
 .rz-button-lg .rz-fileupload-row .rz-button .rz-icon-trash,
 .rz-button-lg .rz-fileupload-row .rz-paginator-element .rz-icon-trash,
 .rz-fileupload-row .rz-button .rz-button-lg .rz-icon-trash,
-.rz-fileupload-row .rz-paginator-element .rz-button-lg .rz-icon-trash, .rz-button-lg .rz-menuitem .rz-menuitem-icon, .rz-menuitem .rz-button-lg .rz-menuitem-icon {
+.rz-fileupload-row .rz-paginator-element .rz-button-lg .rz-icon-trash, .rz-selectbutton .rz-button.rz-button-lg .rzi, .rz-selectbutton .rz-button-lg.rz-paginator-element .rzi, .rz-selectbutton .rz-button.rz-button-lg .rz-column-drag, .rz-selectbutton .rz-button-lg.rz-paginator-element .rz-column-drag, .rz-selectbutton .rz-fileupload-row .rz-button.rz-button-lg .rzi-close, .rz-selectbutton .rz-fileupload-row .rz-button-lg.rz-paginator-element .rzi-close, .rz-fileupload-row .rz-selectbutton .rz-button.rz-button-lg .rzi-close, .rz-fileupload-row .rz-selectbutton .rz-button-lg.rz-paginator-element .rzi-close,
+.rz-selectbutton .rz-fileupload-row .rz-button.rz-button-lg .rzi-times,
+.rz-selectbutton .rz-fileupload-row .rz-button-lg.rz-paginator-element .rzi-times,
+.rz-fileupload-row .rz-selectbutton .rz-button.rz-button-lg .rzi-times,
+.rz-fileupload-row .rz-selectbutton .rz-button-lg.rz-paginator-element .rzi-times,
+.rz-selectbutton .rz-fileupload-row .rz-button.rz-button-lg .rz-icon-trash,
+.rz-selectbutton .rz-fileupload-row .rz-button-lg.rz-paginator-element .rz-icon-trash,
+.rz-fileupload-row .rz-selectbutton .rz-button.rz-button-lg .rz-icon-trash,
+.rz-fileupload-row .rz-selectbutton .rz-button-lg.rz-paginator-element .rz-icon-trash, .rz-button-lg .rz-menuitem .rz-menuitem-icon, .rz-menuitem .rz-button-lg .rz-menuitem-icon {
   font-size: 1.5rem;
   height: 1.5rem;
   line-height: 1.5rem;
   width: 1.5rem;
 }
 
-.rz-button-md, .rz-scheduler-nav-views .rz-button.rz-primary, .rz-scheduler-nav-views .rz-primary.rz-paginator-element, .rz-paginator-element, .rz-date-filter-buttons .rz-button, .rz-date-filter-buttons .rz-paginator-element, .rz-fileupload-choose, .rz-selectbutton .rz-button, .rz-selectbutton .rz-paginator-element, .rz-splitbutton-menubutton, .rz-splitbutton .rz-button-text-icon-left,
-.rz-splitbutton .rz-button-text-only {
+.rz-button-md, .rz-scheduler-nav-views .rz-button.rz-primary, .rz-scheduler-nav-views .rz-primary.rz-paginator-element, .rz-paginator-element, .rz-date-filter-buttons .rz-button, .rz-date-filter-buttons .rz-paginator-element, .rz-fileupload-choose, .rz-selectbutton .rz-button.rz-button-md, .rz-selectbutton .rz-button.rz-paginator-element, .rz-selectbutton .rz-button-md.rz-paginator-element, .rz-selectbutton .rz-paginator-element, .rz-selectbutton .rz-date-filter-buttons .rz-button, .rz-selectbutton .rz-date-filter-buttons .rz-paginator-element, .rz-date-filter-buttons .rz-selectbutton .rz-button, .rz-date-filter-buttons .rz-selectbutton .rz-paginator-element, .rz-selectbutton .rz-button.rz-fileupload-choose, .rz-selectbutton .rz-fileupload-choose.rz-paginator-element, .rz-splitbutton .rz-button-md, .rz-splitbutton .rz-paginator-element, .rz-splitbutton .rz-fileupload-choose {
   font-size: var(--rz-body-font-size);
   font-weight: 600;
   padding: 0.5rem 1rem;
@@ -2949,18 +2963,16 @@ p-button[type] {
   min-width: 2.25rem;
 }
 
-.rz-button-md .rz-button-box, .rz-scheduler-nav-views .rz-button.rz-primary .rz-button-box, .rz-scheduler-nav-views .rz-primary.rz-paginator-element .rz-button-box, .rz-paginator-element .rz-button-box, .rz-date-filter-buttons .rz-button .rz-button-box, .rz-fileupload-choose .rz-button-box, .rz-selectbutton .rz-button .rz-button-box, .rz-splitbutton-menubutton .rz-button-box, .rz-splitbutton .rz-button-text-icon-left .rz-button-box,
-.rz-splitbutton .rz-button-text-only .rz-button-box {
+.rz-button-md .rz-button-box, .rz-scheduler-nav-views .rz-button.rz-primary .rz-button-box, .rz-scheduler-nav-views .rz-primary.rz-paginator-element .rz-button-box, .rz-paginator-element .rz-button-box, .rz-date-filter-buttons .rz-button .rz-button-box, .rz-fileupload-choose .rz-button-box, .rz-selectbutton .rz-button.rz-button-md .rz-button-box, .rz-selectbutton .rz-paginator-element .rz-button-box, .rz-selectbutton .rz-button.rz-fileupload-choose .rz-button-box {
   line-height: 1.25rem;
+  gap: 0.25rem;
 }
 
-.rz-button-md.rz-button-text-icon-left, .rz-scheduler-nav-views .rz-button-text-icon-left.rz-button.rz-primary, .rz-scheduler-nav-views .rz-button-text-icon-left.rz-primary.rz-paginator-element, .rz-button-text-icon-left.rz-paginator-element, .rz-date-filter-buttons .rz-button-text-icon-left.rz-button, .rz-button-text-icon-left.rz-fileupload-choose, .rz-selectbutton .rz-button-text-icon-left.rz-button, .rz-button-text-icon-left.rz-splitbutton-menubutton, .rz-splitbutton .rz-button-text-icon-left {
+.rz-button-md.rz-button-text-icon-left, .rz-scheduler-nav-views .rz-button-text-icon-left.rz-button.rz-primary, .rz-scheduler-nav-views .rz-button-text-icon-left.rz-primary.rz-paginator-element, .rz-button-text-icon-left.rz-paginator-element, .rz-date-filter-buttons .rz-button-text-icon-left.rz-button, .rz-button-text-icon-left.rz-fileupload-choose, .rz-selectbutton .rz-button-text-icon-left.rz-button.rz-button-md, .rz-selectbutton .rz-scheduler-nav-views .rz-button.rz-primary, .rz-scheduler-nav-views .rz-selectbutton .rz-button.rz-primary, .rz-selectbutton .rz-button.rz-paginator-element, .rz-selectbutton .rz-button-text-icon-left.rz-paginator-element, .rz-selectbutton .rz-date-filter-buttons .rz-button, .rz-selectbutton .rz-date-filter-buttons .rz-paginator-element, .rz-date-filter-buttons .rz-selectbutton .rz-button, .rz-date-filter-buttons .rz-selectbutton .rz-paginator-element, .rz-selectbutton .rz-button.rz-fileupload-choose, .rz-selectbutton .rz-fileupload-choose.rz-paginator-element {
   padding: 0.5rem 1rem 0.5rem 0.5rem;
 }
 
-.rz-button-md.rz-button-icon-only, .rz-scheduler-nav-views .rz-button-icon-only.rz-button.rz-primary, .rz-scheduler-nav-views .rz-button-icon-only.rz-primary.rz-paginator-element, .rz-paginator-element, .rz-date-filter-buttons .rz-button-icon-only.rz-button, .rz-date-filter-buttons .rz-button.rz-paginator-element, .rz-button-icon-only.rz-fileupload-choose, .rz-selectbutton .rz-button-icon-only.rz-button, .rz-selectbutton .rz-button.rz-paginator-element, .rz-button-icon-only.rz-splitbutton-menubutton, .rz-splitbutton .rz-button-icon-only.rz-button-text-icon-left, .rz-splitbutton .rz-button-text-icon-left.rz-paginator-element,
-.rz-splitbutton .rz-button-icon-only.rz-button-text-only,
-.rz-splitbutton .rz-button-text-only.rz-paginator-element {
+.rz-button-md.rz-button-icon-only, .rz-scheduler-nav-views .rz-button-icon-only.rz-button.rz-primary, .rz-scheduler-nav-views .rz-button-icon-only.rz-primary.rz-paginator-element, .rz-paginator-element, .rz-date-filter-buttons .rz-button-icon-only.rz-button, .rz-date-filter-buttons .rz-button.rz-paginator-element, .rz-button-icon-only.rz-fileupload-choose, .rz-selectbutton .rz-button-icon-only.rz-button.rz-button-md, .rz-selectbutton .rz-scheduler-nav-views .rz-button.rz-primary, .rz-scheduler-nav-views .rz-selectbutton .rz-button.rz-primary, .rz-selectbutton .rz-button.rz-paginator-element, .rz-selectbutton .rz-button-icon-only.rz-paginator-element, .rz-selectbutton .rz-paginator-element, .rz-selectbutton .rz-date-filter-buttons .rz-button, .rz-selectbutton .rz-date-filter-buttons .rz-paginator-element, .rz-date-filter-buttons .rz-selectbutton .rz-button, .rz-date-filter-buttons .rz-selectbutton .rz-paginator-element, .rz-selectbutton .rz-button.rz-fileupload-choose, .rz-selectbutton .rz-fileupload-choose.rz-paginator-element {
   padding: 0.5rem;
 }
 
@@ -3036,64 +3048,86 @@ p-button[type] {
 .rz-fileupload-choose .rz-fileupload-row .rz-button .rz-icon-trash,
 .rz-fileupload-choose .rz-fileupload-row .rz-paginator-element .rz-icon-trash,
 .rz-fileupload-row .rz-button .rz-fileupload-choose .rz-icon-trash,
-.rz-fileupload-row .rz-paginator-element .rz-fileupload-choose .rz-icon-trash, .rz-selectbutton .rz-button .rzi, .rz-selectbutton .rz-paginator-element .rzi, .rz-selectbutton .rz-button .rz-column-drag, .rz-selectbutton .rz-paginator-element .rz-column-drag, .rz-selectbutton .rz-button .rz-datatable-loading-content .rzi-circle-o-notch, .rz-selectbutton .rz-paginator-element .rz-datatable-loading-content .rzi-circle-o-notch, .rz-datatable-loading-content .rz-selectbutton .rz-button .rzi-circle-o-notch, .rz-datatable-loading-content .rz-selectbutton .rz-paginator-element .rzi-circle-o-notch, .rz-selectbutton .rz-button .rz-datatable-header .rzi-plus, .rz-selectbutton .rz-paginator-element .rz-datatable-header .rzi-plus, .rz-datatable-header .rz-selectbutton .rz-button .rzi-plus, .rz-datatable-header .rz-selectbutton .rz-paginator-element .rzi-plus, .rz-selectbutton .rz-button .rz-sortable-column .rzi-grid-sort, .rz-selectbutton .rz-paginator-element .rz-sortable-column .rzi-grid-sort, .rz-sortable-column .rz-selectbutton .rz-button .rzi-grid-sort, .rz-sortable-column .rz-selectbutton .rz-paginator-element .rzi-grid-sort, .rz-selectbutton .rz-button .rz-datatable .rzi-chevron-circle-down, .rz-selectbutton .rz-paginator-element .rz-datatable .rzi-chevron-circle-down, .rz-datatable .rz-selectbutton .rz-button .rzi-chevron-circle-down, .rz-datatable .rz-selectbutton .rz-paginator-element .rzi-chevron-circle-down, .rz-selectbutton .rz-button .rz-datatable .rzi-chevron-circle-right, .rz-selectbutton .rz-paginator-element .rz-datatable .rzi-chevron-circle-right, .rz-datatable .rz-selectbutton .rz-button .rzi-chevron-circle-right, .rz-datatable .rz-selectbutton .rz-paginator-element .rzi-chevron-circle-right, .rz-selectbutton .rz-fileupload-row .rz-button .rzi-close, .rz-selectbutton .rz-fileupload-row .rz-paginator-element .rzi-close, .rz-fileupload-row .rz-selectbutton .rz-button .rzi-close, .rz-fileupload-row .rz-selectbutton .rz-paginator-element .rzi-close,
-.rz-selectbutton .rz-fileupload-row .rz-button .rzi-times,
+.rz-fileupload-row .rz-paginator-element .rz-fileupload-choose .rz-icon-trash, .rz-selectbutton .rz-button.rz-button-md .rzi, .rz-selectbutton .rz-scheduler-nav-views .rz-button.rz-primary .rzi, .rz-scheduler-nav-views .rz-selectbutton .rz-button.rz-primary .rzi, .rz-selectbutton .rz-scheduler-nav-views .rz-button.rz-primary.rz-paginator-element .rzi, .rz-scheduler-nav-views .rz-selectbutton .rz-button.rz-primary.rz-paginator-element .rzi, .rz-selectbutton .rz-button.rz-paginator-element .rzi, .rz-selectbutton .rz-button-md.rz-paginator-element .rzi, .rz-selectbutton .rz-scheduler-nav-views .rz-paginator-element.rz-button.rz-primary .rzi, .rz-scheduler-nav-views .rz-selectbutton .rz-paginator-element.rz-button.rz-primary .rzi, .rz-selectbutton .rz-scheduler-nav-views .rz-paginator-element.rz-primary .rzi, .rz-scheduler-nav-views .rz-selectbutton .rz-paginator-element.rz-primary .rzi, .rz-selectbutton .rz-paginator-element .rzi, .rz-selectbutton .rz-button.rz-button-md .rz-column-drag, .rz-selectbutton .rz-scheduler-nav-views .rz-button.rz-primary .rz-column-drag, .rz-scheduler-nav-views .rz-selectbutton .rz-button.rz-primary .rz-column-drag, .rz-selectbutton .rz-scheduler-nav-views .rz-button.rz-primary.rz-paginator-element .rz-column-drag, .rz-scheduler-nav-views .rz-selectbutton .rz-button.rz-primary.rz-paginator-element .rz-column-drag, .rz-selectbutton .rz-button.rz-paginator-element .rz-column-drag, .rz-selectbutton .rz-button-md.rz-paginator-element .rz-column-drag, .rz-selectbutton .rz-scheduler-nav-views .rz-paginator-element.rz-button.rz-primary .rz-column-drag, .rz-scheduler-nav-views .rz-selectbutton .rz-paginator-element.rz-button.rz-primary .rz-column-drag, .rz-selectbutton .rz-scheduler-nav-views .rz-paginator-element.rz-primary .rz-column-drag, .rz-scheduler-nav-views .rz-selectbutton .rz-paginator-element.rz-primary .rz-column-drag, .rz-selectbutton .rz-paginator-element .rz-column-drag, .rz-selectbutton .rz-fileupload-row .rz-button.rz-button-md .rzi-close, .rz-selectbutton .rz-fileupload-row .rz-scheduler-nav-views .rz-button.rz-primary .rzi-close, .rz-scheduler-nav-views .rz-selectbutton .rz-fileupload-row .rz-button.rz-primary .rzi-close, .rz-selectbutton .rz-fileupload-row .rz-scheduler-nav-views .rz-button.rz-primary.rz-paginator-element .rzi-close, .rz-scheduler-nav-views .rz-selectbutton .rz-fileupload-row .rz-button.rz-primary.rz-paginator-element .rzi-close, .rz-selectbutton .rz-fileupload-row .rz-button.rz-paginator-element .rzi-close, .rz-selectbutton .rz-fileupload-row .rz-button-md.rz-paginator-element .rzi-close, .rz-selectbutton .rz-fileupload-row .rz-scheduler-nav-views .rz-paginator-element.rz-button.rz-primary .rzi-close, .rz-scheduler-nav-views .rz-selectbutton .rz-fileupload-row .rz-paginator-element.rz-button.rz-primary .rzi-close, .rz-selectbutton .rz-fileupload-row .rz-scheduler-nav-views .rz-paginator-element.rz-primary .rzi-close, .rz-scheduler-nav-views .rz-selectbutton .rz-fileupload-row .rz-paginator-element.rz-primary .rzi-close, .rz-selectbutton .rz-fileupload-row .rz-paginator-element .rzi-close, .rz-selectbutton .rz-fileupload-row .rz-date-filter-buttons .rz-button .rzi-close, .rz-selectbutton .rz-fileupload-row .rz-date-filter-buttons .rz-paginator-element .rzi-close, .rz-date-filter-buttons .rz-selectbutton .rz-fileupload-row .rz-button .rzi-close, .rz-date-filter-buttons .rz-selectbutton .rz-fileupload-row .rz-paginator-element .rzi-close, .rz-fileupload-row .rz-selectbutton .rz-button.rz-button-md .rzi-close, .rz-fileupload-row .rz-selectbutton .rz-scheduler-nav-views .rz-button.rz-primary .rzi-close, .rz-scheduler-nav-views .rz-fileupload-row .rz-selectbutton .rz-button.rz-primary .rzi-close, .rz-fileupload-row .rz-selectbutton .rz-scheduler-nav-views .rz-button.rz-primary.rz-paginator-element .rzi-close, .rz-scheduler-nav-views .rz-fileupload-row .rz-selectbutton .rz-button.rz-primary.rz-paginator-element .rzi-close, .rz-fileupload-row .rz-selectbutton .rz-button.rz-paginator-element .rzi-close, .rz-fileupload-row .rz-selectbutton .rz-button-md.rz-paginator-element .rzi-close, .rz-fileupload-row .rz-selectbutton .rz-scheduler-nav-views .rz-paginator-element.rz-button.rz-primary .rzi-close, .rz-scheduler-nav-views .rz-fileupload-row .rz-selectbutton .rz-paginator-element.rz-button.rz-primary .rzi-close, .rz-fileupload-row .rz-selectbutton .rz-scheduler-nav-views .rz-paginator-element.rz-primary .rzi-close, .rz-scheduler-nav-views .rz-fileupload-row .rz-selectbutton .rz-paginator-element.rz-primary .rzi-close, .rz-fileupload-row .rz-selectbutton .rz-paginator-element .rzi-close, .rz-fileupload-row .rz-selectbutton .rz-date-filter-buttons .rz-button .rzi-close, .rz-fileupload-row .rz-selectbutton .rz-date-filter-buttons .rz-paginator-element .rzi-close, .rz-date-filter-buttons .rz-fileupload-row .rz-selectbutton .rz-button .rzi-close, .rz-date-filter-buttons .rz-fileupload-row .rz-selectbutton .rz-paginator-element .rzi-close,
+.rz-selectbutton .rz-fileupload-row .rz-button.rz-button-md .rzi-times,
+.rz-selectbutton .rz-fileupload-row .rz-scheduler-nav-views .rz-button.rz-primary .rzi-times,
+.rz-scheduler-nav-views .rz-selectbutton .rz-fileupload-row .rz-button.rz-primary .rzi-times,
+.rz-selectbutton .rz-fileupload-row .rz-scheduler-nav-views .rz-button.rz-primary.rz-paginator-element .rzi-times,
+.rz-scheduler-nav-views .rz-selectbutton .rz-fileupload-row .rz-button.rz-primary.rz-paginator-element .rzi-times,
+.rz-selectbutton .rz-fileupload-row .rz-button.rz-paginator-element .rzi-times,
+.rz-selectbutton .rz-fileupload-row .rz-button-md.rz-paginator-element .rzi-times,
+.rz-selectbutton .rz-fileupload-row .rz-scheduler-nav-views .rz-paginator-element.rz-button.rz-primary .rzi-times,
+.rz-scheduler-nav-views .rz-selectbutton .rz-fileupload-row .rz-paginator-element.rz-button.rz-primary .rzi-times,
+.rz-selectbutton .rz-fileupload-row .rz-scheduler-nav-views .rz-paginator-element.rz-primary .rzi-times,
+.rz-scheduler-nav-views .rz-selectbutton .rz-fileupload-row .rz-paginator-element.rz-primary .rzi-times,
 .rz-selectbutton .rz-fileupload-row .rz-paginator-element .rzi-times,
-.rz-fileupload-row .rz-selectbutton .rz-button .rzi-times,
+.rz-selectbutton .rz-fileupload-row .rz-date-filter-buttons .rz-button .rzi-times,
+.rz-selectbutton .rz-fileupload-row .rz-date-filter-buttons .rz-paginator-element .rzi-times,
+.rz-date-filter-buttons .rz-selectbutton .rz-fileupload-row .rz-button .rzi-times,
+.rz-date-filter-buttons .rz-selectbutton .rz-fileupload-row .rz-paginator-element .rzi-times,
+.rz-fileupload-row .rz-selectbutton .rz-button.rz-button-md .rzi-times,
+.rz-fileupload-row .rz-selectbutton .rz-scheduler-nav-views .rz-button.rz-primary .rzi-times,
+.rz-scheduler-nav-views .rz-fileupload-row .rz-selectbutton .rz-button.rz-primary .rzi-times,
+.rz-fileupload-row .rz-selectbutton .rz-scheduler-nav-views .rz-button.rz-primary.rz-paginator-element .rzi-times,
+.rz-scheduler-nav-views .rz-fileupload-row .rz-selectbutton .rz-button.rz-primary.rz-paginator-element .rzi-times,
+.rz-fileupload-row .rz-selectbutton .rz-button.rz-paginator-element .rzi-times,
+.rz-fileupload-row .rz-selectbutton .rz-button-md.rz-paginator-element .rzi-times,
+.rz-fileupload-row .rz-selectbutton .rz-scheduler-nav-views .rz-paginator-element.rz-button.rz-primary .rzi-times,
+.rz-scheduler-nav-views .rz-fileupload-row .rz-selectbutton .rz-paginator-element.rz-button.rz-primary .rzi-times,
+.rz-fileupload-row .rz-selectbutton .rz-scheduler-nav-views .rz-paginator-element.rz-primary .rzi-times,
+.rz-scheduler-nav-views .rz-fileupload-row .rz-selectbutton .rz-paginator-element.rz-primary .rzi-times,
 .rz-fileupload-row .rz-selectbutton .rz-paginator-element .rzi-times,
-.rz-selectbutton .rz-fileupload-row .rz-button .rz-icon-trash,
+.rz-fileupload-row .rz-selectbutton .rz-date-filter-buttons .rz-button .rzi-times,
+.rz-fileupload-row .rz-selectbutton .rz-date-filter-buttons .rz-paginator-element .rzi-times,
+.rz-date-filter-buttons .rz-fileupload-row .rz-selectbutton .rz-button .rzi-times,
+.rz-date-filter-buttons .rz-fileupload-row .rz-selectbutton .rz-paginator-element .rzi-times,
+.rz-selectbutton .rz-fileupload-row .rz-button.rz-button-md .rz-icon-trash,
+.rz-selectbutton .rz-fileupload-row .rz-scheduler-nav-views .rz-button.rz-primary .rz-icon-trash,
+.rz-scheduler-nav-views .rz-selectbutton .rz-fileupload-row .rz-button.rz-primary .rz-icon-trash,
+.rz-selectbutton .rz-fileupload-row .rz-scheduler-nav-views .rz-button.rz-primary.rz-paginator-element .rz-icon-trash,
+.rz-scheduler-nav-views .rz-selectbutton .rz-fileupload-row .rz-button.rz-primary.rz-paginator-element .rz-icon-trash,
+.rz-selectbutton .rz-fileupload-row .rz-button.rz-paginator-element .rz-icon-trash,
+.rz-selectbutton .rz-fileupload-row .rz-button-md.rz-paginator-element .rz-icon-trash,
+.rz-selectbutton .rz-fileupload-row .rz-scheduler-nav-views .rz-paginator-element.rz-button.rz-primary .rz-icon-trash,
+.rz-scheduler-nav-views .rz-selectbutton .rz-fileupload-row .rz-paginator-element.rz-button.rz-primary .rz-icon-trash,
+.rz-selectbutton .rz-fileupload-row .rz-scheduler-nav-views .rz-paginator-element.rz-primary .rz-icon-trash,
+.rz-scheduler-nav-views .rz-selectbutton .rz-fileupload-row .rz-paginator-element.rz-primary .rz-icon-trash,
 .rz-selectbutton .rz-fileupload-row .rz-paginator-element .rz-icon-trash,
-.rz-fileupload-row .rz-selectbutton .rz-button .rz-icon-trash,
-.rz-fileupload-row .rz-selectbutton .rz-paginator-element .rz-icon-trash, .rz-splitbutton-menubutton .rzi, .rz-splitbutton-menubutton .rz-column-drag, .rz-splitbutton-menubutton .rz-datatable-loading-content .rzi-circle-o-notch, .rz-datatable-loading-content .rz-splitbutton-menubutton .rzi-circle-o-notch, .rz-splitbutton-menubutton .rz-datatable-header .rzi-plus, .rz-datatable-header .rz-splitbutton-menubutton .rzi-plus, .rz-splitbutton-menubutton .rz-sortable-column .rzi-grid-sort, .rz-sortable-column .rz-splitbutton-menubutton .rzi-grid-sort, .rz-splitbutton-menubutton .rz-datatable .rzi-chevron-circle-down, .rz-datatable .rz-splitbutton-menubutton .rzi-chevron-circle-down, .rz-splitbutton-menubutton .rz-datatable .rzi-chevron-circle-right, .rz-datatable .rz-splitbutton-menubutton .rzi-chevron-circle-right, .rz-splitbutton-menubutton .rz-fileupload-row .rz-button .rzi-close, .rz-splitbutton-menubutton .rz-fileupload-row .rz-paginator-element .rzi-close, .rz-fileupload-row .rz-button .rz-splitbutton-menubutton .rzi-close, .rz-fileupload-row .rz-paginator-element .rz-splitbutton-menubutton .rzi-close,
-.rz-splitbutton-menubutton .rz-fileupload-row .rz-button .rzi-times,
-.rz-splitbutton-menubutton .rz-fileupload-row .rz-paginator-element .rzi-times,
-.rz-fileupload-row .rz-button .rz-splitbutton-menubutton .rzi-times,
-.rz-fileupload-row .rz-paginator-element .rz-splitbutton-menubutton .rzi-times,
-.rz-splitbutton-menubutton .rz-fileupload-row .rz-button .rz-icon-trash,
-.rz-splitbutton-menubutton .rz-fileupload-row .rz-paginator-element .rz-icon-trash,
-.rz-fileupload-row .rz-button .rz-splitbutton-menubutton .rz-icon-trash,
-.rz-fileupload-row .rz-paginator-element .rz-splitbutton-menubutton .rz-icon-trash, .rz-button-md .rz-menuitem .rz-menuitem-icon, .rz-scheduler-nav-views .rz-button.rz-primary .rz-menuitem .rz-menuitem-icon, .rz-scheduler-nav-views .rz-primary.rz-paginator-element .rz-menuitem .rz-menuitem-icon, .rz-paginator-element .rz-menuitem .rz-menuitem-icon, .rz-date-filter-buttons .rz-button .rz-menuitem .rz-menuitem-icon, .rz-date-filter-buttons .rz-paginator-element .rz-menuitem .rz-menuitem-icon, .rz-fileupload-choose .rz-menuitem .rz-menuitem-icon, .rz-selectbutton .rz-button .rz-menuitem .rz-menuitem-icon, .rz-selectbutton .rz-paginator-element .rz-menuitem .rz-menuitem-icon, .rz-splitbutton-menubutton .rz-menuitem .rz-menuitem-icon, .rz-menuitem .rz-button-md .rz-menuitem-icon, .rz-menuitem .rz-scheduler-nav-views .rz-button.rz-primary .rz-menuitem-icon, .rz-scheduler-nav-views .rz-menuitem .rz-button.rz-primary .rz-menuitem-icon, .rz-menuitem .rz-scheduler-nav-views .rz-primary.rz-paginator-element .rz-menuitem-icon, .rz-scheduler-nav-views .rz-menuitem .rz-primary.rz-paginator-element .rz-menuitem-icon, .rz-menuitem .rz-paginator-element .rz-menuitem-icon, .rz-menuitem .rz-date-filter-buttons .rz-button .rz-menuitem-icon, .rz-menuitem .rz-date-filter-buttons .rz-paginator-element .rz-menuitem-icon, .rz-date-filter-buttons .rz-menuitem .rz-button .rz-menuitem-icon, .rz-date-filter-buttons .rz-menuitem .rz-paginator-element .rz-menuitem-icon, .rz-menuitem .rz-fileupload-choose .rz-menuitem-icon, .rz-menuitem .rz-selectbutton .rz-button .rz-menuitem-icon, .rz-menuitem .rz-selectbutton .rz-paginator-element .rz-menuitem-icon, .rz-selectbutton .rz-menuitem .rz-button .rz-menuitem-icon, .rz-selectbutton .rz-menuitem .rz-paginator-element .rz-menuitem-icon, .rz-menuitem .rz-splitbutton-menubutton .rz-menuitem-icon, .rz-splitbutton .rz-button-text-icon-left .rzi, .rz-splitbutton .rz-button-text-icon-left .rz-column-drag, .rz-splitbutton .rz-button-text-icon-left .rz-datatable-loading-content .rzi-circle-o-notch, .rz-datatable-loading-content .rz-splitbutton .rz-button-text-icon-left .rzi-circle-o-notch, .rz-splitbutton .rz-button-text-icon-left .rz-datatable-header .rzi-plus, .rz-datatable-header .rz-splitbutton .rz-button-text-icon-left .rzi-plus, .rz-splitbutton .rz-button-text-icon-left .rz-sortable-column .rzi-grid-sort, .rz-sortable-column .rz-splitbutton .rz-button-text-icon-left .rzi-grid-sort, .rz-splitbutton .rz-button-text-icon-left .rz-datatable .rzi-chevron-circle-down, .rz-datatable .rz-splitbutton .rz-button-text-icon-left .rzi-chevron-circle-down, .rz-splitbutton .rz-button-text-icon-left .rz-datatable .rzi-chevron-circle-right, .rz-datatable .rz-splitbutton .rz-button-text-icon-left .rzi-chevron-circle-right, .rz-splitbutton .rz-button-text-icon-left .rz-fileupload-row .rz-button .rzi-close, .rz-splitbutton .rz-button-text-icon-left .rz-fileupload-row .rz-paginator-element .rzi-close, .rz-fileupload-row .rz-button .rz-splitbutton .rz-button-text-icon-left .rzi-close, .rz-fileupload-row .rz-paginator-element .rz-splitbutton .rz-button-text-icon-left .rzi-close,
-.rz-splitbutton .rz-button-text-icon-left .rz-fileupload-row .rz-button .rzi-times,
-.rz-splitbutton .rz-button-text-icon-left .rz-fileupload-row .rz-paginator-element .rzi-times,
-.rz-fileupload-row .rz-button .rz-splitbutton .rz-button-text-icon-left .rzi-times,
-.rz-fileupload-row .rz-paginator-element .rz-splitbutton .rz-button-text-icon-left .rzi-times,
-.rz-splitbutton .rz-button-text-icon-left .rz-fileupload-row .rz-button .rz-icon-trash,
-.rz-splitbutton .rz-button-text-icon-left .rz-fileupload-row .rz-paginator-element .rz-icon-trash,
-.rz-fileupload-row .rz-button .rz-splitbutton .rz-button-text-icon-left .rz-icon-trash,
-.rz-fileupload-row .rz-paginator-element .rz-splitbutton .rz-button-text-icon-left .rz-icon-trash, .rz-splitbutton .rz-button-text-icon-left .rz-menuitem .rz-menuitem-icon, .rz-menuitem .rz-splitbutton .rz-button-text-icon-left .rz-menuitem-icon,
-.rz-splitbutton .rz-button-text-only .rzi,
-.rz-splitbutton .rz-button-text-only .rz-column-drag,
-.rz-splitbutton .rz-button-text-only .rz-datatable-loading-content .rzi-circle-o-notch,
-.rz-datatable-loading-content .rz-splitbutton .rz-button-text-only .rzi-circle-o-notch,
-.rz-splitbutton .rz-button-text-only .rz-datatable-header .rzi-plus,
-.rz-datatable-header .rz-splitbutton .rz-button-text-only .rzi-plus,
-.rz-splitbutton .rz-button-text-only .rz-sortable-column .rzi-grid-sort,
-.rz-sortable-column .rz-splitbutton .rz-button-text-only .rzi-grid-sort,
-.rz-splitbutton .rz-button-text-only .rz-datatable .rzi-chevron-circle-down,
-.rz-datatable .rz-splitbutton .rz-button-text-only .rzi-chevron-circle-down,
-.rz-splitbutton .rz-button-text-only .rz-datatable .rzi-chevron-circle-right,
-.rz-datatable .rz-splitbutton .rz-button-text-only .rzi-chevron-circle-right,
-.rz-splitbutton .rz-button-text-only .rz-fileupload-row .rz-button .rzi-close,
-.rz-splitbutton .rz-button-text-only .rz-fileupload-row .rz-paginator-element .rzi-close,
-.rz-fileupload-row .rz-button .rz-splitbutton .rz-button-text-only .rzi-close,
-.rz-fileupload-row .rz-paginator-element .rz-splitbutton .rz-button-text-only .rzi-close,
-.rz-splitbutton .rz-button-text-only .rz-fileupload-row .rz-button .rzi-times,
-.rz-splitbutton .rz-button-text-only .rz-fileupload-row .rz-paginator-element .rzi-times,
-.rz-fileupload-row .rz-button .rz-splitbutton .rz-button-text-only .rzi-times,
-.rz-fileupload-row .rz-paginator-element .rz-splitbutton .rz-button-text-only .rzi-times,
-.rz-splitbutton .rz-button-text-only .rz-fileupload-row .rz-button .rz-icon-trash,
-.rz-splitbutton .rz-button-text-only .rz-fileupload-row .rz-paginator-element .rz-icon-trash,
-.rz-fileupload-row .rz-button .rz-splitbutton .rz-button-text-only .rz-icon-trash,
-.rz-fileupload-row .rz-paginator-element .rz-splitbutton .rz-button-text-only .rz-icon-trash,
-.rz-splitbutton .rz-button-text-only .rz-menuitem .rz-menuitem-icon,
-.rz-menuitem .rz-splitbutton .rz-button-text-only .rz-menuitem-icon {
+.rz-selectbutton .rz-fileupload-row .rz-date-filter-buttons .rz-button .rz-icon-trash,
+.rz-selectbutton .rz-fileupload-row .rz-date-filter-buttons .rz-paginator-element .rz-icon-trash,
+.rz-date-filter-buttons .rz-selectbutton .rz-fileupload-row .rz-button .rz-icon-trash,
+.rz-date-filter-buttons .rz-selectbutton .rz-fileupload-row .rz-paginator-element .rz-icon-trash,
+.rz-fileupload-row .rz-selectbutton .rz-button.rz-button-md .rz-icon-trash,
+.rz-fileupload-row .rz-selectbutton .rz-scheduler-nav-views .rz-button.rz-primary .rz-icon-trash,
+.rz-scheduler-nav-views .rz-fileupload-row .rz-selectbutton .rz-button.rz-primary .rz-icon-trash,
+.rz-fileupload-row .rz-selectbutton .rz-scheduler-nav-views .rz-button.rz-primary.rz-paginator-element .rz-icon-trash,
+.rz-scheduler-nav-views .rz-fileupload-row .rz-selectbutton .rz-button.rz-primary.rz-paginator-element .rz-icon-trash,
+.rz-fileupload-row .rz-selectbutton .rz-button.rz-paginator-element .rz-icon-trash,
+.rz-fileupload-row .rz-selectbutton .rz-button-md.rz-paginator-element .rz-icon-trash,
+.rz-fileupload-row .rz-selectbutton .rz-scheduler-nav-views .rz-paginator-element.rz-button.rz-primary .rz-icon-trash,
+.rz-scheduler-nav-views .rz-fileupload-row .rz-selectbutton .rz-paginator-element.rz-button.rz-primary .rz-icon-trash,
+.rz-fileupload-row .rz-selectbutton .rz-scheduler-nav-views .rz-paginator-element.rz-primary .rz-icon-trash,
+.rz-scheduler-nav-views .rz-fileupload-row .rz-selectbutton .rz-paginator-element.rz-primary .rz-icon-trash,
+.rz-fileupload-row .rz-selectbutton .rz-paginator-element .rz-icon-trash,
+.rz-fileupload-row .rz-selectbutton .rz-date-filter-buttons .rz-button .rz-icon-trash,
+.rz-fileupload-row .rz-selectbutton .rz-date-filter-buttons .rz-paginator-element .rz-icon-trash,
+.rz-date-filter-buttons .rz-fileupload-row .rz-selectbutton .rz-button .rz-icon-trash,
+.rz-date-filter-buttons .rz-fileupload-row .rz-selectbutton .rz-paginator-element .rz-icon-trash, .rz-selectbutton .rz-button.rz-fileupload-choose .rzi, .rz-selectbutton .rz-fileupload-choose.rz-paginator-element .rzi, .rz-selectbutton .rz-button.rz-fileupload-choose .rz-column-drag, .rz-selectbutton .rz-fileupload-choose.rz-paginator-element .rz-column-drag, .rz-selectbutton .rz-fileupload-row .rz-button.rz-fileupload-choose .rzi-close, .rz-selectbutton .rz-fileupload-row .rz-fileupload-choose.rz-paginator-element .rzi-close, .rz-fileupload-row .rz-selectbutton .rz-button.rz-fileupload-choose .rzi-close, .rz-fileupload-row .rz-selectbutton .rz-fileupload-choose.rz-paginator-element .rzi-close,
+.rz-selectbutton .rz-fileupload-row .rz-button.rz-fileupload-choose .rzi-times,
+.rz-selectbutton .rz-fileupload-row .rz-fileupload-choose.rz-paginator-element .rzi-times,
+.rz-fileupload-row .rz-selectbutton .rz-button.rz-fileupload-choose .rzi-times,
+.rz-fileupload-row .rz-selectbutton .rz-fileupload-choose.rz-paginator-element .rzi-times,
+.rz-selectbutton .rz-fileupload-row .rz-button.rz-fileupload-choose .rz-icon-trash,
+.rz-selectbutton .rz-fileupload-row .rz-fileupload-choose.rz-paginator-element .rz-icon-trash,
+.rz-fileupload-row .rz-selectbutton .rz-button.rz-fileupload-choose .rz-icon-trash,
+.rz-fileupload-row .rz-selectbutton .rz-fileupload-choose.rz-paginator-element .rz-icon-trash, .rz-button-md .rz-menuitem .rz-menuitem-icon, .rz-scheduler-nav-views .rz-button.rz-primary .rz-menuitem .rz-menuitem-icon, .rz-scheduler-nav-views .rz-primary.rz-paginator-element .rz-menuitem .rz-menuitem-icon, .rz-paginator-element .rz-menuitem .rz-menuitem-icon, .rz-date-filter-buttons .rz-button .rz-menuitem .rz-menuitem-icon, .rz-date-filter-buttons .rz-paginator-element .rz-menuitem .rz-menuitem-icon, .rz-fileupload-choose .rz-menuitem .rz-menuitem-icon, .rz-menuitem .rz-button-md .rz-menuitem-icon, .rz-menuitem .rz-scheduler-nav-views .rz-button.rz-primary .rz-menuitem-icon, .rz-scheduler-nav-views .rz-menuitem .rz-button.rz-primary .rz-menuitem-icon, .rz-menuitem .rz-scheduler-nav-views .rz-primary.rz-paginator-element .rz-menuitem-icon, .rz-scheduler-nav-views .rz-menuitem .rz-primary.rz-paginator-element .rz-menuitem-icon, .rz-menuitem .rz-paginator-element .rz-menuitem-icon, .rz-menuitem .rz-date-filter-buttons .rz-button .rz-menuitem-icon, .rz-menuitem .rz-date-filter-buttons .rz-paginator-element .rz-menuitem-icon, .rz-date-filter-buttons .rz-menuitem .rz-button .rz-menuitem-icon, .rz-date-filter-buttons .rz-menuitem .rz-paginator-element .rz-menuitem-icon, .rz-menuitem .rz-fileupload-choose .rz-menuitem-icon {
   font-size: var(--rz-icon-size);
   line-height: var(--rz-icon-size);
   width: var(--rz-icon-size);
   height: var(--rz-icon-size);
 }
 
-.rz-button-sm, .rz-fileupload .rz-button, .rz-fileupload .rz-paginator-element {
+.rz-button-sm, .rz-fileupload .rz-button, .rz-fileupload .rz-paginator-element, .rz-selectbutton .rz-button.rz-button-sm, .rz-selectbutton .rz-button-sm.rz-paginator-element, .rz-selectbutton .rz-fileupload .rz-button, .rz-selectbutton .rz-fileupload .rz-paginator-element, .rz-fileupload .rz-selectbutton .rz-button, .rz-fileupload .rz-selectbutton .rz-paginator-element, .rz-splitbutton .rz-button-sm {
   font-size: var(--rz-body-font-size);
   padding: 0.25rem 0.75rem;
   height: auto;
@@ -3102,15 +3136,16 @@ p-button[type] {
   min-width: 1.75rem;
 }
 
-.rz-button-sm .rz-button-box, .rz-fileupload .rz-button .rz-button-box, .rz-fileupload .rz-paginator-element .rz-button-box {
+.rz-button-sm .rz-button-box, .rz-fileupload .rz-button .rz-button-box, .rz-fileupload .rz-paginator-element .rz-button-box, .rz-selectbutton .rz-button.rz-button-sm .rz-button-box, .rz-selectbutton .rz-button-sm.rz-paginator-element .rz-button-box {
   line-height: 1.25rem;
+  gap: 0.25rem;
 }
 
-.rz-button-sm.rz-button-text-icon-left, .rz-fileupload .rz-button-text-icon-left.rz-button, .rz-fileupload .rz-button-text-icon-left.rz-paginator-element {
+.rz-button-sm.rz-button-text-icon-left, .rz-fileupload .rz-button-text-icon-left.rz-button, .rz-fileupload .rz-button-text-icon-left.rz-paginator-element, .rz-selectbutton .rz-button-text-icon-left.rz-button.rz-button-sm, .rz-selectbutton .rz-button-text-icon-left.rz-button-sm.rz-paginator-element, .rz-selectbutton .rz-fileupload .rz-button, .rz-selectbutton .rz-fileupload .rz-paginator-element, .rz-fileupload .rz-selectbutton .rz-button, .rz-fileupload .rz-selectbutton .rz-paginator-element {
   padding: 0.25rem 0.75rem 0.25rem 0.25rem;
 }
 
-.rz-button-sm.rz-button-icon-only, .rz-button-sm.rz-paginator-element, .rz-fileupload .rz-button-icon-only.rz-button, .rz-fileupload .rz-paginator-element {
+.rz-button-sm.rz-button-icon-only, .rz-button-sm.rz-paginator-element, .rz-fileupload .rz-button-icon-only.rz-button, .rz-fileupload .rz-paginator-element, .rz-selectbutton .rz-button-icon-only.rz-button.rz-button-sm, .rz-selectbutton .rz-button-sm.rz-paginator-element, .rz-selectbutton .rz-fileupload .rz-button, .rz-selectbutton .rz-fileupload .rz-paginator-element, .rz-fileupload .rz-selectbutton .rz-button, .rz-fileupload .rz-selectbutton .rz-paginator-element {
   padding: 0.25rem;
 }
 
@@ -3130,19 +3165,19 @@ p-button[type] {
 .rz-fileupload .rz-fileupload-row .rz-button .rz-icon-trash,
 .rz-fileupload .rz-fileupload-row .rz-paginator-element .rz-icon-trash,
 .rz-fileupload-row .rz-fileupload .rz-button .rz-icon-trash,
-.rz-fileupload-row .rz-fileupload .rz-paginator-element .rz-icon-trash, .rz-button-sm .rz-menuitem .rz-menuitem-icon, .rz-fileupload .rz-button .rz-menuitem .rz-menuitem-icon, .rz-fileupload .rz-paginator-element .rz-menuitem .rz-menuitem-icon, .rz-menuitem .rz-button-sm .rz-menuitem-icon, .rz-menuitem .rz-fileupload .rz-button .rz-menuitem-icon, .rz-menuitem .rz-fileupload .rz-paginator-element .rz-menuitem-icon, .rz-fileupload .rz-menuitem .rz-button .rz-menuitem-icon, .rz-fileupload .rz-menuitem .rz-paginator-element .rz-menuitem-icon {
+.rz-fileupload-row .rz-fileupload .rz-paginator-element .rz-icon-trash, .rz-selectbutton .rz-button.rz-button-sm .rzi, .rz-selectbutton .rz-button-sm.rz-paginator-element .rzi, .rz-selectbutton .rz-button.rz-button-sm .rz-column-drag, .rz-selectbutton .rz-button-sm.rz-paginator-element .rz-column-drag, .rz-selectbutton .rz-fileupload-row .rz-button.rz-button-sm .rzi-close, .rz-selectbutton .rz-fileupload-row .rz-button-sm.rz-paginator-element .rzi-close, .rz-fileupload-row .rz-selectbutton .rz-button.rz-button-sm .rzi-close, .rz-fileupload-row .rz-selectbutton .rz-button-sm.rz-paginator-element .rzi-close,
+.rz-selectbutton .rz-fileupload-row .rz-button.rz-button-sm .rzi-times,
+.rz-selectbutton .rz-fileupload-row .rz-button-sm.rz-paginator-element .rzi-times,
+.rz-fileupload-row .rz-selectbutton .rz-button.rz-button-sm .rzi-times,
+.rz-fileupload-row .rz-selectbutton .rz-button-sm.rz-paginator-element .rzi-times,
+.rz-selectbutton .rz-fileupload-row .rz-button.rz-button-sm .rz-icon-trash,
+.rz-selectbutton .rz-fileupload-row .rz-button-sm.rz-paginator-element .rz-icon-trash,
+.rz-fileupload-row .rz-selectbutton .rz-button.rz-button-sm .rz-icon-trash,
+.rz-fileupload-row .rz-selectbutton .rz-button-sm.rz-paginator-element .rz-icon-trash, .rz-button-sm .rz-menuitem .rz-menuitem-icon, .rz-fileupload .rz-button .rz-menuitem .rz-menuitem-icon, .rz-fileupload .rz-paginator-element .rz-menuitem .rz-menuitem-icon, .rz-menuitem .rz-button-sm .rz-menuitem-icon, .rz-menuitem .rz-fileupload .rz-button .rz-menuitem-icon, .rz-menuitem .rz-fileupload .rz-paginator-element .rz-menuitem-icon, .rz-fileupload .rz-menuitem .rz-button .rz-menuitem-icon, .rz-fileupload .rz-menuitem .rz-paginator-element .rz-menuitem-icon {
   font-size: var(--rz-icon-size);
   line-height: var(--rz-icon-size);
   width: var(--rz-icon-size);
   height: var(--rz-icon-size);
-}
-
-.rz-button:not(.rz-button-icon-only):not(.rz-paginator-element) .rz-button-icon-left, .rz-paginator-element:not(.rz-button-icon-only):not(.rz-paginator-element) .rz-button-icon-left {
-  margin-right: 0.25rem;
-}
-
-.rz-button:not(.rz-button-icon-only):not(.rz-paginator-element) .rz-button-icon-left, .rz-paginator-element:not(.rz-button-icon-only):not(.rz-paginator-element) .rz-button-icon-left {
-  margin-right: 0.25rem;
 }
 
 @keyframes button-icon-spin {
@@ -3398,244 +3433,223 @@ p-button[type] {
 }
 
 .rz-variant-outlined.rz-badge-primary {
-  outline-style: solid;
-  outline-width: var(--rz-border-width);
-  outline-offset: calc(var(--rz-border-width) * -1);
   background-color: transparent;
 }
 
 .rz-variant-outlined.rz-badge-primary.rz-shade-lighter {
-  outline-color: var(--rz-primary-lighter);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-primary-lighter);
   color: var(--rz-primary-lighter);
 }
 
 .rz-variant-outlined.rz-badge-primary.rz-shade-light {
-  outline-color: var(--rz-primary-light);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-primary-light);
   color: var(--rz-primary-light);
 }
 
 .rz-variant-outlined.rz-badge-primary.rz-shade-default {
-  outline-color: var(--rz-primary);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-primary);
   color: var(--rz-primary);
 }
 
 .rz-variant-outlined.rz-badge-primary.rz-shade-dark {
-  outline-color: var(--rz-primary-dark);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-primary-dark);
   color: var(--rz-primary-dark);
 }
 
 .rz-variant-outlined.rz-badge-primary.rz-shade-darker {
-  outline-color: var(--rz-primary-darker);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-primary-darker);
   color: var(--rz-primary-darker);
 }
 
 .rz-variant-outlined.rz-badge-light {
-  outline-color: var(--rz-base-200);
-  color: var(--rz-base-200);
-  outline-style: solid;
-  outline-width: var(--rz-border-width);
-  outline-offset: calc(var(--rz-border-width) * -1);
   background-color: transparent;
+}
+
+.rz-variant-outlined.rz-badge-light.rz-shade-default {
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-base-200);
+  color: var(--rz-base-200);
 }
 
 .rz-variant-outlined.rz-badge-dark {
-  outline-color: var(--rz-base-900);
-  color: var(--rz-base-900);
-  outline-style: solid;
-  outline-width: var(--rz-border-width);
-  outline-offset: calc(var(--rz-border-width) * -1);
   background-color: transparent;
 }
 
+.rz-variant-outlined.rz-badge-dark.rz-shade-default {
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-base-900);
+  color: var(--rz-base-900);
+}
+
 .rz-variant-outlined.rz-badge-secondary {
-  outline-style: solid;
-  outline-width: var(--rz-border-width);
-  outline-offset: calc(var(--rz-border-width) * -1);
   background-color: transparent;
 }
 
 .rz-variant-outlined.rz-badge-secondary.rz-shade-lighter {
-  outline-color: var(--rz-secondary-lighter);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-secondary-lighter);
   color: var(--rz-secondary-lighter);
 }
 
 .rz-variant-outlined.rz-badge-secondary.rz-shade-light {
-  outline-color: var(--rz-secondary-light);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-secondary-light);
   color: var(--rz-secondary-light);
 }
 
 .rz-variant-outlined.rz-badge-secondary.rz-shade-default {
-  outline-color: var(--rz-secondary);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-secondary);
   color: var(--rz-secondary);
 }
 
 .rz-variant-outlined.rz-badge-secondary.rz-shade-dark {
-  outline-color: var(--rz-secondary-dark);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-secondary-dark);
   color: var(--rz-secondary-dark);
 }
 
 .rz-variant-outlined.rz-badge-secondary.rz-shade-darker {
-  outline-color: var(--rz-secondary-darker);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-secondary-darker);
   color: var(--rz-secondary-darker);
 }
 
 .rz-variant-outlined.rz-badge-info {
-  outline-style: solid;
-  outline-width: var(--rz-border-width);
-  outline-offset: calc(var(--rz-border-width) * -1);
   background-color: transparent;
 }
 
 .rz-variant-outlined.rz-badge-info.rz-shade-lighter {
-  outline-color: var(--rz-info-lighter);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-info-lighter);
   color: var(--rz-info-lighter);
 }
 
 .rz-variant-outlined.rz-badge-info.rz-shade-light {
-  outline-color: var(--rz-info-light);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-info-light);
   color: var(--rz-info-light);
 }
 
 .rz-variant-outlined.rz-badge-info.rz-shade-default {
-  outline-color: var(--rz-info);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-info);
   color: var(--rz-info);
 }
 
 .rz-variant-outlined.rz-badge-info.rz-shade-dark {
-  outline-color: var(--rz-info-dark);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-info-dark);
   color: var(--rz-info-dark);
 }
 
 .rz-variant-outlined.rz-badge-info.rz-shade-darker {
-  outline-color: var(--rz-info-darker);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-info-darker);
   color: var(--rz-info-darker);
 }
 
 .rz-variant-outlined.rz-badge-warning {
-  outline-style: solid;
-  outline-width: var(--rz-border-width);
-  outline-offset: calc(var(--rz-border-width) * -1);
   background-color: transparent;
 }
 
 .rz-variant-outlined.rz-badge-warning.rz-shade-lighter {
-  outline-color: var(--rz-warning-lighter);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-warning-lighter);
   color: var(--rz-warning-lighter);
 }
 
 .rz-variant-outlined.rz-badge-warning.rz-shade-light {
-  outline-color: var(--rz-warning-light);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-warning-light);
   color: var(--rz-warning-light);
 }
 
 .rz-variant-outlined.rz-badge-warning.rz-shade-default {
-  outline-color: var(--rz-warning);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-warning);
   color: var(--rz-warning);
 }
 
 .rz-variant-outlined.rz-badge-warning.rz-shade-dark {
-  outline-color: var(--rz-warning-dark);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-warning-dark);
   color: var(--rz-warning-dark);
 }
 
 .rz-variant-outlined.rz-badge-warning.rz-shade-darker {
-  outline-color: var(--rz-warning-darker);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-warning-darker);
   color: var(--rz-warning-darker);
 }
 
 .rz-variant-outlined.rz-badge-error {
-  outline-style: solid;
-  outline-width: var(--rz-border-width);
-  outline-offset: calc(var(--rz-border-width) * -1);
   background-color: transparent;
 }
 
 .rz-variant-outlined.rz-badge-error.rz-shade-lighter {
-  outline-color: var(--rz-error-lighter);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-error-lighter);
   color: var(--rz-error-lighter);
 }
 
 .rz-variant-outlined.rz-badge-error.rz-shade-light {
-  outline-color: var(--rz-error-light);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-error-light);
   color: var(--rz-error-light);
 }
 
 .rz-variant-outlined.rz-badge-error.rz-shade-default {
-  outline-color: var(--rz-error);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-error);
   color: var(--rz-error);
 }
 
 .rz-variant-outlined.rz-badge-error.rz-shade-dark {
-  outline-color: var(--rz-error-dark);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-error-dark);
   color: var(--rz-error-dark);
 }
 
 .rz-variant-outlined.rz-badge-error.rz-shade-darker {
-  outline-color: var(--rz-error-darker);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-error-darker);
   color: var(--rz-error-darker);
 }
 
 .rz-variant-outlined.rz-badge-danger {
-  outline-style: solid;
-  outline-width: var(--rz-border-width);
-  outline-offset: calc(var(--rz-border-width) * -1);
   background-color: transparent;
 }
 
 .rz-variant-outlined.rz-badge-danger.rz-shade-lighter {
-  outline-color: var(--rz-danger-lighter);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-danger-lighter);
   color: var(--rz-danger-lighter);
 }
 
 .rz-variant-outlined.rz-badge-danger.rz-shade-light {
-  outline-color: var(--rz-danger-light);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-danger-light);
   color: var(--rz-danger-light);
 }
 
 .rz-variant-outlined.rz-badge-danger.rz-shade-default {
-  outline-color: var(--rz-danger);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-danger);
   color: var(--rz-danger);
 }
 
 .rz-variant-outlined.rz-badge-danger.rz-shade-dark {
-  outline-color: var(--rz-danger-dark);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-danger-dark);
   color: var(--rz-danger-dark);
 }
 
 .rz-variant-outlined.rz-badge-danger.rz-shade-darker {
-  outline-color: var(--rz-danger-darker);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-danger-darker);
   color: var(--rz-danger-darker);
 }
 
 .rz-variant-outlined.rz-badge-success {
-  outline-style: solid;
-  outline-width: var(--rz-border-width);
-  outline-offset: calc(var(--rz-border-width) * -1);
   background-color: transparent;
 }
 
 .rz-variant-outlined.rz-badge-success.rz-shade-lighter {
-  outline-color: var(--rz-success-lighter);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-success-lighter);
   color: var(--rz-success-lighter);
 }
 
 .rz-variant-outlined.rz-badge-success.rz-shade-light {
-  outline-color: var(--rz-success-light);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-success-light);
   color: var(--rz-success-light);
 }
 
 .rz-variant-outlined.rz-badge-success.rz-shade-default {
-  outline-color: var(--rz-success);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-success);
   color: var(--rz-success);
 }
 
 .rz-variant-outlined.rz-badge-success.rz-shade-dark {
-  outline-color: var(--rz-success-dark);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-success-dark);
   color: var(--rz-success-dark);
 }
 
 .rz-variant-outlined.rz-badge-success.rz-shade-darker {
-  outline-color: var(--rz-success-darker);
+  box-shadow: inset 0 0 0 var(--rz-border-width) var(--rz-success-darker);
   color: var(--rz-success-darker);
 }
 
@@ -5872,10 +5886,8 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
   --rz-splitbutton-menu-button-width: 1.875rem;
   --rz-splitbutton-menu-button-padding: 0 0 0.375rem 0;
   --rz-splitbutton-menu-button-font-size: 1.0625rem;
-  --rz-splitbutton-menu-button-border: var(--rz-border-white);
   --rz-splitbutton-menu-shadow: none;
   --rz-splitbutton-menu-min-width: 10rem;
-  --rz-splitbutton-padding: 0.5rem;
   --rz-splitbutton-background-color: var(--rz-primary);
   --rz-splitbutton-border-radius: var(--rz-border-radius);
 }
@@ -5884,15 +5896,18 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
   display: inline-flex;
 }
 
-.rz-splitbutton .rz-button-text-icon-left,
-.rz-splitbutton .rz-button-text-only {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  padding: var(--rz-splitbutton-padding);
+.rz-splitbutton .rz-button-icon-only .rz-button-text, .rz-splitbutton .rz-paginator-element .rz-button-text {
+  display: none;
 }
 
-.rz-splitbutton .rz-button-text-icon-left {
-  flex: 1;
+.rz-splitbutton .rz-button.rz-splitbutton-menubutton, .rz-splitbutton .rz-splitbutton-menubutton.rz-paginator-element {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.rz-splitbutton .rz-button:not(.rz-splitbutton-menubutton), .rz-splitbutton .rz-paginator-element:not(.rz-splitbutton-menubutton) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .rz-splitbutton-menu {
@@ -5927,28 +5942,16 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
 }
 
 .rz-splitbutton-menubutton {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border-left: var(--rz-splitbutton-menu-button-border);
+  margin-left: 1px;
+}
+
+.rz-splitbutton-menubutton.rz-variant-outlined {
+  border-left: 0;
+  margin-left: calc(-1 * var(--rz-border-width));
 }
 
 .rz-splitbutton-menubutton .rz-button-text {
   display: none;
-}
-
-.rz-splitbutton-menubutton .rzi, .rz-splitbutton-menubutton .rz-column-drag, .rz-splitbutton-menubutton .rz-datatable-loading-content .rzi-circle-o-notch, .rz-datatable-loading-content .rz-splitbutton-menubutton .rzi-circle-o-notch, .rz-splitbutton-menubutton .rz-datatable-header .rzi-plus, .rz-datatable-header .rz-splitbutton-menubutton .rzi-plus, .rz-splitbutton-menubutton .rz-sortable-column .rzi-grid-sort, .rz-sortable-column .rz-splitbutton-menubutton .rzi-grid-sort, .rz-splitbutton-menubutton .rz-datatable .rzi-chevron-circle-down, .rz-datatable .rz-splitbutton-menubutton .rzi-chevron-circle-down, .rz-splitbutton-menubutton .rz-datatable .rzi-chevron-circle-right, .rz-datatable .rz-splitbutton-menubutton .rzi-chevron-circle-right, .rz-splitbutton-menubutton .rz-fileupload-row .rz-button .rzi-close, .rz-splitbutton-menubutton .rz-fileupload-row .rz-paginator-element .rzi-close, .rz-fileupload-row .rz-button .rz-splitbutton-menubutton .rzi-close, .rz-fileupload-row .rz-paginator-element .rz-splitbutton-menubutton .rzi-close,
-.rz-splitbutton-menubutton .rz-fileupload-row .rz-button .rzi-times,
-.rz-splitbutton-menubutton .rz-fileupload-row .rz-paginator-element .rzi-times,
-.rz-fileupload-row .rz-button .rz-splitbutton-menubutton .rzi-times,
-.rz-fileupload-row .rz-paginator-element .rz-splitbutton-menubutton .rzi-times,
-.rz-splitbutton-menubutton .rz-fileupload-row .rz-button .rz-icon-trash,
-.rz-splitbutton-menubutton .rz-fileupload-row .rz-paginator-element .rz-icon-trash,
-.rz-fileupload-row .rz-button .rz-splitbutton-menubutton .rz-icon-trash,
-.rz-fileupload-row .rz-paginator-element .rz-splitbutton-menubutton .rz-icon-trash, .rz-splitbutton-menubutton .rz-menuitem .rz-menuitem-icon, .rz-menuitem .rz-splitbutton-menubutton .rz-menuitem-icon {
-  font-size: var(--rz-icon-size);
-  height: var(--rz-icon-size);
-  line-height: var(--rz-icon-size);
-  width: var(--rz-icon-size);
 }
 
 .rz-splitbutton-menubutton .rzi-chevron-down:before {
@@ -6148,10 +6151,10 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
 }
 
 .rz-selectbutton {
-  display: inline-block;
+  display: inline-flex;
 }
 
-.rz-selectbutton .rz-button, .rz-selectbutton .rz-paginator-element {
+.rz-selectbutton .rz-button.rz-button-sm, .rz-selectbutton .rz-button-sm.rz-paginator-element, .rz-selectbutton .rz-fileupload .rz-button, .rz-selectbutton .rz-fileupload .rz-paginator-element, .rz-fileupload .rz-selectbutton .rz-button, .rz-fileupload .rz-selectbutton .rz-paginator-element {
   margin-left: -1px;
   display: inline-block;
   background-color: var(--rz-selectbar-background-color);
@@ -6160,17 +6163,70 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
   border-radius: 0;
 }
 
-.rz-selectbutton .rz-button:first-child, .rz-selectbutton .rz-paginator-element:first-child {
+.rz-selectbutton .rz-button.rz-button-sm:first-child, .rz-selectbutton .rz-button-sm.rz-paginator-element:first-child, .rz-selectbutton .rz-fileupload .rz-button:first-child, .rz-selectbutton .rz-fileupload .rz-paginator-element:first-child, .rz-fileupload .rz-selectbutton .rz-button:first-child, .rz-fileupload .rz-selectbutton .rz-paginator-element:first-child {
+  margin-left: 0;
   border-top-left-radius: var(--rz-selectbar-border-radius);
   border-bottom-left-radius: var(--rz-selectbar-border-radius);
 }
 
-.rz-selectbutton .rz-button:last-child, .rz-selectbutton .rz-paginator-element:last-child {
+.rz-selectbutton .rz-button.rz-button-sm:last-child, .rz-selectbutton .rz-button-sm.rz-paginator-element:last-child, .rz-selectbutton .rz-fileupload .rz-button:last-child, .rz-selectbutton .rz-fileupload .rz-paginator-element:last-child, .rz-fileupload .rz-selectbutton .rz-button:last-child, .rz-fileupload .rz-selectbutton .rz-paginator-element:last-child {
   border-top-right-radius: var(--rz-selectbar-border-radius);
   border-bottom-right-radius: var(--rz-selectbar-border-radius);
 }
 
-.rz-selectbutton .rz-button.rz-state-active, .rz-selectbutton .rz-state-active.rz-paginator-element {
+.rz-selectbutton .rz-button.rz-button-sm.rz-state-active, .rz-selectbutton .rz-button-sm.rz-state-active.rz-paginator-element, .rz-selectbutton .rz-fileupload .rz-button.rz-state-active, .rz-selectbutton .rz-fileupload .rz-state-active.rz-paginator-element, .rz-fileupload .rz-selectbutton .rz-button.rz-state-active, .rz-fileupload .rz-selectbutton .rz-state-active.rz-paginator-element {
+  background-color: var(--rz-selectbar-selected-background-color);
+  color: var(--rz-selectbar-selected-color);
+  border: var(--rz-selectbar-selected-border);
+}
+
+.rz-selectbutton .rz-button.rz-button-md, .rz-selectbutton .rz-scheduler-nav-views .rz-button.rz-primary, .rz-scheduler-nav-views .rz-selectbutton .rz-button.rz-primary, .rz-selectbutton .rz-button.rz-paginator-element, .rz-selectbutton .rz-button-md.rz-paginator-element, .rz-selectbutton .rz-scheduler-nav-views .rz-paginator-element.rz-primary, .rz-scheduler-nav-views .rz-selectbutton .rz-paginator-element.rz-primary, .rz-selectbutton .rz-paginator-element, .rz-selectbutton .rz-date-filter-buttons .rz-button, .rz-selectbutton .rz-date-filter-buttons .rz-paginator-element, .rz-date-filter-buttons .rz-selectbutton .rz-button, .rz-date-filter-buttons .rz-selectbutton .rz-paginator-element, .rz-selectbutton .rz-button.rz-fileupload-choose, .rz-selectbutton .rz-fileupload-choose.rz-paginator-element {
+  margin-left: -1px;
+  display: inline-block;
+  background-color: var(--rz-selectbar-background-color);
+  color: var(--rz-selectbar-color);
+  border: var(--rz-selectbar-border);
+  border-radius: 0;
+}
+
+.rz-selectbutton .rz-button.rz-button-md:first-child, .rz-selectbutton .rz-scheduler-nav-views .rz-button.rz-primary:first-child, .rz-scheduler-nav-views .rz-selectbutton .rz-button.rz-primary:first-child, .rz-selectbutton .rz-paginator-element:first-child, .rz-selectbutton .rz-date-filter-buttons .rz-button:first-child, .rz-date-filter-buttons .rz-selectbutton .rz-button:first-child, .rz-selectbutton .rz-button.rz-fileupload-choose:first-child {
+  margin-left: 0;
+  border-top-left-radius: var(--rz-selectbar-border-radius);
+  border-bottom-left-radius: var(--rz-selectbar-border-radius);
+}
+
+.rz-selectbutton .rz-button.rz-button-md:last-child, .rz-selectbutton .rz-scheduler-nav-views .rz-button.rz-primary:last-child, .rz-scheduler-nav-views .rz-selectbutton .rz-button.rz-primary:last-child, .rz-selectbutton .rz-paginator-element:last-child, .rz-selectbutton .rz-date-filter-buttons .rz-button:last-child, .rz-date-filter-buttons .rz-selectbutton .rz-button:last-child, .rz-selectbutton .rz-button.rz-fileupload-choose:last-child {
+  border-top-right-radius: var(--rz-selectbar-border-radius);
+  border-bottom-right-radius: var(--rz-selectbar-border-radius);
+}
+
+.rz-selectbutton .rz-button.rz-button-md.rz-state-active, .rz-selectbutton .rz-scheduler-nav-views .rz-button.rz-state-active.rz-primary, .rz-scheduler-nav-views .rz-selectbutton .rz-button.rz-state-active.rz-primary, .rz-selectbutton .rz-state-active.rz-paginator-element, .rz-selectbutton .rz-date-filter-buttons .rz-button.rz-state-active, .rz-date-filter-buttons .rz-selectbutton .rz-button.rz-state-active, .rz-selectbutton .rz-button.rz-state-active.rz-fileupload-choose {
+  background-color: var(--rz-selectbar-selected-background-color);
+  color: var(--rz-selectbar-selected-color);
+  border: var(--rz-selectbar-selected-border);
+}
+
+.rz-selectbutton .rz-button.rz-button-lg, .rz-selectbutton .rz-button-lg.rz-paginator-element {
+  margin-left: -1px;
+  display: inline-block;
+  background-color: var(--rz-selectbar-background-color);
+  color: var(--rz-selectbar-color);
+  border: var(--rz-selectbar-border);
+  border-radius: 0;
+}
+
+.rz-selectbutton .rz-button.rz-button-lg:first-child, .rz-selectbutton .rz-button-lg.rz-paginator-element:first-child {
+  margin-left: 0;
+  border-top-left-radius: var(--rz-selectbar-border-radius);
+  border-bottom-left-radius: var(--rz-selectbar-border-radius);
+}
+
+.rz-selectbutton .rz-button.rz-button-lg:last-child, .rz-selectbutton .rz-button-lg.rz-paginator-element:last-child {
+  border-top-right-radius: var(--rz-selectbar-border-radius);
+  border-bottom-right-radius: var(--rz-selectbar-border-radius);
+}
+
+.rz-selectbutton .rz-button.rz-button-lg.rz-state-active, .rz-selectbutton .rz-button-lg.rz-state-active.rz-paginator-element {
   background-color: var(--rz-selectbar-selected-background-color);
   color: var(--rz-selectbar-selected-color);
   border: var(--rz-selectbar-selected-border);
@@ -6447,9 +6503,7 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
   display: none;
 }
 
-.rz-timepicker .rz-button-md, .rz-timepicker .rz-scheduler-nav-views .rz-button.rz-primary, .rz-scheduler-nav-views .rz-timepicker .rz-button.rz-primary, .rz-timepicker .rz-scheduler-nav-views .rz-primary.rz-paginator-element, .rz-scheduler-nav-views .rz-timepicker .rz-primary.rz-paginator-element, .rz-timepicker .rz-paginator-element, .rz-timepicker .rz-date-filter-buttons .rz-button, .rz-date-filter-buttons .rz-timepicker .rz-button, .rz-timepicker .rz-fileupload-choose, .rz-timepicker .rz-splitbutton .rz-button-text-icon-left, .rz-splitbutton .rz-timepicker .rz-button-text-icon-left,
-.rz-timepicker .rz-splitbutton .rz-button-text-only,
-.rz-splitbutton .rz-timepicker .rz-button-text-only, .rz-timepicker .rz-splitbutton-menubutton, .rz-timepicker .rz-selectbutton .rz-button, .rz-selectbutton .rz-timepicker .rz-button {
+.rz-timepicker .rz-button-md, .rz-timepicker .rz-scheduler-nav-views .rz-button.rz-primary, .rz-scheduler-nav-views .rz-timepicker .rz-button.rz-primary, .rz-timepicker .rz-scheduler-nav-views .rz-primary.rz-paginator-element, .rz-scheduler-nav-views .rz-timepicker .rz-primary.rz-paginator-element, .rz-timepicker .rz-paginator-element, .rz-timepicker .rz-date-filter-buttons .rz-button, .rz-date-filter-buttons .rz-timepicker .rz-button, .rz-timepicker .rz-fileupload-choose, .rz-timepicker .rz-selectbutton .rz-button.rz-button-md, .rz-timepicker .rz-selectbutton .rz-paginator-element, .rz-timepicker .rz-selectbutton .rz-button.rz-fileupload-choose, .rz-selectbutton .rz-timepicker .rz-button.rz-button-md, .rz-selectbutton .rz-timepicker .rz-paginator-element, .rz-selectbutton .rz-timepicker .rz-button.rz-fileupload-choose {
   padding: var(--rz-timepicker-button-padding);
   text-transform: uppercase;
 }
@@ -6703,8 +6757,8 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
   --rz-grid-header-font-weight: 600;
   --rz-grid-header-text-transform: none;
   --rz-grid-header-color: var(--rz-text-title-color);
-  --rz-grid-header-cell-padding: 0.625rem 0.5rem;
-  --rz-grid-header-title-padding: 0 0.25rem 0 0;
+  --rz-grid-header-cell-padding: 0.625rem 0;
+  --rz-grid-header-title-padding: 0 0 0 0.5rem;
   --rz-grid-header-sorted-background-color: var(--rz-base-100);
   --rz-grid-header-padding: 1rem;
   --rz-grid-foot-cell-color: var(--rz-text-title-color);
@@ -6730,7 +6784,7 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
   --rz-grid-apply-filter-button-background-color: var(--rz-primary);
   --rz-grid-apply-filter-button-color: var(--rz-text-contrast-color);
   --rz-grid-apply-filter-button-shadow: inherit;
-  --rz-grid-header-filter-icon-margin: 0 0 0 0.25rem;
+  --rz-grid-header-filter-icon-margin: 0 0.5rem 0 auto;
   --rz-grid-header-filter-icon-hover-color: var(--rz-text-title-color);
   --rz-grid-header-filter-icon-active-color: var(--rz-primary);
   --rz-grid-header-filter-icon-font-size: 1rem;
@@ -6770,7 +6824,7 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
   --rz-grid-group-header-items-margin: 0 0 -0.5rem 0;
   --rz-column-drag-handle-color: var(--rz-text-disabled-color);
   --rz-column-drag-handle-hover-color: var(--rz-text-title-color);
-  --rz-column-drag-handle-margin: 0 0 0 -0.25rem;
+  --rz-column-drag-handle-margin: 0 auto 0 0;
   --rz-column-draggable-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.1);
 }
 
@@ -6901,7 +6955,10 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
 }
 
 .rz-datatable-thead th .rz-column-title, .rz-grid-table thead th .rz-column-title {
-  display: inline-block;
+  display: inline-flex;
+  flex: auto;
+  width: 100%;
+  align-items: center;
   font-size: var(--rz-grid-header-font-size);
   line-height: var(--rz-grid-header-line-height);
   text-transform: var(--rz-grid-header-text-transform);
@@ -6913,8 +6970,36 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
   text-overflow: ellipsis;
 }
 
-.rz-datatable-thead th .rz-column-title:has(.rz-chkbox), .rz-grid-table thead th .rz-column-title:has(.rz-chkbox) {
+.rz-datatable-thead th .rz-column-title-content, .rz-grid-table thead th .rz-column-title-content {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rz-datatable-thead th .rz-column-title-content:has(.rz-chkbox), .rz-grid-table thead th .rz-column-title-content:has(.rz-chkbox) {
   overflow: visible;
+}
+
+.rz-datatable-thead th.rz-text-align-center .rz-column-title, .rz-grid-table thead th.rz-text-align-center .rz-column-title {
+  justify-content: center;
+  padding-left: 0;
+}
+
+.rz-datatable-thead th.rz-text-align-center.rz-sortable-column .rz-column-title, .rz-grid-table thead th.rz-text-align-center.rz-sortable-column .rz-column-title {
+  padding-left: var(--rz-grid-sort-icon-width);
+}
+
+.rz-datatable-thead th.rz-text-align-right .rz-column-title, .rz-grid-table thead th.rz-text-align-right .rz-column-title {
+  justify-content: right;
+}
+
+.rz-datatable-thead th.rz-text-align-right.rz-sortable-column .rz-column-title, .rz-grid-table thead th.rz-text-align-right.rz-sortable-column .rz-column-title {
+  padding-left: var(--rz-grid-sort-icon-width);
+}
+
+.rz-datatable-thead th .rz-column-drag + .rz-column-title, .rz-grid-table thead th .rz-column-drag + .rz-column-title {
+  padding-left: 0;
 }
 
 .rz-datatable-tfoot td, .rz-grid-table tfoot td {
@@ -6969,7 +7054,6 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
 }
 
 .rz-sortable-column .rzi-grid-sort {
-  flex: auto;
   width: var(--rz-grid-sort-icon-width);
   height: var(--rz-grid-sort-icon-height);
   font-size: var(--rz-grid-sort-icon-height);
@@ -7000,11 +7084,11 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
   content: 'arrow_drop_down';
 }
 
-.rz-datatable-odd > td {
+.rz-grid-table-striped tr:nth-child(odd) > td {
   background-color: var(--rz-grid-stripe-background-color);
 }
 
-.rz-datatable-even > td {
+.rz-grid-table-striped tr:nth-child(even) > td {
   background-color: var(--rz-grid-background-color);
 }
 
@@ -7053,6 +7137,12 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
 
 .rz-datatable-data td .rz-cell-data:has(.rz-chkbox), .rz-datatable-data td .rz-cell-data:has(.rz-button, .rz-paginator-element), .rz-grid-table td .rz-cell-data:has(.rz-chkbox), .rz-grid-table td .rz-cell-data:has(.rz-button, .rz-paginator-element) {
   overflow: visible;
+}
+
+.rz-datatable-data td .rz-cell-toggle, .rz-grid-table td .rz-cell-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
 }
 
 .rz-datatable-data tr td:first-child, .rz-grid-table tr td:first-child {
@@ -7162,68 +7252,68 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
   margin-left: 0.5rem;
 }
 
-.rz-selectable .rz-datatable-even td,
-.rz-selectable .rz-datatable-even .rz-cell-data,
-.rz-selectable .rz-datatable-odd td,
-.rz-selectable .rz-datatable-odd .rz-cell-data {
+.rz-selectable tr:nth-child(even) td,
+.rz-selectable tr:nth-child(even) .rz-cell-data,
+.rz-selectable tr:nth-child(odd) td,
+.rz-selectable tr:nth-child(odd) .rz-cell-data {
   transition: background-color var(--rz-transition), color var(--rz-transition);
 }
 
-.rz-selectable .rz-datatable-even.rz-state-highlight > td,
-.rz-selectable .rz-datatable-odd.rz-state-highlight > td {
+.rz-selectable tr.rz-state-highlight:nth-child(even) > td,
+.rz-selectable tr.rz-state-highlight:nth-child(odd) > td {
   background-color: var(--rz-grid-selected-background-color);
 }
 
-.rz-selectable .rz-datatable-even.rz-state-highlight .rz-cell-data,
-.rz-selectable .rz-datatable-odd.rz-state-highlight .rz-cell-data {
+.rz-selectable tr.rz-state-highlight:nth-child(even) .rz-cell-data,
+.rz-selectable tr.rz-state-highlight:nth-child(odd) .rz-cell-data {
   color: var(--rz-grid-selected-color);
 }
 
-.rz-selectable .rz-datatable-even.rz-state-highlight > .rzi, .rz-selectable .rz-datatable-even.rz-state-highlight > .rz-column-drag, .rz-selectable .rz-datatable-loading-content .rz-datatable-even.rz-state-highlight > .rzi-circle-o-notch, .rz-datatable-loading-content .rz-selectable .rz-datatable-even.rz-state-highlight > .rzi-circle-o-notch, .rz-selectable .rz-menuitem .rz-datatable-even.rz-state-highlight > .rz-menuitem-icon, .rz-menuitem .rz-selectable .rz-datatable-even.rz-state-highlight > .rz-menuitem-icon, .rz-selectable .rz-fileupload-row .rz-button .rz-datatable-even.rz-state-highlight > .rzi-close, .rz-selectable .rz-fileupload-row .rz-paginator-element .rz-datatable-even.rz-state-highlight > .rzi-close, .rz-fileupload-row .rz-button .rz-selectable .rz-datatable-even.rz-state-highlight > .rzi-close, .rz-fileupload-row .rz-paginator-element .rz-selectable .rz-datatable-even.rz-state-highlight > .rzi-close,
-.rz-selectable .rz-fileupload-row .rz-button .rz-datatable-even.rz-state-highlight > .rzi-times,
-.rz-selectable .rz-fileupload-row .rz-paginator-element .rz-datatable-even.rz-state-highlight > .rzi-times,
-.rz-fileupload-row .rz-button .rz-selectable .rz-datatable-even.rz-state-highlight > .rzi-times,
-.rz-fileupload-row .rz-paginator-element .rz-selectable .rz-datatable-even.rz-state-highlight > .rzi-times,
-.rz-selectable .rz-fileupload-row .rz-button .rz-datatable-even.rz-state-highlight > .rz-icon-trash,
-.rz-selectable .rz-fileupload-row .rz-paginator-element .rz-datatable-even.rz-state-highlight > .rz-icon-trash,
-.rz-fileupload-row .rz-button .rz-selectable .rz-datatable-even.rz-state-highlight > .rz-icon-trash,
-.rz-fileupload-row .rz-paginator-element .rz-selectable .rz-datatable-even.rz-state-highlight > .rz-icon-trash, .rz-selectable .rz-datatable .rz-datatable-even.rz-state-highlight > .rzi-chevron-circle-right, .rz-datatable .rz-selectable .rz-datatable-even.rz-state-highlight > .rzi-chevron-circle-right, .rz-selectable .rz-datatable .rz-datatable-even.rz-state-highlight > .rzi-chevron-circle-down, .rz-datatable .rz-selectable .rz-datatable-even.rz-state-highlight > .rzi-chevron-circle-down, .rz-selectable .rz-sortable-column .rz-datatable-even.rz-state-highlight > .rzi-grid-sort, .rz-sortable-column .rz-selectable .rz-datatable-even.rz-state-highlight > .rzi-grid-sort, .rz-selectable .rz-datatable-header .rz-datatable-even.rz-state-highlight > .rzi-plus, .rz-datatable-header .rz-selectable .rz-datatable-even.rz-state-highlight > .rzi-plus,
-.rz-selectable .rz-datatable-odd.rz-state-highlight > .rzi,
-.rz-selectable .rz-datatable-odd.rz-state-highlight > .rz-column-drag,
-.rz-selectable .rz-datatable-loading-content .rz-datatable-odd.rz-state-highlight > .rzi-circle-o-notch,
-.rz-datatable-loading-content .rz-selectable .rz-datatable-odd.rz-state-highlight > .rzi-circle-o-notch,
-.rz-selectable .rz-menuitem .rz-datatable-odd.rz-state-highlight > .rz-menuitem-icon,
-.rz-menuitem .rz-selectable .rz-datatable-odd.rz-state-highlight > .rz-menuitem-icon,
-.rz-selectable .rz-fileupload-row .rz-button .rz-datatable-odd.rz-state-highlight > .rzi-close,
-.rz-selectable .rz-fileupload-row .rz-paginator-element .rz-datatable-odd.rz-state-highlight > .rzi-close,
-.rz-fileupload-row .rz-button .rz-selectable .rz-datatable-odd.rz-state-highlight > .rzi-close,
-.rz-fileupload-row .rz-paginator-element .rz-selectable .rz-datatable-odd.rz-state-highlight > .rzi-close,
-.rz-selectable .rz-fileupload-row .rz-button .rz-datatable-odd.rz-state-highlight > .rzi-times,
-.rz-selectable .rz-fileupload-row .rz-paginator-element .rz-datatable-odd.rz-state-highlight > .rzi-times,
-.rz-fileupload-row .rz-button .rz-selectable .rz-datatable-odd.rz-state-highlight > .rzi-times,
-.rz-fileupload-row .rz-paginator-element .rz-selectable .rz-datatable-odd.rz-state-highlight > .rzi-times,
-.rz-selectable .rz-fileupload-row .rz-button .rz-datatable-odd.rz-state-highlight > .rz-icon-trash,
-.rz-selectable .rz-fileupload-row .rz-paginator-element .rz-datatable-odd.rz-state-highlight > .rz-icon-trash,
-.rz-fileupload-row .rz-button .rz-selectable .rz-datatable-odd.rz-state-highlight > .rz-icon-trash,
-.rz-fileupload-row .rz-paginator-element .rz-selectable .rz-datatable-odd.rz-state-highlight > .rz-icon-trash,
-.rz-selectable .rz-datatable .rz-datatable-odd.rz-state-highlight > .rzi-chevron-circle-right,
-.rz-datatable .rz-selectable .rz-datatable-odd.rz-state-highlight > .rzi-chevron-circle-right,
-.rz-selectable .rz-datatable .rz-datatable-odd.rz-state-highlight > .rzi-chevron-circle-down,
-.rz-datatable .rz-selectable .rz-datatable-odd.rz-state-highlight > .rzi-chevron-circle-down,
-.rz-selectable .rz-sortable-column .rz-datatable-odd.rz-state-highlight > .rzi-grid-sort,
-.rz-sortable-column .rz-selectable .rz-datatable-odd.rz-state-highlight > .rzi-grid-sort,
-.rz-selectable .rz-datatable-header .rz-datatable-odd.rz-state-highlight > .rzi-plus,
-.rz-datatable-header .rz-selectable .rz-datatable-odd.rz-state-highlight > .rzi-plus {
+.rz-selectable tr.rz-state-highlight:nth-child(even) > .rzi, .rz-selectable tr.rz-state-highlight:nth-child(even) > .rz-column-drag, .rz-selectable .rz-datatable-loading-content tr.rz-state-highlight:nth-child(even) > .rzi-circle-o-notch, .rz-datatable-loading-content .rz-selectable tr.rz-state-highlight:nth-child(even) > .rzi-circle-o-notch, .rz-selectable .rz-menuitem tr.rz-state-highlight:nth-child(even) > .rz-menuitem-icon, .rz-menuitem .rz-selectable tr.rz-state-highlight:nth-child(even) > .rz-menuitem-icon, .rz-selectable .rz-fileupload-row .rz-button tr.rz-state-highlight:nth-child(even) > .rzi-close, .rz-selectable .rz-fileupload-row .rz-paginator-element tr.rz-state-highlight:nth-child(even) > .rzi-close, .rz-fileupload-row .rz-button .rz-selectable tr.rz-state-highlight:nth-child(even) > .rzi-close, .rz-fileupload-row .rz-paginator-element .rz-selectable tr.rz-state-highlight:nth-child(even) > .rzi-close,
+.rz-selectable .rz-fileupload-row .rz-button tr.rz-state-highlight:nth-child(even) > .rzi-times,
+.rz-selectable .rz-fileupload-row .rz-paginator-element tr.rz-state-highlight:nth-child(even) > .rzi-times,
+.rz-fileupload-row .rz-button .rz-selectable tr.rz-state-highlight:nth-child(even) > .rzi-times,
+.rz-fileupload-row .rz-paginator-element .rz-selectable tr.rz-state-highlight:nth-child(even) > .rzi-times,
+.rz-selectable .rz-fileupload-row .rz-button tr.rz-state-highlight:nth-child(even) > .rz-icon-trash,
+.rz-selectable .rz-fileupload-row .rz-paginator-element tr.rz-state-highlight:nth-child(even) > .rz-icon-trash,
+.rz-fileupload-row .rz-button .rz-selectable tr.rz-state-highlight:nth-child(even) > .rz-icon-trash,
+.rz-fileupload-row .rz-paginator-element .rz-selectable tr.rz-state-highlight:nth-child(even) > .rz-icon-trash, .rz-selectable .rz-datatable tr.rz-state-highlight:nth-child(even) > .rzi-chevron-circle-right, .rz-datatable .rz-selectable tr.rz-state-highlight:nth-child(even) > .rzi-chevron-circle-right, .rz-selectable .rz-datatable tr.rz-state-highlight:nth-child(even) > .rzi-chevron-circle-down, .rz-datatable .rz-selectable tr.rz-state-highlight:nth-child(even) > .rzi-chevron-circle-down, .rz-selectable .rz-sortable-column tr.rz-state-highlight:nth-child(even) > .rzi-grid-sort, .rz-sortable-column .rz-selectable tr.rz-state-highlight:nth-child(even) > .rzi-grid-sort, .rz-selectable .rz-datatable-header tr.rz-state-highlight:nth-child(even) > .rzi-plus, .rz-datatable-header .rz-selectable tr.rz-state-highlight:nth-child(even) > .rzi-plus,
+.rz-selectable tr.rz-state-highlight:nth-child(odd) > .rzi,
+.rz-selectable tr.rz-state-highlight:nth-child(odd) > .rz-column-drag,
+.rz-selectable .rz-datatable-loading-content tr.rz-state-highlight:nth-child(odd) > .rzi-circle-o-notch,
+.rz-datatable-loading-content .rz-selectable tr.rz-state-highlight:nth-child(odd) > .rzi-circle-o-notch,
+.rz-selectable .rz-menuitem tr.rz-state-highlight:nth-child(odd) > .rz-menuitem-icon,
+.rz-menuitem .rz-selectable tr.rz-state-highlight:nth-child(odd) > .rz-menuitem-icon,
+.rz-selectable .rz-fileupload-row .rz-button tr.rz-state-highlight:nth-child(odd) > .rzi-close,
+.rz-selectable .rz-fileupload-row .rz-paginator-element tr.rz-state-highlight:nth-child(odd) > .rzi-close,
+.rz-fileupload-row .rz-button .rz-selectable tr.rz-state-highlight:nth-child(odd) > .rzi-close,
+.rz-fileupload-row .rz-paginator-element .rz-selectable tr.rz-state-highlight:nth-child(odd) > .rzi-close,
+.rz-selectable .rz-fileupload-row .rz-button tr.rz-state-highlight:nth-child(odd) > .rzi-times,
+.rz-selectable .rz-fileupload-row .rz-paginator-element tr.rz-state-highlight:nth-child(odd) > .rzi-times,
+.rz-fileupload-row .rz-button .rz-selectable tr.rz-state-highlight:nth-child(odd) > .rzi-times,
+.rz-fileupload-row .rz-paginator-element .rz-selectable tr.rz-state-highlight:nth-child(odd) > .rzi-times,
+.rz-selectable .rz-fileupload-row .rz-button tr.rz-state-highlight:nth-child(odd) > .rz-icon-trash,
+.rz-selectable .rz-fileupload-row .rz-paginator-element tr.rz-state-highlight:nth-child(odd) > .rz-icon-trash,
+.rz-fileupload-row .rz-button .rz-selectable tr.rz-state-highlight:nth-child(odd) > .rz-icon-trash,
+.rz-fileupload-row .rz-paginator-element .rz-selectable tr.rz-state-highlight:nth-child(odd) > .rz-icon-trash,
+.rz-selectable .rz-datatable tr.rz-state-highlight:nth-child(odd) > .rzi-chevron-circle-right,
+.rz-datatable .rz-selectable tr.rz-state-highlight:nth-child(odd) > .rzi-chevron-circle-right,
+.rz-selectable .rz-datatable tr.rz-state-highlight:nth-child(odd) > .rzi-chevron-circle-down,
+.rz-datatable .rz-selectable tr.rz-state-highlight:nth-child(odd) > .rzi-chevron-circle-down,
+.rz-selectable .rz-sortable-column tr.rz-state-highlight:nth-child(odd) > .rzi-grid-sort,
+.rz-sortable-column .rz-selectable tr.rz-state-highlight:nth-child(odd) > .rzi-grid-sort,
+.rz-selectable .rz-datatable-header tr.rz-state-highlight:nth-child(odd) > .rzi-plus,
+.rz-datatable-header .rz-selectable tr.rz-state-highlight:nth-child(odd) > .rzi-plus {
   color: var(--rz-grid-selected-color);
 }
 
-.rz-selectable .rz-datatable-even:hover:not(.rz-state-highlight) > td:not(.rz-frozen-cell),
-.rz-selectable .rz-datatable-odd:hover:not(.rz-state-highlight) > td:not(.rz-frozen-cell) {
+.rz-selectable tr:nth-child(even):hover:not(.rz-state-highlight) > td:not(.rz-frozen-cell),
+.rz-selectable tr:nth-child(odd):hover:not(.rz-state-highlight) > td:not(.rz-frozen-cell) {
   background-color: var(--rz-grid-hover-background-color);
 }
 
-.rz-selectable .rz-datatable-even:hover:not(.rz-state-highlight) .rz-cell-data,
-.rz-selectable .rz-datatable-odd:hover:not(.rz-state-highlight) .rz-cell-data {
+.rz-selectable tr:nth-child(even):hover:not(.rz-state-highlight) .rz-cell-data,
+.rz-selectable tr:nth-child(odd):hover:not(.rz-state-highlight) .rz-cell-data {
   color: var(--rz-grid-hover-color);
 }
 
@@ -8023,6 +8113,109 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
 }
 
 :root {
+  --rz-datafilter-item-padding-y: 0.25rem;
+  --rz-datafilter-item-padding-left: 2rem;
+  --rz-datafilter-item-indentation: 0.25rem;
+  --rz-datafilter-item-path-width: 1rem;
+  --rz-datafilter-item-path-height: calc(0.25rem + (var(--rz-input-height) / 2));
+  --rz-datafilter-item-path-border: var(--rz-border-normal);
+  --rz-datafilter-item-path-border-radius: calc(2 * var(--rz-border-radius));
+}
+
+.rz-datafilter {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.25rem;
+  align-items: center;
+}
+
+.rz-datafilter .rz-selectbutton {
+  display: inline-flex;
+}
+
+.rz-datafilter .rz-datafilter-group {
+  position: relative;
+  margin: 0.25rem 0 0;
+  padding: 0;
+  flex-basis: 100%;
+}
+
+.rz-datafilter .rz-datafilter-group .rz-datafilter-group {
+  margin: 0;
+}
+
+.rz-datafilter .rz-datafilter-item {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: var(--rz-datafilter-item-padding-y) 0 var(--rz-datafilter-item-padding-y) calc(var(--rz-datafilter-item-padding-left) + var(--rz-datafilter-item-indentation));
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.rz-datafilter .rz-datafilter-item:before {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  width: var(--rz-datafilter-item-path-width);
+  top: 0;
+  bottom: 0;
+  left: calc(var(--rz-datafilter-item-padding-left) / 2);
+  border: 0;
+  border-left: var(--rz-datafilter-item-path-border);
+}
+
+.rz-datafilter .rz-datafilter-item:after {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  width: var(--rz-datafilter-item-path-width);
+  height: calc(var(--rz-datafilter-item-padding-y) + (var(--rz-input-height) / 2));
+  top: 0;
+  left: calc(var(--rz-datafilter-item-padding-left) / 2);
+  border: 0;
+  border-bottom: var(--rz-datafilter-item-path-border);
+  border-left: var(--rz-datafilter-item-path-border);
+}
+
+.rz-datafilter .rz-datafilter-group-item:after {
+  height: calc(var(--rz-input-height) / 2);
+}
+
+.rz-datafilter .rz-datafilter-bar {
+  padding: 0 0 0 calc(var(--rz-datafilter-item-padding-left) + var(--rz-datafilter-item-indentation));
+}
+
+.rz-datafilter .rz-datafilter-bar:before {
+  display: none;
+}
+
+.rz-datafilter .rz-datafilter-bar:after {
+  height: calc(var(--rz-input-height) / 2);
+  border-bottom-left-radius: var(--rz-datafilter-item-path-border-radius);
+}
+
+.rz-datafilter .rz-datafilter-bar .rz-splitbutton {
+  margin-top: 0.3125rem;
+}
+
+.rz-datafilter .rz-datafilter-editor {
+  min-width: 200px;
+  flex: auto;
+}
+
+.rz-datafilter .rz-button.rz-datafilter-item-clear, .rz-datafilter .rz-datafilter-item-clear.rz-paginator-element {
+  color: var(--rz-text-secondary-color);
+  opacity: 0.5;
+}
+
+.rz-datafilter .rz-button.rz-datafilter-item-clear:hover, .rz-datafilter .rz-datafilter-item-clear.rz-paginator-element:hover {
+  opacity: 1;
+}
+
+:root {
   --rz-scheduler-border: var(--rz-border-normal);
   --rz-scheduler-border-color: var(--rz-base-200);
   --rz-scheduler-minor-border-color: var(--rz-base-100);
@@ -8060,7 +8253,7 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
   --rz-scheduler-event-color: var(--rz-text-contrast-color);
   --rz-scheduler-event-background-color: var(--rz-info);
   --rz-scheduler-event-font-size: 0.75rem;
-  --rz-scheduler-event-line-height: 1rem;
+  --rz-scheduler-event-line-height: 1.25rem;
   --rz-scheduler-event-padding: 0 1px 1px 1px;
   --rz-scheduler-event-content-padding: 0.125rem 0.25rem;
   --rz-scheduler-event-list-button-color: var(--rz-secondary);
@@ -8211,10 +8404,12 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
 
 .rz-slots {
   flex: 1;
+  font-size: var(--rz-root-font-size);
 }
 
 .rz-week {
   flex: 1;
+  font-size: var(--rz-root-font-size);
 }
 
 .rz-week .rz-slots {
