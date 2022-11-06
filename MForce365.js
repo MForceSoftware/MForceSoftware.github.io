@@ -148,6 +148,15 @@ function BlazorDownloadFileFast(name, contentType, content) {
     URL.revokeObjectURL(exportUrl);
 }
 
+function BlazorDownloadFile(filename, bytesBase64) {
+    var link = document.createElement('a');
+    link.download = filename;
+    link.href = "data:application/octet-stream;base64," + bytesBase64;
+    document.body.appendChild(link); // Needed for Firefox
+    link.click();
+    document.body.removeChild(link);
+}
+
 function base64DecToArr(sBase64, nBlocksSize) {
     var
         sB64Enc = sBase64.replace(/[^A-Za-z0-9\+\/]/g, ""),
