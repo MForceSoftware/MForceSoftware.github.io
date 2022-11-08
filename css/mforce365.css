@@ -1425,6 +1425,10 @@ select {
 
 @tailwind typography;
 
+.rz-button {
+  background-color:blue;
+}
+
 .focus-within\:text-gray-600:focus-within {
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
