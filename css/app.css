@@ -149,3 +149,7 @@ a:hover{
 h3{
     font-weight: bold;
 }
+
+.rz-dialog-mask{
+    z-index: -1 !important;
+}
