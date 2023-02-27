@@ -685,11 +685,15 @@
       "url": "_framework\/Azure.Core.dll"
     },
     {
-      "hash": "sha256-qDIkmg8jxWUk9LXm+2sD69oOjZffMzmnmuezpT8na9U=",
+      "hash": "sha256-5+1+0+s3\/MWQ4G4lbW1NlKH2Oh58Pfc54mAvch4DjTE=",
       "url": "_framework\/Blazorise.Bootstrap.dll"
     },
     {
-      "hash": "sha256-teUuJLNdaQyz7kSZJpp+7v3d2aD3GZ0iElUCByVsjuU=",
+      "hash": "sha256-HCvMfGG13thv3GWvUEN2Ca7avc0Bjw5kpc9h9Kk+LS0=",
+      "url": "_framework\/Blazorise.Licensing.dll"
+    },
+    {
+      "hash": "sha256-gn6CPd3XSlvvLM3w+7TdSd47+MvdBgzZWbjFJUs7Kwk=",
       "url": "_framework\/Blazorise.dll"
     },
     {
@@ -957,27 +961,27 @@
       "url": "_framework\/System.Memory.Data.dll"
     },
     {
-      "hash": "sha256-JDPn4ipRW9uLjHScKgVVFTjovfed5Ie\/KcKxB0hu\/3c=",
+      "hash": "sha256-YvzDZGKUpQPe7LOZp4qv3dehs2faWvOW+tO58kbrD6k=",
       "url": "_framework\/MForce.Components.ActionItems.dll"
     },
     {
-      "hash": "sha256-OKMVuop4WWRO7jEouHjzZmaki4RpT1JvvUcso4Ud60w=",
+      "hash": "sha256-C3AXWSx5mQ3yCPqHwGaSf8i1phd8OwWfosyQEgvkhYQ=",
       "url": "_framework\/MForce.Components.Files.dll"
     },
     {
-      "hash": "sha256-Pula6LNN2kZQXTZlgEfoGX6ihH\/iqp9nxO7Q7B\/S6VA=",
+      "hash": "sha256-AnOjVRRLVlCaLYn0mmmrBNwabGrJ5POl+rJrtdeh9FE=",
       "url": "_framework\/MForce.Components.Projects.dll"
     },
     {
-      "hash": "sha256-FSvfo1kAzXqIRb6xHyPVxk1pzIPKWdT5FTjwj834G5E=",
+      "hash": "sha256-rkkO6drtWjqYablWd4k9PLEf0WWFNUyGzRNWNkatBig=",
       "url": "_framework\/MForce.Components.Schedule.dll"
     },
     {
-      "hash": "sha256-g8QwujLJ+7bJxxqIQlp7b5wEvMniJL0X\/Yv8+6kJUGM=",
+      "hash": "sha256-lndAxTvlSeObM57VBCCweATdrU0pl2F6TbrfkrRqMMc=",
       "url": "_framework\/MForce.Components.dll"
     },
     {
-      "hash": "sha256-dkt\/28hfiNSTTIbrMEGWdbJmF8L\/wX4VnbVEpWxFIDM=",
+      "hash": "sha256-K6HyNiEuzZLFT3OFF2F8Zam8PV\/YNmJTlNkHxl29wrw=",
       "url": "_framework\/MForce.Data.dll"
     },
     {
@@ -1009,11 +1013,11 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-Qj6I9JROv1C2EurZncN5MSEafs0GhvHdwS79S4OZaK0=",
+      "hash": "sha256-4HVEVpNXmt88jpqkA28Z41DzNzd0B9XEXjenPM7deYY=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-gVvmz1GNmgUDOx0OOroJwmz2Fc0TeeXHB4Xhs7OCZDg=",
+      "hash": "sha256-3y+T4WcXIL\/w7e7zflkyN7lRNHSkakDaTQoDd8\/HFus=",
       "url": "_framework\/MForce365v2.dll"
     },
     {
@@ -1029,7 +1033,7 @@
       "url": "appsettings.json"
     },
     {
-      "hash": "sha256-GZ79wob0Y+0ZXAvtYm4slypT4oTROudh2a\/R6it8vr0=",
+      "hash": "sha256-C1ulmgD13CJPo\/ujVS8D0osbR2t0FluIHjRSTNfr4V0=",
       "url": "_framework\/SqliteWasmHelper.dll"
     },
     {
@@ -1385,27 +1389,27 @@
       "url": "_framework\/zh-TW\/MForce365.Shared.resources.dll"
     },
     {
-      "hash": "sha256-ungF3ywiIfUg80ZY\/Csvj5Sq4U3bNOnefzOeSy8Oe7M=",
+      "hash": "sha256-4z8c3TEJqfmURFUK4pKRZCRECHP04kxkAxsP\/qK4j6k=",
       "url": "_content\/Blazorise.Bootstrap\/blazorise.bootstrap.css"
     },
     {
-      "hash": "sha256-02lh+vNEDYoskbZ42S4RXI2eF7g80BkW9rDT7zpt\/s8=",
+      "hash": "sha256-SqHl3shYkM2MFNOU2GDhp5U7SiHR+U3cJFbDe7a2CtA=",
       "url": "_content\/Blazorise.Bootstrap\/blazorise.bootstrap.min.css"
     },
     {
-      "hash": "sha256-12xxV2Sl+DUR4gnVO43oAKof2jAO76y89d5C7BxzhIU=",
+      "hash": "sha256-lI5lVhA2XlFwIZ8nmhEh1X13wO1NDN63RWkomZKk2+0=",
       "url": "_content\/Blazorise.Bootstrap\/modal.js"
     },
     {
-      "hash": "sha256-qGjoFpHyemDZKcPPdCPshfDxs6qV3ecNPOcYMlKigvY=",
+      "hash": "sha256-oYYx\/3Ji95Hw\/QnFIKeUERp\/6MFRygHuZTSf1GnBKvs=",
       "url": "_content\/Blazorise.Bootstrap\/tooltip.js"
     },
     {
-      "hash": "sha256-tJ+0ogp4R8ufvTQs7V0ytCnXwBC2+u9PQ\/aDQrtLdCI=",
+      "hash": "sha256-UA6w5KLiBddbPt+HJ1ZV0cb\/VnxpUBLE0NW26Vr4fk4=",
       "url": "_content\/Blazorise\/blazorise.css"
     },
     {
-      "hash": "sha256-EST1TJcEvZXU3cHpiDWcA90N6DJIsaTlpKMjHy5k28A=",
+      "hash": "sha256-ICPiB\/GXC5WAyzXou5UVR87NL665LuKSi0AdKoX2FC4=",
       "url": "_content\/Blazorise\/blazorise.min.css"
     },
     {
@@ -1413,39 +1417,39 @@
       "url": "_content\/Blazorise\/breakpoint.js"
     },
     {
-      "hash": "sha256-dBiwPIV9ogRLPfXdS+h\/1HqKsXqAv\/UY5aj5DVOBO3c=",
+      "hash": "sha256-nyqfeJ8FR6FyNJ\/I3hLCLsoT+Q1fkUjKVI9qqV1f7TQ=",
       "url": "_content\/Blazorise\/button.js"
     },
     {
-      "hash": "sha256-\/f15bMtEfpZJrGSOmo537UmAjmbqyEYCxWjablG7Wyg=",
+      "hash": "sha256-Ixv4O0t21NpbZR6d0ORC1WkQHljTvIS5MBs3lRDN3No=",
       "url": "_content\/Blazorise\/closable.js"
     },
     {
-      "hash": "sha256-hYBj2b0aTlk9rY2mjQqDWZmdM4hoTKXgSipUgL39ms4=",
+      "hash": "sha256-hu70FSj5qdiJIeIRRhb+vd1xxNLSJBoyJ0t9i\/qNc34=",
       "url": "_content\/Blazorise\/colorPicker.js"
     },
     {
-      "hash": "sha256-o5ghCQtHFKpHyq\/vjU7Tj\/gTl9BI0TU94IkRCvLRR8M=",
+      "hash": "sha256-oFG7MRs+v8Dr99gbOM63dml6o3SOMM059\/bqlpf54Vo=",
       "url": "_content\/Blazorise\/datePicker.js"
     },
     {
-      "hash": "sha256-2YlVS6jbqfqbBixdjkHo55D7EMQ+2uCMqocEE4vfCEQ=",
+      "hash": "sha256-7YCPLCDJfOk4I6hegO6JXZPrzv6lRclBbQV7m8sUsBY=",
       "url": "_content\/Blazorise\/dragDrop.js"
     },
     {
-      "hash": "sha256-s9iw1YaREHklHpGDhvTreGWgONE4XRoRCrKWrOvaRik=",
+      "hash": "sha256-EiQUrwFtgdtHo5p82SnrPzv7W26aOKlmVVy9cBhGebQ=",
       "url": "_content\/Blazorise\/dropdown.js"
     },
     {
-      "hash": "sha256-J\/9TQiLgsyxN1Ph36TTzBfk+WA1Xdler9eeUlVpN75k=",
+      "hash": "sha256-I3HPWpZvxEyoD9BlTNApW+oxh1raH82NfLWSFq1F7pU=",
       "url": "_content\/Blazorise\/fileEdit.js"
     },
     {
-      "hash": "sha256-1gDPOPUzFz3YFeiJLsstHuSRIvP1C\/MmfZ5kFoZcYfc=",
+      "hash": "sha256-16H8rNh9aSgy3KAM0DAel\/9lU8daRsiGlL6Oqjx3LHE=",
       "url": "_content\/Blazorise\/filePicker.js"
     },
     {
-      "hash": "sha256-5TC6ZJxByoYvxpYwkOSWeA9JNXI\/BUjI\/T31JymUuxA=",
+      "hash": "sha256-o+xwAn8hr6wrQD1NqOBliuUs\/gH1ly3VV74lwhFCNqk=",
       "url": "_content\/Blazorise\/inputMask.js"
     },
     {
@@ -1453,11 +1457,11 @@
       "url": "_content\/Blazorise\/io.js"
     },
     {
-      "hash": "sha256-BrOcLlblnT0q5niKGyiByAyOGa+R7S0426uwlpjNo1w=",
+      "hash": "sha256-3AsUQqCXMfHzf3gf1RiUJmtsI6iSv2SBYgoDiRwcSPU=",
       "url": "_content\/Blazorise\/memoEdit.js"
     },
     {
-      "hash": "sha256-mxcG1OCl571MKUpQatEJsRJ32al8MqsNopP0tJ5haGo=",
+      "hash": "sha256-95UFZscQGlv1lurU7Vhz76MSA3FiHcxaYTouL0J3wEw=",
       "url": "_content\/Blazorise\/numericPicker.js"
     },
     {
@@ -1469,11 +1473,11 @@
       "url": "_content\/Blazorise\/popper.js"
     },
     {
-      "hash": "sha256-Prk2U5az8ZAOaUzH3UeLLuyCQqAkv6OQKhGPUfScvaQ=",
+      "hash": "sha256-Bvw4VhgYTTfOB3Y0VW614mfOF7EeVHsP8ErKC\/706OI=",
       "url": "_content\/Blazorise\/table.js"
     },
     {
-      "hash": "sha256-fBb8E8hjEo4tHT2s68dFfaQoEzC5yMaffAmzFROc2oY=",
+      "hash": "sha256-yaneCILebx51SvCQh\/8mgXCCqy019Em37vJukCCx8v4=",
       "url": "_content\/Blazorise\/textEdit.js"
     },
     {
@@ -1481,15 +1485,15 @@
       "url": "_content\/Blazorise\/theme.js"
     },
     {
-      "hash": "sha256-Cviu1pb7hN0WHxR0H507KcHMjtd6grryFCQUmSK+SPw=",
+      "hash": "sha256-uQkmrXYY9xomKWl7O+nlpL\/nW8vzw4G4gx0bIMgYB58=",
       "url": "_content\/Blazorise\/timePicker.js"
     },
     {
-      "hash": "sha256-EyD4Cavn3wT6Szr+GvrDLaDh0ow0O6MWS0E9kFU+xpw=",
+      "hash": "sha256-ELj4NkcUIQU\/CdsEZaHT7AUhC5zEdTaHY5jRr+nm6bQ=",
       "url": "_content\/Blazorise\/tooltip.js"
     },
     {
-      "hash": "sha256-\/hUKw3eezs2XcbWzGVoHohSMOhdB14vm9eoXYgZLjso=",
+      "hash": "sha256-fShzC7cjV5+3i67wY7f2Iq10On4mHvct6420rGHMmqU=",
       "url": "_content\/Blazorise\/utilities.js"
     },
     {
@@ -1517,7 +1521,7 @@
       "url": "_content\/Blazorise\/vendors\/Behave.js"
     },
     {
-      "hash": "sha256-NFdinaAwnEaLXXSLs53nbmZTGDux915G5Al8OLZsULI=",
+      "hash": "sha256-TuPGTy1RSyKjfSGGz7VXOVYYoW3nhlFnCiVxIxtci88=",
       "url": "_content\/Blazorise\/vendors\/flatpickr.js"
     },
     {
@@ -1525,8 +1529,16 @@
       "url": "_content\/Blazorise\/vendors\/inputmask.js"
     },
     {
+      "hash": "sha256-UYwEFy4Dt94x8agDo+K5rAAynsteCUPA\/G2UQCHEvyM=",
+      "url": "_content\/Blazorise\/vendors\/jsencrypt.js"
+    },
+    {
       "hash": "sha256-1gHexzaXVdeRaNA\/1rkPr0sk9Wcyys2XlLgv22akhVM=",
       "url": "_content\/Blazorise\/vendors\/Pickr.js"
+    },
+    {
+      "hash": "sha256-E+LUjqfR7dS8pbN72SD0gJxBccFzMa7ZTfkInVjDPqU=",
+      "url": "_content\/Blazorise\/vendors\/sha512.js"
     },
     {
       "hash": "sha256-ufwN9wIcw3DmyXTJUOSibX\/BdZCBQRXyD5\/Ho\/+sh0E=",
@@ -1693,5 +1705,5 @@
       "url": "_content\/MForce.Components.Schedule\/MForce.Components.Schedule.bundle.scp.css"
     }
   ],
-  "version": "nIX6KKzd"
+  "version": "m\/MDofRZ"
 };
