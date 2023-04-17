@@ -961,27 +961,27 @@
       "url": "_framework\/System.Memory.Data.dll"
     },
     {
-      "hash": "sha256-8f+EM4itFWkf2XKdzVcx2JXU9PVA\/YQsSD8NugyaErI=",
+      "hash": "sha256-bLZf8B6pxnQaoWKLfRjz3iAX3lmcCu15jUpXHVS6M14=",
       "url": "_framework\/MForce.Components.ActionItems.dll"
     },
     {
-      "hash": "sha256-WRUTRhnoJYb+8hmcb6LL0y2nf1JScrOhuMGoJ17ZIms=",
+      "hash": "sha256-IrOroB37\/TLJmJPjI9kvce6nUT97adPBLX+dYhwbn60=",
       "url": "_framework\/MForce.Components.Files.dll"
     },
     {
-      "hash": "sha256-JmREEGu6S9pp1N2LcsoPrDvGz0bZK14bydUJ5FHVZyg=",
+      "hash": "sha256-VV0ga+ITcmvURM9bzOygvqa5cgNb2nlb9qk9fTIQY9I=",
       "url": "_framework\/MForce.Components.Projects.dll"
     },
     {
-      "hash": "sha256-gFcVyyOU2eRwHy6EPC05hX1HfdVCCQBE\/wYXOAi3TzY=",
+      "hash": "sha256-uK1GciEHpJEF4vgshosRVg4SeaVFAHZHkx3YH5EE3Lw=",
       "url": "_framework\/MForce.Components.Schedule.dll"
     },
     {
-      "hash": "sha256-BasCbhGtv3tsld6954EfXb3rKzQ+LIt6BzTMUbqxXGI=",
+      "hash": "sha256-CFXJ99u5xKC3rQtxe4r9dLPxh2UyCiNfX\/dnScz7QVM=",
       "url": "_framework\/MForce.Components.dll"
     },
     {
-      "hash": "sha256-i+WSSOA6fSqDnaUgsd5Ut+wUbFOyH13+1J6Lc9\/UoMk=",
+      "hash": "sha256-gf6GaokHNNgmKJqmK9vaB9696KCkGppr0WWZB2CkvzQ=",
       "url": "_framework\/MForce.Data.dll"
     },
     {
@@ -1013,11 +1013,11 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-+uE\/aGiSd+BE5ndhYpyepFmNHAUzsbqrrzar0pF2d8k=",
+      "hash": "sha256-1x2pN8yxO4L\/AqMLb+RapY1mEdibDetGZTcYJiqKRlU=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-7OoP6QjEitSXsRW2aHYjl8RDIq6qfisUQ4JBoa8z\/qE=",
+      "hash": "sha256-euQC+DNsNCHX\/ulYGfm2LeT8KOGMWf\/lt5+12aiWn8w=",
       "url": "_framework\/MForce365v2.dll"
     },
     {
@@ -1033,7 +1033,7 @@
       "url": "appsettings.json"
     },
     {
-      "hash": "sha256-GBW\/ubbxXu36XF0CGV2ZZjbNmglg5LnT8YoeMo2dyJo=",
+      "hash": "sha256-RFJtkGrJlOx+JpawflMoWgCfj\/pimkrG1Zw\/WtRtUxc=",
       "url": "_framework\/SqliteWasmHelper.dll"
     },
     {
@@ -1705,5 +1705,5 @@
       "url": "_content\/MForce.Components.Schedule\/MForce.Components.Schedule.bundle.scp.css"
     }
   ],
-  "version": "IKlzk5Ht"
+  "version": "BGse\/aA3"
 };
