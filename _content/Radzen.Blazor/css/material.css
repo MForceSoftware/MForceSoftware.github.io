@@ -16554,7 +16554,9 @@ input::placeholder {
 :root {
   --rz-card-padding: 1rem;
   --rz-card-background-color: var(--rz-base-background-color);
+  --rz-card-flat-background-color: var(--rz-base-background-color);
   --rz-card-shadow: var(--rz-shadow-1);
+  --rz-card-border: var(--rz-border-base-300);
   --rz-card-border-radius: var(--rz-border-radius);
   --rz-card-heading-margin-bottom: 0.5rem;
 }
@@ -16562,8 +16564,24 @@ input::placeholder {
 .rz-card {
   padding: var(--rz-card-padding);
   border-radius: var(--rz-card-border-radius);
-  box-shadow: var(--rz-card-shadow);
   background-color: var(--rz-card-background-color);
+}
+
+.rz-card.rz-variant-filled {
+  box-shadow: var(--rz-card-shadow);
+}
+
+.rz-card.rz-variant-flat {
+  background-color: var(--rz-card-flat-background-color);
+}
+
+.rz-card.rz-variant-outlined {
+  background: transparent;
+  border: var(--rz-card-border);
+}
+
+.rz-card.rz-variant-text {
+  background: transparent;
 }
 
 .rz-card h1,
@@ -16635,6 +16653,10 @@ input::placeholder {
 
 .rz-accordion > div:last-child, .rz-accordion > div:last-child > div {
   border-radius: 0 0 var(--rz-accordion-border-radius) var(--rz-accordion-border-radius);
+}
+
+.rz-accordion > div:only-child {
+  border-radius: var(--rz-accordion-border-radius);
 }
 
 .rz-accordion-header {
@@ -24537,10 +24559,10 @@ button.rz-colorpicker-trigger .rz-fileupload-row .rz-paginator-element .rz-icon-
   --rz-alert-background-color: var(--rz-base-200);
   --rz-alert-box-shadow: var(--rz-shadow-3);
   --rz-alert-border-radius: 4px;
-  --rz-alert-message-margin: 0;
+  --rz-alert-message-margin: 0.125rem 0;
   --rz-alert-title-color: var(--rz-text-h6-color);
   --rz-alert-icon-color: var(--rz-alert-color);
-  --rz-alert-icon-margin: 0;
+  --rz-alert-icon-margin: 0.125rem 0;
   --rz-alert-icon-size: var(--rz-icon-size);
 }
 
@@ -26610,7 +26632,7 @@ button.rz-colorpicker-trigger .rz-fileupload-row .rz-paginator-element .rz-icon-
   --rz-form-field-text-label-padding: 0;
   --rz-form-field-label-left: 0.6875rem;
   --rz-form-field-label-textarea-top: 0.5rem;
-  --rz-form-field-label-floating-top: -0.4375rem;
+  --rz-form-field-label-floating-top: -0.5625rem;
   --rz-form-field-label-floating-background-color: var(--rz-input-background-color);
   --rz-form-field-helper-padding: 0 1rem;
 }
@@ -26844,11 +26866,13 @@ button.rz-colorpicker-trigger .rz-fileupload-row .rz-paginator-element .rz-icon-
 .rz-textbox:focus ~ .rz-form-field-label, .rz-textarea:focus ~ .rz-form-field-label, .rz-spinner:focus-within ~ .rz-form-field-label, .rz-autocomplete:focus-within ~ .rz-form-field-label, .rz-textbox:not(:placeholder-shown) ~ .rz-form-field-label, :not(.rz-state-empty) ~ .rz-form-field-label, .rz-variant-filled .rz-textarea:focus ~ .rz-form-field-label, .rz-variant-flat .rz-textarea:focus ~ .rz-form-field-label, .rz-variant-filled :not(.rz-state-empty) ~ .rz-form-field-label, .rz-variant-flat :not(.rz-state-empty) ~ .rz-form-field-label, .rz-radio-button-list-vertical ~ .rz-form-field-label, .rz-radio-button-list-horizontal ~ .rz-form-field-label, .rz-checkbox-list-vertical ~ .rz-form-field-label, .rz-checkbox-list-horizontal ~ .rz-form-field-label, .rz-chkbox ~ .rz-form-field-label {
   right: auto;
   top: var(--rz-form-field-label-floating-top);
+  padding-top: 0;
+  padding-bottom: 0;
   transform: translate(0, 0);
   color: var(--rz-input-placeholder-color);
   background-color: var(--rz-form-field-label-floating-background-color);
   font-size: 0.75rem;
-  line-height: 0.75rem;
+  line-height: 1rem;
   max-width: calc(100% - 1.5rem);
 }
 
