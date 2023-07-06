@@ -1319,7 +1319,7 @@ select.form-control:focus::-ms-value {
 .col-form-label-sm {
   padding-top: calc(0.25rem + 1px);
   padding-bottom: calc(0.25rem + 1px);
-  font-size: 0.76562rem;
+  font-size: 0.76563rem;
   line-height: 1.5;
 }
 
@@ -1344,7 +1344,7 @@ select.form-control:focus::-ms-value {
 .form-control-sm {
   height: calc(1.5em + 0.5rem + 2px);
   padding: 0.25rem 0.5rem;
-  font-size: 0.76562rem;
+  font-size: 0.76563rem;
   line-height: 1.5;
   border-radius: 0.2rem;
 }
@@ -5469,6 +5469,36 @@ a.text-dark:hover, a.text-dark:focus {
   --rz-danger-lighter: rgba(249, 119, 127, 0.2);
   --rz-danger-dark: #d1646b;
   --rz-danger-darker: #bb595f;
+  --rz-on-primary: #ffffff;
+  --rz-on-primary-light: #ffffff;
+  --rz-on-primary-lighter: #598087;
+  --rz-on-primary-dark: #ffffff;
+  --rz-on-primary-darker: #ffffff;
+  --rz-on-secondary: #ffffff;
+  --rz-on-secondary-light: #ffffff;
+  --rz-on-secondary-lighter: #80a4ab;
+  --rz-on-secondary-dark: #ffffff;
+  --rz-on-secondary-darker: #ffffff;
+  --rz-on-info: #ffffff;
+  --rz-on-info-light: #ffffff;
+  --rz-on-info-lighter: #2cc8c8;
+  --rz-on-info-dark: #ffffff;
+  --rz-on-info-darker: #ffffff;
+  --rz-on-success: #ffffff;
+  --rz-on-success-light: #ffffff;
+  --rz-on-success-lighter: #5dbf74;
+  --rz-on-success-dark: #ffffff;
+  --rz-on-success-darker: #ffffff;
+  --rz-on-warning: #ffffff;
+  --rz-on-warning-light: #ffffff;
+  --rz-on-warning-lighter: #fac152;
+  --rz-on-warning-dark: #ffffff;
+  --rz-on-warning-darker: #ffffff;
+  --rz-on-danger: #ffffff;
+  --rz-on-danger-light: #ffffff;
+  --rz-on-danger-lighter: #f9777f;
+  --rz-on-danger-dark: #ffffff;
+  --rz-on-danger-darker: #ffffff;
   --rz-series-1: #376df5;
   --rz-series-2: #64dfdf;
   --rz-series-3: #f68769;
@@ -5593,6 +5623,36 @@ a.text-dark:hover, a.text-dark:focus {
   --rz-border-danger-lighter: var(--rz-border-width) solid var(--rz-danger-lighter);
   --rz-border-danger-dark: var(--rz-border-width) solid var(--rz-danger-dark);
   --rz-border-danger-darker: var(--rz-border-width) solid var(--rz-danger-darker);
+  --rz-border-on-primary: var(--rz-border-width) solid var(--rz-on-primary);
+  --rz-border-on-primary-light: var(--rz-border-width) solid var(--rz-on-primary-light);
+  --rz-border-on-primary-lighter: var(--rz-border-width) solid var(--rz-on-primary-lighter);
+  --rz-border-on-primary-dark: var(--rz-border-width) solid var(--rz-on-primary-dark);
+  --rz-border-on-primary-darker: var(--rz-border-width) solid var(--rz-on-primary-darker);
+  --rz-border-on-secondary: var(--rz-border-width) solid var(--rz-on-secondary);
+  --rz-border-on-secondary-light: var(--rz-border-width) solid var(--rz-on-secondary-light);
+  --rz-border-on-secondary-lighter: var(--rz-border-width) solid var(--rz-on-secondary-lighter);
+  --rz-border-on-secondary-dark: var(--rz-border-width) solid var(--rz-on-secondary-dark);
+  --rz-border-on-secondary-darker: var(--rz-border-width) solid var(--rz-on-secondary-darker);
+  --rz-border-on-info: var(--rz-border-width) solid var(--rz-on-info);
+  --rz-border-on-info-light: var(--rz-border-width) solid var(--rz-on-info-light);
+  --rz-border-on-info-lighter: var(--rz-border-width) solid var(--rz-on-info-lighter);
+  --rz-border-on-info-dark: var(--rz-border-width) solid var(--rz-on-info-dark);
+  --rz-border-on-info-darker: var(--rz-border-width) solid var(--rz-on-info-darker);
+  --rz-border-on-success: var(--rz-border-width) solid var(--rz-on-success);
+  --rz-border-on-success-light: var(--rz-border-width) solid var(--rz-on-success-light);
+  --rz-border-on-success-lighter: var(--rz-border-width) solid var(--rz-on-success-lighter);
+  --rz-border-on-success-dark: var(--rz-border-width) solid var(--rz-on-success-dark);
+  --rz-border-on-success-darker: var(--rz-border-width) solid var(--rz-on-success-darker);
+  --rz-border-on-warning: var(--rz-border-width) solid var(--rz-on-warning);
+  --rz-border-on-warning-light: var(--rz-border-width) solid var(--rz-on-warning-light);
+  --rz-border-on-warning-lighter: var(--rz-border-width) solid var(--rz-on-warning-lighter);
+  --rz-border-on-warning-dark: var(--rz-border-width) solid var(--rz-on-warning-dark);
+  --rz-border-on-warning-darker: var(--rz-border-width) solid var(--rz-on-warning-darker);
+  --rz-border-on-danger: var(--rz-border-width) solid var(--rz-on-danger);
+  --rz-border-on-danger-light: var(--rz-border-width) solid var(--rz-on-danger-light);
+  --rz-border-on-danger-lighter: var(--rz-border-width) solid var(--rz-on-danger-lighter);
+  --rz-border-on-danger-dark: var(--rz-border-width) solid var(--rz-on-danger-dark);
+  --rz-border-on-danger-darker: var(--rz-border-width) solid var(--rz-on-danger-darker);
   --rz-border-series-1: var(--rz-border-width) solid var(--rz-series-1);
   --rz-border-series-2: var(--rz-border-width) solid var(--rz-series-2);
   --rz-border-series-3: var(--rz-border-width) solid var(--rz-series-3);
@@ -6201,6 +6261,126 @@ $rz-shadow-10: none !default; */
   color: var(--rz-danger-darker) !important;
 }
 
+.rz-color-on-primary {
+  color: var(--rz-on-primary) !important;
+}
+
+.rz-color-on-primary-light {
+  color: var(--rz-on-primary-light) !important;
+}
+
+.rz-color-on-primary-lighter {
+  color: var(--rz-on-primary-lighter) !important;
+}
+
+.rz-color-on-primary-dark {
+  color: var(--rz-on-primary-dark) !important;
+}
+
+.rz-color-on-primary-darker {
+  color: var(--rz-on-primary-darker) !important;
+}
+
+.rz-color-on-secondary {
+  color: var(--rz-on-secondary) !important;
+}
+
+.rz-color-on-secondary-light {
+  color: var(--rz-on-secondary-light) !important;
+}
+
+.rz-color-on-secondary-lighter {
+  color: var(--rz-on-secondary-lighter) !important;
+}
+
+.rz-color-on-secondary-dark {
+  color: var(--rz-on-secondary-dark) !important;
+}
+
+.rz-color-on-secondary-darker {
+  color: var(--rz-on-secondary-darker) !important;
+}
+
+.rz-color-on-info {
+  color: var(--rz-on-info) !important;
+}
+
+.rz-color-on-info-light {
+  color: var(--rz-on-info-light) !important;
+}
+
+.rz-color-on-info-lighter {
+  color: var(--rz-on-info-lighter) !important;
+}
+
+.rz-color-on-info-dark {
+  color: var(--rz-on-info-dark) !important;
+}
+
+.rz-color-on-info-darker {
+  color: var(--rz-on-info-darker) !important;
+}
+
+.rz-color-on-success {
+  color: var(--rz-on-success) !important;
+}
+
+.rz-color-on-success-light {
+  color: var(--rz-on-success-light) !important;
+}
+
+.rz-color-on-success-lighter {
+  color: var(--rz-on-success-lighter) !important;
+}
+
+.rz-color-on-success-dark {
+  color: var(--rz-on-success-dark) !important;
+}
+
+.rz-color-on-success-darker {
+  color: var(--rz-on-success-darker) !important;
+}
+
+.rz-color-on-warning {
+  color: var(--rz-on-warning) !important;
+}
+
+.rz-color-on-warning-light {
+  color: var(--rz-on-warning-light) !important;
+}
+
+.rz-color-on-warning-lighter {
+  color: var(--rz-on-warning-lighter) !important;
+}
+
+.rz-color-on-warning-dark {
+  color: var(--rz-on-warning-dark) !important;
+}
+
+.rz-color-on-warning-darker {
+  color: var(--rz-on-warning-darker) !important;
+}
+
+.rz-color-on-danger {
+  color: var(--rz-on-danger) !important;
+}
+
+.rz-color-on-danger-light {
+  color: var(--rz-on-danger-light) !important;
+}
+
+.rz-color-on-danger-lighter {
+  color: var(--rz-on-danger-lighter) !important;
+}
+
+.rz-color-on-danger-dark {
+  color: var(--rz-on-danger-dark) !important;
+}
+
+.rz-color-on-danger-darker {
+  color: var(--rz-on-danger-darker) !important;
+}
+
 .rz-color-series-1 {
   color: var(--rz-series-1) !important;
 }
@@ -6465,6 +6645,126 @@ $rz-shadow-10: none !default; */
   background-color: var(--rz-danger-darker) !important;
 }
 
+.rz-background-color-on-primary {
+  background-color: var(--rz-on-primary) !important;
+}
+
+.rz-background-color-on-primary-light {
+  background-color: var(--rz-on-primary-light) !important;
+}
+
+.rz-background-color-on-primary-lighter {
+  background-color: var(--rz-on-primary-lighter) !important;
+}
+
+.rz-background-color-on-primary-dark {
+  background-color: var(--rz-on-primary-dark) !important;
+}
+
+.rz-background-color-on-primary-darker {
+  background-color: var(--rz-on-primary-darker) !important;
+}
+
+.rz-background-color-on-secondary {
+  background-color: var(--rz-on-secondary) !important;
+}
+
+.rz-background-color-on-secondary-light {
+  background-color: var(--rz-on-secondary-light) !important;
+}
+
+.rz-background-color-on-secondary-lighter {
+  background-color: var(--rz-on-secondary-lighter) !important;
+}
+
+.rz-background-color-on-secondary-dark {
+  background-color: var(--rz-on-secondary-dark) !important;
+}
+
+.rz-background-color-on-secondary-darker {
+  background-color: var(--rz-on-secondary-darker) !important;
+}
+
+.rz-background-color-on-info {
+  background-color: var(--rz-on-info) !important;
+}
+
+.rz-background-color-on-info-light {
+  background-color: var(--rz-on-info-light) !important;
+}
+
+.rz-background-color-on-info-lighter {
+  background-color: var(--rz-on-info-lighter) !important;
+}
+
+.rz-background-color-on-info-dark {
+  background-color: var(--rz-on-info-dark) !important;
+}
+
+.rz-background-color-on-info-darker {
+  background-color: var(--rz-on-info-darker) !important;
+}
+
+.rz-background-color-on-success {
+  background-color: var(--rz-on-success) !important;
+}
+
+.rz-background-color-on-success-light {
+  background-color: var(--rz-on-success-light) !important;
+}
+
+.rz-background-color-on-success-lighter {
+  background-color: var(--rz-on-success-lighter) !important;
+}
+
+.rz-background-color-on-success-dark {
+  background-color: var(--rz-on-success-dark) !important;
+}
+
+.rz-background-color-on-success-darker {
+  background-color: var(--rz-on-success-darker) !important;
+}
+
+.rz-background-color-on-warning {
+  background-color: var(--rz-on-warning) !important;
+}
+
+.rz-background-color-on-warning-light {
+  background-color: var(--rz-on-warning-light) !important;
+}
+
+.rz-background-color-on-warning-lighter {
+  background-color: var(--rz-on-warning-lighter) !important;
+}
+
+.rz-background-color-on-warning-dark {
+  background-color: var(--rz-on-warning-dark) !important;
+}
+
+.rz-background-color-on-warning-darker {
+  background-color: var(--rz-on-warning-darker) !important;
+}
+
+.rz-background-color-on-danger {
+  background-color: var(--rz-on-danger) !important;
+}
+
+.rz-background-color-on-danger-light {
+  background-color: var(--rz-on-danger-light) !important;
+}
+
+.rz-background-color-on-danger-lighter {
+  background-color: var(--rz-on-danger-lighter) !important;
+}
+
+.rz-background-color-on-danger-dark {
+  background-color: var(--rz-on-danger-dark) !important;
+}
+
+.rz-background-color-on-danger-darker {
+  background-color: var(--rz-on-danger-darker) !important;
+}
+
 .rz-background-color-series-1 {
   background-color: var(--rz-series-1) !important;
 }
@@ -6727,6 +7027,126 @@ $rz-shadow-10: none !default; */
 
 .rz-border-color-danger-darker {
   border-color: var(--rz-danger-darker) !important;
+}
+
+.rz-border-color-on-primary {
+  border-color: var(--rz-on-primary) !important;
+}
+
+.rz-border-color-on-primary-light {
+  border-color: var(--rz-on-primary-light) !important;
+}
+
+.rz-border-color-on-primary-lighter {
+  border-color: var(--rz-on-primary-lighter) !important;
+}
+
+.rz-border-color-on-primary-dark {
+  border-color: var(--rz-on-primary-dark) !important;
+}
+
+.rz-border-color-on-primary-darker {
+  border-color: var(--rz-on-primary-darker) !important;
+}
+
+.rz-border-color-on-secondary {
+  border-color: var(--rz-on-secondary) !important;
+}
+
+.rz-border-color-on-secondary-light {
+  border-color: var(--rz-on-secondary-light) !important;
+}
+
+.rz-border-color-on-secondary-lighter {
+  border-color: var(--rz-on-secondary-lighter) !important;
+}
+
+.rz-border-color-on-secondary-dark {
+  border-color: var(--rz-on-secondary-dark) !important;
+}
+
+.rz-border-color-on-secondary-darker {
+  border-color: var(--rz-on-secondary-darker) !important;
+}
+
+.rz-border-color-on-info {
+  border-color: var(--rz-on-info) !important;
+}
+
+.rz-border-color-on-info-light {
+  border-color: var(--rz-on-info-light) !important;
+}
+
+.rz-border-color-on-info-lighter {
+  border-color: var(--rz-on-info-lighter) !important;
+}
+
+.rz-border-color-on-info-dark {
+  border-color: var(--rz-on-info-dark) !important;
+}
+
+.rz-border-color-on-info-darker {
+  border-color: var(--rz-on-info-darker) !important;
+}
+
+.rz-border-color-on-success {
+  border-color: var(--rz-on-success) !important;
+}
+
+.rz-border-color-on-success-light {
+  border-color: var(--rz-on-success-light) !important;
+}
+
+.rz-border-color-on-success-lighter {
+  border-color: var(--rz-on-success-lighter) !important;
+}
+
+.rz-border-color-on-success-dark {
+  border-color: var(--rz-on-success-dark) !important;
+}
+
+.rz-border-color-on-success-darker {
+  border-color: var(--rz-on-success-darker) !important;
+}
+
+.rz-border-color-on-warning {
+  border-color: var(--rz-on-warning) !important;
+}
+
+.rz-border-color-on-warning-light {
+  border-color: var(--rz-on-warning-light) !important;
+}
+
+.rz-border-color-on-warning-lighter {
+  border-color: var(--rz-on-warning-lighter) !important;
+}
+
+.rz-border-color-on-warning-dark {
+  border-color: var(--rz-on-warning-dark) !important;
+}
+
+.rz-border-color-on-warning-darker {
+  border-color: var(--rz-on-warning-darker) !important;
+}
+
+.rz-border-color-on-danger {
+  border-color: var(--rz-on-danger) !important;
+}
+
+.rz-border-color-on-danger-light {
+  border-color: var(--rz-on-danger-light) !important;
+}
+
+.rz-border-color-on-danger-lighter {
+  border-color: var(--rz-on-danger-lighter) !important;
+}
+
+.rz-border-color-on-danger-dark {
+  border-color: var(--rz-on-danger-dark) !important;
+}
+
+.rz-border-color-on-danger-darker {
+  border-color: var(--rz-on-danger-darker) !important;
 }
 
 .rz-border-color-series-1 {
@@ -7075,6 +7495,186 @@ $rz-shadow-10: none !default; */
   border-width: var(--rz-border-width);
   border-style: solid;
   border-color: var(--rz-danger-darker) !important;
+}
+
+.rz-border-on-primary {
+  border-width: var(--rz-border-width);
+  border-style: solid;
+  border-color: var(--rz-on-primary) !important;
+}
+
+.rz-border-on-primary-light {
+  border-width: var(--rz-border-width);
+  border-style: solid;
+  border-color: var(--rz-on-primary-light) !important;
+}
+
+.rz-border-on-primary-lighter {
+  border-width: var(--rz-border-width);
+  border-style: solid;
+  border-color: var(--rz-on-primary-lighter) !important;
+}
+
+.rz-border-on-primary-dark {
+  border-width: var(--rz-border-width);
+  border-style: solid;
+  border-color: var(--rz-on-primary-dark) !important;
+}
+
+.rz-border-on-primary-darker {
+  border-width: var(--rz-border-width);
+  border-style: solid;
+  border-color: var(--rz-on-primary-darker) !important;
+}
+
+.rz-border-on-secondary {
+  border-width: var(--rz-border-width);
+  border-style: solid;
+  border-color: var(--rz-on-secondary) !important;
+}
+
+.rz-border-on-secondary-light {
+  border-width: var(--rz-border-width);
+  border-style: solid;
+  border-color: var(--rz-on-secondary-light) !important;
+}
+
+.rz-border-on-secondary-lighter {
+  border-width: var(--rz-border-width);
+  border-style: solid;
+  border-color: var(--rz-on-secondary-lighter) !important;
+}
+
+.rz-border-on-secondary-dark {
+  border-width: var(--rz-border-width);
+  border-style: solid;
+  border-color: var(--rz-on-secondary-dark) !important;
+}
+
+.rz-border-on-secondary-darker {
+  border-width: var(--rz-border-width);
+  border-style: solid;
+  border-color: var(--rz-on-secondary-darker) !important;
+}
+
+.rz-border-on-info {
+  border-width: var(--rz-border-width);
+  border-style: solid;
+  border-color: var(--rz-on-info) !important;
+}
+
+.rz-border-on-info-light {
+  border-width: var(--rz-border-width);
+  border-style: solid;
+  border-color: var(--rz-on-info-light) !important;
+}
+
+.rz-border-on-info-lighter {
+  border-width: var(--rz-border-width);
+  border-style: solid;
+  border-color: var(--rz-on-info-lighter) !important;
+}
+
+.rz-border-on-info-dark {
+  border-width: var(--rz-border-width);
+  border-style: solid;
+  border-color: var(--rz-on-info-dark) !important;
+}
+
+.rz-border-on-info-darker {
+  border-width: var(--rz-border-width);
+  border-style: solid;
+  border-color: var(--rz-on-info-darker) !important;
+}
+
+.rz-border-on-success {
+  border-width: var(--rz-border-width);
+  border-style: solid;
+  border-color: var(--rz-on-success) !important;
+}
+
+.rz-border-on-success-light {
+  border-width: var(--rz-border-width);
+  border-style: solid;
+  border-color: var(--rz-on-success-light) !important;
+}
+
+.rz-border-on-success-lighter {
+  border-width: var(--rz-border-width);
+  border-style: solid;
+  border-color: var(--rz-on-success-lighter) !important;
+}
+
+.rz-border-on-success-dark {
+  border-width: var(--rz-border-width);
+  border-style: solid;
+  border-color: var(--rz-on-success-dark) !important;
+}
+
+.rz-border-on-success-darker {
+  border-width: var(--rz-border-width);
+  border-style: solid;
+  border-color: var(--rz-on-success-darker) !important;
+}
+
+.rz-border-on-warning {
+  border-width: var(--rz-border-width);
+  border-style: solid;
+  border-color: var(--rz-on-warning) !important;
+}
+
+.rz-border-on-warning-light {
+  border-width: var(--rz-border-width);
+  border-style: solid;
+  border-color: var(--rz-on-warning-light) !important;
+}
+
+.rz-border-on-warning-lighter {
+  border-width: var(--rz-border-width);
+  border-style: solid;
+  border-color: var(--rz-on-warning-lighter) !important;
+}
+
+.rz-border-on-warning-dark {
+  border-width: var(--rz-border-width);
+  border-style: solid;
+  border-color: var(--rz-on-warning-dark) !important;
+}
+
+.rz-border-on-warning-darker {
+  border-width: var(--rz-border-width);
+  border-style: solid;
+  border-color: var(--rz-on-warning-darker) !important;
+}
+
+.rz-border-on-danger {
+  border-width: var(--rz-border-width);
+  border-style: solid;
+  border-color: var(--rz-on-danger) !important;
+}
+
+.rz-border-on-danger-light {
+  border-width: var(--rz-border-width);
+  border-style: solid;
+  border-color: var(--rz-on-danger-light) !important;
+}
+
+.rz-border-on-danger-lighter {
+  border-width: var(--rz-border-width);
+  border-style: solid;
+  border-color: var(--rz-on-danger-lighter) !important;
+}
+
+.rz-border-on-danger-dark {
+  border-width: var(--rz-border-width);
+  border-style: solid;
+  border-color: var(--rz-on-danger-dark) !important;
+}
+
+.rz-border-on-danger-darker {
+  border-width: var(--rz-border-width);
+  border-style: solid;
+  border-color: var(--rz-on-danger-darker) !important;
 }
 
 .rz-border-series-1 {
@@ -13251,12 +13851,19 @@ label {
   margin-bottom: 0;
 }
 
+:root {
+  --rz-text-selection-background-color: var(--rz-primary-lighter);
+  --rz-text-selection-color: inherit;
+}
+
 ::selection {
-  background-color: var(--rz-primary-lighter);
+  background-color: var(--rz-text-selection-background-color);
+  color: var(--rz-text-selection-color);
 }
 
 .rz-layout ::selection {
-  background-color: var(--rz-primary-lighter);
+  background-color: var(--rz-text-selection-background-color);
+  color: var(--rz-text-selection-color);
 }
 
 .rzi, .rz-column-drag, .rz-datatable-loading-content .rzi-circle-o-notch, .rz-datatable-header .rzi-plus, .rz-sortable-column .rzi-grid-sort, .rz-datatable .rzi-chevron-circle-down, .rz-datatable .rzi-chevron-circle-right, .rz-fileupload-row .rz-button .rzi-close, .rz-fileupload-row .rz-paginator-element .rzi-close,
@@ -13457,28 +14064,32 @@ p-button[type] {
 
 .rz-button.rz-primary, .rz-primary.rz-paginator-element {
   background-color: var(--rz-primary);
-  color: var(--rz-text-contrast-color);
+  color: var(--rz-on-primary);
 }
 
 .rz-button.rz-primary.rz-shade-lighter, .rz-primary.rz-shade-lighter.rz-paginator-element {
   background-color: var(--rz-primary-lighter);
-  color: var(--rz-primary);
+  color: var(--rz-on-primary-lighter);
 }
 
 .rz-button.rz-primary.rz-shade-light, .rz-primary.rz-shade-light.rz-paginator-element {
   background-color: var(--rz-primary-light);
+  color: var(--rz-on-primary-light);
 }
 
 .rz-button.rz-primary.rz-shade-default, .rz-primary.rz-shade-default.rz-paginator-element {
   background-color: var(--rz-primary);
+  color: var(--rz-on-primary);
 }
 
 .rz-button.rz-primary.rz-shade-dark, .rz-primary.rz-shade-dark.rz-paginator-element {
   background-color: var(--rz-primary-dark);
+  color: var(--rz-on-primary-dark);
 }
 
 .rz-button.rz-primary.rz-shade-darker, .rz-primary.rz-shade-darker.rz-paginator-element {
   background-color: var(--rz-primary-darker);
+  color: var(--rz-on-primary-darker);
 }
 
 .rz-button.rz-primary.rz-variant-flat, .rz-primary.rz-variant-flat.rz-paginator-element {
@@ -13501,23 +14112,27 @@ p-button[type] {
 
 .rz-button.rz-base.rz-shade-lighter, .rz-base.rz-shade-lighter.rz-paginator-element {
   background-color: var(--rz-base-lighter);
-  color: var(--rz-base);
+  color: var(--rz-on-base-lighter);
 }
 
 .rz-button.rz-base.rz-shade-light, .rz-base.rz-shade-light.rz-paginator-element {
   background-color: var(--rz-base-light);
+  color: var(--rz-on-base-light);
 }
 
 .rz-button.rz-base.rz-shade-default, .rz-base.rz-shade-default.rz-paginator-element {
   background-color: var(--rz-base);
+  color: var(--rz-on-base);
 }
 
 .rz-button.rz-base.rz-shade-dark, .rz-base.rz-shade-dark.rz-paginator-element {
   background-color: var(--rz-base-dark);
+  color: var(--rz-on-base-dark);
 }
 
 .rz-button.rz-base.rz-shade-darker, .rz-base.rz-shade-darker.rz-paginator-element {
   background-color: var(--rz-base-darker);
+  color: var(--rz-on-base-darker);
 }
 
 .rz-button.rz-base.rz-variant-flat, .rz-base.rz-variant-flat.rz-paginator-element {
@@ -13535,28 +14150,32 @@ p-button[type] {
 
 .rz-button.rz-secondary, .rz-secondary.rz-paginator-element {
   background-color: var(--rz-secondary);
-  color: var(--rz-text-contrast-color);
+  color: var(--rz-on-secondary);
 }
 
 .rz-button.rz-secondary.rz-shade-lighter, .rz-secondary.rz-shade-lighter.rz-paginator-element {
   background-color: var(--rz-secondary-lighter);
-  color: var(--rz-secondary);
+  color: var(--rz-on-secondary-lighter);
 }
 
 .rz-button.rz-secondary.rz-shade-light, .rz-secondary.rz-shade-light.rz-paginator-element {
   background-color: var(--rz-secondary-light);
+  color: var(--rz-on-secondary-light);
 }
 
 .rz-button.rz-secondary.rz-shade-default, .rz-secondary.rz-shade-default.rz-paginator-element {
   background-color: var(--rz-secondary);
+  color: var(--rz-on-secondary);
 }
 
 .rz-button.rz-secondary.rz-shade-dark, .rz-secondary.rz-shade-dark.rz-paginator-element {
   background-color: var(--rz-secondary-dark);
+  color: var(--rz-on-secondary-dark);
 }
 
 .rz-button.rz-secondary.rz-shade-darker, .rz-secondary.rz-shade-darker.rz-paginator-element {
   background-color: var(--rz-secondary-darker);
+  color: var(--rz-on-secondary-darker);
 }
 
 .rz-button.rz-secondary.rz-variant-flat, .rz-secondary.rz-variant-flat.rz-paginator-element {
@@ -13565,28 +14184,32 @@ p-button[type] {
 
 .rz-button.rz-info, .rz-info.rz-paginator-element {
   background-color: var(--rz-info);
-  color: var(--rz-text-contrast-color);
+  color: var(--rz-on-info);
 }
 
 .rz-button.rz-info.rz-shade-lighter, .rz-info.rz-shade-lighter.rz-paginator-element {
   background-color: var(--rz-info-lighter);
-  color: var(--rz-info);
+  color: var(--rz-on-info-lighter);
 }
 
 .rz-button.rz-info.rz-shade-light, .rz-info.rz-shade-light.rz-paginator-element {
   background-color: var(--rz-info-light);
+  color: var(--rz-on-info-light);
 }
 
 .rz-button.rz-info.rz-shade-default, .rz-info.rz-shade-default.rz-paginator-element {
   background-color: var(--rz-info);
+  color: var(--rz-on-info);
 }
 
 .rz-button.rz-info.rz-shade-dark, .rz-info.rz-shade-dark.rz-paginator-element {
   background-color: var(--rz-info-dark);
+  color: var(--rz-on-info-dark);
 }
 
 .rz-button.rz-info.rz-shade-darker, .rz-info.rz-shade-darker.rz-paginator-element {
   background-color: var(--rz-info-darker);
+  color: var(--rz-on-info-darker);
 }
 
 .rz-button.rz-info.rz-variant-flat, .rz-info.rz-variant-flat.rz-paginator-element {
@@ -13595,28 +14218,32 @@ p-button[type] {
 
 .rz-button.rz-warning, .rz-warning.rz-paginator-element {
   background-color: var(--rz-warning);
-  color: var(--rz-text-contrast-color);
+  color: var(--rz-on-warning);
 }
 
 .rz-button.rz-warning.rz-shade-lighter, .rz-warning.rz-shade-lighter.rz-paginator-element {
   background-color: var(--rz-warning-lighter);
-  color: var(--rz-warning);
+  color: var(--rz-on-warning-lighter);
 }
 
 .rz-button.rz-warning.rz-shade-light, .rz-warning.rz-shade-light.rz-paginator-element {
   background-color: var(--rz-warning-light);
+  color: var(--rz-on-warning-light);
 }
 
 .rz-button.rz-warning.rz-shade-default, .rz-warning.rz-shade-default.rz-paginator-element {
   background-color: var(--rz-warning);
+  color: var(--rz-on-warning);
 }
 
 .rz-button.rz-warning.rz-shade-dark, .rz-warning.rz-shade-dark.rz-paginator-element {
   background-color: var(--rz-warning-dark);
+  color: var(--rz-on-warning-dark);
 }
 
 .rz-button.rz-warning.rz-shade-darker, .rz-warning.rz-shade-darker.rz-paginator-element {
   background-color: var(--rz-warning-darker);
+  color: var(--rz-on-warning-darker);
 }
 
 .rz-button.rz-warning.rz-variant-flat, .rz-warning.rz-variant-flat.rz-paginator-element {
@@ -13625,28 +14252,32 @@ p-button[type] {
 
 .rz-button.rz-error, .rz-error.rz-paginator-element {
   background-color: var(--rz-danger);
-  color: var(--rz-text-contrast-color);
+  color: var(--rz-on-danger);
 }
 
 .rz-button.rz-error.rz-shade-lighter, .rz-error.rz-shade-lighter.rz-paginator-element {
   background-color: var(--rz-error-lighter);
-  color: var(--rz-error);
+  color: var(--rz-on-error-lighter);
 }
 
 .rz-button.rz-error.rz-shade-light, .rz-error.rz-shade-light.rz-paginator-element {
   background-color: var(--rz-error-light);
+  color: var(--rz-on-error-light);
 }
 
 .rz-button.rz-error.rz-shade-default, .rz-error.rz-shade-default.rz-paginator-element {
   background-color: var(--rz-error);
+  color: var(--rz-on-error);
 }
 
 .rz-button.rz-error.rz-shade-dark, .rz-error.rz-shade-dark.rz-paginator-element {
   background-color: var(--rz-error-dark);
+  color: var(--rz-on-error-dark);
 }
 
 .rz-button.rz-error.rz-shade-darker, .rz-error.rz-shade-darker.rz-paginator-element {
   background-color: var(--rz-error-darker);
+  color: var(--rz-on-error-darker);
 }
 
 .rz-button.rz-error.rz-variant-flat, .rz-error.rz-variant-flat.rz-paginator-element {
@@ -13655,28 +14286,32 @@ p-button[type] {
 
 .rz-button.rz-danger, .rz-danger.rz-paginator-element {
   background-color: var(--rz-danger);
-  color: var(--rz-text-contrast-color);
+  color: var(--rz-on-danger);
 }
 
 .rz-button.rz-danger.rz-shade-lighter, .rz-danger.rz-shade-lighter.rz-paginator-element {
   background-color: var(--rz-danger-lighter);
-  color: var(--rz-danger);
+  color: var(--rz-on-danger-lighter);
 }
 
 .rz-button.rz-danger.rz-shade-light, .rz-danger.rz-shade-light.rz-paginator-element {
   background-color: var(--rz-danger-light);
+  color: var(--rz-on-danger-light);
 }
 
 .rz-button.rz-danger.rz-shade-default, .rz-danger.rz-shade-default.rz-paginator-element {
   background-color: var(--rz-danger);
+  color: var(--rz-on-danger);
 }
 
 .rz-button.rz-danger.rz-shade-dark, .rz-danger.rz-shade-dark.rz-paginator-element {
   background-color: var(--rz-danger-dark);
+  color: var(--rz-on-danger-dark);
 }
 
 .rz-button.rz-danger.rz-shade-darker, .rz-danger.rz-shade-darker.rz-paginator-element {
   background-color: var(--rz-danger-darker);
+  color: var(--rz-on-danger-darker);
 }
 
 .rz-button.rz-danger.rz-variant-flat, .rz-danger.rz-variant-flat.rz-paginator-element {
@@ -13685,28 +14320,32 @@ p-button[type] {
 
 .rz-button.rz-success, .rz-success.rz-paginator-element {
   background-color: var(--rz-success);
-  color: var(--rz-text-contrast-color);
+  color: var(--rz-on-success);
 }
 
 .rz-button.rz-success.rz-shade-lighter, .rz-success.rz-shade-lighter.rz-paginator-element {
   background-color: var(--rz-success-lighter);
-  color: var(--rz-success);
+  color: var(--rz-on-success-lighter);
 }
 
 .rz-button.rz-success.rz-shade-light, .rz-success.rz-shade-light.rz-paginator-element {
   background-color: var(--rz-success-light);
+  color: var(--rz-on-success-light);
 }
 
 .rz-button.rz-success.rz-shade-default, .rz-success.rz-shade-default.rz-paginator-element {
   background-color: var(--rz-success);
+  color: var(--rz-on-success);
 }
 
 .rz-button.rz-success.rz-shade-dark, .rz-success.rz-shade-dark.rz-paginator-element {
   background-color: var(--rz-success-dark);
+  color: var(--rz-on-success-dark);
 }
 
 .rz-button.rz-success.rz-shade-darker, .rz-success.rz-shade-darker.rz-paginator-element {
   background-color: var(--rz-success-darker);
+  color: var(--rz-on-success-darker);
 }
 
 .rz-button.rz-success.rz-variant-flat, .rz-success.rz-variant-flat.rz-paginator-element {
@@ -13744,11 +14383,8 @@ p-button[type] {
 
 .rz-button.rz-variant-outlined.rz-primary:not(.rz-state-disabled):hover:not(:active), .rz-variant-outlined.rz-primary.rz-paginator-element:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-primary:not(.rz-state-disabled):focus:not(:active), .rz-variant-outlined.rz-primary.rz-paginator-element:not(.rz-state-disabled):focus:not(:active), .rz-button.rz-variant-outlined.rz-primary:not(.rz-state-disabled):active, .rz-variant-outlined.rz-primary.rz-paginator-element:not(.rz-state-disabled):active {
   background-color: var(--rz-primary-lighter);
+  color: var(--rz-on-primary-lighter);
   background-image: none;
-}
-
-.rz-button.rz-variant-outlined.rz-primary:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-variant-outlined.rz-primary.rz-paginator-element:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-button.rz-variant-outlined.rz-primary:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-variant-outlined.rz-primary.rz-paginator-element:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-button.rz-variant-outlined.rz-primary:not(.rz-state-disabled):active.rz-shade-lighter, .rz-variant-outlined.rz-primary.rz-paginator-element:not(.rz-state-disabled):active.rz-shade-lighter {
-  color: var(--rz-primary);
 }
 
 .rz-button.rz-variant-outlined.rz-light, .rz-variant-outlined.rz-light.rz-paginator-element {
@@ -13763,10 +14399,6 @@ p-button[type] {
 .rz-button.rz-variant-outlined.rz-light:not(.rz-state-disabled):hover:not(:active), .rz-variant-outlined.rz-light.rz-paginator-element:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-light:not(.rz-state-disabled):focus:not(:active), .rz-variant-outlined.rz-light.rz-paginator-element:not(.rz-state-disabled):focus:not(:active), .rz-button.rz-variant-outlined.rz-light:not(.rz-state-disabled):active, .rz-variant-outlined.rz-light.rz-paginator-element:not(.rz-state-disabled):active {
   background-color: rgba(255, 255, 255, 0.12);
   background-image: none;
-}
-
-.rz-button.rz-variant-outlined.rz-light:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-variant-outlined.rz-light.rz-paginator-element:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-button.rz-variant-outlined.rz-light:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-variant-outlined.rz-light.rz-paginator-element:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-button.rz-variant-outlined.rz-light:not(.rz-state-disabled):active.rz-shade-lighter, .rz-variant-outlined.rz-light.rz-paginator-element:not(.rz-state-disabled):active.rz-shade-lighter {
-  color: var(--rz-light);
 }
 
 .rz-button.rz-variant-outlined.rz-base, .rz-variant-outlined.rz-base.rz-paginator-element {
@@ -13800,11 +14432,8 @@ p-button[type] {
 
 .rz-button.rz-variant-outlined.rz-base:not(.rz-state-disabled):hover:not(:active), .rz-variant-outlined.rz-base.rz-paginator-element:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-base:not(.rz-state-disabled):focus:not(:active), .rz-variant-outlined.rz-base.rz-paginator-element:not(.rz-state-disabled):focus:not(:active), .rz-button.rz-variant-outlined.rz-base:not(.rz-state-disabled):active, .rz-variant-outlined.rz-base.rz-paginator-element:not(.rz-state-disabled):active {
   background-color: var(--rz-base-lighter);
+  color: var(--rz-on-base-lighter);
   background-image: none;
-}
-
-.rz-button.rz-variant-outlined.rz-base:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-variant-outlined.rz-base.rz-paginator-element:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-button.rz-variant-outlined.rz-base:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-variant-outlined.rz-base.rz-paginator-element:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-button.rz-variant-outlined.rz-base:not(.rz-state-disabled):active.rz-shade-lighter, .rz-variant-outlined.rz-base.rz-paginator-element:not(.rz-state-disabled):active.rz-shade-lighter {
-  color: var(--rz-base);
 }
 
 .rz-button.rz-variant-outlined.rz-dark, .rz-variant-outlined.rz-dark.rz-paginator-element {
@@ -13819,10 +14448,6 @@ p-button[type] {
 .rz-button.rz-variant-outlined.rz-dark:not(.rz-state-disabled):hover:not(:active), .rz-variant-outlined.rz-dark.rz-paginator-element:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-dark:not(.rz-state-disabled):focus:not(:active), .rz-variant-outlined.rz-dark.rz-paginator-element:not(.rz-state-disabled):focus:not(:active), .rz-button.rz-variant-outlined.rz-dark:not(.rz-state-disabled):active, .rz-variant-outlined.rz-dark.rz-paginator-element:not(.rz-state-disabled):active {
   background-color: rgba(0, 0, 0, 0.12);
   background-image: none;
-}
-
-.rz-button.rz-variant-outlined.rz-dark:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-variant-outlined.rz-dark.rz-paginator-element:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-button.rz-variant-outlined.rz-dark:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-variant-outlined.rz-dark.rz-paginator-element:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-button.rz-variant-outlined.rz-dark:not(.rz-state-disabled):active.rz-shade-lighter, .rz-variant-outlined.rz-dark.rz-paginator-element:not(.rz-state-disabled):active.rz-shade-lighter {
-  color: var(--rz-dark);
 }
 
 .rz-button.rz-variant-outlined.rz-secondary, .rz-variant-outlined.rz-secondary.rz-paginator-element {
@@ -13856,11 +14481,8 @@ p-button[type] {
 
 .rz-button.rz-variant-outlined.rz-secondary:not(.rz-state-disabled):hover:not(:active), .rz-variant-outlined.rz-secondary.rz-paginator-element:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-secondary:not(.rz-state-disabled):focus:not(:active), .rz-variant-outlined.rz-secondary.rz-paginator-element:not(.rz-state-disabled):focus:not(:active), .rz-button.rz-variant-outlined.rz-secondary:not(.rz-state-disabled):active, .rz-variant-outlined.rz-secondary.rz-paginator-element:not(.rz-state-disabled):active {
   background-color: var(--rz-secondary-lighter);
+  color: var(--rz-on-secondary-lighter);
   background-image: none;
-}
-
-.rz-button.rz-variant-outlined.rz-secondary:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-variant-outlined.rz-secondary.rz-paginator-element:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-button.rz-variant-outlined.rz-secondary:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-variant-outlined.rz-secondary.rz-paginator-element:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-button.rz-variant-outlined.rz-secondary:not(.rz-state-disabled):active.rz-shade-lighter, .rz-variant-outlined.rz-secondary.rz-paginator-element:not(.rz-state-disabled):active.rz-shade-lighter {
-  color: var(--rz-secondary);
 }
 
 .rz-button.rz-variant-outlined.rz-info, .rz-variant-outlined.rz-info.rz-paginator-element {
@@ -13894,11 +14516,8 @@ p-button[type] {
 
 .rz-button.rz-variant-outlined.rz-info:not(.rz-state-disabled):hover:not(:active), .rz-variant-outlined.rz-info.rz-paginator-element:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-info:not(.rz-state-disabled):focus:not(:active), .rz-variant-outlined.rz-info.rz-paginator-element:not(.rz-state-disabled):focus:not(:active), .rz-button.rz-variant-outlined.rz-info:not(.rz-state-disabled):active, .rz-variant-outlined.rz-info.rz-paginator-element:not(.rz-state-disabled):active {
   background-color: var(--rz-info-lighter);
+  color: var(--rz-on-info-lighter);
   background-image: none;
-}
-
-.rz-button.rz-variant-outlined.rz-info:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-variant-outlined.rz-info.rz-paginator-element:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-button.rz-variant-outlined.rz-info:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-variant-outlined.rz-info.rz-paginator-element:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-button.rz-variant-outlined.rz-info:not(.rz-state-disabled):active.rz-shade-lighter, .rz-variant-outlined.rz-info.rz-paginator-element:not(.rz-state-disabled):active.rz-shade-lighter {
-  color: var(--rz-info);
 }
 
 .rz-button.rz-variant-outlined.rz-warning, .rz-variant-outlined.rz-warning.rz-paginator-element {
@@ -13932,11 +14551,8 @@ p-button[type] {
 
 .rz-button.rz-variant-outlined.rz-warning:not(.rz-state-disabled):hover:not(:active), .rz-variant-outlined.rz-warning.rz-paginator-element:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-warning:not(.rz-state-disabled):focus:not(:active), .rz-variant-outlined.rz-warning.rz-paginator-element:not(.rz-state-disabled):focus:not(:active), .rz-button.rz-variant-outlined.rz-warning:not(.rz-state-disabled):active, .rz-variant-outlined.rz-warning.rz-paginator-element:not(.rz-state-disabled):active {
   background-color: var(--rz-warning-lighter);
+  color: var(--rz-on-warning-lighter);
   background-image: none;
-}
-
-.rz-button.rz-variant-outlined.rz-warning:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-variant-outlined.rz-warning.rz-paginator-element:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-button.rz-variant-outlined.rz-warning:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-variant-outlined.rz-warning.rz-paginator-element:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-button.rz-variant-outlined.rz-warning:not(.rz-state-disabled):active.rz-shade-lighter, .rz-variant-outlined.rz-warning.rz-paginator-element:not(.rz-state-disabled):active.rz-shade-lighter {
-  color: var(--rz-warning);
 }
 
 .rz-button.rz-variant-outlined.rz-error, .rz-variant-outlined.rz-error.rz-paginator-element {
@@ -13970,11 +14586,8 @@ p-button[type] {
 
 .rz-button.rz-variant-outlined.rz-error:not(.rz-state-disabled):hover:not(:active), .rz-variant-outlined.rz-error.rz-paginator-element:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-error:not(.rz-state-disabled):focus:not(:active), .rz-variant-outlined.rz-error.rz-paginator-element:not(.rz-state-disabled):focus:not(:active), .rz-button.rz-variant-outlined.rz-error:not(.rz-state-disabled):active, .rz-variant-outlined.rz-error.rz-paginator-element:not(.rz-state-disabled):active {
   background-color: var(--rz-error-lighter);
+  color: var(--rz-on-error-lighter);
   background-image: none;
-}
-
-.rz-button.rz-variant-outlined.rz-error:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-variant-outlined.rz-error.rz-paginator-element:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-button.rz-variant-outlined.rz-error:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-variant-outlined.rz-error.rz-paginator-element:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-button.rz-variant-outlined.rz-error:not(.rz-state-disabled):active.rz-shade-lighter, .rz-variant-outlined.rz-error.rz-paginator-element:not(.rz-state-disabled):active.rz-shade-lighter {
-  color: var(--rz-error);
 }
 
 .rz-button.rz-variant-outlined.rz-danger, .rz-variant-outlined.rz-danger.rz-paginator-element {
@@ -14008,11 +14621,8 @@ p-button[type] {
 
 .rz-button.rz-variant-outlined.rz-danger:not(.rz-state-disabled):hover:not(:active), .rz-variant-outlined.rz-danger.rz-paginator-element:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-danger:not(.rz-state-disabled):focus:not(:active), .rz-variant-outlined.rz-danger.rz-paginator-element:not(.rz-state-disabled):focus:not(:active), .rz-button.rz-variant-outlined.rz-danger:not(.rz-state-disabled):active, .rz-variant-outlined.rz-danger.rz-paginator-element:not(.rz-state-disabled):active {
   background-color: var(--rz-danger-lighter);
+  color: var(--rz-on-danger-lighter);
   background-image: none;
-}
-
-.rz-button.rz-variant-outlined.rz-danger:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-variant-outlined.rz-danger.rz-paginator-element:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-button.rz-variant-outlined.rz-danger:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-variant-outlined.rz-danger.rz-paginator-element:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-button.rz-variant-outlined.rz-danger:not(.rz-state-disabled):active.rz-shade-lighter, .rz-variant-outlined.rz-danger.rz-paginator-element:not(.rz-state-disabled):active.rz-shade-lighter {
-  color: var(--rz-danger);
 }
 
 .rz-button.rz-variant-outlined.rz-success, .rz-variant-outlined.rz-success.rz-paginator-element {
@@ -14046,11 +14656,8 @@ p-button[type] {
 
 .rz-button.rz-variant-outlined.rz-success:not(.rz-state-disabled):hover:not(:active), .rz-variant-outlined.rz-success.rz-paginator-element:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-outlined.rz-success:not(.rz-state-disabled):focus:not(:active), .rz-variant-outlined.rz-success.rz-paginator-element:not(.rz-state-disabled):focus:not(:active), .rz-button.rz-variant-outlined.rz-success:not(.rz-state-disabled):active, .rz-variant-outlined.rz-success.rz-paginator-element:not(.rz-state-disabled):active {
   background-color: var(--rz-success-lighter);
+  color: var(--rz-on-success-lighter);
   background-image: none;
-}
-
-.rz-button.rz-variant-outlined.rz-success:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-variant-outlined.rz-success.rz-paginator-element:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-button.rz-variant-outlined.rz-success:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-variant-outlined.rz-success.rz-paginator-element:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-button.rz-variant-outlined.rz-success:not(.rz-state-disabled):active.rz-shade-lighter, .rz-variant-outlined.rz-success.rz-paginator-element:not(.rz-state-disabled):active.rz-shade-lighter {
-  color: var(--rz-success);
 }
 
 .rz-button.rz-variant-text.rz-primary, .rz-variant-text.rz-primary.rz-paginator-element {
@@ -14080,12 +14687,9 @@ p-button[type] {
 
 .rz-button.rz-variant-text.rz-primary:not(.rz-state-disabled):hover:not(:active), .rz-variant-text.rz-primary.rz-paginator-element:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-text.rz-primary:not(.rz-state-disabled):focus:not(:active), .rz-variant-text.rz-primary.rz-paginator-element:not(.rz-state-disabled):focus:not(:active), .rz-button.rz-variant-text.rz-primary:not(.rz-state-disabled):active, .rz-variant-text.rz-primary.rz-paginator-element:not(.rz-state-disabled):active {
   background-color: var(--rz-primary-lighter);
+  color: var(--rz-on-primary-lighter);
   background-image: none;
   box-shadow: none;
-}
-
-.rz-button.rz-variant-text.rz-primary:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-variant-text.rz-primary.rz-paginator-element:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-button.rz-variant-text.rz-primary:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-variant-text.rz-primary.rz-paginator-element:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-button.rz-variant-text.rz-primary:not(.rz-state-disabled):active.rz-shade-lighter, .rz-variant-text.rz-primary.rz-paginator-element:not(.rz-state-disabled):active.rz-shade-lighter {
-  color: var(--rz-primary);
 }
 
 .rz-button.rz-variant-text.rz-light, .rz-variant-text.rz-light.rz-paginator-element {
@@ -14098,10 +14702,6 @@ p-button[type] {
   background-color: rgba(255, 255, 255, 0.12);
   background-image: none;
   box-shadow: none;
-}
-
-.rz-button.rz-variant-text.rz-light:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-variant-text.rz-light.rz-paginator-element:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-button.rz-variant-text.rz-light:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-variant-text.rz-light.rz-paginator-element:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-button.rz-variant-text.rz-light:not(.rz-state-disabled):active.rz-shade-lighter, .rz-variant-text.rz-light.rz-paginator-element:not(.rz-state-disabled):active.rz-shade-lighter {
-  color: var(--rz-light);
 }
 
 .rz-button.rz-variant-text.rz-base, .rz-variant-text.rz-base.rz-paginator-element {
@@ -14131,12 +14731,9 @@ p-button[type] {
 
 .rz-button.rz-variant-text.rz-base:not(.rz-state-disabled):hover:not(:active), .rz-variant-text.rz-base.rz-paginator-element:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-text.rz-base:not(.rz-state-disabled):focus:not(:active), .rz-variant-text.rz-base.rz-paginator-element:not(.rz-state-disabled):focus:not(:active), .rz-button.rz-variant-text.rz-base:not(.rz-state-disabled):active, .rz-variant-text.rz-base.rz-paginator-element:not(.rz-state-disabled):active {
   background-color: var(--rz-base-lighter);
+  color: var(--rz-on-base-lighter);
   background-image: none;
   box-shadow: none;
-}
-
-.rz-button.rz-variant-text.rz-base:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-variant-text.rz-base.rz-paginator-element:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-button.rz-variant-text.rz-base:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-variant-text.rz-base.rz-paginator-element:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-button.rz-variant-text.rz-base:not(.rz-state-disabled):active.rz-shade-lighter, .rz-variant-text.rz-base.rz-paginator-element:not(.rz-state-disabled):active.rz-shade-lighter {
-  color: var(--rz-base);
 }
 
 .rz-button.rz-variant-text.rz-dark, .rz-variant-text.rz-dark.rz-paginator-element {
@@ -14149,10 +14746,6 @@ p-button[type] {
   background-color: rgba(0, 0, 0, 0.12);
   background-image: none;
   box-shadow: none;
-}
-
-.rz-button.rz-variant-text.rz-dark:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-variant-text.rz-dark.rz-paginator-element:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-button.rz-variant-text.rz-dark:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-variant-text.rz-dark.rz-paginator-element:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-button.rz-variant-text.rz-dark:not(.rz-state-disabled):active.rz-shade-lighter, .rz-variant-text.rz-dark.rz-paginator-element:not(.rz-state-disabled):active.rz-shade-lighter {
-  color: var(--rz-dark);
 }
 
 .rz-button.rz-variant-text.rz-secondary, .rz-variant-text.rz-secondary.rz-paginator-element {
@@ -14182,12 +14775,9 @@ p-button[type] {
 
 .rz-button.rz-variant-text.rz-secondary:not(.rz-state-disabled):hover:not(:active), .rz-variant-text.rz-secondary.rz-paginator-element:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-text.rz-secondary:not(.rz-state-disabled):focus:not(:active), .rz-variant-text.rz-secondary.rz-paginator-element:not(.rz-state-disabled):focus:not(:active), .rz-button.rz-variant-text.rz-secondary:not(.rz-state-disabled):active, .rz-variant-text.rz-secondary.rz-paginator-element:not(.rz-state-disabled):active {
   background-color: var(--rz-secondary-lighter);
+  color: var(--rz-on-secondary-lighter);
   background-image: none;
   box-shadow: none;
-}
-
-.rz-button.rz-variant-text.rz-secondary:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-variant-text.rz-secondary.rz-paginator-element:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-button.rz-variant-text.rz-secondary:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-variant-text.rz-secondary.rz-paginator-element:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-button.rz-variant-text.rz-secondary:not(.rz-state-disabled):active.rz-shade-lighter, .rz-variant-text.rz-secondary.rz-paginator-element:not(.rz-state-disabled):active.rz-shade-lighter {
-  color: var(--rz-secondary);
 }
 
 .rz-button.rz-variant-text.rz-info, .rz-variant-text.rz-info.rz-paginator-element {
@@ -14217,12 +14807,9 @@ p-button[type] {
 
 .rz-button.rz-variant-text.rz-info:not(.rz-state-disabled):hover:not(:active), .rz-variant-text.rz-info.rz-paginator-element:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-text.rz-info:not(.rz-state-disabled):focus:not(:active), .rz-variant-text.rz-info.rz-paginator-element:not(.rz-state-disabled):focus:not(:active), .rz-button.rz-variant-text.rz-info:not(.rz-state-disabled):active, .rz-variant-text.rz-info.rz-paginator-element:not(.rz-state-disabled):active {
   background-color: var(--rz-info-lighter);
+  color: var(--rz-on-info-lighter);
   background-image: none;
   box-shadow: none;
-}
-
-.rz-button.rz-variant-text.rz-info:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-variant-text.rz-info.rz-paginator-element:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-button.rz-variant-text.rz-info:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-variant-text.rz-info.rz-paginator-element:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-button.rz-variant-text.rz-info:not(.rz-state-disabled):active.rz-shade-lighter, .rz-variant-text.rz-info.rz-paginator-element:not(.rz-state-disabled):active.rz-shade-lighter {
-  color: var(--rz-info);
 }
 
 .rz-button.rz-variant-text.rz-warning, .rz-variant-text.rz-warning.rz-paginator-element {
@@ -14252,12 +14839,9 @@ p-button[type] {
 
 .rz-button.rz-variant-text.rz-warning:not(.rz-state-disabled):hover:not(:active), .rz-variant-text.rz-warning.rz-paginator-element:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-text.rz-warning:not(.rz-state-disabled):focus:not(:active), .rz-variant-text.rz-warning.rz-paginator-element:not(.rz-state-disabled):focus:not(:active), .rz-button.rz-variant-text.rz-warning:not(.rz-state-disabled):active, .rz-variant-text.rz-warning.rz-paginator-element:not(.rz-state-disabled):active {
   background-color: var(--rz-warning-lighter);
+  color: var(--rz-on-warning-lighter);
   background-image: none;
   box-shadow: none;
-}
-
-.rz-button.rz-variant-text.rz-warning:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-variant-text.rz-warning.rz-paginator-element:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-button.rz-variant-text.rz-warning:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-variant-text.rz-warning.rz-paginator-element:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-button.rz-variant-text.rz-warning:not(.rz-state-disabled):active.rz-shade-lighter, .rz-variant-text.rz-warning.rz-paginator-element:not(.rz-state-disabled):active.rz-shade-lighter {
-  color: var(--rz-warning);
 }
 
 .rz-button.rz-variant-text.rz-error, .rz-variant-text.rz-error.rz-paginator-element {
@@ -14287,12 +14871,9 @@ p-button[type] {
 
 .rz-button.rz-variant-text.rz-error:not(.rz-state-disabled):hover:not(:active), .rz-variant-text.rz-error.rz-paginator-element:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-text.rz-error:not(.rz-state-disabled):focus:not(:active), .rz-variant-text.rz-error.rz-paginator-element:not(.rz-state-disabled):focus:not(:active), .rz-button.rz-variant-text.rz-error:not(.rz-state-disabled):active, .rz-variant-text.rz-error.rz-paginator-element:not(.rz-state-disabled):active {
   background-color: var(--rz-error-lighter);
+  color: var(--rz-on-error-lighter);
   background-image: none;
   box-shadow: none;
-}
-
-.rz-button.rz-variant-text.rz-error:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-variant-text.rz-error.rz-paginator-element:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-button.rz-variant-text.rz-error:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-variant-text.rz-error.rz-paginator-element:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-button.rz-variant-text.rz-error:not(.rz-state-disabled):active.rz-shade-lighter, .rz-variant-text.rz-error.rz-paginator-element:not(.rz-state-disabled):active.rz-shade-lighter {
-  color: var(--rz-error);
 }
 
 .rz-button.rz-variant-text.rz-danger, .rz-variant-text.rz-danger.rz-paginator-element {
@@ -14322,12 +14903,9 @@ p-button[type] {
 
 .rz-button.rz-variant-text.rz-danger:not(.rz-state-disabled):hover:not(:active), .rz-variant-text.rz-danger.rz-paginator-element:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-text.rz-danger:not(.rz-state-disabled):focus:not(:active), .rz-variant-text.rz-danger.rz-paginator-element:not(.rz-state-disabled):focus:not(:active), .rz-button.rz-variant-text.rz-danger:not(.rz-state-disabled):active, .rz-variant-text.rz-danger.rz-paginator-element:not(.rz-state-disabled):active {
   background-color: var(--rz-danger-lighter);
+  color: var(--rz-on-danger-lighter);
   background-image: none;
   box-shadow: none;
-}
-
-.rz-button.rz-variant-text.rz-danger:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-variant-text.rz-danger.rz-paginator-element:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-button.rz-variant-text.rz-danger:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-variant-text.rz-danger.rz-paginator-element:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-button.rz-variant-text.rz-danger:not(.rz-state-disabled):active.rz-shade-lighter, .rz-variant-text.rz-danger.rz-paginator-element:not(.rz-state-disabled):active.rz-shade-lighter {
-  color: var(--rz-danger);
 }
 
 .rz-button.rz-variant-text.rz-success, .rz-variant-text.rz-success.rz-paginator-element {
@@ -14357,12 +14935,9 @@ p-button[type] {
 
 .rz-button.rz-variant-text.rz-success:not(.rz-state-disabled):hover:not(:active), .rz-variant-text.rz-success.rz-paginator-element:not(.rz-state-disabled):hover:not(:active), .rz-button.rz-variant-text.rz-success:not(.rz-state-disabled):focus:not(:active), .rz-variant-text.rz-success.rz-paginator-element:not(.rz-state-disabled):focus:not(:active), .rz-button.rz-variant-text.rz-success:not(.rz-state-disabled):active, .rz-variant-text.rz-success.rz-paginator-element:not(.rz-state-disabled):active {
   background-color: var(--rz-success-lighter);
+  color: var(--rz-on-success-lighter);
   background-image: none;
   box-shadow: none;
-}
-
-.rz-button.rz-variant-text.rz-success:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-variant-text.rz-success.rz-paginator-element:not(.rz-state-disabled):hover:not(:active).rz-shade-lighter, .rz-button.rz-variant-text.rz-success:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-variant-text.rz-success.rz-paginator-element:not(.rz-state-disabled):focus:not(:active).rz-shade-lighter, .rz-button.rz-variant-text.rz-success:not(.rz-state-disabled):active.rz-shade-lighter, .rz-variant-text.rz-success.rz-paginator-element:not(.rz-state-disabled):active.rz-shade-lighter {
-  color: var(--rz-success);
 }
 
 .rz-button-lg, .rz-selectbutton .rz-button.rz-button-lg, .rz-selectbutton .rz-button-lg.rz-paginator-element, .rz-splitbutton .rz-button-lg {
@@ -14754,27 +15329,32 @@ p-button[type] {
 
 .rz-badge-primary {
   background-color: var(--rz-primary);
+  color: var(--rz-on-primary);
 }
 
 .rz-badge-primary.rz-shade-lighter {
   background-color: var(--rz-primary-lighter);
-  color: var(--rz-primary);
+  color: var(--rz-on-primary-lighter);
 }
 
 .rz-badge-primary.rz-shade-light {
   background-color: var(--rz-primary-light);
+  color: var(--rz-on-primary-light);
 }
 
 .rz-badge-primary.rz-shade-default {
   background-color: var(--rz-primary);
+  color: var(--rz-on-primary);
 }
 
 .rz-badge-primary.rz-shade-dark {
   background-color: var(--rz-primary-dark);
+  color: var(--rz-on-primary-dark);
 }
 
 .rz-badge-primary.rz-shade-darker {
   background-color: var(--rz-primary-darker);
+  color: var(--rz-on-primary-darker);
 }
 
 .rz-badge-light {
@@ -14788,152 +15368,182 @@ p-button[type] {
 
 .rz-badge-secondary {
   background-color: var(--rz-secondary);
+  color: var(--rz-on-secondary);
 }
 
 .rz-badge-secondary.rz-shade-lighter {
   background-color: var(--rz-secondary-lighter);
-  color: var(--rz-secondary);
+  color: var(--rz-on-secondary-lighter);
 }
 
 .rz-badge-secondary.rz-shade-light {
   background-color: var(--rz-secondary-light);
+  color: var(--rz-on-secondary-light);
 }
 
 .rz-badge-secondary.rz-shade-default {
   background-color: var(--rz-secondary);
+  color: var(--rz-on-secondary);
 }
 
 .rz-badge-secondary.rz-shade-dark {
   background-color: var(--rz-secondary-dark);
+  color: var(--rz-on-secondary-dark);
 }
 
 .rz-badge-secondary.rz-shade-darker {
   background-color: var(--rz-secondary-darker);
+  color: var(--rz-on-secondary-darker);
 }
 
 .rz-badge-info {
   background-color: var(--rz-info);
+  color: var(--rz-on-info);
 }
 
 .rz-badge-info.rz-shade-lighter {
   background-color: var(--rz-info-lighter);
-  color: var(--rz-info);
+  color: var(--rz-on-info-lighter);
 }
 
 .rz-badge-info.rz-shade-light {
   background-color: var(--rz-info-light);
+  color: var(--rz-on-info-light);
 }
 
 .rz-badge-info.rz-shade-default {
   background-color: var(--rz-info);
+  color: var(--rz-on-info);
 }
 
 .rz-badge-info.rz-shade-dark {
   background-color: var(--rz-info-dark);
+  color: var(--rz-on-info-dark);
 }
 
 .rz-badge-info.rz-shade-darker {
   background-color: var(--rz-info-darker);
+  color: var(--rz-on-info-darker);
 }
 
 .rz-badge-warning {
   background-color: var(--rz-warning);
+  color: var(--rz-on-warning);
 }
 
 .rz-badge-warning.rz-shade-lighter {
   background-color: var(--rz-warning-lighter);
-  color: var(--rz-warning);
+  color: var(--rz-on-warning-lighter);
 }
 
 .rz-badge-warning.rz-shade-light {
   background-color: var(--rz-warning-light);
+  color: var(--rz-on-warning-light);
 }
 
 .rz-badge-warning.rz-shade-default {
   background-color: var(--rz-warning);
+  color: var(--rz-on-warning);
 }
 
 .rz-badge-warning.rz-shade-dark {
   background-color: var(--rz-warning-dark);
+  color: var(--rz-on-warning-dark);
 }
 
 .rz-badge-warning.rz-shade-darker {
   background-color: var(--rz-warning-darker);
+  color: var(--rz-on-warning-darker);
 }
 
 .rz-badge-error {
   background-color: var(--rz-danger);
+  color: var(--rz-on-danger);
 }
 
 .rz-badge-error.rz-shade-lighter {
   background-color: var(--rz-error-lighter);
-  color: var(--rz-error);
+  color: var(--rz-on-error-lighter);
 }
 
 .rz-badge-error.rz-shade-light {
   background-color: var(--rz-error-light);
+  color: var(--rz-on-error-light);
 }
 
 .rz-badge-error.rz-shade-default {
   background-color: var(--rz-error);
+  color: var(--rz-on-error);
 }
 
 .rz-badge-error.rz-shade-dark {
   background-color: var(--rz-error-dark);
+  color: var(--rz-on-error-dark);
 }
 
 .rz-badge-error.rz-shade-darker {
   background-color: var(--rz-error-darker);
+  color: var(--rz-on-error-darker);
 }
 
 .rz-badge-danger {
   background-color: var(--rz-danger);
+  color: var(--rz-on-danger);
 }
 
 .rz-badge-danger.rz-shade-lighter {
   background-color: var(--rz-danger-lighter);
-  color: var(--rz-danger);
+  color: var(--rz-on-danger-lighter);
 }
 
 .rz-badge-danger.rz-shade-light {
   background-color: var(--rz-danger-light);
+  color: var(--rz-on-danger-light);
 }
 
 .rz-badge-danger.rz-shade-default {
   background-color: var(--rz-danger);
+  color: var(--rz-on-danger);
 }
 
 .rz-badge-danger.rz-shade-dark {
   background-color: var(--rz-danger-dark);
+  color: var(--rz-on-danger-dark);
 }
 
 .rz-badge-danger.rz-shade-darker {
   background-color: var(--rz-danger-darker);
+  color: var(--rz-on-danger-darker);
 }
 
 .rz-badge-success {
   background-color: var(--rz-success);
+  color: var(--rz-on-success);
 }
 
 .rz-badge-success.rz-shade-lighter {
   background-color: var(--rz-success-lighter);
-  color: var(--rz-success);
+  color: var(--rz-on-success-lighter);
 }
 
 .rz-badge-success.rz-shade-light {
   background-color: var(--rz-success-light);
+  color: var(--rz-on-success-light);
 }
 
 .rz-badge-success.rz-shade-default {
   background-color: var(--rz-success);
+  color: var(--rz-on-success);
 }
 
 .rz-badge-success.rz-shade-dark {
   background-color: var(--rz-success-dark);
+  color: var(--rz-on-success-dark);
 }
 
 .rz-badge-success.rz-shade-darker {
   background-color: var(--rz-success-darker);
+  color: var(--rz-on-success-darker);
 }
 
 .rz-variant-outlined.rz-badge-primary {
@@ -15373,17 +15983,17 @@ p-button[type] {
   --rz-input-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.rz-form-field:hover, .rz-autocomplete:hover:not(.rz-state-disabled), .rz-radiobutton-box:hover:not(.rz-state-disabled), .rz-chkbox-box:hover:not(.rz-state-disabled), .rz-colorpicker:not(:disabled):not(.rz-state-disabled):hover, .rz-lookup-search input:not(:disabled):not(.rz-state-disabled):hover, .rz-spinner:not(:disabled):not(.rz-state-disabled):hover, .rz-calendar .rz-inputtext:not(:disabled):not(.rz-state-disabled):hover, .rz-multiselect:not(:disabled):not(.rz-state-disabled):hover, .rz-dropdown:not(:disabled):not(.rz-state-disabled):hover, .mask:not(:disabled):not(.rz-state-disabled):hover, .rz-textarea:not(:disabled):not(.rz-state-disabled):hover, .rz-textbox:not(:disabled):not(.rz-state-disabled):hover {
+.rz-form-field:hover .rz-form-field-content, .rz-autocomplete:hover:not(.rz-state-disabled), .rz-radiobutton-box:hover:not(.rz-state-disabled), .rz-chkbox-box:hover:not(.rz-state-disabled), .rz-colorpicker:not(:disabled):not(.rz-state-disabled):hover, .rz-lookup-search input:not(:disabled):not(.rz-state-disabled):hover, .rz-spinner:not(:disabled):not(.rz-state-disabled):hover, .rz-calendar .rz-inputtext:not(:disabled):not(.rz-state-disabled):hover, .rz-multiselect:not(:disabled):not(.rz-state-disabled):hover, .rz-dropdown:not(:disabled):not(.rz-state-disabled):hover, .mask:not(:disabled):not(.rz-state-disabled):hover, .rz-textarea:not(:disabled):not(.rz-state-disabled):hover, .rz-textbox:not(:disabled):not(.rz-state-disabled):hover {
   box-shadow: var(--rz-input-hover-shadow);
   border: var(--rz-input-hover-border);
 }
 
-.rz-form-field.rz-state-focused, .rz-colorpicker:not(:disabled):not(.rz-state-disabled):focus, .rz-lookup-search input:not(:disabled):not(.rz-state-disabled):focus, .rz-spinner:not(:disabled):not(.rz-state-disabled):focus, .rz-calendar .rz-inputtext:not(:disabled):not(.rz-state-disabled):focus, .rz-multiselect:not(:disabled):not(.rz-state-disabled):focus, .rz-dropdown:not(:disabled):not(.rz-state-disabled):focus, .mask:not(:disabled):not(.rz-state-disabled):focus, .rz-textarea:not(:disabled):not(.rz-state-disabled):focus, .rz-textbox:not(:disabled):not(.rz-state-disabled):focus {
+.rz-form-field.rz-state-focused .rz-form-field-content, .rz-spinner:focus-within:not(.rz-state-disabled), .rz-autocomplete:focus-within:not(.rz-state-disabled), .rz-colorpicker:not(:disabled):not(.rz-state-disabled):focus, .rz-lookup-search input:not(:disabled):not(.rz-state-disabled):focus, .rz-spinner:not(:disabled):not(.rz-state-disabled):focus, .rz-calendar .rz-inputtext:not(:disabled):not(.rz-state-disabled):focus, .rz-multiselect:not(:disabled):not(.rz-state-disabled):focus, .rz-dropdown:not(:disabled):not(.rz-state-disabled):focus, .mask:not(:disabled):not(.rz-state-disabled):focus, .rz-textarea:not(:disabled):not(.rz-state-disabled):focus, .rz-textbox:not(:disabled):not(.rz-state-disabled):focus {
   box-shadow: var(--rz-input-focus-shadow);
   border: var(--rz-input-focus-border);
 }
 
-div:not(.rz-form-field) > .rz-colorpicker.rz-state-disabled, div:not(.rz-form-field) > .rz-spinner.rz-state-disabled, .rz-calendar.rz-state-disabled div:not(.rz-form-field) > .rz-inputtext, div:not(.rz-form-field) > .rz-listbox.rz-state-disabled, div:not(.rz-form-field) > .rz-autocomplete-input:disabled, div:not(.rz-form-field) > .rz-state-disabled.rz-autocomplete, div:not(.rz-form-field) > .rz-state-disabled.rz-multiselect, div:not(.rz-form-field) > .rz-state-disabled.rz-dropdown, div:not(.rz-form-field) > .rz-radiobutton-box.rz-state-disabled, div:not(.rz-form-field) > .rz-chkbox-box.rz-state-disabled, div:not(.rz-form-field) > .rz-colorpicker:disabled, .rz-lookup-search div:not(.rz-form-field) > input:disabled, div:not(.rz-form-field) > .rz-spinner:disabled, .rz-calendar div:not(.rz-form-field) > .rz-inputtext:disabled, div:not(.rz-form-field) > .rz-multiselect:disabled, div:not(.rz-form-field) > .rz-dropdown:disabled, div:not(.rz-form-field) > .mask:disabled, div:not(.rz-form-field) > .rz-textarea:disabled, div:not(.rz-form-field) > .rz-textbox:disabled {
+div:not(.rz-form-field-content) > .rz-colorpicker.rz-state-disabled, div:not(.rz-form-field-content) > .rz-spinner.rz-state-disabled, .rz-calendar.rz-state-disabled div:not(.rz-form-field-content) > .rz-inputtext, div:not(.rz-form-field-content) > .rz-listbox.rz-state-disabled, div:not(.rz-form-field-content) > .rz-autocomplete-input:disabled, div:not(.rz-form-field-content) > .rz-state-disabled.rz-autocomplete, div:not(.rz-form-field-content) > .rz-state-disabled.rz-multiselect, div:not(.rz-form-field-content) > .rz-state-disabled.rz-dropdown, div:not(.rz-form-field-content) > .rz-colorpicker:disabled, .rz-lookup-search div:not(.rz-form-field-content) > input:disabled, div:not(.rz-form-field-content) > .rz-spinner:disabled, .rz-calendar div:not(.rz-form-field-content) > .rz-inputtext:disabled, div:not(.rz-form-field-content) > .rz-multiselect:disabled, div:not(.rz-form-field-content) > .rz-dropdown:disabled, div:not(.rz-form-field-content) > .mask:disabled, div:not(.rz-form-field-content) > .rz-textarea:disabled, div:not(.rz-form-field-content) > .rz-textbox:disabled {
   color: var(--rz-input-disabled-color);
   box-shadow: var(--rz-input-disabled-shadow);
   background-color: var(--rz-input-disabled-background-color);
@@ -15391,11 +16001,11 @@ div:not(.rz-form-field) > .rz-colorpicker.rz-state-disabled, div:not(.rz-form-fi
   opacity: var(--rz-input-disabled-opacity);
 }
 
-div:not(.rz-form-field) > .rz-colorpicker.rz-state-disabled::placeholder, div:not(.rz-form-field) > .rz-spinner.rz-state-disabled::placeholder, .rz-calendar.rz-state-disabled div:not(.rz-form-field) > .rz-inputtext::placeholder, div:not(.rz-form-field) > .rz-listbox.rz-state-disabled::placeholder, div:not(.rz-form-field) > .rz-autocomplete-input:disabled::placeholder, div:not(.rz-form-field) > .rz-state-disabled.rz-autocomplete::placeholder, div:not(.rz-form-field) > .rz-state-disabled.rz-multiselect::placeholder, div:not(.rz-form-field) > .rz-state-disabled.rz-dropdown::placeholder, div:not(.rz-form-field) > .rz-radiobutton-box.rz-state-disabled::placeholder, div:not(.rz-form-field) > .rz-chkbox-box.rz-state-disabled::placeholder, div:not(.rz-form-field) > .rz-colorpicker:disabled::placeholder, .rz-lookup-search div:not(.rz-form-field) > input:disabled::placeholder, div:not(.rz-form-field) > .rz-spinner:disabled::placeholder, .rz-calendar div:not(.rz-form-field) > .rz-inputtext:disabled::placeholder, div:not(.rz-form-field) > .rz-multiselect:disabled::placeholder, div:not(.rz-form-field) > .rz-dropdown:disabled::placeholder, div:not(.rz-form-field) > .mask:disabled::placeholder, div:not(.rz-form-field) > .rz-textarea:disabled::placeholder, div:not(.rz-form-field) > .rz-textbox:disabled::placeholder {
+div:not(.rz-form-field-content) > .rz-colorpicker.rz-state-disabled::placeholder, div:not(.rz-form-field-content) > .rz-spinner.rz-state-disabled::placeholder, .rz-calendar.rz-state-disabled div:not(.rz-form-field-content) > .rz-inputtext::placeholder, div:not(.rz-form-field-content) > .rz-listbox.rz-state-disabled::placeholder, div:not(.rz-form-field-content) > .rz-autocomplete-input:disabled::placeholder, div:not(.rz-form-field-content) > .rz-state-disabled.rz-autocomplete::placeholder, div:not(.rz-form-field-content) > .rz-state-disabled.rz-multiselect::placeholder, div:not(.rz-form-field-content) > .rz-state-disabled.rz-dropdown::placeholder, div:not(.rz-form-field-content) > .rz-colorpicker:disabled::placeholder, .rz-lookup-search div:not(.rz-form-field-content) > input:disabled::placeholder, div:not(.rz-form-field-content) > .rz-spinner:disabled::placeholder, .rz-calendar div:not(.rz-form-field-content) > .rz-inputtext:disabled::placeholder, div:not(.rz-form-field-content) > .rz-multiselect:disabled::placeholder, div:not(.rz-form-field-content) > .rz-dropdown:disabled::placeholder, div:not(.rz-form-field-content) > .mask:disabled::placeholder, div:not(.rz-form-field-content) > .rz-textarea:disabled::placeholder, div:not(.rz-form-field-content) > .rz-textbox:disabled::placeholder {
   color: var(--rz-input-disabled-placeholder-color);
 }
 
-div:not(.rz-form-field) > .rz-colorpicker.rz-state-disabled .rz-inputtext, div:not(.rz-form-field) > .rz-spinner.rz-state-disabled .rz-inputtext, .rz-calendar.rz-state-disabled div:not(.rz-form-field) > .rz-inputtext .rz-inputtext, div:not(.rz-form-field) > .rz-listbox.rz-state-disabled .rz-inputtext, div:not(.rz-form-field) > .rz-autocomplete-input:disabled .rz-inputtext, div:not(.rz-form-field) > .rz-state-disabled.rz-autocomplete .rz-inputtext, div:not(.rz-form-field) > .rz-state-disabled.rz-multiselect .rz-inputtext, div:not(.rz-form-field) > .rz-state-disabled.rz-dropdown .rz-inputtext, div:not(.rz-form-field) > .rz-radiobutton-box.rz-state-disabled .rz-inputtext, div:not(.rz-form-field) > .rz-chkbox-box.rz-state-disabled .rz-inputtext, div:not(.rz-form-field) > .rz-colorpicker:disabled .rz-inputtext, .rz-lookup-search div:not(.rz-form-field) > input:disabled .rz-inputtext, div:not(.rz-form-field) > .rz-spinner:disabled .rz-inputtext, .rz-calendar div:not(.rz-form-field) > .rz-inputtext:disabled .rz-inputtext, div:not(.rz-form-field) > .rz-multiselect:disabled .rz-inputtext, div:not(.rz-form-field) > .rz-dropdown:disabled .rz-inputtext, div:not(.rz-form-field) > .mask:disabled .rz-inputtext, div:not(.rz-form-field) > .rz-textarea:disabled .rz-inputtext, div:not(.rz-form-field) > .rz-textbox:disabled .rz-inputtext {
+div:not(.rz-form-field-content) > .rz-colorpicker.rz-state-disabled .rz-inputtext, div:not(.rz-form-field-content) > .rz-spinner.rz-state-disabled .rz-inputtext, .rz-calendar.rz-state-disabled div:not(.rz-form-field-content) > .rz-inputtext .rz-inputtext, div:not(.rz-form-field-content) > .rz-listbox.rz-state-disabled .rz-inputtext, div:not(.rz-form-field-content) > .rz-autocomplete-input:disabled .rz-inputtext, div:not(.rz-form-field-content) > .rz-state-disabled.rz-autocomplete .rz-inputtext, div:not(.rz-form-field-content) > .rz-state-disabled.rz-multiselect .rz-inputtext, div:not(.rz-form-field-content) > .rz-state-disabled.rz-dropdown .rz-inputtext, div:not(.rz-form-field-content) > .rz-colorpicker:disabled .rz-inputtext, .rz-lookup-search div:not(.rz-form-field-content) > input:disabled .rz-inputtext, div:not(.rz-form-field-content) > .rz-spinner:disabled .rz-inputtext, .rz-calendar div:not(.rz-form-field-content) > .rz-inputtext:disabled .rz-inputtext, div:not(.rz-form-field-content) > .rz-multiselect:disabled .rz-inputtext, div:not(.rz-form-field-content) > .rz-dropdown:disabled .rz-inputtext, div:not(.rz-form-field-content) > .mask:disabled .rz-inputtext, div:not(.rz-form-field-content) > .rz-textarea:disabled .rz-inputtext, div:not(.rz-form-field-content) > .rz-textbox:disabled .rz-inputtext {
   background-color: var(--rz-input-disabled-background-color);
   color: var(--rz-input-disabled-color);
 }
@@ -15413,7 +16023,7 @@ input::placeholder {
   padding: var(--rz-input-padding);
 }
 
-.rz-form-field, .rz-colorpicker, .rz-lookup-search input, .rz-spinner, .rz-calendar .rz-inputtext, .rz-multiselect, .rz-dropdown, .mask, .rz-textarea, .rz-textbox {
+.rz-form-field-content, .rz-colorpicker, .rz-lookup-search input, .rz-spinner, .rz-calendar .rz-inputtext, .rz-multiselect, .rz-dropdown, .mask, .rz-textarea, .rz-textbox {
   border: var(--rz-input-border);
   border-radius: var(--rz-input-border-radius);
   box-shadow: var(--rz-input-shadow);
@@ -15429,7 +16039,7 @@ input::placeholder {
   outline: none;
 }
 
-.rz-form-field > *, .rz-form-field > .rz-autocomplete, .rz-form-field input, .rz-form-field .rz-inputtext {
+.rz-form-field-content > *, .rz-form-field-content > .rz-autocomplete, .rz-form-field-content input, .rz-form-field-content .rz-inputtext {
   border: 0;
   box-shadow: none;
   background-color: transparent;
@@ -15437,12 +16047,17 @@ input::placeholder {
   border: none;
 }
 
-.rz-form-field > :not(:disabled):not(.rz-state-disabled):hover, .rz-form-field input:not(:disabled):not(.rz-state-disabled):hover, .rz-form-field .rz-inputtext:not(:disabled):not(.rz-state-disabled):hover {
+.rz-form-field-content > :not(:disabled):not(.rz-state-disabled):hover, .rz-form-field-content input:not(:disabled):not(.rz-state-disabled):hover, .rz-form-field-content .rz-inputtext:not(:disabled):not(.rz-state-disabled):hover {
   border: none;
   box-shadow: none;
 }
 
-.rz-form-field > :not(:disabled):not(.rz-state-disabled):focus, .rz-form-field input:not(:disabled):not(.rz-state-disabled):focus, .rz-form-field .rz-inputtext:not(:disabled):not(.rz-state-disabled):focus {
+.rz-form-field-content > :not(:disabled):not(.rz-state-disabled):focus, .rz-form-field-content input:not(:disabled):not(.rz-state-disabled):focus, .rz-form-field-content .rz-inputtext:not(:disabled):not(.rz-state-disabled):focus {
+  border: none;
+  box-shadow: none;
+}
+
+.rz-form-field-content > :not(:disabled):not(.rz-state-disabled):focus-within, .rz-form-field-content input:not(:disabled):not(.rz-state-disabled):focus-within, .rz-form-field-content .rz-inputtext:not(:disabled):not(.rz-state-disabled):focus-within {
   border: none;
   box-shadow: none;
 }
@@ -15456,7 +16071,7 @@ input::placeholder {
   --rz-header-shadow: none;
 }
 
-.header {
+.rz-header {
   background-color: var(--rz-header-background-color);
   min-height: var(--rz-header-min-height);
   border-bottom: var(--rz-header-border);
@@ -15464,7 +16079,7 @@ input::placeholder {
   box-shadow: var(--rz-header-shadow);
 }
 
-.header.fixed {
+.rz-header.fixed {
   position: fixed;
   top: 0;
   left: 0;
@@ -15472,7 +16087,7 @@ input::placeholder {
   z-index: var(--rz-header-z);
 }
 
-.header a {
+.rz-header a {
   text-decoration: none;
 }
 
@@ -15484,14 +16099,14 @@ input::placeholder {
   --rz-footer-z: 2;
 }
 
-.footer {
+.rz-footer {
   padding: var(--rz-footer-padding);
   border-top: var(--rz-footer-border);
   background-color: var(--rz-footer-background-color);
   color: var(--rz-footer-color);
 }
 
-.footer.fixed {
+.rz-footer.fixed {
   position: fixed;
   z-index: var(--rz-footer-z);
   bottom: 0;
@@ -15504,10 +16119,12 @@ input::placeholder {
   --rz-sidebar-width: 250px;
   --rz-sidebar-border-right: var(--rz-border-normal);
   --rz-sidebar-background-color: var(--rz-base-800);
+  --rz-sidebar-color: var(--rz-white);
 }
 
 .rz-sidebar {
   background-color: var(--rz-sidebar-background-color);
+  color: var(--rz-sidebar-color);
   border-right: var(--rz-sidebar-border-right);
   position: fixed;
   overflow: auto;
@@ -15566,15 +16183,21 @@ input::placeholder {
 }
 
 :root {
-  --rz-body-padding: 1rem;
-}
-
-.body {
-  padding: var(--rz-body-padding);
+  --rz-layout-body-margin: 0;
+  --rz-layout-body-padding: 1rem;
+  --rz-layout-body-border-radius: 0;
+  --rz-layout-body-background-color: transparent;
 }
 
 .rz-body {
-  padding: var(--rz-body-padding);
+  margin: var(--rz-layout-body-margin);
+  padding: var(--rz-layout-body-padding);
+  border-radius: var(--rz-layout-body-border-radius);
+  background-color: var(--rz-layout-body-background-color);
+}
+
+.rz-body:only-child {
+  background-color: transparent;
 }
 
 .rz-layout .rz-body {
@@ -15605,7 +16228,16 @@ input::placeholder {
 }
 
 .rz-accordion {
+  border-radius: var(--rz-accordion-border-radius);
   box-shadow: var(--rz-accordion-shadow);
+}
+
+.rz-accordion > div:first-child {
+  border-radius: var(--rz-accordion-border-radius) var(--rz-accordion-border-radius) 0 0;
+}
+
+.rz-accordion > div:last-child, .rz-accordion > div:last-child > div {
+  border-radius: 0 0 var(--rz-accordion-border-radius) var(--rz-accordion-border-radius);
 }
 
 .rz-accordion-header {
@@ -16151,7 +16783,7 @@ input::placeholder {
 }
 
 @media (max-width: 768px) {
-  .rz-menu:not(.rz-profile-menu).rz-menu-closed .rz-navigation-item {
+  .rz-menu.rz-menu-closed:not(.rz-profile-menu) .rz-navigation-item {
     display: none;
   }
   .rz-menu:not(.rz-profile-menu) .rz-menu-toggle .rzi, .rz-menu:not(.rz-profile-menu) .rz-menu-toggle .rz-column-drag, .rz-menu:not(.rz-profile-menu) .rz-menu-toggle .rz-datatable-loading-content .rzi-circle-o-notch, .rz-datatable-loading-content .rz-menu:not(.rz-profile-menu) .rz-menu-toggle .rzi-circle-o-notch, .rz-menu:not(.rz-profile-menu) .rz-menu-toggle .rz-datatable-header .rzi-plus, .rz-datatable-header .rz-menu:not(.rz-profile-menu) .rz-menu-toggle .rzi-plus, .rz-menu:not(.rz-profile-menu) .rz-menu-toggle .rz-sortable-column .rzi-grid-sort, .rz-sortable-column .rz-menu:not(.rz-profile-menu) .rz-menu-toggle .rzi-grid-sort, .rz-menu:not(.rz-profile-menu) .rz-menu-toggle .rz-datatable .rzi-chevron-circle-down, .rz-datatable .rz-menu:not(.rz-profile-menu) .rz-menu-toggle .rzi-chevron-circle-down, .rz-menu:not(.rz-profile-menu) .rz-menu-toggle .rz-datatable .rzi-chevron-circle-right, .rz-datatable .rz-menu:not(.rz-profile-menu) .rz-menu-toggle .rzi-chevron-circle-right, .rz-menu:not(.rz-profile-menu) .rz-menu-toggle .rz-fileupload-row .rz-button .rzi-close, .rz-menu:not(.rz-profile-menu) .rz-menu-toggle .rz-fileupload-row .rz-paginator-element .rzi-close, .rz-fileupload-row .rz-button .rz-menu:not(.rz-profile-menu) .rz-menu-toggle .rzi-close, .rz-fileupload-row .rz-paginator-element .rz-menu:not(.rz-profile-menu) .rz-menu-toggle .rzi-close,
@@ -16165,13 +16797,13 @@ input::placeholder {
 .rz-fileupload-row .rz-paginator-element .rz-menu:not(.rz-profile-menu) .rz-menu-toggle .rz-icon-trash, .rz-menu:not(.rz-profile-menu) .rz-menu-toggle .rz-menuitem .rz-menuitem-icon, .rz-menuitem .rz-menu:not(.rz-profile-menu) .rz-menu-toggle .rz-menuitem-icon {
     margin: 0;
   }
-  .rz-menu:not(.rz-profile-menu).rz-menu-open {
+  .rz-menu.rz-menu-open:not(.rz-profile-menu) {
     display: block;
   }
-  .rz-menu:not(.rz-profile-menu).rz-menu-open .rz-navigation-item {
+  .rz-menu.rz-menu-open:not(.rz-profile-menu) .rz-navigation-item {
     background-color: inherit;
   }
-  .rz-menu:not(.rz-profile-menu).rz-menu-open .rz-navigation-menu {
+  .rz-menu.rz-menu-open:not(.rz-profile-menu) .rz-navigation-menu {
     position: static;
     box-shadow: none;
     border-radius: 0;
@@ -16185,6 +16817,7 @@ input::placeholder {
 }
 
 :root {
+  --rz-panel-menu-padding: 0;
   --rz-panel-menu-font-size: var(--rz-body-font-size);
   --rz-panel-menu-font-weight: 600;
   --rz-panel-menu-color: var(--rz-text-contrast-color);
@@ -16193,7 +16826,9 @@ input::placeholder {
   --rz-panel-menu-hover-color: var(--rz-text-contrast-color);
   --rz-panel-menu-item-line-height: 1.25rem;
   --rz-panel-menu-item-padding: 0.75rem 1rem;
+  --rz-panel-menu-item-margin: 0;
   --rz-panel-menu-item-border: var(--rz-border-base-900);
+  --rz-panel-menu-item-border-radius: 0;
   --rz-panel-menu-item-active-background-color: var(--rz-base-900);
   --rz-panel-menu-item-background-color: var(--rz-base-900);
   --rz-panel-menu-item-active-color: var(--rz-text-contrast-color);
@@ -16231,7 +16866,7 @@ input::placeholder {
 
 .rz-panel-menu {
   list-style: none;
-  padding: 0;
+  padding: var(--rz-panel-menu-padding);
   margin-bottom: 0;
   overflow: auto;
   font-size: var(--rz-panel-menu-font-size);
@@ -16240,14 +16875,22 @@ input::placeholder {
   background-color: var(--rz-panel-menu-background-color);
 }
 
+.rz-panel-menu > .rz-navigation-item {
+  margin: var(--rz-panel-menu-item-margin);
+}
+
 .rz-panel-menu .rz-navigation-item {
   border-bottom: var(--rz-panel-menu-item-border);
+  border-radius: var(--rz-panel-menu-item-border-radius);
+  overflow: hidden;
 }
 
 .rz-panel-menu .rz-navigation-item-wrapper {
   position: relative;
   line-height: var(--rz-panel-menu-item-line-height);
   transition: var(--rz-panel-menu-item-transition);
+  border-radius: var(--rz-panel-menu-item-border-radius);
+  overflow: hidden;
 }
 
 .rz-panel-menu .rz-navigation-item-wrapper:hover {
@@ -16731,7 +17374,12 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
 
 .rz-chkbox-box.rz-state-disabled {
   cursor: initial;
+  color: var(--rz-input-disabled-color);
+  box-shadow: var(--rz-input-disabled-shadow);
+  background-color: var(--rz-input-disabled-background-color);
+  border: var(--rz-input-disabled-border);
   border-width: var(--rz-checkbox-border-width);
+  opacity: var(--rz-input-disabled-opacity);
 }
 
 .rz-chkbox-box .rzi, .rz-chkbox-box .rz-column-drag, .rz-chkbox-box .rz-datatable-loading-content .rzi-circle-o-notch, .rz-datatable-loading-content .rz-chkbox-box .rzi-circle-o-notch, .rz-chkbox-box .rz-datatable-header .rzi-plus, .rz-datatable-header .rz-chkbox-box .rzi-plus, .rz-chkbox-box .rz-sortable-column .rzi-grid-sort, .rz-sortable-column .rz-chkbox-box .rzi-grid-sort, .rz-chkbox-box .rz-datatable .rzi-chevron-circle-down, .rz-datatable .rz-chkbox-box .rzi-chevron-circle-down, .rz-chkbox-box .rz-datatable .rzi-chevron-circle-right, .rz-datatable .rz-chkbox-box .rzi-chevron-circle-right, .rz-chkbox-box .rz-fileupload-row .rz-button .rzi-close, .rz-chkbox-box .rz-fileupload-row .rz-paginator-element .rzi-close, .rz-fileupload-row .rz-button .rz-chkbox-box .rzi-close, .rz-fileupload-row .rz-paginator-element .rz-chkbox-box .rzi-close,
@@ -16771,19 +17419,15 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
   border: var(--rz-checkbox-checked-border);
 }
 
-.rz-chkbox-box.rz-state-active:hover {
+.rz-chkbox-box.rz-state-active:hover:not(.rz-state-disabled) {
   background-color: var(--rz-checkbox-checked-hover-background-color);
   border: var(--rz-checkbox-checked-hover-border);
 }
 
-.rz-chkbox-box.rz-state-disabled.rz-state-active {
+.rz-chkbox-box.rz-state-active.rz-state-disabled {
   background-color: var(--rz-checkbox-checked-disabled-background-color);
   border: var(--rz-checkbox-checked-disabled-border);
   opacity: 0.5;
-}
-
-.rz-chkbox-box.rz-state-disabled.rz-state-active:hover {
-  background-color: var(--rz-checkbox-checked-disabled-background-color);
 }
 
 :root {
@@ -16937,7 +17581,12 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
 }
 
 .rz-radiobutton-box.rz-state-disabled {
+  cursor: initial;
+  box-shadow: var(--rz-input-disabled-shadow);
+  background-color: var(--rz-input-disabled-background-color);
+  border: var(--rz-input-disabled-border);
   border-width: var(--rz-radio-border-width);
+  opacity: var(--rz-input-disabled-opacity);
 }
 
 .rz-radiobutton-box .rzi, .rz-radiobutton-box .rz-column-drag, .rz-radiobutton-box .rz-datatable-loading-content .rzi-circle-o-notch, .rz-datatable-loading-content .rz-radiobutton-box .rzi-circle-o-notch, .rz-radiobutton-box .rz-datatable-header .rzi-plus, .rz-datatable-header .rz-radiobutton-box .rzi-plus, .rz-radiobutton-box .rz-sortable-column .rzi-grid-sort, .rz-sortable-column .rz-radiobutton-box .rzi-grid-sort, .rz-radiobutton-box .rz-datatable .rzi-chevron-circle-down, .rz-datatable .rz-radiobutton-box .rzi-chevron-circle-down, .rz-radiobutton-box .rz-datatable .rzi-chevron-circle-right, .rz-datatable .rz-radiobutton-box .rzi-chevron-circle-right, .rz-radiobutton-box .rz-fileupload-row .rz-button .rzi-close, .rz-radiobutton-box .rz-fileupload-row .rz-paginator-element .rzi-close, .rz-fileupload-row .rz-button .rz-radiobutton-box .rzi-close, .rz-fileupload-row .rz-paginator-element .rz-radiobutton-box .rzi-close,
@@ -16961,7 +17610,7 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
   box-shadow: var(--rz-radio-circle-shadow);
 }
 
-.rz-radiobutton-box .rzi-circle-on:hover {
+.rz-radiobutton-box .rzi-circle-on:hover:not(.rz-state-disabled) {
   background-color: var(--rz-radio-circle-hover-background-color);
 }
 
@@ -16971,28 +17620,18 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
   border-width: var(--rz-radio-border-width);
 }
 
-.rz-radiobutton-box.rz-state-active:hover {
+.rz-radiobutton-box.rz-state-active:hover:not(.rz-state-disabled) {
   background-color: var(--rz-radio-checked-hover-background-color);
   border: var(--rz-radio-checked-border);
   box-shadow: var(--rz-radio-checked-hover-shadow);
   border-width: var(--rz-radio-border-width);
 }
 
-.rz-radiobutton-box.rz-state-disabled .rzi-circle-on:hover {
-  background-color: var(--rz-radio-circle-background-color);
-}
-
-.rz-radiobutton-box.rz-state-disabled.rz-state-active {
+.rz-radiobutton-box.rz-state-active.rz-state-disabled {
   background-color: var(--rz-radio-checked-background-color);
   border: var(--rz-radio-checked-border);
   border-width: var(--rz-radio-border-width);
   opacity: 0.5;
-}
-
-.rz-radiobutton-box.rz-state-disabled.rz-state-active:hover {
-  background-color: var(--rz-radio-checked-background-color);
-  border: var(--rz-radio-checked-border);
-  border-width: var(--rz-radio-border-width);
 }
 
 :root {
@@ -17361,6 +18000,7 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
 .rz-autocomplete-input {
   padding: var(--rz-input-padding);
   background-color: transparent;
+  color: var(--rz-input-value-color);
   box-shadow: var(--rz-input-shadow);
   border: none;
   height: var(--rz-input-height);
@@ -17977,13 +18617,18 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
   background-image: none !important;
 }
 
-.rz-datepicker-trigger .rzi-calendar {
+.rz-datepicker-trigger .rzi-calendar,
+.rz-datepicker-trigger .rzi-time {
   font-size: inherit;
   vertical-align: top;
 }
 
 .rz-datepicker-trigger .rzi-calendar:before {
   content: 'calendar_today';
+}
+
+.rz-datepicker-trigger .rzi-time:before {
+  content: 'schedule';
 }
 
 .rz-datepicker-trigger .rz-button-text {
@@ -18259,6 +18904,7 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
 :root {
   --rz-upload-button-bar-background-color: var(--rz-base-200);
   --rz-upload-button-bar-padding: 0.5rem;
+  --rz-upload-button-bar-border-radius: var(--rz-border-radius);
   --rz-upload-files-background-color: var(--rz-base-background-color);
   --rz-upload-files-padding: 0.5rem 0;
   --rz-upload-files-remove-background-color: var(--rz-base-300);
@@ -18284,7 +18930,7 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
   -webkit-appearance: none !important;
 }
 
-.rz-fileupload .rz-button[disabled], .rz-fileupload [disabled].rz-paginator-element {
+.rz-fileupload .rz-button[disabled], .rz-fileupload .rz-paginator-element[disabled] {
   opacity: 0.5;
 }
 
@@ -18366,7 +19012,7 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
   position: relative;
   background-color: var(--rz-upload-button-bar-background-color);
   padding: var(--rz-upload-button-bar-padding);
-  border-radius: var(--rz-border-radius);
+  border-radius: var(--rz-upload-button-bar-border-radius);
 }
 
 .rz-fileupload-buttonbar .rz-button:nth-child(3), .rz-fileupload-buttonbar .rz-paginator-element:nth-child(3) {
@@ -18435,6 +19081,7 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
   --rz-grid-header-filter-icon-active-color: var(--rz-primary);
   --rz-grid-header-filter-icon-font-size: 1rem;
   --rz-grid-border: var(--rz-border-normal);
+  --rz-grid-border-radius: 0;
   --rz-grid-sort-icon-width: 1rem;
   --rz-grid-sort-icon-height: 1rem;
   --rz-grid-sort-icon-color: var(--rz-text-disabled-color);
@@ -18471,7 +19118,9 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
   position: relative;
   box-shadow: var(--rz-grid-shadow);
   border: var(--rz-grid-cell-border);
+  border-radius: var(--rz-grid-border-radius);
   background-color: var(--rz-grid-background-color);
+  overflow: hidden;
 }
 
 .rz-datatable .rz-col-icon {
@@ -19423,6 +20072,7 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   background-color: var(--rz-paginator-background-color);
   padding: var(--rz-paginator-padding);
 }
@@ -21016,18 +21666,20 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
   --rz-notification-padding: 1rem 1.25rem;
   --rz-notification-icon-margin: 0 0.625rem 0 0;
   --rz-notification-container-background-color: transparent;
-  --rz-notification-success-color: var(--rz-text-contrast-color);
+  --rz-notification-shadow: none;
+  --rz-notification-border-radius: var(--rz-border-radius);
+  --rz-notification-success-color: var(--rz-on-success);
   --rz-notification-success-background-color: var(--rz-success);
-  --rz-notification-success-icon-color: var(--rz-text-contrast-color);
-  --rz-notification-warning-color: var(--rz-text-contrast-color);
+  --rz-notification-success-icon-color: var(--rz-on-success);
+  --rz-notification-warning-color: var(--rz-on-warning);
   --rz-notification-warning-background-color: var(--rz-warning);
-  --rz-notification-warning-icon-color: var(--rz-text-contrast-color);
-  --rz-notification-error-color: var(--rz-text-contrast-color);
+  --rz-notification-warning-icon-color: var(--rz-on-warning);
+  --rz-notification-error-color: var(--rz-on-danger);
   --rz-notification-error-background-color: var(--rz-danger);
-  --rz-notification-error-icon-color: var(--rz-text-contrast-color);
-  --rz-notification-info-color: var(--rz-text-contrast-color);
+  --rz-notification-error-icon-color: var(--rz-on-danger);
+  --rz-notification-info-color: var(--rz-on-info);
   --rz-notification-info-background-color: var(--rz-info);
-  --rz-notification-info-icon-color: var(--rz-text-contrast-color);
+  --rz-notification-info-icon-color: var(--rz-on-info);
 }
 
 .rz-growl {
@@ -21042,7 +21694,8 @@ ul.rz-profile-menu .rz-navigation-menu .rz-fileupload-row .rz-paginator-element 
 }
 
 .rz-growl-item {
-  border-radius: var(--rz-border-radius);
+  border-radius: var(--rz-notification-border-radius);
+  box-shadow: var(--rz-notification-shadow);
   padding: var(--rz-notification-padding);
 }
 
@@ -21199,14 +21852,18 @@ body:not(.rz-default-scrollbars) ::-webkit-scrollbar-corner {
 }
 
 .rz-layout::-webkit-scrollbar,
-.rz-layout ::-webkit-scrollbar {
+.rz-layout ::-webkit-scrollbar,
+.rz-scrollbars::-webkit-scrollbar,
+.rz-scrollbars ::-webkit-scrollbar {
   background-color: var(--rz-scrollbar-background-color);
   width: var(--rz-scrollbar-size);
   height: var(--rz-scrollbar-size);
 }
 
 .rz-layout::-webkit-scrollbar-thumb,
-.rz-layout ::-webkit-scrollbar-thumb {
+.rz-layout ::-webkit-scrollbar-thumb,
+.rz-scrollbars::-webkit-scrollbar-thumb,
+.rz-scrollbars ::-webkit-scrollbar-thumb {
   background: var(--rz-scrollbar-color);
   border: 4px solid rgba(0, 0, 0, 0);
   background-clip: padding-box;
@@ -21216,7 +21873,9 @@ body:not(.rz-default-scrollbars) ::-webkit-scrollbar-corner {
 }
 
 .rz-layout::-webkit-scrollbar-corner,
-.rz-layout ::-webkit-scrollbar-corner {
+.rz-layout ::-webkit-scrollbar-corner,
+.rz-scrollbars::-webkit-scrollbar-corner,
+.rz-scrollbars ::-webkit-scrollbar-corner {
   background-color: var(--rz-scrollbar-background-color);
 }
 
@@ -21672,6 +22331,7 @@ body:not(.rz-default-scrollbars) ::-webkit-scrollbar-corner {
   --rz-chart-legend-font-size: 0.875rem;
   --rz-chart-tooltip-background: var(--rz-base-background-color);
   --rz-chart-tooltip-color: var(--rz-text-color);
+  --rz-chart-marker-stroke: var(--rz-base-background-color);
 }
 
 .rz-chart {
@@ -22566,7 +23226,7 @@ body:not(.rz-default-scrollbars) ::-webkit-scrollbar-corner {
 }
 
 .rz-marker {
-  stroke: #fff;
+  stroke: var(--rz-chart-marker-stroke);
 }
 
 .rz-area-series .rz-marker {
@@ -23404,6 +24064,10 @@ button.rz-colorpicker-trigger .rz-fileupload-row .rz-paginator-element .rz-icon-
   flex: 1 1 auto;
 }
 
+:root {
+  --rz-layout-background-color: var(--rz-body-background-color);
+}
+
 .rz-layout {
   height: 100vh;
   overflow: hidden;
@@ -23411,6 +24075,7 @@ button.rz-colorpicker-trigger .rz-fileupload-row .rz-paginator-element .rz-icon-
   grid-template-columns: auto 1fr;
   grid-template-rows: auto 1fr auto;
   grid-template-areas: "rz-header rz-header" "rz-sidebar rz-body" "rz-footer rz-footer";
+  background-color: var(--rz-layout-background-color);
 }
 
 .rz-layout .rz-body {
@@ -23474,6 +24139,7 @@ button.rz-colorpicker-trigger .rz-fileupload-row .rz-paginator-element .rz-icon-
   --rz-alert-color: var(--rz-text-color);
   --rz-alert-background-color: var(--rz-base-200);
   --rz-alert-box-shadow: var(--rz-shadow-3);
+  --rz-alert-border-radius: 4px;
   --rz-alert-message-margin: 0.25rem 0;
   --rz-alert-title-color: var(--rz-text-h6-color);
   --rz-alert-icon-color: var(--rz-alert-color);
@@ -23488,7 +24154,7 @@ button.rz-colorpicker-trigger .rz-fileupload-row .rz-paginator-element .rz-icon-
   margin: var(--rz-alert-margin);
   padding: var(--rz-alert-padding);
   width: 100%;
-  border-radius: var(--rz-border-radius);
+  border-radius: var(--rz-alert-border-radius);
   background-color: var(--rz-alert-background-color);
   color: var(--rz-alert-color);
 }
@@ -23586,32 +24252,44 @@ button.rz-colorpicker-trigger .rz-fileupload-row .rz-paginator-element .rz-icon-
 
 .rz-alert.rz-primary {
   --rz-alert-background-color: var(--rz-primary);
-  --rz-alert-color: var(--rz-text-contrast-color);
-  --rz-alert-title-color: var(--rz-text-contrast-color);
-  --rz-alert-icon-color: var(--rz-text-contrast-color);
+  --rz-alert-color: var(--rz-on-primary);
+  --rz-alert-title-color: var(--rz-on-primary);
+  --rz-alert-icon-color: var(--rz-on-primary);
 }
 
 .rz-alert.rz-primary.rz-shade-lighter {
   --rz-alert-background-color: var(--rz-primary-lighter);
-  --rz-alert-color: var(--rz-primary-dark);
-  --rz-alert-title-color: var(--rz-primary-dark);
-  --rz-alert-icon-color: var(--rz-primary-dark);
+  --rz-alert-color: var(--rz-on-primary-lighter);
+  --rz-alert-title-color: var(--rz-on-primary-lighter);
+  --rz-alert-icon-color: var(--rz-on-primary-lighter);
 }
 
 .rz-alert.rz-primary.rz-shade-light {
   --rz-alert-background-color: var(--rz-primary-light);
+  --rz-alert-color: var(--rz-on-primary-light);
+  --rz-alert-title-color: var(--rz-on-primary-light);
+  --rz-alert-icon-color: var(--rz-on-primary-light);
 }
 
 .rz-alert.rz-primary.rz-shade-default {
   --rz-alert-background-color: var(--rz-primary);
+  --rz-alert-color: var(--rz-on-primary);
+  --rz-alert-title-color: var(--rz-on-primary);
+  --rz-alert-icon-color: var(--rz-on-primary);
 }
 
 .rz-alert.rz-primary.rz-shade-dark {
   --rz-alert-background-color: var(--rz-primary-dark);
+  --rz-alert-color: var(--rz-on-primary-dark);
+  --rz-alert-title-color: var(--rz-on-primary-dark);
+  --rz-alert-icon-color: var(--rz-on-primary-dark);
 }
 
 .rz-alert.rz-primary.rz-shade-darker {
   --rz-alert-background-color: var(--rz-primary-darker);
+  --rz-alert-color: var(--rz-on-primary-darker);
+  --rz-alert-title-color: var(--rz-on-primary-darker);
+  --rz-alert-icon-color: var(--rz-on-primary-darker);
 }
 
 .rz-alert.rz-variant-outlined.rz-primary {
@@ -23689,32 +24367,44 @@ button.rz-colorpicker-trigger .rz-fileupload-row .rz-paginator-element .rz-icon-
 
 .rz-alert.rz-secondary {
   --rz-alert-background-color: var(--rz-secondary);
-  --rz-alert-color: var(--rz-text-contrast-color);
-  --rz-alert-title-color: var(--rz-text-contrast-color);
-  --rz-alert-icon-color: var(--rz-text-contrast-color);
+  --rz-alert-color: var(--rz-on-secondary);
+  --rz-alert-title-color: var(--rz-on-secondary);
+  --rz-alert-icon-color: var(--rz-on-secondary);
 }
 
 .rz-alert.rz-secondary.rz-shade-lighter {
   --rz-alert-background-color: var(--rz-secondary-lighter);
-  --rz-alert-color: var(--rz-secondary-dark);
-  --rz-alert-title-color: var(--rz-secondary-dark);
-  --rz-alert-icon-color: var(--rz-secondary-dark);
+  --rz-alert-color: var(--rz-on-secondary-lighter);
+  --rz-alert-title-color: var(--rz-on-secondary-lighter);
+  --rz-alert-icon-color: var(--rz-on-secondary-lighter);
 }
 
 .rz-alert.rz-secondary.rz-shade-light {
   --rz-alert-background-color: var(--rz-secondary-light);
+  --rz-alert-color: var(--rz-on-secondary-light);
+  --rz-alert-title-color: var(--rz-on-secondary-light);
+  --rz-alert-icon-color: var(--rz-on-secondary-light);
 }
 
 .rz-alert.rz-secondary.rz-shade-default {
   --rz-alert-background-color: var(--rz-secondary);
+  --rz-alert-color: var(--rz-on-secondary);
+  --rz-alert-title-color: var(--rz-on-secondary);
+  --rz-alert-icon-color: var(--rz-on-secondary);
 }
 
 .rz-alert.rz-secondary.rz-shade-dark {
   --rz-alert-background-color: var(--rz-secondary-dark);
+  --rz-alert-color: var(--rz-on-secondary-dark);
+  --rz-alert-title-color: var(--rz-on-secondary-dark);
+  --rz-alert-icon-color: var(--rz-on-secondary-dark);
 }
 
 .rz-alert.rz-secondary.rz-shade-darker {
   --rz-alert-background-color: var(--rz-secondary-darker);
+  --rz-alert-color: var(--rz-on-secondary-darker);
+  --rz-alert-title-color: var(--rz-on-secondary-darker);
+  --rz-alert-icon-color: var(--rz-on-secondary-darker);
 }
 
 .rz-alert.rz-variant-outlined.rz-secondary {
@@ -23792,32 +24482,44 @@ button.rz-colorpicker-trigger .rz-fileupload-row .rz-paginator-element .rz-icon-
 
 .rz-alert.rz-info {
   --rz-alert-background-color: var(--rz-info);
-  --rz-alert-color: var(--rz-text-contrast-color);
-  --rz-alert-title-color: var(--rz-text-contrast-color);
-  --rz-alert-icon-color: var(--rz-text-contrast-color);
+  --rz-alert-color: var(--rz-on-info);
+  --rz-alert-title-color: var(--rz-on-info);
+  --rz-alert-icon-color: var(--rz-on-info);
 }
 
 .rz-alert.rz-info.rz-shade-lighter {
   --rz-alert-background-color: var(--rz-info-lighter);
-  --rz-alert-color: var(--rz-info-dark);
-  --rz-alert-title-color: var(--rz-info-dark);
-  --rz-alert-icon-color: var(--rz-info-dark);
+  --rz-alert-color: var(--rz-on-info-lighter);
+  --rz-alert-title-color: var(--rz-on-info-lighter);
+  --rz-alert-icon-color: var(--rz-on-info-lighter);
 }
 
 .rz-alert.rz-info.rz-shade-light {
   --rz-alert-background-color: var(--rz-info-light);
+  --rz-alert-color: var(--rz-on-info-light);
+  --rz-alert-title-color: var(--rz-on-info-light);
+  --rz-alert-icon-color: var(--rz-on-info-light);
 }
 
 .rz-alert.rz-info.rz-shade-default {
   --rz-alert-background-color: var(--rz-info);
+  --rz-alert-color: var(--rz-on-info);
+  --rz-alert-title-color: var(--rz-on-info);
+  --rz-alert-icon-color: var(--rz-on-info);
 }
 
 .rz-alert.rz-info.rz-shade-dark {
   --rz-alert-background-color: var(--rz-info-dark);
+  --rz-alert-color: var(--rz-on-info-dark);
+  --rz-alert-title-color: var(--rz-on-info-dark);
+  --rz-alert-icon-color: var(--rz-on-info-dark);
 }
 
 .rz-alert.rz-info.rz-shade-darker {
   --rz-alert-background-color: var(--rz-info-darker);
+  --rz-alert-color: var(--rz-on-info-darker);
+  --rz-alert-title-color: var(--rz-on-info-darker);
+  --rz-alert-icon-color: var(--rz-on-info-darker);
 }
 
 .rz-alert.rz-variant-outlined.rz-info {
@@ -23895,32 +24597,44 @@ button.rz-colorpicker-trigger .rz-fileupload-row .rz-paginator-element .rz-icon-
 
 .rz-alert.rz-warning {
   --rz-alert-background-color: var(--rz-warning);
-  --rz-alert-color: var(--rz-text-contrast-color);
-  --rz-alert-title-color: var(--rz-text-contrast-color);
-  --rz-alert-icon-color: var(--rz-text-contrast-color);
+  --rz-alert-color: var(--rz-on-warning);
+  --rz-alert-title-color: var(--rz-on-warning);
+  --rz-alert-icon-color: var(--rz-on-warning);
 }
 
 .rz-alert.rz-warning.rz-shade-lighter {
   --rz-alert-background-color: var(--rz-warning-lighter);
-  --rz-alert-color: var(--rz-warning-dark);
-  --rz-alert-title-color: var(--rz-warning-dark);
-  --rz-alert-icon-color: var(--rz-warning-dark);
+  --rz-alert-color: var(--rz-on-warning-lighter);
+  --rz-alert-title-color: var(--rz-on-warning-lighter);
+  --rz-alert-icon-color: var(--rz-on-warning-lighter);
 }
 
 .rz-alert.rz-warning.rz-shade-light {
   --rz-alert-background-color: var(--rz-warning-light);
+  --rz-alert-color: var(--rz-on-warning-light);
+  --rz-alert-title-color: var(--rz-on-warning-light);
+  --rz-alert-icon-color: var(--rz-on-warning-light);
 }
 
 .rz-alert.rz-warning.rz-shade-default {
   --rz-alert-background-color: var(--rz-warning);
+  --rz-alert-color: var(--rz-on-warning);
+  --rz-alert-title-color: var(--rz-on-warning);
+  --rz-alert-icon-color: var(--rz-on-warning);
 }
 
 .rz-alert.rz-warning.rz-shade-dark {
   --rz-alert-background-color: var(--rz-warning-dark);
+  --rz-alert-color: var(--rz-on-warning-dark);
+  --rz-alert-title-color: var(--rz-on-warning-dark);
+  --rz-alert-icon-color: var(--rz-on-warning-dark);
 }
 
 .rz-alert.rz-warning.rz-shade-darker {
   --rz-alert-background-color: var(--rz-warning-darker);
+  --rz-alert-color: var(--rz-on-warning-darker);
+  --rz-alert-title-color: var(--rz-on-warning-darker);
+  --rz-alert-icon-color: var(--rz-on-warning-darker);
 }
 
 .rz-alert.rz-variant-outlined.rz-warning {
@@ -23998,32 +24712,44 @@ button.rz-colorpicker-trigger .rz-fileupload-row .rz-paginator-element .rz-icon-
 
 .rz-alert.rz-error {
   --rz-alert-background-color: var(--rz-danger);
-  --rz-alert-color: var(--rz-text-contrast-color);
-  --rz-alert-title-color: var(--rz-text-contrast-color);
-  --rz-alert-icon-color: var(--rz-text-contrast-color);
+  --rz-alert-color: var(--rz-on-danger);
+  --rz-alert-title-color: var(--rz-on-danger);
+  --rz-alert-icon-color: var(--rz-on-danger);
 }
 
 .rz-alert.rz-error.rz-shade-lighter {
   --rz-alert-background-color: var(--rz-error-lighter);
-  --rz-alert-color: var(--rz-error-dark);
-  --rz-alert-title-color: var(--rz-error-dark);
-  --rz-alert-icon-color: var(--rz-error-dark);
+  --rz-alert-color: var(--rz-on-error-lighter);
+  --rz-alert-title-color: var(--rz-on-error-lighter);
+  --rz-alert-icon-color: var(--rz-on-error-lighter);
 }
 
 .rz-alert.rz-error.rz-shade-light {
   --rz-alert-background-color: var(--rz-error-light);
+  --rz-alert-color: var(--rz-on-error-light);
+  --rz-alert-title-color: var(--rz-on-error-light);
+  --rz-alert-icon-color: var(--rz-on-error-light);
 }
 
 .rz-alert.rz-error.rz-shade-default {
   --rz-alert-background-color: var(--rz-error);
+  --rz-alert-color: var(--rz-on-error);
+  --rz-alert-title-color: var(--rz-on-error);
+  --rz-alert-icon-color: var(--rz-on-error);
 }
 
 .rz-alert.rz-error.rz-shade-dark {
   --rz-alert-background-color: var(--rz-error-dark);
+  --rz-alert-color: var(--rz-on-error-dark);
+  --rz-alert-title-color: var(--rz-on-error-dark);
+  --rz-alert-icon-color: var(--rz-on-error-dark);
 }
 
 .rz-alert.rz-error.rz-shade-darker {
   --rz-alert-background-color: var(--rz-error-darker);
+  --rz-alert-color: var(--rz-on-error-darker);
+  --rz-alert-title-color: var(--rz-on-error-darker);
+  --rz-alert-icon-color: var(--rz-on-error-darker);
 }
 
 .rz-alert.rz-variant-outlined.rz-error {
@@ -24101,32 +24827,44 @@ button.rz-colorpicker-trigger .rz-fileupload-row .rz-paginator-element .rz-icon-
 
 .rz-alert.rz-danger {
   --rz-alert-background-color: var(--rz-danger);
-  --rz-alert-color: var(--rz-text-contrast-color);
-  --rz-alert-title-color: var(--rz-text-contrast-color);
-  --rz-alert-icon-color: var(--rz-text-contrast-color);
+  --rz-alert-color: var(--rz-on-danger);
+  --rz-alert-title-color: var(--rz-on-danger);
+  --rz-alert-icon-color: var(--rz-on-danger);
 }
 
 .rz-alert.rz-danger.rz-shade-lighter {
   --rz-alert-background-color: var(--rz-danger-lighter);
-  --rz-alert-color: var(--rz-danger-dark);
-  --rz-alert-title-color: var(--rz-danger-dark);
-  --rz-alert-icon-color: var(--rz-danger-dark);
+  --rz-alert-color: var(--rz-on-danger-lighter);
+  --rz-alert-title-color: var(--rz-on-danger-lighter);
+  --rz-alert-icon-color: var(--rz-on-danger-lighter);
 }
 
 .rz-alert.rz-danger.rz-shade-light {
   --rz-alert-background-color: var(--rz-danger-light);
+  --rz-alert-color: var(--rz-on-danger-light);
+  --rz-alert-title-color: var(--rz-on-danger-light);
+  --rz-alert-icon-color: var(--rz-on-danger-light);
 }
 
 .rz-alert.rz-danger.rz-shade-default {
   --rz-alert-background-color: var(--rz-danger);
+  --rz-alert-color: var(--rz-on-danger);
+  --rz-alert-title-color: var(--rz-on-danger);
+  --rz-alert-icon-color: var(--rz-on-danger);
 }
 
 .rz-alert.rz-danger.rz-shade-dark {
   --rz-alert-background-color: var(--rz-danger-dark);
+  --rz-alert-color: var(--rz-on-danger-dark);
+  --rz-alert-title-color: var(--rz-on-danger-dark);
+  --rz-alert-icon-color: var(--rz-on-danger-dark);
 }
 
 .rz-alert.rz-danger.rz-shade-darker {
   --rz-alert-background-color: var(--rz-danger-darker);
+  --rz-alert-color: var(--rz-on-danger-darker);
+  --rz-alert-title-color: var(--rz-on-danger-darker);
+  --rz-alert-icon-color: var(--rz-on-danger-darker);
 }
 
 .rz-alert.rz-variant-outlined.rz-danger {
@@ -24204,32 +24942,44 @@ button.rz-colorpicker-trigger .rz-fileupload-row .rz-paginator-element .rz-icon-
 
 .rz-alert.rz-success {
   --rz-alert-background-color: var(--rz-success);
-  --rz-alert-color: var(--rz-text-contrast-color);
-  --rz-alert-title-color: var(--rz-text-contrast-color);
-  --rz-alert-icon-color: var(--rz-text-contrast-color);
+  --rz-alert-color: var(--rz-on-success);
+  --rz-alert-title-color: var(--rz-on-success);
+  --rz-alert-icon-color: var(--rz-on-success);
 }
 
 .rz-alert.rz-success.rz-shade-lighter {
   --rz-alert-background-color: var(--rz-success-lighter);
-  --rz-alert-color: var(--rz-success-dark);
-  --rz-alert-title-color: var(--rz-success-dark);
-  --rz-alert-icon-color: var(--rz-success-dark);
+  --rz-alert-color: var(--rz-on-success-lighter);
+  --rz-alert-title-color: var(--rz-on-success-lighter);
+  --rz-alert-icon-color: var(--rz-on-success-lighter);
 }
 
 .rz-alert.rz-success.rz-shade-light {
   --rz-alert-background-color: var(--rz-success-light);
+  --rz-alert-color: var(--rz-on-success-light);
+  --rz-alert-title-color: var(--rz-on-success-light);
+  --rz-alert-icon-color: var(--rz-on-success-light);
 }
 
 .rz-alert.rz-success.rz-shade-default {
   --rz-alert-background-color: var(--rz-success);
+  --rz-alert-color: var(--rz-on-success);
+  --rz-alert-title-color: var(--rz-on-success);
+  --rz-alert-icon-color: var(--rz-on-success);
 }
 
 .rz-alert.rz-success.rz-shade-dark {
   --rz-alert-background-color: var(--rz-success-dark);
+  --rz-alert-color: var(--rz-on-success-dark);
+  --rz-alert-title-color: var(--rz-on-success-dark);
+  --rz-alert-icon-color: var(--rz-on-success-dark);
 }
 
 .rz-alert.rz-success.rz-shade-darker {
   --rz-alert-background-color: var(--rz-success-darker);
+  --rz-alert-color: var(--rz-on-success-darker);
+  --rz-alert-title-color: var(--rz-on-success-darker);
+  --rz-alert-icon-color: var(--rz-on-success-darker);
 }
 
 .rz-alert.rz-variant-outlined.rz-success {
@@ -25464,20 +26214,15 @@ button.rz-colorpicker-trigger .rz-fileupload-row .rz-paginator-element .rz-icon-
   --rz-form-field-label-left: 0.25rem;
   --rz-form-field-label-textarea-top: 0.375rem;
   --rz-form-field-label-floating-top: -0.625rem;
+  --rz-form-field-label-floating-background-color: var(--rz-input-background-color);
   --rz-form-field-helper-padding: 0 0.5rem;
-}
-
-.rz-form-field-wrapper {
-  display: inline-flex;
-  flex-direction: column;
-  vertical-align: top;
 }
 
 .rz-form-field-helper {
   padding: var(--rz-form-field-helper-padding);
 }
 
-.rz-form-field {
+.rz-form-field-content {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -25487,12 +26232,12 @@ button.rz-colorpicker-trigger .rz-fileupload-row .rz-paginator-element .rz-icon-
   transition: var(--rz-input-transition);
 }
 
-.rz-form-field > *, .rz-form-field > .rz-autocomplete, .rz-form-field input, .rz-form-field .rz-inputtext {
+.rz-form-field-content > *, .rz-form-field-content > .rz-autocomplete, .rz-form-field-content input, .rz-form-field-content .rz-inputtext {
   flex: 1;
 }
 
-.rz-form-field .rz-form-field-start,
-.rz-form-field .rz-form-field-end {
+.rz-form-field-content .rz-form-field-start,
+.rz-form-field-content .rz-form-field-end {
   display: flex;
   flex: 0;
   align-items: center;
@@ -25502,20 +26247,26 @@ button.rz-colorpicker-trigger .rz-fileupload-row .rz-paginator-element .rz-icon-
   padding-bottom: 0;
 }
 
-.rz-form-field:hover {
+.rz-form-field {
+  display: inline-flex;
+  flex-direction: column;
+  vertical-align: top;
+}
+
+.rz-form-field:hover .rz-form-field-content {
   box-shadow: var(--rz-form-field-hover-shadow);
 }
 
-.rz-form-field.rz-state-focused {
+.rz-form-field.rz-state-focused .rz-form-field-content {
   box-shadow: var(--rz-form-field-focus-shadow);
 }
 
-.rz-form-field.rz-state-disabled {
+.rz-form-field.rz-state-disabled .rz-form-field-content {
   color: var(--rz-input-disabled-color);
   box-shadow: var(--rz-input-disabled-shadow);
 }
 
-.rz-form-field.rz-state-disabled.rz-variant-outlined, .rz-form-field.rz-state-disabled.rz-variant-filled, .rz-form-field.rz-state-disabled.rz-variant-flat {
+.rz-form-field.rz-state-disabled.rz-variant-outlined .rz-form-field-content, .rz-form-field.rz-state-disabled.rz-variant-filled .rz-form-field-content, .rz-form-field.rz-state-disabled.rz-variant-flat .rz-form-field-content {
   border: var(--rz-input-disabled-border);
 }
 
@@ -25532,7 +26283,7 @@ button.rz-colorpicker-trigger .rz-fileupload-row .rz-paginator-element .rz-icon-
   padding-left: 0;
 }
 
-.rz-form-field.rz-variant-filled, .rz-form-field.rz-variant-flat {
+.rz-form-field.rz-variant-filled .rz-form-field-content, .rz-form-field.rz-variant-flat .rz-form-field-content {
   margin: 0;
   --rz-input-height: var(--rz-form-field-filled-height);
   --rz-input-padding: var(--rz-form-field-filled-padding);
@@ -25541,64 +26292,70 @@ button.rz-colorpicker-trigger .rz-fileupload-row .rz-paginator-element .rz-icon-
   box-shadow: var(--rz-input-shadow);
 }
 
-.rz-form-field.rz-variant-filled .rz-spinner-up, .rz-form-field.rz-variant-flat .rz-spinner-up {
+.rz-form-field.rz-variant-filled .rz-form-field-content .rz-spinner-up, .rz-form-field.rz-variant-flat .rz-form-field-content .rz-spinner-up {
   top: calc(var(--rz-numeric-button-offset) + 1rem);
 }
 
-.rz-form-field.rz-variant-filled .rz-form-field-start,
-.rz-form-field.rz-variant-filled .rz-form-field-end, .rz-form-field.rz-variant-flat .rz-form-field-start,
-.rz-form-field.rz-variant-flat .rz-form-field-end {
+.rz-form-field.rz-variant-filled .rz-form-field-content .rz-form-field-start,
+.rz-form-field.rz-variant-filled .rz-form-field-content .rz-form-field-end, .rz-form-field.rz-variant-flat .rz-form-field-content .rz-form-field-start,
+.rz-form-field.rz-variant-flat .rz-form-field-content .rz-form-field-end {
   padding-top: 1rem;
 }
 
-.rz-form-field.rz-variant-filled .rz-textarea, .rz-form-field.rz-variant-flat .rz-textarea {
+.rz-form-field.rz-variant-filled .rz-form-field-content .rz-textarea, .rz-form-field.rz-variant-flat .rz-form-field-content .rz-textarea {
   margin-top: 1rem;
 }
 
-.rz-form-field.rz-variant-filled .rz-datepicker-trigger, .rz-form-field.rz-variant-flat .rz-datepicker-trigger {
+.rz-form-field.rz-variant-filled .rz-form-field-content .rz-datepicker-trigger, .rz-form-field.rz-variant-flat .rz-form-field-content .rz-datepicker-trigger {
   top: calc(50% + 0.4375rem);
 }
 
-.rz-form-field.rz-variant-flat:not(.rz-state-disabled):hover {
+.rz-form-field.rz-variant-flat:not(.rz-state-disabled):hover .rz-form-field-content {
   border: var(--rz-input-hover-border);
   box-shadow: var(--rz-input-hover-shadow);
 }
 
-.rz-form-field.rz-variant-flat:not(.rz-state-disabled).rz-state-focused {
+.rz-form-field.rz-variant-flat.rz-state-focused:not(.rz-state-disabled) .rz-form-field-content {
   border: var(--rz-input-focus-border);
   box-shadow: var(--rz-input-focus-shadow);
 }
 
-.rz-form-field.rz-variant-filled {
+.rz-form-field.rz-variant-filled .rz-form-field-content {
   border: var(--rz-form-field-filled-border);
   border-radius: var(--rz-form-field-filled-border-radius);
   background-color: var(--rz-form-field-filled-background-color);
 }
 
-.rz-form-field.rz-variant-filled:not(.rz-state-disabled):hover {
+.rz-form-field.rz-variant-filled .rz-form-field-content:before, .rz-form-field.rz-variant-filled .rz-form-field-content:after {
+  display: var(--rz-form-field-filled-underline-display);
+}
+
+.rz-form-field.rz-variant-filled:not(.rz-state-disabled):hover .rz-form-field-content {
   border: var(--rz-form-field-filled-hover-border);
   box-shadow: var(--rz-form-field-filled-hover-shadow);
   background-color: var(--rz-form-field-filled-hover-background-color);
 }
 
-.rz-form-field.rz-variant-filled:not(.rz-state-disabled).rz-state-focused, .rz-form-field.rz-variant-filled:not(.rz-state-disabled).rz-state-focused:hover {
+.rz-form-field.rz-variant-filled.rz-state-focused:not(.rz-state-disabled) .rz-form-field-content, .rz-form-field.rz-variant-filled.rz-state-focused:not(.rz-state-disabled):hover .rz-form-field-content {
   border: var(--rz-form-field-filled-focus-border);
   box-shadow: var(--rz-form-field-filled-focus-shadow);
   background-color: var(--rz-form-field-filled-background-color);
 }
 
-.rz-form-field.rz-variant-filled:before, .rz-form-field.rz-variant-filled:after {
-  display: var(--rz-form-field-filled-underline-display);
-}
-
-.rz-form-field.rz-variant-text {
+.rz-form-field.rz-variant-text .rz-form-field-content {
   border-color: transparent;
   box-shadow: none;
   --rz-input-background-color: transparent;
   --rz-input-border-radius: 0;
   --rz-input-padding: 0.4375rem 0;
+  --rz-numeric-input-padding: 0.5rem 1.25rem 0.5rem 0;
+  --rz-text-area-padding: 0.4375rem 0;
   --rz-form-field-label-left: 0;
   --rz-form-field-label-padding: var(--rz-form-field-text-label-padding);
+}
+
+.rz-form-field.rz-variant-text .rz-form-field-content ~ .rz-form-field-helper {
+  padding: 0;
 }
 
 .rz-form-field.rz-variant-text .rz-form-field-start {
@@ -25609,11 +26366,7 @@ button.rz-colorpicker-trigger .rz-fileupload-row .rz-paginator-element .rz-icon-
   padding-right: 0;
 }
 
-.rz-form-field.rz-variant-text ~ .rz-form-field-helper {
-  padding: 0;
-}
-
-.rz-form-field.rz-variant-filled:before, .rz-form-field.rz-variant-text:before {
+.rz-form-field.rz-variant-filled .rz-form-field-content:before, .rz-form-field.rz-variant-text .rz-form-field-content:before {
   content: "";
   position: absolute;
   z-index: 1;
@@ -25627,7 +26380,7 @@ button.rz-colorpicker-trigger .rz-fileupload-row .rz-paginator-element .rz-icon-
   transition: left var(--rz-transition), right var(--rz-transition), border-width var(--rz-transition);
 }
 
-.rz-form-field.rz-variant-filled:after, .rz-form-field.rz-variant-text:after {
+.rz-form-field.rz-variant-filled .rz-form-field-content:after, .rz-form-field.rz-variant-text .rz-form-field-content:after {
   content: "";
   position: absolute;
   inset: calc(-1 * var(--rz-border-width));
@@ -25636,15 +26389,15 @@ button.rz-colorpicker-trigger .rz-fileupload-row .rz-paginator-element .rz-icon-
   border-bottom: var(--rz-input-border);
 }
 
-.rz-form-field.rz-variant-filled:hover:after, .rz-form-field.rz-variant-text:hover:after {
+.rz-form-field.rz-variant-filled:hover .rz-form-field-content:after, .rz-form-field.rz-variant-text:hover .rz-form-field-content:after {
   border-bottom: var(--rz-input-hover-border);
 }
 
-.rz-form-field.rz-variant-filled.rz-state-disabled:after, .rz-form-field.rz-variant-filled.rz-state-disabled:hover:after, .rz-form-field.rz-variant-text.rz-state-disabled:after, .rz-form-field.rz-variant-text.rz-state-disabled:hover:after {
+.rz-form-field.rz-variant-filled.rz-state-disabled .rz-form-field-content:after, .rz-form-field.rz-variant-filled.rz-state-disabled:hover .rz-form-field-content:after, .rz-form-field.rz-variant-text.rz-state-disabled .rz-form-field-content:after, .rz-form-field.rz-variant-text.rz-state-disabled:hover .rz-form-field-content:after {
   border-bottom: var(--rz-input-disabled-border);
 }
 
-.rz-form-field.rz-variant-filled.rz-state-focused:not(.rz-state-disabled):before, .rz-form-field.rz-variant-text.rz-state-focused:not(.rz-state-disabled):before {
+.rz-form-field.rz-variant-filled.rz-state-focused:not(.rz-state-disabled) .rz-form-field-content:before, .rz-form-field.rz-variant-text.rz-state-focused:not(.rz-state-disabled) .rz-form-field-content:before {
   left: calc(-1 * var(--rz-border-width));
   right: calc(-1 * var(--rz-border-width));
   border: var(--rz-input-focus-border);
@@ -25674,7 +26427,7 @@ button.rz-colorpicker-trigger .rz-fileupload-row .rz-paginator-element .rz-icon-
   transition: top var(--rz-transition), transform var(--rz-transition), color var(--rz-transition), font-size var(--rz-transition), max-width var(--rz-transition);
 }
 
-.rz-state-disabled > .rz-form-field-label {
+.rz-state-disabled .rz-form-field-content > .rz-form-field-label {
   color: var(--rz-input-disabled-color) !important;
 }
 
@@ -25691,15 +26444,19 @@ button.rz-colorpicker-trigger .rz-fileupload-row .rz-paginator-element .rz-icon-
   transform: translate(0, 0.625rem);
 }
 
-.rz-textbox:focus ~ .rz-form-field-label, .rz-textarea:focus ~ .rz-form-field-label, .rz-spinner:focus-within ~ .rz-form-field-label, .rz-autocomplete:focus-within ~ .rz-form-field-label, .rz-textbox:not(:placeholder-shown) ~ .rz-form-field-label, :not(.rz-state-empty) ~ .rz-form-field-label, .rz-variant-filled .rz-textarea:focus ~ .rz-form-field-label, .rz-variant-flat .rz-textarea:focus ~ .rz-form-field-label, .rz-variant-filled :not(.rz-state-empty) ~ .rz-form-field-label, .rz-variant-flat :not(.rz-state-empty) ~ .rz-form-field-label {
+.rz-textbox:focus ~ .rz-form-field-label, .rz-textarea:focus ~ .rz-form-field-label, .rz-spinner:focus-within ~ .rz-form-field-label, .rz-autocomplete:focus-within ~ .rz-form-field-label, .rz-textbox:not(:placeholder-shown) ~ .rz-form-field-label, :not(.rz-state-empty) ~ .rz-form-field-label, .rz-variant-filled .rz-textarea:focus ~ .rz-form-field-label, .rz-variant-flat .rz-textarea:focus ~ .rz-form-field-label, .rz-variant-filled :not(.rz-state-empty) ~ .rz-form-field-label, .rz-variant-flat :not(.rz-state-empty) ~ .rz-form-field-label, .rz-radio-button-list-vertical ~ .rz-form-field-label, .rz-radio-button-list-horizontal ~ .rz-form-field-label, .rz-checkbox-list-vertical ~ .rz-form-field-label, .rz-checkbox-list-horizontal ~ .rz-form-field-label, .rz-chkbox ~ .rz-form-field-label {
   right: auto;
   top: var(--rz-form-field-label-floating-top);
   transform: translate(0, 0);
   color: var(--rz-input-placeholder-color);
-  background-color: inherit;
+  background-color: var(--rz-form-field-label-floating-background-color);
   font-size: 0.75rem;
   line-height: 0.75rem;
   max-width: calc(100% - 1.5rem);
+}
+
+.rz-form-field:not(.rz-variant-outlined) *:focus ~ .rz-form-field-label, .rz-form-field:not(.rz-variant-outlined) *:focus-within ~ .rz-form-field-label, .rz-form-field:not(.rz-variant-outlined) :not(.rz-state-empty) ~ .rz-form-field-label, .rz-form-field:not(.rz-variant-outlined) .rz-radio-button-list-vertical ~ .rz-form-field-label, .rz-form-field:not(.rz-variant-outlined) .rz-radio-button-list-horizontal ~ .rz-form-field-label, .rz-form-field:not(.rz-variant-outlined) .rz-checkbox-list-vertical ~ .rz-form-field-label, .rz-form-field:not(.rz-variant-outlined) .rz-checkbox-list-horizontal ~ .rz-form-field-label, .rz-form-field:not(.rz-variant-outlined) .rz-chkbox ~ .rz-form-field-label {
+  background-color: inherit !important;
 }
 
 .invalid ~ .rz-form-field-label {
