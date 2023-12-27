@@ -1,5 +1,5 @@
-﻿import "./vendors/flatpickr.js?v=1.2.4.0";
-import * as utilities from "./utilities.js?v=1.2.4.0";
+﻿import "./vendors/flatpickr.js?v=1.4.0.0";
+import * as utilities from "./utilities.js?v=1.4.0.0";
 
 const _pickers = [];
 
@@ -50,13 +50,13 @@ export function initialize(element, elementId, options) {
         clickOpens: !(options.readOnly || false),
         locale: options.localization || {},
         inline: options.inline || false,
-        static: true
+        static: options.staticPicker
     });
 
     if (options) {
         picker.altInput.disabled = options.disabled || false;
         picker.altInput.readOnly = options.readOnly || false;
-        picker.altInput.placeholder = options.placeholder;
+        picker.altInput.placeholder = utilities.coalesce(options.placeholder, "");
 
         picker.altInput.addEventListener("blur", (e) => {
             const isInput = e.target === picker._input;
@@ -127,6 +127,10 @@ export function updateOptions(element, elementId, options) {
 
         if (options.placeholder.changed) {
             picker.altInput.placeholder = options.placeholder.value;
+        }
+
+        if (options.staticPicker.changed) {
+            picker.set("static", options.staticPicker.value);
         }
     }
 }
