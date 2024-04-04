@@ -1,7 +1,7 @@
-﻿import "./vendors/flatpickr.js?v=1.4.0.0";
-import * as utilities from "./utilities.js?v=1.4.0.0";
-import * as inputmask from "./inputmask.js?v=1.4.0.0";
-import { ClassWatcher } from "./observer.js?v=1.4.0.0";
+﻿import "./vendors/flatpickr.js?v=1.5.1.0";
+import * as utilities from "./utilities.js?v=1.5.1.0";
+import * as inputmask from "./inputMask.js?v=1.5.1.0";
+import { ClassWatcher } from "./observer.js?v=1.5.1.0";
 
 const _pickers = [];
 
@@ -58,6 +58,17 @@ export function initialize(dotnetAdapter, element, elementId, options) {
         static: options.staticPicker,
         errorHandler: (error) => {
             // do nothing to prevent warnings in the console
+        },
+        onReady: (selectedDates, dateStr, instance) => {
+            // move the id from the hidden element to the visible element
+            if (instance && instance.input && instance.input.parentElement) {
+                const id = instance.input.id;
+                const input = instance.input.parentElement.querySelector(".input");
+                if (id && input) {
+                    instance.input.id = "flatpickr_hidden_" + id;
+                    input.id = id;
+                }
+            }
         }
     };
 
@@ -92,7 +103,7 @@ export function initialize(dotnetAdapter, element, elementId, options) {
         });
 
         if (options.inputFormat) {
-            setInputMask(picker, options.inputFormat);
+            setInputMask(picker, options.inputFormat, options.placeholder);
         }
 
         if (options.validationStatus) {
@@ -110,19 +121,19 @@ export function initialize(dotnetAdapter, element, elementId, options) {
 
                     picker.errorClassWatcher = new ClassWatcher(picker.altInput, options.validationStatus.errorClass, errorClassAddHandler, errorClassRemoveHandler);
                 }
-            }
-        }
 
-        if (options.validationStatus.successClass) {
-            function successClassAddHandler() {
-                flatpickrWrapper.classList.add(options.validationStatus.successClass);
-            }
+                if (options.validationStatus.successClass) {
+                    function successClassAddHandler() {
+                        flatpickrWrapper.classList.add(options.validationStatus.successClass);
+                    }
 
-            function successClassRemoveHandler() {
-                flatpickrWrapper.classList.remove(options.validationStatus.successClass);
-            }
+                    function successClassRemoveHandler() {
+                        flatpickrWrapper.classList.remove(options.validationStatus.successClass);
+                    }
 
-            picker.successClassWatcher = new ClassWatcher(picker.altInput, options.validationStatus.successClass, successClassAddHandler, successClassRemoveHandler);
+                    picker.successClassWatcher = new ClassWatcher(picker.altInput, options.validationStatus.successClass, successClassAddHandler, successClassRemoveHandler);
+                }
+            }
         }
     }
 
@@ -248,7 +259,7 @@ export function updateOptions(element, elementId, options) {
         }
 
         if (options.inputFormat.changed) {
-            setInputMask(picker, options.inputFormat.value);
+            setInputMask(picker, options.inputFormat.value, options.placeholder.value);
         }
 
         if (options.timeAs24hr.changed) {
@@ -289,7 +300,7 @@ export function updateOptions(element, elementId, options) {
         }
 
         if (options.placeholder.changed) {
-            picker.altInput.placeholder = options.placeholder.value;
+            picker.altInput.placeholder = utilities.coalesce(options.placeholder.value, "");
         }
 
         if (options.staticPicker.changed) {
@@ -370,14 +381,14 @@ export function select(element, elementId, focus) {
     }
 }
 
-function setInputMask(picker, inputFormat) {
+function setInputMask(picker, inputFormat, placeholder) {
     if (picker && picker.altInput) {
         if (picker.inputMask && picker.inputMask.remove) {
             picker.inputMask.remove();
         }
 
         picker.inputMask = inputmask.initialize(null, picker.altInput, null, {
-            placeholder: inputFormat,
+            placeholder: utilities.coalesce(placeholder, inputFormat),
             alias: "datetime",
             inputFormat: inputFormat
         });
