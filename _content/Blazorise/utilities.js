@@ -1,26 +1,40 @@
-﻿import "./vendors/jsencrypt.js?v=1.5.1.0";
-import "./vendors/sha512.js?v=1.5.1.0";
+import "./vendors/jsencrypt.js?v=1.7.1.0";
+import "./vendors/sha512.js?v=1.7.1.0";
 
 // adds a classname to the specified element
 export function addClass(element, classname) {
-    element.classList.add(classname);
+    if (element && element.classList) {
+        element.classList.add(classname);
+    }
 }
 
 // removes a classname from the specified element
 export function removeClass(element, classname) {
-    if (element.classList.contains(classname)) {
+    if (element && element.classList && element.classList.contains(classname)) {
         element.classList.remove(classname);
     }
 }
 
 // toggles a classname on the given element id
 export function toggleClass(element, classname) {
-    if (element) {
+    if (element && element.classList) {
         if (element.classList.contains(classname)) {
             element.classList.remove(classname);
         } else {
             element.classList.add(classname);
         }
+    }
+}
+
+export function addAttribute(element, attribute, value) {
+    if (element) {
+        element.setAttribute(attribute, value);
+    }
+}
+
+export function removeAttribute(element, attribute) {
+    if (element) {
+        element.removeAttribute(attribute);
     }
 }
 
@@ -34,11 +48,21 @@ export function removeClassFromBody(classname) {
     removeClass(document.body, classname);
 }
 
+// adds an attribute to the body element
+export function addAttributeToBody(attribute, value) {
+    addAttribute(document.body, attribute, value);
+}
+
+// removes an attribute from the body element
+export function removeAttributeFromBody(attribute) {
+    removeAttribute(document.body, attribute);
+}
+
 // sets the input focuses to the given element
 export function focus(element, elementId, scrollToElement) {
     element = getRequiredElement(element, elementId);
 
-    if (element) {
+    if (element && typeof element.focus === "function") {
         element.focus({
             preventScroll: !scrollToElement
         });
@@ -46,14 +70,14 @@ export function focus(element, elementId, scrollToElement) {
 }
 
 // selects the given element
-export function select(element, elementId, focus) {
-    if (focus) {
+export function select(element, elementId, toFocus) {
+    if (toFocus) {
         focus(element, elementId, true);
     }
 
     element = getRequiredElement(element, elementId);
 
-    if (element) {
+    if (element && typeof element.select === "function") {
         element.select();
     }
 }
@@ -106,9 +130,17 @@ export function scrollElementIntoView(elementId, smooth) {
             top = element.offsetTop + element.offsetHeight - element.parentElement.clientHeight;
         }
 
-        var behavior = smooth ? "smooth" : "instant";
-        element.parentElement.scrollTo({ top: top, behavior: behavior });
+        var scrollableParent = getScrollableParent(element);
+
+        if (scrollableParent) {
+            var behavior = smooth ? "smooth" : "instant";
+            scrollableParent.scrollTo({ top: top, behavior: behavior });
+        }
     }
+}
+function getScrollableParent(el) {
+    while ((el = el.parentElement) && window.getComputedStyle(el).overflowY.indexOf('scroll') === -1);
+    return el;
 }
 
 // sets the value to the element property
@@ -309,6 +341,18 @@ export function createEvent(name) {
     return e;
 }
 
+export function isNullOrUndefined(value) {
+    return value === null || value === undefined;
+}
+
 export function coalesce(value, defaultValue) {
     return value === null || value === undefined ? defaultValue : value;
+}
+
+export function insertCSSIntoDocumentHead(url) {
+    document.getElementsByTagName("head")[0].insertAdjacentHTML("beforeend", `<link rel=\"stylesheet\" href=\"${url}\" />`);
+}
+
+export function isSystemDarkMode() {
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 }
