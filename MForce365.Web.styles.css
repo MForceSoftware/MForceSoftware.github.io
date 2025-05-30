@@ -151,3 +151,23 @@ main[b-gg5zfc3nvi] {
         display: block;
     }
 }
+
+/* Override RadzenPanelMenu selected and hover styles to match static nav-item styles */
+:deep(.rz-panelmenu .rz-panelmenu-item .rz-menuitem-link)[b-hvek9pqml9] {
+    color: #d7d7d7;
+    border-radius: 4px;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    line-height: 3rem;
+}
+
+:deep(.rz-panelmenu .rz-panelmenu-item .rz-menuitem-link.rz-state-active)[b-hvek9pqml9] {
+    background-color: rgba(255,255,255,0.25) !important;
+    color: white !important;
+}
+
+:deep(.rz-panelmenu .rz-panelmenu-item .rz-menuitem-link:hover)[b-hvek9pqml9] {
+    background-color: rgba(255,255,255,0.1) !important;
+    color: white !important;
+}
