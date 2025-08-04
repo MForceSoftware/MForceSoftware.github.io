@@ -1,5 +1,11 @@
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Only initialize on pages containing the Kanban board container
+    const board = document.querySelector('.flex.flex-wrap.-m-4');
+    if (!board) {
+        return;
+    }
+
     // Importing SortableJS
     const Sortable = window.Sortable;
 
@@ -30,7 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
 
         // Adding functionality to 'Add Task' button
-        column.querySelector('button').addEventListener('click', () => {
+        const addButton = column.querySelector('button');
+        if (addButton) {
+            addButton.addEventListener('click', () => {
             const title = prompt('Enter task title:');
             const description = prompt('Enter task description:');
             if (title && description) {
@@ -52,12 +60,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Adding the columns to the board
-    const board = document.querySelector('.flex.flex-wrap.-m-4');
     const columns = ['To Do', 'In Progress', 'Completed'];
     columns.forEach(colName => {
         const col = createColumn(colName);
         board.appendChild(col);
-        addDragAndDrop(col.querySelector('.task-container'));
+        const container = col.querySelector('.task-container');
+        if (container) {
+            addDragAndDrop(container);
+        }
     });
 });
 
