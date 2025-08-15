@@ -978,7 +978,7 @@ window.Radzen = {
       return;
       }
 
-      if (e.code === 'NumpadDecimal' && !isInteger) {
+      if (e.code === 'NumpadDecimal') {
           var cursorPosition = e.target.selectionEnd;
           e.target.value = [e.target.value.slice(0, e.target.selectionStart), decimalSeparator, e.target.value.slice(e.target.selectionEnd)].join('');
           e.target.selectionStart = ++cursorPosition;
@@ -1157,7 +1157,7 @@ window.Radzen = {
           tooltipContent.classList.add('rz-top-tooltip-content');
             position = 'top';
             if (instance && callback) {
-                try { instance.invokeMethodAsync(callback, position); } catch { }
+                instance.invokeMethodAsync(callback, position);
             }
         }
       }
@@ -1175,7 +1175,7 @@ window.Radzen = {
           tooltipContent.classList.add('rz-left-tooltip-content');
           position = 'left';
           if (instance && callback) {
-              try { instance.invokeMethodAsync(callback, position); } catch { }
+            instance.invokeMethodAsync(callback, position);
           }
         }
       }
@@ -1228,12 +1228,9 @@ window.Radzen = {
         }
 
         var closestLink = e.target.closest && (e.target.closest('.rz-link') || e.target.closest('.rz-navigation-item-link'));
-        if (e.type == 'resize' && !/Android/i.test(navigator.userAgent) || closestLink && closestLink.closest && closestLink.closest('a')) {
+        if (closestLink && closestLink.closest && closestLink.closest('a')) {
             if (Radzen.closeAllPopups) {
                 Radzen.closeAllPopups();
-            }
-            if (closestLink && closestLink.closest && closestLink.closest('a')) {
-                closestLink.closest('a').click();
             }
         }
         if (currentPopup.parent) {
@@ -1283,7 +1280,7 @@ window.Radzen = {
             if (firstFocusable) {
                 firstFocusable.focus();
             }
-        }, 200);
+        }, 500);
     }
   },
   closeAllPopups: function (e, id) {
@@ -1338,9 +1335,9 @@ window.Radzen = {
 
     if (instance && callback) {
         if (callback.includes('RadzenTooltip')) {
-            try { instance.invokeMethodAsync(callback, null); } catch { }
+            instance.invokeMethodAsync(callback, null);
         } else {
-            try { instance.invokeMethodAsync(callback); } catch { }
+            instance.invokeMethodAsync(callback);
         }
     }
     Radzen.popups = (Radzen.popups || []).filter(function (obj) {
@@ -1661,7 +1658,7 @@ window.Radzen = {
         reader.addEventListener(
           'load',
           function () {
-            if (fileInput.files[0] && fileInput.files[0].type.includes('image') && maxWidth > 0 && maxHeight > 0) {
+            if (maxWidth > 0 && maxHeight > 0) {
               var img = document.createElement("img");
               img.onload = function (event) {
                 // Dynamically create a canvas element
@@ -1737,7 +1734,6 @@ window.Radzen = {
     document.addEventListener('click', target.clickHandler);
   },
   destroyChart: function (ref) {
-    if(!ref) return;
     ref.removeEventListener('mouseleave', ref.mouseLeaveHandler);
     delete ref.mouseLeaveHandler;
     ref.removeEventListener('mouseenter', ref.mouseEnterHandler);
@@ -1819,7 +1815,7 @@ window.Radzen = {
     return this.createResizable(ref, instance);
   },
   destroyScheduler: function (ref) {
-    if (ref && ref.resizeHandler) {
+    if (ref.resizeHandler) {
       window.removeEventListener('resize', ref.resizeHandler);
       delete ref.resizeHandler;
     }
@@ -2131,7 +2127,7 @@ window.Radzen = {
       visual.style.height = cell.offsetHeight + 'px';
       visual.style.width = cell.offsetWidth + 'px';
       visual.style.zIndex = 2000;
-      visual.innerHTML = cell.firstChild.outerHTML;
+      visual.innerHTML = cell.innerHTML;
       visual.id = id + 'visual';
       document.body.appendChild(visual);
 
@@ -2222,14 +2218,9 @@ window.Radzen = {
               if (Radzen[el]) {
                   var widthFloat = (Radzen[el].width - (Radzen.isRTL(cell) ? -1 : 1) * (Radzen[el].clientX - e.clientX));
                   var minWidth = parseFloat(cell.style.minWidth || 0)
-                  var maxWidth = parseFloat(cell.style.maxWidth || 0)
 
                   if (widthFloat < minWidth) {
                       widthFloat = minWidth;
-                  }
-
-                  if (cell.style.maxWidth && widthFloat > maxWidth) {
-                      widthFloat = maxWidth;
                   }
 
                   var width = widthFloat + 'px';
@@ -2504,64 +2495,5 @@ window.Radzen = {
         tooltipContent.classList.remove('rz-top-chart-tooltip');
         tooltipContent.classList.remove('rz-bottom-chart-tooltip');
         tooltipContent.classList.add(tooltipContentClassName);
-    },
-    navigateTo: function (selector, scroll) {
-      if (selector.startsWith('#')) {
-        history.replaceState(null, '', window.location.pathname + selector);
-      }
-
-      if (scroll) {
-        const target = document.querySelector(selector);
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'start' });
-        }
-      }
-    },
-    registerScrollListener: function (element, ref, selectors, selector) {
-      let currentSelector;
-      const container = selector ? document.querySelector(selector) : document.documentElement;
-      const elements = selectors.map(document.querySelector, document);
-
-      this.unregisterScrollListener(element);
-      element.scrollHandler = () => {
-        const center = (container.tagName === 'HTML' ? 0 : container.getBoundingClientRect().top) + container.clientHeight / 2;
-
-        let min = Number.MAX_SAFE_INTEGER;
-        let match;
-
-        for (let i = 0; i < elements.length; i++) {
-          const element = elements[i];
-          if (!element) continue;
-
-          const rect = element.getBoundingClientRect();
-          const diff = Math.abs(rect.top - center);
-
-          if (!match && rect.top < center) {
-            match = selectors[i];
-            min = diff;
-            continue;
-          }
-
-          if (match && rect.top >= center) continue;
-
-          if (diff < min) {
-            match = selectors[i];
-            min = diff;
-          }
-        }
-
-        if (match !== currentSelector) {
-          currentSelector = match;
-          this.navigateTo(currentSelector, false);
-          ref.invokeMethodAsync('ScrollIntoView', currentSelector);
-        }
-      };
-
-      document.addEventListener('scroll', element.scrollHandler, true);
-      window.addEventListener('resize', element.scrollHandler, true);
-    },
-    unregisterScrollListener: function (element) {
-      document.removeEventListener('scroll', element.scrollHandler, true);
-      window.removeEventListener('resize', element.scrollHandler, true);
     }
 };
