@@ -2,6 +2,8 @@
 ## VERSION 1.4.123 Beta
 
 
+- Meetings: fixed unresponsive buttons on the Schedule page. A global CSS rule defined in `ScheduleCard.razor` unintentionally hid the Radzen Scheduler view buttons across the app. The rule is now CSS‑isolated in `ScheduleCard.razor.css`, and the Add icon click handler is corrected to use `@onclick`. Closes #2094.
+
 - Action Items: Edit Action Item dialog no longer shows seconds in the Created time field. The datetime picker is constrained to minute precision for a cleaner UX and consistency with other date/time fields. Closes #2098.
 
 - Dashboard: Action Items card now orders by nearest due date first (including overdue items), instead of furthest-out first, so the most urgent items are at the top. Closes #2127.
