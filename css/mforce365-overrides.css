@@ -1,0 +1,12 @@
+/* mForce365 dialog stability tweaks for Radzen modals */
+.dialog-fixed {
+  /* Keep a stable width to prevent subtle reflow when interacting with inputs */
+  max-width: 640px !important;
+  width: 640px !important;
+}
+
+.dialog-fixed .rz-dialog-content {
+  /* Avoid content-driven jumps; allow internal scrolling if needed */
+  overflow-y: auto;
+}
+
