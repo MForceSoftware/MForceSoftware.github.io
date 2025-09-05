@@ -1,5 +1,8 @@
 # mForce365 Release Notes
-## VERSION 1.4.122 Beta
+## VERSION 1.4.123 Beta
+
+
+- Action Items: Edit Action Item dialog no longer shows seconds in the Created time field. The datetime picker is constrained to minute precision for a cleaner UX and consistency with other date/time fields. Closes #2098.
 
 - Dashboard: Action Items card now orders by nearest due date first (including overdue items), instead of furthest-out first, so the most urgent items are at the top. Closes #2127.
 
