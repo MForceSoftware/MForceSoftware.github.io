@@ -1,6 +1,8 @@
 # mForce365 Release Notes
 ## VERSION 1.4.122 Beta
 
+- Projects: moving tasks up/down within a bucket via the arrow icons now works reliably. Planner task reordering updates include the required Graph `If-Match` header so order hints are applied without precondition failures. Closes #2099.
+
 - Action Items: tasks created in a Project bucket now appear immediately in the global Action Items list accessible from the sidebar. No manual refresh is required after creating the task from the Project page. Closes #947.
 
 - Projects: prevent the Add Action Item dialog from subtly resizing when focusing the Due Date field by opening it with a fixed width and stable overflow behavior. Closes #995.
