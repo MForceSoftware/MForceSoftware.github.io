@@ -2,6 +2,8 @@
 ## VERSION 1.4.123 Beta
 
 
+- Dashboard: Action Items edit dialog now behaves correctly when launched from the Dashboard. Edits are applied only when clicking Save, which persists the change, closes the dialog, and refreshes the Dashboard card. Cancel/Close discards any edits and leaves the Dashboard unchanged. Closes #2124.
+
 - Projects: creating a new project now closes the dialog once and immediately refreshes the Projects list. The newly created plan is highlighted in the grid so it’s easy to spot. Previously, the Create New Project dialog sometimes reappeared after saving and the list didn’t update until a manual page refresh. Closes #2123.
 
 - Meeting Invite: add Scribe/Minutes field under the Title on the Add/Edit Meeting dialogs. It defaults to the meeting organizer’s display name but can be overwritten. When provided, it is included at the top of the invitation body as a header line. Closes #912.
