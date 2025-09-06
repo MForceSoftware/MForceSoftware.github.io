@@ -2,6 +2,8 @@
 ## VERSION 1.4.123 Beta
 
 
+- Dashboard: Next Meeting card now populates correctly. The retrieval of the next calendar event no longer applies an unsupported `$filter` on start/end when using the `calendarView` endpoint; instead, it relies on the date window parameters and sorts by start time. This returns events as expected in WebAssembly. Closes #2128.
+
 - Dashboard: About Me card no longer stays stuck on "Loading". The realtime `IDbSyncService` now uses the WebAssembly-configured `GraphServiceClient` directly (instead of a desktop-only wrapper), so user profile data loads correctly after sign-in. Closes #2125.
 
 - Dashboard: Action Items edit dialog now behaves correctly when launched from the Dashboard. Edits are applied only when clicking Save, which persists the change, closes the dialog, and refreshes the Dashboard card. Cancel/Close discards any edits and leaves the Dashboard unchanged. Closes #2124.
