@@ -22,6 +22,8 @@
 
 - Dashboard: Action Items card now orders by nearest due date first (including overdue items), instead of furthest-out first, so the most urgent items are at the top. Closes #2127.
 
+- Dashboard: Projects list now keeps the project name on the same line as the bullet. The link is rendered as `inline-block` (instead of `block`) so the bullet and text align neatly on one line in the card. Closes #2126.
+
 - Projects: moving tasks up/down within a bucket via the arrow icons now works reliably. Planner task reordering updates include the required Graph `If-Match` header so order hints are applied without precondition failures. Closes #2099.
 
 - Action Items: tasks created in a Project bucket now appear immediately in the global Action Items list accessible from the sidebar. No manual refresh is required after creating the task from the Project page. Closes #947.
