@@ -2,6 +2,8 @@
 ## VERSION 1.4.123 Beta
 
 
+- Projects: creating a new project now closes the dialog once and immediately refreshes the Projects list. The newly created plan is highlighted in the grid so it’s easy to spot. Previously, the Create New Project dialog sometimes reappeared after saving and the list didn’t update until a manual page refresh. Closes #2123.
+
 - Meeting Invite: add Scribe/Minutes field under the Title on the Add/Edit Meeting dialogs. It defaults to the meeting organizer’s display name but can be overwritten. When provided, it is included at the top of the invitation body as a header line. Closes #912.
 
 - Action Items: display the Status value with human-friendly spacing, e.g., "Not Started" instead of "NotStarted" and "In Progress" instead of "InProgress" wherever Action Item details are shown. Closes #2121.
