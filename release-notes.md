@@ -2,6 +2,8 @@
 ## VERSION 1.4.123 Beta
 
 
+- Projects: the Start Date column on the Projects page is now sortable. Clicking the Start Date header toggles between earliest-to-latest and latest-to-earliest, so you can restore the default date order after sorting by Title without refreshing the page. Closes #2129.
+
 - Dashboard: Next Meeting card now populates correctly. The retrieval of the next calendar event no longer applies an unsupported `$filter` on start/end when using the `calendarView` endpoint; instead, it relies on the date window parameters and sorts by start time. This returns events as expected in WebAssembly. Closes #2128.
 
 - Dashboard: About Me card no longer stays stuck on "Loading". The realtime `IDbSyncService` now uses the WebAssembly-configured `GraphServiceClient` directly (instead of a desktop-only wrapper), so user profile data loads correctly after sign-in. Closes #2125.
