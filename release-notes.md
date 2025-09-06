@@ -4,6 +4,8 @@
 
 - Meeting Invite: add Scribe/Minutes field under the Title on the Add/Edit Meeting dialogs. It defaults to the meeting organizer’s display name but can be overwritten. When provided, it is included at the top of the invitation body as a header line. Closes #912.
 
+- Action Items: display the Status value with human-friendly spacing, e.g., "Not Started" instead of "NotStarted" and "In Progress" instead of "InProgress" wherever Action Item details are shown. Closes #2121.
+
 - Action Items: Edit Action Item dialog now reliably closes when clicking Save. The save operation runs and the dialog is closed immediately after, avoiding the previous situation where the Save button updated the task but left the dialog open. Also ensures edits to Details are persisted when saving. Closes #2097.
 
 - Meetings: fixed unresponsive buttons on the Schedule page. A global CSS rule defined in `ScheduleCard.razor` unintentionally hid the Radzen Scheduler view buttons across the app. The rule is now CSS‑isolated in `ScheduleCard.razor.css`, and the Add icon click handler is corrected to use `@onclick`. Closes #2094.
