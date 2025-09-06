@@ -2,6 +2,8 @@
 ## VERSION 1.4.123 Beta
 
 
+- Action Items: Edit Action Item dialog now reliably closes when clicking Save. The save operation runs and the dialog is closed immediately after, avoiding the previous situation where the Save button updated the task but left the dialog open. Also ensures edits to Details are persisted when saving. Closes #2097.
+
 - Meetings: fixed unresponsive buttons on the Schedule page. A global CSS rule defined in `ScheduleCard.razor` unintentionally hid the Radzen Scheduler view buttons across the app. The rule is now CSS‑isolated in `ScheduleCard.razor.css`, and the Add icon click handler is corrected to use `@onclick`. Closes #2094.
 
 - Dashboard: Calendar on the Dashboard now loads events reliably and the scheduler navigation buttons (Prev/Next/Today) respond as expected. `ScheduleCard` now uses the `LoadData` pattern to fetch events for the visible date range (matching the full Scheduler page), and includes Day/Week/Month views while keeping the view-switch buttons hidden via CSS isolation. Adds light tests to guard the handler wiring. Closes #2096.
