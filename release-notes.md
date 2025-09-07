@@ -2,6 +2,8 @@
 ## VERSION 1.4.123 Beta
 
 
+- Action Items: when creating a new Action Item from the page, the Due Date now defaults to 7 days from today instead of showing an uninitialized year 0001 date. This applies only to new items (not edits) and aligns with the Add dialog behavior. Closes #2145.
+
 - Action Items: change the Add dialog heading from "CreateActionItem" to the human-friendly "Create Action Item" by adding a localized resource key. Closes #2130.
 
 - Projects: the Start Date column on the Projects page is now sortable. Clicking the Start Date header toggles between earliest-to-latest and latest-to-earliest, so you can restore the default date order after sorting by Title without refreshing the page. Closes #2129.
