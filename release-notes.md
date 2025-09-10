@@ -2,6 +2,8 @@
 ## VERSION 1.4.123 Beta
 
 
+- Action Items: on the simple Action Item page (`/actionitem` and `/actionitem/{id}`), the Status field now displays a human-friendly value with spaces (e.g., "Not Started" instead of "Notstarted"). The field is shown read-only to avoid editing raw enum text. Closes #2152.
+
 - Action Items: when creating a new Action Item from the page, the Due Date now defaults to 7 days from today instead of showing an uninitialized year 0001 date. This applies only to new items (not edits) and aligns with the Add dialog behavior. Closes #2145.
 
 - Action Items: change the Add dialog heading from "CreateActionItem" to the human-friendly "Create Action Item" by adding a localized resource key. Closes #2130.
