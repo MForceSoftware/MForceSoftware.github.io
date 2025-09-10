@@ -2,6 +2,8 @@
 ## VERSION 1.4.123 Beta
 
 
+- Projects: prevent UI from becoming unresponsive after adding a task to a bucket. All Project page event handlers now return Task (not async void), and the Razor bindings use async lambdas so exceptions are observed and the render tree stays healthy. Also ensures the drag/drop Drop handler is async. Closes #2181.
+
 - Settings: Upload Company logo dialog now shows the currently stored logo (if any) as a preview when opened. This makes it clear whether a logo has already been uploaded without needing to reselect a file. Closes #2153.
 
 - Projects: Add a Projected Completion Date field to the Create New Project dialog. When provided, a Planner task named "Projected Completion" is created in the new project's default bucket with the selected due date. This helps teams track and visualize the target completion from day one. Closes #2151.
