@@ -2,6 +2,8 @@
 ## VERSION 1.4.123 Beta
 
 
+- Projects: Add Task and Add bucket now work on the Projects page. The Add Bucket dialog initializes its form model so Save submits correctly, and Add buttons stop event propagation so drag/drop zones don’t swallow clicks. Closes #2156.
+
 - Projects: reordering tasks within a bucket using the up/down arrows now works in the Web client. Planner task updates include the required Graph `If-Match` header when adjusting `orderHint`, so clicks reliably change order. Closes #2155.
 
 - Action Items: on the simple Action Item page (`/actionitem` and `/actionitem/{id}`), the Status field now displays a human-friendly value with spaces (e.g., "Not Started" instead of "Notstarted"). The field is shown read-only to avoid editing raw enum text. Closes #2152.
