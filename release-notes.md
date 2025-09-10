@@ -2,6 +2,8 @@
 ## VERSION 1.4.123 Beta
 
 
+- Settings: Upload Company logo dialog now shows the currently stored logo (if any) as a preview when opened. This makes it clear whether a logo has already been uploaded without needing to reselect a file. Closes #2153.
+
 - Projects: Add a Projected Completion Date field to the Create New Project dialog. When provided, a Planner task named "Projected Completion" is created in the new project's default bucket with the selected due date. This helps teams track and visualize the target completion from day one. Closes #2151.
 
 - Projects: add a Created Date field to the Projects list (shown as Start Date) and make it sortable by the actual created timestamp. This helps testing and production users quickly locate newly created projects. Closes #2150.
