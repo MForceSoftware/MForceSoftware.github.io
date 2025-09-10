@@ -2,6 +2,9 @@
 ## VERSION 1.4.123 Beta
 
 
+
+- Shared: replaced the magic number used for `StringBuilder` capacity in `MForceTask.AddSpacesToPascalCase` with a descriptive calculation (`input.Length * 2`) and added a comment explaining the conservative worst-case. Closes #2137.
+
 - Projects: prevent UI from becoming unresponsive after adding a task to a bucket. All Project page event handlers now return Task (not async void), and the Razor bindings use async lambdas so exceptions are observed and the render tree stays healthy. Also ensures the drag/drop Drop handler is async. Closes #2181.
 
 - Settings: Upload Company logo dialog now shows the currently stored logo (if any) as a preview when opened. This makes it clear whether a logo has already been uploaded without needing to reselect a file. Closes #2153.
