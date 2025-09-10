@@ -2,6 +2,8 @@
 ## VERSION 1.4.123 Beta
 
 
+- Projects: add a Created Date field to the Projects list (shown as Start Date) and make it sortable by the actual created timestamp. This helps testing and production users quickly locate newly created projects. Closes #2150.
+
 - Settings: consolidated duplicate `@code` blocks in `Pages/Settings.razor` into a single block for clearer organization and maintainability. Closes #2117.
 
 - Action Items: add ability to change importance when reviewing a single Action Item. The Action Item page (`/actionitem/{id}`) now shows a 3‑star rating and Save button for To‑Do tasks that patches only the Graph `Importance` field. Closes #2122.
