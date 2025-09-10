@@ -2,6 +2,8 @@
 ## VERSION 1.4.123 Beta
 
 
+- Settings: consolidated duplicate `@code` blocks in `Pages/Settings.razor` into a single block for clearer organization and maintainability. Closes #2117.
+
 - Authentication: the Register button no longer hangs. Azure AD (Microsoft Entra ID) does not support self‑service sign‑up in this app; the Register link now routes to the standard Login flow and the Register view redirects accordingly. This avoids a blank state on `/authentication/register`. Closes #2157.
 
 - Projects: Add Task and Add bucket now work on the Projects page. The Add Bucket dialog initializes its form model so Save submits correctly, and Add buttons stop event propagation so drag/drop zones don’t swallow clicks. Closes #2156.
