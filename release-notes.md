@@ -3,6 +3,8 @@
 
 
 
+- Projects: Add Bucket dialog Save is now responsive. The Save button was outside the `RadzenTemplateForm`, so clicks did not submit the form and the dialog appeared unresponsive. The Save/Cancel buttons are now inside the form, ensuring submit fires and the bucket is created. Closes #2183.
+
 - Shared: replaced the magic number used for `StringBuilder` capacity in `MForceTask.AddSpacesToPascalCase` with a descriptive calculation (`input.Length * 2`) and added a comment explaining the conservative worst-case. Closes #2137.
 
 - Projects: prevent UI from becoming unresponsive after adding a task to a bucket. All Project page event handlers now return Task (not async void), and the Razor bindings use async lambdas so exceptions are observed and the render tree stays healthy. Also ensures the drag/drop Drop handler is async. Closes #2181.
