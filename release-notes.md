@@ -3,6 +3,8 @@
 
 
 
+- Projects: removed an unnecessary `StateHasChanged()` call in the Projects page (`Pages/Projects.razor.cs`) immediately before `NavigateTo(..., forceLoad: true)`. Since a force‑load navigation reloads the page, the extra state notification was redundant. Closes #2161.
+
 - Projects: Add Bucket dialog Save is now responsive. The Save button was outside the `RadzenTemplateForm`, so clicks did not submit the form and the dialog appeared unresponsive. The Save/Cancel buttons are now inside the form, ensuring submit fires and the bucket is created. Closes #2183.
 
 - Shared: replaced the magic number used for `StringBuilder` capacity in `MForceTask.AddSpacesToPascalCase` with a descriptive calculation (`input.Length * 2`) and added a comment explaining the conservative worst-case. Closes #2137.
