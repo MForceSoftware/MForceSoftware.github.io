@@ -36,6 +36,8 @@
 
 - Meetings: selecting Meetings from the sidebar now shows the populated Schedule. Navigation links were standardized to the canonical lowercase route `"/scheduler"` across the app (NavMenu, MenuBar, and cards). This avoids case/relative-path mismatches that could leave the scheduler view blank after navigation. Closes #2148.
 
+- Projects: Create New Project dialog now closes immediately on Save, updates the Projects list, and then reloads the page to ensure the new plan appears even under Graph’s eventual consistency. The dialog also closes even if post-create steps (sharing or default bucket creation) fail, since the plan itself has been created. Closes #2149.
+
 - Projects: moving tasks up/down within a bucket via the arrow icons now works reliably. Planner task reordering updates include the required Graph `If-Match` header so order hints are applied without precondition failures. Closes #2099.
 
 - Action Items: tasks created in a Project bucket now appear immediately in the global Action Items list accessible from the sidebar. No manual refresh is required after creating the task from the Project page. Closes #947.

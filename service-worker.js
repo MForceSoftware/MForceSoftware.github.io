@@ -1,4 +1,4 @@
-/* Manifest version: 9/CpcUTR */
+/* Manifest version: x666gB66 */
 // Caution! Be sure you understand the caveats before publishing an application with
 // offline support. See https://aka.ms/blazor-offline-considerations
 
