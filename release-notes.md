@@ -32,6 +32,8 @@
 
 - Dashboard: Projects list now keeps the project name on the same line as the bullet. The link is rendered as `inline-block` (instead of `block`) so the bullet and text align neatly on one line in the card. Closes #2126.
 
+- Dashboard: Calendar and Next Meeting now populate on first load after sign-in. The Scheduler triggers an initial data reload on first render, and the Next Meeting card defers Graph fetch until after first render to avoid auth race conditions. Closes #2147.
+
 - Projects: moving tasks up/down within a bucket via the arrow icons now works reliably. Planner task reordering updates include the required Graph `If-Match` header so order hints are applied without precondition failures. Closes #2099.
 
 - Action Items: tasks created in a Project bucket now appear immediately in the global Action Items list accessible from the sidebar. No manual refresh is required after creating the task from the Project page. Closes #947.
