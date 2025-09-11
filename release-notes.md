@@ -231,6 +231,8 @@
 - Fixed ProjectChooser component: OnSave now returns Task and properly iterates
   Planner tasks before adding them to the running meeting.
 
+- Action Items: add Priority (star rating) to the Create Action Item dialog and sync it with Microsoft Graph importance (Low, Normal, High). The label has been updated from ‘Importance’ to ‘Priority’ across create/edit/review screens. Closes #2209.
+
 
 
 Welcome to mForce365. This is a development release as we progress to MVP. 
