@@ -3,6 +3,8 @@
 
 
 
+- Action Items: Save now works on the Create Action Item page. Creating a new item from `/actionitem` no longer fails silently when the model lacks a `type`/`listId`. The backend now defaults such items to the user's first Microsoft To‑Do list and sets the model metadata so the item immediately appears on the Dashboard list after save. Closes #2208.
+
 - Projects: add Delete action (trash icon) to the Projects list. Users can now delete a project directly from the list with a confirmation dialog; the grid refreshes after deletion. Closes #2210.
 
 - Projects: add a test to assert default sorting by Created Date (latest first) on the Projects page, ensuring users can return to date order after sorting by Title. Closes #2129.
