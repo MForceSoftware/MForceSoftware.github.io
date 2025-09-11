@@ -43,6 +43,8 @@
 
 - Projects: Add bucket Save no longer requires two clicks. The Add Bucket dialog’s text box now updates the model on each keystroke so submitting immediately uses the latest value. This prevents the first click from submitting an empty/stale name. Closes #2201.
 
+- Projects: fix unresponsive task reorder arrows within buckets. The up/down arrow icons are now rendered outside the draggable region so the drag surface no longer intercepts clicks. Clicking the arrows reliably updates task order via Graph `orderHint`. Closes #2202.
+
 - Projects: reordering tasks within a bucket using the up/down arrows now works in the Web client. Planner task updates include the required Graph `If-Match` header when adjusting `orderHint`, so clicks reliably change order. Closes #2155.
 
 - Action Items: on the simple Action Item page (`/actionitem` and `/actionitem/{id}`), the Status field now displays a human-friendly value with spaces (e.g., "Not Started" instead of "Notstarted"). The field is shown read-only to avoid editing raw enum text. Closes #2152.
