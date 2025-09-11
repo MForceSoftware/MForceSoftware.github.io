@@ -3,6 +3,8 @@
 
 
 
+- Projects: add Delete action (trash icon) to the Projects list. Users can now delete a project directly from the list with a confirmation dialog; the grid refreshes after deletion. Closes #2210.
+
 - Projects: add a test to assert default sorting by Created Date (latest first) on the Projects page, ensuring users can return to date order after sorting by Title. Closes #2129.
 
 - Projects: eliminate duplicated `_ready = true` and `StateHasChanged()` calls in the Create New Project dialog (`AddProject`). All state restoration now happens in the `finally` block, ensuring consistent behavior across success, early-return validation, and exception paths. Closes #2194.
