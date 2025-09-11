@@ -3,6 +3,8 @@
 
 
 
+- Participants: adding a participant no longer sends an invite immediately. The Add Participant dialog now saves the email to a draft list by default. A new Save and Send action appears on the Participants header to send all pending invites when you're ready. Closes #2184.
+
 - Schedule: newly created meetings now appear immediately in the Dashboard calendar. The Schedule card adds the created meeting to the local list before refreshing from Graph, eliminating transient delays while Graph propagates the new event. Closes #2180.
 
 - Action Items: Save now works on the Create Action Item page. Creating a new item from `/actionitem` no longer fails silently when the model lacks a `type`/`listId`. The backend now defaults such items to the user's first Microsoft To‑Do list and sets the model metadata so the item immediately appears on the Dashboard list after save. Closes #2208.
