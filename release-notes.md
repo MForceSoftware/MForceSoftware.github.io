@@ -3,6 +3,8 @@
 
 
 
+- Projects: eliminate duplicated `_ready = true` and `StateHasChanged()` calls in the Create New Project dialog (`AddProject`). All state restoration now happens in the `finally` block, ensuring consistent behavior across success, early-return validation, and exception paths. Closes #2194.
+
 - Projects: Create New Project dialog now reliably closes on failure. If an exception occurs during plan creation, the dialog no longer gets stuck in a loading state; the component restores readiness and closes the dialog without a result so users can try again. Success still returns the created plan to refresh and highlight it on the Projects page. Closes #2162.
 
 - Projects: removed an unnecessary `StateHasChanged()` call in the Projects page (`Pages/Projects.razor.cs`) immediately before `NavigateTo(..., forceLoad: true)`. Since a force‑load navigation reloads the page, the extra state notification was redundant. Closes #2161.
