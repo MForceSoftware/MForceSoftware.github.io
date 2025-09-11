@@ -25,7 +25,7 @@
 
 - Projects: Add a Projected Completion Date field to the Create New Project dialog. When provided, a Planner task named "Projected Completion" is created in the new project's default bucket with the selected due date. This helps teams track and visualize the target completion from day one. Closes #2151.
 
-- Projects: add a Created Date field to the Projects list (shown as Start Date) and make it sortable by the actual created timestamp. This helps testing and production users quickly locate newly created projects. Closes #2150.
+- Projects: add a Created Date field to the Projects list and make it sortable by the actual created timestamp. This helps testing and production users quickly locate newly created projects. Closes #2150.
 
 - Settings: consolidated duplicate `@code` blocks in `Pages/Settings.razor` into a single block for clearer organization and maintainability. Closes #2117.
 
