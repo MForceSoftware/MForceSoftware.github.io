@@ -3,6 +3,7 @@
 
 
 
+- Action Items: when parsing a task's `Status` fails (e.g., an unknown or empty value), the app now defaults to `Not Started` instead of `In Progress`. Reading a To‑Do task without a status also maps to `NotStarted`. This aligns with user expectations and avoids implying work has begun. Tests cover both the constructor default and the update fallback. Closes #2236.
 - Action Items: replace null-conditional operator usage in the Status section of the Action Item page with explicit null handling. When the item is not yet available, the page now renders a disabled placeholder instead of risking a null reference; To‑Do tasks still show an editable selector and non–To‑Do tasks show a read‑only display. Closes #2235.
 - Action Items: reinstate the Status input on the single Action Item page. For To‑Do tasks, the page now shows an editable `InputSelect` bound to `taskStatus` with the standard options (Not Started, In Progress, Completed, Waiting on Others, Deferred). Non–To‑Do tasks still render a read‑only status label. Backend updates ensure `UpdateActionItemAsync` patches the Status on Microsoft To‑Do and keeps the local `Completed` flag in sync. Closes #2207.
 - Agendas: allow deleting items while creating or editing an agenda template. The Add Agenda dialog now shows a delete (trash) icon next to each item in both view and edit modes to remove mistakes or extra entries. Tests verify the presence of the delete actions and backing handler. Closes #2206.
