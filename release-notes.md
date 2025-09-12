@@ -3,6 +3,7 @@
 
 
 
+- Web: fix blocked Font Awesome stylesheet by updating the SRI hash in `wwwroot/index.html` to the correct value for 6.4.0. Added a test to guard SRI integrity and pinned `System.Linq.Dynamic.Core` to 1.6.0.2 in Schedule to align with Radzen and prevent a runtime `MissingMethodException` when rendering the Scheduler. Closes #2241.
 - Meetings: Add Decision dialog now displays its Title, Description, and Status inputs. The dialog had been opened with an unknown parameter (`runningMeeting`), which caused a silent render failure and an empty dialog body. The `AddDecision` component now accepts this parameter, preventing the failure. Closes #2239.
 - Action Items: when parsing a task's `Status` fails (e.g., an unknown or empty value), the app now defaults to `Not Started` instead of `In Progress`. Reading a To‑Do task without a status also maps to `NotStarted`. This aligns with user expectations and avoids implying work has begun. Tests cover both the constructor default and the update fallback. Closes #2236.
 - Action Items: replace null-conditional operator usage in the Status section of the Action Item page with explicit null handling. When the item is not yet available, the page now renders a disabled placeholder instead of risking a null reference; To‑Do tasks still show an editable selector and non–To‑Do tasks show a read‑only display. Closes #2235.
