@@ -17,6 +17,8 @@
 
 - Projects: add Delete action (trash icon) to the Projects list. Users can now delete a project directly from the list with a confirmation dialog; the grid refreshes after deletion. Closes #2210.
 
+- Projects: make Projected Completion Date input consistent with other fields in the Create New Project dialog. The date picker now uses full-width styling to match the Title and Team inputs instead of a narrower fixed width, improving visual hierarchy and reducing distraction. Closes #2204.
+
 - Projects: deleting a project from the Projects list no longer fails with "The If-Match header must be specified for this kind of request". The delete call to Microsoft Graph Planner now includes the required `If-Match: *` header to satisfy Graph’s precondition requirements. Closes #2223.
 
 - Projects: add a test to assert default sorting by Created Date (latest first) on the Projects page, ensuring users can return to date order after sorting by Title. Closes #2129.
