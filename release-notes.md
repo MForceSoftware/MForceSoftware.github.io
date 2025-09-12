@@ -3,6 +3,7 @@
 
 
 
+- Action Items: rating stars now render correctly by including the Material Icons webfont used by Radzen components. Added the stylesheet link to `MForce365.Web/wwwroot/index.html` and a test to guard against regressions. Closes #2209.
 - Action Items: unify due date/time normalization across task creation paths. Both To‑Do and Planner task creations now normalize returned `CreatedDateTime`/`DueDateTime` using `DateTimeOffset.LocalDateTime` (or `ToDateTimeOffset().LocalDateTime` for `DateTimeTimeZone`) to avoid timezone inconsistencies when rendering in the UI. Closes #2216.
 
 - Schedule: Add Meeting dialog Title field now matches the length and Tailwind styling of other inputs. Replaced the Radzen textbox with a Blazor `InputText` using the same classes as Start/End so the caret is visible and the control width is consistent. Closes #2198.
