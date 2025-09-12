@@ -3,6 +3,7 @@
 
 
 
+- Agendas: allow deleting items while creating or editing an agenda template. The Add Agenda dialog now shows a delete (trash) icon next to each item in both view and edit modes to remove mistakes or extra entries. Tests verify the presence of the delete actions and backing handler. Closes #2206.
 - Agendas: prevent total item percentages from exceeding 100% when creating or editing an agenda template. Adding a new item now clamps its percentage to the remaining available amount, and editing an existing item’s percentage is constrained so the sum across all items never goes above 100. A lightweight test guards these behaviors. Closes #2205.
 - Action Items: Title column now sorts alphabetically ascending/descending. The QuickGrid Title column switched to a template for the hyperlink, but lacked a `SortKeySelector`; adding it restores responsive sorting like other columns (Type remains unsortable by design). Closes #2203.
 - Action Items: rating stars now render correctly by including the Material Icons webfont used by Radzen components. Added the stylesheet link to `MForce365.Web/wwwroot/index.html` and a test to guard against regressions. Closes #2209.
