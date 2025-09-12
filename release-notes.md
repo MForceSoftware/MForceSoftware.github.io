@@ -3,6 +3,7 @@
 
 
 
+- Action Items: Title column now sorts alphabetically ascending/descending. The QuickGrid Title column switched to a template for the hyperlink, but lacked a `SortKeySelector`; adding it restores responsive sorting like other columns (Type remains unsortable by design). Closes #2203.
 - Action Items: rating stars now render correctly by including the Material Icons webfont used by Radzen components. Added the stylesheet link to `MForce365.Web/wwwroot/index.html` and a test to guard against regressions. Closes #2209.
 - Action Items: unify due date/time normalization across task creation paths. Both To‑Do and Planner task creations now normalize returned `CreatedDateTime`/`DueDateTime` using `DateTimeOffset.LocalDateTime` (or `ToDateTimeOffset().LocalDateTime` for `DateTimeTimeZone`) to avoid timezone inconsistencies when rendering in the UI. Closes #2216.
 
