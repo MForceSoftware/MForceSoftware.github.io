@@ -3,6 +3,7 @@
 
 
 
+- Schedule: fix Today button not responding in Month view by binding the scheduler's current date (`@bind-Date="@currentDate"`) in `MainSchedule.razor`. Ensures toolbar navigation (Today/Prev/Next) updates the view reliably across all modes. Closes #2248.
 - Action Items: fix console error when opening the Add/Edit Action Item page by removing `InputText` usages with a `Value` attribute (which require a `ValueExpression`). Disabled, read‑only fields now use plain `<input>` elements. Added a test to prevent regressions. Closes #2242.
 - Web: fix blocked Font Awesome stylesheet by updating the SRI hash in `wwwroot/index.html` to the correct value for 6.4.0. Added a test to guard SRI integrity and pinned `System.Linq.Dynamic.Core` to 1.6.0.2 in Schedule to align with Radzen and prevent a runtime `MissingMethodException` when rendering the Scheduler. Closes #2241.
 - Meetings: Add Decision dialog now displays its Title, Description, and Status inputs. The dialog had been opened with an unknown parameter (`runningMeeting`), which caused a silent render failure and an empty dialog body. The `AddDecision` component now accepts this parameter, preventing the failure. Closes #2239.
