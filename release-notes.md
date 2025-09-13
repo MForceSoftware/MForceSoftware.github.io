@@ -118,6 +118,8 @@
 - Meetings: selecting Meetings from the sidebar now shows the populated Schedule. Navigation links were standardized to the canonical lowercase route `"/scheduler"` across the app (NavMenu, MenuBar, and cards). This avoids case/relative-path mismatches that could leave the scheduler view blank after navigation. Closes #2148.
 
 - Projects: Create New Project dialog now closes immediately on Save, updates the Projects list, and then reloads the page to ensure the new plan appears even under Graph’s eventual consistency. The dialog also closes even if post-create steps (sharing or default bucket creation) fail, since the plan itself has been created. Closes #2149.
+ 
+ - Schedule: Day/Week time slots now show a hand cursor when hovering/selecting to clearly indicate they are clickable for creating a meeting. Applies to the main Schedule page and the Dashboard calendar card. Closes #2258.
 
 - Projects: moving tasks up/down within a bucket via the arrow icons now works reliably. Planner task reordering updates include the required Graph `If-Match` header so order hints are applied without precondition failures. Closes #2099.
 
