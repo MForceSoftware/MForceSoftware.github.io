@@ -3,6 +3,7 @@
 
 
 
+- QuickGrid: fix runtime error introduced by `Microsoft.AspNetCore.Components.QuickGrid` 9.x where `TemplateColumn` no longer accepts `SortKeySelector`. Updated Action Items and Projects grids to use `SortBy` for sorting the Title and Date Created columns. This resolves the WebAssembly render exception and restores dynamic updates to the agenda/Action Items lists after creating new entries. Closes #2254.
 - Action Items: add a star rating for Importance to the Create/Edit Action Item page in the Web app. The rating appears next to the Status inputs and maps to Microsoft To‑Do Importance (Low/Normal/High). Also updated labels from “Priority” to “Importance” for consistency across Add/Edit dialogs and the Action Items list. Backend now persists Importance on create and update. Closes #2252.
 - Schedule: fix Today button not responding in Month view by binding the scheduler's current date (`@bind-Date="@currentDate"`) in `MainSchedule.razor`. Ensures toolbar navigation (Today/Prev/Next) updates the view reliably across all modes. Closes #2248.
  - Schedule: Add Meeting dialog Title field now matches the size and styling of other inputs by using a Radzen `RadzenTextBox` bound to `model.Title` instead of a Blazor `InputText`. Improves visual consistency with Scribe, Chair, Purpose/Goal, and other fields. Closes #2249.
