@@ -1,4 +1,8 @@
 # mForce365 Release Notes
+## VERSION 1.4.125 Beta
+
+- Web: add a confirmation dialog when selecting Logout so users can cancel if clicked by mistake. The dialog is fully localized and supports the Escape key (Esc) to cancel, keeping the user signed in and returning to the app without navigating to the Microsoft sign‑out page. Closes #2257.
+
 ## VERSION 1.4.124 Beta
 
 - Meeting Binder: fix console error when selecting Edit Binder caused by attempting to create a Drive item without a file facet. Binder upload now uses `ItemWithPath(...).Content.PutAsync(...)` to create or replace the Word document in the meeting folder, then records the file ID for later finalize-to-PDF flow. Closes #2269.
