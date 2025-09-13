@@ -1,4 +1,8 @@
 # mForce365 Release Notes
+## VERSION 1.4.124 Beta
+
+- Meeting Binder: fix console error when selecting Edit Binder caused by attempting to create a Drive item without a file facet. Binder upload now uses `ItemWithPath(...).Content.PutAsync(...)` to create or replace the Word document in the meeting folder, then records the file ID for later finalize-to-PDF flow. Closes #2269.
+
 ## VERSION 1.4.123 Beta
 
 
