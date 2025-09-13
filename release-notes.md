@@ -3,6 +3,7 @@
 
 - Meeting Binder: fix console error when selecting Edit Binder caused by attempting to create a Drive item without a file facet. Binder upload now uses `ItemWithPath(...).Content.PutAsync(...)` to create or replace the Word document in the meeting folder, then records the file ID for later finalize-to-PDF flow. Closes #2269.
  - Agendas: reloading the Agendas page no longer hangs. Fixed two root causes: (1) the Font Awesome CDN stylesheet was blocked by an incorrect SRI hash; `wwwroot/index.html` now contains the correct hash for 6.4.0. (2) a NullReferenceException in `O365Agendas.Setup` during reload when OneDrive children or download URLs were missing; added null-safety checks and safer LINQ usage. Tests updated to guard the correct SRI. Closes #2255.
+ - Projects: deleting a project no longer shows the error "The format of value '*' is invalid" after confirming the delete. The delete call to Microsoft Graph Planner now prefers the plan's actual ETag (`@odata.etag`) for the `If-Match` header, falling back to `*` only when an ETag is unavailable. This avoids header format validation issues and reliably deletes the plan. Closes #2256.
 
 ## VERSION 1.4.123 Beta
 
