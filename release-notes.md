@@ -3,6 +3,7 @@
 
 
 
+- Action Items: add a star rating for Importance to the Create/Edit Action Item page in the Web app. The rating appears next to the Status inputs and maps to Microsoft To‑Do Importance (Low/Normal/High). Also updated labels from “Priority” to “Importance” for consistency across Add/Edit dialogs and the Action Items list. Backend now persists Importance on create and update. Closes #2252.
 - Schedule: fix Today button not responding in Month view by binding the scheduler's current date (`@bind-Date="@currentDate"`) in `MainSchedule.razor`. Ensures toolbar navigation (Today/Prev/Next) updates the view reliably across all modes. Closes #2248.
  - Schedule: Add Meeting dialog Title field now matches the size and styling of other inputs by using a Radzen `RadzenTextBox` bound to `model.Title` instead of a Blazor `InputText`. Improves visual consistency with Scribe, Chair, Purpose/Goal, and other fields. Closes #2249.
 - Action Items: fix console error when opening the Add/Edit Action Item page by removing `InputText` usages with a `Value` attribute (which require a `ValueExpression`). Disabled, read‑only fields now use plain `<input>` elements. Added a test to prevent regressions. Closes #2242.
