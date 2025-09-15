@@ -1,4 +1,8 @@
 # mForce365 Release Notes
+## VERSION 1.4.126 Beta
+
+- Dashboard: Action Items card now allows deleting an action item and marking it complete from the edit dialog. The dialog is the newer Add/Edit Action Item UI and includes a Completed toggle and a Delete button. After closing the dialog, the card refreshes from Microsoft Graph so saves, completes, and deletes are reflected immediately. Closes #2260.
+
 ## VERSION 1.4.125 Beta
 
 - Web: add a confirmation dialog when selecting Logout so users can cancel if clicked by mistake. The dialog is fully localized and supports the Escape key (Esc) to cancel, keeping the user signed in and returning to the app without navigating to the Microsoft sign‑out page. Closes #2257.
