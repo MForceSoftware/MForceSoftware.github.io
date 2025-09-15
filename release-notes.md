@@ -1,7 +1,10 @@
 # mForce365 Release Notes
 ## VERSION 1.4.130 Beta
 
+
+- Action Items: simplify `RadzenRating` Change handler bindings by passing the method group directly (e.g., `Change=@OnRatingChange`) instead of wrapping in a redundant lambda (e.g., `Change=@(args => OnRatingChange(args))`). This removes noise without changing behavior. Tests added to guard the binding style. Closes #2172.
 - Agendas: Meeting Agenda dropdown now populates with all existing agendas, not just those flagged as templates. The list shows the 10 most recently created agendas by default, with a Show more button to reveal the full set. Selecting a newly created agenda from the dialog applies it immediately to the meeting. Closes #2279.
+
 ## VERSION 1.4.129 Beta
 
 - Participants: after adding an invitee via Save (draft), the invitee now appears immediately in the Participants list marked as Pending, and a visible Save and Send button is shown in the header to dispatch invites when ready. Prevents the draft attendee from disappearing due to an unnecessary Graph reload. Closes #2278.
