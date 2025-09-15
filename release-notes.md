@@ -1,4 +1,8 @@
 # mForce365 Release Notes
+## VERSION 1.4.131 Beta
+
+- Meeting: Add Action Item from the meeting details page now opens the new Add Action Item dialog instead of the legacy version, aligning with the rest of the app’s updated UI. The dialog supports assigning to meeting attendees and selecting Importance via star rating. Closes #2280.
+
 ## VERSION 1.4.130 Beta
 
 
