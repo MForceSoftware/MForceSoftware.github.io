@@ -1,4 +1,8 @@
 # mForce365 Release Notes
+## VERSION 1.4.127 Beta
+
+- Web: fix Logout appearing clickable but not responding. The header Logout link now prevents default anchor navigation and invokes the Blazor WebAssembly logout flow via `NavigationManager.NavigateToLogout("authentication/logout")` after user confirmation. This reliably signs the user out. Closes #2276.
+
 ## VERSION 1.4.126 Beta
 
 - Dashboard: Action Items card now allows deleting an action item and marking it complete from the edit dialog. The dialog is the newer Add/Edit Action Item UI and includes a Completed toggle and a Delete button. After closing the dialog, the card refreshes from Microsoft Graph so saves, completes, and deletes are reflected immediately. Closes #2260.
