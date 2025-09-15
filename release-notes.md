@@ -1,4 +1,7 @@
 # mForce365 Release Notes
+## VERSION 1.4.128 Beta
+
+- Action Items: show Status dropdown when creating a new action item. The Create Action Item page now defaults the new item to a Microsoft To‑Do task and initializes Status to Not Started, so the editable Status selector appears immediately (instead of a read‑only display). This aligns the create experience with editing existing items. Closes #2277.
 ## VERSION 1.4.127 Beta
 
 - Web: fix Logout appearing clickable but not responding. The header Logout link now prevents default anchor navigation and invokes the Blazor WebAssembly logout flow via `NavigationManager.NavigateToLogout("authentication/logout")` after user confirmation. This reliably signs the user out. Closes #2276.
