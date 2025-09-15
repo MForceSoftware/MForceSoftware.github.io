@@ -1,4 +1,7 @@
 # mForce365 Release Notes
+## VERSION 1.4.129 Beta
+
+- Participants: after adding an invitee via Save (draft), the invitee now appears immediately in the Participants list marked as Pending, and a visible Save and Send button is shown in the header to dispatch invites when ready. Prevents the draft attendee from disappearing due to an unnecessary Graph reload. Closes #2278.
 ## VERSION 1.4.128 Beta
 
 - Action Items: show Status dropdown when creating a new action item. The Create Action Item page now defaults the new item to a Microsoft To‑Do task and initializes Status to Not Started, so the editable Status selector appears immediately (instead of a read‑only display). This aligns the create experience with editing existing items. Closes #2277.
