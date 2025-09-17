@@ -1,7 +1,7 @@
 # mForce365 Release Notes
 ## VERSION 1.4.131 Beta
 
-- Meeting: Add Action Item from the meeting details page now opens the new Add Action Item dialog instead of the legacy version, aligning with the rest of the app’s updated UI. The dialog supports assigning to meeting attendees and selecting Importance via star rating. Closes #2280.
+- Meeting: Add Action Item from the meeting details page now opens the new Add Action Item dialog—both from the **Add Action** menu entry and the card’s **+** icon—so the experience matches the rest of the app. The dialog supports assigning to meeting attendees and selecting Importance via star rating. Closes #2280.
 - Meeting Decisions: The Add Decision dialog now binds the Status radio group straight to the `MeetingDecisionStatus` enum, guaranteeing each selection saves the matching value (Agreed, Rejected, Pending, New). Decision icons in the meeting card now stay in sync—Agreed shows a green thumbs-up and Rejected a red thumbs-down. Tests guard the strongly typed binding. Closes #2281.
 
 ## VERSION 1.4.130 Beta
