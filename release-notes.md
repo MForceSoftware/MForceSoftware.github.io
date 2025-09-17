@@ -3,6 +3,7 @@
 
 - Meeting: Add Action Item from the meeting details page now opens the new Add Action Item dialog—both from the **Add Action** menu entry and the card’s **+** icon—so the experience matches the rest of the app. The dialog supports assigning to meeting attendees and selecting Importance via star rating. Closes #2280.
 - Meeting Decisions: The Add Decision dialog now binds the Status radio group straight to the `MeetingDecisionStatus` enum, guaranteeing each selection saves the matching value (Agreed, Rejected, Pending, New). Decision icons in the meeting card now stay in sync—Agreed shows a green thumbs-up and Rejected a red thumbs-down. Tests guard the strongly typed binding. Closes #2281.
+- Projects: Reordering tasks within a bucket using the arrow icons now succeeds. Planner PATCH calls reuse each task's current `@odata.etag` for the `If-Match` header (with a safe fallback), eliminating the 400 "The format of value '*' is invalid" error. Closes #2202.
 
 ## VERSION 1.4.130 Beta
 
