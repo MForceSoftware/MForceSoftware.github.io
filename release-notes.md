@@ -1,4 +1,8 @@
 # mForce365 Release Notes
+## VERSION 1.4.140 Beta
+
+- Meeting: Relocated the "Send meeting invite" action to the meeting header so it sits under the scheduled date and alongside the Preparation/Participants controls. The action now reuses pending attendees, resends updates to everyone in the participant list, and stays disabled until at least one participant exists. Added tests lock down the markup and component API. Closes #2300.
+
 ## VERSION 1.4.139 Beta
 
 - Projects: Adding a Planner task now supplies the required assignment `orderHint`, so tasks assigned during creation persist instead of returning `400 The format of value '*' is invalid`. Closes #2299.

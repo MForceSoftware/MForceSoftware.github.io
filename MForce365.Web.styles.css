@@ -3,6 +3,23 @@
 
 /* /Pages/Index.razor.rz.scp.css */
 
+/* /Pages/Meeting.razor.rz.scp.css */
+.meeting-header-actions[b-0snrdmfufu] {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+@media (max-width: 767.98px) {
+    .meeting-header-actions[b-0snrdmfufu] {
+        align-items: flex-start;
+    }
+}
+
+.meeting-header-date[b-0snrdmfufu] {
+    font-weight: 600;
+}
 /* /Shared/MainLayout.razor.rz.scp.css */
 /* MainLayout.razor.css */
 
