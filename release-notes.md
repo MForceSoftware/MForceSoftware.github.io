@@ -1,4 +1,8 @@
 # mForce365 Release Notes
+## VERSION 1.4.143 Beta
+
+- Action Items: Status dropdown options now use localized, human-friendly labels ("Not Started", "In Progress", "Waiting On Others") so the create/edit forms match the rest of the UI. Added resource tests guard the spacing. Closes #2321.
+
 ## VERSION 1.4.142 Beta
 
 - Meeting: Cancelling a meeting now validates that the Graph event id is available before asking for confirmation, and wraps the Graph cancel call in error handling so the WebAssembly runtime no longer crashes. The UI surfaces localized success/error notifications and uses a default cancellation comment. Added unit tests cover the guard and resource keys. Closes #2302.
