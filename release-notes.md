@@ -1,4 +1,8 @@
 # mForce365 Release Notes
+## VERSION 1.4.134 Beta
+
+- Teams: Cancelling the New Team dialog no longer throws a null reference. The page now checks the dialog result before populating Graph metadata and posting, so closing the dialog simply returns to the list. Added tests ensure the null guard precedes the Graph call. Closes #2292.
+
 ## VERSION 1.4.133 Beta
 
 
