@@ -1,4 +1,8 @@
 # mForce365 Release Notes
+## VERSION 1.4.132 Beta
+
+- Action Items: Modernized the edit dialog used across the dashboard and meeting experiences. The dialog now shares the same streamlined layout as the create form, keeps the Completed toggle and Delete button front-and-center, and refreshes after save/delete/complete operations. Closes #2260.
+
 ## VERSION 1.4.131 Beta
 
 - Meeting: Add Action Item from the meeting details page now opens the new Add Action Item dialog—both from the **Add Action** menu entry and the card’s **+** icon—so the experience matches the rest of the app. The dialog supports assigning to meeting attendees and selecting Importance via star rating. Closes #2280.
