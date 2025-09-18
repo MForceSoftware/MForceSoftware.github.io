@@ -1,4 +1,7 @@
 # mForce365 Release Notes
+## VERSION 1.4.133 Beta
+
+- Schedule: Day and Week views now show a hand cursor when hovering the 30-minute time slots, making it obvious they can be clicked to start creating a meeting. The styling targets Radzen's underlying `rz-slot` class so the cursor change applies to the actual selectable surface. Closes #2258.
 ## VERSION 1.4.132 Beta
 
 - Action Items: Modernized the edit dialog used across the dashboard and meeting experiences. The dialog now shares the same streamlined layout as the create form, keeps the Completed toggle and Delete button front-and-center, and refreshes after save/delete/complete operations. Closes #2260.
