@@ -1,7 +1,11 @@
 # mForce365 Release Notes
 ## VERSION 1.4.136 Beta
 
+
+- Action Items: To-Do and Planner loaders now iterate Microsoft Graph paging so the dashboard surfaces every task. Recurring To-Do instances follow `@odata.nextLink`, matching SDK guidance. Closes #2295.
+
 - Shared: `Utilities.getToDoItems` now awaits Microsoft Graph instead of blocking on `.Result`, preventing UI hangs in Blazor WebAssembly. The helper returns a fresh `Todo` object when Graph is unavailable, and tests cover the async path. Closes #2294.
+
 
 ## VERSION 1.4.135 Beta
 
