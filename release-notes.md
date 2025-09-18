@@ -1,4 +1,8 @@
 # mForce365 Release Notes
+## VERSION 1.4.142 Beta
+
+- Meeting: Cancelling a meeting now validates that the Graph event id is available before asking for confirmation, and wraps the Graph cancel call in error handling so the WebAssembly runtime no longer crashes. The UI surfaces localized success/error notifications and uses a default cancellation comment. Added unit tests cover the guard and resource keys. Closes #2302.
+
 ## VERSION 1.4.141 Beta
 
 - Meeting: Regenerate the Microsoft Teams description on every request instead of blocking after the first run. The formatter now strips the previous summary (including legacy markup) before rebuilding, so the "Update meeting description" action reliably reflects the latest agenda, action items, and decisions. Added shared tests lock down repeated updates. Closes #2301.
