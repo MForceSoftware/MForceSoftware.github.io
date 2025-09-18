@@ -1,4 +1,8 @@
 # mForce365 Release Notes
+## VERSION 1.4.136 Beta
+
+- Shared: `Utilities.getToDoItems` now awaits Microsoft Graph instead of blocking on `.Result`, preventing UI hangs in Blazor WebAssembly. The helper returns a fresh `Todo` object when Graph is unavailable, and tests cover the async path. Closes #2294.
+
 ## VERSION 1.4.135 Beta
 
 - Schedule: preserve Graph time zones when loading and editing events. Calendar view requests now set `Prefer: outlook.timezone` and hydrate appointments via `DateTimeTimeZone.ToDateTimeOffset()` so local times render accurately. Drag and resize operations convert scheduler selections back into the event's original zone before PATCHing, preventing unintended UTC shifts. Closes #2293.
