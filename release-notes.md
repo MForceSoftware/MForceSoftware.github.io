@@ -1,4 +1,8 @@
 # mForce365 Release Notes
+## VERSION 1.4.137 Beta
+
+- Action Items: Hide Microsoft To-Do recurrence series masters when the Graph API returns instance occurrences so the dashboard only lists actionable items. When Graph provides no instances we keep the master, matching client behavior. Added tests cover both paths. Closes #2296.
+
 ## VERSION 1.4.136 Beta
 
 
