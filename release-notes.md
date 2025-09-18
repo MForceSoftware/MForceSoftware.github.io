@@ -1,4 +1,8 @@
 # mForce365 Release Notes
+## VERSION 1.4.141 Beta
+
+- Meeting: Regenerate the Microsoft Teams description on every request instead of blocking after the first run. The formatter now strips the previous summary (including legacy markup) before rebuilding, so the "Update meeting description" action reliably reflects the latest agenda, action items, and decisions. Added shared tests lock down repeated updates. Closes #2301.
+
 ## VERSION 1.4.140 Beta
 
 - Meeting: Relocated the "Send meeting invite" action to the meeting header so it sits under the scheduled date and alongside the Preparation/Participants controls. The action now reuses pending attendees, resends updates to everyone in the participant list, and stays disabled until at least one participant exists. Added tests lock down the markup and component API. Closes #2300.
