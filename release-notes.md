@@ -1,4 +1,8 @@
 # mForce365 Release Notes
+## VERSION 1.4.139 Beta
+
+- Projects: Adding a Planner task now supplies the required assignment `orderHint`, so tasks assigned during creation persist instead of returning `400 The format of value '*' is invalid`. Closes #2299.
+
 ## VERSION 1.4.138 Beta
 
 - Action Items: Clear the cached task list before reloading from Microsoft Graph so refreshes after completing an item no longer duplicate entries on the dashboard. Closes #2298.
