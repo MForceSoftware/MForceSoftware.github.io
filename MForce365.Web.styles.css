@@ -51,8 +51,14 @@
 main[b-gg5zfc3nvi] {
   grid-row: 2 / auto;
   grid-column: 1 / auto;
-  padding: 1rem;
+  padding: 0.5rem;
   overflow: auto;
+}
+
+@media (min-width: 640px) {
+  main[b-gg5zfc3nvi] {
+    padding: 1rem;
+  }
 }
 
 /* Sidebar hidden on small screens */
