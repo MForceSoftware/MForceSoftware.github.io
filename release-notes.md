@@ -1,4 +1,8 @@
 # mForce365 Release Notes
+## VERSION 1.4.144 Beta
+
+- Meeting: Drafting a meeting now builds a Word-based meeting binder populated with the title page, overview, notes, agenda, decisions, actions, Planner project summary, and any uploaded files as appendices. The host can download the `.docx` at any point, receives an automatic PDF copy when the meeting ends, and finalizing the binder converts the latest version to PDF and emails it to every attendee. Localized resources drive the section headings, and new shared tests cover binder generation and the table of contents field. Closes #2324.
+
 ## VERSION 1.4.143 Beta
 
 - Action Items: Status dropdown options now use localized, human-friendly labels ("Not Started", "In Progress", "Waiting On Others") so the create/edit forms match the rest of the UI. Added resource tests guard the spacing. Closes #2321.
