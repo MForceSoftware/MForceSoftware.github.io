@@ -1,4 +1,8 @@
 # mForce365 Release Notes
+## VERSION 1.4.145 Beta
+
+- Meeting: Saving the running meeting now uploads the `.meetingv1` state file via Microsoft Graph `ItemWithPath(...).Content.PutAsync(...)` guarded by a semaphore, preventing the 409 conflicts that occurred when assigning a project. Added tests ensure the ItemWithPath pattern and removal of the legacy `If-Match` header stay in place. Closes #2326.
+
 ## VERSION 1.4.144 Beta
 
 - Meeting: Drafting a meeting now builds a Word-based meeting binder populated with the title page, overview, notes, agenda, decisions, actions, Planner project summary, and any uploaded files as appendices. The host can download the `.docx` at any point, receives an automatic PDF copy when the meeting ends, and finalizing the binder converts the latest version to PDF and emails it to every attendee. Localized resources drive the section headings, and new shared tests cover binder generation and the table of contents field. Closes #2324.
