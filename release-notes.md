@@ -1,4 +1,8 @@
 # mForce365 Release Notes
+## VERSION 1.4.148 Beta
+
+- Meeting: Binder now regenerates automatically whenever agendas, attendees, notes, or projects change so organizers always download the latest content before finalizing. Added shared tests cover binder invalidation to prevent regressions. Closes #2329.
+
 ## VERSION 1.4.147 Beta
 
 - Meeting: Opening an existing meeting now reuses the original meeting assets folder instead of creating a renamed copy, so the saved `thisMeeting.meetingv1` snapshot loads correctly from OneDrive. Closes #2328.
