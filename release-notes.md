@@ -1,4 +1,8 @@
 # mForce365 Release Notes
+## VERSION 1.4.147 Beta
+
+- Meeting: Opening an existing meeting now reuses the original meeting assets folder instead of creating a renamed copy, so the saved `thisMeeting.meetingv1` snapshot loads correctly from OneDrive. Closes #2328.
+
 ## VERSION 1.4.146 Beta
 
 - Meeting: Adding a participant no longer surfaces a console `412 Precondition Failed` when the binder document already exists. The binder upload now retrieves the current drive item ETag and sends it in the Graph `If-Match` header (falling back to `*`), keeping the binder in sync without conflicting with Word co-authoring. Added WebAssembly tests lock down the concurrency guard. Closes #2327.
