@@ -1,4 +1,8 @@
 # mForce365 Release Notes
+## VERSION 1.4.146 Beta
+
+- Meeting: Adding a participant no longer surfaces a console `412 Precondition Failed` when the binder document already exists. The binder upload now retrieves the current drive item ETag and sends it in the Graph `If-Match` header (falling back to `*`), keeping the binder in sync without conflicting with Word co-authoring. Added WebAssembly tests lock down the concurrency guard. Closes #2327.
+
 ## VERSION 1.4.145 Beta
 
 - Meeting: Saving the running meeting now uploads the `.meetingv1` state file via Microsoft Graph `ItemWithPath(...).Content.PutAsync(...)` guarded by a semaphore, preventing the 409 conflicts that occurred when assigning a project. Added tests ensure the ItemWithPath pattern and removal of the legacy `If-Match` header stay in place. Closes #2326.
