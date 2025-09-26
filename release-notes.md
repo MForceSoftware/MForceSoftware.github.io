@@ -1,4 +1,8 @@
 # mForce365 Release Notes
+## VERSION 1.4.149 Beta
+
+- Meeting: Word binders now render the Table of Contents immediately because the document settings request field updates on open. Added a shared test that locks the `UpdateFieldsOnOpen` flag so meeting summaries always surface navigation when downloaded or finalized. Closes #2330.
+
 ## VERSION 1.4.148 Beta
 
 - Meeting: Binder now regenerates automatically whenever agendas, attendees, notes, or projects change so organizers always download the latest content before finalizing. Added shared tests cover binder invalidation to prevent regressions. Closes #2329.
