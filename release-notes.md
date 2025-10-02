@@ -1,4 +1,7 @@
 # mForce365 Release Notes
+## VERSION 1.4.152 Beta
+
+- Dashboard: Calendar Today button now responds in Week and Month views. `ScheduleCard` binds the scheduler date via `@bind-Date="@currentDate"`, mirroring the full Scheduler page. This ensures toolbar navigation (Today/Prev/Next) updates the visible range and triggers `LoadData`. Added a test in `MForce.Components.Schedule.Tests/ScheduleCardTests.cs` to lock the binding in place. Closes #2336.
 ## VERSION 1.4.151 Beta
 
 - Schedule: Day/Week time slots now show a hand cursor on hover to indicate they’re selectable. Styles were applied via CSS isolation in both `MainSchedule.razor.css` and `ScheduleCard.razor.css`, including the Radzen `rz-events` overlay to ensure the cursor appears over the full interactive surface. Tests updated in `MForce.Components.Schedule.Tests/CursorPointerOnSlotsTests.cs` to lock this behavior. Closes #2258.
