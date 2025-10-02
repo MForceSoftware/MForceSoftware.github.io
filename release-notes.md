@@ -1,4 +1,7 @@
 # mForce365 Release Notes
+## VERSION 1.4.150 Beta
+
+- Projects: The "Add Bucket" dialog no longer loses focus after each keystroke. The form now binds to a stable model instance (`AddBucketModel`) and updates the `Name` property on input, preventing `RadzenTemplateForm` from recreating its `EditContext`. Tests were updated to guard this behavior. Closes #2298.
 ## VERSION 1.4.149 Beta
 
 - Meeting: Word binders now render the Table of Contents immediately because the document settings request field updates on open. Added a shared test that locks the `UpdateFieldsOnOpen` flag so meeting summaries always surface navigation when downloaded or finalized. Closes #2330.
