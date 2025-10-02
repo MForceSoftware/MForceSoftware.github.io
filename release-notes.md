@@ -1,4 +1,7 @@
 # mForce365 Release Notes
+## VERSION 1.4.151 Beta
+
+- Schedule: Day/Week time slots now show a hand cursor on hover to indicate they’re selectable. Styles were applied via CSS isolation in both `MainSchedule.razor.css` and `ScheduleCard.razor.css`, including the Radzen `rz-events` overlay to ensure the cursor appears over the full interactive surface. Tests updated in `MForce.Components.Schedule.Tests/CursorPointerOnSlotsTests.cs` to lock this behavior. Closes #2258.
 ## VERSION 1.4.150 Beta
 
 - Projects: The "Add Bucket" dialog no longer loses focus after each keystroke. The form now binds to a stable model instance (`AddBucketModel`) and updates the `Name` property on input, preventing `RadzenTemplateForm` from recreating its `EditContext`. Tests were updated to guard this behavior. Closes #2298.
