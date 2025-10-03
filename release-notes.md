@@ -1,4 +1,7 @@
 # mForce365 Release Notes
+## VERSION 1.4.160 Beta
+
+- Meeting: Participants dropdown actions now work reliably from the meeting header. Normalized the Reset Meeting action value, added a handler for Add Note to reveal the notes area, and fixed event binding on the Participants card expand/collapse icons. Added tests to guard the participants menu item values and reset action consistency. Closes #2345.
 ## VERSION 1.4.159 Beta
 
 - Meeting: Add Decision dialog on the meeting page now always shows the Title and Description inputs when opened from the header menu. The dialog is opened with an explicit `model` parameter to guarantee a bound instance in all contexts. Also guards against null results when the dialog is canceled. Closes #2343.
