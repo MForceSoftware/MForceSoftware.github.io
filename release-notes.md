@@ -1,4 +1,7 @@
 # mForce365 Release Notes
+## VERSION 1.4.153 Beta
+
+- Meetings: The recurrence dialog now seeds the start date from the appointment and defaults the end date to six months later instead of `0001-01-01`. `AddAppointmentPage` passes the meeting start/end into the dialog, and new coverage in `MForce.Components.Schedule.Tests/RecurrencePatternDefaultsTests.cs` locks the initialization behavior. Closes #2337.
 ## VERSION 1.4.152 Beta
 
 - Dashboard: Calendar Today button now responds in Week and Month views. `ScheduleCard` binds the scheduler date via `@bind-Date="@currentDate"`, mirroring the full Scheduler page. This ensures toolbar navigation (Today/Prev/Next) updates the visible range and triggers `LoadData`. Added a test in `MForce.Components.Schedule.Tests/ScheduleCardTests.cs` to lock the binding in place. Closes #2336.
