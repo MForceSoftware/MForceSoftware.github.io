@@ -418,3 +418,4 @@ Each added item and the resolved issue is mentioned below, with the most recent 
 
 
 While we are doing significant work, please refer to this [issue](https://github.com/MForceSoftware/Mforce365/issues/1896) for current status.
+- Action Item form: fixed the Status field to be editable for To‑Do tasks and aligned the Completed checkbox with the Status input for consistent layout. Closes #2341.
