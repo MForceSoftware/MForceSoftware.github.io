@@ -425,3 +425,4 @@ Each added item and the resolved issue is mentioned below, with the most recent 
 
 While we are doing significant work, please refer to this [issue](https://github.com/MForceSoftware/Mforce365/issues/1896) for current status.
 - Action Item form: fixed the Status field to be editable for To‑Do tasks and aligned the Completed checkbox with the Status input for consistent layout. Closes #2341.
+ - Files: Drag‑and‑drop in the Add File dialog now saves uploads into the Documents folder by default when you are at the meeting root. This ensures files appear under one of the three base folders (Meeting Notes, Documents, Correspondence) instead of the meeting root. Closes #2344.
