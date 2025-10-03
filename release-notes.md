@@ -1,4 +1,7 @@
 # mForce365 Release Notes
+## VERSION 1.4.156 Beta
+
+- Meeting: Adding an email participant now persists on the Participants card until invites are sent. Pending attendees were being dropped on automatic refresh because the meeting reload replaced the local list with Graph attendees. `MForceMeeting.ReloadAsync` now preserves locally added pending attendees and merges them back after fetching from Graph. Includes a unit test in `MForce365.Shared.Tests/MeetingReloadPendingAttendeesTests.cs`. Closes #2339.
 ## VERSION 1.4.155 Beta
 
 - Meeting: The Send meeting invite action now stretches across the meeting header so the button sits flush-right on desktop while stacking under the date on mobile. The draft participant toast references the `Send Meeting Invite` label so users know which action to trigger. Closes #2338.
