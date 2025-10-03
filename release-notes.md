@@ -1,4 +1,7 @@
 # mForce365 Release Notes
+## VERSION 1.4.155 Beta
+
+- Meeting: The Send meeting invite action now stretches across the meeting header so the button sits flush-right on desktop while stacking under the date on mobile. The draft participant toast references the `Send Meeting Invite` label so users know which action to trigger. Closes #2338.
 ## VERSION 1.4.154 Beta
 
 - Action Items: Opening an action item URL for an item that was deleted now routes back to the list instead of throwing a null-reference during initialization. The page keeps its placeholder model and only assigns the retrieved item when found, returning immediately after redirect. A new test in `MForce365.Web.Tests/ActionItemInitializationTests.cs` locks the navigation guard in place. Closes #2238.
