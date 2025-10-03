@@ -1,4 +1,7 @@
 # mForce365 Release Notes
+## VERSION 1.4.158 Beta
+
+- Action Items: Save and Delete now function on the single Action Item page. The Save button submits the form via `OnValidSubmit` and persists changes for both new and existing items, while the Delete button invokes the handler to remove the current item and returns to the list. Added lightweight tests in `MForce365.Web.Tests/ActionItemSaveDeleteButtonsTests.cs` to ensure the submit and delete handlers remain wired. Closes #2342.
 ## VERSION 1.4.157 Beta
 
 - Projects: Fix task reordering down by one. Clicking the down arrow on the top task previously moved it to the bottom of the list. The reorder logic now sets the task's `OrderHint` between the next two tasks, ensuring it moves exactly one position down. Tests in `MForce365.Web.Tests/ProjectTaskDownFixTests.cs` verify the updated algorithm is present in both the Web and legacy Pages implementations. Closes #2340.
