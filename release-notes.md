@@ -1,4 +1,7 @@
 # mForce365 Release Notes
+## VERSION 1.4.154 Beta
+
+- Action Items: Opening an action item URL for an item that was deleted now routes back to the list instead of throwing a null-reference during initialization. The page keeps its placeholder model and only assigns the retrieved item when found, returning immediately after redirect. A new test in `MForce365.Web.Tests/ActionItemInitializationTests.cs` locks the navigation guard in place. Closes #2238.
 ## VERSION 1.4.153 Beta
 
 - Meetings: The recurrence dialog now seeds the start date from the appointment and defaults the end date to six months later instead of `0001-01-01`. `AddAppointmentPage` passes the meeting start/end into the dialog, and new coverage in `MForce.Components.Schedule.Tests/RecurrencePatternDefaultsTests.cs` locks the initialization behavior. Closes #2337.
