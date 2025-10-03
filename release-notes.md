@@ -1,4 +1,7 @@
 # mForce365 Release Notes
+## VERSION 1.4.159 Beta
+
+- Meeting: Add Decision dialog on the meeting page now always shows the Title and Description inputs when opened from the header menu. The dialog is opened with an explicit `model` parameter to guarantee a bound instance in all contexts. Also guards against null results when the dialog is canceled. Closes #2343.
 ## VERSION 1.4.158 Beta
 
 - Action Items: Save and Delete now function on the single Action Item page. The Save button submits the form via `OnValidSubmit` and persists changes for both new and existing items, while the Delete button invokes the handler to remove the current item and returns to the list. Added lightweight tests in `MForce365.Web.Tests/ActionItemSaveDeleteButtonsTests.cs` to ensure the submit and delete handlers remain wired. Closes #2342.
