@@ -1,4 +1,7 @@
 # mForce365 Release Notes
+## VERSION 1.4.157 Beta
+
+- Projects: Fix task reordering down by one. Clicking the down arrow on the top task previously moved it to the bottom of the list. The reorder logic now sets the task's `OrderHint` between the next two tasks, ensuring it moves exactly one position down. Tests in `MForce365.Web.Tests/ProjectTaskDownFixTests.cs` verify the updated algorithm is present in both the Web and legacy Pages implementations. Closes #2340.
 ## VERSION 1.4.156 Beta
 
 - Meeting: Adding an email participant now persists on the Participants card until invites are sent. Pending attendees were being dropped on automatic refresh because the meeting reload replaced the local list with Graph attendees. `MForceMeeting.ReloadAsync` now preserves locally added pending attendees and merges them back after fetching from Graph. Includes a unit test in `MForce365.Shared.Tests/MeetingReloadPendingAttendeesTests.cs`. Closes #2339.
