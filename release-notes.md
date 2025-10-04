@@ -1,4 +1,7 @@
 # mForce365 Release Notes
+## VERSION 1.4.161 Beta
+
+- Schedule: Add Meeting dialog now scrolls fully to the bottom on all screen sizes. The dialog is opened with `DialogOptions` using the `dialog-fixed` CSS class from `mforce365-overrides.css`, and the stylesheet constrains dialog content height to the viewport with internal scrolling. This fixes the right scrollbar not reaching the end of the form on the meeting invite creation page. Closes #2346.
 ## VERSION 1.4.160 Beta
 
 - Meeting: Participants dropdown actions now work reliably from the meeting header. Normalized the Reset Meeting action value, added a handler for Add Note to reveal the notes area, and fixed event binding on the Participants card expand/collapse icons. Added tests to guard the participants menu item values and reset action consistency. Closes #2345.

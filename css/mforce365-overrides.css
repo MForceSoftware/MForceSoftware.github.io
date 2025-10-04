@@ -8,5 +8,12 @@
 .dialog-fixed .rz-dialog-content {
   /* Avoid content-driven jumps; allow internal scrolling if needed */
   overflow-y: auto;
+  /* Constrain dialog content to viewport to ensure full vertical scroll access */
+  max-height: calc(100vh - 8rem);
 }
 
+/* Ensure generic Radzen dialogs remain usable on smaller screens */
+.rz-dialog .rz-dialog-content {
+  max-height: calc(100vh - 6rem);
+  overflow-y: auto;
+}
