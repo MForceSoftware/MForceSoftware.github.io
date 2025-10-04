@@ -1,4 +1,7 @@
 # mForce365 Release Notes
+## VERSION 1.4.162 Beta
+
+- Schedule/Meeting invites: Headings in newly created meeting invites are now bold when viewed in Outlook and in mForce. Invite bodies are generated as HTML with bold labels for Purpose/Goal, Chair, Scribe/Minutes, Team, and Project, improving readability. Added tests to validate HTML output and encoding. Closes #2347.
 ## VERSION 1.4.161 Beta
 
 - Schedule: Add Meeting dialog now scrolls fully to the bottom on all screen sizes. The dialog is opened with `DialogOptions` using the `dialog-fixed` CSS class from `mforce365-overrides.css`, and the stylesheet constrains dialog content height to the viewport with internal scrolling. This fixes the right scrollbar not reaching the end of the form on the meeting invite creation page. Closes #2346.
