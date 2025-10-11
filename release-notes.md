@@ -1,4 +1,7 @@
 # mForce365 Release Notes
+## VERSION 1.4.164 Beta
+
+- Action Items: Edit dialogs now use Tailwind button styles consistently — Save is indigo, Delete is red, and Cancel is gray — matching the design system. Updated `ActionItem.razor`, `Pages/AddTaskPage.razor`, and `Components/AddActionItemDialog.razor`. Added tests in `MForce365.Web.Tests/EditActionDialogButtonStyleTests.cs` to lock in the class names. Closes #2367.
 ## VERSION 1.4.163 Beta
 
 - Web: The `DataService` registration now uses a scoped lifetime so it can consume the scoped `GraphServiceClient`. This resolves the startup crash seen in unauthenticated sessions when the singleton service attempted to depend on the Graph client before sign-in.
