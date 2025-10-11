@@ -18,6 +18,13 @@
     margin-right: auto;
 }
 
+.meeting-title-box[b-0snrdmfufu] {
+    border: 1px solid var(--rz-border);
+    border-radius: var(--rz-border-radius);
+    padding: 0.5rem 0.75rem;
+    background: var(--rz-base-0);
+}
+
 @media (max-width: 767.98px) {
     .meeting-header-actions[b-0snrdmfufu] {
         flex-direction: column;

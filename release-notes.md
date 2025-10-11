@@ -1,4 +1,7 @@
 # mForce365 Release Notes
+## VERSION 1.4.166 Beta
+
+- Meeting: Meeting Details header formatting updated. The meeting title now appears on the left inside a subtle box for emphasis, while the scheduled date and a Send meeting invite button align to the right. The header is fully responsive: on narrow screens, the date and button stack under the title while preserving spacing. Tests in `MForce365.Web.Tests/MeetingHeaderFormattingTests.cs` verify the new markup and styles. Closes #2369.
 ## VERSION 1.4.165 Beta
 
 - Action Items: Edit dialog now persists the Completed state and selected Status on Save. If the Completed toggle is checked, the task is saved with Status=Completed; otherwise, the chosen Status value is sent to Microsoft Graph. This fixes a bug where checking Completed in the Edit Action Item dialog did not result in a completed task after saving. Tests were added in `MForce.Components.ActionItems.Tests/EditActionItemCompletionSaveTests.cs` to guard the save behavior. Closes #2366.
