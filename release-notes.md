@@ -1,4 +1,7 @@
 # mForce365 Release Notes
+## VERSION 1.4.163 Beta
+
+- Web: The `DataService` registration now uses a scoped lifetime so it can consume the scoped `GraphServiceClient`. This resolves the startup crash seen in unauthenticated sessions when the singleton service attempted to depend on the Graph client before sign-in.
 ## VERSION 1.4.162 Beta
 
 - Schedule/Meeting invites: Headings in newly created meeting invites are now bold when viewed in Outlook and in mForce. Invite bodies are generated as HTML with bold labels for Purpose/Goal, Chair, Scribe/Minutes, Team, and Project, improving readability. Added tests to validate HTML output and encoding. Closes #2347.
