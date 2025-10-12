@@ -1,4 +1,7 @@
 # mForce365 Release Notes
+## VERSION 1.4.167 Beta
+
+- Action Items: Restore the Save button visibility in the Add Action Item dialog after enabling Tailwind Preflight. The component now uses Tailwind utility classes for the layout and buttons, sharing the same `mForceButtonPrimary`/`mForceButtonSecondary` styles as the rest of the app. Added `MForce.Components.ActionItems.Tests/AddActionItemButtonStyleTests.cs` to guard the markup. Closes #2393.
 ## VERSION 1.4.166 Beta
 
 - Meeting: Meeting Details header formatting updated. The meeting title now appears on the left inside a subtle box for emphasis, while the scheduled date and a Send meeting invite button align to the right. The header is fully responsive: on narrow screens, the date and button stack under the title while preserving spacing. Tests in `MForce365.Web.Tests/MeetingHeaderFormattingTests.cs` verify the new markup and styles. Closes #2369.
