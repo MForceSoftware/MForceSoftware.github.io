@@ -1,4 +1,7 @@
 # mForce365 Release Notes
+## VERSION 1.4.168 Beta
+
+- Docs: Added a product design and development case study to the documentation set and linked it from the docs index so teams can reference the original architectural and delivery decisions.
 ## VERSION 1.4.167 Beta
 
 - Action Items: Restore the Save button visibility in the Add Action Item dialog after enabling Tailwind Preflight. The component now uses Tailwind utility classes for the layout and buttons, sharing the same `mForceButtonPrimary`/`mForceButtonSecondary` styles as the rest of the app. Added `MForce.Components.ActionItems.Tests/AddActionItemButtonStyleTests.cs` to guard the markup. Closes #2393.
