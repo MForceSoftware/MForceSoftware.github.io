@@ -11,6 +11,7 @@
 - Meeting dashboard responsive polish: tightened desktop spacing for hero/toolbars/cards, improved mobile button wrapping for quick actions/assets controls, and added mobile overflow guards in `MainLayout` so meeting actions are not clipped horizontally.
 - Meeting tile alignment: all meeting dashboard cards now stretch to fill their allocated grid columns at desktop and mobile breakpoints, removing uneven card widths and making row gutters/padding line up consistently.
 - Tests: added `CurrentPathLabel_HidesOpaqueChildFolderName` in `MForce.Components.Files.Tests/FileExplorerTests.cs` and refreshed meeting layout assertions in `MForce365.Web.Tests/MeetingDashboardLayoutTests.cs` and `MForce365.Web.Tests/MeetingSendInvitesTests.cs` to match the modern dashboard implementation.
+- .NET 10 upgrade: moved all active projects (web, shared libraries, data/components, GraphData, MAUI targets, and tests) to `net10.0` and updated CI/CD workflows to use `dotnet-version: 10.0.x` with `net10.0` publish output paths.
 
 ## VERSION 1.4.171 Beta
 
