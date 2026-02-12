@@ -7,6 +7,9 @@
 - Meeting assets labels: opaque Microsoft folder identifiers (for example `040000...`) are now masked as `Meeting folder` in folder cards and path/location labels so users never see technical IDs.
 - Web layout reliability: restored loading of the Blazor CSS-isolation bundle by adding `MForce365.Web.styles.css` to `index.html`. This ensures Meeting/MainLayout scoped styles apply in local and production builds, preventing meeting-page content from visually overlapping the desktop sidebar.
 - CI/CD (GitHub Pages): fixed preview deployment authentication by switching the `JamesIves/github-pages-deploy-action@v4` step to `ssh-key` mode (using `ACTIONS_DEPLOY_KEY`) and checking out detached HEAD before deploy worktree creation. This prevents token-auth failures and avoids branch/worktree conflicts on `main`.
+- Meeting assets reliability: fixed file upload crashes in the Meeting page by replacing the non-seekable `LargeFileUploadTask` path with a browser-safe stream upload path, adding defensive exception handling around upload/dialog flows, and preserving the assets panel even when upload errors occur.
+- Meeting dashboard responsive polish: tightened desktop spacing for hero/toolbars/cards, improved mobile button wrapping for quick actions/assets controls, and added mobile overflow guards in `MainLayout` so meeting actions are not clipped horizontally.
+- Meeting tile alignment: all meeting dashboard cards now stretch to fill their allocated grid columns at desktop and mobile breakpoints, removing uneven card widths and making row gutters/padding line up consistently.
 - Tests: added `CurrentPathLabel_HidesOpaqueChildFolderName` in `MForce.Components.Files.Tests/FileExplorerTests.cs` and refreshed meeting layout assertions in `MForce365.Web.Tests/MeetingDashboardLayoutTests.cs` and `MForce365.Web.Tests/MeetingSendInvitesTests.cs` to match the modern dashboard implementation.
 
 ## VERSION 1.4.171 Beta
