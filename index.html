@@ -11,6 +11,7 @@
    
     <link href="assets/css/styles.css" rel="stylesheet" />
     <link href="css/app.css" rel="stylesheet" />
+    <link href="MForce365.Web.styles.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link href="manifest.json" rel="manifest" />
@@ -67,7 +68,42 @@
         window.toggleFullScreen = toggleFullScreen;
     </script>
     <script src="scripts/meetingRecorder.js"></script>
-    <script>navigator.serviceWorker.register('service-worker.js');</script>
+    <script>
+        // Keep PWA caching in production, but force clean startup on localhost.
+        // This prevents stale/corrupt cached framework assets from blocking app boot in dev.
+        const isLocalDevHost = ['localhost', '127.0.0.1', '[::1]'].includes(window.location.hostname);
+        const devReloadKey = 'mforce-local-sw-cleaned-v1';
+
+        if ('serviceWorker' in navigator) {
+            if (isLocalDevHost) {
+                const wasControlledByServiceWorker = !!navigator.serviceWorker.controller;
+
+                const unregisterPromise = navigator.serviceWorker.getRegistrations().then((registrations) => {
+                    return Promise.all(registrations.map((registration) => registration.unregister()));
+                });
+
+                const clearCachesPromise = ('caches' in window)
+                    ? caches.keys().then((cacheNames) => Promise.all(cacheNames.map((cacheName) => caches.delete(cacheName))))
+                    : Promise.resolve();
+
+                Promise.all([unregisterPromise, clearCachesPromise]).finally(() => {
+                    // If this load was still controlled by an old worker, refresh once so the page is no longer controlled.
+                    if (wasControlledByServiceWorker && sessionStorage.getItem(devReloadKey) !== '1') {
+                        sessionStorage.setItem(devReloadKey, '1');
+                        window.location.reload();
+                        return;
+                    }
+
+                    // Reset the one-shot marker once a clean load succeeds.
+                    sessionStorage.removeItem(devReloadKey);
+                });
+            } else {
+                navigator.serviceWorker.register('/service-worker.js').catch((error) => {
+                    console.debug('Service worker registration skipped:', error);
+                });
+            }
+        }
+    </script>
 </body>
 
 </html>

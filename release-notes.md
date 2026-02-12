@@ -1,4 +1,36 @@
 # mForce365 Release Notes
+## VERSION 1.4.172 Beta
+
+- Meeting dashboard UX polish: tightened meeting-page spacing, card rhythm, and responsive breakpoints so controls and content read cleanly on desktop and mobile without large dead areas.
+- Meeting command/quick-action bars: removed horizontal scroll behavior in favor of wrapped, stable button layouts and improved action button sizing/weight for clearer affordance.
+- Meeting assets UX: kept header actions aligned in a single clean row, reduced visual density in the file grid, and improved mobile behavior for the assets header/action group.
+- Meeting assets labels: opaque Microsoft folder identifiers (for example `040000...`) are now masked as `Meeting folder` in folder cards and path/location labels so users never see technical IDs.
+- Web layout reliability: restored loading of the Blazor CSS-isolation bundle by adding `MForce365.Web.styles.css` to `index.html`. This ensures Meeting/MainLayout scoped styles apply in local and production builds, preventing meeting-page content from visually overlapping the desktop sidebar.
+- CI/CD (GitHub Pages): fixed preview deployment authentication by switching the `JamesIves/github-pages-deploy-action@v4` step to `ssh-key` mode (using `ACTIONS_DEPLOY_KEY`) and checking out detached HEAD before deploy worktree creation. This prevents token-auth failures and avoids branch/worktree conflicts on `main`.
+- Tests: added `CurrentPathLabel_HidesOpaqueChildFolderName` in `MForce.Components.Files.Tests/FileExplorerTests.cs` and refreshed meeting layout assertions in `MForce365.Web.Tests/MeetingDashboardLayoutTests.cs` and `MForce365.Web.Tests/MeetingSendInvitesTests.cs` to match the modern dashboard implementation.
+
+## VERSION 1.4.171 Beta
+
+- Web (local dev reliability): Prevented localhost startup loops caused by stale service-worker caches of `_framework` assets. `MForce365.Web/wwwroot/index.html` now unregisters service workers, clears Cache Storage on local hosts (`localhost`, `127.0.0.1`, `[::1]`), and triggers a one-time refresh when an old worker still controls the current page. Non-local environments continue registering the service worker for normal PWA behavior.
+
+## VERSION 1.4.170 Beta
+
+- Meeting: Rebuilt the Meeting page into a modern dashboard layout with a single responsive composition, denser spacing, and dedicated quick actions for choosing agenda/project and adding notes/actions/decisions. The split legacy layout paths were removed in favor of one adaptive grid.
+- Meeting timer: Replaced the analog clock UI with a progress-driven meeting time panel that surfaces status, remaining/overtime state, schedule range, and compact play/pause/stop controls. Timer lifecycle handling now safely starts/stops/disposes countdown timers to avoid null/dispose edge cases.
+- Meeting cards: Modernized Agenda, Project, Participants, Notes, Action Items, and Decisions cards with consistent header/action patterns, clearer empty states, compact list rows, and improved scanability. Added CSS isolation files for these cards to keep styling scoped and predictable.
+- Meeting notes: Reworked notes into a structured workspace with primary notes + timeline feed, cleaner compose area (chat and rich text modes), and retained prep-mode edit/delete behavior.
+- Layout: Desktop left navigation now auto-collapses into a compact icon rail on meeting-focused routes (`/meeting/*`, meeting participant/notes/action pages), with a header toggle to expand/collapse on demand. Outside meeting routes, the standard full-width navigation is restored automatically.
+- Added regression coverage in `MForce365.Web.Tests/MeetingDashboardLayoutTests.cs` and `MForce.Components.Schedule.Tests/MeetingTimerUxTests.cs` for dashboard helper wiring and timer progress-based UX expectations.
+
+## VERSION 1.4.169 Beta
+
+- Meeting: Deep reliability and UX hardening on the Meeting page. The duplicated status menus were consolidated into a single status-aware command menu, all visible actions now have consistent command values, and menu execution now uses a guarded async handler (`MenuHandlerAsync`) with explicit support for `next-agenda-item`.
+- Meeting: Participant add flow and summary-send flow now correctly handle cancel/no-selection scenarios. Adding a participant no longer forces a save on dialog cancel, and summary emails now only show success when at least one selected recipient is sent successfully.
+- Meeting assets: File Explorer was modernized with clearer action buttons (Upload/Open), cleaner loading and empty states, improved folder/file rendering, and metadata display. Internal meeting state files (`thisMeeting.meetingv1`) are now hidden from the user-facing asset list.
+- Meeting UX: Meeting Details layout now uses consistent responsive spacing and margins across header, command menu, and card grids. Replaced uneven inline spacing with section/slot classes, fixed broken grid class usage (`col-l5-12`), and standardized gutters for improved readability on desktop and mobile.
+- Meeting assets: The technical meeting-folder identifier (for example `040000...`) is now masked from user-facing labels/path text and replaced with friendly meeting naming. Header action buttons are constrained to one row for cleaner, predictable controls.
+- Added regression tests in `MForce365.Web.Tests/MeetingPageCommandReliabilityTests.cs` and `MForce.Components.Files.Tests/FileExplorerTests.cs` to lock in menu command wiring, async dispatch behavior, cancel handling, recipient-selection guards, and internal file filtering.
+
 ## VERSION 1.4.168 Beta
 
 - Docs: Added a product design and development case study to the documentation set and linked it from the docs index so teams can reference the original architectural and delivery decisions.
@@ -383,6 +415,19 @@
 > mForce365 is available [here](https://mforcesoftware.github.io)
 
 ## Updates
+
+- Production readiness hardening for the Web app:
+  - Sidebar route highlighting now tracks the current URL on every navigation (including deep links such as `/project/{id}`, `/actionitem/{id}`, and `/meeting/{id}`), so the active section stays accurate.
+  - Projects page now has explicit loading, error, and empty states; it no longer presents a blank body while data is being fetched.
+  - Action Items page now forces a fresh Graph reload on entry to avoid stale singleton cache states and includes loading/empty states.
+  - Action Items Due date now renders "No date available" for unset/default dates instead of `01/01/0001`.
+  - Dashboard Action Items card now also treats unset/default due dates as "No date available" and no longer marks them as overdue.
+  - Meeting Recordings page now always exits loading mode on failure and handles null Graph responses safely.
+  - Meeting Recordings date column now formats once correctly (removed duplicate timestamp output).
+  - Login now uses redirect mode for MSAL to avoid popup/COOP window-close errors in modern browsers.
+  - Service worker registration now targets `/service-worker.js` from the app root and catches registration failures, preventing route-relative MIME errors on auth/deep-link pages.
+  - Meeting state persistence now tolerates Azure Functions endpoint outages: OneDrive save remains primary, background sync failures no longer throw unhandled rendering exceptions, and Development mode now skips optional cloud sync by default unless explicitly enabled.
+  - Added web regression tests in `MForce365.Web.Tests/ProductionReadinessUxTests.cs` covering navigation sync and the new UX safeguards.
 
 - Add **Meeting Cost Calculator** page to the Web application to calculate meeting costs based on staff time, preparation, and follow-up. Closes #164.
 - Add **Product Feedback** page accessible under Recordings menu to submit user feedback via email. Closes #1309.

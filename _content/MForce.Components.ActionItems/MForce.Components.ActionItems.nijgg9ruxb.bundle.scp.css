@@ -1,0 +1,103 @@
+/* _content/MForce.Components.ActionItems/MeetingActionItemsCard.razor.rz.scp.css */
+.meeting-actions-card[b-agyopcy1z9] {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    height: 100%;
+}
+
+.meeting-pane-header[b-agyopcy1z9] {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.meeting-pane-heading[b-agyopcy1z9] {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    min-width: 0;
+}
+
+.meeting-pane-title[b-agyopcy1z9] {
+    margin: 0;
+}
+
+.meeting-pane-subtitle[b-agyopcy1z9] {
+    margin: 0;
+    font-size: 0.84rem;
+    color: var(--rz-text-secondary-color);
+}
+
+.meeting-pane-actions[b-agyopcy1z9] {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.meeting-pane-empty[b-agyopcy1z9] {
+    border: 1px dashed var(--rz-border);
+    border-radius: 10px;
+    padding: 0.75rem;
+    font-size: 0.88rem;
+    color: var(--rz-text-secondary-color);
+}
+
+.meeting-actions-list[b-agyopcy1z9] {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.meeting-action-row[b-agyopcy1z9] {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 0.4rem;
+    width: 100%;
+    border: 1px solid var(--rz-border);
+    border-radius: 11px;
+    background: var(--rz-base-0);
+    text-align: left;
+    padding: 0.5rem 0.58rem;
+    cursor: pointer;
+}
+
+.meeting-action-row:hover[b-agyopcy1z9] {
+    border-color: rgba(37, 99, 235, 0.45);
+}
+
+.meeting-action-row--done[b-agyopcy1z9] {
+    opacity: 0.75;
+}
+
+.meeting-action-row--done .meeting-action-title[b-agyopcy1z9] {
+    text-decoration: line-through;
+}
+
+.meeting-action-title[b-agyopcy1z9] {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.meeting-action-meta[b-agyopcy1z9] {
+    font-size: 0.76rem;
+    color: var(--rz-text-secondary-color);
+}
+
+@media (max-width: 575.98px) {
+    .meeting-action-row[b-agyopcy1z9] {
+        grid-template-columns: auto 1fr;
+    }
+
+    .meeting-action-meta[b-agyopcy1z9] {
+        grid-column: 2;
+    }
+}
