@@ -1,4 +1,13 @@
 # mForce365 Release Notes
+## VERSION 1.4.175 Beta
+
+- Meeting action items: editing a meeting action item now triggers meeting-state persistence when task content/completion changes, so completed items remain completed after leaving and re-entering the meeting. Closes #2414.
+- Meeting assets: changed the header action from `Open` to `Open All` and updated button styling so label shading spans the full text consistently. Closes #2413. Closes #2412.
+- Dashboard: added a delete action to the `Next Meeting` card with confirmation and Graph event deletion, then refreshes to the next available event. Closes #2199.
+- Agendas: agenda management list now explicitly sorts by `CreatedDateTime` descending (newest first), then by name for stable ordering. Closes #1580.
+- Calendar: selected Day/Week/Month view now persists in browser session storage across dashboard calendar and full scheduler page navigation. Closes #815.
+- Tests: added/updated unit tests in `MForce.Components.ActionItems.Tests`, `MForce.Components.Files.Tests`, `MForce.Components.Schedule.Tests`, and `MForce365.Web.Tests` to lock in these behaviors.
+
 ## VERSION 1.4.174 Beta
 
 - Schedule: added a one-click `Join` action directly on calendar entries in both dashboard and full scheduler views when a Teams/online join URL is available. Closes #1454.
