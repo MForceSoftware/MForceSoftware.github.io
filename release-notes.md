@@ -1,4 +1,16 @@
 # mForce365 Release Notes
+## VERSION 1.4.174 Beta
+
+- Schedule: added a one-click `Join` action directly on calendar entries in both dashboard and full scheduler views when a Teams/online join URL is available. Closes #1454.
+- Schedule/Create Meeting: replaced free-form location capture with a `Location type` flow (`Teams meeting` or `Other`) plus a custom-location save action, and automatically configures Teams online meeting metadata when `Teams meeting` is selected. Closes #1437.
+- Schedule/Create Meeting: added structured `Meeting type` capture with category + subtype dropdowns and an `Other` fallback to support organization-specific taxonomy during meeting creation. Closes #1248.
+- Agendas: added `Quick Agenda` mode in agenda creation/edit so users can capture item-only agendas without entering percentages manually; percentages are normalized automatically on save for runtime scheduling compatibility. Closes #1424.
+- Meeting Agenda: added drag-and-drop reordering support in the in-meeting edit agenda dialog and persisted drag order directly when saving. Closes #1261.
+- Meeting Timer: added automated countdown warnings at 5 minutes and 2 minutes remaining with an audible tone and visual screen flash alert. Closes #604.
+- Meeting Binder: added default document header/footer across generated binders (date/title/organizer in header, `Powered by mForce365` + page `x/y` in footer). Closes #1399.
+- Meeting Binder: replaced appendices-focused file output with a dedicated `Files` section listing linked uploaded documents by filename. Closes #1411.
+- Meeting Binder: added a dedicated `Parking Lot` section (positioned as the second-last section before the boilerplate) with explicit empty-state handling when no topics are recorded. Closes #1410.
+
 ## VERSION 1.4.173 Beta
 
 - Meeting UX: fixed command-menu dropdown layering on `/meeting/{meetingid}` so submenu items (for example Participants actions) render above the dashboard tiles instead of behind them. Updated `MForce365.Web/Pages/Meeting.razor.css` to remove command-shell clipping and enforce toolbar/menu stacking order.
