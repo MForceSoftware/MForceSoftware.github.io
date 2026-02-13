@@ -1,4 +1,10 @@
 # mForce365 Release Notes
+## VERSION 1.4.173 Beta
+
+- Meeting UX: fixed command-menu dropdown layering on `/meeting/{meetingid}` so submenu items (for example Participants actions) render above the dashboard tiles instead of behind them. Updated `MForce365.Web/Pages/Meeting.razor.css` to remove command-shell clipping and enforce toolbar/menu stacking order.
+- Layout UX: fixed desktop left-navigation overlap on meeting routes by shifting the main content area with sidebar-aware `margin-left`/`width` values in `MForce365.Web/Shared/MainLayout.razor.css`, preventing the fixed left menu from covering meeting visuals.
+- Meeting dialogs: restyled `Choose Agenda`, `Choose Project`, `Add Action`, and `Add Decision` popups to match the dashboard visual style. Meeting dialog launch points now use consistent `DialogOptions` (`dialog-fixed meeting-dashboard-dialog`) and refreshed component layouts in `AgendaChooser`, `ProjectChooser`, `ActionItemsPicker`, and `AddDecision`.
+
 ## VERSION 1.4.172 Beta
 
 - Meeting dashboard UX polish: tightened meeting-page spacing, card rhythm, and responsive breakpoints so controls and content read cleanly on desktop and mobile without large dead areas.
