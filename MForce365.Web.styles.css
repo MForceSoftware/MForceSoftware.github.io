@@ -3,7 +3,7 @@
 @import '_content/MForce.Components.Projects/MForce.Components.Projects.ksvyqitafn.bundle.scp.css';
 @import '_content/MForce.Components.Schedule/MForce.Components.Schedule.72nyvw3pei.bundle.scp.css';
 @import '_content/MForce.Components/MForce.Components.kfuqz7gygb.bundle.scp.css';
-@import '_content/Microsoft.AspNetCore.Components.QuickGrid/Microsoft.AspNetCore.Components.QuickGrid.25o87uqmvr.bundle.scp.css';
+@import '_content/Microsoft.AspNetCore.Components.QuickGrid/Microsoft.AspNetCore.Components.QuickGrid.boiwgh0w5b.bundle.scp.css';
 
 /* /Pages/Index.razor.rz.scp.css */
 
@@ -15,6 +15,8 @@
     gap: var(--meeting-gap);
     padding: 0.1rem 0 0.85rem;
     min-height: 0;
+    position: relative;
+    isolation: isolate;
 }
 
 .meeting-hero[b-0snrdmfufu] {
@@ -120,7 +122,8 @@
     grid-template-columns: minmax(0, 1fr) minmax(0, auto);
     gap: 0.5rem;
     position: relative;
-    z-index: 20;
+    z-index: 70;
+    isolation: isolate;
 }
 
 .meeting-command-shell[b-0snrdmfufu] {
@@ -132,7 +135,8 @@
     padding: 0.28rem 0.36rem;
     box-shadow: 0 6px 14px rgba(15, 23, 42, 0.04);
     position: relative;
-    z-index: 21;
+    z-index: 80;
+    isolation: isolate;
 }
 
 .meeting-command-shell.meeting-command-shell--running[b-0snrdmfufu] {
@@ -152,6 +156,8 @@
     background: transparent;
     min-width: 0;
     width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 [b-0snrdmfufu] .meeting-command-shell .rz-navigation {
@@ -159,6 +165,8 @@
     flex-wrap: wrap;
     gap: 0.16rem;
     overflow: visible;
+    position: relative;
+    z-index: 1;
 }
 
 [b-0snrdmfufu] .meeting-command-shell .rz-navigation-item-link,
@@ -169,10 +177,15 @@
 [b-0snrdmfufu] .meeting-command-shell .rz-navigation-item,
 [b-0snrdmfufu] .meeting-command-shell .rz-navigation-menu {
     overflow: visible;
+    position: relative;
 }
 
 [b-0snrdmfufu] .meeting-command-shell .rz-navigation-menu {
-    z-index: 30;
+    z-index: 1600 !important;
+}
+
+[b-0snrdmfufu] .meeting-command-shell .rz-navigation-menu .rz-navigation-menu {
+    z-index: 1601 !important;
 }
 
 .meeting-quick-actions[b-0snrdmfufu] {
@@ -206,7 +219,7 @@
     gap: var(--meeting-gap);
     min-height: 0;
     position: relative;
-    z-index: 1;
+    z-index: 0;
 }
 
 .meeting-grid[b-0snrdmfufu] {
@@ -599,12 +612,6 @@ main[b-gg5zfc3nvi] {
 .meeting-layout-host .desktop-main-content[b-gg5zfc3nvi] {
   transition: margin-left 0.22s ease, width 0.22s ease;
   min-width: 0;
-}
-
-.meeting-layout-host .desktop-main-content--sidebar-expanded[b-gg5zfc3nvi],
-.meeting-layout-host .desktop-main-content--sidebar-collapsed[b-gg5zfc3nvi] {
-  padding-left: 0;
-  margin-left: 0;
   width: 100%;
 }
 
@@ -672,6 +679,7 @@ main[b-gg5zfc3nvi] {
   }
 
   .meeting-layout-host .desktop-main-content[b-gg5zfc3nvi] {
+    margin-left: 0;
     width: 100%;
     max-width: 100%;
     min-width: 0;
@@ -680,6 +688,8 @@ main[b-gg5zfc3nvi] {
   .meeting-layout-host .desktop-main-content--sidebar-expanded[b-gg5zfc3nvi],
   .meeting-layout-host .desktop-main-content--sidebar-collapsed[b-gg5zfc3nvi] {
     padding-left: 0 !important;
+    margin-left: 0 !important;
+    width: 100%;
   }
 
   .meeting-layout-host main[b-gg5zfc3nvi] {

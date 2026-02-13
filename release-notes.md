@@ -2,8 +2,11 @@
 ## VERSION 1.4.173 Beta
 
 - Meeting UX: fixed command-menu dropdown layering on `/meeting/{meetingid}` so submenu items (for example Participants actions) render above the dashboard tiles instead of behind them. Updated `MForce365.Web/Pages/Meeting.razor.css` to remove command-shell clipping and enforce toolbar/menu stacking order.
-- Layout UX: fixed desktop left-navigation overlap on meeting routes by shifting the main content area with sidebar-aware `margin-left`/`width` values in `MForce365.Web/Shared/MainLayout.razor.css`, preventing the fixed left menu from covering meeting visuals.
-- Meeting dialogs: restyled `Choose Agenda`, `Choose Project`, `Add Action`, and `Add Decision` popups to match the dashboard visual style. Meeting dialog launch points now use consistent `DialogOptions` (`dialog-fixed meeting-dashboard-dialog`) and refreshed component layouts in `AgendaChooser`, `ProjectChooser`, `ActionItemsPicker`, and `AddDecision`.
+- Layout UX: fixed desktop left-navigation overlap on meeting routes by removing a high-specificity CSS override that pinned main content at `margin-left: 0`; desktop now correctly honors sidebar-aware `margin-left`/`width` values in `MForce365.Web/Shared/MainLayout.razor.css`.
+- Meeting dialogs: restyled `Choose Agenda`, `Choose Project`, `Add Action`, and `Add Decision` popups to match the dashboard visual style. Added shared `meeting-dialog-*` surface/layout classes in `MForce365.Web/wwwroot/css/mforce365-overrides.css` and updated `AgendaChooser`, `ProjectChooser`, `ActionItemsPicker`, and `AddDecision` markup to use them consistently.
+- Meeting dialogs reliability: fixed `Add decision` popup runtime failure caused by duplicate case-insensitive dialog parameters (`Model` + `model`) in `MForce.Components/AddDecision`. The component now exposes a single `[Parameter] Model`, restoring full dialog rendering and save/cancel behavior.
+- Web runtime compatibility: aligned `MForce365.Web` ASP.NET/Blazor package references to `10.0.0` for the `net10.0` target framework. This resolves dev/runtime bootstrap failures in browser automation (for example dynamic import requests to `/0`) and restores reliable Playwright rendering.
+- Dev launch profile: pinned `MForce365.Web` local run URL to `http://localhost:5204` in `Properties/launchSettings.json` so standard `dotnet run` consistently binds to the same port during interactive Playwright sessions.
 
 ## VERSION 1.4.172 Beta
 
