@@ -1,4 +1,12 @@
 # mForce365 Release Notes
+## VERSION 1.4.176 Beta
+
+- Localization: audited UI literals across the WebAssembly experience (`MForce365.Web` + shared Blazor components) and replaced remaining hardcoded user-facing strings with `IStringLocalizer<mForce365Strings>` resource usage.
+- Accessibility text localization: localized remaining screen-reader labels and image `alt` text in shared navigation/login/profile components using existing resource keys.
+- Resources: normalized multilingual `.resx` files to match the neutral key set exactly, removed duplicate key blocks/case-collision variants, and validated parity across all locale files.
+- Tests/build: updated affected UI text assertions in `MForce365.Web.Tests` to assert localized markup, then verified with full solution build and test (`MForce365/MForce365.sln`).
+- Browser verification: completed Playwright smoke checks for `/` and `/about`, with artifacts written under `output/playwright/`.
+
 ## VERSION 1.4.175 Beta
 
 - Meeting action items: editing a meeting action item now triggers meeting-state persistence when task content/completion changes, so completed items remain completed after leaving and re-entering the meeting. Closes #2414.
