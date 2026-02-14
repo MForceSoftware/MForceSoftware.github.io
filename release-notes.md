@@ -1,4 +1,13 @@
 # mForce365 Release Notes
+## VERSION 1.4.177 Beta
+
+- Meetings/tasks/projects now support client billing references end-to-end. Added client fields in meeting creation, project creation/selection, action-item create/edit flows, and rendered client metadata in meeting/action/project views while keeping display titles clean. Closes #1649.
+- Agenda chooser now filters personal agenda options by meeting length (including fallback handling for legacy agendas), and agenda authoring includes a meeting-length metadata field. Closes #1627.
+- Meeting notes now include an editable pre-meeting notes area (before meeting start), and binder/summary generation includes these pre-meeting notes in output. Closes #958.
+- Meeting participants are now notified when new meeting files are uploaded and when meeting details are updated from the meeting page. Added upload callback plumbing from `FileExplorer` to meeting flows and Graph mail notifications to attendees. Closes #495.
+- Tests: added and updated unit tests across `MForce365.Shared.Tests`, `MForce.Components.Schedule.Tests`, `MForce.Components.ActionItems.Tests`, `MForce.Components.Files.Tests`, `MForce.Components.Projects.Tests`, and `MForce365.Web.Tests`.
+- Validation: full build and solution test run completed against `MForce365/MForce365.sln`.
+
 ## VERSION 1.4.176 Beta
 
 - Localization: audited UI literals across the WebAssembly experience (`MForce365.Web` + shared Blazor components) and replaced remaining hardcoded user-facing strings with `IStringLocalizer<mForce365Strings>` resource usage.
