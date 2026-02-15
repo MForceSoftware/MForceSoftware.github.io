@@ -1,4 +1,31 @@
 # mForce365 Release Notes
+## VERSION 1.4.181 Beta
+
+- Dependencies: bumped `tailwindcss` to `^3.4.19` and added an explicit `glob` dev dependency at `^10.5.0` in `MForce365.Web/package.json`.
+- Lockfiles: refreshed `MForce365.Web/package-lock.json` and synchronized `output/playwright/publish-web/package-lock.json` to keep tracked lockfiles aligned.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror` (0 warnings, 0 errors)
+  - `dotnet test MForce365/MForce365.sln --no-build` (all tests passing)
+
+## VERSION 1.4.180 Beta
+
+- Project page layout polish: reduced horizontal shell/board padding so buckets use more screen width and side borders feel less constrained.
+- Project page drag-and-drop: added SortableJS-powered board interactions in `MForce365.Web/Pages/Project.razor` for:
+  - Bucket reordering (drag bucket headers).
+  - Task reordering within a bucket (drag task handles).
+  - Task movement between buckets (drag across bucket lists).
+- Planner persistence: drag operations now call new JS-invokable handlers (`OnTaskDragEnd`, `OnBucketDragEnd`) and persist both `BucketId` and `OrderHint` with `If-Match` ETag headers for Planner task and bucket patches.
+- Shared ordering helper: extended `PlannerOrderHintHelper` with `BuildInsertOrderHint(previousHint, nextHint)` and reused it for both adjacent moves and drag/drop insert positioning.
+- Added/updated coverage:
+  - `MForce365.Shared.Tests/PlannerOrderHintHelperTests.cs`
+  - `MForce365.Web.Tests/ProjectAsyncHandlersTests.cs`
+  - `MForce365.Web.Tests/ProjectTaskReorderWebTests.cs`
+  - `MForce365.Web.Tests/ProjectBoardInteropScriptTests.cs`
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror` (0 warnings, 0 errors)
+  - `dotnet test MForce365/MForce365.sln --no-build` (all tests passing)
+  - Playwright verification run against a local fixture mirroring the Project board DOM/classes confirmed bucket reorder plus intra/inter-bucket task drag payloads.
+
 ## VERSION 1.4.179 Beta
 
 - Meeting details update notifications now keep the email subject as plain text while still HTML-encoding body content, preventing subjects like `&amp;` from appearing to recipients. Applied in both Web and legacy Pages meeting flows. Closes #2426.

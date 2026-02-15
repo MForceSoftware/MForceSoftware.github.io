@@ -514,6 +514,35 @@
         white-space: normal;
     }
 }
+/* /Pages/Project.razor.rz.scp.css */
+.project-page-shell[b-ovkowl2pv4] {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.project-board[b-ovkowl2pv4] {
+    padding-left: 0.125rem;
+    padding-right: 0.125rem;
+}
+
+.project-bucket[b-ovkowl2pv4] {
+    min-width: 20rem;
+    max-width: 20rem;
+    flex: 0 0 auto;
+}
+
+.project-bucket-handle[b-ovkowl2pv4],
+.project-task-drag-handle[b-ovkowl2pv4] {
+    user-select: none;
+}
+
+.project-task-list[b-ovkowl2pv4] {
+    min-height: 2.75rem;
+}
+
+.project-drag-ghost[b-ovkowl2pv4] {
+    opacity: 0.55;
+}
 /* /Shared/MainLayout.razor.rz.scp.css */
 /* MainLayout.razor.css */
 
