@@ -1,4 +1,14 @@
 # mForce365 Release Notes
+## VERSION 1.4.178 Beta
+
+- Action items: fixed Planner action-item deletion from the edit dialog by deleting with the full task model metadata and improved Planner `If-Match` handling (fetch ETag first, wildcard fallback). This resolves no-op deletes for Planner-backed entries. Closes #2418.
+- Agenda chooser: added a `Templates` dropdown button beside `Create New` with predefined 25-minute and 55-minute meeting templates. Selecting a template opens `AddAgenda` as `Edit Template` so users can customize and save to personal agendas. Closes #2417.
+- Settings: added `AI Settings` with OpenAI API key capture (`Show`/`Hide`, `Save key`, `Clear key`) and browser persistence via `localStorage` for transcript summarization workflows. Closes #1798.
+- Agenda authoring: added per-item `Assigned to` capture in agenda create/edit rows, persisted via `AgendaItem.Owner`, propagated into running meeting agenda items, and displayed in the meeting agenda card and binder output. Closes #1586.
+- Agenda authoring: total percentage indicator is now color-responsive (`<100` orange, `=100` green, `>100` red) and no longer hard-blocks over-allocation entry so users can visually correct totals. Closes #1582.
+- Tests: added/updated coverage in `MForce365.Web.Tests` and `MForce.Components.Schedule.Tests` for templates flow, assignment fields, planner deletion reliability, OpenAI key settings, and percentage cue behavior.
+- Validation: full solution build and test run completed with zero warnings/errors on `MForce365/MForce365.sln`.
+
 ## VERSION 1.4.177 Beta
 
 - Meetings/tasks/projects now support client billing references end-to-end. Added client fields in meeting creation, project creation/selection, action-item create/edit flows, and rendered client metadata in meeting/action/project views while keeping display titles clean. Closes #1649.
