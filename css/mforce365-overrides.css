@@ -158,3 +158,324 @@
   max-height: calc(100vh - 6rem);
   overflow-y: auto;
 }
+
+/* App-wide visual language aligned to the pre-login homepage */
+:root {
+  --mforce-theme-bg:
+    radial-gradient(circle at 10% 14%, rgba(59, 130, 246, 0.16), transparent 34%),
+    radial-gradient(circle at 88% 6%, rgba(14, 165, 233, 0.14), transparent 30%),
+    linear-gradient(160deg, #f7fbff 0%, #edf4ff 46%, #f6f8ff 100%);
+  --mforce-surface: rgba(255, 255, 255, 0.8);
+  --mforce-surface-strong: rgba(255, 255, 255, 0.9);
+  --mforce-border-soft: rgba(148, 163, 184, 0.33);
+  --mforce-shadow-soft: 0 12px 28px rgba(15, 23, 42, 0.1);
+  --mforce-text-primary: #0f172a;
+  --mforce-text-secondary: #334155;
+  --mforce-brand-start: #2563eb;
+  --mforce-brand-end: #1d4ed8;
+}
+
+html,
+body {
+  background: var(--mforce-theme-bg);
+  color: var(--mforce-text-primary);
+}
+
+body {
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 84% 82%, rgba(16, 185, 129, 0.12), transparent 28%),
+    radial-gradient(circle at 20% 88%, rgba(125, 211, 252, 0.14), transparent 34%);
+}
+
+#app {
+  position: relative;
+  z-index: 1;
+}
+
+.app-theme-shell {
+  background: transparent;
+}
+
+.app-theme-sidebar-shell {
+  background: linear-gradient(175deg, #1e3a8a 0%, #1e40af 48%, #1d4ed8 100%);
+  border-right: 1px solid rgba(191, 219, 254, 0.28);
+  box-shadow: 12px 0 28px rgba(15, 23, 42, 0.22);
+}
+
+.app-theme-shell .desktop-sidebar-brand {
+  border-bottom: 1px solid rgba(191, 219, 254, 0.26);
+  margin-bottom: 0.35rem;
+}
+
+.app-theme-sidebar-shell nav a {
+  border: 1px solid transparent;
+  border-radius: 0.8rem;
+  transition: background 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
+}
+
+.app-theme-sidebar-shell nav a:hover {
+  background: rgba(255, 255, 255, 0.14) !important;
+  border-color: rgba(191, 219, 254, 0.4);
+}
+
+.app-theme-sidebar-shell nav a[class*="bg-indigo"] {
+  background: rgba(255, 255, 255, 0.22) !important;
+  border-color: rgba(191, 219, 254, 0.55);
+  box-shadow: inset 0 0 0 1px rgba(219, 234, 254, 0.32);
+}
+
+.app-theme-topbar {
+  background: var(--mforce-surface-strong) !important;
+  border-bottom: 1px solid var(--mforce-border-soft);
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.app-theme-body-container .bg-white.shadow.rounded-lg,
+.app-theme-body-container .card,
+.app-theme-body-container .rz-card {
+  border: 1px solid var(--mforce-border-soft);
+  border-radius: 1rem !important;
+  background: var(--mforce-surface) !important;
+  box-shadow: var(--mforce-shadow-soft) !important;
+  backdrop-filter: blur(8px);
+}
+
+.app-theme-body-container .quickgrid {
+  border: 1px solid var(--mforce-border-soft);
+  border-radius: 0.9rem;
+  overflow: hidden;
+  background: var(--mforce-surface-strong);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
+
+.app-theme-body-container .quickgrid thead tr,
+.app-theme-body-container .quickgrid thead {
+  background: linear-gradient(140deg, rgba(37, 99, 235, 0.1), rgba(6, 182, 212, 0.08));
+}
+
+.app-theme-body-container .quickgrid th {
+  color: #1e293b;
+}
+
+.app-theme-body-container .quickgrid td {
+  color: var(--mforce-text-secondary);
+}
+
+.app-theme-shell .mForceButtonPrimary {
+  border-radius: 9999px;
+  border: 1px solid rgba(30, 64, 175, 0.42);
+  background: linear-gradient(135deg, var(--mforce-brand-start), var(--mforce-brand-end));
+  box-shadow: 0 12px 20px rgba(37, 99, 235, 0.28);
+}
+
+.app-theme-shell .mForceButtonPrimary:hover {
+  filter: brightness(1.05);
+}
+
+.app-theme-shell .mForceButtonSecondary {
+  border-radius: 9999px;
+  border: 1px solid rgba(148, 163, 184, 0.42);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.app-theme-shell input:not([type="checkbox"]):not([type="radio"]),
+.app-theme-shell select,
+.app-theme-shell textarea {
+  border-radius: 0.75rem;
+  border: 1px solid rgba(148, 163, 184, 0.42);
+  background: rgba(255, 255, 255, 0.88);
+}
+
+/* Reusable page polish primitives */
+.app-page-shell {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: 0.2rem 0.1rem 0.9rem;
+}
+
+.app-page-shell--compact {
+  gap: 0.7rem;
+}
+
+.app-page-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.9rem;
+  border: 1px solid var(--mforce-border-soft);
+  border-radius: 1.1rem;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(248, 252, 255, 0.82));
+  padding: 0.9rem 1rem;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(9px);
+}
+
+.app-page-heading {
+  min-width: 0;
+}
+
+.app-page-eyebrow {
+  margin: 0;
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #1e40af;
+}
+
+.app-page-title {
+  margin: 0.2rem 0 0;
+  line-height: 1.18;
+  font-size: clamp(1.12rem, 2vw, 1.56rem);
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  color: #0f172a;
+}
+
+.app-page-subtitle {
+  margin: 0.42rem 0 0;
+  max-width: 72ch;
+  font-size: 0.92rem;
+  line-height: 1.48;
+  color: #334155;
+}
+
+.app-page-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.48rem;
+}
+
+.app-page-card {
+  border: 1px solid var(--mforce-border-soft);
+  border-radius: 1rem;
+  background: var(--mforce-surface);
+  box-shadow: var(--mforce-shadow-soft);
+  backdrop-filter: blur(8px);
+  padding: 0.95rem;
+}
+
+.app-page-card--tight {
+  padding: 0.7rem;
+}
+
+.app-page-card--flush {
+  padding: 0;
+  overflow: hidden;
+}
+
+.app-page-note {
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 0.85rem;
+  background: rgba(219, 234, 254, 0.36);
+  color: #1e3a8a;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  padding: 0.6rem 0.75rem;
+}
+
+.app-page-empty {
+  border: 1px dashed rgba(148, 163, 184, 0.58);
+  border-radius: 0.9rem;
+  background: rgba(255, 255, 255, 0.68);
+  color: #475569;
+  text-align: center;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 1rem 0.9rem;
+}
+
+.app-page-section-grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.app-page-kpi-grid {
+  display: grid;
+  gap: 0.62rem;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+}
+
+.app-page-kpi {
+  border: 1px solid rgba(148, 163, 184, 0.34);
+  border-radius: 0.9rem;
+  background: rgba(255, 255, 255, 0.88);
+  padding: 0.56rem 0.7rem;
+}
+
+.app-page-kpi-label {
+  margin: 0;
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: #475569;
+}
+
+.app-page-kpi-value {
+  margin: 0.3rem 0 0;
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.app-page-table-shell {
+  border: 1px solid rgba(148, 163, 184, 0.33);
+  border-radius: 0.95rem;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+}
+
+.app-page-table-shell table {
+  width: 100%;
+}
+
+.app-page-link {
+  color: #1d4ed8;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.app-page-link:hover {
+  color: #1e40af;
+  text-decoration: underline;
+}
+
+.app-page-shell .rz-datatable,
+.app-page-shell .rz-grid-table,
+.app-page-shell .rz-datagrid-data,
+.app-page-shell .rz-data-grid {
+  border-radius: 0.9rem;
+}
+
+@media (max-width: 640px) {
+  .app-page-shell {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .app-page-header {
+    padding: 0.78rem 0.8rem;
+    border-radius: 0.9rem;
+  }
+
+  .app-page-card {
+    padding: 0.78rem;
+  }
+}

@@ -7,10 +7,16 @@
 - Projects task metadata: task cards now expose additional fields (status badge, priority badge, due date, assignment count, progress bar/percent, created date, and quick edit action) for better at-a-glance planning context.
 - Pre-login homepage redesign: rebuilt `MForce.Components/PreLoginHomePage.razor` into a modern hero-first landing layout with stronger login/register CTAs, feature cards, and a styled `Coming soon` section; reduced top spacing so the primary tiles sit higher and are visible immediately on load.
 - Pre-login styling: added scoped styles in `MForce.Components/PreLoginHomePage.razor.css` (layered gradients, glass surfaces, responsive card/pill system, and reduced-motion-safe animations) to improve first-impression visual quality on desktop and mobile.
+- App-wide visual refresh: applied the pre-login design language across authenticated pages by introducing shared shell theme hooks in `MForce365.Web/Shared/MainLayout.razor` (`app-theme-shell`, `app-theme-sidebar-shell`, `app-theme-topbar`, `app-theme-body-container`) and extending `MForce365.Web/wwwroot/css/mforce365-overrides.css` with global gradient backgrounds, glass surfaces, softened borders/shadows, and consistent button/input styling.
+- Page-by-page visual polish: introduced reusable page primitives (`app-page-*`) in `MForce365.Web/wwwroot/css/mforce365-overrides.css` and applied them across Web routes (`Index`, `Projects`, `ActionItems`, `Settings`, `Teams`, `Team`, `Scheduler`, `Agendas`, `About`, `MeetingRecordings`, guest/auth pages, and supporting placeholder pages) for consistent headers, content card rhythm, and table surfaces.
+- Dialog visual consistency: refreshed `AddBucketPage`, `AddTaskPage`, and `AddTeamPage` layouts with the same polished card/note language while preserving existing behavior and test-guarded handlers/classnames.
+- Dashboard mobile calendar polish: softened the `ScheduleCard` scheduler border and internal grid border contrast on small screens (`<=640px`) to reduce heavy calendar chrome while preserving readability.
+- Pre-login spacing polish: removed outer container centering and section gap margins on `MForce.Components/PreLoginHomePage.razor` so the hero content sits tighter and aligns with the new edge-to-edge visual rhythm.
 - Tests: added Planner update ETag regression coverage in `MForce365.Web.Tests/PlannerActionItemDeleteTests.cs`.
 - Validation:
   - `dotnet build MForce365/MForce365.sln -warnaserror` (0 warnings, 0 errors)
   - `dotnet test MForce365/MForce365.sln --no-build` (all tests passing)
+  - Playwright visual smoke on `http://localhost:5210` (pre-login routes, including `/` and `/about`) confirmed updated page chrome and polished first-impression layout.
   - Playwright verification on `http://localhost:5204`: closing a PlannerTask action item (`Completed` + `Save`) now returns `PATCH /planner/tasks/{id} -> 204` with no console errors.
 
 ## VERSION 1.4.181 Beta
