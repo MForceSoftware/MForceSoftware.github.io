@@ -1,4 +1,14 @@
 # mForce365 Release Notes
+## VERSION 1.4.179 Beta
+
+- Meeting details update notifications now keep the email subject as plain text while still HTML-encoding body content, preventing subjects like `&amp;` from appearing to recipients. Applied in both Web and legacy Pages meeting flows. Closes #2426.
+- Meeting reload now always refreshes `ClientCode` from Graph data (including null/empty values), eliminating stale client codes when the source value is removed. Closes #2425.
+- Projects planner reordering now uses shared adjacent-move order-hint generation (`PlannerOrderHintHelper`) for both up/down actions in Web and legacy Pages, fixing intermittent opposite moves and top-task down no-op behavior. Closes #2420.
+- Agenda management header count now reflects the actual rendered personal agenda list, and agenda loading now sets `AgendaCount` from successfully loaded agenda files, resolving count/display mismatches. Closes #2421.
+- Task-creation wording consistency updates: planner add-task dialog title now uses `Add Task`, `Assign To` uses spaced title casing, and `Due Date` capitalization is standardized in neutral resources. Closes #2419.
+- Tests: added targeted coverage in `MForce365.Shared.Tests` and `MForce365.Web.Tests` for new planner order-hint logic and Group 4 regression guards.
+- Validation: full solution build and test run completed with zero warnings/errors on `MForce365/MForce365.sln`.
+
 ## VERSION 1.4.178 Beta
 
 - Action items: fixed Planner action-item deletion from the edit dialog by deleting with the full task model metadata and improved Planner `If-Match` handling (fetch ETag first, wildcard fallback). This resolves no-op deletes for Planner-backed entries. Closes #2418.
