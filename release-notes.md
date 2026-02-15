@@ -1,4 +1,18 @@
 # mForce365 Release Notes
+## VERSION 1.4.182 Beta
+
+- Action items: fixed Planner action-item save/close failures on the single Action Item page by updating Planner tasks with a real task ETag instead of wildcard `If-Match: *`, resolving Graph `400` responses (`The format of value '*' is invalid.`) and preventing Blazor unhandled-render exceptions when saving completed Planner tasks.
+- Dashboard layout density: reduced dashboard shell padding, card gutters, and card padding on `MForce365.Web/Pages/Index.razor` so content tiles sit closer and use more of the page width.
+- Projects page redesign: refreshed `MForce365.Web/Pages/Project.razor` and `Project.razor.css` with a modern board surface (hero summary, filter pills, richer bucket chrome, elevated task cards) while preserving SortableJS drag/drop selectors and behaviors.
+- Projects task metadata: task cards now expose additional fields (status badge, priority badge, due date, assignment count, progress bar/percent, created date, and quick edit action) for better at-a-glance planning context.
+- Pre-login homepage redesign: rebuilt `MForce.Components/PreLoginHomePage.razor` into a modern hero-first landing layout with stronger login/register CTAs, feature cards, and a styled `Coming soon` section; reduced top spacing so the primary tiles sit higher and are visible immediately on load.
+- Pre-login styling: added scoped styles in `MForce.Components/PreLoginHomePage.razor.css` (layered gradients, glass surfaces, responsive card/pill system, and reduced-motion-safe animations) to improve first-impression visual quality on desktop and mobile.
+- Tests: added Planner update ETag regression coverage in `MForce365.Web.Tests/PlannerActionItemDeleteTests.cs`.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror` (0 warnings, 0 errors)
+  - `dotnet test MForce365/MForce365.sln --no-build` (all tests passing)
+  - Playwright verification on `http://localhost:5204`: closing a PlannerTask action item (`Completed` + `Save`) now returns `PATCH /planner/tasks/{id} -> 204` with no console errors.
+
 ## VERSION 1.4.181 Beta
 
 - Dependencies: bumped `tailwindcss` to `^3.4.19` and added an explicit `glob` dev dependency at `^10.5.0` in `MForce365.Web/package.json`.
