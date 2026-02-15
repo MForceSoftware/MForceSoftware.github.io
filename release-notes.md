@@ -42,6 +42,7 @@
 
 ## VERSION 1.4.179 Beta
 
+- Dashboard action items card: removed date-group heading rows (`Due Date` / `No date available`) and changed the list to per-item rows with explicit columns `Title | Due date | Importance` so due dates align directly with each action item. When an item has no due date, the due-date column is intentionally left blank. Closes #2430.
 - Meeting details update notifications now keep the email subject as plain text while still HTML-encoding body content, preventing subjects like `&amp;` from appearing to recipients. Applied in both Web and legacy Pages meeting flows. Closes #2426.
 - Meeting reload now always refreshes `ClientCode` from Graph data (including null/empty values), eliminating stale client codes when the source value is removed. Closes #2425.
 - Projects planner reordering now uses shared adjacent-move order-hint generation (`PlannerOrderHintHelper`) for both up/down actions in Web and legacy Pages, fixing intermittent opposite moves and top-task down no-op behavior. Closes #2420.
