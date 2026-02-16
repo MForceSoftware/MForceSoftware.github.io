@@ -1,4 +1,16 @@
 # mForce365 Release Notes
+## VERSION 1.4.184 Beta
+
+- Agenda template edit icon alignment (`MForce.Components/AddAgenda.razor`, `AddAgenda.razor.css`): aligned action icons/buttons vertically in template edit rows by introducing consistent row/action-container alignment classes and icon-button sizing. Closes #2436.
+- Planner update ETag runtime tests (`MForce365.Shared.Tests/PlannerUpdateEtagTests.cs`): added mock-HTTP runtime coverage validating that Planner updates send the fetched ETag in `If-Match` and that missing ETag throws an explicit exception before issuing a patch. Closes #2433.
+- Sidebar agendas templates (`MForce.Components/AgendasCRUD.razor`, `AgendasCRUD.razor.cs`): added a `Templates` split button next to `Create New` in agenda management, wired to the full predefined 25/55-minute template catalog, and opening `AddAgenda` in `Edit Template` force-create mode so users can customize and save to personal agendas. Closes #2417.
+- Meeting creation availability suggestions (`MForce.Components.Schedule/AddAppointmentPage.razor`, `AddAppointmentPage.razor.cs`): added participant email capture plus `Suggest times` flow backed by Microsoft Graph `findMeetingTimes`, selectable recommended time slots, and attendee population on saved events. Closes #92.
+- To-Do recurrence support in web action-item flow (`MForce365.Web/Components/AddActionItemDialog*`, `MForce365.Shared/MForceActionItems.cs`): added recurrence selection to the web Add Action Item dialog and persisted recurrence metadata in To-Do create/update service payloads. Added runtime serialization regression coverage. Closes #280.
+- Tests: added/updated coverage in `MForce.Components.Schedule.Tests`, `MForce365.Web.Tests`, and `MForce365.Shared.Tests` for availability suggestions, agenda template sidebar actions, icon alignment hooks, recurrence wiring, and planner ETag runtime behavior.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror` (0 warnings, 0 errors)
+  - `dotnet test MForce365/MForce365.sln --no-build` (all tests passing)
+
 ## VERSION 1.4.183 Beta
 
 - Meeting toolbar cleanup (`MForce365.Web/Pages/Meeting.razor`, `Meeting.razor.css`): removed duplicated `Preparation` and `Participants` dropdown menus from the Meeting page and promoted their remaining actions into the quick-action button row (Invite participants, Get binder, Setup online meeting, QR code, Update description, Cancel meeting) using the same button style. Closes #2440.
