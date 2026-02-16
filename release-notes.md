@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.183 Beta
+
+- Meeting toolbar cleanup (`MForce365.Web/Pages/Meeting.razor`, `Meeting.razor.css`): removed duplicated `Preparation` and `Participants` dropdown menus from the Meeting page and promoted their remaining actions into the quick-action button row (Invite participants, Get binder, Setup online meeting, QR code, Update description, Cancel meeting) using the same button style. Closes #2440.
+- Add-note behavior in pre-meeting mode (`MForce365.Web/Pages/Meeting.razor.cs`, `MForce.Components.Schedule/MeetingNotesCard*`, `MForce365.Web/wwwroot/MForce365.js`): `Add note` now expands/unminimizes notes, requests focus targeting, scrolls to the notes panel, and focuses the pre-meeting notes input (with compose fallback) so the action is immediately usable before a meeting starts. Closes #2441.
+- Calendar view persistence hardening (`MForce.Components.Schedule/MainSchedule.razor`, `ScheduleCard.razor.cs`): dashboard and meetings schedulers now persist selected Day/Week/Month view in `localStorage` with separate keys (`mforce365.calendarView.dashboard` and `mforce365.calendarView.meetings`) to preserve each surface view reliably across navigation. Closes #2439.
+- Agenda template duration filtering (`MForce.Components.Schedule/AgendaChooser*`): template split-button items are now filtered to the resolved meeting-length bucket (matching/nearest template duration) instead of always displaying both 25- and 55-minute templates. Closes #2437.
+- Tests: added and updated regression coverage in `MForce365.Web.Tests` and `MForce.Components.Schedule.Tests` for meeting quick-action/menu behavior, add-note focus wiring, template filtering, and scheduler persistence storage keys.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror` (0 warnings, 0 errors)
+  - `dotnet test MForce365/MForce365.sln --no-build` (all tests passing)
+
 ## VERSION 1.4.182 Beta
 
 - Action items: fixed Planner action-item save/close failures on the single Action Item page by updating Planner tasks with a real task ETag instead of wildcard `If-Match: *`, resolving Graph `400` responses (`The format of value '*' is invalid.`) and preventing Blazor unhandled-render exceptions when saving completed Planner tasks.

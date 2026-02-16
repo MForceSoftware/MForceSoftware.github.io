@@ -5,6 +5,36 @@
     };
 };
 
+window.mforce365 = window.mforce365 || {};
+window.mforce365.focusNotesInput = function () {
+    const selectors = [
+        "#meeting-pre-notes textarea",
+        "#meeting-notes-compose-input",
+        "#meeting-notes-compose-rich [contenteditable='true']"
+    ];
+
+    for (const selector of selectors) {
+        const element = document.querySelector(selector);
+        if (!element) {
+            continue;
+        }
+
+        element.scrollIntoView({ behavior: "smooth", block: "center" });
+
+        if (typeof element.focus === "function") {
+            element.focus();
+        }
+
+        if (typeof element.selectionStart === "number" && typeof element.selectionEnd === "number") {
+            const end = element.value ? element.value.length : 0;
+            element.selectionStart = end;
+            element.selectionEnd = end;
+        }
+
+        return;
+    }
+};
+
 const b64toBlob = (b64Data, contentType = '', sliceSize = 512) => {
     const byteCharacters = atob(b64Data);
     const byteArrays = [];

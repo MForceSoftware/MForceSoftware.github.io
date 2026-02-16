@@ -126,6 +126,14 @@
     isolation: isolate;
 }
 
+.meeting-toolbar--quick-only[b-0snrdmfufu] {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.meeting-toolbar--quick-only .meeting-quick-actions[b-0snrdmfufu] {
+    justify-content: flex-start;
+}
+
 .meeting-command-shell[b-0snrdmfufu] {
     border: 1px solid var(--rz-border);
     border-left: 4px solid #94a3b8;
