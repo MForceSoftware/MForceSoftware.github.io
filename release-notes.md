@@ -1,4 +1,17 @@
 # mForce365 Release Notes
+## VERSION 1.4.185 Beta
+
+- Meeting creation dialog cleanup (`MForce.Components.Schedule/AddAppointmentPage.razor`, `AddAppointmentPage.razor.cs`): removed the standalone `Project` input from Add Meeting, added a `Client` meeting type category, and now shows the `Client` free-text input only when that category is selected. Closes #2442 and #2443.
+- Meeting creation workflow (`MForce.Components.Schedule/MainSchedule.razor`, `ScheduleCard.razor.cs`): after saving a new meeting, scheduler flows now navigate directly to `/meeting/{id}` so users continue immediately in meeting preparation instead of returning to calendar-only view. Closes #2444.
+- Dashboard next-meeting formatting (`MForce.Components.Schedule/NextEventCard.razor`): reformatted next-event rows so day/date/time render on one line and meeting details render below it, matching dashboard UX expectations. Closes #2445.
+- Meeting notes heading emphasis (`MForce365.Shared/MForceAppointment.cs`): meeting-type value in generated HTML body content is now emphasized with bold formatting, keeping wrapped values like `... Meetings - Other` visually consistent with other heading lines in notes. Closes #2446.
+- Agenda template duplication refactor (`MForce.Components/AgendasCRUD.razor.cs`, `MForce.Components/MForce.Components.csproj`): removed duplicated template catalog/build logic from `AgendasCRUD` and delegated to the shared `AgendaTemplateCatalog.CreateAgenda` path, ensuring one source of template truth. Closes #2449.
+- Action-item recurrence dialog parameters (`MForce365.Web/Components/AddActionItemDialog.razor.cs`): recurrence picker now passes both required `RecurrencePattern.StartDate` and `RecurrencePattern.DueDate` using `nameof(...)` keys. Closes #2450.
+- Tests: added/updated coverage in `MForce.Components.Schedule.Tests`, `MForce365.Web.Tests`, and `MForce365.Shared.Tests` for conditional client-field rendering, project-field removal, post-create meeting navigation, next-event formatting markup, agenda-template catalog delegation, recurrence dialog parameter keys, and meeting-type HTML emphasis.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipMauiWorkloadValidation=true` (0 warnings, 0 errors)
+  - `dotnet test MForce365/MForce365.sln -p:SkipMauiWorkloadValidation=true` (all tests passing)
+
 ## VERSION 1.4.184 Beta
 
 - Agenda template edit icon alignment (`MForce.Components/AddAgenda.razor`, `AddAgenda.razor.css`): aligned action icons/buttons vertically in template edit rows by introducing consistent row/action-container alignment classes and icon-button sizing. Closes #2436.
