@@ -1,4 +1,17 @@
 # mForce365 Release Notes
+## VERSION 1.4.186 Beta
+
+- Meeting binder visual refresh (`MForce365.Shared/MeetingBinder.cs`): modernized binder presentation with a branded cover page (`Meeting Summary` + `Meeting Snapshot`), prepared-on stamp, improved heading typography/color, and a cleaner section flow with dedicated Table of Contents pagination.
+- Meeting binder TOC reliability (`MForce365.Shared/MeetingBinder.cs`): TOC field is now marked dirty and remains paired with `UpdateFieldsOnOpen`, so entries refresh reliably when opened in Word. Closes #2452.
+- Binder table readability (`MForce365.Shared/MeetingBinder.cs`): action-item and binder tables now render with styled header rows (brand fill + white text) for clearer scanning in generated DOCX output.
+- Binder download format selection (`MForce365.Web/Pages/Meeting.razor.cs`, `MForce.Pages/Pages/Meeting.razor.cs`): `Get Binder` now converts to PDF via Microsoft Graph when the binder is immutable/finalized (`BinderFinalized` or `AllMinutesAccepted`), while mutable binders continue to download as DOCX for editing.
+- Tests:
+  - Added `MForce365.Web.Tests/MeetingBinderPdfDownloadTests.cs` to lock PDF-download gating and conversion calls in the Meeting page flow.
+  - Expanded `MForce365.Shared.Tests/MeetingBinderBuilderTests.cs` for TOC dirty-field behavior, page-break structure, cover-page summary text, and styled table-header assertions.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipMauiWorkloadValidation=true` (0 warnings, 0 errors)
+  - `dotnet test MForce365/MForce365.sln -p:SkipMauiWorkloadValidation=true --no-build` (all tests passing)
+
 ## VERSION 1.4.185 Beta
 
 - Meeting creation dialog cleanup (`MForce.Components.Schedule/AddAppointmentPage.razor`, `AddAppointmentPage.razor.cs`): removed the standalone `Project` input from Add Meeting, added a `Client` meeting type category, and now shows the `Client` free-text input only when that category is selected. Closes #2442 and #2443.
