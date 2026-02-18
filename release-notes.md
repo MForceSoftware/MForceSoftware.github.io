@@ -1,4 +1,25 @@
 # mForce365 Release Notes
+## VERSION 1.4.187 Beta
+
+- Meeting binder file injection (`MForce365.Web/Pages/Meeting.razor.cs`, `MForce.Pages/Pages/Meeting.razor.cs`, `MForce365.Shared/MeetingBinder.cs`, `MForce365.Shared/MeetingBinderContent.cs`):
+  - Binder generation now recursively scans meeting assets (excluding binder state/template artifacts) and embeds extracted content into the `Files` section instead of only listing hyperlinks.
+  - Supported embedded-content file types include Markdown (`.md`/`.markdown`), Word (`.docx` with `.doc` conversion fallback), PDF (`.pdf` via Graph text conversion), and PowerPoint (`.pptx` with `.ppt` conversion fallback).
+  - File entries now include relative path context plus extracted body content in the binder for stronger record fidelity.
+- Binder template support (`MForce365.Web/Pages/Meeting.razor.cs`, `MForce.Pages/Pages/Meeting.razor.cs`, `MForce365.Shared/MeetingBinder.cs`):
+  - Added template bootstrap flow with `Templates/MeetingBinderTemplate.docx`.
+  - On meeting load, binder template artifacts are ensured in the user OneDrive `mForce365/Templates` location and mirrored to each meeting’s `Templates` folder when missing.
+  - Binder generation now resolves template bytes first and applies template styles when present, with fallback to generated default template styles.
+  - Added `MeetingBinder.CreateDefaultTemplate()` for deterministic default template provisioning.
+- Meeting assets folder setup (`MForce.Components.Files/FileExplorer.razor.cs`):
+  - Meeting folder initialization now creates a `Templates` subfolder alongside existing `MeetingNotes`, `Documents`, and `Correspondence` folders so users can upload custom binder templates.
+- Tests:
+  - Added `MForce365.Web.Tests/MeetingBinderFileInjectionTests.cs`.
+  - Expanded `MForce365.Shared.Tests/MeetingBinderBuilderTests.cs` with embedded-file rendering and template-style/default-template coverage.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipMauiWorkloadValidation=true` (0 warnings, 0 errors)
+  - `dotnet test MForce365/MForce365.sln -p:SkipMauiWorkloadValidation=true --no-build` (all tests passing)
+- Closes #2454.
+
 ## VERSION 1.4.186 Beta
 
 - Meeting binder visual refresh (`MForce365.Shared/MeetingBinder.cs`): modernized binder presentation with a branded cover page (`Meeting Summary` + `Meeting Snapshot`), prepared-on stamp, improved heading typography/color, and a cleaner section flow with dedicated Table of Contents pagination.
