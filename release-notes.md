@@ -1,6 +1,15 @@
 # mForce365 Release Notes
 ## VERSION 1.4.187 Beta
 
+- Meeting binder PDF conversion fix (`MForce365.Web/Pages/Meeting.razor.cs`, `MForce.Pages/Pages/Meeting.razor.cs`):
+  - Replaced incorrect Graph conversion header usage (`format` header) with the supported query parameter path (`?format=pdf`) in `ConvertBinderToPdfAsync`.
+  - Added null-stream guard to fail fast when Graph does not return converted content.
+  - This resolves invalid PDF output where binder bytes could be non-PDF content despite `.pdf` filenames.
+- Tests:
+  - Expanded `MForce365.Web.Tests/MeetingBinderPdfDownloadTests.cs` to assert both Web and legacy Meeting pages use `requestConfiguration.QueryParameters.Format = "pdf"` and no longer use header-based conversion.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipMauiWorkloadValidation=true` (0 warnings, 0 errors)
+  - `dotnet test MForce365/MForce365.sln -p:SkipMauiWorkloadValidation=true --no-build` (all tests passing)
 - Meeting binder file injection (`MForce365.Web/Pages/Meeting.razor.cs`, `MForce.Pages/Pages/Meeting.razor.cs`, `MForce365.Shared/MeetingBinder.cs`, `MForce365.Shared/MeetingBinderContent.cs`):
   - Binder generation now recursively scans meeting assets (excluding binder state/template artifacts) and embeds extracted content into the `Files` section instead of only listing hyperlinks.
   - Supported embedded-content file types include Markdown (`.md`/`.markdown`), Word (`.docx` with `.doc` conversion fallback), PDF (`.pdf` via Graph text conversion), and PowerPoint (`.pptx` with `.ppt` conversion fallback).
