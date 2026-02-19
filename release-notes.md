@@ -1,4 +1,42 @@
 # mForce365 Release Notes
+## VERSION 1.4.188 Beta
+
+- Meeting scheduling suggestion fixes (`MForce.Components.Schedule/AddAppointmentPage.razor.cs`):
+  - Normalized Graph `confidence` values so `100` now renders as `100%` (not `10000%`).
+  - Applied timezone-aware parsing from `meetingTimeSlot.start/end.timeZone` so suggested times are shown in the correct local AM/PM window.
+  - Closes #2458.
+- Meeting details/body formatting (`MForce365.Shared/MForceAppointment.cs`):
+  - `Meeting Type:` remains bold while the selected value is rendered as normal text.
+  - Added a bold `Details:` heading before meeting details content in HTML body output.
+  - Closes #2459 and #2460.
+- Meeting notes delete safety (`MForce.Components.Schedule/MeetingNotesCard.razor.cs`):
+  - Added a confirmation dialog before clearing notes from the trash action.
+  - Closes #2461.
+- Action item due-date editing reliability (`MForce.Components.ActionItems/EditActionItem.razor`, `EditActionItem.razor.cs`):
+  - Replaced fragile `datetime-local` due-date binding with `InputDate` date editing.
+  - Prevented repeated UTC->local reconversion on rerender to avoid invalid/default (`0001`) fallback behavior.
+  - Closes #2462.
+- Meeting assets duplicate title cleanup (`MForce.Components.Files/FileExplorer.razor`, `FileExplorer.razor.cs`):
+  - Removed duplicate root meeting-name display next to the back-arrow toolbar when viewing the root folder.
+  - Closes #2463.
+- Notes formatting for decision/action additions (`MForce365.Web/Pages/Meeting.razor.cs`, `MForce.Components/MeetingDecisionsCard.razor.cs`, `MForce.Components.ActionItems/MeetingActionItemsCard.razor.cs`):
+  - Added structured timeline entries using bold headings (`Decision:` / `Action Item:`), detail lines directly below, and spacing between entries.
+  - Closes #2464.
+- Meeting preparation duplicate empty-state text cleanup:
+  - `MForce.Components.Projects/MeetingProjectCard.razor`: removed duplicate no-project subtitle text.
+  - `MForce.Components.Schedule/MeetingAgendaCard.razor`: removed duplicate no-agenda subtitle text.
+  - Closes #2465.
+- Online meeting visibility UX (`MForce365.Web/Pages/Meeting.razor`, `Meeting.razor.cs`, `Meeting.razor.css`):
+  - Split the project column into stacked cards and added a dedicated `Online Meeting Details` card.
+  - Surface join-provider/link details with an `Open meeting` action.
+  - Refresh event metadata after setup so details appear immediately.
+  - Closes #2466.
+- Tests:
+  - Added/updated coverage in `MForce.Components.Schedule.Tests`, `MForce.Components.ActionItems.Tests`, `MForce.Components.Files.Tests`, `MForce.Components.Projects.Tests`, `MForce365.Shared.Tests`, and `MForce365.Web.Tests` for confidence normalization, timezone parsing, meeting body formatting, delete confirmation, due-date editing, duplicate-label removal, notes-formatting output hooks, and online-meeting details card rendering.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipMauiWorkloadValidation=true` (0 warnings, 0 errors)
+  - `dotnet test MForce365/MForce365.sln -p:SkipMauiWorkloadValidation=true --no-build` (all tests passing)
+
 ## VERSION 1.4.187 Beta
 
 - Meeting binder PDF conversion fix (`MForce365.Web/Pages/Meeting.razor.cs`, `MForce.Pages/Pages/Meeting.razor.cs`):

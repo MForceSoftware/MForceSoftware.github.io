@@ -261,6 +261,14 @@
     min-height: 0;
 }
 
+.meeting-project-stack[b-0snrdmfufu] {
+    display: grid;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: var(--meeting-gap);
+    width: 100%;
+    min-height: 0;
+}
+
 .meeting-widget[b-0snrdmfufu] {
     display: flex;
     width: 100%;
@@ -424,6 +432,20 @@
     margin: 0.15rem 0 0;
     font-size: 0.82rem;
     color: var(--rz-text-secondary-color);
+}
+
+[b-0snrdmfufu] .meeting-online-details-card {
+    gap: 0.5rem;
+}
+
+[b-0snrdmfufu] .meeting-online-details-body p {
+    margin: 0;
+    font-size: 0.84rem;
+    line-height: 1.35;
+}
+
+[b-0snrdmfufu] .meeting-online-link a {
+    word-break: break-all;
 }
 
 @media (max-width: 1399.98px) {
