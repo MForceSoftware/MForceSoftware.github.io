@@ -1,4 +1,51 @@
 # mForce365 Release Notes
+## VERSION 1.4.189 Beta
+
+- Meeting agenda reorder duration stability (`MForce365.Shared/MForceMeeting.cs`):
+  - `SetAgenda` now computes agenda estimated times from a stable baseline and no longer mutates `StartDate` while building agenda rows.
+  - Preserves expected meeting duration across agenda upload and reorder operations.
+  - Closes #2476 and #2475.
+- Meeting preparation action-item deletion (`MForce.Components.ActionItems/EditActionItem.razor.cs`, `MForce.Components.ActionItems/MeetingActionItemsCard.razor.cs`, `MForce.Components.ActionItems/EditActionItemDialogResult.cs`):
+  - Edit dialog now returns a typed close result with delete state.
+  - Meeting action-items card now removes deleted tasks from `runningMeeting.ActionItems` immediately after dialog close.
+  - Closes #2474.
+- Meeting preparation quick-action visual state (`MForce365.Web/Pages/Meeting.razor`, `Meeting.razor.cs`, `Meeting.razor.css`):
+  - Added an orange preparation status button.
+  - Preparation quick-action buttons now switch to completed styling when corresponding meeting data exists.
+  - Closes #2473.
+- Action-item project assignment (`MForce365.Web/Components/AddActionItemDialog.razor`, `AddActionItemDialog.razor.cs`):
+  - Added project selection sourced from live Planner plans.
+  - Action item creation now targets Planner when a project bucket is available, with fallback behavior when bucket metadata is unavailable.
+  - Closes #2472.
+- Action-item email assignment notifications (`MForce365.Web/Components/AddActionItemDialog.razor`, `AddActionItemDialog.razor.cs`):
+  - Replaced attendee-only assign control with an email input plus attendee suggestions.
+  - Saving an assigned action item now sends an email notification via Microsoft Graph `Me.SendMail`.
+  - Closes #2471.
+- Meeting assets Open button visual width (`MForce.Components.Files/FileExplorer.razor`, `FileExplorer.razor.css`):
+  - Added dedicated class styling so the Open button background fully spans the label with centered text.
+  - Closes #2469.
+- Meeting notes context expansion (`MForce.Components.Schedule/MeetingNotesCard.razor`, `MeetingNotesCard.razor.cs`, `MeetingNotesCard.razor.css`):
+  - Added meeting title, location, and details summary lines to the notes card context header area.
+  - Closes #2200.
+- Binder internal-only delivery control (`MForce365.Shared/IMeeting.cs`, `MForce365.Shared/MForceMeeting.cs`, `MForce365.Web/Pages/Meeting.razor`, `Meeting.razor.cs`):
+  - Added `BinderInternalOnly` state and organizer toggle on the meeting page.
+  - Binder recipient filtering now enforces organizer-domain-only delivery when internal-only is enabled.
+  - Closes #1320.
+- Planner project provisioning on create (`MForce.Components.Projects/AddProject.razor.cs`):
+  - Added post-create Planner detail/bucket fetch to proactively provision the plan so it appears without requiring hyperlink click initialization.
+  - Closes #1087.
+- Tests:
+  - Added/updated coverage in `MForce365.Shared.Tests`, `MForce.Components.ActionItems.Tests`, `MForce.Components.Files.Tests`, `MForce.Components.Projects.Tests`, and `MForce365.Web.Tests` for agenda baseline timing, meeting action-item deletion flow, preparation button state classes, action-item project assignment, assignment-email behavior, binder internal-only filtering, planner provisioning, and markup regression checks.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipMauiWorkloadValidation=true -v minimal` (0 warnings, 0 errors)
+  - `dotnet test MForce365/MForce365.sln -p:SkipMauiWorkloadValidation=true --no-build -v minimal` (all tests passing)
+  - Playwright headed verification on `http://localhost:5204` after authenticated login confirmed:
+    - meeting preparation quick actions (including `Preparation` and completed-state classes),
+    - Add Action Item dialog `Assign To` email + `Project` selection controls,
+    - in-meeting action-item delete flow from Edit dialog,
+    - notes context title/location rendering and binder internal-only toggle behavior,
+    - meeting assets file-row `Open` button styling (`meeting-asset-open-button`).
+
 ## VERSION 1.4.188 Beta
 
 - Meeting scheduling suggestion fixes (`MForce.Components.Schedule/AddAppointmentPage.razor.cs`):

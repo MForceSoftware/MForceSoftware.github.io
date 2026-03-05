@@ -1,7 +1,7 @@
 @import '_content/MForce.Components.ActionItems/MForce.Components.ActionItems.437o4fvit9.bundle.scp.css';
-@import '_content/MForce.Components.Files/MForce.Components.Files.5n1q838dzc.bundle.scp.css';
+@import '_content/MForce.Components.Files/MForce.Components.Files.xckvejkxdc.bundle.scp.css';
 @import '_content/MForce.Components.Projects/MForce.Components.Projects.ksvyqitafn.bundle.scp.css';
-@import '_content/MForce.Components.Schedule/MForce.Components.Schedule.2oq78m0e6k.bundle.scp.css';
+@import '_content/MForce.Components.Schedule/MForce.Components.Schedule.2rt7ufk3p4.bundle.scp.css';
 @import '_content/MForce.Components/MForce.Components.o5macfg9nj.bundle.scp.css';
 @import '_content/Microsoft.AspNetCore.Components.QuickGrid/Microsoft.AspNetCore.Components.QuickGrid.boiwgh0w5b.bundle.scp.css';
 
@@ -219,6 +219,25 @@
 
 [b-0snrdmfufu] .meeting-quick-actions .rz-button .rz-button-text {
     font-weight: 600;
+}
+
+[b-0snrdmfufu] .meeting-quick-actions .meeting-quick-action--preparation,
+[b-0snrdmfufu] .meeting-quick-actions .meeting-quick-action--preparation.rz-state-disabled {
+    background: #f59e0b !important;
+    border-color: #f59e0b !important;
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+[b-0snrdmfufu] .meeting-quick-actions .meeting-quick-action--complete {
+    background: #16a34a !important;
+    border-color: #16a34a !important;
+    color: #ffffff !important;
+}
+
+[b-0snrdmfufu] .meeting-quick-actions .meeting-quick-action--complete:hover:not(.rz-state-disabled) {
+    background: #15803d !important;
+    border-color: #15803d !important;
 }
 
 .meeting-dashboard[b-0snrdmfufu] {
