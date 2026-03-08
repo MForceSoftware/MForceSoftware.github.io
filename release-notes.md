@@ -1,4 +1,36 @@
 # mForce365 Release Notes
+## VERSION 1.4.190 Beta
+
+- Button colour and title consistency refresh (`MForce365.Web/Pages/Index.razor`, `MForce.Components.Schedule/MeetingTimer.razor`, `MeetingTimer.razor.css`):
+  - Standardized dashboard heading treatment.
+  - Added explicit recording action styling on the in-meeting timer so face-to-face recording controls are visually clear and consistent.
+  - Closes #2473 and #2479.
+- Meeting creation save reliability (`MForce.Components.Schedule/AddAppointmentPage.razor`, `AddAppointmentPage.razor.cs`):
+  - Prevented helper buttons inside the add-meeting form from submitting the form unintentionally.
+  - Refactored event creation through `BuildEvent(...)`, restricted Teams metadata to actual Teams meetings, and surfaced save failures through logging and notifications.
+  - Closes #2480.
+- Face-to-face meeting recording from the Meeting page (`MForce.Components.Schedule/MeetingTimer.razor`, `MeetingTimer.razor.cs`, `MForce365.Web/Pages/Meeting.razor`, `Meeting.razor.cs`):
+  - Added a `Record Meeting` action to the timer card for non-Teams meetings.
+  - Stopping a recording now uploads the captured audio to the user OneDrive `Recordings` folder using a meeting-title-based filename.
+  - Closes #2481.
+- Recordings page loading resilience (`MForce365.Web/Pages/MeetingRecordings.razor`):
+  - Folder discovery is now case-insensitive and load failures render inline instead of leaving navigation in a broken state.
+  - Recording upload also reuses the same resilient root-folder resolution.
+  - Closes #2482.
+- Planner/project visibility and action-item aggregation hardening (`MForce365.Shared/PlannerPlanGraphHelper.cs`, `MForce365.Web/Pages/Projects.razor.cs`, `MForce.Components.ActionItems/ProjectsCard.razor.cs`, `MForce.Components.Projects/ProjectChooser.razor.cs`, `MForce365.Web/Components/AddActionItemDialog.razor.cs`, `MForce365.Shared/MForceActionItems.cs`):
+  - Added a shared Planner helper that combines `/me/planner/plans` with group-backed `/groups/{id}/planner/plans`, de-duplicates results, and keeps plans sorted by creation date.
+  - Reworked project and action-item surfaces to use that helper and tolerate partial Graph failures, preventing blank project/action-item lists when one source fails.
+  - Closes #2483.
+- Agenda loading reliability (`MForce365.Shared/Agenda.cs`, `MForce.Components/AgendasCRUD.razor*`, `MForce.Components.Schedule/AgendaChooser.razor*`):
+  - Agenda storage now uses the resolved OneDrive id consistently instead of mixing `"me"` and explicit drive ids.
+  - Agenda pages/components now show loading or inline error states rather than silently failing when Graph/OneDrive calls fail.
+  - Closes #2484.
+- Tests:
+  - Added `MForce365.Shared.Tests/PlannerPlanGraphHelperTests.cs`.
+  - Expanded regression coverage across `MForce.Components.Schedule.Tests`, `MForce.Components.ActionItems.Tests`, and `MForce365.Web.Tests` for project-plan aggregation, recordings UX, meeting recording controls, add-meeting save safety, and agenda/action-item loading states.
+- Validation:
+  - `dotnet test MForce365/MForce365.sln` (all tests passing)
+
 ## VERSION 1.4.189 Beta
 
 - Meeting agenda reorder duration stability (`MForce365.Shared/MForceMeeting.cs`):

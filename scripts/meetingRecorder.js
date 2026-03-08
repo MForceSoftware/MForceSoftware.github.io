@@ -2,9 +2,9 @@ window.meetingRecorder = {
   mediaRecorder: null,
   chunks: [],
   async start() {
-    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
-      console.error("MediaDevices API or getUserMedia not supported");
-      return;
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia || typeof MediaRecorder === "undefined") {
+      console.error("MediaDevices API or MediaRecorder not supported");
+      return false;
     }
     const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
     this.mediaRecorder = new MediaRecorder(stream);
@@ -15,6 +15,7 @@ window.meetingRecorder = {
       }
     };
     this.mediaRecorder.start();
+    return true;
   },
   async stop() {
     if (!this.mediaRecorder) {
