@@ -1,4 +1,36 @@
 # mForce365 Release Notes
+## VERSION 1.4.191 Beta
+
+- Meeting page state/timer fixes (`MForce365.Web/Pages/Meeting.razor`, `Meeting.razor.cs`, `Meeting.razor.css`, `MForce.Components.Schedule/MeetingTimer.razor`, `MeetingTimer.razor.cs`):
+  - Replaced the static `Preparation` quick action with a live phase-status button that swaps correctly to `In Meeting` and post-meeting states.
+  - Meeting quick-action status styling now updates immediately when agenda/project/notes/action/participant state changes without requiring a page reload.
+  - Meeting timer now honors the scheduled duration after start/pause/resume so 25-minute meetings no longer expand to multi-hour runtimes.
+  - Reset meeting now clears actual runtime markers and restores correct remaining-time calculations.
+  - Closes #2486, #2487, and #2488.
+- Notes, recordings, and page copy consistency (`MForce365.Shared/MForceAppointment.cs`, `MForce365.Web/Pages/MeetingRecordings.razor`, `MForce365.Web/Pages/MeetingRecordingTableRowBuilder.cs`, `MForce365.Web/Pages/Scheduler.razor`, `MForce365.Shared/mForce365Strings.resx`):
+  - Meeting notes now keep the `Meeting Type` value bold for consistent formatting.
+  - The Scheduler page heading now reads `Calendar`.
+  - Meeting Recordings description text now covers both Teams and face-to-face meetings.
+  - Meeting Recordings now shows a `Transcript` column by pairing transcript documents with recording files.
+  - Closes #2489, #2490, #2491, and #2492.
+- Meeting-assets upload targeting (`MForce.Components.Files/FileExplorer.razor`, `FileExplorer.razor.cs`, `FileExplorer.razor.css`):
+  - Replaced the root-level default upload path with per-category plus buttons so uploads land in the intended folder from the start.
+  - Closes #2493.
+- Authentication/register flow guidance (`MForce.Components/PreLoginHomePage.razor`, `MForce365.Web/Pages/Authentication.razor`, `README.md`, `docs/authentication.md`, `docs/development.md`, `docs/installation.md`):
+  - The pre-login `Register` action now opens a dedicated registration guidance view instead of behaving like an unexplained login redirect.
+  - Added documentation for personal Microsoft account support, `common` authority usage, app-registration audience requirements, and Gmail-as-Microsoft-account guidance.
+  - Closes #2494 and #2495.
+- Build hygiene:
+  - Removed duplicate localized resource entries from `MForce365.Shared/mForce365Strings*.resx` files so the full solution builds cleanly with warning-as-error enabled.
+- Tests:
+  - Added `MForce365.Web.Tests/MeetingQuickActionStateTests.cs`.
+  - Added `MForce365.Web.Tests/MeetingRecordingsTranscriptTests.cs`.
+  - Added `MForce365.Web.Tests/SchedulerPageHeadingTests.cs`.
+  - Updated existing regression coverage in `MForce365.Web.Tests`, `MForce.Components.Files.Tests`, `MForce.Components.Schedule.Tests`, and `MForce365.Shared.Tests` for the new milestone behavior.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln /warnaserror /p:SkipInvalidConfigurations=true` (0 warnings, 0 errors)
+  - `dotnet test MForce365/MForce365.sln /p:SkipInvalidConfigurations=true` (all tests passing)
+
 ## VERSION 1.4.190 Beta
 
 - Button colour and title consistency refresh (`MForce365.Web/Pages/Index.razor`, `MForce.Components.Schedule/MeetingTimer.razor`, `MeetingTimer.razor.css`):

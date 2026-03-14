@@ -1,5 +1,5 @@
 @import '_content/MForce.Components.ActionItems/MForce.Components.ActionItems.437o4fvit9.bundle.scp.css';
-@import '_content/MForce.Components.Files/MForce.Components.Files.xckvejkxdc.bundle.scp.css';
+@import '_content/MForce.Components.Files/MForce.Components.Files.0l3l6c536l.bundle.scp.css';
 @import '_content/MForce.Components.Projects/MForce.Components.Projects.ksvyqitafn.bundle.scp.css';
 @import '_content/MForce.Components.Schedule/MForce.Components.Schedule.anqwa4jlh3.bundle.scp.css';
 @import '_content/MForce.Components/MForce.Components.o5macfg9nj.bundle.scp.css';
@@ -226,6 +226,22 @@
     background: #f59e0b !important;
     border-color: #f59e0b !important;
     color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+[b-0snrdmfufu] .meeting-quick-actions .meeting-quick-action--in-meeting,
+[b-0snrdmfufu] .meeting-quick-actions .meeting-quick-action--in-meeting.rz-state-disabled {
+    background: #dcfce7 !important;
+    border-color: #86efac !important;
+    color: #166534 !important;
+    opacity: 1 !important;
+}
+
+[b-0snrdmfufu] .meeting-quick-actions .meeting-quick-action--post-meeting,
+[b-0snrdmfufu] .meeting-quick-actions .meeting-quick-action--post-meeting.rz-state-disabled {
+    background: #fee2e2 !important;
+    border-color: #fca5a5 !important;
+    color: #991b1b !important;
     opacity: 1 !important;
 }
 
