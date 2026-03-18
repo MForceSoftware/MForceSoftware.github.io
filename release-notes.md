@@ -13,6 +13,16 @@
   - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipMauiWorkloadValidation=true -v minimal`
   - `dotnet test MForce365/MForce365.sln -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
 
+## VERSION 1.4.202 Beta
+
+- Sales deck documentation (`docs/sales-slide-deck-15.md`, `docs/README.md`, `docs/development.md`):
+  - Added a repository-backed 15-slide cut-down sales deck outline for mForce365 so concise customer-facing presentation copy now lives in source control instead of being implied by the sparse issue text.
+  - Documented how to keep future deck revisions aligned with shipped meeting, project, binder, and Microsoft 365 capabilities while keeping customer-specific data out of the repository.
+  - Closes #181.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln /p:SkipInvalidConfigurations=true`
+  - `dotnet test MForce365/MForce365.sln /p:SkipInvalidConfigurations=true`
+
 ## VERSION 1.4.200 Beta
 
 - Social media strategy documentation (`docs/social-media-strategy.md`, `docs/README.md`, `docs/development.md`):
