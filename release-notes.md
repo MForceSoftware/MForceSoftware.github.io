@@ -1,4 +1,19 @@
 # mForce365 Release Notes
+## VERSION 1.4.218 Beta
+
+- Project review meeting capture sidecar (`MForce365.Web/Pages/Project.razor*`, `MForce.Components.ActionItems/MeetingParkingLot*`, `MForce.Components.Projects/MeetingProjectCard.razor.cs`, `MForce365.Shared/mForce365Strings.resx`, `docs/development.md`, `docs/projects.md`):
+  - Added a meeting-capture sidecar on the Project page so linked meeting notes, action items, decisions, and parking-lot topics stay available while reviewing the associated Planner board.
+  - The Project page now restores meeting capture context from the meeting route via query-backed meeting state (`meetingId` and `meetingFolderId`) and saves updates back to the existing `thisMeeting.meetingv1` file.
+  - Added a dedicated Parking Lot card/editor backed by the existing `IMeeting.ParkingLot` model so parking-lot topics can be captured, edited, and included in binder output without introducing a new storage model.
+  - Closes #321.
+- Tests:
+  - Added `MForce365.Web.Tests/ProjectMeetingCaptureSidecarTests.cs`.
+  - Added `MForce.Components.ActionItems.Tests/MeetingParkingLotCardTests.cs`.
+  - Updated `MForce.Components.Projects.Tests/MeetingProjectCardTests.cs`.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+
 ## VERSION 1.4.217 Beta
 
 - Planner task notes in projects and action items (`MForce365.Shared/PlannerTaskDetailsGraphHelper.cs`, `MForce365.Shared/MForceActionItems.cs`, `MForce365.Shared/MForceTask.cs`, `MForce.Components.ActionItems/EditActionItem.razor.cs`, `MForce365.Web/Pages/Project.razor.cs`, `docs/projects.md`, `docs/development.md`):
@@ -10,7 +25,6 @@
 - Validation:
   - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipMauiWorkloadValidation=true -v minimal`
   - `dotnet test MForce365/MForce365.sln -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
-
 ## VERSION 1.4.216 Beta
 
 - Advanced People Solution public page (`MForce365.Web/Pages/AdvancedPeopleSolution.razor`, `MForce365.Web/Shared/PublicLayout.razor`, `MForce.Components/PreLoginHomePage.razor`, `docs/advanced-people-solution.md`):
