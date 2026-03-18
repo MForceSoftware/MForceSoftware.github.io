@@ -1,4 +1,28 @@
 # mForce365 Release Notes
+## VERSION 1.4.192 Beta
+
+- 2026 release Group 12 task, meeting, and registration fixes:
+  - Action items now keep completion checkbox, status, and completed date aligned across the standalone page and edit dialog, and completed items fall out of the open-items list automatically.
+  - Action Items now shows the originating meeting or project when that metadata is available from To-Do body metadata or Planner plan titles.
+  - Project task create/edit now supports free-text assignee email entry, best-effort team-member suggestions, and assignment notification emails when a task is assigned.
+  - Project add/edit flows now reload planner buckets/tasks after writes so the board updates immediately, and task/bucket ordering uses deterministic `OrderHint` sorting.
+  - Meeting recordings transcript pairing now matches more real-world transcript files, including date-adjacent PDFs and `.srt` subtitle files.
+  - Meeting phase quick-action text now uses distinct running/paused/ended labels instead of duplicating `In meeting`.
+  - Binder file recursion now paginates folder children in both meeting pages so binder generation includes all meeting files, not just the first Graph children page.
+  - Add Meeting now includes an `Internal` room mode that loads room suggestions from Microsoft Graph `findRooms` and adds the chosen room as a resource attendee.
+  - The web manifest now registers `/actionitem` as a share target, pre-filling title/text/url into new action items.
+  - Registration guidance now explicitly covers Outlook/Hotmail/Live personal accounts and Gmail-via-Microsoft-account onboarding.
+  - Closes #2503, #2502, #2501, #2500, #2499, #2498, #2497, #2457, #1505, #1322, and #484.
+- Tests:
+  - Added `MForce365.Shared.Tests/MForceTaskSourceContextTests.cs`.
+  - Added `MForce365.Web.Tests/ActionItemShareTargetTests.cs`.
+  - Added `MForce365.Web.Tests/ActionItemsSourceColumnTests.cs`.
+  - Added `MForce365.Web.Tests/PreLoginRegistrationGuidanceTests.cs`.
+  - Expanded regression coverage in `MForce365.Web.Tests`, `MForce.Components.ActionItems.Tests`, and `MForce.Components.Schedule.Tests` for planner assignment UX, action-item completion sync, transcript matching, binder paging, meeting phase text, and internal rooms.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror` (0 warnings, 0 errors)
+  - `dotnet test MForce365/MForce365.sln -warnaserror` (all tests passing)
+
 ## VERSION 1.4.191 Beta
 
 - Meeting page state/timer fixes (`MForce365.Web/Pages/Meeting.razor`, `Meeting.razor.cs`, `Meeting.razor.css`, `MForce.Components.Schedule/MeetingTimer.razor`, `MeetingTimer.razor.cs`):

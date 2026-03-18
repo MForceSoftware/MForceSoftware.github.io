@@ -6,6 +6,16 @@
   "background_color": "#ffffff",
   "theme_color": "#03173d",
   "prefer_related_applications": false,
+  "share_target": {
+    "action": "/actionitem",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
   "icons": [
     {
       "src": "icon-512.png",
