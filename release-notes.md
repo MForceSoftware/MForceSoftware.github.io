@@ -1,4 +1,16 @@
 # mForce365 Release Notes
+## VERSION 1.4.217 Beta
+
+- Planner task notes in projects and action items (`MForce365.Shared/PlannerTaskDetailsGraphHelper.cs`, `MForce365.Shared/MForceActionItems.cs`, `MForce365.Shared/MForceTask.cs`, `MForce.Components.ActionItems/EditActionItem.razor.cs`, `MForce365.Web/Pages/Project.razor.cs`, `docs/projects.md`, `docs/development.md`):
+  - Planner-backed tasks now hydrate `PlannerTaskDetails.Description` before they are shown in mForce365 action-item surfaces, so project notes no longer disappear when a Planner task is opened from the app.
+  - Saving a Planner-backed action item now patches both the task and its details resource with the correct ETags, allowing note edits to round-trip safely back to Microsoft Planner.
+  - The Project board now loads each task's Planner details before rendering cards, so task descriptions/notes show up consistently there as well.
+  - Added regression coverage in `MForce365.Shared.Tests/LoadItemsPagingTests.cs`, `MForce365.Shared.Tests/PlannerUpdateEtagTests.cs`, `MForce365.Shared.Tests/MForceTaskSourceContextTests.cs`, `MForce.Components.ActionItems.Tests/EditActionItemPlannerSaveTests.cs`, and `MForce365.Web.Tests/ProjectTaskDetailsHydrationTests.cs`.
+  - Closes #327.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
+
 ## VERSION 1.4.216 Beta
 
 - Advanced People Solution public page (`MForce365.Web/Pages/AdvancedPeopleSolution.razor`, `MForce365.Web/Shared/PublicLayout.razor`, `MForce.Components/PreLoginHomePage.razor`, `docs/advanced-people-solution.md`):
