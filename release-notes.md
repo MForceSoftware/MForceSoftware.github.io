@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.226 Beta
+
+- Registration licensing options (`MForce365.Web/Pages/Authentication.razor`, `MForce365.Web/Pages/Authentication.razor.cs`, `MForce365.Web.Tests/AuthenticationPageTests.cs`, `docs/authentication.md`, `docs/development.md`):
+  - `/authentication/register` now lets new users choose between an individual and a corporate license path before continuing to Microsoft sign-in.
+  - Corporate registration captures a requested seat count, and the registration intent is stored in browser `localStorage` under `mforce_registration_intent_v1` so the choice persists through the same-browser Microsoft sign-in handoff.
+  - The Microsoft-account guidance for Outlook.com, Hotmail, Live, and Gmail-on-Microsoft-account onboarding remains unchanged.
+  - Closes #424.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
+
 ## VERSION 1.4.225 Beta
 
 - Outlook add-in meeting form for issue `#338` (`MForce.Components.Schedule/AddAppointmentPage.razor.cs`, `MForce365.Web/Pages/OutlookAddinCreateMeeting.razor`, `MForce365.Web/Pages/OutlookAddin.razor`, `MForce365.Web.Tests/OutlookAddinCreateMeetingPageTests.cs`, `MForce365.Web/Shared/OutlookAddinLayout.razor`, `outlook/mforce365-outlook-addin-manifest.xml`, `docs/outlook-addin.md`, `docs/development.md`):
