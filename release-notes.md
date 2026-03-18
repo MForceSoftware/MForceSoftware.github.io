@@ -1,4 +1,19 @@
 # mForce365 Release Notes
+## VERSION 1.4.198 Beta
+
+- New-user 15-day follow-up email (`MForce365.Web/Pages/Index.razor`, `MForce365.Web/Program.cs`, `MForce365.Web/Services/NewUserFollowUpService.cs`):
+  - Added a dashboard-triggered follow-up flow that records each authenticated user's first seen timestamp in browser `localStorage`.
+  - After 15 days, mForce365 now sends the user a one-time Microsoft Graph self-email with product tips plus a simple activity snapshot covering meetings since first visit, current action items, and current Planner projects.
+  - The follow-up email now uses a short-lived browser send lock so multiple open dashboard tabs do not send duplicate messages for the same user.
+  - When no activity is detected, the follow-up email now explicitly offers a 1-1 onboarding contact path via `andrew@makemeetingsmatter.com`.
+  - The follow-up state is stored per user under `mforce_new_user_follow_up:{email}` so the message is only sent once for that browser/user combination.
+  - Closes #82.
+- Tests:
+  - Added `MForce365.Web.Tests/DashboardNewUserFollowUpTests.cs`.
+  - Added `MForce365.Web.Tests/NewUserFollowUpServiceTests.cs`.
+- Validation:
+  - `dotnet test MForce365/MForce365.sln -warnaserror /p:SkipInvalidConfigurations=true` (all tests passing)
+
 ## VERSION 1.4.197 Beta
 
 - Trial-end summary communication for new users (`MForce365.Web/Services/WelcomeCommunicationService.cs`, `MForce365.Web.Tests/TrialEndCommunicationServiceTests.cs`, `MForce365.Web.Tests/WelcomeCommunicationTests.cs`, `docs/authentication.md`, `docs/development.md`):

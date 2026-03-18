@@ -35,6 +35,36 @@ window.mforce365.focusNotesInput = function () {
     }
 };
 
+window.mforce365.tryAcquireNewUserFollowUpLock = function (storageKey, lockId, lockExpiresAtUtc) {
+    const currentStateJson = window.localStorage.getItem(storageKey);
+    if (!currentStateJson) {
+        return false;
+    }
+
+    let currentState;
+    try {
+        currentState = JSON.parse(currentStateJson);
+    } catch {
+        return false;
+    }
+
+    if (!currentState || !currentState.FirstSeenUtc || currentState.SentAtUtc) {
+        return false;
+    }
+
+    if (currentState.SendLockId && currentState.SendLockExpiresAtUtc) {
+        const existingLockExpiry = Date.parse(currentState.SendLockExpiresAtUtc);
+        if (!Number.isNaN(existingLockExpiry) && existingLockExpiry > Date.now()) {
+            return false;
+        }
+    }
+
+    currentState.SendLockId = lockId;
+    currentState.SendLockExpiresAtUtc = lockExpiresAtUtc;
+    window.localStorage.setItem(storageKey, JSON.stringify(currentState));
+    return true;
+};
+
 const b64toBlob = (b64Data, contentType = '', sliceSize = 512) => {
     const byteCharacters = atob(b64Data);
     const byteArrays = [];
