@@ -1,4 +1,16 @@
 # mForce365 Release Notes
+## VERSION 1.4.213 Beta
+
+- Project deliverables imported into meeting action items (`MForce.Components.Projects/ProjectChooser.razor.cs`, `MForce.Components.Projects.Tests/ProjectChooserTests.cs`, `docs/projects.md`, `docs/development.md`):
+  - Linking a meeting to a Planner-backed project now loads the project tasks before the meeting save notification runs, so imported deliverables persist with the meeting instead of being added only in-memory.
+  - Re-selecting a project replaces stale project-derived action items for the old/current linked project instead of duplicating them in the meeting action-item list.
+  - Empty project selections are ignored, and Planner import failures now keep the project link saved while surfacing an inline retry error.
+  - Imported project tasks now retain explicit project source context, and tests cover deduplication, replacement, and notify ordering.
+  - Closes #320.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
+
 ## VERSION 1.4.212 Beta
 
 - Marketing materials documentation (`docs/marketing-materials.md`, `docs/README.md`, `docs/development.md`):
