@@ -1,4 +1,14 @@
 # mForce365 Release Notes
+## VERSION 1.4.204 Beta
+
+- Sales deck documentation (`docs/sales-slide-deck-3-page.md`, `docs/README.md`, `docs/development.md`):
+  - Added a repository-backed 3-page sales deck outline for mForce365 so concise customer-facing presentation copy now lives in source control as maintainable Markdown.
+  - Documented how to keep future revisions aligned with the full 30-slide deck, the 15-slide cut-down deck, and shipped meeting, project, binder, and Microsoft 365 capabilities while keeping customer-specific details out of the repository.
+  - Closes #182.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipMauiWorkloadValidation=true`
+  - `dotnet test MForce365/MForce365.sln -p:SkipMauiWorkloadValidation=true`
+
 ## VERSION 1.4.203 Beta
 
 - Sales deck documentation (`docs/sales-slide-deck.md`, `docs/README.md`, `docs/development.md`):
