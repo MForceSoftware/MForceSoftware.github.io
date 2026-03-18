@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.214 Beta
+
+- CRMme partner surface (`MForce365.Web/Pages/Partners.razor`, `MForce365.Web/Pages/Settings.razor`, `MForce365.Web/Shared/MainLayout.razor`, `MForce365.Shared/AppConfiguration.cs`, `MForce365.Web.Tests/PartnersFeatureTests.cs`, `docs/partners.md`, `docs/README.md`, `docs/development.md`):
+  - Turned the dormant `Partners` feature into an opt-in web-app partner hub that introduces CRMme as a separately purchased companion service and makes it reachable from Settings and the main sidebar.
+  - Added a lightweight feature-toggle change notification so the sidebar updates immediately when the Partners toggle is changed instead of waiting for a navigation refresh.
+  - Documented the intentional scope guardrail that this release adds discovery and positioning only and does not enable automatic data sync between mForce365 and CRMme.
+  - Closes #211.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
+
 ## VERSION 1.4.213 Beta
 
 - Project deliverables imported into meeting action items (`MForce.Components.Projects/ProjectChooser.razor.cs`, `MForce.Components.Projects.Tests/ProjectChooserTests.cs`, `docs/projects.md`, `docs/development.md`):
