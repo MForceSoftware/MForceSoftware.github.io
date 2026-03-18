@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.210 Beta
+
+- Handwriting-friendly notes and action-item entry (`MForce.Components.Schedule/MeetingNotesCard.razor*`, `MForce.Components.ActionItems/AddActionItem.razor*`, `MForce365.Web/Components/AddActionItemDialog.razor`, `MForce365.Web/Pages/ActionItem.razor`, `MForce.Components.ActionItems/EditActionItem.razor`, `MForce365.Shared/HandwritingTextFormatter.cs`):
+  - Added explicit handwriting entry modes for the meeting notes rich editor and the legacy add-action-item rich editor so touch and pen users can write into native text fields and have the content converted back into the app's stored note/task format on save.
+  - Tightened the standalone and dialog-based action-item forms with native text-input attributes so device handwriting keyboards and pen panels are usable across title, client, and details fields without introducing browser-specific dependencies.
+  - Added shared conversion coverage plus markup regression checks to keep the handwriting path wired into the meeting notes and action-item editors.
+  - Closes #204.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
+
 ## VERSION 1.4.209 Beta
 
 - Sales data sheet documentation (`docs/sales-data-sheet.md`, `docs/README.md`, `docs/development.md`):
@@ -38,7 +49,6 @@
 - Validation:
   - `dotnet build MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
   - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
-
 ## VERSION 1.4.205 Beta
 
 - Sales battlecard documentation (`docs/sales-battlecard.md`, `docs/README.md`, `docs/development.md`):
