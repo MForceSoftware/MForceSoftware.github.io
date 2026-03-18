@@ -6,9 +6,15 @@
   - The welcome communication is sent once per signed-in user per browser and tracked in browser `localStorage` under the `mforce_welcome_email_v1:{user}` key so routine navigation does not resend it.
   - Uses Microsoft Graph `/me` profile data to address the message to the current signed-in account and gracefully skips repeated or failed sends without blocking the UI.
   - Closes #81.
+- Monthly updates communication surface (`MForce.Components/MonthlyUpdatesCallout.razor`, `MForce.Components/PreLoginHomePage.razor`, `MForce365.Web/Pages/Index.razor`):
+  - Added a shared monthly-updates panel that surfaces current release notes, latest news/blog links, video tutorials, and support guidance from official mForce channels.
+  - Rendered the panel on both the pre-login landing page and the authenticated dashboard so all users have a consistent place to check monthly product updates and tips.
+  - Closes #85.
 - Tests:
   - Added `MForce365.Web.Tests/WelcomeCommunicationTests.cs`.
+  - Added `MForce365.Web.Tests/MonthlyUpdatesCalloutTests.cs`.
 - Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror` (0 warnings, 0 errors)
   - `dotnet test MForce365/MForce365.sln` (all tests passing)
 
 ## VERSION 1.4.193 Beta
