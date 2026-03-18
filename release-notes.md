@@ -1,4 +1,19 @@
 # mForce365 Release Notes
+## VERSION 1.4.216 Beta
+
+- Advanced People Solution public page (`MForce365.Web/Pages/AdvancedPeopleSolution.razor`, `MForce365.Web/Shared/PublicLayout.razor`, `MForce.Components/PreLoginHomePage.razor`, `docs/advanced-people-solution.md`):
+  - Added a public route-backed solution brief at `/advanced-people-solution` and `/people-solution` so issue #324 is represented by a concrete site surface inside the existing Blazor WebAssembly app.
+  - Kept the page grounded in internal-first resourcing, Microsoft 365 alignment, and explicit HR/privacy guardrails instead of claiming a fully implemented people-search or third-party profile-sync product.
+  - Added public entry points from the public layout and pre-login landing page so the solution can be shared without creating a separate application shell.
+  - Closes #324.
+- Tests:
+  - Added `MForce365.Web.Tests/AdvancedPeopleSolutionPageTests.cs`.
+  - Added `MForce365.Web.Tests/PreLoginAdvancedPeopleLinkTests.cs`.
+  - Added `MForce365.Web.Tests/PublicLayoutNavigationTests.cs`.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipMauiWorkloadValidation=true -v minimal`
+
 ## VERSION 1.4.215 Beta
 
 - Product walkthrough video documentation (`docs/product-walkthrough-video.md`, `docs/README.md`, `docs/development.md`, `docs/training-video-plan.md`, `docs/social-media-strategy.md`):
