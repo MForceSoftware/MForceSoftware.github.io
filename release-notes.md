@@ -1,4 +1,16 @@
 # mForce365 Release Notes
+## VERSION 1.4.220 Beta
+
+- Meeting conferencing-link support (`MForce.Components.Schedule/AddAppointmentPage*`, `MForce365.Shared/MForceAppointment.cs`, `MForce365.Shared/MeetingJoinUrlHelper.cs`, `MForce.Components.Schedule/MainSchedule.razor`, `MForce.Components.Schedule/ScheduleCard.razor.cs`, `MForce365.Web/Pages/Meeting.razor.cs`, `MForce365.Shared.Tests/MeetingJoinUrlHelperTests.cs`, `MForce365.Shared.Tests/MForceAppointmentComposeBodyTests.cs`, `MForce.Components.Schedule.Tests/AddAppointmentMeetingMetadataTests.cs`, `MForce.Components.Schedule.Tests/SchedulerJoinButtonTests.cs`, `MForce365.Web.Tests/MeetingOnlineMeetingDetailsTests.cs`, `docs/meeting-description.md`, `docs/development.md`):
+  - Add Meeting now exposes an optional `Conferencing link` field for non-Teams meetings so facilitators can paste Zoom or other video-call URLs directly into the invite flow.
+  - Saved conferencing links are written into the invite body as structured `Join link` metadata, making the link durable in Microsoft Graph even when the meeting is not a native Teams online meeting.
+  - Scheduler cards and the Meeting page now resolve join links through a shared helper, so existing Join buttons work consistently for Graph-provided Teams links, saved custom links, and legacy Teams URLs already embedded in invite bodies.
+  - The Meeting page now labels common non-Teams providers such as Zoom, Google Meet, and Webex when a recognized join URL is present.
+  - Refs #338.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
+
 ## VERSION 1.4.219 Beta
 
 - Teams chat action-item draft capture (`MForce365.Web/Pages/ActionItem.razor`, `MForce365.Web/Pages/ActionItem.razor.cs`, `MForce365.Web.Tests/ActionItemShareTargetTests.cs`, `MForce365.Web.Tests/ActionItemSharedDraftDefaultsTests.cs`, `MForce365.Shared/mForce365Strings.resx`, `docs/development.md`):
@@ -36,7 +48,6 @@
 - Validation:
   - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipMauiWorkloadValidation=true -v minimal`
   - `dotnet test MForce365/MForce365.sln -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
-
 ## VERSION 1.4.216 Beta
 
 - Advanced People Solution public page (`MForce365.Web/Pages/AdvancedPeopleSolution.razor`, `MForce365.Web/Shared/PublicLayout.razor`, `MForce.Components/PreLoginHomePage.razor`, `docs/advanced-people-solution.md`):
