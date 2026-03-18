@@ -1,4 +1,17 @@
 # mForce365 Release Notes
+## VERSION 1.4.211 Beta
+
+- Meeting solutions comparison landing page (`MForce365.Web/Pages/Comparison.razor`, `MForce365.Web/Shared/PublicLayout.razor`, `MForce.Components/PreLoginHomePage.razor`, `docs/meeting-solutions-comparison.md`):
+  - Added a public comparison-focused landing page at `/compare` and `/meeting-solutions-comparison` so issue #232 is now represented by a concrete route-ready site surface inside the existing Blazor WebAssembly app.
+  - Used a dedicated public layout and a new pre-login teaser entry point so the comparison experience can be promoted behind `meetingsforteams.com` without creating a second application or duplicating public-site content.
+  - Grounded the copy in category-based alternatives and shipped mForce365 capabilities to keep the positioning strong without relying on unsupported vendor-by-vendor claims.
+  - Closes #232.
+- Tests:
+  - Added `MForce365.Web.Tests/ComparisonPageTests.cs`.
+  - Added `MForce365.Web.Tests/PreLoginComparisonLinkTests.cs`.
+- Validation:
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+
 ## VERSION 1.4.210 Beta
 
 - Handwriting-friendly notes and action-item entry (`MForce.Components.Schedule/MeetingNotesCard.razor*`, `MForce.Components.ActionItems/AddActionItem.razor*`, `MForce365.Web/Components/AddActionItemDialog.razor`, `MForce365.Web/Pages/ActionItem.razor`, `MForce.Components.ActionItems/EditActionItem.razor`, `MForce365.Shared/HandwritingTextFormatter.cs`):
