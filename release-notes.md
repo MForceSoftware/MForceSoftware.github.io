@@ -1,4 +1,18 @@
 # mForce365 Release Notes
+## VERSION 1.4.201 Beta
+
+- Decision vote counts (`MForce.Components/AddDecision.razor`, `MForce.Components/MeetingDecisionsCard.razor*`, `MForce365.Shared/MForceMeeting.cs`, `MForce365.Shared/MeetingBinder.cs`, `MForce365.Web/Pages/Meeting.razor.cs`):
+  - Added optional agreed/rejected vote counts to meeting decisions so formal outcomes can be recorded against each decision without changing existing meeting flows.
+  - Surfaced recorded vote tallies in the decision dialog, decision list, structured meeting notes, and meeting binder export when counts are present.
+  - Closes #176.
+- Tests:
+  - Updated `MForce365.Web.Tests/AddDecisionInputsExistTests.cs`.
+  - Updated `MForce365.Web.Tests/MeetingNotesFormattingTests.cs`.
+  - Updated `MForce365.Shared.Tests/MeetingBinderBuilderTests.cs`.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
+
 ## VERSION 1.4.200 Beta
 
 - Social media strategy documentation (`docs/social-media-strategy.md`, `docs/README.md`, `docs/development.md`):

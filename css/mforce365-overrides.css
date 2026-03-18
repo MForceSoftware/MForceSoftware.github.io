@@ -85,6 +85,12 @@
   gap: 0.35rem;
 }
 
+.meeting-dialog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: 0.7rem;
+}
+
 .meeting-dialog-inline-action {
   display: flex;
   justify-content: flex-start;
