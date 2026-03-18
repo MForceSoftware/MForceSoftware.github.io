@@ -1,4 +1,14 @@
 # mForce365 Release Notes
+## VERSION 1.4.208 Beta
+
+- Training video documentation (`docs/training-video-plan.md`, `docs/README.md`, `docs/development.md`, `docs/social-media-strategy.md`):
+  - Added a repository-native training-video plan that answers the original backlog question with a recommended set of tutorial types, launch count, target duration, reuse guidance, and update triggers tied to the current mForce365 product surface.
+  - Linked the plan from the documentation index, added developer guidance for keeping tutorial planning aligned with future workflow changes, and connected the existing social/tutorial documentation to the new source of truth.
+  - Closes #187.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
+
 ## VERSION 1.4.207 Beta
 
 - Sales deck documentation (`docs/sales-slide-deck-1-page.md`, `docs/README.md`, `docs/development.md`):
