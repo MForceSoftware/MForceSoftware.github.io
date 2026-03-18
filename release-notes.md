@@ -1,4 +1,18 @@
 # mForce365 Release Notes
+## VERSION 1.4.197 Beta
+
+- Trial-end summary communication for new users (`MForce365.Web/Services/WelcomeCommunicationService.cs`, `MForce365.Web.Tests/TrialEndCommunicationServiceTests.cs`, `MForce365.Web.Tests/WelcomeCommunicationTests.cs`, `docs/authentication.md`, `docs/development.md`):
+  - Extended the shared in-app trial communication service so authenticated users now receive the requested 29-day "trial expires tomorrow" email in the one-day window before the existing post-trial expiry follow-up.
+  - The day-29 message reuses the browser-local welcome marker as the current trial-start anchor, stores its own dedup marker under `mforce_trial_end_email_v1:{stable-user-key}`, and uses the same pending-marker protection as the welcome and post-trial flows.
+  - The email summarizes the last 30 days of the current user's Graph activity (meetings held, action items assigned, action items completed), links users to the in-app licensing page, and offers product-feedback options for the extra-trial path described in the issue.
+  - Closes #83.
+- Tests:
+  - Added `MForce365.Web.Tests/TrialEndCommunicationServiceTests.cs`.
+  - Expanded `MForce365.Web.Tests/WelcomeCommunicationTests.cs` to cover the new day-29 marker and subject alongside the existing welcome/post-trial communication coverage.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln /p:SkipInvalidConfigurations=true`
+  - `dotnet test MForce365/MForce365.sln /p:SkipInvalidConfigurations=true`
+
 ## VERSION 1.4.196 Beta
 
 - Release/go-live process documentation (`PUBLISH.md`, `docs/development.md`):
