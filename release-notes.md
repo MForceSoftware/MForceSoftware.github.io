@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.222 Beta
+
+- Outlook add-in scaffold for issue `#338` (`MForce365.Web/Pages/OutlookAddin.razor`, `MForce365.Web/Shared/OutlookAddinLayout.razor`, `outlook/mforce365-outlook-addin-manifest.xml`, `docs/outlook-addin.md`, `docs/development.md`):
+  - Added a dedicated `/outlook-addin` task-pane route inside the existing Blazor WebAssembly app so the repository now contains a concrete Outlook sidecar entry point instead of only issue discussion.
+  - Added an add-in-only Outlook manifest for appointment-organizer compose surfaces that opens the task pane against the current local web host at `https://localhost:5204/outlook-addin`.
+  - Kept the scaffold explicit about current limits: it provides the Outlook task-pane shell and sideloadable manifest, but it does not yet write directly into the active Outlook compose item.
+  - Refs #338.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
+
 ## VERSION 1.4.221 Beta
 
 - Jira reporting solution brief (`MForce365.Web/Pages/JiraReportingSolution.razor`, `MForce365.Web/Shared/PublicLayout.razor`, `MForce.Components/PreLoginHomePage.razor`, `docs/jira-reporting-solution.md`, `docs/README.md`, `docs/development.md`):
