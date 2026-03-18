@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.200 Beta
+
+- Social media strategy documentation (`docs/social-media-strategy.md`, `docs/README.md`, `docs/development.md`):
+  - Replaced the outdated 2021 issue attachment with a repo-native strategy document that records the current owned channels, content pillars, approval flow, reporting expectations, and paid-vs-organic guidance.
+  - Captured the public destinations already referenced in the product and docs, including the website, blog, tutorial page, support page, and social-footer links used by the in-app communication flow.
+  - Added developer guidance to keep the strategy document and `MForce365.Web/Services/WelcomeCommunicationService.cs` social links in sync.
+  - Closes #174.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln /p:SkipInvalidConfigurations=true`
+  - `dotnet test MForce365/MForce365.sln /p:SkipInvalidConfigurations=true`
+
 ## VERSION 1.4.199 Beta
 
 - Six-month "We've listened" communication (`MForce365.Web/App.razor`, `MForce365.Web/Shared/WeveListenedCommunicationBootstrapper.razor`, `MForce365.Web/Services/WeveListenedCommunicationService.cs`, `docs/authentication.md`, `docs/development.md`):
@@ -50,7 +61,6 @@
   - Closes #162.
 - Validation:
   - `dotnet test MForce365/MForce365.sln`
-
 ## VERSION 1.4.195 Beta
 
 - Post-trial follow-up communication (`MForce365.Web/Services/WelcomeCommunicationService.cs`, `docs/authentication.md`, `docs/development.md`):
