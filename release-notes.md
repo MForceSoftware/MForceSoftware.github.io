@@ -1,4 +1,18 @@
 # mForce365 Release Notes
+## VERSION 1.4.193 Beta
+
+- Licensing administration (`MForce365.Web/Pages/Licensing.razor`, `Licensing.razor.cs`, `MForce365.Web/Pages/Settings.razor`, `MForce365.Web/Shared/MainLayout.razor`, `MForce365.Shared/AppConfiguration.cs`):
+  - Replaced the dead `Organizations` placeholder with a functional `Licensing` admin workspace at `/admin/licensing`.
+  - Added per-organization licensing management for seat counts, billing admins, renewal dates, monthly spend, and usage visibility.
+  - Added per-user licensing management alongside invoice and billing-profile views so admins can review individual and organization-backed licensing in one place.
+  - Added a Settings entry point for the licensing workspace and mapped `/admin/licensing` into the existing Settings navigation state.
+  - Licensing workspace changes persist in browser `localStorage` under `mforce_licensing_admin_v1`, matching the current client-side configuration approach used elsewhere in the app.
+  - Closes #66.
+- Tests:
+  - Added `MForce365.Web.Tests/LicensingPageTests.cs`.
+- Validation:
+  - `dotnet test MForce365/MForce365.sln` (all tests passing)
+
 ## VERSION 1.4.192 Beta
 
 - 2026 release Group 12 task, meeting, and registration fixes:
