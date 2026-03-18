@@ -1,4 +1,19 @@
 # mForce365 Release Notes
+## VERSION 1.4.221 Beta
+
+- Jira reporting solution brief (`MForce365.Web/Pages/JiraReportingSolution.razor`, `MForce365.Web/Shared/PublicLayout.razor`, `MForce.Components/PreLoginHomePage.razor`, `docs/jira-reporting-solution.md`, `docs/README.md`, `docs/development.md`):
+  - Added a public route-backed Jira reporting solution brief at `/jira-reporting` and `/jira-enhancement` so issue #371 is represented by a concrete web surface inside the existing Blazor WebAssembly app.
+  - Framed the request around executive summaries, program health checks, six-month sprint outlooks, and meeting-ready follow-up while explicitly avoiding unsupported claims about a shipped Jira Marketplace add-on or live Atlassian sync.
+  - Added public entry points from the landing page and public layout so the brief can be shared without creating a second application shell.
+  - Closes #371.
+- Tests:
+  - Added `MForce365.Web.Tests/JiraReportingSolutionPageTests.cs`.
+  - Added `MForce365.Web.Tests/PreLoginJiraReportingLinkTests.cs`.
+  - Added `MForce365.Web.Tests/JiraReportingDocumentationTests.cs`.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
+
 ## VERSION 1.4.220 Beta
 
 - Meeting conferencing-link support (`MForce.Components.Schedule/AddAppointmentPage*`, `MForce365.Shared/MForceAppointment.cs`, `MForce365.Shared/MeetingJoinUrlHelper.cs`, `MForce.Components.Schedule/MainSchedule.razor`, `MForce.Components.Schedule/ScheduleCard.razor.cs`, `MForce365.Web/Pages/Meeting.razor.cs`, `MForce365.Shared.Tests/MeetingJoinUrlHelperTests.cs`, `MForce365.Shared.Tests/MForceAppointmentComposeBodyTests.cs`, `MForce.Components.Schedule.Tests/AddAppointmentMeetingMetadataTests.cs`, `MForce.Components.Schedule.Tests/SchedulerJoinButtonTests.cs`, `MForce365.Web.Tests/MeetingOnlineMeetingDetailsTests.cs`, `docs/meeting-description.md`, `docs/development.md`):

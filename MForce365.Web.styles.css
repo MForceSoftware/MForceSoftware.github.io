@@ -2,7 +2,7 @@
 @import '_content/MForce.Components.Files/MForce.Components.Files.0l3l6c536l.bundle.scp.css';
 @import '_content/MForce.Components.Projects/MForce.Components.Projects.ksvyqitafn.bundle.scp.css';
 @import '_content/MForce.Components.Schedule/MForce.Components.Schedule.anqwa4jlh3.bundle.scp.css';
-@import '_content/MForce.Components/MForce.Components.bb80piutwl.bundle.scp.css';
+@import '_content/MForce.Components/MForce.Components.0c7afpxcdm.bundle.scp.css';
 @import '_content/Microsoft.AspNetCore.Components.QuickGrid/Microsoft.AspNetCore.Components.QuickGrid.boiwgh0w5b.bundle.scp.css';
 
 /* /Pages/AdvancedPeopleSolution.razor.rz.scp.css */
@@ -688,6 +688,329 @@
 }
 /* /Pages/Index.razor.rz.scp.css */
 
+/* /Pages/JiraReportingSolution.razor.rz.scp.css */
+.jira-solution-shell[b-rvko163ggj] {
+    width: min(1120px, 100%);
+    margin: 0 auto;
+    padding-bottom: 2.5rem;
+    color: #0f172a;
+}
+
+.jira-solution-hero[b-rvko163ggj],
+.jira-solution-section[b-rvko163ggj],
+.jira-solution-cta[b-rvko163ggj],
+.jira-solution-note[b-rvko163ggj] {
+    border: 1px solid rgba(148, 163, 184, 0.26);
+    border-radius: 1.7rem;
+    background: rgba(255, 255, 255, 0.84);
+    box-shadow: 0 20px 44px rgba(15, 23, 42, 0.1);
+    backdrop-filter: blur(16px);
+}
+
+.jira-solution-hero[b-rvko163ggj] {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    gap: 1.4rem;
+    grid-template-columns: minmax(0, 1.45fr) minmax(18rem, 0.95fr);
+    padding: 2rem;
+}
+
+.jira-solution-hero[b-rvko163ggj]::after {
+    content: "";
+    position: absolute;
+    inset: auto -4rem -5rem auto;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 9999px;
+    background: radial-gradient(circle, rgba(245, 158, 11, 0.26), rgba(245, 158, 11, 0));
+    pointer-events: none;
+}
+
+.jira-solution-kicker[b-rvko163ggj],
+.jira-solution-section-eyebrow[b-rvko163ggj],
+.jira-solution-panel-label[b-rvko163ggj] {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 0 0 0.65rem;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+}
+
+.jira-solution-kicker[b-rvko163ggj],
+.jira-solution-section-eyebrow[b-rvko163ggj] {
+    color: #b45309;
+}
+
+.jira-solution-hero h1[b-rvko163ggj],
+.jira-solution-section h2[b-rvko163ggj],
+.jira-solution-cta h2[b-rvko163ggj] {
+    margin: 0;
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+    font-weight: 900;
+}
+
+.jira-solution-hero h1[b-rvko163ggj] {
+    max-width: 11ch;
+    font-size: clamp(2.35rem, 4vw, 4.3rem);
+}
+
+.jira-solution-lead[b-rvko163ggj],
+.jira-solution-card p[b-rvko163ggj],
+.jira-solution-proof p[b-rvko163ggj],
+.jira-solution-cta p[b-rvko163ggj],
+.jira-solution-note p[b-rvko163ggj] {
+    margin: 0;
+    color: #475569;
+    line-height: 1.65;
+    font-size: 1rem;
+}
+
+.jira-solution-badges[b-rvko163ggj] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: 1.25rem;
+}
+
+.jira-solution-badges span[b-rvko163ggj] {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.58rem 0.9rem;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, rgba(255, 247, 237, 0.95), rgba(255, 251, 235, 0.84));
+    border: 1px solid rgba(251, 191, 36, 0.38);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.jira-solution-badges :deep(.rz-icon)[b-rvko163ggj] {
+    color: #d97706;
+    font-size: 1rem;
+}
+
+.jira-solution-actions[b-rvko163ggj] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1.45rem;
+}
+
+.jira-solution-action[b-rvko163ggj] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3rem;
+    padding: 0.75rem 1.2rem;
+    border-radius: 9999px;
+    font-size: 0.95rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+.jira-solution-action:hover[b-rvko163ggj] {
+    transform: translateY(-1px);
+}
+
+.jira-solution-action--primary[b-rvko163ggj] {
+    background: linear-gradient(135deg, #ea580c, #0284c7);
+    color: #ffffff;
+    box-shadow: 0 14px 28px rgba(234, 88, 12, 0.2);
+}
+
+.jira-solution-action--secondary[b-rvko163ggj] {
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    background: rgba(255, 255, 255, 0.74);
+    color: #0f172a;
+}
+
+.jira-solution-hero-panel[b-rvko163ggj] {
+    position: relative;
+    align-self: stretch;
+    padding: 1.35rem;
+    border-radius: 1.35rem;
+    background: linear-gradient(160deg, #111827, #0c4a6e 65%, #f59e0b 135%);
+    color: #ffffff;
+    box-shadow: inset 0 0 0 1px rgba(251, 191, 36, 0.14);
+}
+
+.jira-solution-panel-label[b-rvko163ggj] {
+    color: #fde68a;
+}
+
+.jira-solution-hero-panel h2[b-rvko163ggj] {
+    margin: 0 0 1rem;
+    font-size: 1.35rem;
+    line-height: 1.18;
+}
+
+.jira-solution-panel-list[b-rvko163ggj] {
+    margin: 0;
+    padding-left: 1.2rem;
+    display: grid;
+    gap: 0.75rem;
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.jira-solution-note[b-rvko163ggj] {
+    margin-top: 1rem;
+    padding: 1rem 1.15rem;
+}
+
+.jira-solution-section[b-rvko163ggj],
+.jira-solution-cta[b-rvko163ggj] {
+    margin-top: 1rem;
+    padding: 1.5rem;
+}
+
+.jira-solution-section-head[b-rvko163ggj] {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-bottom: 1.2rem;
+}
+
+.jira-solution-section h2[b-rvko163ggj],
+.jira-solution-cta h2[b-rvko163ggj] {
+    font-size: clamp(1.6rem, 2.6vw, 2.4rem);
+}
+
+.jira-solution-outcome-grid[b-rvko163ggj],
+.jira-solution-card-grid[b-rvko163ggj],
+.jira-solution-proof-grid[b-rvko163ggj] {
+    display: grid;
+    gap: 1rem;
+}
+
+.jira-solution-outcome-grid[b-rvko163ggj] {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.jira-solution-card-grid[b-rvko163ggj] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.jira-solution-card[b-rvko163ggj] {
+    padding: 1.2rem;
+    border: 1px solid rgba(148, 163, 184, 0.24);
+    border-radius: 1.3rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 250, 252, 0.9));
+}
+
+.jira-solution-card--accent[b-rvko163ggj] {
+    background: linear-gradient(160deg, rgba(255, 247, 237, 0.96), rgba(224, 242, 254, 0.78));
+    border-color: rgba(251, 191, 36, 0.42);
+}
+
+.jira-solution-card h3[b-rvko163ggj],
+.jira-solution-proof h3[b-rvko163ggj] {
+    margin: 0 0 0.55rem;
+    font-size: 1.25rem;
+    line-height: 1.15;
+    font-weight: 800;
+}
+
+.jira-solution-table-wrap[b-rvko163ggj] {
+    overflow-x: auto;
+    border-radius: 1.2rem;
+    border: 1px solid rgba(148, 163, 184, 0.24);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.jira-solution-table[b-rvko163ggj] {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 760px;
+}
+
+.jira-solution-table th[b-rvko163ggj],
+.jira-solution-table td[b-rvko163ggj] {
+    padding: 0.9rem 1rem;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+    text-align: left;
+    vertical-align: top;
+}
+
+.jira-solution-table thead th[b-rvko163ggj] {
+    background: rgba(255, 247, 237, 0.92);
+    color: #0f172a;
+    font-size: 0.88rem;
+    font-weight: 800;
+}
+
+.jira-solution-table tbody th[b-rvko163ggj] {
+    width: 24%;
+    color: #0f172a;
+    font-weight: 700;
+    background: rgba(248, 250, 252, 0.72);
+}
+
+.jira-solution-table td[b-rvko163ggj] {
+    color: #334155;
+    font-weight: 600;
+}
+
+.jira-solution-proof-grid[b-rvko163ggj] {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.jira-solution-proof-grid article[b-rvko163ggj] {
+    padding: 1.1rem;
+    border-radius: 1.2rem;
+    background: linear-gradient(160deg, rgba(248, 250, 252, 0.95), rgba(255, 255, 255, 0.9));
+    border: 1px solid rgba(148, 163, 184, 0.22);
+}
+
+.jira-solution-cta[b-rvko163ggj] {
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: minmax(0, 1.3fr) auto;
+    align-items: center;
+}
+
+.jira-solution-actions--stacked[b-rvko163ggj] {
+    margin-top: 0;
+    justify-content: flex-end;
+}
+
+@media (max-width: 960px) {
+    .jira-solution-hero[b-rvko163ggj],
+    .jira-solution-outcome-grid[b-rvko163ggj],
+    .jira-solution-card-grid[b-rvko163ggj],
+    .jira-solution-proof-grid[b-rvko163ggj],
+    .jira-solution-cta[b-rvko163ggj] {
+        grid-template-columns: 1fr;
+    }
+
+    .jira-solution-hero h1[b-rvko163ggj] {
+        max-width: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .jira-solution-hero[b-rvko163ggj],
+    .jira-solution-section[b-rvko163ggj],
+    .jira-solution-cta[b-rvko163ggj] {
+        padding: 1.15rem;
+        border-radius: 1.25rem;
+    }
+
+    .jira-solution-actions--stacked[b-rvko163ggj] {
+        justify-content: stretch;
+    }
+
+    .jira-solution-actions--stacked .jira-solution-action[b-rvko163ggj],
+    .jira-solution-actions .jira-solution-action[b-rvko163ggj] {
+        width: 100%;
+    }
+}
 /* /Pages/Meeting.razor.rz.scp.css */
 .meeting-page[b-0snrdmfufu] {
     --meeting-gap: 0.62rem;
