@@ -1,4 +1,14 @@
 # mForce365 Release Notes
+## VERSION 1.4.196 Beta
+
+- Release/go-live process documentation (`PUBLISH.md`, `docs/development.md`):
+  - Added advisory-board planning guidance for go-live readiness.
+  - Documented that candidate names, contact details, and outreach notes must stay outside the repository in private planning tooling.
+  - Captured the nomination workflow at a process level so the issue is represented in repo documentation without introducing personal data into source control.
+  - Closes #162.
+- Validation:
+  - `dotnet test MForce365/MForce365.sln`
+
 ## VERSION 1.4.195 Beta
 
 - Post-trial follow-up communication (`MForce365.Web/Services/WelcomeCommunicationService.cs`, `docs/authentication.md`, `docs/development.md`):
