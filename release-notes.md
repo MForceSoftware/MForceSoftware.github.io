@@ -1,4 +1,14 @@
 # mForce365 Release Notes
+## VERSION 1.4.206 Beta
+
+- Reseller pack documentation (`docs/reseller-pack.md`, `docs/README.md`, `docs/development.md`):
+  - Replaced the stale reseller/channel placeholder issue with a repository-native reseller pack guide that maps each requested artifact to maintained documentation or an explicit off-repo source of truth.
+  - Added public-safe reseller benefits, partner onboarding/admin prerequisites, and proposal/RFP source-document guidance while keeping legal, commercial, and customer-specific material out of source control.
+  - Closes #192.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
+
 ## VERSION 1.4.205 Beta
 
 - Sales battlecard documentation (`docs/sales-battlecard.md`, `docs/README.md`, `docs/development.md`):
