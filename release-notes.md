@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.225 Beta
+
+- Outlook add-in meeting form for issue `#338` (`MForce.Components.Schedule/AddAppointmentPage.razor.cs`, `MForce365.Web/Pages/OutlookAddinCreateMeeting.razor`, `MForce365.Web/Pages/OutlookAddin.razor`, `MForce365.Web.Tests/OutlookAddinCreateMeetingPageTests.cs`, `MForce365.Web/Shared/OutlookAddinLayout.razor`, `outlook/mforce365-outlook-addin-manifest.xml`, `docs/outlook-addin.md`, `docs/development.md`):
+  - The Outlook add-in manifest now opens a dedicated standalone meeting page inside the task pane instead of only landing on the scaffold overview route.
+  - The add-in now hosts the existing Add Meeting workflow directly, using a standalone page mode that avoids dialog-close semantics and reports save/cancel events back to the page.
+  - Saving from the add-in still creates a fresh Microsoft Graph event rather than mutating the active Outlook compose draft, and the page now states that limitation explicitly in the UI.
+  - Refs #338.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
+
 ## VERSION 1.4.224 Beta
 
 - Registration licensing choices (`MForce365.Web/Pages/Authentication.razor`, `MForce365.Web/Pages/Authentication.razor.cs`, `MForce365.Web.Tests/AuthenticationPageTests.cs`, `docs/authentication.md`, `docs/development.md`):
