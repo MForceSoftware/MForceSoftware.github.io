@@ -1,4 +1,14 @@
 # mForce365 Release Notes
+## VERSION 1.4.207 Beta
+
+- Sales deck documentation (`docs/sales-slide-deck-1-page.md`, `docs/README.md`, `docs/development.md`):
+  - Added a repository-backed one-page sales deck outline for mForce365 so the issue now has a concise customer-facing leave-behind in source control despite the issue itself containing no detailed attachment or brief.
+  - Documented how the one-page version relates to the existing 3-page, 15-slide, and 30-slide deck variants so future messaging updates stay aligned with shipped meeting, project, binder, and Microsoft 365 capabilities.
+  - Closes #183.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
+
 ## VERSION 1.4.206 Beta
 
 - Reseller pack documentation (`docs/reseller-pack.md`, `docs/README.md`, `docs/development.md`):
@@ -39,6 +49,16 @@
   - `dotnet build MForce365/MForce365.sln /p:SkipInvalidConfigurations=true`
   - `dotnet test MForce365/MForce365.sln /p:SkipInvalidConfigurations=true`
 
+## VERSION 1.4.202 Beta
+
+- Sales deck documentation (`docs/sales-slide-deck-15.md`, `docs/README.md`, `docs/development.md`):
+  - Added a repository-backed 15-slide cut-down sales deck outline for mForce365 so concise customer-facing presentation copy now lives in source control instead of being implied by the sparse issue text.
+  - Documented how to keep future deck revisions aligned with shipped meeting, project, binder, and Microsoft 365 capabilities while keeping customer-specific data out of the repository.
+  - Closes #181.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln /p:SkipInvalidConfigurations=true`
+  - `dotnet test MForce365/MForce365.sln /p:SkipInvalidConfigurations=true`
+
 ## VERSION 1.4.201 Beta
 
 - Decision vote counts (`MForce.Components/AddDecision.razor`, `MForce.Components/MeetingDecisionsCard.razor*`, `MForce365.Shared/MForceMeeting.cs`, `MForce365.Shared/MeetingBinder.cs`, `MForce365.Web/Pages/Meeting.razor.cs`):
@@ -52,16 +72,6 @@
 - Validation:
   - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipMauiWorkloadValidation=true -v minimal`
   - `dotnet test MForce365/MForce365.sln -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
-
-## VERSION 1.4.202 Beta
-
-- Sales deck documentation (`docs/sales-slide-deck-15.md`, `docs/README.md`, `docs/development.md`):
-  - Added a repository-backed 15-slide cut-down sales deck outline for mForce365 so concise customer-facing presentation copy now lives in source control instead of being implied by the sparse issue text.
-  - Documented how to keep future deck revisions aligned with shipped meeting, project, binder, and Microsoft 365 capabilities while keeping customer-specific data out of the repository.
-  - Closes #181.
-- Validation:
-  - `dotnet build MForce365/MForce365.sln /p:SkipInvalidConfigurations=true`
-  - `dotnet test MForce365/MForce365.sln /p:SkipInvalidConfigurations=true`
 
 ## VERSION 1.4.200 Beta
 
