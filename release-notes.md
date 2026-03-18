@@ -1,4 +1,14 @@
 # mForce365 Release Notes
+## VERSION 1.4.212 Beta
+
+- Marketing materials documentation (`docs/marketing-materials.md`, `docs/README.md`, `docs/development.md`):
+  - Added a repository-backed marketing-materials guide that translates the sticker, business-card, and USB leave-behind idea from issue #257 into maintained collateral guidance.
+  - Mapped each format to the existing repo-backed sales and partner documents, documented audience-specific USB contents, and kept print-vendor assets, pricing, contact lists, and distributable binaries out of source control.
+  - Closes #257.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
+
 ## VERSION 1.4.211 Beta
 
 - Meeting solutions comparison landing page (`MForce365.Web/Pages/Comparison.razor`, `MForce365.Web/Shared/PublicLayout.razor`, `MForce.Components/PreLoginHomePage.razor`, `docs/meeting-solutions-comparison.md`):
