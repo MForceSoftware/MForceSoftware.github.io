@@ -1,4 +1,14 @@
 # mForce365 Release Notes
+## VERSION 1.4.205 Beta
+
+- Sales battlecard documentation (`docs/sales-battlecard.md`, `docs/README.md`, `docs/development.md`):
+  - Added a repository-native sales battlecard that summarizes buyer fit, pain signals, product differentiators, qualification questions, objection handling, and a recommended demo path for the current mForce365 feature set.
+  - Linked the battlecard from the documentation index and added developer guidance for keeping sales collateral public-safe and aligned with future product changes.
+  - Closes #184.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
+
 ## VERSION 1.4.204 Beta
 
 - Sales deck documentation (`docs/sales-slide-deck-3-page.md`, `docs/README.md`, `docs/development.md`):
