@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.219 Beta
+
+- Teams chat action-item draft capture (`MForce365.Web/Pages/ActionItem.razor`, `MForce365.Web/Pages/ActionItem.razor.cs`, `MForce365.Web.Tests/ActionItemShareTargetTests.cs`, `MForce365.Web.Tests/ActionItemSharedDraftDefaultsTests.cs`, `MForce365.Shared/mForce365Strings.resx`, `docs/development.md`):
+  - Shared action-item drafts now turn the first non-empty shared text line into the task title when a browser or PWA share only supplies message text, while preserving the remaining message body formatting so copied Teams chat snippets stay readable.
+  - The standalone action-item create page now shows a localized review banner when a draft arrived from Teams or another app so users know to confirm the details and due date before saving.
+  - Added unit tests for shared-draft parsing, preserved paragraph spacing, and the localized review banner so the Teams-chat capture flow stays covered.
+  - Closes #355.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
+
 ## VERSION 1.4.218 Beta
 
 - Project review meeting capture sidecar (`MForce365.Web/Pages/Project.razor*`, `MForce.Components.ActionItems/MeetingParkingLot*`, `MForce.Components.Projects/MeetingProjectCard.razor.cs`, `MForce365.Shared/mForce365Strings.resx`, `docs/development.md`, `docs/projects.md`):
@@ -25,6 +36,7 @@
 - Validation:
   - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipMauiWorkloadValidation=true -v minimal`
   - `dotnet test MForce365/MForce365.sln -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
+
 ## VERSION 1.4.216 Beta
 
 - Advanced People Solution public page (`MForce365.Web/Pages/AdvancedPeopleSolution.razor`, `MForce365.Web/Shared/PublicLayout.razor`, `MForce.Components/PreLoginHomePage.razor`, `docs/advanced-people-solution.md`):
@@ -39,7 +51,6 @@
 - Validation:
   - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipMauiWorkloadValidation=true -v minimal`
   - `dotnet test MForce365/MForce365.sln -p:SkipMauiWorkloadValidation=true -v minimal`
-
 ## VERSION 1.4.215 Beta
 
 - Product walkthrough video documentation (`docs/product-walkthrough-video.md`, `docs/README.md`, `docs/development.md`, `docs/training-video-plan.md`, `docs/social-media-strategy.md`):
