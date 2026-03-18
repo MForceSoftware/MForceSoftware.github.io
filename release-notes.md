@@ -1,4 +1,16 @@
 # mForce365 Release Notes
+## VERSION 1.4.194 Beta
+
+- Welcome communication for new users (`MForce365.Web/App.razor`, `MForce365.Web/Shared/WelcomeCommunicationBootstrapper.razor`, `MForce365.Web/Services/WelcomeCommunicationService.cs`, `docs/authentication.md`, `docs/development.md`):
+  - Added a first-run welcome email for authenticated users using the existing Microsoft Graph delegated `Mail.Send` flow instead of introducing a separate Mailchimp integration in the WebAssembly client.
+  - The welcome communication is sent once per signed-in user per browser and tracked in browser `localStorage` under the `mforce_welcome_email_v1:{user}` key so routine navigation does not resend it.
+  - Uses Microsoft Graph `/me` profile data to address the message to the current signed-in account and gracefully skips repeated or failed sends without blocking the UI.
+  - Closes #81.
+- Tests:
+  - Added `MForce365.Web.Tests/WelcomeCommunicationTests.cs`.
+- Validation:
+  - `dotnet test MForce365/MForce365.sln` (all tests passing)
+
 ## VERSION 1.4.193 Beta
 
 - Licensing administration (`MForce365.Web/Pages/Licensing.razor`, `Licensing.razor.cs`, `MForce365.Web/Pages/Settings.razor`, `MForce365.Web/Shared/MainLayout.razor`, `MForce365.Shared/AppConfiguration.cs`):
