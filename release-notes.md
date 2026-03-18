@@ -1,4 +1,12 @@
 # mForce365 Release Notes
+## VERSION 1.4.223 Beta
+
+- Personal-use appointment categories (`MForce.Components.Schedule/AddAppointmentPage.razor`, `MForce.Components.Schedule/AddAppointmentPage.razor.cs`, `MForce.Components.Schedule.Tests/AddAppointmentMeetingMetadataTests.cs`, `MForce.Components.Schedule.Tests/AddAppointmentMeetingTypeCategoryTests.cs`, `docs/development.md`):
+  - The Add Meeting dialog now labels its taxonomy as `Meeting or appointment` so the same scheduler flow works for personal commitments as well as formal meetings.
+  - Added personal/lifestyle appointment options such as personal appointments, after-school or after-work activities, weekend plans, and wellbeing appointments to the existing category/type dropdowns.
+  - Added a task-focused category for personal productivity and action-item planning sessions without changing the existing event storage model or client-specific metadata behavior.
+  - Closes #420.
+
 ## VERSION 1.4.222 Beta
 
 - Outlook add-in scaffold for issue `#338` (`MForce365.Web/Pages/OutlookAddin.razor`, `MForce365.Web/Shared/OutlookAddinLayout.razor`, `outlook/mforce365-outlook-addin-manifest.xml`, `docs/outlook-addin.md`, `docs/development.md`):
@@ -24,7 +32,6 @@
 - Validation:
   - `dotnet build MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
   - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
-
 ## VERSION 1.4.220 Beta
 
 - Meeting conferencing-link support (`MForce.Components.Schedule/AddAppointmentPage*`, `MForce365.Shared/MForceAppointment.cs`, `MForce365.Shared/MeetingJoinUrlHelper.cs`, `MForce.Components.Schedule/MainSchedule.razor`, `MForce.Components.Schedule/ScheduleCard.razor.cs`, `MForce365.Web/Pages/Meeting.razor.cs`, `MForce365.Shared.Tests/MeetingJoinUrlHelperTests.cs`, `MForce365.Shared.Tests/MForceAppointmentComposeBodyTests.cs`, `MForce.Components.Schedule.Tests/AddAppointmentMeetingMetadataTests.cs`, `MForce.Components.Schedule.Tests/SchedulerJoinButtonTests.cs`, `MForce365.Web.Tests/MeetingOnlineMeetingDetailsTests.cs`, `docs/meeting-description.md`, `docs/development.md`):

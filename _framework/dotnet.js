@@ -4,7 +4,7 @@
 var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,0,0,1,4,1,96,0,0,3,2,1,0,10,8,1,6,0,6,64,25,11,11])),o=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,0,0,1,5,1,96,0,1,123,3,2,1,0,10,15,1,13,0,65,1,253,15,65,2,253,15,253,128,2,11])),n=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,0,0,1,5,1,96,0,1,123,3,2,1,0,10,10,1,8,0,65,0,253,15,253,98,11])),r=Symbol.for("wasm promise_control");function i(e,t){let o=null;const n=new Promise((function(n,r){o={isDone:!1,promise:null,resolve:t=>{o.isDone||(o.isDone=!0,n(t),e&&e())},reject:e=>{o.isDone||(o.isDone=!0,r(e),t&&t())}}}));o.promise=n;const i=n;return i[r]=o,{promise:i,promise_control:o}}function s(e){return e[r]}function a(e){e&&function(e){return void 0!==e[r]}(e)||Be(!1,"Promise is not controllable")}const l="__mono_message__",c=["debug","log","trace","warn","info","error"],d="MONO_WASM: ";let u,f,m,g,p,h;function w(e){g=e}function b(e){if(Pe.diagnosticTracing){const t="function"==typeof e?e():e;console.debug(d+t)}}function y(e,...t){console.info(d+e,...t)}function v(e,...t){console.info(e,...t)}function E(e,...t){console.warn(d+e,...t)}function _(e,...t){if(t&&t.length>0&&t[0]&&"object"==typeof t[0]){if(t[0].silent)return;if(t[0].toString)return void console.error(d+e,t[0].toString())}console.error(d+e,...t)}function x(e,t,o){return function(...n){try{let r=n[0];if(void 0===r)r="undefined";else if(null===r)r="null";else if("function"==typeof r)r=r.toString();else if("string"!=typeof r)try{r=JSON.stringify(r)}catch(e){r=r.toString()}t(o?JSON.stringify({method:e,payload:r,arguments:n.slice(1)}):[e+r,...n.slice(1)])}catch(e){m.error(`proxyConsole failed: ${e}`)}}}function j(e,t,o){f=t,g=e,m={...t};const n=`${o}/console`.replace("https://","wss://").replace("http://","ws://");u=new WebSocket(n),u.addEventListener("error",A),u.addEventListener("close",S),function(){for(const e of c)f[e]=x(`console.${e}`,T,!0)}()}function R(e){let t=30;const o=()=>{u?0==u.bufferedAmount||0==t?(e&&v(e),function(){for(const e of c)f[e]=x(`console.${e}`,m.log,!1)}(),u.removeEventListener("error",A),u.removeEventListener("close",S),u.close(1e3,e),u=void 0):(t--,globalThis.setTimeout(o,100)):e&&m&&m.log(e)};o()}function T(e){u&&u.readyState===WebSocket.OPEN?u.send(e):m.log(e)}function A(e){m.error(`[${g}] proxy console websocket error: ${e}`,e)}function S(e){m.debug(`[${g}] proxy console websocket closed: ${e}`,e)}function D(){Pe.preferredIcuAsset=O(Pe.config);let e="invariant"==Pe.config.globalizationMode;if(!e)if(Pe.preferredIcuAsset)Pe.diagnosticTracing&&b("ICU data archive(s) available, disabling invariant mode");else{if("custom"===Pe.config.globalizationMode||"all"===Pe.config.globalizationMode||"sharded"===Pe.config.globalizationMode){const e="invariant globalization mode is inactive and no ICU data archives are available";throw _(`ERROR: ${e}`),new Error(e)}Pe.diagnosticTracing&&b("ICU data archive(s) not available, using invariant globalization mode"),e=!0,Pe.preferredIcuAsset=null}const t="DOTNET_SYSTEM_GLOBALIZATION_INVARIANT",o=Pe.config.environmentVariables;if(void 0===o[t]&&e&&(o[t]="1"),void 0===o.TZ)try{const e=Intl.DateTimeFormat().resolvedOptions().timeZone||null;e&&(o.TZ=e)}catch(e){y("failed to detect timezone, will fallback to UTC")}}function O(e){var t;if((null===(t=e.resources)||void 0===t?void 0:t.icu)&&"invariant"!=e.globalizationMode){const t=e.applicationCulture||(ke?globalThis.navigator&&globalThis.navigator.languages&&globalThis.navigator.languages[0]:Intl.DateTimeFormat().resolvedOptions().locale),o=e.resources.icu;let n=null;if("custom"===e.globalizationMode){if(o.length>=1)return o[0].name}else t&&"all"!==e.globalizationMode?"sharded"===e.globalizationMode&&(n=function(e){const t=e.split("-")[0];return"en"===t||["fr","fr-FR","it","it-IT","de","de-DE","es","es-ES"].includes(e)?"icudt_EFIGS.dat":["zh","ko","ja"].includes(t)?"icudt_CJK.dat":"icudt_no_CJK.dat"}(t)):n="icudt.dat";if(n)for(let e=0;e<o.length;e++){const t=o[e];if(t.virtualPath===n)return t.name}}return e.globalizationMode="invariant",null}(new Date).valueOf();const C=class{constructor(e){this.url=e}toString(){return this.url}};async function k(e,t){try{const o="function"==typeof globalThis.fetch;if(Se){const n=e.startsWith("file://");if(!n&&o)return globalThis.fetch(e,t||{credentials:"same-origin"});p||(h=Ne.require("url"),p=Ne.require("fs")),n&&(e=h.fileURLToPath(e));const r=await p.promises.readFile(e);return{ok:!0,headers:{length:0,get:()=>null},url:e,arrayBuffer:()=>r,json:()=>JSON.parse(r),text:()=>{throw new Error("NotImplementedException")}}}if(o)return globalThis.fetch(e,t||{credentials:"same-origin"});if("function"==typeof read)return{ok:!0,url:e,headers:{length:0,get:()=>null},arrayBuffer:()=>new Uint8Array(read(e,"binary")),json:()=>JSON.parse(read(e,"utf8")),text:()=>read(e,"utf8")}}catch(t){return{ok:!1,url:e,status:500,headers:{length:0,get:()=>null},statusText:"ERR28: "+t,arrayBuffer:()=>{throw t},json:()=>{throw t},text:()=>{throw t}}}throw new Error("No fetch implementation available")}function I(e){return"string"!=typeof e&&Be(!1,"url must be a string"),!M(e)&&0!==e.indexOf("./")&&0!==e.indexOf("../")&&globalThis.URL&&globalThis.document&&globalThis.document.baseURI&&(e=new URL(e,globalThis.document.baseURI).toString()),e}const U=/^[a-zA-Z][a-zA-Z\d+\-.]*?:\/\//,P=/[a-zA-Z]:[\\/]/;function M(e){return Se||Ie?e.startsWith("/")||e.startsWith("\\")||-1!==e.indexOf("///")||P.test(e):U.test(e)}let L,N=0;const $=[],z=[],W=new Map,F={"js-module-threads":!0,"js-module-runtime":!0,"js-module-dotnet":!0,"js-module-native":!0,"js-module-diagnostics":!0},B={...F,"js-module-library-initializer":!0},V={...F,dotnetwasm:!0,heap:!0,manifest:!0},q={...B,manifest:!0},H={...B,dotnetwasm:!0},J={dotnetwasm:!0,symbols:!0},Z={...B,dotnetwasm:!0,symbols:!0},Q={symbols:!0};function G(e){return!("icu"==e.behavior&&e.name!=Pe.preferredIcuAsset)}function K(e,t,o){null!=t||(t=[]),Be(1==t.length,`Expect to have one ${o} asset in resources`);const n=t[0];return n.behavior=o,X(n),e.push(n),n}function X(e){V[e.behavior]&&W.set(e.behavior,e)}function Y(e){Be(V[e],`Unknown single asset behavior ${e}`);const t=W.get(e);if(t&&!t.resolvedUrl)if(t.resolvedUrl=Pe.locateFile(t.name),F[t.behavior]){const e=ge(t);e?("string"!=typeof e&&Be(!1,"loadBootResource response for 'dotnetjs' type should be a URL string"),t.resolvedUrl=e):t.resolvedUrl=ce(t.resolvedUrl,t.behavior)}else if("dotnetwasm"!==t.behavior)throw new Error(`Unknown single asset behavior ${e}`);return t}function ee(e){const t=Y(e);return Be(t,`Single asset for ${e} not found`),t}let te=!1;async function oe(){if(!te){te=!0,Pe.diagnosticTracing&&b("mono_download_assets");try{const e=[],t=[],o=(e,t)=>{!Z[e.behavior]&&G(e)&&Pe.expected_instantiated_assets_count++,!H[e.behavior]&&G(e)&&(Pe.expected_downloaded_assets_count++,t.push(se(e)))};for(const t of $)o(t,e);for(const e of z)o(e,t);Pe.allDownloadsQueued.promise_control.resolve(),Promise.all([...e,...t]).then((()=>{Pe.allDownloadsFinished.promise_control.resolve()})).catch((e=>{throw Pe.err("Error in mono_download_assets: "+e),Xe(1,e),e})),await Pe.runtimeModuleLoaded.promise;const n=async e=>{const t=await e;if(t.buffer){if(!Z[t.behavior]){t.buffer&&"object"==typeof t.buffer||Be(!1,"asset buffer must be array-like or buffer-like or promise of these"),"string"!=typeof t.resolvedUrl&&Be(!1,"resolvedUrl must be string");const e=t.resolvedUrl,o=await t.buffer,n=new Uint8Array(o);pe(t),await Ue.beforeOnRuntimeInitialized.promise,Ue.instantiate_asset(t,e,n)}}else J[t.behavior]?("symbols"===t.behavior&&(await Ue.instantiate_symbols_asset(t),pe(t)),J[t.behavior]&&++Pe.actual_downloaded_assets_count):(t.isOptional||Be(!1,"Expected asset to have the downloaded buffer"),!H[t.behavior]&&G(t)&&Pe.expected_downloaded_assets_count--,!Z[t.behavior]&&G(t)&&Pe.expected_instantiated_assets_count--)},r=[],i=[];for(const t of e)r.push(n(t));for(const e of t)i.push(n(e));Promise.all(r).then((()=>{Ce||Ue.coreAssetsInMemory.promise_control.resolve()})).catch((e=>{throw Pe.err("Error in mono_download_assets: "+e),Xe(1,e),e})),Promise.all(i).then((async()=>{Ce||(await Ue.coreAssetsInMemory.promise,Ue.allAssetsInMemory.promise_control.resolve())})).catch((e=>{throw Pe.err("Error in mono_download_assets: "+e),Xe(1,e),e}))}catch(e){throw Pe.err("Error in mono_download_assets: "+e),e}}}let ne=!1;function re(){if(ne)return;ne=!0;const e=Pe.config,t=[];if(e.assets)for(const t of e.assets)"object"!=typeof t&&Be(!1,`asset must be object, it was ${typeof t} : ${t}`),"string"!=typeof t.behavior&&Be(!1,"asset behavior must be known string"),"string"!=typeof t.name&&Be(!1,"asset name must be string"),t.resolvedUrl&&"string"!=typeof t.resolvedUrl&&Be(!1,"asset resolvedUrl could be string"),t.hash&&"string"!=typeof t.hash&&Be(!1,"asset resolvedUrl could be string"),t.pendingDownload&&"object"!=typeof t.pendingDownload&&Be(!1,"asset pendingDownload could be object"),t.isCore?$.push(t):z.push(t),X(t);else if(e.resources){const o=e.resources;o.wasmNative||Be(!1,"resources.wasmNative must be defined"),o.jsModuleNative||Be(!1,"resources.jsModuleNative must be defined"),o.jsModuleRuntime||Be(!1,"resources.jsModuleRuntime must be defined"),K(z,o.wasmNative,"dotnetwasm"),K(t,o.jsModuleNative,"js-module-native"),K(t,o.jsModuleRuntime,"js-module-runtime"),o.jsModuleDiagnostics&&K(t,o.jsModuleDiagnostics,"js-module-diagnostics");const n=(e,t,o)=>{const n=e;n.behavior=t,o?(n.isCore=!0,$.push(n)):z.push(n)};if(o.coreAssembly)for(let e=0;e<o.coreAssembly.length;e++)n(o.coreAssembly[e],"assembly",!0);if(o.assembly)for(let e=0;e<o.assembly.length;e++)n(o.assembly[e],"assembly",!o.coreAssembly);if(0!=e.debugLevel&&Pe.isDebuggingSupported()){if(o.corePdb)for(let e=0;e<o.corePdb.length;e++)n(o.corePdb[e],"pdb",!0);if(o.pdb)for(let e=0;e<o.pdb.length;e++)n(o.pdb[e],"pdb",!o.corePdb)}if(e.loadAllSatelliteResources&&o.satelliteResources)for(const e in o.satelliteResources)for(let t=0;t<o.satelliteResources[e].length;t++){const r=o.satelliteResources[e][t];r.culture=e,n(r,"resource",!o.coreAssembly)}if(o.coreVfs)for(let e=0;e<o.coreVfs.length;e++)n(o.coreVfs[e],"vfs",!0);if(o.vfs)for(let e=0;e<o.vfs.length;e++)n(o.vfs[e],"vfs",!o.coreVfs);const r=O(e);if(r&&o.icu)for(let e=0;e<o.icu.length;e++){const t=o.icu[e];t.name===r&&n(t,"icu",!1)}if(o.wasmSymbols)for(let e=0;e<o.wasmSymbols.length;e++)n(o.wasmSymbols[e],"symbols",!1)}if(e.appsettings)for(let t=0;t<e.appsettings.length;t++){const o=e.appsettings[t],n=he(o);"appsettings.json"!==n&&n!==`appsettings.${e.applicationEnvironment}.json`||z.push({name:o,behavior:"vfs",cache:"no-cache",useCredentials:!0})}e.assets=[...$,...z,...t]}async function ie(e){const t=await se(e);return await t.pendingDownloadInternal.response,t.buffer}async function se(e){try{return await ae(e)}catch(t){if(!Pe.enableDownloadRetry)throw t;if(Ie||Se)throw t;if(e.pendingDownload&&e.pendingDownloadInternal==e.pendingDownload)throw t;if(e.resolvedUrl&&-1!=e.resolvedUrl.indexOf("file://"))throw t;if(t&&404==t.status)throw t;e.pendingDownloadInternal=void 0,await Pe.allDownloadsQueued.promise;try{return Pe.diagnosticTracing&&b(`Retrying download '${e.name}'`),await ae(e)}catch(t){return e.pendingDownloadInternal=void 0,await new Promise((e=>globalThis.setTimeout(e,100))),Pe.diagnosticTracing&&b(`Retrying download (2) '${e.name}' after delay`),await ae(e)}}}async function ae(e){for(;L;)await L.promise;try{++N,N==Pe.maxParallelDownloads&&(Pe.diagnosticTracing&&b("Throttling further parallel downloads"),L=i());const t=await async function(e){if(e.pendingDownload&&(e.pendingDownloadInternal=e.pendingDownload),e.pendingDownloadInternal&&e.pendingDownloadInternal.response)return e.pendingDownloadInternal.response;if(e.buffer){const t=await e.buffer;return e.resolvedUrl||(e.resolvedUrl="undefined://"+e.name),e.pendingDownloadInternal={url:e.resolvedUrl,name:e.name,response:Promise.resolve({ok:!0,arrayBuffer:()=>t,json:()=>JSON.parse(new TextDecoder("utf-8").decode(t)),text:()=>{throw new Error("NotImplementedException")},headers:{get:()=>{}}})},e.pendingDownloadInternal.response}const t=e.loadRemote&&Pe.config.remoteSources?Pe.config.remoteSources:[""];let o;for(let n of t){n=n.trim(),"./"===n&&(n="");const t=le(e,n);e.name===t?Pe.diagnosticTracing&&b(`Attempting to download '${t}'`):Pe.diagnosticTracing&&b(`Attempting to download '${t}' for ${e.name}`);try{e.resolvedUrl=t;const n=fe(e);if(e.pendingDownloadInternal=n,o=await n.response,!o||!o.ok)continue;return o}catch(e){o||(o={ok:!1,url:t,status:0,statusText:""+e});continue}}const n=e.isOptional||e.name.match(/\.pdb$/)&&Pe.config.ignorePdbLoadErrors;if(o||Be(!1,`Response undefined ${e.name}`),!n){const t=new Error(`download '${o.url}' for ${e.name} failed ${o.status} ${o.statusText}`);throw t.status=o.status,t}y(`optional download '${o.url}' for ${e.name} failed ${o.status} ${o.statusText}`)}(e);return t?(J[e.behavior]||(e.buffer=await t.arrayBuffer(),++Pe.actual_downloaded_assets_count),e):e}finally{if(--N,L&&N==Pe.maxParallelDownloads-1){Pe.diagnosticTracing&&b("Resuming more parallel downloads");const e=L;L=void 0,e.promise_control.resolve()}}}function le(e,t){let o;return null==t&&Be(!1,`sourcePrefix must be provided for ${e.name}`),e.resolvedUrl?o=e.resolvedUrl:(o=""===t?"assembly"===e.behavior||"pdb"===e.behavior?e.name:"resource"===e.behavior&&e.culture&&""!==e.culture?`${e.culture}/${e.name}`:e.name:t+e.name,o=ce(Pe.locateFile(o),e.behavior)),o&&"string"==typeof o||Be(!1,"attemptUrl need to be path or url string"),o}function ce(e,t){return Pe.modulesUniqueQuery&&q[t]&&(e+=Pe.modulesUniqueQuery),e}let de=0;const ue=new Set;function fe(e){try{e.resolvedUrl||Be(!1,"Request's resolvedUrl must be set");const t=function(e){let t=e.resolvedUrl;if(Pe.loadBootResource){const o=ge(e);if(o instanceof Promise)return o;"string"==typeof o&&(t=o)}const o={};return e.cache?o.cache=e.cache:Pe.config.disableNoCacheFetch||(o.cache="no-cache"),e.useCredentials?o.credentials="include":!Pe.config.disableIntegrityCheck&&e.hash&&(o.integrity=e.hash),Pe.fetch_like(t,o)}(e),o={name:e.name,url:e.resolvedUrl,response:t};return ue.add(e.name),o.response.then((()=>{"assembly"==e.behavior&&Pe.loadedAssemblies.push(e.name),de++,Pe.onDownloadResourceProgress&&Pe.onDownloadResourceProgress(de,ue.size)})),o}catch(t){const o={ok:!1,url:e.resolvedUrl,status:500,statusText:"ERR29: "+t,arrayBuffer:()=>{throw t},json:()=>{throw t}};return{name:e.name,url:e.resolvedUrl,response:Promise.resolve(o)}}}const me={resource:"assembly",assembly:"assembly",pdb:"pdb",icu:"globalization",vfs:"configuration",manifest:"manifest",dotnetwasm:"dotnetwasm","js-module-dotnet":"dotnetjs","js-module-native":"dotnetjs","js-module-runtime":"dotnetjs","js-module-threads":"dotnetjs"};function ge(e){var t;if(Pe.loadBootResource){const o=null!==(t=e.hash)&&void 0!==t?t:"",n=e.resolvedUrl,r=me[e.behavior];if(r){const t=Pe.loadBootResource(r,e.name,n,o,e.behavior);return"string"==typeof t?I(t):t}}}function pe(e){e.pendingDownloadInternal=null,e.pendingDownload=null,e.buffer=null,e.moduleExports=null}function he(e){let t=e.lastIndexOf("/");return t>=0&&t++,e.substring(t)}async function we(e){e&&await Promise.all((null!=e?e:[]).map((e=>async function(e){try{const t=e.name;if(!e.moduleExports){const o=ce(Pe.locateFile(t),"js-module-library-initializer");Pe.diagnosticTracing&&b(`Attempting to import '${o}' for ${e}`),e.moduleExports=await import(/*! webpackIgnore: true */o)}Pe.libraryInitializers.push({scriptName:t,exports:e.moduleExports})}catch(t){E(`Failed to import library initializer '${e}': ${t}`)}}(e))))}async function be(e,t){if(!Pe.libraryInitializers)return;const o=[];for(let n=0;n<Pe.libraryInitializers.length;n++){const r=Pe.libraryInitializers[n];r.exports[e]&&o.push(ye(r.scriptName,e,(()=>r.exports[e](...t))))}await Promise.all(o)}async function ye(e,t,o){try{await o()}catch(o){throw E(`Failed to invoke '${t}' on library initializer '${e}': ${o}`),Xe(1,o),o}}function ve(e,t){if(e===t)return e;const o={...t};return void 0!==o.assets&&o.assets!==e.assets&&(o.assets=[...e.assets||[],...o.assets||[]]),void 0!==o.resources&&(o.resources=_e(e.resources||{assembly:[],jsModuleNative:[],jsModuleRuntime:[],wasmNative:[]},o.resources)),void 0!==o.environmentVariables&&(o.environmentVariables={...e.environmentVariables||{},...o.environmentVariables||{}}),void 0!==o.runtimeOptions&&o.runtimeOptions!==e.runtimeOptions&&(o.runtimeOptions=[...e.runtimeOptions||[],...o.runtimeOptions||[]]),Object.assign(e,o)}function Ee(e,t){if(e===t)return e;const o={...t};return o.config&&(e.config||(e.config={}),o.config=ve(e.config,o.config)),Object.assign(e,o)}function _e(e,t){if(e===t)return e;const o={...t};return void 0!==o.coreAssembly&&(o.coreAssembly=[...e.coreAssembly||[],...o.coreAssembly||[]]),void 0!==o.assembly&&(o.assembly=[...e.assembly||[],...o.assembly||[]]),void 0!==o.lazyAssembly&&(o.lazyAssembly=[...e.lazyAssembly||[],...o.lazyAssembly||[]]),void 0!==o.corePdb&&(o.corePdb=[...e.corePdb||[],...o.corePdb||[]]),void 0!==o.pdb&&(o.pdb=[...e.pdb||[],...o.pdb||[]]),void 0!==o.jsModuleWorker&&(o.jsModuleWorker=[...e.jsModuleWorker||[],...o.jsModuleWorker||[]]),void 0!==o.jsModuleNative&&(o.jsModuleNative=[...e.jsModuleNative||[],...o.jsModuleNative||[]]),void 0!==o.jsModuleDiagnostics&&(o.jsModuleDiagnostics=[...e.jsModuleDiagnostics||[],...o.jsModuleDiagnostics||[]]),void 0!==o.jsModuleRuntime&&(o.jsModuleRuntime=[...e.jsModuleRuntime||[],...o.jsModuleRuntime||[]]),void 0!==o.wasmSymbols&&(o.wasmSymbols=[...e.wasmSymbols||[],...o.wasmSymbols||[]]),void 0!==o.wasmNative&&(o.wasmNative=[...e.wasmNative||[],...o.wasmNative||[]]),void 0!==o.icu&&(o.icu=[...e.icu||[],...o.icu||[]]),void 0!==o.satelliteResources&&(o.satelliteResources=function(e,t){if(e===t)return e;for(const o in t)e[o]=[...e[o]||[],...t[o]||[]];return e}(e.satelliteResources||{},o.satelliteResources||{})),void 0!==o.modulesAfterConfigLoaded&&(o.modulesAfterConfigLoaded=[...e.modulesAfterConfigLoaded||[],...o.modulesAfterConfigLoaded||[]]),void 0!==o.modulesAfterRuntimeReady&&(o.modulesAfterRuntimeReady=[...e.modulesAfterRuntimeReady||[],...o.modulesAfterRuntimeReady||[]]),void 0!==o.extensions&&(o.extensions={...e.extensions||{},...o.extensions||{}}),void 0!==o.vfs&&(o.vfs=[...e.vfs||[],...o.vfs||[]]),Object.assign(e,o)}function xe(){const e=Pe.config;if(e.environmentVariables=e.environmentVariables||{},e.runtimeOptions=e.runtimeOptions||[],e.resources=e.resources||{assembly:[],jsModuleNative:[],jsModuleWorker:[],jsModuleRuntime:[],wasmNative:[],vfs:[],satelliteResources:{}},e.assets){Pe.diagnosticTracing&&b("config.assets is deprecated, use config.resources instead");for(const t of e.assets){const o={};switch(t.behavior){case"assembly":o.assembly=[t];break;case"pdb":o.pdb=[t];break;case"resource":o.satelliteResources={},o.satelliteResources[t.culture]=[t];break;case"icu":o.icu=[t];break;case"symbols":o.wasmSymbols=[t];break;case"vfs":o.vfs=[t];break;case"dotnetwasm":o.wasmNative=[t];break;case"js-module-threads":o.jsModuleWorker=[t];break;case"js-module-runtime":o.jsModuleRuntime=[t];break;case"js-module-native":o.jsModuleNative=[t];break;case"js-module-diagnostics":o.jsModuleDiagnostics=[t];break;case"js-module-dotnet":break;default:throw new Error(`Unexpected behavior ${t.behavior} of asset ${t.name}`)}_e(e.resources,o)}}e.debugLevel,e.applicationEnvironment||(e.applicationEnvironment="Production"),e.applicationCulture&&(e.environmentVariables.LANG=`${e.applicationCulture}.UTF-8`),Ue.diagnosticTracing=Pe.diagnosticTracing=!!e.diagnosticTracing,Ue.waitForDebugger=e.waitForDebugger,Pe.maxParallelDownloads=e.maxParallelDownloads||Pe.maxParallelDownloads,Pe.enableDownloadRetry=void 0!==e.enableDownloadRetry?e.enableDownloadRetry:Pe.enableDownloadRetry}let je=!1;async function Re(e){var t;if(je)return void await Pe.afterConfigLoaded.promise;let o;try{if(e.configSrc||Pe.config&&0!==Object.keys(Pe.config).length&&(Pe.config.assets||Pe.config.resources)||(e.configSrc="dotnet.boot.js"),o=e.configSrc,je=!0,o&&(Pe.diagnosticTracing&&b("mono_wasm_load_config"),await async function(e){const t=e.configSrc,o=Pe.locateFile(t);let n=null;void 0!==Pe.loadBootResource&&(n=Pe.loadBootResource("manifest",t,o,"","manifest"));let r,i=null;if(n)if("string"==typeof n)n.includes(".json")?(i=await s(I(n)),r=await Ae(i)):r=(await import(I(n))).config;else{const e=await n;"function"==typeof e.json?(i=e,r=await Ae(i)):r=e.config}else o.includes(".json")?(i=await s(ce(o,"manifest")),r=await Ae(i)):r=(await import(ce(o,"manifest"))).config;function s(e){return Pe.fetch_like(e,{method:"GET",credentials:"include",cache:"no-cache"})}Pe.config.applicationEnvironment&&(r.applicationEnvironment=Pe.config.applicationEnvironment),ve(Pe.config,r)}(e)),xe(),await we(null===(t=Pe.config.resources)||void 0===t?void 0:t.modulesAfterConfigLoaded),await be("onRuntimeConfigLoaded",[Pe.config]),e.onConfigLoaded)try{await e.onConfigLoaded(Pe.config,Le),xe()}catch(e){throw _("onConfigLoaded() failed",e),e}xe(),Pe.afterConfigLoaded.promise_control.resolve(Pe.config)}catch(t){const n=`Failed to load config file ${o} ${t} ${null==t?void 0:t.stack}`;throw Pe.config=e.config=Object.assign(Pe.config,{message:n,error:t,isError:!0}),Xe(1,new Error(n)),t}}function Te(){return!!globalThis.navigator&&(Pe.isChromium||Pe.isFirefox)}async function Ae(e){const t=Pe.config,o=await e.json();t.applicationEnvironment||o.applicationEnvironment||(o.applicationEnvironment=e.headers.get("Blazor-Environment")||e.headers.get("DotNet-Environment")||void 0),o.environmentVariables||(o.environmentVariables={});const n=e.headers.get("DOTNET-MODIFIABLE-ASSEMBLIES");n&&(o.environmentVariables.DOTNET_MODIFIABLE_ASSEMBLIES=n);const r=e.headers.get("ASPNETCORE-BROWSER-TOOLS");return r&&(o.environmentVariables.__ASPNETCORE_BROWSER_TOOLS=r),o}"function"!=typeof importScripts||globalThis.onmessage||(globalThis.dotnetSidecar=!0);const Se="object"==typeof process&&"object"==typeof process.versions&&"string"==typeof process.versions.node,De="function"==typeof importScripts,Oe=De&&"undefined"!=typeof dotnetSidecar,Ce=De&&!Oe,ke="object"==typeof window||De&&!Se,Ie=!ke&&!Se;let Ue={},Pe={},Me={},Le={},Ne={},$e=!1;const ze={},We={config:ze},Fe={mono:{},binding:{},internal:Ne,module:We,loaderHelpers:Pe,runtimeHelpers:Ue,diagnosticHelpers:Me,api:Le};function Be(e,t){if(e)return;const o="Assert failed: "+("function"==typeof t?t():t),n=new Error(o);_(o,n),Ue.nativeAbort(n)}function Ve(){return void 0!==Pe.exitCode}function qe(){return Ue.runtimeReady&&!Ve()}function He(){Ve()&&Be(!1,`.NET runtime already exited with ${Pe.exitCode} ${Pe.exitReason}. You can use runtime.runMain() which doesn't exit the runtime.`),Ue.runtimeReady||Be(!1,".NET runtime didn't start yet. Please call dotnet.create() first.")}function Je(){ke&&(globalThis.addEventListener("unhandledrejection",et),globalThis.addEventListener("error",tt))}let Ze,Qe;function Ge(e){Qe&&Qe(e),Xe(e,Pe.exitReason)}function Ke(e){Ze&&Ze(e||Pe.exitReason),Xe(1,e||Pe.exitReason)}function Xe(t,o){var n,r;const i=o&&"object"==typeof o;t=i&&"number"==typeof o.status?o.status:void 0===t?-1:t;const s=i&&"string"==typeof o.message?o.message:""+o;(o=i?o:Ue.ExitStatus?function(e,t){const o=new Ue.ExitStatus(e);return o.message=t,o.toString=()=>t,o}(t,s):new Error("Exit with code "+t+" "+s)).status=t,o.message||(o.message=s);const a=""+(o.stack||(new Error).stack);try{Object.defineProperty(o,"stack",{get:()=>a})}catch(e){}const l=!!o.silent;if(o.silent=!0,Ve())Pe.diagnosticTracing&&b("mono_exit called after exit");else{try{We.onAbort==Ke&&(We.onAbort=Ze),We.onExit==Ge&&(We.onExit=Qe),ke&&(globalThis.removeEventListener("unhandledrejection",et),globalThis.removeEventListener("error",tt)),Ue.runtimeReady?(Ue.jiterpreter_dump_stats&&Ue.jiterpreter_dump_stats(!1),0===t&&(null===(n=Pe.config)||void 0===n?void 0:n.interopCleanupOnExit)&&Ue.forceDisposeProxies(!0,!0),e&&0!==t&&(null===(r=Pe.config)||void 0===r||r.dumpThreadsOnNonZeroExit)):(Pe.diagnosticTracing&&b(`abort_startup, reason: ${o}`),function(e){Pe.allDownloadsQueued.promise_control.reject(e),Pe.allDownloadsFinished.promise_control.reject(e),Pe.afterConfigLoaded.promise_control.reject(e),Pe.wasmCompilePromise.promise_control.reject(e),Pe.runtimeModuleLoaded.promise_control.reject(e),Ue.dotnetReady&&(Ue.dotnetReady.promise_control.reject(e),Ue.afterInstantiateWasm.promise_control.reject(e),Ue.beforePreInit.promise_control.reject(e),Ue.afterPreInit.promise_control.reject(e),Ue.afterPreRun.promise_control.reject(e),Ue.beforeOnRuntimeInitialized.promise_control.reject(e),Ue.afterOnRuntimeInitialized.promise_control.reject(e),Ue.afterPostRun.promise_control.reject(e))}(o))}catch(e){E("mono_exit A failed",e)}try{l||(function(e,t){if(0!==e&&t){const e=Ue.ExitStatus&&t instanceof Ue.ExitStatus?b:_;"string"==typeof t?e(t):(void 0===t.stack&&(t.stack=(new Error).stack+""),t.message?e(Ue.stringify_as_error_with_stack?Ue.stringify_as_error_with_stack(t.message+"\n"+t.stack):t.message+"\n"+t.stack):e(JSON.stringify(t)))}!Ce&&Pe.config&&(Pe.config.logExitCode?Pe.config.forwardConsoleLogsToWS?R("WASM EXIT "+e):v("WASM EXIT "+e):Pe.config.forwardConsoleLogsToWS&&R())}(t,o),function(e){if(ke&&!Ce&&Pe.config&&Pe.config.appendElementOnExit&&document){const t=document.createElement("label");t.id="tests_done",0!==e&&(t.style.background="red"),t.innerHTML=""+e,document.body.appendChild(t)}}(t))}catch(e){E("mono_exit B failed",e)}Pe.exitCode=t,Pe.exitReason||(Pe.exitReason=o),!Ce&&Ue.runtimeReady&&We.runtimeKeepalivePop()}if(Pe.config&&Pe.config.asyncFlushOnExit&&0===t)throw(async()=>{try{await async function(){try{const e=await import(/*! webpackIgnore: true */"process"),t=e=>new Promise(((t,o)=>{e.on("error",o),e.end("","utf8",t)})),o=t(e.stderr),n=t(e.stdout);let r;const i=new Promise((e=>{r=setTimeout((()=>e("timeout")),1e3)}));await Promise.race([Promise.all([n,o]),i]),clearTimeout(r)}catch(e){_(`flushing std* streams failed: ${e}`)}}()}finally{Ye(t,o)}})(),o;Ye(t,o)}function Ye(e,t){if(Ue.runtimeReady&&Ue.nativeExit)try{Ue.nativeExit(e)}catch(e){!Ue.ExitStatus||e instanceof Ue.ExitStatus||E("set_exit_code_and_quit_now failed: "+e.toString())}if(0!==e||!ke)throw Se&&Ne.process?Ne.process.exit(e):Ue.quit&&Ue.quit(e,t),t}function et(e){ot(e,e.reason,"rejection")}function tt(e){ot(e,e.error,"error")}function ot(e,t,o){e.preventDefault();try{t||(t=new Error("Unhandled "+o)),void 0===t.stack&&(t.stack=(new Error).stack),t.stack=t.stack+"",t.silent||(_("Unhandled error:",t),Xe(1,t))}catch(e){}}!function(e){if($e)throw new Error("Loader module already loaded");$e=!0,Ue=e.runtimeHelpers,Pe=e.loaderHelpers,Me=e.diagnosticHelpers,Le=e.api,Ne=e.internal,Object.assign(Le,{INTERNAL:Ne,invokeLibraryInitializers:be}),Object.assign(e.module,{config:ve(ze,{environmentVariables:{}})});const r={mono_wasm_bindings_is_ready:!1,config:e.module.config,diagnosticTracing:!1,nativeAbort:e=>{throw e||new Error("abort")},nativeExit:e=>{throw new Error("exit:"+e)}},l={gitHash:"a612c2a1056fe3265387ae3ff7c94eba1505caf9",config:e.module.config,diagnosticTracing:!1,maxParallelDownloads:16,enableDownloadRetry:!0,_loaded_files:[],loadedFiles:[],loadedAssemblies:[],libraryInitializers:[],workerNextNumber:1,actual_downloaded_assets_count:0,actual_instantiated_assets_count:0,expected_downloaded_assets_count:0,expected_instantiated_assets_count:0,afterConfigLoaded:i(),allDownloadsQueued:i(),allDownloadsFinished:i(),wasmCompilePromise:i(),runtimeModuleLoaded:i(),loadingWorkers:i(),is_exited:Ve,is_runtime_running:qe,assert_runtime_running:He,mono_exit:Xe,createPromiseController:i,getPromiseController:s,assertIsControllablePromise:a,mono_download_assets:oe,resolve_single_asset_path:ee,setup_proxy_console:j,set_thread_prefix:w,installUnhandledErrorHandler:Je,retrieve_asset_download:ie,invokeLibraryInitializers:be,isDebuggingSupported:Te,exceptions:t,simd:n,relaxedSimd:o};Object.assign(Ue,r),Object.assign(Pe,l)}(Fe);let nt,rt,it,st=!1,at=!1;async function lt(e){if(!at){if(at=!0,ke&&Pe.config.forwardConsoleLogsToWS&&void 0!==globalThis.WebSocket&&j("main",globalThis.console,globalThis.location.origin),We||Be(!1,"Null moduleConfig"),Pe.config||Be(!1,"Null moduleConfig.config"),"function"==typeof e){const t=e(Fe.api);if(t.ready)throw new Error("Module.ready couldn't be redefined.");Object.assign(We,t),Ee(We,t)}else{if("object"!=typeof e)throw new Error("Can't use moduleFactory callback of createDotnetRuntime function.");Ee(We,e)}await async function(e){if(Se){const e=await import(/*! webpackIgnore: true */"process"),t=14;if(e.versions.node.split(".")[0]<t)throw new Error(`NodeJS at '${e.execPath}' has too low version '${e.versions.node}', please use at least ${t}. See also https://aka.ms/dotnet-wasm-features`)}const t=/*! webpackIgnore: true */import.meta.url,o=t.indexOf("?");var n;if(o>0&&(Pe.modulesUniqueQuery=t.substring(o)),Pe.scriptUrl=t.replace(/\\/g,"/").replace(/[?#].*/,""),Pe.scriptDirectory=(n=Pe.scriptUrl).slice(0,n.lastIndexOf("/"))+"/",Pe.locateFile=e=>"URL"in globalThis&&globalThis.URL!==C?new URL(e,Pe.scriptDirectory).toString():M(e)?e:Pe.scriptDirectory+e,Pe.fetch_like=k,Pe.out=console.log,Pe.err=console.error,Pe.onDownloadResourceProgress=e.onDownloadResourceProgress,ke&&globalThis.navigator){const e=globalThis.navigator,t=e.userAgentData&&e.userAgentData.brands;t&&t.length>0?Pe.isChromium=t.some((e=>"Google Chrome"===e.brand||"Microsoft Edge"===e.brand||"Chromium"===e.brand)):e.userAgent&&(Pe.isChromium=e.userAgent.includes("Chrome"),Pe.isFirefox=e.userAgent.includes("Firefox"))}Ne.require=Se?await import(/*! webpackIgnore: true */"module").then((e=>e.createRequire(/*! webpackIgnore: true */import.meta.url))):Promise.resolve((()=>{throw new Error("require not supported")})),void 0===globalThis.URL&&(globalThis.URL=C)}(We)}}async function ct(e){return await lt(e),Ze=We.onAbort,Qe=We.onExit,We.onAbort=Ke,We.onExit=Ge,We.ENVIRONMENT_IS_PTHREAD?async function(){(function(){const e=new MessageChannel,t=e.port1,o=e.port2;t.addEventListener("message",(e=>{var n,r;n=JSON.parse(e.data.config),r=JSON.parse(e.data.monoThreadInfo),st?Pe.diagnosticTracing&&b("mono config already received"):(ve(Pe.config,n),Ue.monoThreadInfo=r,xe(),Pe.diagnosticTracing&&b("mono config received"),st=!0,Pe.afterConfigLoaded.promise_control.resolve(Pe.config),ke&&n.forwardConsoleLogsToWS&&void 0!==globalThis.WebSocket&&Pe.setup_proxy_console("worker-idle",console,globalThis.location.origin)),t.close(),o.close()}),{once:!0}),t.start(),self.postMessage({[l]:{monoCmd:"preload",port:o}},[o])})(),await Pe.afterConfigLoaded.promise,function(){const e=Pe.config;e.assets||Be(!1,"config.assets must be defined");for(const t of e.assets)X(t),Q[t.behavior]&&z.push(t)}(),setTimeout((async()=>{try{await oe()}catch(e){Xe(1,e)}}),0);const e=dt(),t=await Promise.all(e);return await ut(t),We}():async function(){var e;await Re(We),re();const t=dt();(async function(){try{const e=ee("dotnetwasm");await se(e),e&&e.pendingDownloadInternal&&e.pendingDownloadInternal.response||Be(!1,"Can't load dotnet.native.wasm");const t=await e.pendingDownloadInternal.response,o=t.headers&&t.headers.get?t.headers.get("Content-Type"):void 0;let n;if("function"==typeof WebAssembly.compileStreaming&&"application/wasm"===o)n=await WebAssembly.compileStreaming(t);else{ke&&"application/wasm"!==o&&E('WebAssembly resource does not have the expected content type "application/wasm", so falling back to slower ArrayBuffer instantiation.');const e=await t.arrayBuffer();Pe.diagnosticTracing&&b("instantiate_wasm_module buffered"),n=Ie?await Promise.resolve(new WebAssembly.Module(e)):await WebAssembly.compile(e)}e.pendingDownloadInternal=null,e.pendingDownload=null,e.buffer=null,e.moduleExports=null,Pe.wasmCompilePromise.promise_control.resolve(n)}catch(e){Pe.wasmCompilePromise.promise_control.reject(e)}})(),setTimeout((async()=>{try{D(),await oe()}catch(e){Xe(1,e)}}),0);const o=await Promise.all(t);return await ut(o),await Ue.dotnetReady.promise,await we(null===(e=Pe.config.resources)||void 0===e?void 0:e.modulesAfterRuntimeReady),await be("onRuntimeReady",[Fe.api]),Le}()}function dt(){const e=ee("js-module-runtime"),t=ee("js-module-native");if(nt&&rt)return[nt,rt,it];"object"==typeof e.moduleExports?nt=e.moduleExports:(Pe.diagnosticTracing&&b(`Attempting to import '${e.resolvedUrl}' for ${e.name}`),nt=import(/*! webpackIgnore: true */e.resolvedUrl)),"object"==typeof t.moduleExports?rt=t.moduleExports:(Pe.diagnosticTracing&&b(`Attempting to import '${t.resolvedUrl}' for ${t.name}`),rt=import(/*! webpackIgnore: true */t.resolvedUrl));const o=Y("js-module-diagnostics");return o&&("object"==typeof o.moduleExports?it=o.moduleExports:(Pe.diagnosticTracing&&b(`Attempting to import '${o.resolvedUrl}' for ${o.name}`),it=import(/*! webpackIgnore: true */o.resolvedUrl))),[nt,rt,it]}async function ut(e){const{initializeExports:t,initializeReplacements:o,configureRuntimeStartup:n,configureEmscriptenStartup:r,configureWorkerStartup:i,setRuntimeGlobals:s,passEmscriptenInternals:a}=e[0],{default:l}=e[1],c=e[2];s(Fe),t(Fe),c&&c.setRuntimeGlobals(Fe),await n(We),Pe.runtimeModuleLoaded.promise_control.resolve(),l((e=>(Object.assign(We,{ready:e.ready,__dotnet_runtime:{initializeReplacements:o,configureEmscriptenStartup:r,configureWorkerStartup:i,passEmscriptenInternals:a}}),We))).catch((e=>{if(e.message&&e.message.toLowerCase().includes("out of memory"))throw new Error(".NET runtime has failed to start, because too much memory was requested. Please decrease the memory by adjusting EmccMaximumHeapSize. See also https://aka.ms/dotnet-wasm-features");throw e}))}const ft=new class{withModuleConfig(e){try{return Ee(We,e),this}catch(e){throw Xe(1,e),e}}withOnConfigLoaded(e){try{return Ee(We,{onConfigLoaded:e}),this}catch(e){throw Xe(1,e),e}}withConsoleForwarding(){try{return ve(ze,{forwardConsoleLogsToWS:!0}),this}catch(e){throw Xe(1,e),e}}withExitOnUnhandledError(){try{return ve(ze,{exitOnUnhandledError:!0}),Je(),this}catch(e){throw Xe(1,e),e}}withAsyncFlushOnExit(){try{return ve(ze,{asyncFlushOnExit:!0}),this}catch(e){throw Xe(1,e),e}}withExitCodeLogging(){try{return ve(ze,{logExitCode:!0}),this}catch(e){throw Xe(1,e),e}}withElementOnExit(){try{return ve(ze,{appendElementOnExit:!0}),this}catch(e){throw Xe(1,e),e}}withInteropCleanupOnExit(){try{return ve(ze,{interopCleanupOnExit:!0}),this}catch(e){throw Xe(1,e),e}}withDumpThreadsOnNonZeroExit(){try{return ve(ze,{dumpThreadsOnNonZeroExit:!0}),this}catch(e){throw Xe(1,e),e}}withWaitingForDebugger(e){try{return ve(ze,{waitForDebugger:e}),this}catch(e){throw Xe(1,e),e}}withInterpreterPgo(e,t){try{return ve(ze,{interpreterPgo:e,interpreterPgoSaveDelay:t}),ze.runtimeOptions?ze.runtimeOptions.push("--interp-pgo-recording"):ze.runtimeOptions=["--interp-pgo-recording"],this}catch(e){throw Xe(1,e),e}}withConfig(e){try{return ve(ze,e),this}catch(e){throw Xe(1,e),e}}withConfigSrc(e){try{return e&&"string"==typeof e||Be(!1,"must be file path or URL"),Ee(We,{configSrc:e}),this}catch(e){throw Xe(1,e),e}}withVirtualWorkingDirectory(e){try{return e&&"string"==typeof e||Be(!1,"must be directory path"),ve(ze,{virtualWorkingDirectory:e}),this}catch(e){throw Xe(1,e),e}}withEnvironmentVariable(e,t){try{const o={};return o[e]=t,ve(ze,{environmentVariables:o}),this}catch(e){throw Xe(1,e),e}}withEnvironmentVariables(e){try{return e&&"object"==typeof e||Be(!1,"must be dictionary object"),ve(ze,{environmentVariables:e}),this}catch(e){throw Xe(1,e),e}}withDiagnosticTracing(e){try{return"boolean"!=typeof e&&Be(!1,"must be boolean"),ve(ze,{diagnosticTracing:e}),this}catch(e){throw Xe(1,e),e}}withDebugging(e){try{return null!=e&&"number"==typeof e||Be(!1,"must be number"),ve(ze,{debugLevel:e}),this}catch(e){throw Xe(1,e),e}}withApplicationArguments(...e){try{return e&&Array.isArray(e)||Be(!1,"must be array of strings"),ve(ze,{applicationArguments:e}),this}catch(e){throw Xe(1,e),e}}withRuntimeOptions(e){try{return e&&Array.isArray(e)||Be(!1,"must be array of strings"),ze.runtimeOptions?ze.runtimeOptions.push(...e):ze.runtimeOptions=e,this}catch(e){throw Xe(1,e),e}}withMainAssembly(e){try{return ve(ze,{mainAssemblyName:e}),this}catch(e){throw Xe(1,e),e}}withApplicationArgumentsFromQuery(){try{if(!globalThis.window)throw new Error("Missing window to the query parameters from");if(void 0===globalThis.URLSearchParams)throw new Error("URLSearchParams is supported");const e=new URLSearchParams(globalThis.window.location.search).getAll("arg");return this.withApplicationArguments(...e)}catch(e){throw Xe(1,e),e}}withApplicationEnvironment(e){try{return ve(ze,{applicationEnvironment:e}),this}catch(e){throw Xe(1,e),e}}withApplicationCulture(e){try{return ve(ze,{applicationCulture:e}),this}catch(e){throw Xe(1,e),e}}withResourceLoader(e){try{return Pe.loadBootResource=e,this}catch(e){throw Xe(1,e),e}}async download(){try{await async function(){lt(We),await Re(We),re(),D(),oe(),await Pe.allDownloadsFinished.promise}()}catch(e){throw Xe(1,e),e}}async create(){try{return this.instance||(this.instance=await async function(){return await ct(We),Fe.api}()),this.instance}catch(e){throw Xe(1,e),e}}async run(){try{return We.config||Be(!1,"Null moduleConfig.config"),this.instance||await this.create(),this.instance.runMainAndExit()}catch(e){throw Xe(1,e),e}}},mt=Xe,gt=ct;Ie||"function"==typeof globalThis.URL||Be(!1,"This browser/engine doesn't support URL API. Please use a modern version. See also https://aka.ms/dotnet-wasm-features"),"function"!=typeof globalThis.BigInt64Array&&Be(!1,"This browser/engine doesn't support BigInt64Array API. Please use a modern version. See also https://aka.ms/dotnet-wasm-features"),ft.withConfig(/*json-start*/{
   "mainAssemblyName": "MForce365.Web",
   "resources": {
-    "hash": "sha256-NH6Pm256dskJGmNtJPR3pBmMYrAcVXLxIYWoVd5FJYw=",
+    "hash": "sha256-r2DS7PmZcY3sfKPGUSmm9mcnSHQ+bCArLVUDzUMPubc=",
     "jsModuleNative": [
       {
         "name": "dotnet.native.ykrnppwhq2.js"
@@ -1595,68 +1595,68 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "MForce.Components.ActionItems.wasm",
-        "name": "MForce.Components.ActionItems.9c8m3zcrdo.wasm",
-        "integrity": "sha256-uaJjobw1Ae4FR7bxLRR8QBkoXZVvyERMujRRmo+jUyo=",
+        "name": "MForce.Components.ActionItems.aqtt8j7r9y.wasm",
+        "integrity": "sha256-wp/HMXV7c5xo8hd4SJzcoZqKiFrqz6hRu8+2urjMGXA=",
         "cache": "force-cache"
       },
       {
         "virtualPath": "MForce.Components.wasm",
-        "name": "MForce.Components.qpmonhy65z.wasm",
-        "integrity": "sha256-/oPKCxsuWJw1x7I9WmTs5BFsvk2UYpTSm6XZlu3G1aM=",
+        "name": "MForce.Components.41bplxf91v.wasm",
+        "integrity": "sha256-6HJ14tPrhR+ZkUXAEMvXaL2dghOIQPgKHSaj4dXXh5s=",
         "cache": "force-cache"
       },
       {
         "virtualPath": "MForce.Components.Files.wasm",
-        "name": "MForce.Components.Files.qmccn6lpsf.wasm",
-        "integrity": "sha256-8qne6s8/535lDihhZ6QyMlyMb4Z4SJQatmk8Pb37PAs=",
+        "name": "MForce.Components.Files.rnvjro0b9x.wasm",
+        "integrity": "sha256-B0IrwFpYd+Bferx/RKEtZtA6zdMjacoaTpfOY7A0uo8=",
         "cache": "force-cache"
       },
       {
         "virtualPath": "MForce.Components.Projects.wasm",
-        "name": "MForce.Components.Projects.6yknerbvcu.wasm",
-        "integrity": "sha256-MqzVpg2/vUH3e7W2FrU2tEU49kmrSKWct7uDjQrT6M0=",
+        "name": "MForce.Components.Projects.7mq9ipsbim.wasm",
+        "integrity": "sha256-/8TqWo0j4t5pyho/1zNXb4+qPeBFwGTCnYCfRJb8Hd0=",
         "cache": "force-cache"
       },
       {
         "virtualPath": "MForce.Components.Schedule.wasm",
-        "name": "MForce.Components.Schedule.i734jrd7d3.wasm",
-        "integrity": "sha256-PrhZjy3oVJ8Kt9oGcRmnPfvUv1EPo76o6hhv+7bPZS8=",
+        "name": "MForce.Components.Schedule.zs7wr7wen2.wasm",
+        "integrity": "sha256-fRlCRCTTH4bgpbkGrvrJXwRMOUXXz5V52lf4uKXXGPc=",
         "cache": "force-cache"
       },
       {
         "virtualPath": "MForce.Data.wasm",
-        "name": "MForce.Data.6le52q4855.wasm",
-        "integrity": "sha256-5vz8GDNniezAnOEOPfvJ09pK03UjQ/AJEbV4BB3X2is=",
+        "name": "MForce.Data.0mijs8kird.wasm",
+        "integrity": "sha256-CJ8CjfXiq0Dp0zAmCdNxWVLe6bMYJDOAsMGwkDqYXyk=",
         "cache": "force-cache"
       },
       {
         "virtualPath": "MForce.Data.Realtime.wasm",
-        "name": "MForce.Data.Realtime.co5hojyvrg.wasm",
-        "integrity": "sha256-BKXdEsVPZSusrunixi/cGCIo4xSlKObj6c13SKjZ7Xw=",
+        "name": "MForce.Data.Realtime.7zhxgph6nw.wasm",
+        "integrity": "sha256-Q31ozMwGY1cjUHlycRK5YDLn0pEtlpL/mcscfvy3BIs=",
         "cache": "force-cache"
       },
       {
         "virtualPath": "MForce.Data.SQLite.wasm",
-        "name": "MForce.Data.SQLite.k9ef8whtpn.wasm",
-        "integrity": "sha256-CDLxOlLQRyXtjZ/LXCD9B7bAOa+Q17Jp2SZTi2dSqfo=",
+        "name": "MForce.Data.SQLite.xw0cc5mmch.wasm",
+        "integrity": "sha256-X9B5wqEdLzSuvIw5rdL/6W9Z3a379IuUqMKUsH6mUvM=",
         "cache": "force-cache"
       },
       {
         "virtualPath": "MForce365.Shared.wasm",
-        "name": "MForce365.Shared.9ezlpstb2v.wasm",
-        "integrity": "sha256-jyAmJcZULji9r/hrE47QLHb7F8di3Sbhj9scqDy7BeY=",
+        "name": "MForce365.Shared.oy00fk4qek.wasm",
+        "integrity": "sha256-IPxNqmLGGdHdKbahQ9y0n4/MM3rwd9aL2OjaJMcauYY=",
         "cache": "force-cache"
       },
       {
         "virtualPath": "SqliteWasmHelper.wasm",
-        "name": "SqliteWasmHelper.rhezct0l76.wasm",
-        "integrity": "sha256-H5QrrYc95VRNuSNOI4k0eOQv+f1ww4tlxr7yPSiXZWs=",
+        "name": "SqliteWasmHelper.vkkkdogbgc.wasm",
+        "integrity": "sha256-0Q33WCqWDKW1dVrBQ7XQW34kL1scCQb2IzszNsqsX7w=",
         "cache": "force-cache"
       },
       {
         "virtualPath": "MForce365.Web.wasm",
-        "name": "MForce365.Web.oucf4klrm6.wasm",
-        "integrity": "sha256-MK1uBE94RyjcvsqCXrPwbK4gH1lKZrup213tOpQVM+Y=",
+        "name": "MForce365.Web.jzva9q2aoa.wasm",
+        "integrity": "sha256-kU6wyiJzoM2pb7vLc6+Krbn7rIz5S5Bfjfj1VcXmFTI=",
         "cache": "force-cache"
       }
     ],
@@ -1664,368 +1664,368 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       "af": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.4w9a7x8ysc.wasm",
-          "integrity": "sha256-lNvCa7x9Gx52r84Z2XzZ2iRpbfKzCn+11/KClhhZhH8=",
+          "name": "MForce365.Shared.resources.gf4cr3rdhp.wasm",
+          "integrity": "sha256-bHjhmv1RryxxlDuzY4AhUvOx53QDzxyZuiTYcpf1dVc=",
           "cache": "force-cache"
         }
       ],
       "ar": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.8st9huxc5s.wasm",
-          "integrity": "sha256-CPiaAWcBf5wgIW1YfNoJL4QsDxlPOQs4NHzX8WU4NEI=",
+          "name": "MForce365.Shared.resources.df58zntspm.wasm",
+          "integrity": "sha256-eVyQvh1GMs0JslyZ7ZJIJMRR8NZe6nopKyjIN7TPxNA=",
           "cache": "force-cache"
         }
       ],
       "be": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.mp6182t88v.wasm",
-          "integrity": "sha256-Ovht170JTa9AeMHVpenudjAcfvpgmd+RzYHvaRxxFnw=",
+          "name": "MForce365.Shared.resources.nau5myrdoj.wasm",
+          "integrity": "sha256-YUnK5Y7A6XaHOkoNeZIa1nykvrrG3kyO8eDPKCdvVp4=",
           "cache": "force-cache"
         }
       ],
       "bg": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.rtxixwtqok.wasm",
-          "integrity": "sha256-vwzP7o5RRSBRdIvcro84MIN1m362kmSLCh0R2Rf8dpw=",
+          "name": "MForce365.Shared.resources.z46wfytowm.wasm",
+          "integrity": "sha256-E+6DLF/CrJ8M5P/ifdWGuTrbHIvkUUeGZhwuatY5STY=",
           "cache": "force-cache"
         }
       ],
       "cy": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.tnxmglqtop.wasm",
-          "integrity": "sha256-6bd6NNQdO9VdBwuEZoR1tKWtrlIMcMWn2cpjdvPKQNM=",
+          "name": "MForce365.Shared.resources.e0v7x91wij.wasm",
+          "integrity": "sha256-QtI33ucWaW2S638JLuaPr4nI7vuwqLUZUHh3uKnpcSI=",
           "cache": "force-cache"
         }
       ],
       "da": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.tbhgyhea1y.wasm",
-          "integrity": "sha256-uWHCSBWV83VYcM/9txKIbHwqYzOAVQUm2grZqCSPFps=",
+          "name": "MForce365.Shared.resources.h1zdns4ig9.wasm",
+          "integrity": "sha256-pRmyF5/xjlFu+fL2vXi0kgdWhCcXy41zb4BUkomRGPc=",
           "cache": "force-cache"
         }
       ],
       "de": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.6ockdifyt3.wasm",
-          "integrity": "sha256-JqI6bK+mXFdB4+WqRJF2W4PX320SlXeDRF5tpmunFSY=",
+          "name": "MForce365.Shared.resources.u5tpw9vsvi.wasm",
+          "integrity": "sha256-4jOfu0yZwRon4+KgRrAumQ/GGKTYF8huCo/RRJTUmfg=",
           "cache": "force-cache"
         }
       ],
       "el": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.z1x73a7mvi.wasm",
-          "integrity": "sha256-F94WLBxxeRlbjI8SLBuAGrUCu6OxlzVxZMVZhGvwk5Y=",
+          "name": "MForce365.Shared.resources.3kl734z4ud.wasm",
+          "integrity": "sha256-HfTI6IiOTtr2jcj3Gta5xcFz4JU3k36D3XamfuBWO+4=",
           "cache": "force-cache"
         }
       ],
       "eo": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.ogaivmxeea.wasm",
-          "integrity": "sha256-iNMPdGWSC1zWN+oVRu0e/JFlAf9FiGt/UXtGpGBtbHI=",
+          "name": "MForce365.Shared.resources.r6mqz1b8b5.wasm",
+          "integrity": "sha256-00kVWc65E081LLSWRjHJT75YZ/k73lZlcZNNCSXv7sg=",
           "cache": "force-cache"
         }
       ],
       "es": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.qj8lajvlx8.wasm",
-          "integrity": "sha256-hsQoiAAhFoI3fwjPw09eWOxHNFjR4DaiFoKPHylYlM8=",
+          "name": "MForce365.Shared.resources.7f741vupn7.wasm",
+          "integrity": "sha256-k5uRLlm4XM8Tup1xxldoAplcBSHJPKFUkjtyb0b8I9M=",
           "cache": "force-cache"
         }
       ],
       "et": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.gc88f2ky9l.wasm",
-          "integrity": "sha256-QFNK+j4HgP54TaRzt7RteVUD5EXr+0hd4pLpTCqq3fs=",
+          "name": "MForce365.Shared.resources.tuoc1wm7to.wasm",
+          "integrity": "sha256-1UkTNIoLolMTV2fcvVEcJV7Zv0nIV1SwM3UtaY3Zqqs=",
           "cache": "force-cache"
         }
       ],
       "fi": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.sbmb5vnwvf.wasm",
-          "integrity": "sha256-yLbfPaDRd85vJuXxWLNZGSOnQYjNMgKoE1ys8kGKwGk=",
+          "name": "MForce365.Shared.resources.o101bykc7f.wasm",
+          "integrity": "sha256-fKl/+XUjq4YdqiZqJ/EQYYdxXPf6NLeVQRzxpMhNUKs=",
           "cache": "force-cache"
         }
       ],
       "fr": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.xjg81j8xk5.wasm",
-          "integrity": "sha256-M22/zUMJhAHcPsCummldYv9/G8S41JefR8keR2b1Q6I=",
+          "name": "MForce365.Shared.resources.vaj8oy1mlx.wasm",
+          "integrity": "sha256-SXz3BEjNyyGz0nwaxiqYY6YwN4euAjCh0sgnXR+gXFo=",
           "cache": "force-cache"
         }
       ],
       "ga": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.5gbitjlmyn.wasm",
-          "integrity": "sha256-dUOSRCWBp49J+4hFdIaUnq3TUfL7CfI/hP6v5Xme+sA=",
+          "name": "MForce365.Shared.resources.qottng28d5.wasm",
+          "integrity": "sha256-ihJu42B8Dyonp3pDdRmtOUbqY4XCNJQGiMqK6FagORI=",
           "cache": "force-cache"
         }
       ],
       "hi": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.ltllrwipn9.wasm",
-          "integrity": "sha256-R8M5FO7ap27mKDt4eouQ8Lske/pnxreU1Wwd7zw8Q3I=",
+          "name": "MForce365.Shared.resources.s5zaq91r4r.wasm",
+          "integrity": "sha256-gL4BZHT90PxDHHgVIx92q9iijdeOZDYRDSQxVxBpYF4=",
           "cache": "force-cache"
         }
       ],
       "hu": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.on5mepmqu0.wasm",
-          "integrity": "sha256-3IeT7dk3slyFKRNIpudBRUnx5bzXYmP4Y7l6cLaPI90=",
+          "name": "MForce365.Shared.resources.k8j8gh9klc.wasm",
+          "integrity": "sha256-nGjhW5FDjASK2K+de36ltSDnX8FVn2zbZESOSMbKuyw=",
           "cache": "force-cache"
         }
       ],
       "id": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.vz2cehs2tv.wasm",
-          "integrity": "sha256-K4wPm1FFc04ZY0ZAzENV3/QOFcMpx09t3JLGUSEXlYI=",
+          "name": "MForce365.Shared.resources.4c7y0dbl9z.wasm",
+          "integrity": "sha256-XGI3KGZpbCvsrUz76y1HRWbYHqwXW2Dq7iNr5MIiQR8=",
           "cache": "force-cache"
         }
       ],
       "is": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.7a7y0az3ie.wasm",
-          "integrity": "sha256-oU45i0aVYbG/1CBMlGKZmxwy+v9D67ykEl9dldUpcw8=",
+          "name": "MForce365.Shared.resources.y6qshz3y8q.wasm",
+          "integrity": "sha256-Zr+xagbjalr5FrD/e/O4XAWM8HGiiY7SWiiIUepQA1c=",
           "cache": "force-cache"
         }
       ],
       "it": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.24q2nvrztw.wasm",
-          "integrity": "sha256-Tkyg9c1jHO6sk0oYWjl1VVuq5pglgddNeSdEGTWHtTc=",
+          "name": "MForce365.Shared.resources.zzvwzclwiz.wasm",
+          "integrity": "sha256-AZPFKyPgTZvaoeVtUWYsr8flTDlKN2b0kPoLFEtLF/4=",
           "cache": "force-cache"
         }
       ],
       "iw": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.xc9nd7c1w7.wasm",
-          "integrity": "sha256-38cIZQCNGDSuFRmAo61SzuszQT0aPknpt1UFovHapXA=",
+          "name": "MForce365.Shared.resources.dmz7y6s0hz.wasm",
+          "integrity": "sha256-61UwmGduCDPDe4as9yMzlzpMiVEcNHgy5hjByyeUknk=",
           "cache": "force-cache"
         }
       ],
       "ja": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.hub0hdv3pu.wasm",
-          "integrity": "sha256-Bw+z+lDY96K+EAfMt2q3R8ZSj6BilbyP4+mzTDWgyvc=",
+          "name": "MForce365.Shared.resources.t8hhtfwwfl.wasm",
+          "integrity": "sha256-c7W/wL5Zm0PcsXA7z73hj5qibdiTOTRPeCPl8AReiL4=",
           "cache": "force-cache"
         }
       ],
       "kn": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.5s6utvl13f.wasm",
-          "integrity": "sha256-1SagkCIE9y9+qBrXbJTxsrZA+gm+L6wA6lAY07Ys0B4=",
+          "name": "MForce365.Shared.resources.976vtbir6a.wasm",
+          "integrity": "sha256-26XvX4fVm8WSOPr/su7agsD3vj6+MPkVeZJwCTrTvTM=",
           "cache": "force-cache"
         }
       ],
       "ko": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.k8g4ki7rgq.wasm",
-          "integrity": "sha256-NHf1rMNLJU9FkMqYBHzJt+2l4e2sysHBF7E2LDVRhSo=",
+          "name": "MForce365.Shared.resources.9k8gtigczh.wasm",
+          "integrity": "sha256-WVSFa6nf+4wcy8TxMlMuVHicXwi94xA7hmmZ+uQcp5Y=",
           "cache": "force-cache"
         }
       ],
       "lo": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.ldowyi1ye3.wasm",
-          "integrity": "sha256-ab1r7tkpVHMaG1pu+/Vbukl+0h+XexZVniEMkBLYZBw=",
+          "name": "MForce365.Shared.resources.bz390ijwi8.wasm",
+          "integrity": "sha256-mctB7NSWPY6LGNZNFfRLPyi4OKoFZpj4pG74Xc3/rfc=",
           "cache": "force-cache"
         }
       ],
       "lv": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.gq61q1p71k.wasm",
-          "integrity": "sha256-qNmc7gP3J2KmjSK0PqJUE4NVt3J5jyWNivm8mcm6428=",
+          "name": "MForce365.Shared.resources.tcd3jxt3u7.wasm",
+          "integrity": "sha256-XQ0yogN5G9JqFDTsVhFDneBDn3OEiDWA2K9hqXDjlbw=",
           "cache": "force-cache"
         }
       ],
       "ms": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.ska2c3ieo7.wasm",
-          "integrity": "sha256-9EWw+gHLVw3r/b0HtZtuoRSJSCXnMomv4EJK6QZ9FtM=",
+          "name": "MForce365.Shared.resources.6t6xc4omb8.wasm",
+          "integrity": "sha256-uryT92vOS4wnrlaofOSs+Rb0kz7GJNC6R26Jw9zNv0k=",
           "cache": "force-cache"
         }
       ],
       "mt": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.qq44shcemc.wasm",
-          "integrity": "sha256-/k6Y+xJq4Ea1YDUfJuFNFU4YM6Vy2YzP+1xAqgNEb+A=",
+          "name": "MForce365.Shared.resources.p92eb04d46.wasm",
+          "integrity": "sha256-A5KqcAouSVmSixxei1sEzy3mXvw1FA1JslatmZv3zHM=",
           "cache": "force-cache"
         }
       ],
       "nl": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.8m9unxlrqn.wasm",
-          "integrity": "sha256-MDdFIGWF7vRgoFJzC/QPGEKRwASB9AVsw35MbAWTfQI=",
+          "name": "MForce365.Shared.resources.sjjsh82iwc.wasm",
+          "integrity": "sha256-CD2UbfSombT5EW2x/ijF4PZ99WZSyv56tSuYxryTpH8=",
           "cache": "force-cache"
         }
       ],
       "no": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.phbezeagbm.wasm",
-          "integrity": "sha256-rcz9109RT1ULMg2JpZhX7FmKW5mXLiS5ehXygpKh3nM=",
+          "name": "MForce365.Shared.resources.zb7lpiwv31.wasm",
+          "integrity": "sha256-oeb9QF2v//f52suWE2oRx0T5Ul+jDF7l0UA0nmBZVu0=",
           "cache": "force-cache"
         }
       ],
       "pl": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.mhai4jny66.wasm",
-          "integrity": "sha256-Zlq1ZdbJGJrZlsqT97d6TjzRVip7L0XYpTHvPsd8dGg=",
+          "name": "MForce365.Shared.resources.4htxvihq7i.wasm",
+          "integrity": "sha256-iFXccNupUCD/I43VnhuH71p6r63YuTy9oJ+PrcZycIo=",
           "cache": "force-cache"
         }
       ],
       "pt-BR": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.7aytx8w8ip.wasm",
-          "integrity": "sha256-zzMC/q8PXKQlP54/WjNcXmr2CJIi6hNawAV+auQLU+w=",
+          "name": "MForce365.Shared.resources.yn0muva0z2.wasm",
+          "integrity": "sha256-IvmDQfW+zADxx8D8tI4VZ1c8T1DP0YOnm3bo5Q3ligE=",
           "cache": "force-cache"
         }
       ],
       "pt-PT": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.c4tb8hv4x2.wasm",
-          "integrity": "sha256-1LsAQ2Wsyc+6lxjb/RN7Q7/L1jk7nSCRf6xusHa7WVY=",
+          "name": "MForce365.Shared.resources.scnlk2o19m.wasm",
+          "integrity": "sha256-hPrhKvTWU8OjEpQEaJVNIlycskNDkVoM+2Ro/jFyxPI=",
           "cache": "force-cache"
         }
       ],
       "ro": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.rsogvf1xr8.wasm",
-          "integrity": "sha256-dbNJbDc5IYaaqzdUP3nke+7GIxDZEmwRn0pVEHfst5I=",
+          "name": "MForce365.Shared.resources.6qoa9jrkva.wasm",
+          "integrity": "sha256-riBTRH6UT9dKcin4u9rbNaUp2EoKTnvYDbHCMV64P7o=",
           "cache": "force-cache"
         }
       ],
       "ru": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.cpyhbbsfhg.wasm",
-          "integrity": "sha256-8EAIQxP+z/c3HC8NyQyGWVvRVEUOEbo2cCPCOs8bjk4=",
+          "name": "MForce365.Shared.resources.b9urnbgnv2.wasm",
+          "integrity": "sha256-7xQmOA8hs3tnlQNX61jpBKBeSavA+/MvGGrAWEf837U=",
           "cache": "force-cache"
         }
       ],
       "sr": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.0oitp4can7.wasm",
-          "integrity": "sha256-wIxGSOA6TlUXHefbnt7y5vpYvKvt0v/kTaU+lKVVyuM=",
+          "name": "MForce365.Shared.resources.4xiezrbrs2.wasm",
+          "integrity": "sha256-SBYlTnzj2R8GhpE2Gg8GzgFxLzjXCej5wIqEdROMkBA=",
           "cache": "force-cache"
         }
       ],
       "sv": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.rmh4ylbxy9.wasm",
-          "integrity": "sha256-vQdEpF3uvpj0UjTCztdffamkvk/hD3c5pbGujM9HbEE=",
+          "name": "MForce365.Shared.resources.rjcfh749c8.wasm",
+          "integrity": "sha256-uWUe6k8vFrPDl73/yM58yT5UfVYLeQeAokxW49xi1Hc=",
           "cache": "force-cache"
         }
       ],
       "ta": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.va0njwka18.wasm",
-          "integrity": "sha256-R5Ros9i7n5t+Ng9o26m5YuCMQGMOM7JC8omGGbEWsdY=",
+          "name": "MForce365.Shared.resources.uclf973m5p.wasm",
+          "integrity": "sha256-3u4biuOKBAo0efm0GhXEgwZRpYKb0FfsN5p9AVBrmH8=",
           "cache": "force-cache"
         }
       ],
       "te": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.lqhwc2c9ck.wasm",
-          "integrity": "sha256-zfXgLoKBinMlvfb3Sdk4Vg2VE2vf+o2WUng3u/JO6Ck=",
+          "name": "MForce365.Shared.resources.5was5rasrw.wasm",
+          "integrity": "sha256-JTeEpKCp/WMQ6zc0ovD+Vt6jYr2OA8aM8/D6dfQIAjc=",
           "cache": "force-cache"
         }
       ],
       "th": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.179d3jmios.wasm",
-          "integrity": "sha256-zV60Nxs4ySlv1wNvlURRffG4b1NOd/jVC8wL6g5ckiM=",
+          "name": "MForce365.Shared.resources.0cijn4iw9j.wasm",
+          "integrity": "sha256-kApCtjfLVYFoYRmjjWqO3+vp0CDnCED8pTvDSpEeqFg=",
           "cache": "force-cache"
         }
       ],
       "tl": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.s0x2toginn.wasm",
-          "integrity": "sha256-rDANY3yuLkpecXOt5ChjoBu0PgEOuQJ8ZMgd52LiH8A=",
+          "name": "MForce365.Shared.resources.64h5zuaszh.wasm",
+          "integrity": "sha256-5sBwA/YyIc0eA8yEJOYMos6Bb9kBcBr9dTIMwppd8Y4=",
           "cache": "force-cache"
         }
       ],
       "tr": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.qsmrarfbs9.wasm",
-          "integrity": "sha256-1g0OxJMLHDqYZikiEgnKF9hYhGs5hbWyx+p6uVYs7G0=",
+          "name": "MForce365.Shared.resources.wsqq3xjp4z.wasm",
+          "integrity": "sha256-MIFRLaREjTE8rb6ckAom8nLrExJZ6M6qAOiG9cqmd88=",
           "cache": "force-cache"
         }
       ],
       "ur": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.97srqnms0o.wasm",
-          "integrity": "sha256-e8LSaSCd/GzdQF2aI+xCJtjvm1dg02O/SnTtxaaJRME=",
+          "name": "MForce365.Shared.resources.god9fekcuh.wasm",
+          "integrity": "sha256-gFQWPdKoYGJMqzCXKcari6v6zxEKOwBma7/3ju0kGF4=",
           "cache": "force-cache"
         }
       ],
       "vi": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.55io8om9tt.wasm",
-          "integrity": "sha256-J4b1iEPS3EKL5Y07DRbEgyz/xDEvciaGRIDdVSdmCzE=",
+          "name": "MForce365.Shared.resources.bwwd2a9g6p.wasm",
+          "integrity": "sha256-Nd4CQTpp8j6oUAPWRVzM5qUjOa1cRkKRlQGzVai+1cA=",
           "cache": "force-cache"
         }
       ],
       "yi": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.qfv0cnxl2y.wasm",
-          "integrity": "sha256-Jjd/TitMox9gxHglnCOLsu4IbmAq74WZ2AMXnR8gMuA=",
+          "name": "MForce365.Shared.resources.6zmqpgo8mg.wasm",
+          "integrity": "sha256-LpDwl4oukIWfmzCdY4ESMklzjmBQox3my+QiGHtl6VA=",
           "cache": "force-cache"
         }
       ],
       "zh-CN": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.tm710zxt6v.wasm",
-          "integrity": "sha256-G2fq2JR+rA7z2pXnPD0pj5uPeOcUxcI+JmXDKlex0zk=",
+          "name": "MForce365.Shared.resources.1r9eehsi7l.wasm",
+          "integrity": "sha256-3RpH6NYrnLxlDt/6b/8ZpO/FdeCd6Zeom4Nvi4hgCFQ=",
           "cache": "force-cache"
         }
       ],
       "zh-TW": [
         {
           "virtualPath": "MForce365.Shared.resources.wasm",
-          "name": "MForce365.Shared.resources.u3nybj0oiz.wasm",
-          "integrity": "sha256-esCQhPEO4RMnz7wLCJt8Oc9pKJ0Fk0PthgZi01zZoJM=",
+          "name": "MForce365.Shared.resources.04z2tbrppg.wasm",
+          "integrity": "sha256-QFdiDiTgusgqfaw+PS5fBqUITmCli/vMcSPPBfjMRm4=",
           "cache": "force-cache"
         }
       ]
