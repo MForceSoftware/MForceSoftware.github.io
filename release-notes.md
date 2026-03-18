@@ -1,4 +1,17 @@
 # mForce365 Release Notes
+## VERSION 1.4.215 Beta
+
+- Product walkthrough video documentation (`docs/product-walkthrough-video.md`, `docs/README.md`, `docs/development.md`, `docs/training-video-plan.md`, `docs/social-media-strategy.md`):
+  - Added a repository-backed brief for the flagship mForce365 walkthrough video so the original request in issue #233 now maps to a concrete, maintainable storyboard instead of a sparse backlog note and external example link.
+  - Defined the objective, target audience, required proof points, recommended runtime, segment-by-segment structure, narration spine, and production guardrails using only shipped product behavior already documented in the repo.
+  - Linked the new brief into the documentation index and the existing training-video/social-media guidance so future website, tutorial, and collateral updates stay aligned.
+  - Closes #233.
+- Tests:
+  - Added `MForce365.Web.Tests/ProductWalkthroughDocumentationTests.cs`.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
+
 ## VERSION 1.4.214 Beta
 
 - CRMme partner surface (`MForce365.Web/Pages/Partners.razor`, `MForce365.Web/Pages/Settings.razor`, `MForce365.Web/Shared/MainLayout.razor`, `MForce365.Shared/AppConfiguration.cs`, `MForce365.Web.Tests/PartnersFeatureTests.cs`, `docs/partners.md`, `docs/README.md`, `docs/development.md`):
@@ -29,8 +42,8 @@
   - Mapped each format to the existing repo-backed sales and partner documents, documented audience-specific USB contents, and kept print-vendor assets, pricing, contact lists, and distributable binaries out of source control.
   - Closes #257.
 - Validation:
-  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
-  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
 
 ## VERSION 1.4.211 Beta
 
