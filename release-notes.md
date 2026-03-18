@@ -1,10 +1,23 @@
 # mForce365 Release Notes
+## VERSION 1.4.195 Beta
+
+- Post-trial follow-up communication (`MForce365.Web/Services/WelcomeCommunicationService.cs`, `docs/authentication.md`, `docs/development.md`):
+  - Extended the in-app communication service from #81 so authenticated users now receive the requested expired-trial offer email 40 days after the stored welcome-send timestamp, matching the 10-days-post-trial-completion timing in the current client-only trial model.
+  - Added a dedicated browser-local marker under `mforce_post_trial_completion_email_v1:{stable-user-key}` so the follow-up offer is sent once per signed-in user per browser.
+  - Hardened the shared communication dedup flow by using a non-PII stable storage key fallback plus short-lived pending markers before sends, which reduces duplicate delivery across concurrent tabs.
+  - Closes #84.
+- Tests:
+  - Expanded `MForce365.Web.Tests/WelcomeCommunicationTests.cs` to cover timing, hashed fallback keys, pending-marker behavior, and the expired-trial offer copy.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln /p:SkipInvalidConfigurations=true`
+  - `dotnet test MForce365/MForce365.sln /p:SkipInvalidConfigurations=true`
+
 ## VERSION 1.4.194 Beta
 
 - Welcome communication for new users (`MForce365.Web/App.razor`, `MForce365.Web/Shared/WelcomeCommunicationBootstrapper.razor`, `MForce365.Web/Services/WelcomeCommunicationService.cs`, `docs/authentication.md`, `docs/development.md`):
   - Added a first-run welcome email for authenticated users using the existing Microsoft Graph delegated `Mail.Send` flow instead of introducing a separate Mailchimp integration in the WebAssembly client.
-  - The welcome communication is sent once per signed-in user per browser and tracked in browser `localStorage` under the `mforce_welcome_email_v1:{user}` key so routine navigation does not resend it.
-  - Uses Microsoft Graph `/me` profile data to address the message to the current signed-in account and gracefully skips repeated or failed sends without blocking the UI.
+  - The welcome communication is sent once per signed-in user per browser and tracked in browser `localStorage` under the `mforce_welcome_email_v1:{stable-user-key}` key so routine navigation does not resend it.
+  - Uses Microsoft Graph `/me` profile data to address the message to the current signed-in account and retries after failures rather than marking unsuccessful sends as complete.
   - Closes #81.
 - Monthly updates communication surface (`MForce.Components/MonthlyUpdatesCallout.razor`, `MForce.Components/PreLoginHomePage.razor`, `MForce365.Web/Pages/Index.razor`):
   - Added a shared monthly-updates panel that surfaces current release notes, latest news/blog links, video tutorials, and support guidance from official mForce channels.
