@@ -7,6 +7,13 @@
   - Added a task-focused category for personal productivity and action-item planning sessions without changing the existing event storage model or client-specific metadata behavior.
   - Closes #420.
 
+- Advanced meeting-notes AI prompt handoff (`MForce365.Shared/MeetingNotesAiPromptBuilder.cs`, `MForce.Components.Schedule/MeetingNotesCard.razor*`, `MForce365.Web/wwwroot/MForce365.js`, `docs/development.md`):
+  - Added an `AI prompt` action to the meeting notes card that builds a ChatGPT-ready prompt from the current meeting metadata, pre-meeting notes, captured notes, timeline items, agenda, decisions, action items, and parking-lot entries.
+  - The prompt is copied to the clipboard when the browser allows it and is also shown in an in-app fallback panel so users can still copy it manually if clipboard permissions are blocked.
+  - Kept the feature as a prompt-handoff flow instead of a direct OpenAI API call because the current Blazor WebAssembly app does not provide a secure server boundary for protecting third-party API secrets.
+  - Added regression coverage in `MForce365.Shared.Tests/MeetingNotesAiPromptBuilderTests.cs` and `MForce365.Web.Tests/MeetingNotesAiPromptTests.cs`.
+  - Closes #405.
+
 ## VERSION 1.4.222 Beta
 
 - Outlook add-in scaffold for issue `#338` (`MForce365.Web/Pages/OutlookAddin.razor`, `MForce365.Web/Shared/OutlookAddinLayout.razor`, `outlook/mforce365-outlook-addin-manifest.xml`, `docs/outlook-addin.md`, `docs/development.md`):
