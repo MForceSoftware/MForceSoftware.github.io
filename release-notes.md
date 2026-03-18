@@ -1,4 +1,14 @@
 # mForce365 Release Notes
+## VERSION 1.4.209 Beta
+
+- Sales data sheet documentation (`docs/sales-data-sheet.md`, `docs/README.md`, `docs/development.md`):
+  - Added a repository-backed mForce365 data sheet that summarizes product fit, Microsoft 365 alignment, key capabilities, and rollout guidance in a concise customer-facing format.
+  - Documented how to keep the data sheet public-safe and aligned with the existing battlecard and sales-deck collateral as the product evolves.
+  - Closes #186.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
+
 ## VERSION 1.4.208 Beta
 
 - Training video documentation (`docs/training-video-plan.md`, `docs/README.md`, `docs/development.md`, `docs/social-media-strategy.md`):
@@ -26,8 +36,8 @@
   - Added public-safe reseller benefits, partner onboarding/admin prerequisites, and proposal/RFP source-document guidance while keeping legal, commercial, and customer-specific material out of source control.
   - Closes #192.
 - Validation:
-  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipMauiWorkloadValidation=true -v minimal`
-  - `dotnet test MForce365/MForce365.sln -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
+  - `dotnet build MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
 
 ## VERSION 1.4.205 Beta
 
