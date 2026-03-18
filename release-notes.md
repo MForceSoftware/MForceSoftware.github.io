@@ -28,6 +28,15 @@
   - Added a task-focused category for personal productivity and action-item planning sessions without changing the existing event storage model or client-specific metadata behavior.
   - Closes #420.
 
+- Localized meeting summary send (`MForce.Components/SendList.razor`, `MForce.Components/SendList.razor.cs`, `MForce365.Shared/AttendeeSendList.cs`, `MForce365.Shared/MeetingSummary.cs`, `MForce365.Shared/MeetingSummaryLanguageCatalog.cs`, `MForce365.Web/Pages/Meeting.razor.cs`, `MForce.Pages/Pages/Meeting.razor.cs`, `MForce365.Shared/mForce365Strings.resx`, `MForce365.Shared.Tests/MeetingSummaryTests.cs`, `docs/development.md`):
+  - The send-summary dialog now captures a summary language per recipient using the set of languages already shipped in `mForce365Strings` resources.
+  - Meeting summary emails now localize generated labels and section headings, and they format dates, times, and duration against the selected recipient language while leaving user-authored meeting content unchanged.
+  - Added shared regression coverage for explicit language selection and parent-culture fallback behavior so variants like `fr-CA` resolve to the nearest shipped language.
+  - Closes #416.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+
 - Advanced meeting-notes AI prompt handoff (`MForce365.Shared/MeetingNotesAiPromptBuilder.cs`, `MForce.Components.Schedule/MeetingNotesCard.razor*`, `MForce365.Web/wwwroot/MForce365.js`, `docs/development.md`):
   - Added an `AI prompt` action to the meeting notes card that builds a ChatGPT-ready prompt from the current meeting metadata, pre-meeting notes, captured notes, timeline items, agenda, action items, and parking-lot entries.
   - The prompt is copied to the clipboard when the browser allows it and is also shown in an in-app fallback panel so users can still copy it manually if clipboard permissions are blocked.
