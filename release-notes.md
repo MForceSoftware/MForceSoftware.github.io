@@ -1,4 +1,14 @@
 # mForce365 Release Notes
+## VERSION 1.4.224 Beta
+
+- Registration licensing choices (`MForce365.Web/Pages/Authentication.razor`, `MForce365.Web/Pages/Authentication.razor.cs`, `MForce365.Web.Tests/AuthenticationPageTests.cs`, `docs/authentication.md`, `docs/development.md`):
+  - `/authentication/register` now lets new users choose between an individual license and a corporate license before continuing to Microsoft sign-in.
+  - Corporate registration captures a requested seat count, and the registration intent is stored in browser `localStorage` under `mforce_registration_intent_v1` so the choice survives the Microsoft sign-in handoff on the same browser.
+  - The flow keeps the existing Microsoft-account guidance intact for Outlook.com, Hotmail, Live, and Gmail-via-Microsoft-account onboarding instead of introducing a separate local account system or a partial billing backend.
+  - Refs #422.
+- Validation:
+  - `dotnet test MForce365/MForce365.sln`
+
 ## VERSION 1.4.223 Beta
 
 - Personal-use appointment categories (`MForce.Components.Schedule/AddAppointmentPage.razor`, `MForce.Components.Schedule/AddAppointmentPage.razor.cs`, `MForce.Components.Schedule.Tests/AddAppointmentMeetingMetadataTests.cs`, `MForce.Components.Schedule.Tests/AddAppointmentMeetingTypeCategoryTests.cs`, `docs/development.md`):
@@ -8,7 +18,7 @@
   - Closes #420.
 
 - Advanced meeting-notes AI prompt handoff (`MForce365.Shared/MeetingNotesAiPromptBuilder.cs`, `MForce.Components.Schedule/MeetingNotesCard.razor*`, `MForce365.Web/wwwroot/MForce365.js`, `docs/development.md`):
-  - Added an `AI prompt` action to the meeting notes card that builds a ChatGPT-ready prompt from the current meeting metadata, pre-meeting notes, captured notes, timeline items, agenda, decisions, action items, and parking-lot entries.
+  - Added an `AI prompt` action to the meeting notes card that builds a ChatGPT-ready prompt from the current meeting metadata, pre-meeting notes, captured notes, timeline items, agenda, action items, and parking-lot entries.
   - The prompt is copied to the clipboard when the browser allows it and is also shown in an in-app fallback panel so users can still copy it manually if clipboard permissions are blocked.
   - Kept the feature as a prompt-handoff flow instead of a direct OpenAI API call because the current Blazor WebAssembly app does not provide a secure server boundary for protecting third-party API secrets.
   - Added regression coverage in `MForce365.Shared.Tests/MeetingNotesAiPromptBuilderTests.cs` and `MForce365.Web.Tests/MeetingNotesAiPromptTests.cs`.
@@ -21,10 +31,10 @@
   - Added an add-in-only Outlook manifest for appointment-organizer compose surfaces that opens the task pane against the current local web host at `https://localhost:5204/outlook-addin`.
   - Kept the scaffold explicit about current limits: it provides the Outlook task-pane shell and sideloadable manifest, but it does not yet write directly into the active Outlook compose item.
   - Refs #338.
+
 - Validation:
   - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
   - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
-
 ## VERSION 1.4.221 Beta
 
 - Jira reporting solution brief (`MForce365.Web/Pages/JiraReportingSolution.razor`, `MForce365.Web/Shared/PublicLayout.razor`, `MForce.Components/PreLoginHomePage.razor`, `docs/jira-reporting-solution.md`, `docs/README.md`, `docs/development.md`):
@@ -39,6 +49,7 @@
 - Validation:
   - `dotnet build MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
   - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
+
 ## VERSION 1.4.220 Beta
 
 - Meeting conferencing-link support (`MForce.Components.Schedule/AddAppointmentPage*`, `MForce365.Shared/MForceAppointment.cs`, `MForce365.Shared/MeetingJoinUrlHelper.cs`, `MForce.Components.Schedule/MainSchedule.razor`, `MForce.Components.Schedule/ScheduleCard.razor.cs`, `MForce365.Web/Pages/Meeting.razor.cs`, `MForce365.Shared.Tests/MeetingJoinUrlHelperTests.cs`, `MForce365.Shared.Tests/MForceAppointmentComposeBodyTests.cs`, `MForce.Components.Schedule.Tests/AddAppointmentMeetingMetadataTests.cs`, `MForce.Components.Schedule.Tests/SchedulerJoinButtonTests.cs`, `MForce365.Web.Tests/MeetingOnlineMeetingDetailsTests.cs`, `docs/meeting-description.md`, `docs/development.md`):
@@ -1254,3 +1265,4 @@ Each added item and the resolved issue is mentioned below, with the most recent 
 While we are doing significant work, please refer to this [issue](https://github.com/MForceSoftware/Mforce365/issues/1896) for current status.
 - Action Item form: fixed the Status field to be editable for To‑Do tasks and aligned the Completed checkbox with the Status input for consistent layout. Closes #2341.
  - Files: Drag‑and‑drop in the Add File dialog now saves uploads into the Documents folder by default when you are at the meeting root. This ensures files appear under one of the three base folders (Meeting Notes, Documents, Correspondence) instead of the meeting root. Closes #2344.
+
