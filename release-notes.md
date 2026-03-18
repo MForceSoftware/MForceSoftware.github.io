@@ -1,4 +1,14 @@
 # mForce365 Release Notes
+## VERSION 1.4.203 Beta
+
+- Sales deck documentation (`docs/sales-slide-deck.md`, `docs/README.md`, `docs/development.md`):
+  - Added a repository-backed 30-slide sales deck outline for mForce365 so customer-facing presentation copy now lives in source control as maintainable Markdown instead of being trapped in an unavailable issue attachment.
+  - Documented how to keep future deck revisions aligned with shipped meeting, project, binder, and Microsoft 365 capabilities while keeping customer-specific data out of the repository.
+  - Closes #180.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln /p:SkipInvalidConfigurations=true`
+  - `dotnet test MForce365/MForce365.sln /p:SkipInvalidConfigurations=true`
+
 ## VERSION 1.4.201 Beta
 
 - Decision vote counts (`MForce.Components/AddDecision.razor`, `MForce.Components/MeetingDecisionsCard.razor*`, `MForce365.Shared/MForceMeeting.cs`, `MForce365.Shared/MeetingBinder.cs`, `MForce365.Web/Pages/Meeting.razor.cs`):
