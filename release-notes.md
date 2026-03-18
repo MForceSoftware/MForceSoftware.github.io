@@ -70,6 +70,17 @@
   - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
   - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
 
+## VERSION 1.4.222 Beta
+
+- Meeting assets localized document variants (`MForce.Components.Files/FileExplorer.razor`, `FileExplorer.razor.cs`, `FileExplorer.razor.css`, `MForce.Components.Files.Tests/FileExplorerTests.cs`, `MForce365.Shared/mForce365Strings.resx`, `docs/development.md`):
+  - Meeting assets now group translated copies of the same uploaded document when Microsoft 365 translation appends an ISO language suffix to the file name, reducing duplicate cards in the file grid.
+  - When a translated copy matches the current user's UI culture, the file card now surfaces an `Open local language` action first while still keeping the original document and any other translated copies available as explicit choices.
+  - Added regression coverage for language-variant grouping and for avoiding false positives on non-language suffixes such as version tags.
+  - Closes #415.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
+
 ## VERSION 1.4.217 Beta
 
 - Planner task notes in projects and action items (`MForce365.Shared/PlannerTaskDetailsGraphHelper.cs`, `MForce365.Shared/MForceActionItems.cs`, `MForce365.Shared/MForceTask.cs`, `MForce.Components.ActionItems/EditActionItem.razor.cs`, `MForce365.Web/Pages/Project.razor.cs`, `docs/projects.md`, `docs/development.md`):
