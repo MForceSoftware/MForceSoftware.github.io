@@ -11,14 +11,12 @@
   - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
 
 ## VERSION 1.4.224 Beta
-
-- Registration licensing choices (`MForce365.Web/Pages/Authentication.razor`, `MForce365.Web/Pages/Authentication.razor.cs`, `MForce365.Web.Tests/AuthenticationPageTests.cs`, `docs/authentication.md`, `docs/development.md`):
-  - `/authentication/register` now lets new users choose between an individual license and a corporate license before continuing to Microsoft sign-in.
-  - Corporate registration captures a requested seat count, and the registration intent is stored in browser `localStorage` under `mforce_registration_intent_v1` so the choice survives the Microsoft sign-in handoff on the same browser.
-  - The flow keeps the existing Microsoft-account guidance intact for Outlook.com, Hotmail, Live, and Gmail-via-Microsoft-account onboarding instead of introducing a separate local account system or a partial billing backend.
-  - Refs #422.
+- Registration licensing options (`MForce365.Web/Pages/Authentication.razor`, `MForce365.Web/Pages/Authentication.razor.cs`, `MForce365.Web.Tests/AuthenticationPageTests.cs`, `docs/authentication.md`, `docs/development.md`):
+  - `/authentication/register` now lets new users choose between an individual and a corporate license path before continuing to Microsoft sign-in.
+  - Corporate registration captures a requested seat count for team purchasing, and the selection is saved in browser `localStorage` under `mforce_registration_intent_v1` so the choice persists through the same-browser Microsoft sign-in handoff.
+  - Refs #425.
 - Validation:
-  - `dotnet test MForce365/MForce365.sln`
+  - `dotnet test MForce365/MForce365.sln -p:SkipMauiWorkloadValidation=true`
 
 ## VERSION 1.4.223 Beta
 
