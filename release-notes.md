@@ -1,4 +1,17 @@
 # mForce365 Release Notes
+## VERSION 1.4.199 Beta
+
+- Six-month "We've listened" communication (`MForce365.Web/App.razor`, `MForce365.Web/Shared/WeveListenedCommunicationBootstrapper.razor`, `MForce365.Web/Services/WeveListenedCommunicationService.cs`, `docs/authentication.md`, `docs/development.md`):
+  - Added a one-time product update email for authenticated users using the existing Microsoft Graph delegated `Mail.Send` flow in the WebAssembly client.
+  - The message greets the signed-in user by first name when profile data is available and summarizes recent improvements across meeting preparation, execution, recordings, binders, follow-up, and onboarding.
+  - Delivery is best-effort and browser-local deduplication is tracked under `mforce_weve_listened_email_2026_h1_v1:{stable-user-key}` with the same hashed fallback and pending-marker safeguards used by the existing welcome/trial communications.
+  - Closes #86.
+- Tests:
+  - Added `MForce365.Web.Tests/WeveListenedCommunicationTests.cs`.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipMauiWorkloadValidation=true` (0 warnings, 0 errors)
+  - `dotnet test MForce365/MForce365.sln -p:SkipMauiWorkloadValidation=true` (all tests passing)
+
 ## VERSION 1.4.198 Beta
 
 - New-user 15-day follow-up email (`MForce365.Web/Pages/Index.razor`, `MForce365.Web/Program.cs`, `MForce365.Web/Services/NewUserFollowUpService.cs`):
