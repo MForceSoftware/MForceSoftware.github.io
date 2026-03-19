@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.228 Beta
+
+- Connecting Up special-customer licensing tracking (`MForce365.Web/Pages/Licensing.razor`, `MForce365.Web/Pages/Licensing.razor.cs`, `MForce365.Web.Tests/LicensingPageTests.cs`, `docs/development.md`, `docs/reseller-pack.md`):
+  - Organization licensing records now capture acquisition channel and customer type so special-customer programs can be tracked directly from `/admin/licensing`.
+  - The licensing workspace now includes explicit `Connecting Up` tagging for eligible organizations without inventing a server-side billing or marketplace integration.
+  - Added a browser-local program summary callout so billing admins can see how many organizations are currently managed through the Connecting Up special-customer path.
+  - Refs #428.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
+
 ## VERSION 1.4.227 Beta
 
 - Enterprise registration seat-scale cleanup for issue `#429` (`MForce365.Web/Pages/Authentication.razor`, `MForce365.Web/Pages/Authentication.razor.cs`, `MForce365.Web.Tests/AuthenticationPageTests.cs`, `docs/authentication.md`, `docs/development.md`, `RELEASE.md`):
