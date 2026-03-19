@@ -6,9 +6,15 @@
   - Surfaced that upload link in both the QR/share dialog and the guest meeting page so someone who cannot attend can still upload files or notes for review without needing a new backend.
   - Added the `Participant Updates` folder to the meeting assets categories and persisted the upload-link metadata in meeting state so linked project capture views continue to carry the same share context.
   - Closes #472.
+- Vertical terminology overrides for issue `#471` (`MForce365.Shared/AppConfiguration.cs`, `MForce365.Web/Services/TerminologyService.cs`, `MForce365.Web/Program.cs`, `MForce365.Web/wwwroot/appsettings.json`, `MForce365.Web/Shared/NavMenu.razor`, `MForce365.Web/Shared/MainLayout.razor`, `MForce365.Web/Pages/Index.razor`, `MForce365.Web/Pages/Projects.razor`, `MForce365.Web/Pages/MeetingNotes.razor`, `MForce365.Web/Pages/MeetingParticipants.razor`, `MForce365.Web/Pages/MeetingRecordings.razor`, `MForce365.Web/Pages/MeetingActionItems.razor`, `MForce365.Web/Pages/Project.razor`, `MForce365.Web/Pages/ProjectStatus.razor`, `MForce365.Web/Pages/ActionItems.razor`, `MForce365.Web/Pages/Settings.razor`, `MForce365.Web/Pages/AdminMeetingSettings.razor`, `MForce365.Web/Components/AddActionItemDialog.razor*`, `MForce365.Web.Tests/TerminologyServiceTests.cs`, `docs/development.md`, `docs/README.md`):
+  - Added a config-backed `Terminology` section so the web client can relabel core `Meeting` and `Project` language for vertical-specific deployments without editing the shared `.resx` resources.
+  - Introduced `TerminologyService`, which preserves the localized fallback terms by default and applies configured replacements across key navigation labels, headings, dashboard cards, and related composed descriptions.
+  - Updated the meeting/project-facing web pages plus the action-item source labels, project-selection dialog, and meeting-settings administration headings so the renamed terminology stays consistent on the most visible web UI surfaces.
+  - Added regression coverage for the replacement logic and for the wiring from configuration into the affected Blazor pages.
+  - Closes #471.
 - Validation:
   - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
-  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
 
 ## VERSION 1.4.233 Beta
 
