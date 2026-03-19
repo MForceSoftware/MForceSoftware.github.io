@@ -1,4 +1,16 @@
 # mForce365 Release Notes
+## VERSION 1.4.233 Beta
+
+- Meeting settings administration for issue `#446` (`MForce365.Web/Pages/AdminMeetingSettings.razor`, `MForce365.Web/Pages/Administration.razor`, `MForce365.Web/Pages/Settings.razor`, `MForce365.Web/Shared/MainLayout.razor`, `MForce365.Web.Tests/AdministrationFeatureTests.cs`, `MForce365.Web.Tests/MeetingSettingsAdministrationPageTests.cs`, `MForce365.Web.Tests/MeetingSettingsOpenAiKeyTests.cs`, `docs/administration.md`, `docs/development.md`, `RELEASE.md`):
+  - Added a dedicated `/admin/meeting-settings` workspace for meeting behavior toggles, Meeting Binder branding, and browser-local OpenAI key management.
+  - Simplified the general `/settings` page into an administration launch surface with a new `Open meeting settings admin` entry point while keeping feature toggles in place.
+  - Updated the `/admin` hub so its meeting-settings card now opens the dedicated admin route instead of sending admins back through the general settings surface.
+  - Mapped `/admin/meeting-settings` into the existing Settings / Administration navigation handling and added regression coverage for the new route and moved OpenAI controls.
+  - Closes #446.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
+
 ## VERSION 1.4.232 Beta
 
 - Partner administration workspace (`MForce365.Web/Pages/Administration.razor`, `MForce365.Web/Pages/PartnerAdministration.razor`, `MForce365.Web/Pages/PartnerAdministration.razor.cs`, `MForce365.Web/Pages/Settings.razor`, `MForce365.Web/Shared/MainLayout.razor`, `MForce365.Web.Tests/AdministrationFeatureTests.cs`, `MForce365.Web.Tests/PartnerAdministrationPageTests.cs`, `docs/administration.md`, `docs/partners.md`, `docs/README.md`, `docs/development.md`):
