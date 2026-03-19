@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.231 Beta
+
+- Administration agendas entry point for issue `#445` (`MForce365.Web/Pages/AdminAgendas.razor`, `MForce365.Web/Pages/Administration.razor`, `MForce365.Web.Tests/AdminAgendasPageTests.cs`, `MForce365.Web.Tests/AdministrationFeatureTests.cs`, `docs/administration.md`, `docs/development.md`):
+  - Added a dedicated `/admin/agendas` page that reuses the existing agenda CRUD workflow inside the administration layout.
+  - Updated the administration hub so its agendas card now opens the dedicated admin route instead of the standard `/agendas` page.
+  - Kept agenda template storage in the signed-in user's OneDrive `mForce365/Agendas` folder and documented that the admin route does not add a second persistence model.
+  - Closes #445.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
+
 ## VERSION 1.4.230 Beta
 
 - Registration seat-scale guidance follow-up for issue `#422` (`MForce365.Web/Pages/Authentication.razor`, `MForce365.Web.Tests/AuthenticationPageTests.cs`, `docs/development.md`):
