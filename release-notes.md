@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.234 Beta
+
+- Meeting participant update upload links for issue `#472` (`MForce365.Web/Pages/Meeting.razor.cs`, `MForce365.Web/Pages/MeetingGuest.razor`, `MForce365.Web/Pages/QRCode.razor`, `MForce.Components.Files/FileExplorer.razor.cs`, `MForce365.Shared/MForceMeeting.cs`, `MForce365.Shared/IMeeting.cs`, `MForce365.Web/Pages/Project.razor.cs`, `MForce365.Web.Tests/MeetingParticipantUpdatesTests.cs`, `MForce365.Web.Tests/MeetingGuestQrCodeTests.cs`, `MForce365.Web.Tests/ProductionReadinessUxTests.cs`, `MForce.Components.Files.Tests/FileExplorerTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Extended the existing meeting guest-share flow so organizers now generate an anonymous OneDrive edit link for a dedicated `Participant Updates` folder inside the meeting assets workspace.
+  - Surfaced that upload link in both the QR/share dialog and the guest meeting page so someone who cannot attend can still upload files or notes for review without needing a new backend.
+  - Added the `Participant Updates` folder to the meeting assets categories and persisted the upload-link metadata in meeting state so linked project capture views continue to carry the same share context.
+  - Closes #472.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
+
 ## VERSION 1.4.233 Beta
 
 - Meeting invite invitation details for issue `#449` (`MForce.Components.Schedule/AddAppointmentPage.razor`, `MForce.Components.Schedule/AddAppointmentPage.razor.cs`, `MForce365.Shared/MForceAppointment.cs`, `MForce.Components.Schedule.Tests/AddAppointmentMeetingMetadataTests.cs`, `MForce.Components.Schedule.Tests/AddAppointmentMeetingTypeCategoryTests.cs`, `MForce365.Shared.Tests/MForceAppointmentComposeBodyTests.cs`, `docs/meeting-description.md`, `docs/development.md`):
