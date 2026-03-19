@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.227 Beta
+
+- Enterprise registration seat-scale cleanup for issue `#429` (`MForce365.Web/Pages/Authentication.razor`, `MForce365.Web/Pages/Authentication.razor.cs`, `MForce365.Web.Tests/AuthenticationPageTests.cs`, `docs/authentication.md`, `docs/development.md`, `RELEASE.md`):
+  - Fixed the registration code-behind constants so the bounded corporate seat slider compiles correctly and clamps persisted browser-local seat requests between 1 and 250 seats.
+  - Updated the register-page guidance and documentation to describe the bounded 1-to-250 enterprise seat range consistently.
+  - Extended the authentication page file-content tests to assert both slider bounds and clamp logic markers.
+  - Closes #429.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
+
 ## VERSION 1.4.226 Beta
 
 - Registration licensing options (`MForce365.Web/Pages/Authentication.razor`, `MForce365.Web/Pages/Authentication.razor.cs`, `MForce365.Web.Tests/AuthenticationPageTests.cs`, `docs/authentication.md`, `docs/development.md`):
@@ -25,6 +36,7 @@
 - Registration licensing options (`MForce365.Web/Pages/Authentication.razor`, `MForce365.Web/Pages/Authentication.razor.cs`, `MForce365.Web.Tests/AuthenticationPageTests.cs`, `docs/authentication.md`, `docs/development.md`):
   - `/authentication/register` now lets new users choose between an individual and a corporate license path before continuing to Microsoft sign-in.
   - Corporate registration captures a requested seat count for team purchasing, and the selection is saved in browser `localStorage` under `mforce_registration_intent_v1` so the choice persists through the same-browser Microsoft sign-in handoff.
+  - Corporate registration now uses a bounded enterprise seat slider so teams can request corporate scale directly before handoff into Microsoft sign-in.
   - Refs #425.
 - Validation:
   - `dotnet test MForce365/MForce365.sln -p:SkipMauiWorkloadValidation=true`
