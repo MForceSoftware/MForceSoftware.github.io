@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.229 Beta
+
+- Administration hub for issue `#442` (`MForce365.Web/Pages/Administration.razor`, `MForce365.Web/Pages/Settings.razor`, `MForce365.Web/Shared/MainLayout.razor`, `MForce365.Web.Tests/AdministrationFeatureTests.cs`, `MForce365.Web.Tests/LicensingPageTests.cs`, `docs/administration.md`, `docs/README.md`, `docs/development.md`):
+  - Added a dedicated `/admin` page that acts as a single administration entry point for the existing licensing, partners, agendas, and meeting settings surfaces in the Blazor WebAssembly client.
+  - Wired the existing `Administration` configuration flag into the main navigation so the hub can be surfaced explicitly without inventing a second set of admin-specific CRUD screens.
+  - Added an `Open administration` action in Settings and kept the hub intentionally lightweight by routing disabled feature areas back to Settings for enablement.
+  - Refs #442.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
+
 ## VERSION 1.4.228 Beta
 
 - Connecting Up special-customer licensing tracking (`MForce365.Web/Pages/Licensing.razor`, `MForce365.Web/Pages/Licensing.razor.cs`, `MForce365.Web.Tests/LicensingPageTests.cs`, `docs/development.md`, `docs/reseller-pack.md`):
