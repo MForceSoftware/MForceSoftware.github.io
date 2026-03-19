@@ -23,6 +23,11 @@
   - Updated the `/admin` hub so its meeting-settings card now opens the dedicated admin route instead of sending admins back through the general settings surface.
   - Mapped `/admin/meeting-settings` into the existing Settings / Administration navigation handling and added regression coverage for the new route and moved OpenAI controls.
   - Closes #446.
+- Scheduler merged shared-calendar overlays for issue `#447` (`MForce.Components.Schedule/MainSchedule.razor`, `MForce.Components.Schedule/MainSchedule.razor.css`, `MForce.Components.Schedule/ScheduleFunctions.cs`, `MForce365.Shared/MForceAppointment.cs`, `MForce.Components.Schedule.Tests/MainScheduleMergedScheduleTests.cs`, `MForce.Components.Schedule.Tests/ScheduleFunctionsTests.cs`, `docs/development.md`):
+  - The main `/scheduler` view now accepts multiple comma-, semicolon-, or line-separated email addresses so users can overlay shared schedules directly on the same calendar.
+  - Additional schedules load through Microsoft Graph `me/calendar/getSchedule` and render as read-only blocks, which keeps the signed-in user's own meetings editable while preventing accidental navigation or drag-resize changes on merged overlays.
+  - Added regression coverage for the new scheduler controls, read-only merged-block behavior, and the `getSchedule` request shape.
+  - Closes #447.
 - Validation:
   - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
   - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
