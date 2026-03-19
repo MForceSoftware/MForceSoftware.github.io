@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.232 Beta
+
+- Partner administration workspace (`MForce365.Web/Pages/Administration.razor`, `MForce365.Web/Pages/PartnerAdministration.razor`, `MForce365.Web/Pages/PartnerAdministration.razor.cs`, `MForce365.Web/Pages/Settings.razor`, `MForce365.Web/Shared/MainLayout.razor`, `MForce365.Web.Tests/AdministrationFeatureTests.cs`, `MForce365.Web.Tests/PartnerAdministrationPageTests.cs`, `docs/administration.md`, `docs/partners.md`, `docs/README.md`, `docs/development.md`):
+  - Added a dedicated `/admin/partners` administration workspace so the old Administration: Partners backlog item now maps to a concrete internal web surface instead of only the public-facing CRMme partner hub.
+  - Kept the workspace browser-local, using `mforce_partner_admin_v1`, so it matches the app's existing lightweight administration pattern without implying a shipped server-backed partner portal or CRM integration.
+  - Added Settings entry points for `Open partner admin` and `Open partner hub`, mapped `/admin/partners` into the existing Settings navigation state, and wired the new `/admin` hub to open the partner administration workspace rather than the public partner page.
+  - Closes #444.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
+
 ## VERSION 1.4.231 Beta
 
 - Administration agendas entry point for issue `#445` (`MForce365.Web/Pages/AdminAgendas.razor`, `MForce365.Web/Pages/Administration.razor`, `MForce365.Web.Tests/AdminAgendasPageTests.cs`, `MForce365.Web.Tests/AdministrationFeatureTests.cs`, `docs/administration.md`, `docs/development.md`):
