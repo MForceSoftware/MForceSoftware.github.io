@@ -1,4 +1,14 @@
 # mForce365 Release Notes
+## VERSION 1.4.230 Beta
+
+- Registration seat-scale guidance follow-up for issue `#422` (`MForce365.Web/Pages/Authentication.razor`, `MForce365.Web.Tests/AuthenticationPageTests.cs`, `docs/development.md`):
+  - Clarified the bounded corporate-seat helper text on `/authentication/register` so the UI no longer implies unsupported seat counts outside the 1-to-250 slider range.
+  - Updated the registration source-assertion test to lock the corrected helper guidance in place.
+  - Kept the developer documentation aligned with the shipped behavior by noting that the requested seat count can still be adjusted later in licensing administration.
+  - Refs #422.
+- Validation:
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 --blame-hang --blame-hang-timeout 5m -v minimal`
+
 ## VERSION 1.4.229 Beta
 
 - Administration hub for issue `#442` (`MForce365.Web/Pages/Administration.razor`, `MForce365.Web/Pages/Settings.razor`, `MForce365.Web/Shared/MainLayout.razor`, `MForce365.Web.Tests/AdministrationFeatureTests.cs`, `MForce365.Web.Tests/LicensingPageTests.cs`, `docs/administration.md`, `docs/README.md`, `docs/development.md`):
