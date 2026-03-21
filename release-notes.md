@@ -1,6 +1,11 @@
 # mForce365 Release Notes
 ## VERSION 1.4.235 Beta
 
+- Meeting invite pre-meeting work for issue `#920` (`MForce.Components.Schedule/AddAppointmentPage.razor`, `MForce365.Shared/MForceAppointment.cs`, `MForce365.Shared.Tests/MForceAppointmentComposeBodyTests.cs`, `MForce.Components.Schedule.Tests/AddAppointmentMeetingMetadataTests.cs`, `docs/meeting-description.md`, `docs/development.md`, `RELEASE.md`):
+  - Added a dedicated `Pre-meeting notes` field to the Add Meeting invite flow so organizers can call out reading, preparation, or action items attendees should complete before the meeting.
+  - Updated invite-body composition so pre-meeting work is emitted as structured metadata in both text and HTML bodies near the top of the invitation instead of being buried in the generic details block.
+  - Added regression coverage for the new textarea wiring and for the generated invite-body output.
+  - Closes #920.
 - Channel / reseller pricing-baseline alignment for issue `#500` (`MForce365.Web/Pages/PartnerAdministration.razor`, `MForce365.Web/Pages/PartnerAdministration.razor.cs`, `MForce365.Web.Tests/PartnerAdministrationPageTests.cs`, `docs/partners.md`, `docs/reseller-pack.md`, `docs/development.md`, `RELEASE.md`):
   - Updated `/admin/partners` to mirror the shared `Team`, `Professional`, and `Enterprise` pricing tiers so reseller and channel conversations start from the same shipped baseline used by `/admin/licensing`.
   - Reinforced the commercial guardrail across the partner workspace and partner-facing documentation so margins, commissions, discounts, and negotiated reseller terms still stay outside the repository and outside browser-local storage.
