@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.254 Beta
+
+- Meeting visual browser for issue `#1565` (`MForce.Components.Files/FileExplorer.razor`, `MForce.Components.Files/FileExplorer.razor.cs`, `MForce.Components.Files/FileExplorer.razor.css`, `MForce.Components.Files/FileUploadDialog.razor`, `MForce.Components.Files.Tests/FileExplorerTests.cs`, `MForce365.Shared/mForce365Strings.resx`, `docs/development.md`, `RELEASE.md`):
+  - Added a `Meeting Visual Browser` area to the meeting assets flow so each meeting now provisions category folders for `Project`, `Participants`, `Agendas`, `Decisions`, and `Action Items` under the same OneDrive-backed meeting workspace.
+  - The meeting root now renders an album-style gallery that aggregates image files from those categories and lets users filter the visible visuals by meeting area without leaving the meeting page.
+  - Kept the implementation storage-safe for the Blazor WebAssembly client: visuals remain ordinary Microsoft 365 files, and the gallery reads those files instead of introducing a second image persistence model onto meeting entities.
+  - Closes #1565.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
+
 ## VERSION 1.4.253 Beta
 
 - Linked action-item workflow handoff for issue `#1506` (`MForce365.Shared/ActionItemSourceContextMetadataFormatter.cs`, `MForce365.Shared/MeetingActionItemOrganizerNotification.cs`, `MForce365.Shared/MForceTask.cs`, `MForce365.Web/Components/AddActionItemDialog*`, `MForce365.Web/Pages/ActionItem*`, `MForce.Components.ActionItems/AddActionItem*`, `MForce.Components.ActionItems/EditActionItem*`, `MForce.Components.ActionItems/ActionItemsList.razor.cs`, `MForce.Components.ActionItems/MeetingActionItemsCard*`, `MForce365.Shared.Tests/MeetingActionItemOrganizerNotificationTests.cs`, `MForce365.Shared.Tests/ActionItemSourceContextMetadataFormatterTests.cs`, `MForce365.Web.Tests/ActionItemCompletionNotificationTests.cs`, `MForce.Components.ActionItems.Tests/ActionItemsListCompletionNotificationTests.cs`, `docs/development.md`, `RELEASE.md`):
@@ -11,7 +22,6 @@
 - Validation:
   - `dotnet build MForce365/MForce365.sln --warnaserror -v minimal`
   - `dotnet test MForce365/MForce365.sln -v minimal`
-
 ## VERSION 1.4.252 Beta
 
 - Brandlistverse press-release collateral for issue `#1431` (`docs/brandlistverse-press-release.md`, `docs/README.md`, `docs/development.md`, `RELEASE.md`):
@@ -19,7 +29,6 @@
   - Rewrote the draft around currently verified product messaging and explicitly marked older launch, app-store, and media-placement claims as re-verification items before publication.
   - Updated the documentation index and development guidance so future marketing updates know where to maintain this collateral.
   - Closes #1431.
-
 - Validation:
   - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
   - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
@@ -32,7 +41,6 @@
   - Documented the related social-channel guidance in `docs/social-media-strategy.md` and recorded the developer guardrail that `brandlistverse.com` should not be hard-linked until a stable public URL is available.
   - Added regression coverage to keep the media-mentions copy and its website placement anchored in the pre-login and public-layout surfaces.
   - Closes #1432.
-
 ## VERSION 1.4.250 Beta
 
 - Must-have positioning refresh for issue `#1425` (`MForce.Components/PreLoginHomePage.razor`, `MForce365.Web.Tests/PreLoginMustHavePositioningTests.cs`, `MForce365.Web.Tests/SalesCollateralPositioningTests.cs`, `docs/sales-battlecard.md`, `docs/sales-data-sheet.md`, `docs/README.md`, `docs/development.md`, `RELEASE.md`):
