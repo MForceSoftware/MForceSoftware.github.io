@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.273 Beta
+
+- Meeting settings merged shared-calendar defaults for issue `#2572` (`MForce365.Shared/MergedSchedulePreferences.cs`, `MForce.Components.Schedule/MainSchedule.razor`, `MForce.Components.Schedule.Tests/MainScheduleMergedScheduleTests.cs`, `MForce365.Web/Pages/AdminMeetingSettings.razor`, `MForce365.Web/Pages/Administration.razor`, `MForce365.Web.Tests/MeetingScheduleOverlaySettingsTests.cs`, `docs/administration.md`, `docs/development.md`, `RELEASE.md`):
+  - Added a shared browser-local merged-schedule preference contract so the main scheduler can restore saved shared-calendar overlays by default and sync its Apply/Clear actions back to the same setting.
+  - Extended `/admin/meeting-settings` with a `Calendar overlays` section that validates additional calendar email addresses, lets admins save or clear them for the current browser, and provides an `Open merged calendar` shortcut into `/scheduler`.
+  - Updated the administration copy, release notes, and focused regression coverage so the meeting-settings surface now documents and tests the same merged-calendar behavior already available in the scheduler.
+  - Closes #2572.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
+
 ## VERSION 1.4.272 Beta
 
 - Meeting Loop linking for issue `#2467` (`MForce365.Shared/IMeeting.cs`, `MForce365.Shared/MForceMeeting.cs`, `MForce365.Shared/MeetingLoopLink.cs`, `MForce365.Shared/LoopGraphHelper.cs`, `MForce.Components.Projects/MeetingLoopCard.razor`, `MForce.Components.Projects/MeetingLoopCard.razor.cs`, `MForce.Components.Projects/MeetingLoopCard.razor.css`, `MForce.Components.Projects/LoopChooser.razor`, `MForce.Components.Projects/LoopChooser.razor.cs`, `MForce365.Web/Pages/Meeting.razor`, `MForce365.Web/Pages/Meeting.razor.cs`, `MForce365.Web/Pages/MeetingGuest.razor`, `MForce365.Web/Pages/Project.razor.cs`, `MForce365.Shared/mForce365Strings.resx`, `MForce365.Shared.Tests/LoopGraphHelperTests.cs`, `MForce.Components.Projects.Tests/MeetingLoopCardTests.cs`, `MForce.Components.Projects.Tests/LoopChooserTests.cs`, `MForce365.Web.Tests/MeetingLoopIntegrationTests.cs`, `docs/development.md`, `RELEASE.md`):
