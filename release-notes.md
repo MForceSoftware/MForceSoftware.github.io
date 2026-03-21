@@ -1,4 +1,14 @@
 # mForce365 Release Notes
+## VERSION 1.4.277 Beta
+
+- Merge schedules add-button label for issue `#2573` (`MForce.Components.Schedule/MainSchedule.razor`, `MForce.Components.Schedule.Tests/MainScheduleMergedScheduleTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Updated the Scheduler page's primary merged-calendar action label from `Apply` to `Add` so the control matches the issue request and the adjacent `Clear` button layout shown in the attachment.
+  - Extended the existing merged-schedule regression coverage to assert that the action markup keeps the explicit `Add` label in place.
+  - Closes #2573.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
+
 ## VERSION 1.4.276 Beta
 
 - Editable About Me details for issue `#2578` (`MForce365.Web/Components/EditableAboutMeCard.razor`, `MForce365.Web/Components/EditableAboutMeCard.razor.cs`, `MForce365.Web/Components/EditableAboutMeCard.razor.css`, `MForce365.Web/Components/EditAboutMeDialog.razor`, `MForce365.Web/Components/EditableAboutMeProfile.cs`, `MForce365.Web/Pages/Index.razor`, `MForce365.Web.Tests/EditableAboutMeCardTests.cs`, `docs/development.md`, `RELEASE.md`):
@@ -29,7 +39,6 @@
 - Validation:
   - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
   - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
-
 ## VERSION 1.4.274 Beta
 
 - Meeting toolbar running-actions label fix for issue `#2575` (`MForce365.Web/Pages/Meeting.razor`, `MForce.Pages/Pages/Meeting.razor`, `MForce365.Web.Tests/MeetingQuickActionStateTests.cs`, `docs/development.md`, `RELEASE.md`):
