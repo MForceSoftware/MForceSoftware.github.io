@@ -1,4 +1,17 @@
 # mForce365 Release Notes
+## VERSION 1.4.253 Beta
+
+- Linked action-item workflow handoff for issue `#1506` (`MForce365.Shared/ActionItemSourceContextMetadataFormatter.cs`, `MForce365.Shared/MeetingActionItemOrganizerNotification.cs`, `MForce365.Shared/MForceTask.cs`, `MForce365.Web/Components/AddActionItemDialog*`, `MForce365.Web/Pages/ActionItem*`, `MForce.Components.ActionItems/AddActionItem*`, `MForce.Components.ActionItems/EditActionItem*`, `MForce.Components.ActionItems/ActionItemsList.razor.cs`, `MForce.Components.ActionItems/MeetingActionItemsCard*`, `MForce365.Shared.Tests/MeetingActionItemOrganizerNotificationTests.cs`, `MForce365.Shared.Tests/ActionItemSourceContextMetadataFormatterTests.cs`, `MForce365.Web.Tests/ActionItemCompletionNotificationTests.cs`, `MForce.Components.ActionItems.Tests/ActionItemsListCompletionNotificationTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Meeting-linked action items now support an optional `Next linked action item` plus an optional `Notify when complete` email recipient across the main web action-item page, the meeting add dialog, and the shared action-item add/edit flows.
+  - Those workflow fields are persisted as hidden action-item metadata for both Microsoft To Do and Planner-backed tasks, so the linkage survives reloads without exposing system markers in the editable task body.
+  - When a precursor action item newly transitions to `Completed`, the standalone action-item page, the shared edit dialog, and the shared action-items list toggle now send a best-effort workflow handoff email to the configured recipient while preserving the existing organizer-notification behavior.
+  - Meeting action-item cards and structured meeting notes now surface the recorded next action item so the follow-on work is visible in the meeting workspace as well as the email notification.
+  - Added regression coverage for workflow metadata round-tripping, workflow completion emails, the new UI fields, and the shared list completion path.
+  - Closes #1506.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln --warnaserror -v minimal`
+  - `dotnet test MForce365/MForce365.sln -v minimal`
+
 ## VERSION 1.4.252 Beta
 
 - Brandlistverse press-release collateral for issue `#1431` (`docs/brandlistverse-press-release.md`, `docs/README.md`, `docs/development.md`, `RELEASE.md`):
