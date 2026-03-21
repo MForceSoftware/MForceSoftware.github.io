@@ -1,4 +1,14 @@
 # mForce365 Release Notes
+## VERSION 1.4.274 Beta
+
+- Meeting toolbar running-actions label fix for issue `#2575` (`MForce365.Web/Pages/Meeting.razor`, `MForce.Pages/Pages/Meeting.razor`, `MForce365.Web.Tests/MeetingQuickActionStateTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Replaced the running-meeting command trigger label from `In meeting` to the generic localized `Actions` label and updated the icon to `menu`, so the command trigger no longer duplicates or visually collides with the separate phase/status button when meetings are running or paused.
+  - Applied the same trigger-label change across both meeting page implementations and added regression coverage to keep the running command menu generic in future edits.
+  - Closes #2575.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
+
 ## VERSION 1.4.273 Beta
 
 - Meeting settings merged shared-calendar defaults for issue `#2572` (`MForce365.Shared/MergedSchedulePreferences.cs`, `MForce.Components.Schedule/MainSchedule.razor`, `MForce.Components.Schedule.Tests/MainScheduleMergedScheduleTests.cs`, `MForce365.Web/Pages/AdminMeetingSettings.razor`, `MForce365.Web/Pages/Administration.razor`, `MForce365.Web.Tests/MeetingScheduleOverlaySettingsTests.cs`, `docs/administration.md`, `docs/development.md`, `RELEASE.md`):
