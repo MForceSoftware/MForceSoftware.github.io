@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.242 Beta
+
+- Participant contact-name suggestions for issue `#824` (`MForce.Components.Schedule/AddParticipant.razor`, `MForce.Components.Schedule/AddParticipant.razor.cs`, `MForce.Components.Schedule.Tests/AddParticipantBehaviorTests.cs`, `MForce365.Shared/mForce365Strings.resx`, `docs/development.md`, `RELEASE.md`):
+  - Added a contact-name suggestion field to the shared Add Participant dialog so organizers can type a saved contact name and have the participant email filled from Microsoft Graph contacts.
+  - Kept manual email entry intact and added a safe fallback path so contact lookup failures do not block adding participants by email.
+  - Pending participants selected from contacts now keep their saved display name in the Participants list until meeting invites are sent and attendee details round-trip through Microsoft Graph.
+  - Closes #824.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln --no-build -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+
 ## VERSION 1.4.241 Beta
 
 - Dashboard quick meeting shortcut for issue `#764` (`MForce365.Web/Pages/Index.razor`, `MForce365.Shared/mForce365Strings.resx`, `MForce365.Web.Tests/DashboardQuickMeetingTests.cs`, `docs/development.md`, `RELEASE.md`):
