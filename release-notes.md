@@ -1,6 +1,13 @@
 # mForce365 Release Notes
 ## VERSION 1.4.282 Beta
 
+- Meeting cost currency and debug-copy cleanup for issue `#2658` (`MForce365.Shared/CurrencyCultureResolver.cs`, `MForce365.Shared/MeetingBinder.cs`, `MForce365.Shared/MeetingBinderCostSummary.cs`, `MForce365.Shared.Tests/CurrencyCultureResolverTests.cs`, `MForce365.Shared.Tests/MeetingBinderBuilderTests.cs`, `MForce365.Shared.Tests/MeetingCostSummaryBuilderTests.cs`, `MForce365.Web/Pages/Meeting.razor.cs`, `MForce365.Web/Pages/MeetingCostBinderPreferences.cs`, `MForce365.Web/Pages/Settings.razor`, `MForce365.Web/Pages/Settings.razor.cs`, `MForce365.Web/wwwroot/MForce365.js`, `MForce365.Web.Tests/MeetingCostBinderSettingsTests.cs`, `MForce365.Web.Tests/ReleaseNotesPageTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Expanded the browser-local meeting-cost preference payload to retain the organizer's browser culture alongside the saved hourly rate and binder toggle, so the settings field and generated binder cost section no longer fall back to the wrong default currency.
+  - Updated the web Settings page to format the hourly-rate input with the detected browser culture and removed the storage-key implementation detail from the user-facing helper copy.
+  - Added focused regression coverage for browser-culture resolution and binder meeting-cost formatting so the organizer's saved currency path stays locked in.
+  - Normalized the release-notes parser regression assertion to compare newline-agnostic content so the existing web test stays stable on Windows while the full solution validation runs for this issue.
+  - Closes #2658.
+
 - Meeting toolbar `Actions` overlap fix for issue `#2655` (`MForce365.Web/Pages/Meeting.razor.css`, `MForce365.Web.Tests/MeetingDashboardLayoutTests.cs`, `docs/development.md`, `RELEASE.md`):
   - Changed the web meeting toolbar grid so the `Actions` command shell sizes to its content while the quick-action strip takes the flexible column, preventing the command label from collapsing into the adjacent phase button at medium desktop widths around the reported `1200px` range.
   - Added focused regression coverage for the content-sized command-menu column and the top-aligned toolbar row so the overlap does not regress when the meeting header layout is adjusted again.

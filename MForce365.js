@@ -1,4 +1,4 @@
-﻿window.getWindowDimensions = function () {
+window.getWindowDimensions = function () {
     return {
         width: window.innerWidth,
         height: window.innerHeight
@@ -60,6 +60,18 @@ window.mforce365.copyTextToClipboard = async function (text) {
     } finally {
         document.body.removeChild(textArea);
     }
+};
+
+window.mforce365.getBrowserCulture = function () {
+    if (navigator.languages && navigator.languages.length > 0) {
+        for (const language of navigator.languages) {
+            if (language) {
+                return language;
+            }
+        }
+    }
+
+    return navigator.language || Intl.DateTimeFormat().resolvedOptions().locale || "";
 };
 
 window.mforce365.tryAcquireNewUserFollowUpLock = function (storageKey, lockId, lockExpiresAtUtc) {
