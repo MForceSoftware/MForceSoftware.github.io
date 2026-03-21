@@ -1,4 +1,16 @@
 # mForce365 Release Notes
+## VERSION 1.4.252 Beta
+
+- Brandlistverse press-release collateral for issue `#1431` (`docs/brandlistverse-press-release.md`, `docs/README.md`, `docs/development.md`, `RELEASE.md`):
+  - Added a repository-backed earned-media brief for the Brandlistverse outreach thread so the release copy, claim guardrails, and spokesperson Q&A prompts are maintained in source control instead of living only in old issue comments.
+  - Rewrote the draft around currently verified product messaging and explicitly marked older launch, app-store, and media-placement claims as re-verification items before publication.
+  - Updated the documentation index and development guidance so future marketing updates know where to maintain this collateral.
+  - Closes #1431.
+
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
+
 ## VERSION 1.4.251 Beta
 
 - Public website media mentions for issue `#1432` (`MForce.Components/MediaMentionsStrip.razor`, `MForce.Components/MediaMentionsStrip.razor.css`, `MForce.Components/PreLoginHomePage.razor`, `MForce365.Web/Shared/PublicLayout.razor`, `MForce365.Web.Tests/MediaMentionsStripTests.cs`, `docs/development.md`, `docs/social-media-strategy.md`, `RELEASE.md`):
