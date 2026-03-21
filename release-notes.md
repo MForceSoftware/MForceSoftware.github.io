@@ -13,6 +13,11 @@
 
 ## VERSION 1.4.234 Beta
 
+- Meeting upload notification links for issue `#919` (`MForce.Components.Files/FileExplorer.razor.cs`, `MForce.Components.Files.Tests/FileExplorerUploadNotificationTests.cs`, `MForce365.Web/Pages/Meeting.razor.cs`, `MForce.Pages/Pages/Meeting.razor.cs`, `MForce365.Web.Tests/MeetingParticipantUpdatesTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Updated the meeting-assets upload callback to pass the uploaded Microsoft Graph `DriveItem` records through to the meeting pages instead of only the file names.
+  - Uploaded-file participant notifications now render direct OneDrive links when Graph provides a `WebUrl`, so attendees can open newly shared documents from the email instead of manually finding them in the meeting assets workspace.
+  - Preserved the existing filename-only fallback when a browser link is not available from Graph.
+  - Closes #919.
 - Meeting participant update upload links for issue `#472` (`MForce365.Web/Pages/Meeting.razor.cs`, `MForce365.Web/Pages/MeetingGuest.razor`, `MForce365.Web/Pages/QRCode.razor`, `MForce.Components.Files/FileExplorer.razor.cs`, `MForce365.Shared/MForceMeeting.cs`, `MForce365.Shared/IMeeting.cs`, `MForce365.Web/Pages/Project.razor.cs`, `MForce365.Web.Tests/MeetingParticipantUpdatesTests.cs`, `MForce365.Web.Tests/MeetingGuestQrCodeTests.cs`, `MForce365.Web.Tests/ProductionReadinessUxTests.cs`, `MForce.Components.Files.Tests/FileExplorerTests.cs`, `docs/development.md`, `RELEASE.md`):
   - Extended the existing meeting guest-share flow so organizers now generate an anonymous OneDrive edit link for a dedicated `Participant Updates` folder inside the meeting assets workspace.
   - Surfaced that upload link in both the QR/share dialog and the guest meeting page so someone who cannot attend can still upload files or notes for review without needing a new backend.
