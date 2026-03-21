@@ -12,6 +12,11 @@
 
 ## VERSION 1.4.235 Beta
 
+- Meeting invite agenda items for issue `#917` (`MForce.Components.Schedule/AddAppointmentPage.razor`, `MForce365.Shared/MForceAppointment.cs`, `MForce365.Shared.Tests/MForceAppointmentComposeBodyTests.cs`, `MForce.Components.Schedule.Tests/AddAppointmentMeetingMetadataTests.cs`, `docs/meeting-description.md`, `docs/development.md`, `RELEASE.md`):
+  - Added a dedicated `Agenda` field to the Add Meeting invite flow so organizers can list the main topics attendees should expect to cover.
+  - Updated invite-body composition so agenda items are emitted as structured metadata in both text and HTML bodies near the top of the invitation instead of being buried in the generic details block.
+  - Added regression coverage for the new textarea wiring and for the generated invite-body output.
+  - Closes #917.
 - Meeting invite pre-meeting work for issue `#920` (`MForce.Components.Schedule/AddAppointmentPage.razor`, `MForce365.Shared/MForceAppointment.cs`, `MForce365.Shared.Tests/MForceAppointmentComposeBodyTests.cs`, `MForce.Components.Schedule.Tests/AddAppointmentMeetingMetadataTests.cs`, `docs/meeting-description.md`, `docs/development.md`, `RELEASE.md`):
   - Added a dedicated `Pre-meeting notes` field to the Add Meeting invite flow so organizers can call out reading, preparation, or action items attendees should complete before the meeting.
   - Updated invite-body composition so pre-meeting work is emitted as structured metadata in both text and HTML bodies near the top of the invitation instead of being buried in the generic details block.
