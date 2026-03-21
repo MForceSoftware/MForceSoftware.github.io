@@ -1,4 +1,16 @@
 # mForce365 Release Notes
+## VERSION 1.4.272 Beta
+
+- Meeting Loop linking for issue `#2467` (`MForce365.Shared/IMeeting.cs`, `MForce365.Shared/MForceMeeting.cs`, `MForce365.Shared/MeetingLoopLink.cs`, `MForce365.Shared/LoopGraphHelper.cs`, `MForce.Components.Projects/MeetingLoopCard.razor`, `MForce.Components.Projects/MeetingLoopCard.razor.cs`, `MForce.Components.Projects/MeetingLoopCard.razor.css`, `MForce.Components.Projects/LoopChooser.razor`, `MForce.Components.Projects/LoopChooser.razor.cs`, `MForce365.Web/Pages/Meeting.razor`, `MForce365.Web/Pages/Meeting.razor.cs`, `MForce365.Web/Pages/MeetingGuest.razor`, `MForce365.Web/Pages/Project.razor.cs`, `MForce365.Shared/mForce365Strings.resx`, `MForce365.Shared.Tests/LoopGraphHelperTests.cs`, `MForce.Components.Projects.Tests/MeetingLoopCardTests.cs`, `MForce.Components.Projects.Tests/LoopChooserTests.cs`, `MForce365.Web.Tests/MeetingLoopIntegrationTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Replaced the meeting Whiteboard quick action and card with a `Loop` link so organizers can attach an accessible Microsoft Loop file to the meeting workspace and open it directly from the meeting page.
+  - Switched discovery from the OneDrive `Whiteboards` folder to a Microsoft Graph drive search for `.loop` and legacy `.fluid` files, which matches Microsoft 365's current file-backed Loop model more closely than the retired Whiteboard-specific implementation.
+  - Persisted the selected Loop link on `MForceMeeting.Loop`, kept the guest meeting and project sidecar surfaces in sync, and retained backward-compatible deserialization for older saved meeting-state files that still contain the `Whiteboard` property.
+  - Added regression coverage for Loop file filtering, chooser persistence, meeting-page wiring, and guest/project saved-state carry-over.
+  - Closes #2467.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
+
 ## VERSION 1.4.271 Beta
 
 - Mobile Add Project dialog spacing for issue `#2553` (`MForce.Components.Projects/AddProject.razor`, `MForce.Components.Projects/AddProject.razor.css`, `MForce.Components.Projects/ProjectChooser.razor.cs`, `MForce.Pages/Pages/Projects.razor.cs`, `MForce365.Web/Pages/Projects.razor.cs`, `MForce365.Web/wwwroot/css/mforce365-overrides.css`, `MForce.Components.Projects.Tests/AddProjectResponsiveLayoutTests.cs`, `MForce365.Web.Tests/ProjectsDialogOptionsTests.cs`, `docs/development.md`, `docs/projects.md`, `RELEASE.md`):
@@ -78,7 +90,7 @@
   - Closes #1630.
 - Validation:
   - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
-  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --no-restore --disable-build-servers -maxcpucount:1 -v minimal`
 
 ## VERSION 1.4.264 Beta
 
