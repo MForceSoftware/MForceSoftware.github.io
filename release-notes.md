@@ -6,6 +6,11 @@
   - Stores those edits in browser `localStorage` under a user-scoped `mforce_about_me_profile_v1:<user>` key and adds a `Reset to Microsoft 365` action so the card can fall back to the source profile at any time.
   - Keeps the signed-in email address sourced from Microsoft 365 and avoids adding new default Graph profile-write scopes such as `User.ReadWrite` or `User-Phone.ReadWrite.All`, which would otherwise broaden the normal sign-in consent surface for every web user.
   - Closes #2578.
+- Sidebar loading indicator consistency for issue `#2574` (`MForce.Components/LoadingIndicator.razor`, `MForce.Components/AgendasCRUD.razor`, `MForce365.Web/Pages/ActionItems.razor`, `MForce365.Web/Pages/Projects.razor`, `MForce365.Web/Pages/Stats.razor`, `MForce365.Web/Pages/MeetingRecordings.razor`, `MForce365.Web.Tests/MeetingRecordingsPageTests.cs`, `MForce365.Web.Tests/ProductionReadinessUxTests.cs`, `MForce365.Web.Tests/SidebarLoadingIndicatorConsistencyTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Added a shared loading indicator component so sidebar-backed web pages now use the same spinner and localized `Loading...` label instead of mixing text-only placeholders and progress bars.
+  - Updated the Action Items, Projects, Stats, Agendas, and Recordings routes to use the shared loading treatment during their initial data fetch.
+  - Added focused regression coverage that keeps the shared loading component and the affected sidebar pages aligned, and switched the shared component to the dedicated localized `Loading...` resource key.
+  - Closes #2574.
 - Validation:
   - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
   - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
