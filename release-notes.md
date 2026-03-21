@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.276 Beta
+
+- Editable About Me details for issue `#2578` (`MForce365.Web/Components/EditableAboutMeCard.razor`, `MForce365.Web/Components/EditableAboutMeCard.razor.cs`, `MForce365.Web/Components/EditableAboutMeCard.razor.css`, `MForce365.Web/Components/EditAboutMeDialog.razor`, `MForce365.Web/Components/EditableAboutMeProfile.cs`, `MForce365.Web/Pages/Index.razor`, `MForce365.Web.Tests/EditableAboutMeCardTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Replaced the web dashboard's read-only About Me widget with an editable web-specific card that still starts from the user's Microsoft 365 profile, but now lets the user override display name, job title, phone, location, and About Me details from inside the app.
+  - Stores those edits in browser `localStorage` under a user-scoped `mforce_about_me_profile_v1:<user>` key and adds a `Reset to Microsoft 365` action so the card can fall back to the source profile at any time.
+  - Keeps the signed-in email address sourced from Microsoft 365 and avoids adding new default Graph profile-write scopes such as `User.ReadWrite` or `User-Phone.ReadWrite.All`, which would otherwise broaden the normal sign-in consent surface for every web user.
+  - Closes #2578.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
+
 ## VERSION 1.4.275 Beta
 
 - About Me card wrapping for issue `#2577` (`MForce.Components/AboutMeCard.razor`, `MForce.Components/AboutMeCard.razor.css`, `MForce.Components/AboutMeCard.razor.cs`, `MForce365.Web.Tests/AboutMeCardTests.cs`, `docs/development.md`, `RELEASE.md`):

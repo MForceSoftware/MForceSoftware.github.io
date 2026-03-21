@@ -5,6 +5,27 @@
 @import '_content/MForce.Components/MForce.Components.fx8ow3wl8v.bundle.scp.css';
 @import '_content/Microsoft.AspNetCore.Components.QuickGrid/Microsoft.AspNetCore.Components.QuickGrid.boiwgh0w5b.bundle.scp.css';
 
+/* /Components/EditableAboutMeCard.razor.rz.scp.css */
+.about-me-card[b-ss6779b3ym] {
+    display: grid;
+    grid-template-columns: max-content minmax(0, 1fr);
+    column-gap: 1rem;
+    row-gap: 0.5rem;
+}
+
+.about-me-card__label[b-ss6779b3ym] {
+    font-weight: 500;
+}
+
+.about-me-card__value[b-ss6779b3ym] {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.about-me-card__value--multiline[b-ss6779b3ym] {
+    white-space: pre-wrap;
+}
 /* /Components/MeetingArtworkPanel.razor.rz.scp.css */
 .meeting-artwork-card[b-rl2eewcgxl] {
     gap: 0.7rem;
