@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.265 Beta
+
+- Outlook due-date action-item calendar blocks for issue `#1630` (`MForce365.Shared/ActionItemDueDateCalendarSync.cs`, `MForce365.Shared/MForceActionItems.cs`, `MForce365.Web/Shared/MainLayout.razor`, `MForce365.Web/Pages/Project.razor.cs`, `MForce.Pages/Pages/Project.razor.cs`, `MForce.Components.ActionItems/AddActionItem.razor.cs`, `MForce.Components.ActionItems/EditActionItem.razor.cs`, `MForce365.Shared.Tests/ActionItemDueDateCalendarSyncTests.cs`, `MForce365.Web.Tests/MainLayoutTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Added a managed Outlook calendar sync that creates or updates a non-blocking `Action Items Due` event at `8:00 AM` for each upcoming date that has one or more open action items due that day, with the calendar body listing the due tasks and any meeting/project source context.
+  - The sync now runs from the authenticated web startup path and after action-item or Planner task edits that can change due dates, completion state, or task membership, so the calendar block stays aligned when users manage work from Action Items, Meetings, or Projects.
+  - Kept the implementation safe for the current Blazor WebAssembly architecture by making it best-effort and client-driven instead of inventing a server-side background scheduler; stale managed events are removed when their due-date task set is cleared.
+  - Closes #1630.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
+
 ## VERSION 1.4.264 Beta
 
 - Public solution-page internal links for issue `#1760` (`MForce365.Web/Pages/Comparison.razor`, `MForce365.Web/Pages/JiraReportingSolution.razor`, `MForce365.Web/Pages/AdvancedPeopleSolution.razor`, `MForce365.Web/Pages/Comparison.razor.css`, `MForce365.Web/Pages/JiraReportingSolution.razor.css`, `MForce365.Web/Pages/AdvancedPeopleSolution.razor.css`, `MForce365.Web.Tests/ComparisonPageTests.cs`, `MForce365.Web.Tests/JiraReportingSolutionPageTests.cs`, `MForce365.Web.Tests/AdvancedPeopleSolutionPageTests.cs`, `docs/development.md`, `RELEASE.md`):
