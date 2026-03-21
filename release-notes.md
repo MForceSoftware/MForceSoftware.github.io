@@ -12,6 +12,11 @@
 
 ## VERSION 1.4.239 Beta
 
+- System alert preferences for issue `#697` (`MForce365.Web/Pages/Settings.razor`, `MForce365.Web/Pages/Settings.razor.cs`, `MForce365.Web.Tests/SystemAlertsSettingsTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Added a `System alerts` card to the web Settings page so users can turn browser-local alert preferences on or off for action-item completion, meeting file uploads, and future comments/chat or news-feed activity.
+  - Persisted those preferences in browser `localStorage` under `mforce_system_alert_preferences_v1`, keeping the current implementation focused on the settings surface rather than inventing a new server-side notification pipeline.
+  - Added lightweight regression coverage to guard the new Settings-page controls and local-storage wiring.
+  - Closes #697.
 - Meeting summary extra recipients for issue `#588` (`MForce.Components/SendList.razor`, `MForce.Components/SendList.razor.cs`, `MForce365.Shared/AttendeeSendList.cs`, `MForce365.Shared/MeetingSummary.cs`, `MForce365.Shared.Tests/AttendeeSendListTests.cs`, `MForce365.Web/Pages/Meeting.razor.cs`, `MForce365.Web.Tests/MeetingPageCommandReliabilityTests.cs`, `docs/development.md`, `RELEASE.md`):
   - Extended the meeting-summary recipient dialog so organizers can add non-attendee email recipients directly in the existing send flow instead of being limited to the Microsoft Graph attendee list.
   - Reused the same recipient grid for those extra addresses, including send toggles and per-recipient summary-language selection, while validating and de-duplicating ad-hoc emails before they are added.
@@ -24,8 +29,8 @@
   - Added regression coverage for the new participant-status UI, persistence defaults, reload merge behavior, and preparation-completion logic.
   - Closes #568.
 - Validation:
-  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
-  - `dotnet test MForce365/MForce365.sln --no-build -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --no-restore --disable-build-servers -maxcpucount:1 -v minimal`
 
 ## VERSION 1.4.238 Beta
 
