@@ -1,4 +1,16 @@
 # mForce365 Release Notes
+## VERSION 1.4.259 Beta
+
+- Sign-up onboarding overlay for issue `#1575` (`MForce365.Web/Components/NewUserOnboarding.razor`, `MForce365.Web/Components/NewUserOnboarding.razor.cs`, `MForce365.Web/Pages/Index.razor`, `MForce365.Web.Tests/NewUserOnboardingTests.cs`, `docs/authentication.md`, `docs/development.md`, `RELEASE.md`):
+  - Added a one-time welcome overlay on the authenticated dashboard so fresh sign-ups are introduced to the main signed-in surfaces immediately after the Microsoft sign-in handoff completes.
+  - The overlay walks users through the dashboard home, calendar / next-meeting cards, and action-items / projects cards, and includes a step progress bar so the flow reads as a short guided tour rather than static copy.
+  - Kept the implementation browser-local and safe for the existing WebAssembly architecture by gating the overlay from the existing registration-intent marker, the first-dashboard-visit state used by `NewUserFollowUpService`, and a per-user onboarding completion marker.
+  - Added regression coverage for the dashboard placement, onboarding copy, gating logic, and per-user storage-key behavior.
+  - Closes #1575.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln --warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
+
 ## VERSION 1.4.258 Beta
 
 - Meeting Emotions (TM) naming for issue `#1566` (`MForce.Components.Files/FileExplorer.razor.cs`, `MForce.Components.Files.Tests/FileExplorerTests.cs`, `MForce365.Shared/mForce365Strings.resx`, `MForce365.Web/Components/MeetingArtworkPanel.razor`, `MForce365.Web/Services/MeetingArtworkGenerationService.cs`, `MForce365.Web.Tests/MeetingArtworkPanelTests.cs`, `docs/development.md`, `RELEASE.md`):
