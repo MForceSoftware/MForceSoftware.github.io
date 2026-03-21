@@ -1,6 +1,11 @@
 # mForce365 Release Notes
 ## VERSION 1.4.237 Beta
 
+- Public competitive-analysis landing page for issue `#564` (`MForce365.Web/Pages/Comparison.razor`, `MForce365.Web/Shared/PublicLayout.razor`, `MForce.Components/PreLoginHomePage.razor`, `MForce365.Web.Tests/ComparisonPageTests.cs`, `MForce365.Web.Tests/PreLoginComparisonLinkTests.cs`, `MForce365.Web.Tests/PublicLayoutNavigationTests.cs`, `docs/README.md`, `docs/development.md`, `docs/meeting-solutions-comparison.md`, `RELEASE.md`):
+  - Added `/competitive-analysis` as the primary public entry point for the existing meeting-software comparison experience while preserving the older `/compare` and `/meeting-solutions-comparison` aliases.
+  - Refreshed the public page copy and landing-page entry links so the experience is explicitly positioned as a competitive analysis of meeting management software for Microsoft 365 organizations.
+  - Kept the content vendor-safe and category-based rather than introducing unsupported pricing or legal claims against named competitors.
+  - Closes #564.
 - Meeting invite scheduling view integration for issue `#561` (`MForce.Components.Schedule/AddAppointmentPage.razor`, `MForce.Components.Schedule/AddAppointmentPage.razor.cs`, `MForce.Components.Schedule/MainSchedule.razor`, `MForce.Components.Schedule.Tests/AddAppointmentAvailabilitySuggestionTests.cs`, `MForce.Components.Schedule.Tests/MainScheduleMergedScheduleTests.cs`, `MForce365.Web/Pages/Scheduler.razor`, `MForce.Pages/Pages/Scheduler.razor`, `MForce365.Web.Tests/SchedulerPageHeadingTests.cs`, `docs/development.md`, `RELEASE.md`):
   - Updated the Add Meeting invite flow so participant availability now has two linked options: `Find time` for Graph-backed suggestions and `View schedules` for a visual merged-calendar overlay.
   - Wired the scheduler pages to accept a `merge` query-string and prefill the existing shared-calendar overlay experience from invite participants, keeping those imported blocks read-only.
@@ -8,7 +13,7 @@
   - Closes #561.
 - Validation:
   - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
-  - `dotnet test MForce365/MForce365.sln --no-build -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
 
 ## VERSION 1.4.236 Beta
 
