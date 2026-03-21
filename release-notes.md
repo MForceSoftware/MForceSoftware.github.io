@@ -1,4 +1,14 @@
 # mForce365 Release Notes
+## VERSION 1.4.268 Beta
+
+- Meeting notes meeting-type formatting for issue `#2569` (`MForce365.Shared/MForceAppointment.cs`, `MForce365.Shared.Tests/MForceAppointmentComposeBodyTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Updated generated HTML for `Meeting Type` so only the label remains bold and the selected value renders as normal text in notes and meeting descriptions.
+  - Adjusted regression coverage to assert the plain-text meeting-type value while preserving the bold heading markup.
+  - Closes #2569.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
+
 ## VERSION 1.4.267 Beta
 
 - Meeting quorum records for issue `#1829` (`MForce365.Shared/MeetingQuorumRecord.cs`, `MForce365.Shared/MForceMeeting.cs`, `MForce365.Shared/MeetingBinder.cs`, `MForce.Components.Schedule/ParticipantsCard.razor`, `MForce.Components.Schedule/ParticipantsCard.razor.cs`, `MForce.Components.Schedule/ParticipantsCard.razor.css`, `MForce365.Web/Pages/Meeting.razor.cs`, `MForce.Pages/Pages/Meeting.razor.cs`, `MForce365.Web/Pages/Project.razor.cs`, `MForce365.Shared.Tests/MeetingQuorumRecordTests.cs`, `MForce365.Shared.Tests/MeetingBinderBuilderTests.cs`, `MForce.Components.Schedule.Tests/ParticipantsCardTests.cs`, `MForce365.Web.Tests/ProjectMeetingCaptureSidecarTests.cs`, `docs/development.md`, `RELEASE.md`):
