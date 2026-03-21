@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.238 Beta
+
+- Pre-login meeting tips dialog for issue `#569` (`MForce.Components/MeetingTipsPanel.razor`, `MForce.Components/MeetingTipsPanel.razor.cs`, `MForce.Components/MeetingTipsPanel.razor.css`, `MForce.Components/PreLoginHomePage.razor`, `MForce365.Web.Tests/MeetingTipsPanelTests.cs`, `docs/authentication.md`, `docs/development.md`, `RELEASE.md`):
+  - Added a rotating meeting-tip / coming-soon panel directly beneath the Login and Register cards on the pre-login landing page so evaluators see one concise hint or roadmap note at a time.
+  - Kept the implementation component-local and non-blocking with previous/next plus indicator controls, avoiding JavaScript and leaving the existing auth flow unchanged.
+  - Added regression coverage and documentation for the new pre-login guidance surface.
+  - Closes #569.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln --no-build -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+
 ## VERSION 1.4.237 Beta
 
 - Public competitive-analysis landing page for issue `#564` (`MForce365.Web/Pages/Comparison.razor`, `MForce365.Web/Shared/PublicLayout.razor`, `MForce.Components/PreLoginHomePage.razor`, `MForce365.Web.Tests/ComparisonPageTests.cs`, `MForce365.Web.Tests/PreLoginComparisonLinkTests.cs`, `MForce365.Web.Tests/PublicLayoutNavigationTests.cs`, `docs/README.md`, `docs/development.md`, `docs/meeting-solutions-comparison.md`, `RELEASE.md`):
