@@ -1,6 +1,11 @@
 # mForce365 Release Notes
 ## VERSION 1.4.239 Beta
 
+- Meeting summary extra recipients for issue `#588` (`MForce.Components/SendList.razor`, `MForce.Components/SendList.razor.cs`, `MForce365.Shared/AttendeeSendList.cs`, `MForce365.Shared/MeetingSummary.cs`, `MForce365.Shared.Tests/AttendeeSendListTests.cs`, `MForce365.Web/Pages/Meeting.razor.cs`, `MForce365.Web.Tests/MeetingPageCommandReliabilityTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Extended the meeting-summary recipient dialog so organizers can add non-attendee email recipients directly in the existing send flow instead of being limited to the Microsoft Graph attendee list.
+  - Reused the same recipient grid for those extra addresses, including send toggles and per-recipient summary-language selection, while validating and de-duplicating ad-hoc emails before they are added.
+  - Reused the already loaded meeting event across summary sends so selecting multiple recipients does not trigger a fresh Graph event fetch for every email.
+  - Closes #588.
 - Meeting participant preparedness tracking for issue `#568` (`MForce365.Shared/MForceMeeting.cs`, `MForce.Components.Schedule/ParticipantsCard.razor`, `MForce.Components.Schedule/ParticipantsCard.razor.cs`, `MForce.Components.Schedule/ParticipantsCard.razor.css`, `MForce365.Web/Pages/Meeting.razor.cs`, `MForce365.Shared/mForce365Strings.resx`, `MForce365.Shared.Tests/MeetingAttendeePreparationStatusTests.cs`, `MForce365.Shared.Tests/MeetingReloadPendingAttendeesTests.cs`, `MForce.Components.Schedule.Tests/ParticipantsCardTests.cs`, `MForce365.Web.Tests/MeetingParticipantPreparednessTests.cs`, `docs/development.md`, `RELEASE.md`):
   - Added a manual preparedness workflow to the meeting Participants card so organizers can mark each attendee as `Prepared`, `Needs follow up`, or `Not reviewed` during pre-meeting review.
   - Persisted that readiness state in the meeting snapshot and preserved it across Graph attendee refreshes, which keeps the existing 30-second participant polling from wiping organizer-entered assessments.
