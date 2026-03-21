@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.245 Beta
+
+- Authentication/register store handoff for issue `#1131` (`MForce365.Web/Pages/Authentication.razor`, `MForce365.Web.Tests/AuthenticationPageTests.cs`, `docs/authentication.md`, `docs/development.md`, `RELEASE.md`):
+  - Added a secondary `Visit store` action to `/authentication/register` so users who already opened the guided Microsoft registration page can still jump to the public purchase destination without restarting the flow.
+  - Kept the existing Microsoft-account onboarding, licensing-intent capture, and create-account guidance unchanged while making the store path explicit on the registration page itself.
+  - Extended the authentication page regression coverage and updated the authentication/development documentation to reflect the new register-page store handoff.
+  - Closes #1131.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --no-restore --disable-build-servers -maxcpucount:1 -v minimal`
+
 ## VERSION 1.4.244 Beta
 
 - Recurring meeting invite previous action items for issue `#914` (`MForce365.Shared/RecurringMeetingInviteContextLoader.cs`, `MForce365.Shared/MeetingDescriptionFormatter.cs`, `MForce365.Web/Pages/Meeting.razor.cs`, `MForce.Pages/Pages/Meeting.razor.cs`, `MForce365.Shared.Tests/MeetingDescriptionFormatterTests.cs`, `docs/development.md`, `docs/meeting-description.md`, `RELEASE.md`):
