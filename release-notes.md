@@ -1,4 +1,16 @@
 # mForce365 Release Notes
+## VERSION 1.4.241 Beta
+
+- Dashboard quick meeting shortcut for issue `#764` (`MForce365.Web/Pages/Index.razor`, `MForce365.Shared/mForce365Strings.resx`, `MForce365.Web.Tests/DashboardQuickMeetingTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Added a dedicated `mF365Now` quick-capture card as the first signed-in dashboard surface so users can start an ad hoc meeting without going through the calendar first.
+  - Wired the shortcut into the existing Add Meeting dialog with near-now defaults, then navigated straight into the saved meeting workspace so participants, notes, actions, decisions, voting, and QR sharing remain on the normal meeting flow.
+  - Localized the new dashboard copy and CTA so the shortcut follows the same resource-backed pattern as the rest of the signed-in dashboard.
+  - Kept this as a dashboard entry point only rather than introducing a separate quick-meeting storage model or duplicate meeting page.
+  - Closes #764.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --no-restore --disable-build-servers -maxcpucount:1 -v minimal`
+
 ## VERSION 1.4.240 Beta
 
 - Pre-login register store link for issue `#713` (`MForce.Components/PreLoginHomePage.razor`, `MForce.Components/PreLoginHomePage.razor.css`, `MForce365.Web.Tests/PreLoginStoreLinkTests.cs`, `docs/authentication.md`, `docs/development.md`, `RELEASE.md`):
