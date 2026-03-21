@@ -1,4 +1,16 @@
 # mForce365 Release Notes
+## VERSION 1.4.247 Beta
+
+- Central immutable binder records storage for issue `#1321` (`MForce365.Shared/AppConfiguration.cs`, `MForce365.Web/Pages/AdminMeetingSettings.razor`, `MForce365.Web/Pages/Meeting.razor.cs`, `MForce365.Web.Tests/MeetingCentralStorageFlowTests.cs`, `docs/administration.md`, `docs/development.md`, `RELEASE.md`):
+  - Extended `/admin/meeting-settings` with a browser-local `Central records copy` setting so admins can save a shared OneDrive or SharePoint folder link for immutable Meeting Binder retention.
+  - Immutable Meeting Binder PDF generation now resolves that shared folder through Microsoft Graph and writes a second PDF copy into the configured records location whenever the binder is produced in immutable/finalized form.
+  - Kept the implementation delegated and safe for the current WebAssembly architecture: the shared-folder link is browser-local under `mforce_immutable_binder_central_storage_folder_url`, and the app only copies into a folder the signed-in user can already access through Microsoft 365.
+  - Added regression coverage for the new settings UI wiring and immutable-copy workflow.
+  - Closes #1321.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
+
 ## VERSION 1.4.246 Beta
 
 - Recurring meeting invite carry-over for issue `#915` (`MForce365.Web/Pages/Meeting.razor.cs`, `MForce365.Shared/MeetingDescriptionFormatter.cs`, `MForce365.Shared.Tests/MeetingDescriptionFormatterTests.cs`, `docs/development.md`, `docs/meeting-description.md`, `RELEASE.md`):
