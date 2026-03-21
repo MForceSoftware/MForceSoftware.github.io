@@ -25,11 +25,20 @@
 
 ## VERSION 1.4.246 Beta
 
+- Meeting stats page for issue `#1398` (`MForce365.Web/Pages/Stats.razor`, `MForce365.Web/Services/UserStatsService.cs`, `MForce365.Web/Shared/NavMenu.razor`, `MForce365.Web/Shared/MainLayout.razor`, `MForce365.Web.Tests/UserStatsServiceTests.cs`, `MForce365.Web.Tests/StatsPageTests.cs`, `MForce365.Web.Tests/StatsNavigationTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Added a new authenticated `/stats` page so users can review a selected date range of their own meeting, action-item, and project activity without leaving the web app.
+  - The page aggregates Microsoft Graph calendar, Microsoft To Do, Planner task, and accessible Planner plan data into a single snapshot that reports meeting count and time, internal versus external meetings, assigned action items, on-time versus late completions, overdue open work, and project totals.
+  - Kept the calculations explicit and best-effort: meetings are treated as external when any participant falls outside the signed-in user's email domain, and project completion is inferred only when every task in a visible Planner plan is complete within the selected period.
+  - Closes #1398.
+
 - Recurring meeting invite carry-over for issue `#915` (`MForce365.Web/Pages/Meeting.razor.cs`, `MForce365.Shared/MeetingDescriptionFormatter.cs`, `MForce365.Shared.Tests/MeetingDescriptionFormatterTests.cs`, `docs/development.md`, `docs/meeting-description.md`, `RELEASE.md`):
   - `Update meeting description` now reuses `RecurringMeetingInviteContextLoader` to load the previous occurrence in the same recurring series and read that occurrence's saved `thisMeeting.meetingv1` file from the `mForce365/<iCalUId>` folder.
   - When the previous meeting captured unresolved parking-lot topics, the regenerated meeting description now includes a `Previous meeting Parking Lot` section so those carry-over items appear in the updated recurring invite body.
   - Added regression coverage to keep the new summary section idempotent across repeated description updates and available in both HTML and text bodies.
   - Closes #915.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --no-restore --disable-build-servers -maxcpucount:1 -v minimal`
 
 ## VERSION 1.4.245 Beta
 
