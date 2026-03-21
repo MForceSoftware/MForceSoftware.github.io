@@ -37,6 +37,11 @@
   - Added a `Previous meeting Action Items` section to the generated HTML and plain-text invite summary, using the prior meeting's recorded action items instead of asking organizers to retype them manually for recurring meetings.
   - Kept the new section best-effort and data-backed: if the prior occurrence has no saved meeting snapshot or no recorded action items, the current invite update still succeeds without inventing placeholder content.
   - Closes #914.
+- Recurring meeting invite parking-lot carry-over for issue `#916` (`MForce365.Shared/RecurringMeetingInviteContextLoader.cs`, `MForce365.Shared/MeetingDescriptionFormatter.cs`, `MForce365.Shared.Tests/MeetingDescriptionFormatterTests.cs`, `MForce365.Shared.Tests/RecurringMeetingInviteContextLoaderTests.cs`, `MForce365.Web/Pages/Meeting.razor.cs`, `MForce.Pages/Pages/Meeting.razor.cs`, `docs/development.md`, `docs/meeting-description.md`, `RELEASE.md`):
+  - Extended the recurring-meeting `Update meeting description` flow so it also carries forward the previous meeting's recorded `Parking Lot` items alongside prior action items.
+  - Switched the recurring-series lookup to a bounded recurrence-aware `/instances` window with fallback to the series start only when needed, avoiding a full-series scan on every recurring invite update.
+  - Localized the `Previous meeting Action Items` and `Previous meeting Parking Lot` headings and kept recurring carry-over rebuilds idempotent, including cleanup of the earlier action-items-only heading.
+  - Closes #916.
 - Validation:
   - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
   - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
