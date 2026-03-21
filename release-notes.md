@@ -1,4 +1,16 @@
 # mForce365 Release Notes
+## VERSION 1.4.256 Beta
+
+- Meeting Whiteboard linking for issue `#1510` (`MForce365.Shared/IMeeting.cs`, `MForce365.Shared/MForceMeeting.cs`, `MForce365.Shared/MeetingWhiteboardLink.cs`, `MForce365.Shared/WhiteboardGraphHelper.cs`, `MForce.Components.Projects/MeetingWhiteboardCard.razor`, `MForce.Components.Projects/MeetingWhiteboardCard.razor.cs`, `MForce.Components.Projects/MeetingWhiteboardCard.razor.css`, `MForce.Components.Projects/WhiteboardChooser.razor`, `MForce.Components.Projects/WhiteboardChooser.razor.cs`, `MForce365.Web/Pages/Meeting.razor`, `MForce365.Web/Pages/Meeting.razor.cs`, `MForce365.Web/Pages/Meeting.razor.css`, `MForce365.Web/Pages/MeetingGuest.razor`, `MForce365.Web/Pages/Project.razor.cs`, `MForce365.Shared/mForce365Strings.resx`, `MForce365.Shared.Tests/WhiteboardGraphHelperTests.cs`, `MForce.Components.Projects.Tests/MeetingWhiteboardCardTests.cs`, `MForce.Components.Projects.Tests/WhiteboardChooserTests.cs`, `MForce365.Web.Tests/MeetingWhiteboardIntegrationTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Added a `Whiteboard` quick action and meeting card so users can link a meeting to a Microsoft Whiteboard stored in their OneDrive `Whiteboards` folder and open it directly from the meeting workspace.
+  - Persisted the selected board on `MForceMeeting.Whiteboard`, carried it through saved meeting-state reloads, and exposed the same linked board read-only on the guest meeting view.
+  - Added a shared `WhiteboardGraphHelper` so discovery stays explicit and safe for the current WebAssembly architecture: the app only links OneDrive-backed work or school Whiteboards the signed-in user already has access to, and it does not invent a non-existent Graph Whiteboard creation/list API.
+  - Added regression coverage for Whiteboard file filtering, chooser persistence, meeting-page wiring, and guest/project saved-state carry-over.
+  - Closes #1510.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --no-restore --disable-build-servers -maxcpucount:1 -v minimal`
+
 ## VERSION 1.4.255 Beta
 
 - Meeting artwork and sentiment overlays for issue `#1564` (`MForce365.Shared/IMeeting.cs`, `MForce365.Shared/MForceMeeting.cs`, `MForce365.Shared/MeetingArtworkSelection.cs`, `MForce365.Shared.Tests/MeetingArtworkSelectionTests.cs`, `MForce365.Web/Components/MeetingArtworkPanel.razor`, `MForce365.Web/Components/MeetingArtworkPanel.razor.css`, `MForce365.Web/Components/MeetingSentimentChart.razor`, `MForce365.Web/Components/MeetingSentimentChart.razor.css`, `MForce365.Web/Pages/Meeting.razor`, `MForce365.Web/Pages/Meeting.razor.css`, `MForce365.Web/Program.cs`, `MForce365.Web/Services/MeetingArtworkGenerationService.cs`, `MForce365.Web.Tests/MeetingArtworkGenerationServiceTests.cs`, `MForce365.Web.Tests/MeetingArtworkPanelTests.cs`, `docs/development.md`, `RELEASE.md`):
