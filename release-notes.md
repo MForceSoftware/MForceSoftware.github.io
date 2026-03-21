@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.260 Beta
+
+- Separate FAQs from About for issue `#1578` (`MForce365.Web/Pages/About.razor`, `MForce365.Web/Pages/Faqs.razor`, `MForce365.Web/Shared/MainLayout.razor`, `MForce365.Web/Shared/NavMenu.razor`, `MForce365.Shared/mForce365Strings.resx`, `MForce365.Web.Tests/AboutPageVersionTests.cs`, `MForce365.Web.Tests/FaqNavigationTests.cs`, `MForce365.Web.Tests/FaqPageTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Split the previous mixed About/FAQ surface by keeping the About page focused on version, legal, and product links while adding a dedicated `/faqs` page for workflow help content.
+  - Added a separate `FAQs` menu entry to the authenticated web navigation and a direct FAQ call-to-action from the About page so help content is no longer hidden under About.
+  - Expanded the help copy with three additional quick-start/support questions and added regression coverage for the new route, navigation wiring, and About-page split.
+  - Closes #1578.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --no-restore --disable-build-servers -maxcpucount:1 -v minimal`
+
 ## VERSION 1.4.259 Beta
 
 - Sign-up onboarding overlay for issue `#1575` (`MForce365.Web/Components/NewUserOnboarding.razor`, `MForce365.Web/Components/NewUserOnboarding.razor.cs`, `MForce365.Web/Pages/Index.razor`, `MForce365.Web.Tests/NewUserOnboardingTests.cs`, `docs/authentication.md`, `docs/development.md`, `RELEASE.md`):
