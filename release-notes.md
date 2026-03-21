@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.264 Beta
+
+- Public solution-page internal links for issue `#1760` (`MForce365.Web/Pages/Comparison.razor`, `MForce365.Web/Pages/JiraReportingSolution.razor`, `MForce365.Web/Pages/AdvancedPeopleSolution.razor`, `MForce365.Web/Pages/Comparison.razor.css`, `MForce365.Web/Pages/JiraReportingSolution.razor.css`, `MForce365.Web/Pages/AdvancedPeopleSolution.razor.css`, `MForce365.Web.Tests/ComparisonPageTests.cs`, `MForce365.Web.Tests/JiraReportingSolutionPageTests.cs`, `MForce365.Web.Tests/AdvancedPeopleSolutionPageTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Added a related-reading section to each long-form public solution page so the comparison, Jira reporting, and advanced people briefs now cross-link into the wider public product story instead of acting like isolated single-CTA pages.
+  - Added page-scoped heading-link styles for those related-reading cards so the new internal links inherit the surrounding card typography and keep explicit hover/focus treatment instead of falling back to generic global anchor styling.
+  - Tightened the regression tests to assert the internal links from the related-reading section itself, preventing false positives from unrelated links elsewhere on the page.
+  - Closes #1760.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 --logger "console;verbosity=minimal"`
+
 ## VERSION 1.4.263 Beta
 
 - Partner-hub sales workflow drafts for issue `#1685` (`MForce365.Web/Pages/Partners.razor`, `MForce365.Web/Pages/Partners.razor.cs`, `MForce365.Web/Pages/PartnerSalesWorkflowState.cs`, `MForce365.Web/Services/PartnerSalesWorkflowDraftBuilder.cs`, `MForce365.Web.Tests/PartnersFeatureTests.cs`, `MForce365.Web.Tests/PartnerSalesWorkflowDraftBuilderTests.cs`, `docs/development.md`, `docs/partners.md`, `RELEASE.md`):
