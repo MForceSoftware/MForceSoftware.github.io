@@ -1,4 +1,17 @@
 # mForce365 Release Notes
+## VERSION 1.4.255 Beta
+
+- Meeting artwork and sentiment overlays for issue `#1564` (`MForce365.Shared/IMeeting.cs`, `MForce365.Shared/MForceMeeting.cs`, `MForce365.Shared/MeetingArtworkSelection.cs`, `MForce365.Shared.Tests/MeetingArtworkSelectionTests.cs`, `MForce365.Web/Components/MeetingArtworkPanel.razor`, `MForce365.Web/Components/MeetingArtworkPanel.razor.css`, `MForce365.Web/Components/MeetingSentimentChart.razor`, `MForce365.Web/Components/MeetingSentimentChart.razor.css`, `MForce365.Web/Pages/Meeting.razor`, `MForce365.Web/Pages/Meeting.razor.css`, `MForce365.Web/Program.cs`, `MForce365.Web/Services/MeetingArtworkGenerationService.cs`, `MForce365.Web.Tests/MeetingArtworkGenerationServiceTests.cs`, `MForce365.Web.Tests/MeetingArtworkPanelTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Added a new meeting-artwork panel to the web meeting page so organizers can generate multiple DALL-E 2 meeting-cover options, choose one, and save it directly on the meeting record.
+  - Added a five-point manual sentiment timeline with both an overlaid compact graph on the selected artwork and a dedicated meeting sentiment chart in the same panel.
+  - Persisted the selected artwork prompt, image, and sentiment data on the serialized `IMeeting` contract so the visual stays with the normal `thisMeeting.meetingv1` meeting save flow.
+  - Kept the OpenAI integration isolated in `MeetingArtworkGenerationService`, reused the existing browser-local OpenAI key, and intentionally limited prompt content to meeting metadata and description instead of live meeting notes.
+  - Added regression coverage for the shared artwork state, prompt builder, OpenAI request contract, and meeting-page/service registration wiring.
+  - Closes #1564.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
+
 ## VERSION 1.4.254 Beta
 
 - Meeting visual browser for issue `#1565` (`MForce.Components.Files/FileExplorer.razor`, `MForce.Components.Files/FileExplorer.razor.cs`, `MForce.Components.Files/FileExplorer.razor.css`, `MForce.Components.Files/FileUploadDialog.razor`, `MForce.Components.Files.Tests/FileExplorerTests.cs`, `MForce365.Shared/mForce365Strings.resx`, `docs/development.md`, `RELEASE.md`):
