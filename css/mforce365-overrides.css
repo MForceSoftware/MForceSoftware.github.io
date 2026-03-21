@@ -159,6 +159,14 @@
   font-weight: 600;
 }
 
+@media (max-width: 640px) {
+  .add-project-dialog {
+    align-self: flex-start;
+    margin-top: calc(env(safe-area-inset-top, 0px) + 1rem);
+    margin-bottom: 1rem;
+  }
+}
+
 /* Ensure generic Radzen dialogs remain usable on smaller screens */
 .rz-dialog .rz-dialog-content {
   max-height: calc(100vh - 6rem);

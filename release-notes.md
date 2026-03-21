@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.271 Beta
+
+- Mobile Add Project dialog spacing for issue `#2553` (`MForce.Components.Projects/AddProject.razor`, `MForce.Components.Projects/AddProject.razor.css`, `MForce.Components.Projects/ProjectChooser.razor.cs`, `MForce.Pages/Pages/Projects.razor.cs`, `MForce365.Web/Pages/Projects.razor.cs`, `MForce365.Web/wwwroot/css/mforce365-overrides.css`, `MForce.Components.Projects.Tests/AddProjectResponsiveLayoutTests.cs`, `MForce365.Web.Tests/ProjectsDialogOptionsTests.cs`, `docs/development.md`, `docs/projects.md`, `RELEASE.md`):
+  - Reworked the shared Add Project form into a stacked layout so `Projected completion date`, `Team`, and `Client` keep stable spacing on narrow screens instead of crowding each other.
+  - Updated each Add Project dialog entry point to use a viewport-aware width and a scoped mobile offset so the modal fits within phone screens and sits lower beneath browser chrome / safe-area insets.
+  - Added focused regression coverage for the responsive form classes, dialog options, and mobile offset styling.
+  - Closes #2553.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
+
 ## VERSION 1.4.270 Beta
 
 - Personal Microsoft account registration fix for issue `#2568` (`MForce365.Web/GraphClientExtensions.cs`, `MForce365.Web/ScopedGraphServiceClientFactory.cs`, `MForce365.Web/Pages/Meeting.razor.cs`, `MForce365.Web/wwwroot/appsettings.json`, `output/playwright/publish-web/wwwroot/appsettings.json`, `MForce365.Web.Tests/GraphClientExtensionsTests.cs`, `MForce365.Web.Tests/MeetingTeamsChatPostingTests.cs`, `docs/authentication.md`, `docs/development.md`, `RELEASE.md`):
