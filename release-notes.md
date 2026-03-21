@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.261 Beta
+
+- Action-driven create tips for issue `#1577` (`MForce365.Web/Pages/ActionItem.razor`, `MForce365.Web/Pages/ActionItem.razor.cs`, `MForce.Components.Schedule/AddAppointmentPage.razor`, `MForce.Components.Schedule/AddAppointmentPage.razor.cs`, `MForce.Components.Projects/AddProject.razor`, `MForce.Components.Projects/AddProject.razor.cs`, `MForce365.Web.Tests/ActionDrivenTipsTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Added first-run tooltips to the action-item, meeting, and project create flows so users get a short piece of advice plus an example right where they start naming the new record.
+  - Persisted one browser-local seen flag per workflow so the tooltip behaves like onboarding guidance instead of a repeating interruption for returning users.
+  - Added regression coverage that keeps the tooltip anchors, browser-storage keys, and example text wired into those create surfaces.
+  - Closes #1577.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
+
 ## VERSION 1.4.260 Beta
 
 - Separate FAQs from About for issue `#1578` (`MForce365.Web/Pages/About.razor`, `MForce365.Web/Pages/Faqs.razor`, `MForce365.Web/Shared/MainLayout.razor`, `MForce365.Web/Shared/NavMenu.razor`, `MForce365.Shared/mForce365Strings.resx`, `MForce365.Web.Tests/AboutPageVersionTests.cs`, `MForce365.Web.Tests/FaqNavigationTests.cs`, `MForce365.Web.Tests/FaqPageTests.cs`, `docs/development.md`, `RELEASE.md`):
