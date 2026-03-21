@@ -45,6 +45,10 @@
 
 ## VERSION 1.4.268 Beta
 
+- Release notes dashboard link fix for issue `#2571` (`MForce.Components/MonthlyUpdatesCallout.razor`, `MForce365.Web/Pages/ReleaseNotes.razor`, `MForce365.Web.Tests/MonthlyUpdatesCalloutTests.cs`, `MForce365.Web.Tests/ReleaseNotesPageTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Replaced the dashboard and pre-login monthly-updates release-notes link target from the raw `/release-notes.md` asset to a first-class `/release-notes` page in the web app.
+  - The new page renders the published markdown inside the app and falls back to the repo file or GitHub raw release notes when a deployment does not expose the raw markdown asset reliably.
+  - Closes #2571.
 - Meeting notes meeting-type formatting for issue `#2569` (`MForce365.Shared/MForceAppointment.cs`, `MForce365.Shared.Tests/MForceAppointmentComposeBodyTests.cs`, `docs/development.md`, `RELEASE.md`):
   - Updated generated HTML for `Meeting Type` so only the label remains bold and the selected value renders as normal text in notes and meeting descriptions.
   - Adjusted regression coverage to assert the plain-text meeting-type value while preserving the bold heading markup.
