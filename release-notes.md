@@ -1,4 +1,16 @@
 # mForce365 Release Notes
+## VERSION 1.4.248 Beta
+
+- Text-message action-item draft capture for issue `#1404` (`MForce365.Web/Pages/ActionItem.razor.cs`, `MForce365.Web/Pages/ActionItems.razor`, `MForce365.Shared/mForce365Strings.resx`, `MForce365.Web.Tests/ActionItemSharedDraftDefaultsTests.cs`, `MForce365.Web.Tests/ActionItemShareTargetTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Shared action-item drafts now ignore generic source titles such as `Messages`, `SMS`, `Microsoft Teams`, or `WhatsApp` and instead promote the first non-empty shared text line into the draft title so phone-shared text messages land as useful action items.
+  - The standalone action-item draft flow now keeps only real `http(s)` shared URLs, avoiding phone-specific deep links such as `sms:` in the saved task body while still preserving meeting and reference links.
+  - The Action Items page now includes a lightweight phone-share hint, and the shared-draft review banner explicitly calls out text messages alongside Teams/app shares so the mobile capture path is easier to discover.
+  - Added regression coverage for source-label detection, non-web URL filtering, preserved web URLs, and the new Action Items phone-share hint.
+  - Closes #1404.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
+
 ## VERSION 1.4.247 Beta
 
 - Central immutable binder records storage for issue `#1321` (`MForce365.Shared/AppConfiguration.cs`, `MForce365.Web/Pages/AdminMeetingSettings.razor`, `MForce365.Web/Pages/Meeting.razor.cs`, `MForce365.Web.Tests/MeetingCentralStorageFlowTests.cs`, `docs/administration.md`, `docs/development.md`, `RELEASE.md`):
