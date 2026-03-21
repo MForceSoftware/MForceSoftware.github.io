@@ -12,9 +12,14 @@
   - Updated the meeting/project-facing web pages plus the action-item source labels, project-selection dialog, and meeting-settings administration headings so the renamed terminology stays consistent on the most visible web UI surfaces.
   - Added regression coverage for the replacement logic and for the wiring from configuration into the affected Blazor pages.
   - Closes #471.
+- Action-item reminder lead time for issue `#473` (`MForce365.Shared/MForceTask.cs`, `MForce365.Shared/MForceActionItems.cs`, `MForce365.Shared/mForce365Strings.resx`, `MForce365.Web/Pages/ActionItem.razor`, `MForce365.Web/Pages/ActionItem.razor.cs`, `MForce365.Web/Pages/ActionItems.razor`, `MForce365.Web/Components/AddActionItemDialog.razor`, `MForce365.Web/Components/AddActionItemDialog.razor.cs`, `MForce.Components.ActionItems/AddActionItem.razor`, `MForce.Components.ActionItems/AddActionItem.razor.cs`, `MForce.Components.ActionItems/EditActionItem.razor`, `MForce.Components.ActionItems/EditActionItem.razor.cs`, `MForce.Components.ActionItems/ActionItemsCard.razor`, `MForce.Components.ActionItems/ActionItemsCard.razor.cs`, `MForce.Components.ActionItems/MeetingActionItemsCard.razor`, `MForce.Components.ActionItems/MeetingActionItemsCard.razor.cs`, `MForce.Components.ActionItems/MeetingActionItemsCard.razor.css`, `MForce365.Shared.Tests/MForceTaskReminderTests.cs`, `MForce365.Shared.Tests/TodoReminderPayloadTests.cs`, `MForce365.Web.Tests/ActionItemReminderUiTests.cs`, `MForce.Components.ActionItems.Tests/ActionItemReminderUiTests.cs`, `MForce.Components.ActionItems/README.md`, `docs/development.md`, `RELEASE.md`):
+  - Added a configurable `Reminder / amber state` picker to the To-Do action-item create/edit flows, with a one-day default and fixed lead-time options for common reminder windows.
+  - Persisted the selected lead time through Microsoft To-Do reminder fields and reused the same shared helper to color upcoming tasks amber and overdue tasks red across the main action-item views.
+  - Kept Planner-backed action items on the default one-day amber window because Planner tasks do not expose equivalent reminder metadata in this client.
+  - Closes #473.
 - Validation:
   - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
-  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
 
 ## VERSION 1.4.233 Beta
 
