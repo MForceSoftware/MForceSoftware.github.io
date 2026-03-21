@@ -2,7 +2,7 @@
 @import '_content/MForce.Components.Files/MForce.Components.Files.fjr3hdvjfs.bundle.scp.css';
 @import '_content/MForce.Components.Projects/MForce.Components.Projects.8cjp05glld.bundle.scp.css';
 @import '_content/MForce.Components.Schedule/MForce.Components.Schedule.c102jv2pd2.bundle.scp.css';
-@import '_content/MForce.Components/MForce.Components.vvb5lq8342.bundle.scp.css';
+@import '_content/MForce.Components/MForce.Components.mrjweidd79.bundle.scp.css';
 @import '_content/Microsoft.AspNetCore.Components.QuickGrid/Microsoft.AspNetCore.Components.QuickGrid.boiwgh0w5b.bundle.scp.css';
 
 /* /Components/MeetingArtworkPanel.razor.rz.scp.css */
@@ -1636,6 +1636,329 @@
 
     .jira-solution-actions--stacked .jira-solution-action[b-rvko163ggj],
     .jira-solution-actions .jira-solution-action[b-rvko163ggj] {
+        width: 100%;
+    }
+}
+/* /Pages/LiForce365NonConnectionsSolution.razor.rz.scp.css */
+.liforce-solution-shell[b-upivskksua] {
+    width: min(1120px, 100%);
+    margin: 0 auto;
+    padding-bottom: 2.5rem;
+    color: #0f172a;
+}
+
+.liforce-solution-hero[b-upivskksua],
+.liforce-solution-section[b-upivskksua],
+.liforce-solution-cta[b-upivskksua],
+.liforce-solution-note[b-upivskksua] {
+    border: 1px solid rgba(148, 163, 184, 0.26);
+    border-radius: 1.7rem;
+    background: rgba(255, 255, 255, 0.84);
+    box-shadow: 0 20px 44px rgba(15, 23, 42, 0.1);
+    backdrop-filter: blur(16px);
+}
+
+.liforce-solution-hero[b-upivskksua] {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    gap: 1.4rem;
+    grid-template-columns: minmax(0, 1.45fr) minmax(18rem, 0.95fr);
+    padding: 2rem;
+}
+
+.liforce-solution-hero[b-upivskksua]::after {
+    content: "";
+    position: absolute;
+    inset: auto -4rem -5rem auto;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 9999px;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.22), rgba(37, 99, 235, 0));
+    pointer-events: none;
+}
+
+.liforce-solution-kicker[b-upivskksua],
+.liforce-solution-section-eyebrow[b-upivskksua],
+.liforce-solution-panel-label[b-upivskksua] {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 0 0 0.65rem;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+}
+
+.liforce-solution-kicker[b-upivskksua],
+.liforce-solution-section-eyebrow[b-upivskksua] {
+    color: #1d4ed8;
+}
+
+.liforce-solution-hero h1[b-upivskksua],
+.liforce-solution-section h2[b-upivskksua],
+.liforce-solution-cta h2[b-upivskksua] {
+    margin: 0;
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+    font-weight: 900;
+}
+
+.liforce-solution-hero h1[b-upivskksua] {
+    max-width: 12ch;
+    font-size: clamp(2.35rem, 4vw, 4.3rem);
+}
+
+.liforce-solution-lead[b-upivskksua],
+.liforce-solution-card p[b-upivskksua],
+.liforce-solution-proof p[b-upivskksua],
+.liforce-solution-cta p[b-upivskksua],
+.liforce-solution-note p[b-upivskksua] {
+    margin: 0;
+    color: #475569;
+    line-height: 1.65;
+    font-size: 1rem;
+}
+
+.liforce-solution-badges[b-upivskksua] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: 1.25rem;
+}
+
+.liforce-solution-badges span[b-upivskksua] {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.58rem 0.9rem;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, rgba(239, 246, 255, 0.96), rgba(224, 231, 255, 0.86));
+    border: 1px solid rgba(96, 165, 250, 0.4);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.liforce-solution-badges :deep(.rz-icon)[b-upivskksua] {
+    color: #2563eb;
+    font-size: 1rem;
+}
+
+.liforce-solution-actions[b-upivskksua] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1.45rem;
+}
+
+.liforce-solution-action[b-upivskksua] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3rem;
+    padding: 0.75rem 1.2rem;
+    border-radius: 9999px;
+    font-size: 0.95rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+.liforce-solution-action:hover[b-upivskksua] {
+    transform: translateY(-1px);
+}
+
+.liforce-solution-action--primary[b-upivskksua] {
+    background: linear-gradient(135deg, #2563eb, #0f766e);
+    color: #ffffff;
+    box-shadow: 0 14px 28px rgba(37, 99, 235, 0.22);
+}
+
+.liforce-solution-action--secondary[b-upivskksua] {
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    background: rgba(255, 255, 255, 0.74);
+    color: #0f172a;
+}
+
+.liforce-solution-hero-panel[b-upivskksua] {
+    position: relative;
+    align-self: stretch;
+    padding: 1.35rem;
+    border-radius: 1.35rem;
+    background: linear-gradient(160deg, #0f172a, #1d4ed8 65%, #38bdf8 100%);
+    color: #ffffff;
+    box-shadow: inset 0 0 0 1px rgba(191, 219, 254, 0.18);
+}
+
+.liforce-solution-panel-label[b-upivskksua] {
+    color: #bfdbfe;
+}
+
+.liforce-solution-hero-panel h2[b-upivskksua] {
+    margin: 0 0 1rem;
+    font-size: 1.35rem;
+    line-height: 1.18;
+}
+
+.liforce-solution-panel-list[b-upivskksua] {
+    margin: 0;
+    padding-left: 1.2rem;
+    display: grid;
+    gap: 0.75rem;
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.liforce-solution-note[b-upivskksua] {
+    margin-top: 1rem;
+    padding: 1rem 1.15rem;
+}
+
+.liforce-solution-section[b-upivskksua],
+.liforce-solution-cta[b-upivskksua] {
+    margin-top: 1rem;
+    padding: 1.5rem;
+}
+
+.liforce-solution-section-head[b-upivskksua] {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-bottom: 1.2rem;
+}
+
+.liforce-solution-section h2[b-upivskksua],
+.liforce-solution-cta h2[b-upivskksua] {
+    font-size: clamp(1.6rem, 2.6vw, 2.4rem);
+}
+
+.liforce-solution-outcome-grid[b-upivskksua],
+.liforce-solution-card-grid[b-upivskksua],
+.liforce-solution-proof-grid[b-upivskksua] {
+    display: grid;
+    gap: 1rem;
+}
+
+.liforce-solution-outcome-grid[b-upivskksua] {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.liforce-solution-card-grid[b-upivskksua] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.liforce-solution-card[b-upivskksua] {
+    padding: 1.2rem;
+    border: 1px solid rgba(148, 163, 184, 0.24);
+    border-radius: 1.3rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 250, 252, 0.9));
+}
+
+.liforce-solution-card--accent[b-upivskksua] {
+    background: linear-gradient(160deg, rgba(239, 246, 255, 0.96), rgba(224, 231, 255, 0.8));
+    border-color: rgba(96, 165, 250, 0.44);
+}
+
+.liforce-solution-card h3[b-upivskksua],
+.liforce-solution-proof h3[b-upivskksua] {
+    margin: 0 0 0.55rem;
+    font-size: 1.25rem;
+    line-height: 1.15;
+    font-weight: 800;
+}
+
+.liforce-solution-table-wrap[b-upivskksua] {
+    overflow-x: auto;
+    border-radius: 1.2rem;
+    border: 1px solid rgba(148, 163, 184, 0.24);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.liforce-solution-table[b-upivskksua] {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 760px;
+}
+
+.liforce-solution-table th[b-upivskksua],
+.liforce-solution-table td[b-upivskksua] {
+    padding: 0.9rem 1rem;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+    text-align: left;
+    vertical-align: top;
+}
+
+.liforce-solution-table thead th[b-upivskksua] {
+    background: rgba(239, 246, 255, 0.92);
+    color: #0f172a;
+    font-size: 0.88rem;
+    font-weight: 800;
+}
+
+.liforce-solution-table tbody th[b-upivskksua] {
+    width: 22%;
+    color: #0f172a;
+    font-weight: 700;
+    background: rgba(248, 250, 252, 0.72);
+}
+
+.liforce-solution-table td[b-upivskksua] {
+    color: #334155;
+    font-weight: 600;
+}
+
+.liforce-solution-proof-grid[b-upivskksua] {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.liforce-solution-proof-grid article[b-upivskksua] {
+    padding: 1.1rem;
+    border-radius: 1.2rem;
+    background: linear-gradient(160deg, rgba(248, 250, 252, 0.95), rgba(255, 255, 255, 0.9));
+    border: 1px solid rgba(148, 163, 184, 0.22);
+}
+
+.liforce-solution-cta[b-upivskksua] {
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: minmax(0, 1.3fr) auto;
+    align-items: center;
+}
+
+.liforce-solution-actions--stacked[b-upivskksua] {
+    margin-top: 0;
+    justify-content: flex-end;
+}
+
+@media (max-width: 960px) {
+    .liforce-solution-hero[b-upivskksua],
+    .liforce-solution-outcome-grid[b-upivskksua],
+    .liforce-solution-card-grid[b-upivskksua],
+    .liforce-solution-proof-grid[b-upivskksua],
+    .liforce-solution-cta[b-upivskksua] {
+        grid-template-columns: 1fr;
+    }
+
+    .liforce-solution-hero h1[b-upivskksua] {
+        max-width: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .liforce-solution-hero[b-upivskksua],
+    .liforce-solution-section[b-upivskksua],
+    .liforce-solution-cta[b-upivskksua] {
+        padding: 1.15rem;
+        border-radius: 1.25rem;
+    }
+
+    .liforce-solution-actions--stacked[b-upivskksua] {
+        justify-content: stretch;
+    }
+
+    .liforce-solution-actions--stacked .liforce-solution-action[b-upivskksua],
+    .liforce-solution-actions .liforce-solution-action[b-upivskksua] {
         width: 100%;
     }
 }

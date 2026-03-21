@@ -23,11 +23,19 @@
 
 ## VERSION 1.4.262 Beta
 
+- Public LiForce365 non-connections solution brief for issue `#1776` (`MForce.Components/PreLoginHomePage.razor`, `MForce.Components/PreLoginHomePage.razor.css`, `MForce365.Web/Shared/PublicLayout.razor`, `MForce365.Web/Pages/LiForce365NonConnectionsSolution.razor`, `MForce365.Web/Pages/LiForce365NonConnectionsSolution.razor.css`, `MForce365.Web.Tests/LiForce365NonConnectionsSolutionPageTests.cs`, `MForce365.Web.Tests/LiForce365NonConnectionsDocumentationTests.cs`, `MForce365.Web.Tests/PreLoginLiForce365LinkTests.cs`, `MForce365.Web.Tests/PublicLayoutNavigationTests.cs`, `docs/README.md`, `docs/development.md`, `docs/liforce365-non-connections-solution.md`, `RELEASE.md`):
+  - Added a public `LiForce365` solution brief page that frames non-connection discovery, follower and connection ranking, vertical filtering, and personalized outreach planning as a governed concept instead of a shipped LinkedIn automation feature.
+  - Linked the new page from the public navigation and pre-login landing page so issue #1776 now has a concrete route and discovery path inside the existing Blazor WebAssembly app.
+  - Added focused regression coverage and repo-native documentation for the new routes, entry points, operating-model guardrails, and service-oriented rollout note.
+  - Closes #1776.
 - Public forums solution brief for issue `#1651` (`MForce.Components/PreLoginHomePage.razor`, `MForce.Components/PreLoginHomePage.razor.css`, `MForce365.Web/Shared/PublicLayout.razor`, `MForce365.Web/Pages/ForumsSolution.razor`, `MForce365.Web/Pages/ForumsSolution.razor.css`, `MForce365.Web.Tests/ForumsSolutionPageTests.cs`, `MForce365.Web.Tests/ForumsSolutionDocumentationTests.cs`, `MForce365.Web.Tests/PreLoginForumsLinkTests.cs`, `MForce365.Web.Tests/PublicLayoutNavigationTests.cs`, `docs/README.md`, `docs/development.md`, `docs/forums-solution.md`, `RELEASE.md`):
   - Added a public `mForce365 Forums` solution brief page that frames structured between-meeting discussion, moderated participation, and searchable knowledge capture as an mForce365-aligned concept instead of an already-shipped community platform.
   - Linked the new page from the public navigation and pre-login landing page so the backlog request now has a concrete route and discovery path inside the existing Blazor WebAssembly app.
   - Added focused regression coverage and repo-native documentation for the new routes, entry points, and guardrails.
   - Closes #1651.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
 
 ## VERSION 1.4.261 Beta
 
