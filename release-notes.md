@@ -23,6 +23,12 @@
 
 ## VERSION 1.4.259 Beta
 
+- Post-usage product rating prompt for issue `#1579` (`MForce365.Shared/ProductFeedbackRequest.cs`, `MForce.Pages/Pages/ProductFeedback.razor`, `MForce365.Web/Components/ProductFeedbackPromptDialog.razor`, `MForce365.Web/Pages/Index.razor`, `MForce365.Web/Program.cs`, `MForce365.Web/Services/ProductFeedbackPromptService.cs`, `MForce365.Web/Services/ProductFeedbackService.cs`, `MForce365.Web.Tests/ProductFeedbackPromptServiceTests.cs`, `MForce365.Web.Tests/ProductFeedbackServiceTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Added a dashboard-triggered feedback dialog that asks authenticated web users for a 1-10 score plus free-text suggestions once the same browser sees at least 5 meetings held or 5 action items created/completed in the last 30 days.
+  - Kept the prompt low-risk and non-repetitive by persisting a browser-local, user-specific state key so submitted users are not re-prompted and dismissals cool down for 30 days before the dialog can reappear.
+  - Centralized feedback delivery through a shared `IProductFeedbackService` contract and web `ProductFeedbackService`, then rewired the existing manual Product Feedback page to use that same mail-sending path instead of keeping a second Graph mail implementation.
+  - Added focused regression coverage for the prompt thresholds, default rating context selection, storage-key normalization, and feedback mail formatting.
+  - Closes #1579.
 - Sign-up onboarding overlay for issue `#1575` (`MForce365.Web/Components/NewUserOnboarding.razor`, `MForce365.Web/Components/NewUserOnboarding.razor.cs`, `MForce365.Web/Pages/Index.razor`, `MForce365.Web.Tests/NewUserOnboardingTests.cs`, `docs/authentication.md`, `docs/development.md`, `RELEASE.md`):
   - Added a one-time welcome overlay on the authenticated dashboard so fresh sign-ups are introduced to the main signed-in surfaces immediately after the Microsoft sign-in handoff completes.
   - The overlay walks users through the dashboard home, calendar / next-meeting cards, and action-items / projects cards, and includes a step progress bar so the flow reads as a short guided tour rather than static copy.
@@ -30,7 +36,7 @@
   - Added regression coverage for the dashboard placement, onboarding copy, gating logic, and per-user storage-key behavior.
   - Closes #1575.
 - Validation:
-  - `dotnet build MForce365/MForce365.sln --warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
   - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
 
 ## VERSION 1.4.258 Beta
