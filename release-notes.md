@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.244 Beta
+
+- Recurring meeting invite previous action items for issue `#914` (`MForce365.Shared/RecurringMeetingInviteContextLoader.cs`, `MForce365.Shared/MeetingDescriptionFormatter.cs`, `MForce365.Web/Pages/Meeting.razor.cs`, `MForce.Pages/Pages/Meeting.razor.cs`, `MForce365.Shared.Tests/MeetingDescriptionFormatterTests.cs`, `docs/development.md`, `docs/meeting-description.md`, `RELEASE.md`):
+  - Updated the recurring-meeting `Update meeting description` flow so it can resolve the previous occurrence in the same Graph series and load that occurrence's saved meeting-state snapshot when one exists.
+  - Added a `Previous meeting Action Items` section to the generated HTML and plain-text invite summary, using the prior meeting's recorded action items instead of asking organizers to retype them manually for recurring meetings.
+  - Kept the new section best-effort and data-backed: if the prior occurrence has no saved meeting snapshot or no recorded action items, the current invite update still succeeds without inventing placeholder content.
+  - Closes #914.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build -v minimal`
+
 ## VERSION 1.4.243 Beta
 
 - Meeting invite time metadata for issue `#907` (`MForce365.Shared/MForceAppointment.cs`, `MForce365.Shared.Tests/MForceAppointmentComposeBodyTests.cs`, `docs/development.md`, `RELEASE.md`):
@@ -9,17 +20,6 @@
 - Validation:
   - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
   - `dotnet test MForce365/MForce365.sln --no-build -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
-
-## VERSION 1.4.242 Beta
-
-- Participant contact-name suggestions for issue `#824` (`MForce.Components.Schedule/AddParticipant.razor`, `MForce.Components.Schedule/AddParticipant.razor.cs`, `MForce.Components.Schedule.Tests/AddParticipantBehaviorTests.cs`, `MForce365.Shared/mForce365Strings.resx`, `docs/development.md`, `RELEASE.md`):
-  - Added a contact-name suggestion field to the shared Add Participant dialog so organizers can type a saved contact name and have the participant email filled from Microsoft Graph contacts.
-  - Kept manual email entry intact and added a safe fallback path so contact lookup failures do not block adding participants by email.
-  - Pending participants selected from contacts now keep their saved display name in the Participants list until meeting invites are sent and attendee details round-trip through Microsoft Graph.
-  - Closes #824.
-- Validation:
-  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
-  - `dotnet test MForce365/MForce365.sln --no-build -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
 
 ## VERSION 1.4.241 Beta
 
