@@ -1,4 +1,14 @@
 # mForce365 Release Notes
+## VERSION 1.4.269 Beta
+
+- Meeting notes details heading alignment for issue `#2570` (`MForce365.Shared/MForceAppointment.cs`, `MForce365.Shared.Tests/MForceAppointmentComposeBodyTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Updated generated HTML for `Details` so the first line of meeting details now starts on the same line as the bold `Details:` label in meeting notes and invite-derived descriptions.
+  - Kept multiline details safe by preserving `<br>` formatting for subsequent lines, and tightened the shared formatter regression coverage around the updated HTML output.
+  - Closes #2570.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
+
 ## VERSION 1.4.268 Beta
 
 - Meeting notes meeting-type formatting for issue `#2569` (`MForce365.Shared/MForceAppointment.cs`, `MForce365.Shared.Tests/MForceAppointmentComposeBodyTests.cs`, `docs/development.md`, `RELEASE.md`):
