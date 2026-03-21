@@ -1,6 +1,10 @@
 # mForce365 Release Notes
 ## VERSION 1.4.235 Beta
 
+- Channel / reseller pricing-baseline alignment for issue `#500` (`MForce365.Web/Pages/PartnerAdministration.razor`, `MForce365.Web/Pages/PartnerAdministration.razor.cs`, `MForce365.Web.Tests/PartnerAdministrationPageTests.cs`, `docs/partners.md`, `docs/reseller-pack.md`, `docs/development.md`, `RELEASE.md`):
+  - Updated `/admin/partners` to mirror the shared `Team`, `Professional`, and `Enterprise` pricing tiers so reseller and channel conversations start from the same shipped baseline used by `/admin/licensing`.
+  - Reinforced the commercial guardrail across the partner workspace and partner-facing documentation so margins, commissions, discounts, and negotiated reseller terms still stay outside the repository and outside browser-local storage.
+  - Closes #500.
 - Seat-count pricing tiers for issue `#499` (`MForce365.Web/Services/LicensingPricingModel.cs`, `MForce365.Web/Pages/Licensing.razor`, `MForce365.Web/Pages/Licensing.razor.cs`, `MForce365.Web/Pages/Authentication.razor`, `MForce365.Web/Pages/Authentication.razor.cs`, `MForce365.Web.Tests/LicensingPageTests.cs`, `MForce365.Web.Tests/AuthenticationPageTests.cs`, `docs/authentication.md`, `docs/development.md`, `RELEASE.md`):
   - Added a shared browser-side pricing model so corporate seat counts now resolve consistently into `Team`, `Professional`, or `Enterprise` tiers with the matching baseline per-seat price.
   - Updated `/admin/licensing` to derive tier names and seat prices automatically from purchased seats, surface the agreed tier matrix, and keep direct seat edits normalized against current assignments.
