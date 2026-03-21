@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.280 Beta
+
+- Pre-login solution-card heading contrast for issue `#2654` (`MForce.Components/PreLoginHomePage.razor`, `MForce.Components/PreLoginHomePage.razor.css`, `MForce365.Web.Tests/PreLoginCompareContrastTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Moved the public landing page's compare-card shell and copy contrast onto scoped `prelogin-*` classes so those cards no longer depend on missing generated utility classes for their background and heading readability.
+  - Changed the affected teaser headings and supporting copy to explicit dark text on a light glass surface, which keeps the compare, Jira, forums, LiForce365, and advanced-people cards readable across the whole pre-login stack.
+  - Added a focused regression test that locks in the new compare-card contrast classes and their scoped CSS contract.
+  - Closes #2654.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
+
 ## VERSION 1.4.279 Beta
 
 - Playwright browser-test-mode coverage hardening for issue `#2649` (`MForce365.Web/Testing/MockGraphDataStore.cs`, `MForce365.Web/Testing/MockGraphMessageHandler.cs`, `MForce365.Web.Tests/MockGraphClientTests.cs`, `docs/development.md`, `RELEASE.md`):
