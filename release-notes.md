@@ -1,4 +1,16 @@
 # mForce365 Release Notes
+## VERSION 1.4.235 Beta
+
+- Seat-count pricing tiers for issue `#499` (`MForce365.Web/Services/LicensingPricingModel.cs`, `MForce365.Web/Pages/Licensing.razor`, `MForce365.Web/Pages/Licensing.razor.cs`, `MForce365.Web/Pages/Authentication.razor`, `MForce365.Web/Pages/Authentication.razor.cs`, `MForce365.Web.Tests/LicensingPageTests.cs`, `MForce365.Web.Tests/AuthenticationPageTests.cs`, `docs/authentication.md`, `docs/development.md`, `RELEASE.md`):
+  - Added a shared browser-side pricing model so corporate seat counts now resolve consistently into `Team`, `Professional`, or `Enterprise` tiers with the matching baseline per-seat price.
+  - Updated `/admin/licensing` to derive tier names and seat prices automatically from purchased seats, surface the agreed tier matrix, and keep direct seat edits normalized against current assignments.
+  - Updated `/authentication/register` so corporate registration previews the derived pricing tier and per-seat price before the Microsoft sign-in handoff.
+  - Kept the commercial guardrail intact by documenting that customer-specific discounts and approvals still stay outside the repository and outside the browser-local licensing model.
+  - Closes #499.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+
 ## VERSION 1.4.234 Beta
 
 - Meeting participant update upload links for issue `#472` (`MForce365.Web/Pages/Meeting.razor.cs`, `MForce365.Web/Pages/MeetingGuest.razor`, `MForce365.Web/Pages/QRCode.razor`, `MForce.Components.Files/FileExplorer.razor.cs`, `MForce365.Shared/MForceMeeting.cs`, `MForce365.Shared/IMeeting.cs`, `MForce365.Web/Pages/Project.razor.cs`, `MForce365.Web.Tests/MeetingParticipantUpdatesTests.cs`, `MForce365.Web.Tests/MeetingGuestQrCodeTests.cs`, `MForce365.Web.Tests/ProductionReadinessUxTests.cs`, `MForce.Components.Files.Tests/FileExplorerTests.cs`, `docs/development.md`, `RELEASE.md`):
