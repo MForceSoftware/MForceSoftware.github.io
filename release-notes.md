@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.257 Beta
+
+- Walkthrough link in the app menu for issue `#1576` (`MForce365.Web/Shared/MainLayout.razor`, `MForce365.Shared/mForce365Strings.resx`, `MForce365.Web.Tests/MainLayoutTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Added a direct `Walkthrough` entry to both authenticated sidebar variants so users can open the current product tutorial destination from the main app navigation.
+  - Kept the implementation low-risk by reusing the existing public tutorial URL (`https://www.makemeetingsmatter.com/video-tutorial`) in a new tab instead of adding a second walkthrough surface inside the WebAssembly client.
+  - Added regression coverage to keep the walkthrough link anchored in both the mobile and desktop sidebar markup.
+  - Closes #1576.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
+
 ## VERSION 1.4.256 Beta
 
 - Meeting Whiteboard linking for issue `#1510` (`MForce365.Shared/IMeeting.cs`, `MForce365.Shared/MForceMeeting.cs`, `MForce365.Shared/MeetingWhiteboardLink.cs`, `MForce365.Shared/WhiteboardGraphHelper.cs`, `MForce.Components.Projects/MeetingWhiteboardCard.razor`, `MForce.Components.Projects/MeetingWhiteboardCard.razor.cs`, `MForce.Components.Projects/MeetingWhiteboardCard.razor.css`, `MForce.Components.Projects/WhiteboardChooser.razor`, `MForce.Components.Projects/WhiteboardChooser.razor.cs`, `MForce365.Web/Pages/Meeting.razor`, `MForce365.Web/Pages/Meeting.razor.cs`, `MForce365.Web/Pages/Meeting.razor.css`, `MForce365.Web/Pages/MeetingGuest.razor`, `MForce365.Web/Pages/Project.razor.cs`, `MForce365.Shared/mForce365Strings.resx`, `MForce365.Shared.Tests/WhiteboardGraphHelperTests.cs`, `MForce.Components.Projects.Tests/MeetingWhiteboardCardTests.cs`, `MForce.Components.Projects.Tests/WhiteboardChooserTests.cs`, `MForce365.Web.Tests/MeetingWhiteboardIntegrationTests.cs`, `docs/development.md`, `RELEASE.md`):
