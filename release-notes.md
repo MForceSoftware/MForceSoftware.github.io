@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.275 Beta
+
+- About Me card wrapping for issue `#2577` (`MForce.Components/AboutMeCard.razor`, `MForce.Components/AboutMeCard.razor.css`, `MForce.Components/AboutMeCard.razor.cs`, `MForce365.Web.Tests/AboutMeCardTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Reworked the shared About Me profile component into a scoped two-column layout with an intrinsic label column and a shrinkable value column so the card keeps its structure when the dashboard narrows.
+  - Added scoped wrapping rules for profile values so long email addresses and other unbroken strings stay inside the card instead of running past the right edge.
+  - Corrected the component summary comment to match the actual local-database-backed data flow and added focused regression coverage for the new wrapping contract.
+  - Closes #2577.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
+
 ## VERSION 1.4.274 Beta
 
 - Meeting toolbar running-actions label fix for issue `#2575` (`MForce365.Web/Pages/Meeting.razor`, `MForce.Pages/Pages/Meeting.razor`, `MForce365.Web.Tests/MeetingQuickActionStateTests.cs`, `docs/development.md`, `RELEASE.md`):
