@@ -6,6 +6,10 @@
   - Added scoped wrapping rules for profile values so long email addresses and other unbroken strings stay inside the card instead of running past the right edge.
   - Corrected the component summary comment to match the actual local-database-backed data flow and added focused regression coverage for the new wrapping contract.
   - Closes #2577.
+- Meeting settings debug-copy cleanup for issue `#2576` (`MForce365.Web/Pages/AdminMeetingSettings.razor`, `MForce365.Web.Tests/MeetingSettingsAdministrationPageTests.cs`, `docs/administration.md`, `docs/development.md`, `RELEASE.md`):
+  - Removed the two implementation-detail helper lines from the `Branding` and `AI settings` cards on `/admin/meeting-settings` so the page no longer exposes raw browser `localStorage` key names in end-user copy.
+  - Kept the underlying browser-local storage behavior unchanged, updated the focused regression test to lock in the copy removal, and documented where those storage keys still belong for developer troubleshooting.
+  - Closes #2576.
 - Validation:
   - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
   - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
