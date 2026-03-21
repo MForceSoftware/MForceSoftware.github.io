@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.270 Beta
+
+- Personal Microsoft account registration fix for issue `#2568` (`MForce365.Web/GraphClientExtensions.cs`, `MForce365.Web/ScopedGraphServiceClientFactory.cs`, `MForce365.Web/Pages/Meeting.razor.cs`, `MForce365.Web/wwwroot/appsettings.json`, `output/playwright/publish-web/wwwroot/appsettings.json`, `MForce365.Web.Tests/GraphClientExtensionsTests.cs`, `MForce365.Web.Tests/MeetingTeamsChatPostingTests.cs`, `docs/authentication.md`, `docs/development.md`, `RELEASE.md`):
+  - Removed the newer Teams chat-posting delegated Graph scopes from the default web sign-in scope set while keeping the long-standing `Team.ReadBasic.All` baseline needed by the existing Teams-management surfaces, so Outlook.com, Hotmail, and other personal Microsoft accounts are no longer blocked during the normal registration/sign-in handoff without regressing the `/teams` experience.
+  - Added a scoped Graph client factory plus an on-demand Teams chat consent path on the meeting page, so `OnlineMeetings.Read` and `ChatMessage.Send` are requested only when a user explicitly posts to the Teams chat.
+  - Added focused regression coverage for the default-scope split and the meeting-page on-demand Teams consent wiring, then documented the shipped behavior in the authentication/development guides.
+  - Closes #2568.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
+
 ## VERSION 1.4.269 Beta
 
 - Meeting notes details heading alignment for issue `#2570` (`MForce365.Shared/MForceAppointment.cs`, `MForce365.Shared.Tests/MForceAppointmentComposeBodyTests.cs`, `docs/development.md`, `RELEASE.md`):
