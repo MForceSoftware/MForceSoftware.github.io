@@ -1,4 +1,13 @@
 # mForce365 Release Notes
+## VERSION 1.4.251 Beta
+
+- Public website media mentions for issue `#1432` (`MForce.Components/MediaMentionsStrip.razor`, `MForce.Components/MediaMentionsStrip.razor.css`, `MForce.Components/PreLoginHomePage.razor`, `MForce365.Web/Shared/PublicLayout.razor`, `MForce365.Web.Tests/MediaMentionsStripTests.cs`, `docs/development.md`, `docs/social-media-strategy.md`, `RELEASE.md`):
+  - Added a reusable `MediaMentionsStrip` component so the public website now carries the requested `As seen on NBC, Fox, and other outlets` social-proof line across the pre-login landing page and the shared public layout used by the website's marketing pages.
+  - Kept the implementation safe and minimal by reusing one component instead of duplicating copy across pages, which makes future messaging updates less error-prone.
+  - Documented the related social-channel guidance in `docs/social-media-strategy.md` and recorded the developer guardrail that `brandlistverse.com` should not be hard-linked until a stable public URL is available.
+  - Added regression coverage to keep the media-mentions copy and its website placement anchored in the pre-login and public-layout surfaces.
+  - Closes #1432.
+
 ## VERSION 1.4.250 Beta
 
 - Must-have positioning refresh for issue `#1425` (`MForce.Components/PreLoginHomePage.razor`, `MForce365.Web.Tests/PreLoginMustHavePositioningTests.cs`, `MForce365.Web.Tests/SalesCollateralPositioningTests.cs`, `docs/sales-battlecard.md`, `docs/sales-data-sheet.md`, `docs/README.md`, `docs/development.md`, `RELEASE.md`):
