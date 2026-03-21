@@ -1,6 +1,11 @@
 # mForce365 Release Notes
 ## VERSION 1.4.281 Beta
 
+- Shared-calendar overlay Graph scope fix for issue `#2661` (`MForce365.Web/wwwroot/appsettings.json`, `MForce365.Shared/GraphService.cs`, `MForce365.Web.Tests/MergedSchedulePermissionTests.cs`, `docs/authentication.md`, `docs/development.md`, `RELEASE.md`):
+  - Added delegated `Calendars.Read` wherever the app declares its default Microsoft Graph calendar scopes so the scheduler's `getSchedule` overlay call can load free/busy blocks instead of silently returning no merged meetings.
+  - Added regression coverage to keep the required overlay permission in both the web app config and the shared Graph service scope list.
+  - Documented the permission requirement for merged shared-calendar overlays.
+  - Closes #2661.
 - Meeting prep `Other` meeting-type formatting for issue `#2656` (`MForce365.Shared/MForceAppointment.cs`, `MForce365.Shared/MeetingTypeMetadata.cs`, `MForce365.Shared.Tests/MForceAppointmentComposeBodyTests.cs`, `MForce365.Shared.Tests/MeetingTypeMetadataTests.cs`, `docs/development.md`, `RELEASE.md`):
   - Formatted the structured `... - Other` meeting-type fallback in generated HTML as a bold category heading with a trailing colon before `Other`, matching the surrounding meeting-prep heading style more closely.
   - Preserved round-trip meeting-type parsing by embedding the raw fallback value in a `data-mforce365-meeting-type` attribute and teaching extraction to read that metadata first.
