@@ -22,9 +22,14 @@
   - Immutable Meeting Binder PDFs now write `MeetingBinder.blockchain-proof.json` into the meeting folder, capturing a SHA-256 hash plus meeting metadata for the generated PDF artifact while keeping the finalized document in the normal export / records flow.
   - Kept the shipped scope hash-only rather than attempting raw-PDF-on-chain storage from the WebAssembly client, which avoids exposing sensitive meeting content directly on a blockchain.
   - Closes #524.
+- Teams chat launch hardening for issue `#555` (`MForce.Components/TeamDetail.razor`, `MForce.Components/TeamDetail.razor.cs`, `MForce365.Web.Tests/TeamDetailTeamsChatTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Replaced the raw team conversation hyperlink on the shared team-detail surface with a dedicated `Join the Conversation` action button.
+  - Normalized the Graph-provided `Team.WebUrl` before launch, restricted launches to known Teams hosts, and disabled the action when no safe Teams chat link is available.
+  - Kept the feature within the app's existing Microsoft Graph scope boundary by launching the native Teams conversation in a new tab instead of attempting to read channel messages in-app.
+  - Closes #555.
 - Validation:
-  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
-  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --no-restore --disable-build-servers -maxcpucount:1 -v minimal`
 
 ## VERSION 1.4.235 Beta
 
@@ -64,8 +69,8 @@
   - Hid the CTA when the current browser-local licensing workspace already contains a matching active user-license entry for the signed-in user.
   - Closes #491.
 - Validation:
-  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
-  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --no-restore --disable-build-servers -maxcpucount:1 -v minimal`
 
 ## VERSION 1.4.234 Beta
 
