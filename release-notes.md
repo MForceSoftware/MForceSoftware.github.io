@@ -1,4 +1,16 @@
 # mForce365 Release Notes
+## VERSION 1.4.249 Beta
+
+- Meeting binder cost publishing for issue `#1403` (`MForce365.Web/Pages/Settings.razor`, `MForce365.Web/Pages/Settings.razor.cs`, `MForce365.Web/Pages/MeetingCostBinderPreferences.cs`, `MForce365.Web/Pages/Meeting.razor.cs`, `MForce365.Shared/MeetingBinderCostSummary.cs`, `MForce365.Shared/MeetingBinderContent.cs`, `MForce365.Shared/MeetingBinder.cs`, `MForce365.Shared.Tests/MeetingCostSummaryBuilderTests.cs`, `MForce365.Shared.Tests/MeetingBinderBuilderTests.cs`, `MForce365.Web.Tests/MeetingCostBinderSettingsTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Added a `Meeting cost binder` card to the web Settings page so users can store a browser-local blended internal hourly rate and choose whether generated binders should publish an estimated meeting-cost section.
+  - Binder generation on the web meeting page now reads those preferences, counts internal participants by matching attendee email domains to the organizer's domain, includes the organizer when Graph omits them from the attendee list, and estimates cost from either the recorded actual duration or the scheduled duration.
+  - The shared binder renderer now emits a `Meeting Cost` section only when publishing is enabled and a positive hourly rate is configured, keeping the shipped scope lightweight instead of introducing per-role salary tables or server-side finance data.
+  - Added regression coverage for the new cost-summary calculation rules, binder section rendering, and the Settings-page/browser-storage contract.
+  - Closes #1403.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --no-restore --disable-build-servers -maxcpucount:1 -v minimal`
+
 ## VERSION 1.4.248 Beta
 
 - Text-message action-item draft capture for issue `#1404` (`MForce365.Web/Pages/ActionItem.razor.cs`, `MForce365.Web/Pages/ActionItems.razor`, `MForce365.Shared/mForce365Strings.resx`, `MForce365.Web.Tests/ActionItemSharedDraftDefaultsTests.cs`, `MForce365.Web.Tests/ActionItemShareTargetTests.cs`, `docs/development.md`, `RELEASE.md`):
