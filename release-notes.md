@@ -1,4 +1,12 @@
 # mForce365 Release Notes
+## VERSION 1.4.246 Beta
+
+- Recurring meeting invite carry-over for issue `#915` (`MForce365.Web/Pages/Meeting.razor.cs`, `MForce365.Shared/MeetingDescriptionFormatter.cs`, `MForce365.Shared.Tests/MeetingDescriptionFormatterTests.cs`, `docs/development.md`, `docs/meeting-description.md`, `RELEASE.md`):
+  - `Update meeting description` now reuses `RecurringMeetingInviteContextLoader` to load the previous occurrence in the same recurring series and read that occurrence's saved `thisMeeting.meetingv1` file from the `mForce365/<iCalUId>` folder.
+  - When the previous meeting captured unresolved parking-lot topics, the regenerated meeting description now includes a `Previous meeting Parking Lot` section so those carry-over items appear in the updated recurring invite body.
+  - Added regression coverage to keep the new summary section idempotent across repeated description updates and available in both HTML and text bodies.
+  - Closes #915.
+
 ## VERSION 1.4.245 Beta
 
 - Authentication/register store handoff for issue `#1131` (`MForce365.Web/Pages/Authentication.razor`, `MForce365.Web.Tests/AuthenticationPageTests.cs`, `docs/authentication.md`, `docs/development.md`, `RELEASE.md`):
