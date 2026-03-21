@@ -1,4 +1,18 @@
 # mForce365 Release Notes
+## VERSION 1.4.278 Beta
+
+- Browser end-to-end test mode for issue `#2605` (`MForce365.Shared/ITestModeContext.cs`, `MForce365.Web/Testing/BrowserTestModeOptions.cs`, `MForce365.Web/Testing/RuntimeTestModeContext.cs`, `MForce365.Web/Testing/RuntimeTestModeAuthenticationStateProvider.cs`, `MForce365.Web/Testing/MockGraphDataStore.cs`, `MForce365.Web/Testing/MockGraphMessageHandler.cs`, `MForce365.Web/Pages/TestModeAuthentication.razor`, `MForce365.Web/Program.cs`, `MForce365.Web/GraphClientExtensions.cs`, `MForce365.Web/ScopedGraphServiceClientFactory.cs`, `MForce365.Web/Pages/Authentication.razor`, `MForce365.Web/Pages/Authentication.razor.cs`, `MForce365.Web/Pages/Index.razor`, `MForce365.Web/App.razor`, `MForce365.Web/Shared/LoginDisplay.razor`, `MForce365.Web/Shared/PublicLayout.razor`, `MForce365.Web/Shared/RedirectToLogin.razor`, `MForce365.Web/Shared/MainLayout.razor`, `MForce.Components/PreLoginHomePage.razor`, `MForce.Components.Schedule/MainSchedule.razor`, `MForce.Components.Schedule/MainSchedule.razor.css`, `MForce365.Web/wwwroot/appsettings.json`, `MForce365.Web.Tests/RuntimeTestModeContextTests.cs`, `MForce365.Web.Tests/RuntimeTestModeAuthenticationStateProviderTests.cs`, `MForce365.Web.Tests/MockGraphClientTests.cs`, `MForce365.Web.Tests/GraphClientExtensionsTests.cs`, `MForce365.Web.Tests/AuthenticationPageTests.cs`, `MForce365.Web.Tests/PublicLayoutNavigationTests.cs`, `MForce365.Web.Tests/PreLoginRegistrationGuidanceTests.cs`, `MForce.Components.Schedule.Tests/MainScheduleMergedScheduleTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Added an opt-in browser test mode behind `?testMode=1` that swaps the live MSAL authentication handoff for browser-local mock login/logout endpoints, while keeping the feature gated to Development or an explicit `Testing:EnableBrowserTestMode` configuration flag so it cannot be switched on in normal production configuration by query string alone.
+  - Added a mocked Microsoft Graph transport with seeded user, calendar, schedule, Planner, group, and To Do responses, and wired the scoped Graph client factory to use those responses only while test mode is active.
+  - Short-circuited access-token requests in test mode so mock-authenticated browser runs do not fall back into MSAL token acquisition, and pinned automated regression coverage to a deterministic mock-data seed while still seeding live browser sessions once per app startup.
+  - Matched the mocked calendar `DateTimeTimeZone` format to Microsoft Graph's expected precision so the `/stats` page can calculate meeting metrics in test mode without falling back to warning states.
+  - Fixed the scheduler `Merge schedules` Add button styling after responsive browser validation exposed a transparent-background rendering bug, and locked that scoped styling in with a focused schedule-component regression test.
+  - Suppressed tenant-dependent dashboard side effects during test mode and added focused regression coverage for the new routing and mocked Graph behavior so desktop, tablet, and mobile browser checks can run deterministically.
+  - Closes #2605.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
+
 ## VERSION 1.4.277 Beta
 
 - Merge schedules add-button label for issue `#2573` (`MForce.Components.Schedule/MainSchedule.razor`, `MForce.Components.Schedule.Tests/MainScheduleMergedScheduleTests.cs`, `docs/development.md`, `RELEASE.md`):
