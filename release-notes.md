@@ -1,4 +1,16 @@
 # mForce365 Release Notes
+## VERSION 1.4.267 Beta
+
+- Meeting quorum records for issue `#1829` (`MForce365.Shared/MeetingQuorumRecord.cs`, `MForce365.Shared/MForceMeeting.cs`, `MForce365.Shared/MeetingBinder.cs`, `MForce.Components.Schedule/ParticipantsCard.razor`, `MForce.Components.Schedule/ParticipantsCard.razor.cs`, `MForce.Components.Schedule/ParticipantsCard.razor.css`, `MForce365.Web/Pages/Meeting.razor.cs`, `MForce.Pages/Pages/Meeting.razor.cs`, `MForce365.Web/Pages/Project.razor.cs`, `MForce365.Shared.Tests/MeetingQuorumRecordTests.cs`, `MForce365.Shared.Tests/MeetingBinderBuilderTests.cs`, `MForce.Components.Schedule.Tests/ParticipantsCardTests.cs`, `MForce365.Web.Tests/ProjectMeetingCaptureSidecarTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Added an explicit quorum record to saved meeting state so organizers can capture whether quorum was reached, whether the meeting proceeded, and which members were tied to that governance decision.
+  - Extended the shared Participants card with organizer-only quorum controls and a read-only summary so both main meeting surfaces can keep the same quorum record without introducing a separate governance screen.
+  - Added a dedicated `Quorum` section to generated binders and preserved the record through the project meeting-capture sidecar so a no-quorum meeting can still be published as a historical record.
+  - Added focused regression coverage for the shared quorum model, binder output, participants UI, and sidecar persistence.
+  - Closes #1829.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
+
 ## VERSION 1.4.266 Beta
 
 - Action-item linked-work guidance for issue `#1876` (`MForce365.Web/Pages/ActionItem.razor`, `MForce365.Web/Components/AddActionItemDialog.razor`, `MForce.Components.ActionItems/AddActionItem.razor`, `MForce.Components.ActionItems/EditActionItem.razor`, `MForce365.Shared/mForce365Strings.resx`, `MForce.Components.ActionItems.Tests/ActionItemReminderUiTests.cs`, `MForce365.Web.Tests/AddActionItemDialogAssignmentEmailTests.cs`, `MForce365.Web.Tests/ActionItemStatusDisplayTests.cs`, `MForce365.Web.Tests/CreateActionItemResourceTests.cs`, `docs/development.md`, `docs/projects.md`, `RELEASE.md`):
@@ -31,7 +43,6 @@
 - Validation:
   - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
   - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 --logger "console;verbosity=minimal"`
-
 ## VERSION 1.4.263 Beta
 
 - Partner-hub sales workflow drafts for issue `#1685` (`MForce365.Web/Pages/Partners.razor`, `MForce365.Web/Pages/Partners.razor.cs`, `MForce365.Web/Pages/PartnerSalesWorkflowState.cs`, `MForce365.Web/Services/PartnerSalesWorkflowDraftBuilder.cs`, `MForce365.Web.Tests/PartnersFeatureTests.cs`, `MForce365.Web.Tests/PartnerSalesWorkflowDraftBuilderTests.cs`, `docs/development.md`, `docs/partners.md`, `RELEASE.md`):
