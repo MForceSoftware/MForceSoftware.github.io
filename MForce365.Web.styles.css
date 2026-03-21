@@ -2,7 +2,7 @@
 @import '_content/MForce.Components.Files/MForce.Components.Files.fjr3hdvjfs.bundle.scp.css';
 @import '_content/MForce.Components.Projects/MForce.Components.Projects.8cjp05glld.bundle.scp.css';
 @import '_content/MForce.Components.Schedule/MForce.Components.Schedule.md4nvr0yqt.bundle.scp.css';
-@import '_content/MForce.Components/MForce.Components.mrjweidd79.bundle.scp.css';
+@import '_content/MForce.Components/MForce.Components.t3yzq32hzk.bundle.scp.css';
 @import '_content/Microsoft.AspNetCore.Components.QuickGrid/Microsoft.AspNetCore.Components.QuickGrid.boiwgh0w5b.bundle.scp.css';
 
 /* /Components/MeetingArtworkPanel.razor.rz.scp.css */
@@ -1959,6 +1959,329 @@
 
     .liforce-solution-actions--stacked .liforce-solution-action[b-upivskksua],
     .liforce-solution-actions .liforce-solution-action[b-upivskksua] {
+        width: 100%;
+    }
+}
+/* /Pages/LiForce365Solution.razor.rz.scp.css */
+.liforce-solution-shell[b-w08besw2dr] {
+    width: min(1120px, 100%);
+    margin: 0 auto;
+    padding-bottom: 2.5rem;
+    color: #0f172a;
+}
+
+.liforce-solution-hero[b-w08besw2dr],
+.liforce-solution-section[b-w08besw2dr],
+.liforce-solution-cta[b-w08besw2dr],
+.liforce-solution-note[b-w08besw2dr] {
+    border: 1px solid rgba(148, 163, 184, 0.26);
+    border-radius: 1.7rem;
+    background: rgba(255, 255, 255, 0.84);
+    box-shadow: 0 20px 44px rgba(15, 23, 42, 0.1);
+    backdrop-filter: blur(16px);
+}
+
+.liforce-solution-hero[b-w08besw2dr] {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    gap: 1.4rem;
+    grid-template-columns: minmax(0, 1.45fr) minmax(18rem, 0.95fr);
+    padding: 2rem;
+}
+
+.liforce-solution-hero[b-w08besw2dr]::after {
+    content: "";
+    position: absolute;
+    inset: auto -4rem -5rem auto;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 9999px;
+    background: radial-gradient(circle, rgba(14, 165, 233, 0.28), rgba(14, 165, 233, 0));
+    pointer-events: none;
+}
+
+.liforce-solution-kicker[b-w08besw2dr],
+.liforce-solution-section-eyebrow[b-w08besw2dr],
+.liforce-solution-panel-label[b-w08besw2dr] {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 0 0 0.65rem;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+}
+
+.liforce-solution-kicker[b-w08besw2dr],
+.liforce-solution-section-eyebrow[b-w08besw2dr] {
+    color: #0369a1;
+}
+
+.liforce-solution-hero h1[b-w08besw2dr],
+.liforce-solution-section h2[b-w08besw2dr],
+.liforce-solution-cta h2[b-w08besw2dr] {
+    margin: 0;
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+    font-weight: 900;
+}
+
+.liforce-solution-hero h1[b-w08besw2dr] {
+    max-width: 12ch;
+    font-size: clamp(2.35rem, 4vw, 4.3rem);
+}
+
+.liforce-solution-lead[b-w08besw2dr],
+.liforce-solution-card p[b-w08besw2dr],
+.liforce-solution-proof p[b-w08besw2dr],
+.liforce-solution-cta p[b-w08besw2dr],
+.liforce-solution-note p[b-w08besw2dr] {
+    margin: 0;
+    color: #475569;
+    line-height: 1.65;
+    font-size: 1rem;
+}
+
+.liforce-solution-badges[b-w08besw2dr] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: 1.25rem;
+}
+
+.liforce-solution-badges span[b-w08besw2dr] {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.58rem 0.9rem;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, rgba(224, 242, 254, 0.95), rgba(236, 254, 255, 0.84));
+    border: 1px solid rgba(56, 189, 248, 0.38);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.liforce-solution-badges :deep(.rz-icon)[b-w08besw2dr] {
+    color: #0284c7;
+    font-size: 1rem;
+}
+
+.liforce-solution-actions[b-w08besw2dr] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1.45rem;
+}
+
+.liforce-solution-action[b-w08besw2dr] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3rem;
+    padding: 0.75rem 1.2rem;
+    border-radius: 9999px;
+    font-size: 0.95rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+.liforce-solution-action:hover[b-w08besw2dr] {
+    transform: translateY(-1px);
+}
+
+.liforce-solution-action--primary[b-w08besw2dr] {
+    background: linear-gradient(135deg, #0a66c2, #0284c7);
+    color: #ffffff;
+    box-shadow: 0 14px 28px rgba(10, 102, 194, 0.2);
+}
+
+.liforce-solution-action--secondary[b-w08besw2dr] {
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    background: rgba(255, 255, 255, 0.74);
+    color: #0f172a;
+}
+
+.liforce-solution-hero-panel[b-w08besw2dr] {
+    position: relative;
+    align-self: stretch;
+    padding: 1.35rem;
+    border-radius: 1.35rem;
+    background: linear-gradient(160deg, #082f49, #0c4a6e 62%, #06b6d4 135%);
+    color: #ffffff;
+    box-shadow: inset 0 0 0 1px rgba(125, 211, 252, 0.14);
+}
+
+.liforce-solution-panel-label[b-w08besw2dr] {
+    color: #bae6fd;
+}
+
+.liforce-solution-hero-panel h2[b-w08besw2dr] {
+    margin: 0 0 1rem;
+    font-size: 1.35rem;
+    line-height: 1.18;
+}
+
+.liforce-solution-panel-list[b-w08besw2dr] {
+    margin: 0;
+    padding-left: 1.2rem;
+    display: grid;
+    gap: 0.75rem;
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.liforce-solution-note[b-w08besw2dr] {
+    margin-top: 1rem;
+    padding: 1rem 1.15rem;
+}
+
+.liforce-solution-section[b-w08besw2dr],
+.liforce-solution-cta[b-w08besw2dr] {
+    margin-top: 1rem;
+    padding: 1.5rem;
+}
+
+.liforce-solution-section-head[b-w08besw2dr] {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-bottom: 1.2rem;
+}
+
+.liforce-solution-section h2[b-w08besw2dr],
+.liforce-solution-cta h2[b-w08besw2dr] {
+    font-size: clamp(1.6rem, 2.6vw, 2.4rem);
+}
+
+.liforce-solution-outcome-grid[b-w08besw2dr],
+.liforce-solution-card-grid[b-w08besw2dr],
+.liforce-solution-proof-grid[b-w08besw2dr] {
+    display: grid;
+    gap: 1rem;
+}
+
+.liforce-solution-outcome-grid[b-w08besw2dr] {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.liforce-solution-card-grid[b-w08besw2dr] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.liforce-solution-card[b-w08besw2dr] {
+    padding: 1.2rem;
+    border: 1px solid rgba(148, 163, 184, 0.24);
+    border-radius: 1.3rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 250, 252, 0.9));
+}
+
+.liforce-solution-card--accent[b-w08besw2dr] {
+    background: linear-gradient(160deg, rgba(224, 242, 254, 0.96), rgba(236, 254, 255, 0.8));
+    border-color: rgba(56, 189, 248, 0.42);
+}
+
+.liforce-solution-card h3[b-w08besw2dr],
+.liforce-solution-proof h3[b-w08besw2dr] {
+    margin: 0 0 0.55rem;
+    font-size: 1.25rem;
+    line-height: 1.15;
+    font-weight: 800;
+}
+
+.liforce-solution-table-wrap[b-w08besw2dr] {
+    overflow-x: auto;
+    border-radius: 1.2rem;
+    border: 1px solid rgba(148, 163, 184, 0.24);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.liforce-solution-table[b-w08besw2dr] {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 760px;
+}
+
+.liforce-solution-table th[b-w08besw2dr],
+.liforce-solution-table td[b-w08besw2dr] {
+    padding: 0.9rem 1rem;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+    text-align: left;
+    vertical-align: top;
+}
+
+.liforce-solution-table thead th[b-w08besw2dr] {
+    background: rgba(224, 242, 254, 0.92);
+    color: #0f172a;
+    font-size: 0.88rem;
+    font-weight: 800;
+}
+
+.liforce-solution-table tbody th[b-w08besw2dr] {
+    width: 24%;
+    color: #0f172a;
+    font-weight: 700;
+    background: rgba(248, 250, 252, 0.72);
+}
+
+.liforce-solution-table td[b-w08besw2dr] {
+    color: #334155;
+    font-weight: 600;
+}
+
+.liforce-solution-proof-grid[b-w08besw2dr] {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.liforce-solution-proof-grid article[b-w08besw2dr] {
+    padding: 1.1rem;
+    border-radius: 1.2rem;
+    background: linear-gradient(160deg, rgba(248, 250, 252, 0.95), rgba(255, 255, 255, 0.9));
+    border: 1px solid rgba(148, 163, 184, 0.22);
+}
+
+.liforce-solution-cta[b-w08besw2dr] {
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: minmax(0, 1.3fr) auto;
+    align-items: center;
+}
+
+.liforce-solution-actions--stacked[b-w08besw2dr] {
+    margin-top: 0;
+    justify-content: flex-end;
+}
+
+@media (max-width: 960px) {
+    .liforce-solution-hero[b-w08besw2dr],
+    .liforce-solution-outcome-grid[b-w08besw2dr],
+    .liforce-solution-card-grid[b-w08besw2dr],
+    .liforce-solution-proof-grid[b-w08besw2dr],
+    .liforce-solution-cta[b-w08besw2dr] {
+        grid-template-columns: 1fr;
+    }
+
+    .liforce-solution-hero h1[b-w08besw2dr] {
+        max-width: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .liforce-solution-hero[b-w08besw2dr],
+    .liforce-solution-section[b-w08besw2dr],
+    .liforce-solution-cta[b-w08besw2dr] {
+        padding: 1.15rem;
+        border-radius: 1.25rem;
+    }
+
+    .liforce-solution-actions--stacked[b-w08besw2dr] {
+        justify-content: stretch;
+    }
+
+    .liforce-solution-actions--stacked .liforce-solution-action[b-w08besw2dr],
+    .liforce-solution-actions .liforce-solution-action[b-w08besw2dr] {
         width: 100%;
     }
 }

@@ -13,6 +13,11 @@
 
 ## VERSION 1.4.266 Beta
 
+- LiForce365 Personal Edition solution brief for issue `#1775` (`MForce365.Web/Pages/LiForce365Solution.razor`, `MForce365.Web/Pages/LiForce365Solution.razor.css`, `MForce365.Web/Shared/PublicLayout.razor`, `MForce.Components/PreLoginHomePage.razor`, `MForce.Components/PreLoginHomePage.razor.css`, `MForce365.Web.Tests/LiForce365SolutionPageTests.cs`, `MForce365.Web.Tests/PreLoginLiForce365LinkTests.cs`, `MForce365.Web.Tests/LiForce365DocumentationTests.cs`, `MForce365.Web.Tests/PublicLayoutNavigationTests.cs`, `docs/liforce365-solution.md`, `docs/README.md`, `docs/development.md`, `RELEASE.md`):
+  - Added a public route-backed LiForce365 solution brief at `/liforce365` and `/linkedin-marketing-solution` so issue #1775 is represented by a concrete web surface inside the existing Blazor WebAssembly app.
+  - Framed the request around member-level connection counts, influencer-style shortlists, personalized outreach planning, and meeting-linked follow-up while explicitly avoiding unsupported claims about a shipped LinkedIn analytics, scraping, or messaging product.
+  - Added public entry points from the landing page and public layout so the brief can be shared without creating a second application shell.
+  - Closes #1775.
 - Action-item linked-work guidance for issue `#1876` (`MForce365.Web/Pages/ActionItem.razor`, `MForce365.Web/Components/AddActionItemDialog.razor`, `MForce.Components.ActionItems/AddActionItem.razor`, `MForce.Components.ActionItems/EditActionItem.razor`, `MForce365.Shared/mForce365Strings.resx`, `MForce.Components.ActionItems.Tests/ActionItemReminderUiTests.cs`, `MForce365.Web.Tests/AddActionItemDialogAssignmentEmailTests.cs`, `MForce365.Web.Tests/ActionItemStatusDisplayTests.cs`, `MForce365.Web.Tests/CreateActionItemResourceTests.cs`, `docs/development.md`, `docs/projects.md`, `RELEASE.md`):
   - Added consistent inline guidance wherever users enter a `Next linked action item` so the UI now explains that the field is a follow-on note, not a true parent/child task link with separate due dates.
   - Directed users toward Planner-backed projects for multi-step work that needs dated sub-actions, which matches the current Microsoft To Do / Graph-backed capability boundary already used by the product.
@@ -20,7 +25,7 @@
   - Closes #1876.
 - Validation:
   - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
-  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --no-restore --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
 
 ## VERSION 1.4.265 Beta
 
