@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.279 Beta
+
+- Playwright browser-test-mode coverage hardening for issue `#2649` (`MForce365.Web/Testing/MockGraphDataStore.cs`, `MForce365.Web/Testing/MockGraphMessageHandler.cs`, `MForce365.Web.Tests/MockGraphClientTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Expanded the mocked Graph dataset and handler so browser test mode can resolve direct meeting, project, and team routes from the seeded dashboard links, including plan details/buckets, joined Teams, team details, and group-member lookups for project task assignment dialogs.
+  - Added focused regression coverage that exercises those newly mocked Graph routes through the shared `GraphServiceClient` path used by browser test mode.
+  - Documented the remaining OneDrive-backed browser test-mode limitation discovered during the Playwright sweep and recorded the follow-up dependency in issue `#2650`.
+  - Closes #2649.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
+
 ## VERSION 1.4.278 Beta
 
 - Browser end-to-end test mode for issue `#2605` (`MForce365.Shared/ITestModeContext.cs`, `MForce365.Web/Testing/BrowserTestModeOptions.cs`, `MForce365.Web/Testing/RuntimeTestModeContext.cs`, `MForce365.Web/Testing/RuntimeTestModeAuthenticationStateProvider.cs`, `MForce365.Web/Testing/MockGraphDataStore.cs`, `MForce365.Web/Testing/MockGraphMessageHandler.cs`, `MForce365.Web/Pages/TestModeAuthentication.razor`, `MForce365.Web/Program.cs`, `MForce365.Web/GraphClientExtensions.cs`, `MForce365.Web/ScopedGraphServiceClientFactory.cs`, `MForce365.Web/Pages/Authentication.razor`, `MForce365.Web/Pages/Authentication.razor.cs`, `MForce365.Web/Pages/Index.razor`, `MForce365.Web/App.razor`, `MForce365.Web/Shared/LoginDisplay.razor`, `MForce365.Web/Shared/PublicLayout.razor`, `MForce365.Web/Shared/RedirectToLogin.razor`, `MForce365.Web/Shared/MainLayout.razor`, `MForce.Components/PreLoginHomePage.razor`, `MForce.Components.Schedule/MainSchedule.razor`, `MForce.Components.Schedule/MainSchedule.razor.css`, `MForce365.Web/wwwroot/appsettings.json`, `MForce365.Web.Tests/RuntimeTestModeContextTests.cs`, `MForce365.Web.Tests/RuntimeTestModeAuthenticationStateProviderTests.cs`, `MForce365.Web.Tests/MockGraphClientTests.cs`, `MForce365.Web.Tests/GraphClientExtensionsTests.cs`, `MForce365.Web.Tests/AuthenticationPageTests.cs`, `MForce365.Web.Tests/PublicLayoutNavigationTests.cs`, `MForce365.Web.Tests/PreLoginRegistrationGuidanceTests.cs`, `MForce.Components.Schedule.Tests/MainScheduleMergedScheduleTests.cs`, `docs/development.md`, `RELEASE.md`):
