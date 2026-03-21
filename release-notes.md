@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.243 Beta
+
+- Meeting invite time metadata for issue `#907` (`MForce365.Shared/MForceAppointment.cs`, `MForce365.Shared.Tests/MForceAppointmentComposeBodyTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Added a `Time:` header to composed meeting-invite bodies so recipients can see the scheduled meeting window directly in the invite content, not only in the calendar shell around it.
+  - Formatted same-day meetings as a single culture-aware date with start and end times, while longer or cross-day meetings fall back to full start and end timestamps.
+  - Added regression coverage for both text and HTML invite-body composition.
+  - Closes #907.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln --no-build -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+
 ## VERSION 1.4.242 Beta
 
 - Participant contact-name suggestions for issue `#824` (`MForce.Components.Schedule/AddParticipant.razor`, `MForce.Components.Schedule/AddParticipant.razor.cs`, `MForce.Components.Schedule.Tests/AddParticipantBehaviorTests.cs`, `MForce365.Shared/mForce365Strings.resx`, `docs/development.md`, `RELEASE.md`):
