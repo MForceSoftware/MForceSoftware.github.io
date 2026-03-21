@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.263 Beta
+
+- Partner-hub sales workflow drafts for issue `#1685` (`MForce365.Web/Pages/Partners.razor`, `MForce365.Web/Pages/Partners.razor.cs`, `MForce365.Web/Pages/PartnerSalesWorkflowState.cs`, `MForce365.Web/Services/PartnerSalesWorkflowDraftBuilder.cs`, `MForce365.Web.Tests/PartnersFeatureTests.cs`, `MForce365.Web.Tests/PartnerSalesWorkflowDraftBuilderTests.cs`, `docs/development.md`, `docs/partners.md`, `RELEASE.md`):
+  - Added a lightweight `Deal registration and quote drafts` section to `/partners` so sales users can capture distributor, customer, opportunity, and requester details and open pre-populated distributor email drafts directly from the web app.
+  - Kept the implementation safe for the current Blazor WebAssembly architecture by storing the draft inputs only in browser `localStorage` and generating `mailto:` links rather than implying a live distributor, CRM, ERP, or quoting-system integration.
+  - Added focused regression coverage for the partner-hub workflow section, browser-local storage wiring, and the draft-builder logic that composes the deal-registration and quote-request templates.
+  - Closes #1685.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --no-restore --disable-build-servers -maxcpucount:1 -v minimal`
+
 ## VERSION 1.4.262 Beta
 
 - Public forums solution brief for issue `#1651` (`MForce.Components/PreLoginHomePage.razor`, `MForce.Components/PreLoginHomePage.razor.css`, `MForce365.Web/Shared/PublicLayout.razor`, `MForce365.Web/Pages/ForumsSolution.razor`, `MForce365.Web/Pages/ForumsSolution.razor.css`, `MForce365.Web.Tests/ForumsSolutionPageTests.cs`, `MForce365.Web.Tests/ForumsSolutionDocumentationTests.cs`, `MForce365.Web.Tests/PreLoginForumsLinkTests.cs`, `MForce365.Web.Tests/PublicLayoutNavigationTests.cs`, `docs/README.md`, `docs/development.md`, `docs/forums-solution.md`, `RELEASE.md`):
@@ -17,7 +28,6 @@
 - Validation:
   - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
   - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
-
 ## VERSION 1.4.260 Beta
 
 - Separate FAQs from About for issue `#1578` (`MForce365.Web/Pages/About.razor`, `MForce365.Web/Pages/Faqs.razor`, `MForce365.Web/Shared/MainLayout.razor`, `MForce365.Web/Shared/NavMenu.razor`, `MForce365.Shared/mForce365Strings.resx`, `MForce365.Web.Tests/AboutPageVersionTests.cs`, `MForce365.Web.Tests/FaqNavigationTests.cs`, `MForce365.Web.Tests/FaqPageTests.cs`, `docs/development.md`, `RELEASE.md`):
