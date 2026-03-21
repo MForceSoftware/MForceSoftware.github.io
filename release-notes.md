@@ -11,6 +11,11 @@
   - Updated `/authentication/register` so corporate registration previews the derived pricing tier and per-seat price before the Microsoft sign-in handoff.
   - Kept the commercial guardrail intact by documenting that customer-specific discounts and approvals still stay outside the repository and outside the browser-local licensing model.
   - Closes #499.
+- Dashboard upgrade CTA for issue `#491` (`MForce365.Web/Pages/Index.razor`, `MForce365.Web/Components/DashboardUpgradeCallout.razor`, `MForce365.Web/Components/DashboardUpgradeCallout.razor.cs`, `MForce365.Web/_Imports.razor`, `MForce365.Web.Tests/DashboardUpgradeCalloutTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Added a dedicated dashboard upgrade callout that points trial or freemium users at the existing `/admin/licensing` workspace instead of inventing a new purchase flow.
+  - Tailored the callout copy from the stored registration intent so corporate sign-ups keep their requested seat context, and reused the existing welcome marker to show trial timing when it is available in the browser.
+  - Hid the CTA when the current browser-local licensing workspace already contains a matching active user-license entry for the signed-in user.
+  - Closes #491.
 - Validation:
   - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
   - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
