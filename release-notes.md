@@ -679,6 +679,7 @@
   - Action Items now shows the originating meeting or project when that metadata is available from To-Do body metadata or Planner plan titles.
   - Project task create/edit now supports free-text assignee email entry, best-effort team-member suggestions, and assignment notification emails when a task is assigned.
   - Project add/edit flows now reload planner buckets/tasks after writes so the board updates immediately, and task/bucket ordering uses deterministic `OrderHint` sorting.
+  - Project bucket creation now appends a new bucket after the current last bucket by deriving the create `OrderHint` from the existing board order instead of always posting the same fixed hint. This keeps mForce-created buckets from landing in the middle of older Planner bucket sequences. Closes #847.
   - Meeting recordings transcript pairing now matches more real-world transcript files, including date-adjacent PDFs and `.srt` subtitle files.
   - Meeting phase quick-action text now uses distinct running/paused/ended labels instead of duplicating `In meeting`.
   - Binder file recursion now paginates folder children in both meeting pages so binder generation includes all meeting files, not just the first Graph children page.
