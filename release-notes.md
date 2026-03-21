@@ -1,4 +1,16 @@
 # mForce365 Release Notes
+## VERSION 1.4.281 Beta
+
+- Release notes latest-entry rendering for issue `#2653` (`MForce365.Web/Pages/About.razor`, `MForce365.Web/Pages/ReleaseNotes.razor`, `MForce365.Web/Pages/ReleaseNotesMarkdownParser.cs`, `MForce365.Web.Tests/ReleaseNotesPageTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Changed the `/release-notes` page to extract and render only the newest `## VERSION ...` section from the published release notes instead of showing the full release history after each update.
+  - Centralized release-note heading parsing so the About page version label and the release-notes page stay aligned on the same latest-entry logic.
+  - Added focused regression coverage for latest-entry extraction and latest-version parsing so future release note updates keep the public release-notes view scoped to the current shipped change set.
+  - Closes #2653.
+
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
+
 ## VERSION 1.4.280 Beta
 
 - Pre-login solution-card heading contrast for issue `#2654` (`MForce.Components/PreLoginHomePage.razor`, `MForce.Components/PreLoginHomePage.razor.css`, `MForce365.Web.Tests/PreLoginCompareContrastTests.cs`, `docs/development.md`, `RELEASE.md`):
