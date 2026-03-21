@@ -1,4 +1,12 @@
 # mForce365 Release Notes
+## VERSION 1.4.262 Beta
+
+- Public forums solution brief for issue `#1651` (`MForce.Components/PreLoginHomePage.razor`, `MForce.Components/PreLoginHomePage.razor.css`, `MForce365.Web/Shared/PublicLayout.razor`, `MForce365.Web/Pages/ForumsSolution.razor`, `MForce365.Web/Pages/ForumsSolution.razor.css`, `MForce365.Web.Tests/ForumsSolutionPageTests.cs`, `MForce365.Web.Tests/ForumsSolutionDocumentationTests.cs`, `MForce365.Web.Tests/PreLoginForumsLinkTests.cs`, `MForce365.Web.Tests/PublicLayoutNavigationTests.cs`, `docs/README.md`, `docs/development.md`, `docs/forums-solution.md`, `RELEASE.md`):
+  - Added a public `mForce365 Forums` solution brief page that frames structured between-meeting discussion, moderated participation, and searchable knowledge capture as an mForce365-aligned concept instead of an already-shipped community platform.
+  - Linked the new page from the public navigation and pre-login landing page so the backlog request now has a concrete route and discovery path inside the existing Blazor WebAssembly app.
+  - Added focused regression coverage and repo-native documentation for the new routes, entry points, and guardrails.
+  - Closes #1651.
+
 ## VERSION 1.4.261 Beta
 
 - Action-driven create tips for issue `#1577` (`MForce365.Web/Pages/ActionItem.razor`, `MForce365.Web/Pages/ActionItem.razor.cs`, `MForce.Components.Schedule/AddAppointmentPage.razor`, `MForce.Components.Schedule/AddAppointmentPage.razor.cs`, `MForce.Components.Projects/AddProject.razor`, `MForce.Components.Projects/AddProject.razor.cs`, `MForce365.Web.Tests/ActionDrivenTipsTests.cs`, `docs/development.md`, `RELEASE.md`):
