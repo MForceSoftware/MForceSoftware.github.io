@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.250 Beta
+
+- Must-have positioning refresh for issue `#1425` (`MForce.Components/PreLoginHomePage.razor`, `MForce365.Web.Tests/PreLoginMustHavePositioningTests.cs`, `MForce365.Web.Tests/SalesCollateralPositioningTests.cs`, `docs/sales-battlecard.md`, `docs/sales-data-sheet.md`, `docs/README.md`, `docs/development.md`, `RELEASE.md`):
+  - Refreshed the unauthenticated landing-page hero and proof cards so the first message is the product's strongest must-have value: mForce365 as a Microsoft 365 meeting system of record with visible post-meeting accountability and binder-ready records.
+  - Aligned the repository-backed sales battlecard, sales data sheet, and development guidance with the same three proof points so public copy and sales collateral tell the same story.
+  - Added regression coverage for the landing-page copy and the linked documentation references so the positioning does not drift back to generic technology-first messaging.
+  - Closes #1425.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
+
 ## VERSION 1.4.249 Beta
 
 - Meeting binder cost publishing for issue `#1403` (`MForce365.Web/Pages/Settings.razor`, `MForce365.Web/Pages/Settings.razor.cs`, `MForce365.Web/Pages/MeetingCostBinderPreferences.cs`, `MForce365.Web/Pages/Meeting.razor.cs`, `MForce365.Shared/MeetingBinderCostSummary.cs`, `MForce365.Shared/MeetingBinderContent.cs`, `MForce365.Shared/MeetingBinder.cs`, `MForce365.Shared.Tests/MeetingCostSummaryBuilderTests.cs`, `MForce365.Shared.Tests/MeetingBinderBuilderTests.cs`, `MForce365.Web.Tests/MeetingCostBinderSettingsTests.cs`, `docs/development.md`, `RELEASE.md`):
