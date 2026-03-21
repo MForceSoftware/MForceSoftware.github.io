@@ -23,6 +23,11 @@
 
 ## VERSION 1.4.235 Beta
 
+- Teams meeting chat posting for issue `#556` (`MForce365.Web/Pages/Meeting.razor`, `MForce365.Web/Pages/Meeting.razor.cs`, `MForce365.Web/wwwroot/appsettings.json`, `MForce365.Shared/MeetingTeamsChatPostBuilder.cs`, `MForce365.Shared/GraphService.cs`, `MForce365.Shared/mForce365Strings.resx`, `MForce365.Shared.Tests/MeetingTeamsChatPostBuilderTests.cs`, `MForce365.Web.Tests/MeetingTeamsChatPostingTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Added Teams-specific actions to the web meeting page's online-meeting card so organizers can post either the meeting details or the captured notes directly into the Microsoft Teams meeting chat.
+  - Resolved the Teams chat thread from the online meeting join URL through Microsoft Graph and kept the posted payloads intentionally simple so the same meeting state can be shared safely in chat without reusing the richer email-only markup.
+  - Added the delegated `OnlineMeetings.Read` and `ChatMessage.Send` scopes needed for the flow, documented the work/school-account limitation, and covered the payload builder plus meeting-page wiring with targeted regression tests.
+  - Closes #556.
 - Meeting invite agenda items for issue `#917` (`MForce.Components.Schedule/AddAppointmentPage.razor`, `MForce365.Shared/MForceAppointment.cs`, `MForce365.Shared.Tests/MForceAppointmentComposeBodyTests.cs`, `MForce.Components.Schedule.Tests/AddAppointmentMeetingMetadataTests.cs`, `docs/meeting-description.md`, `docs/development.md`, `RELEASE.md`):
   - Added a dedicated `Agenda` field to the Add Meeting invite flow so organizers can list the main topics attendees should expect to cover.
   - Updated invite-body composition so agenda items are emitted as structured metadata in both text and HTML bodies near the top of the invitation instead of being buried in the generic details block.
