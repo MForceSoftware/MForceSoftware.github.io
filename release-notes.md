@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.258 Beta
+
+- Meeting Emotions (TM) naming for issue `#1566` (`MForce.Components.Files/FileExplorer.razor.cs`, `MForce.Components.Files.Tests/FileExplorerTests.cs`, `MForce365.Shared/mForce365Strings.resx`, `MForce365.Web/Components/MeetingArtworkPanel.razor`, `MForce365.Web/Services/MeetingArtworkGenerationService.cs`, `MForce365.Web.Tests/MeetingArtworkPanelTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Renamed the meeting artwork panel and meeting image browser surfaces in the web UI to `Meeting Emotions (TM)` and updated the surrounding copy to describe meeting visuals consistently.
+  - Kept the OneDrive-backed gallery backward-compatible by continuing to recognize existing `Meeting Visual Browser` folders while provisioning the branded folder name for new meetings.
+  - Added focused regression coverage for the branded meeting-visual labels so older meeting folders still render the new feature name inside the meeting assets experience.
+  - Closes #1566.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
+
 ## VERSION 1.4.257 Beta
 
 - Walkthrough link in the app menu for issue `#1576` (`MForce365.Web/Shared/MainLayout.razor`, `MForce365.Shared/mForce365Strings.resx`, `MForce365.Web.Tests/MainLayoutTests.cs`, `docs/development.md`, `RELEASE.md`):
@@ -21,7 +32,6 @@
 - Validation:
   - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
   - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --no-restore --disable-build-servers -maxcpucount:1 -v minimal`
-
 ## VERSION 1.4.255 Beta
 
 - Meeting artwork and sentiment overlays for issue `#1564` (`MForce365.Shared/IMeeting.cs`, `MForce365.Shared/MForceMeeting.cs`, `MForce365.Shared/MeetingArtworkSelection.cs`, `MForce365.Shared.Tests/MeetingArtworkSelectionTests.cs`, `MForce365.Web/Components/MeetingArtworkPanel.razor`, `MForce365.Web/Components/MeetingArtworkPanel.razor.css`, `MForce365.Web/Components/MeetingSentimentChart.razor`, `MForce365.Web/Components/MeetingSentimentChart.razor.css`, `MForce365.Web/Pages/Meeting.razor`, `MForce365.Web/Pages/Meeting.razor.css`, `MForce365.Web/Program.cs`, `MForce365.Web/Services/MeetingArtworkGenerationService.cs`, `MForce365.Web.Tests/MeetingArtworkGenerationServiceTests.cs`, `MForce365.Web.Tests/MeetingArtworkPanelTests.cs`, `docs/development.md`, `RELEASE.md`):
