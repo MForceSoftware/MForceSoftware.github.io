@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.237 Beta
+
+- Meeting invite scheduling view integration for issue `#561` (`MForce.Components.Schedule/AddAppointmentPage.razor`, `MForce.Components.Schedule/AddAppointmentPage.razor.cs`, `MForce.Components.Schedule/MainSchedule.razor`, `MForce.Components.Schedule.Tests/AddAppointmentAvailabilitySuggestionTests.cs`, `MForce.Components.Schedule.Tests/MainScheduleMergedScheduleTests.cs`, `MForce365.Web/Pages/Scheduler.razor`, `MForce.Pages/Pages/Scheduler.razor`, `MForce365.Web.Tests/SchedulerPageHeadingTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Updated the Add Meeting invite flow so participant availability now has two linked options: `Find time` for Graph-backed suggestions and `View schedules` for a visual merged-calendar overlay.
+  - Wired the scheduler pages to accept a `merge` query-string and prefill the existing shared-calendar overlay experience from invite participants, keeping those imported blocks read-only.
+  - Added regression coverage for the new invite-to-scheduler wiring and the scheduler query-string handoff.
+  - Closes #561.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln --no-build -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+
 ## VERSION 1.4.236 Beta
 
 - Immutable binder blockchain proof for issue `#524` (`MForce365.Shared/AppConfiguration.cs`, `MForce365.Shared/MeetingBlockchainProofManifest.cs`, `MForce365.Web/Pages/AdminMeetingSettings.razor`, `MForce365.Web/Pages/Meeting.razor.cs`, `MForce365.Shared.Tests/MeetingBlockchainProofBuilderTests.cs`, `MForce365.Web.Tests/MeetingBlockchainProofFlowTests.cs`, `docs/administration.md`, `docs/development.md`, `RELEASE.md`):
