@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.266 Beta
+
+- Action-item linked-work guidance for issue `#1876` (`MForce365.Web/Pages/ActionItem.razor`, `MForce365.Web/Components/AddActionItemDialog.razor`, `MForce.Components.ActionItems/AddActionItem.razor`, `MForce.Components.ActionItems/EditActionItem.razor`, `MForce365.Shared/mForce365Strings.resx`, `MForce.Components.ActionItems.Tests/ActionItemReminderUiTests.cs`, `MForce365.Web.Tests/AddActionItemDialogAssignmentEmailTests.cs`, `MForce365.Web.Tests/ActionItemStatusDisplayTests.cs`, `MForce365.Web.Tests/CreateActionItemResourceTests.cs`, `docs/development.md`, `docs/projects.md`, `RELEASE.md`):
+  - Added consistent inline guidance wherever users enter a `Next linked action item` so the UI now explains that the field is a follow-on note, not a true parent/child task link with separate due dates.
+  - Directed users toward Planner-backed projects for multi-step work that needs dated sub-actions, which matches the current Microsoft To Do / Graph-backed capability boundary already used by the product.
+  - Added focused regression coverage for the new localized guidance string and the affected action-item create/edit surfaces.
+  - Closes #1876.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --no-restore --disable-build-servers -maxcpucount:1 -v minimal`
+
 ## VERSION 1.4.265 Beta
 
 - Outlook due-date action-item calendar blocks for issue `#1630` (`MForce365.Shared/ActionItemDueDateCalendarSync.cs`, `MForce365.Shared/MForceActionItems.cs`, `MForce365.Web/Shared/MainLayout.razor`, `MForce365.Web/Pages/Project.razor.cs`, `MForce.Pages/Pages/Project.razor.cs`, `MForce.Components.ActionItems/AddActionItem.razor.cs`, `MForce.Components.ActionItems/EditActionItem.razor.cs`, `MForce365.Shared.Tests/ActionItemDueDateCalendarSyncTests.cs`, `MForce365.Web.Tests/MainLayoutTests.cs`, `docs/development.md`, `RELEASE.md`):
