@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.240 Beta
+
+- Pre-login register store link for issue `#713` (`MForce.Components/PreLoginHomePage.razor`, `MForce.Components/PreLoginHomePage.razor.css`, `MForce365.Web.Tests/PreLoginStoreLinkTests.cs`, `docs/authentication.md`, `docs/development.md`, `RELEASE.md`):
+  - Added a secondary `Visit store` link on the pre-login Register card so evaluators can open the public product / purchase destination without replacing the existing `/authentication/register` flow.
+  - Kept the main Register CTA and Microsoft-account guidance unchanged while styling the new store link as a lightweight secondary action.
+  - Added regression coverage and documentation for the new pre-login store link.
+  - Closes #713.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln --no-build -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+
 ## VERSION 1.4.239 Beta
 
 - Meeting summary extra recipients for issue `#588` (`MForce.Components/SendList.razor`, `MForce.Components/SendList.razor.cs`, `MForce365.Shared/AttendeeSendList.cs`, `MForce365.Shared/MeetingSummary.cs`, `MForce365.Shared.Tests/AttendeeSendListTests.cs`, `MForce365.Web/Pages/Meeting.razor.cs`, `MForce365.Web.Tests/MeetingPageCommandReliabilityTests.cs`, `docs/development.md`, `RELEASE.md`):
