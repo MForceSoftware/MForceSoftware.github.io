@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.236 Beta
+
+- Immutable binder blockchain proof for issue `#524` (`MForce365.Shared/AppConfiguration.cs`, `MForce365.Shared/MeetingBlockchainProofManifest.cs`, `MForce365.Web/Pages/AdminMeetingSettings.razor`, `MForce365.Web/Pages/Meeting.razor.cs`, `MForce365.Shared.Tests/MeetingBlockchainProofBuilderTests.cs`, `MForce365.Web.Tests/MeetingBlockchainProofFlowTests.cs`, `docs/administration.md`, `docs/development.md`, `RELEASE.md`):
+  - Added an `Immutable record` control to `/admin/meeting-settings` so the web client can persist a browser-local preference for blockchain-ready proof generation under `mforce_blockchain_proof_enabled`.
+  - Immutable Meeting Binder PDFs now write `MeetingBinder.blockchain-proof.json` into the meeting folder, capturing a SHA-256 hash plus meeting metadata for the generated PDF artifact while keeping the finalized document in the normal export / records flow.
+  - Kept the shipped scope hash-only rather than attempting raw-PDF-on-chain storage from the WebAssembly client, which avoids exposing sensitive meeting content directly on a blockchain.
+  - Closes #524.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+
 ## VERSION 1.4.235 Beta
 
 - Meeting invite pre-meeting work for issue `#920` (`MForce.Components.Schedule/AddAppointmentPage.razor`, `MForce365.Shared/MForceAppointment.cs`, `MForce365.Shared.Tests/MForceAppointmentComposeBodyTests.cs`, `MForce.Components.Schedule.Tests/AddAppointmentMeetingMetadataTests.cs`, `docs/meeting-description.md`, `docs/development.md`, `RELEASE.md`):
