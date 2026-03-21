@@ -184,11 +184,11 @@
 
 ## VERSION 1.4.233 Beta
 
-- Meeting invite invitation details for issue `#449` (`MForce.Components.Schedule/AddAppointmentPage.razor`, `MForce.Components.Schedule/AddAppointmentPage.razor.cs`, `MForce365.Shared/MForceAppointment.cs`, `MForce.Components.Schedule.Tests/AddAppointmentMeetingMetadataTests.cs`, `MForce.Components.Schedule.Tests/AddAppointmentMeetingTypeCategoryTests.cs`, `MForce365.Shared.Tests/MForceAppointmentComposeBodyTests.cs`, `docs/meeting-description.md`, `docs/development.md`):
+- Meeting invite invitation details for issues `#449` and `#918` (`MForce.Components.Schedule/AddAppointmentPage.razor`, `MForce.Components.Schedule/AddAppointmentPage.razor.cs`, `MForce365.Shared/MForceAppointment.cs`, `MForce.Components.Schedule.Tests/AddAppointmentMeetingMetadataTests.cs`, `MForce.Components.Schedule.Tests/AddAppointmentMeetingTypeCategoryTests.cs`, `MForce365.Shared.Tests/MForceAppointmentComposeBodyTests.cs`, `docs/meeting-description.md`, `docs/development.md`):
   - Added a dedicated `Decisions to be made` field to the Add Meeting flow so organizers can set the decision-prep context directly in the invite instead of burying it in the general details block.
   - Extended the meeting access options with an explicit `Zoom meeting` mode and an `Audio / video details` field for non-Teams invites while keeping the existing Teams and internal-room flows intact.
   - Updated invite-body composition so decision-prep notes and audio/video access details are carried into the saved Graph event body with the same structured heading style as the other meeting metadata.
-  - Closes #449.
+  - Closes #449 and #918.
 - Meeting settings administration for issue `#446` (`MForce365.Web/Pages/AdminMeetingSettings.razor`, `MForce365.Web/Pages/Administration.razor`, `MForce365.Web/Pages/Settings.razor`, `MForce365.Web/Shared/MainLayout.razor`, `MForce365.Web.Tests/AdministrationFeatureTests.cs`, `MForce365.Web.Tests/MeetingSettingsAdministrationPageTests.cs`, `MForce365.Web.Tests/MeetingSettingsOpenAiKeyTests.cs`, `docs/administration.md`, `docs/development.md`, `RELEASE.md`):
   - Added a dedicated `/admin/meeting-settings` workspace for meeting behavior toggles, Meeting Binder branding, and browser-local OpenAI key management.
   - Simplified the general `/settings` page into an administration launch surface with a new `Open meeting settings admin` entry point while keeping feature toggles in place.
