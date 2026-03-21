@@ -1,4 +1,14 @@
 # mForce365 Release Notes
+## VERSION 1.4.282 Beta
+
+- Meeting toolbar `Actions` overlap fix for issue `#2655` (`MForce365.Web/Pages/Meeting.razor.css`, `MForce365.Web.Tests/MeetingDashboardLayoutTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Changed the web meeting toolbar grid so the `Actions` command shell sizes to its content while the quick-action strip takes the flexible column, preventing the command label from collapsing into the adjacent phase button at medium desktop widths around the reported `1200px` range.
+  - Added focused regression coverage for the content-sized command-menu column and the top-aligned toolbar row so the overlap does not regress when the meeting header layout is adjusted again.
+  - Closes #2655.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
+
 ## VERSION 1.4.281 Beta
 
 - Shared-calendar overlay Graph scope fix for issue `#2661` (`MForce365.Web/wwwroot/appsettings.json`, `MForce365.Shared/GraphService.cs`, `MForce365.Web.Tests/MergedSchedulePermissionTests.cs`, `docs/authentication.md`, `docs/development.md`, `RELEASE.md`):

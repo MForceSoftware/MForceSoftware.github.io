@@ -2418,8 +2418,9 @@
 
 .meeting-toolbar[b-0snrdmfufu] {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, auto);
+    grid-template-columns: max-content minmax(0, 1fr);
     gap: 0.5rem;
+    align-items: start;
     position: relative;
     z-index: 70;
     isolation: isolate;
