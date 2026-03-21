@@ -20,6 +20,11 @@
   - Fixed the scheduler `Merge schedules` Add button styling after responsive browser validation exposed a transparent-background rendering bug, and locked that scoped styling in with a focused schedule-component regression test.
   - Suppressed tenant-dependent dashboard side effects during test mode and added focused regression coverage for the new routing and mocked Graph behavior so desktop, tablet, and mobile browser checks can run deterministically.
   - Closes #2605.
+- Browser test mode OneDrive coverage for issue `#2650` (`MForce365.Web/Pages/Testing/MockDriveItem.razor`, `MForce365.Web/Testing/BrowserTestModeOptions.cs`, `MForce365.Web/Testing/MockBrowserTestModeHttpMessageHandler.cs`, `MForce365.Web/Testing/MockGraphDataStore.cs`, `MForce365.Web/Testing/MockGraphDriveStore.cs`, `MForce365.Web/Testing/MockGraphMessageHandler.cs`, `MForce365.Web/Program.cs`, `MForce365.Web.Tests/MockGraphClientTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Added a seeded mock OneDrive data set plus matching Graph drive routes so browser test mode can browse meeting folders, create folders, upload/download files with `ItemWithPath(...)`, open mocked `webUrl` links in the browser, and search for Loop files without live Graph transport.
+  - Added a browser-side test-mode download handler plus an anonymous mock share page so existing agenda, meeting-state, file explorer, and guest refresh code can follow mocked `@microsoft.graph.downloadUrl` and `createLink` URLs during Playwright runs.
+  - Extended regression coverage to exercise the mock meeting event, drive, agenda, Loop, and meeting-state download paths together.
+  - Closes #2650.
 - Validation:
   - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
   - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
