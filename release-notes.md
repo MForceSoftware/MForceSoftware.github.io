@@ -1,4 +1,16 @@
 # mForce365 Release Notes
+## VERSION 1.4.239 Beta
+
+- Meeting participant preparedness tracking for issue `#568` (`MForce365.Shared/MForceMeeting.cs`, `MForce.Components.Schedule/ParticipantsCard.razor`, `MForce.Components.Schedule/ParticipantsCard.razor.cs`, `MForce.Components.Schedule/ParticipantsCard.razor.css`, `MForce365.Web/Pages/Meeting.razor.cs`, `MForce365.Shared/mForce365Strings.resx`, `MForce365.Shared.Tests/MeetingAttendeePreparationStatusTests.cs`, `MForce365.Shared.Tests/MeetingReloadPendingAttendeesTests.cs`, `MForce.Components.Schedule.Tests/ParticipantsCardTests.cs`, `MForce365.Web.Tests/MeetingParticipantPreparednessTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Added a manual preparedness workflow to the meeting Participants card so organizers can mark each attendee as `Prepared`, `Needs follow up`, or `Not reviewed` during pre-meeting review.
+  - Persisted that readiness state in the meeting snapshot and preserved it across Graph attendee refreshes, which keeps the existing 30-second participant polling from wiping organizer-entered assessments.
+  - Updated the meeting quick-action completion rule so the Participants step only shows complete after every non-organizer attendee has been reviewed.
+  - Added regression coverage for the new participant-status UI, persistence defaults, reload merge behavior, and preparation-completion logic.
+  - Closes #568.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+  - `dotnet test MForce365/MForce365.sln --no-build -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true -v minimal`
+
 ## VERSION 1.4.238 Beta
 
 - Pre-login meeting tips dialog for issue `#569` (`MForce.Components/MeetingTipsPanel.razor`, `MForce.Components/MeetingTipsPanel.razor.cs`, `MForce.Components/MeetingTipsPanel.razor.css`, `MForce.Components/PreLoginHomePage.razor`, `MForce365.Web.Tests/MeetingTipsPanelTests.cs`, `docs/authentication.md`, `docs/development.md`, `RELEASE.md`):
