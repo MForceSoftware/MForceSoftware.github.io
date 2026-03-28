@@ -12,6 +12,11 @@
 
 ## VERSION 1.4.282 Beta
 
+- Hide first-screen monthly updates banner for issue `#2668` (`MForce.Components/PreLoginHomePage.razor`, `MForce365.Web/Pages/Index.razor`, `MForce365.Web.Tests/MonthlyUpdatesCalloutTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Removed the shared `MonthlyUpdatesCallout` from both the pre-login landing page and the authenticated dashboard so the marketing/news banner no longer appears on first-screen surfaces for now.
+  - Kept the shared component and its external destinations intact so the monthly-updates surface can be restored later without rebuilding the content links.
+  - Closes #2668.
+
 - Meeting cost currency and debug-copy cleanup for issue `#2658` (`MForce365.Shared/CurrencyCultureResolver.cs`, `MForce365.Shared/MeetingBinder.cs`, `MForce365.Shared/MeetingBinderCostSummary.cs`, `MForce365.Shared.Tests/CurrencyCultureResolverTests.cs`, `MForce365.Shared.Tests/MeetingBinderBuilderTests.cs`, `MForce365.Shared.Tests/MeetingCostSummaryBuilderTests.cs`, `MForce365.Web/Pages/Meeting.razor.cs`, `MForce365.Web/Pages/MeetingCostBinderPreferences.cs`, `MForce365.Web/Pages/Settings.razor`, `MForce365.Web/Pages/Settings.razor.cs`, `MForce365.Web/wwwroot/MForce365.js`, `MForce365.Web.Tests/MeetingCostBinderSettingsTests.cs`, `MForce365.Web.Tests/ReleaseNotesPageTests.cs`, `docs/development.md`, `RELEASE.md`):
   - Expanded the browser-local meeting-cost preference payload to retain the organizer's browser culture alongside the saved hourly rate and binder toggle, so the settings field and generated binder cost section no longer fall back to the wrong default currency.
   - Updated the web Settings page to format the hourly-rate input with the detected browser culture and removed the storage-key implementation detail from the user-facing helper copy.
