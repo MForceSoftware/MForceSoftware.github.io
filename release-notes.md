@@ -1,6 +1,12 @@
 # mForce365 Release Notes
 ## VERSION 1.4.283 Beta
 
+- Shared-calendar overlay feedback and account-support fix for issue `#2661` (`MForce.Components.Schedule/MainSchedule.razor`, `MForce.Components.Schedule/ScheduleFunctions.cs`, `MForce.Components.Schedule.Tests/MainScheduleMergedScheduleTests.cs`, `MForce.Components.Schedule.Tests/ScheduleFunctionsTests.cs`, `MForce.Pages/Pages/Scheduler.razor`, `MForce365.Shared/MicrosoftAccountSupport.cs`, `MForce365.Shared.Tests/MicrosoftAccountSupportTests.cs`, `MForce365.Web/Pages/Scheduler.razor`, `docs/authentication.md`, `docs/development.md`, `RELEASE.md`):
+  - Changed merged-calendar loading to parse per-address Microsoft Graph `getSchedule` lookup errors, so invalid or inaccessible shared calendars now raise an inline message instead of silently appearing as an empty overlay result.
+  - Added explicit scheduler status text for configured overlays that return no busy blocks in the current view, so users get confirmation even when the visible date range has nothing to show.
+  - Surfaced the Microsoft Graph limitation that shared-calendar overlays require a work or school account and now disable the add action for personal Microsoft accounts instead of letting that unsupported path fail ambiguously.
+  - Added focused regression coverage for the new lookup-error parsing, unsupported-account detection, and merged-schedule messaging paths.
+  - Closes #2661.
 - Public layout media-mentions removal for issue `#2669` (`MForce365.Web/Shared/PublicLayout.razor`, `MForce365.Web.Tests/MediaMentionsStripTests.cs`, `docs/development.md`, `RELEASE.md`):
   - Removed the shared `MediaMentionsStrip` injection from `PublicLayout`, so the public solution pages no longer show the media-mentions callout directly beneath the shared menu bar.
   - Kept the existing media-mentions strip on the pre-login landing page and updated the focused regression coverage to lock in that homepage-only placement.
