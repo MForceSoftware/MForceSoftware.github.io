@@ -1,6 +1,12 @@
 # mForce365 Release Notes
 ## VERSION 1.4.283 Beta
 
+- Shared-calendar overlay fallback for explicitly shared calendars in issue `#2675` (`MForce.Components.Schedule/MainSchedule.razor`, `MForce.Components.Schedule/ScheduleFunctions.cs`, `MForce.Components.Schedule.Tests/MainScheduleMergedScheduleTests.cs`, `MForce.Components.Schedule.Tests/ScheduleFunctionsTests.cs`, `docs/authentication.md`, `docs/development.md`, `RELEASE.md`):
+  - Kept the existing batched Microsoft Graph `getSchedule` merged-calendar flow for the normal case, but now retry per-address lookup failures through the direct shared-calendar event API when a calendar has already been explicitly shared in Outlook.
+  - This allows the scheduler to overlay calendars that are reachable through delegated shared-calendar access even when the free/busy lookup route is too limited for that specific mailbox, including the reported personal-calendar sharing scenario.
+  - Updated the merged-calendar messaging so unresolved failures now direct users back to Outlook or Microsoft 365 sharing rather than implying every failure is the same unsupported signed-in-account case.
+  - Added focused regression coverage and updated the authentication/development docs to describe the new fallback path.
+  - Closes #2675.
 - Personal-account auth messaging guardrail for issue `#2568` (`MForce365.Shared/AppConfiguration.cs`, `MForce.Components/PreLoginHomePage.razor`, `MForce.Components/PreLoginHomePage.razor.cs`, `MForce365.Web/Pages/Authentication.razor`, `MForce365.Web/Pages/Authentication.razor.cs`, `MForce365.Web/Program.cs`, `MForce365.Web/wwwroot/appsettings.json`, `MForce365.Web.Tests/AuthenticationPageTests.cs`, `MForce365.Web.Tests/PreLoginRegistrationGuidanceTests.cs`, `docs/authentication.md`, `docs/development.md`, `docs/installation.md`, `docs/reseller-pack.md`, `docs/sales-data-sheet.md`, `docs/sales-slide-deck.md`, `README.md`, `RELEASE.md`):
   - Reworked the public sign-in and registration guidance so the web app no longer unconditionally claims Outlook.com / Hotmail / Live personal accounts work in every deployment.
   - Added the `AuthenticationUi:AdvertisePersonalMicrosoftAccounts` flag, defaulted it to `false`, and gated the pre-login/register copy plus Microsoft-account-creation link behind that flag so customer-facing copy only advertises personal-account support after the deployment owner has verified the backing Entra app registration.
