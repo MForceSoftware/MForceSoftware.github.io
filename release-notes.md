@@ -1,4 +1,15 @@
 # mForce365 Release Notes
+## VERSION 1.4.283 Beta
+
+- Public layout media-mentions removal for issue `#2669` (`MForce365.Web/Shared/PublicLayout.razor`, `MForce365.Web.Tests/MediaMentionsStripTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Removed the shared `MediaMentionsStrip` injection from `PublicLayout`, so the public solution pages no longer show the media-mentions callout directly beneath the shared menu bar.
+  - Kept the existing media-mentions strip on the pre-login landing page and updated the focused regression coverage to lock in that homepage-only placement.
+  - Updated the development guide so future public-site changes keep the media-mentions strip scoped to the pre-login page unless a later issue explicitly expands that surface again.
+  - Closes #2669.
+- Validation:
+  - `dotnet build MForce365/MForce365.sln -warnaserror -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --disable-build-servers -maxcpucount:1 -v minimal`
+  - `dotnet test MForce365/MForce365.sln -p:SkipInvalidConfigurations=true -p:SkipMauiWorkloadValidation=true --no-build --disable-build-servers -maxcpucount:1 -v minimal`
+
 ## VERSION 1.4.282 Beta
 
 - Meeting cost currency and debug-copy cleanup for issue `#2658` (`MForce365.Shared/CurrencyCultureResolver.cs`, `MForce365.Shared/MeetingBinder.cs`, `MForce365.Shared/MeetingBinderCostSummary.cs`, `MForce365.Shared.Tests/CurrencyCultureResolverTests.cs`, `MForce365.Shared.Tests/MeetingBinderBuilderTests.cs`, `MForce365.Shared.Tests/MeetingCostSummaryBuilderTests.cs`, `MForce365.Web/Pages/Meeting.razor.cs`, `MForce365.Web/Pages/MeetingCostBinderPreferences.cs`, `MForce365.Web/Pages/Settings.razor`, `MForce365.Web/Pages/Settings.razor.cs`, `MForce365.Web/wwwroot/MForce365.js`, `MForce365.Web.Tests/MeetingCostBinderSettingsTests.cs`, `MForce365.Web.Tests/ReleaseNotesPageTests.cs`, `docs/development.md`, `RELEASE.md`):
