@@ -7,6 +7,14 @@
   - Updated the merged-calendar messaging so unresolved failures now direct users back to Outlook or Microsoft 365 sharing rather than implying every failure is the same unsupported signed-in-account case.
   - Added focused regression coverage and updated the authentication/development docs to describe the new fallback path.
   - Closes #2675.
+- Meeting toolbar running-state overlap fix for issue `#2677` (`MForce365.Web/Pages/Meeting.razor.css`, `MForce365.Web.Tests/MeetingDashboardLayoutTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Tightened the web meeting toolbar so the running-state `Actions` command shell shrink-wraps to its own content and the nested Radzen menu no longer uses percentage-width sizing inside the content-sized grid column.
+  - This prevents the command trigger from painting on top of the adjacent phase/status button when a meeting moves into `Running`, matching the overlap shown in the issue attachment.
+  - Added regression coverage for the command-shell sizing contract so future toolbar refactors keep the command trigger and phase button in separate columns.
+  - Closes #2677.
+- Meeting asset version-suffix guardrail (`MForce.Components.Files/FileExplorer.razor.cs`, `MForce.Components.Files.Tests/FileExplorerTests.cs`, `docs/development.md`, `RELEASE.md`):
+  - Tightened translated-document suffix parsing to accept only language-tag-shaped tokens before calling `CultureInfo.GetCultureInfo(...)`, so versioned filenames such as `Board Pack-v2.docx` do not collapse into the localized-document grouping path on .NET 10.
+  - Added focused regression coverage for both the version-suffix guardrail and a valid numeric-region suffix (`es-419`) so translated document grouping stays correct while the full-solution test run remains green.
 - Personal-account auth messaging guardrail for issue `#2568` (`MForce365.Shared/AppConfiguration.cs`, `MForce.Components/PreLoginHomePage.razor`, `MForce.Components/PreLoginHomePage.razor.cs`, `MForce365.Web/Pages/Authentication.razor`, `MForce365.Web/Pages/Authentication.razor.cs`, `MForce365.Web/Program.cs`, `MForce365.Web/wwwroot/appsettings.json`, `MForce365.Web.Tests/AuthenticationPageTests.cs`, `MForce365.Web.Tests/PreLoginRegistrationGuidanceTests.cs`, `docs/authentication.md`, `docs/development.md`, `docs/installation.md`, `docs/reseller-pack.md`, `docs/sales-data-sheet.md`, `docs/sales-slide-deck.md`, `README.md`, `RELEASE.md`):
   - Reworked the public sign-in and registration guidance so the web app no longer unconditionally claims Outlook.com / Hotmail / Live personal accounts work in every deployment.
   - Added the `AuthenticationUi:AdvertisePersonalMicrosoftAccounts` flag, defaulted it to `false`, and gated the pre-login/register copy plus Microsoft-account-creation link behind that flag so customer-facing copy only advertises personal-account support after the deployment owner has verified the backing Entra app registration.
@@ -2080,4 +2088,3 @@ Each added item and the resolved issue is mentioned below, with the most recent 
 While we are doing significant work, please refer to this [issue](https://github.com/MForceSoftware/Mforce365/issues/1896) for current status.
 - Action Item form: fixed the Status field to be editable for To‑Do tasks and aligned the Completed checkbox with the Status input for consistent layout. Closes #2341.
  - Files: Drag‑and‑drop in the Add File dialog now saves uploads into the Documents folder by default when you are at the meeting root. This ensures files appear under one of the three base folders (Meeting Notes, Documents, Correspondence) instead of the meeting root. Closes #2344.
-

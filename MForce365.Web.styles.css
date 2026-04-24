@@ -2445,6 +2445,9 @@
     position: relative;
     z-index: 80;
     isolation: isolate;
+    justify-self: start;
+    width: fit-content;
+    max-width: 100%;
 }
 
 .meeting-command-shell.meeting-command-shell--running[b-0snrdmfufu] {
@@ -2463,7 +2466,8 @@
     border: 0;
     background: transparent;
     min-width: 0;
-    width: 100%;
+    width: auto;
+    max-width: 100%;
     position: relative;
     z-index: 1;
 }
